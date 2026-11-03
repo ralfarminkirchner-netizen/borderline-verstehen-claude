@@ -33,17 +33,20 @@ Die Fugenart ist eine **redaktionelle Lesart dieser Fassung** über den unverän
 | Annäherung | zwei Bögen, die sich treffen | `benannte_naehe`, `co_mentioned_with`, „begrifflich benachbart“, „assoziiert“ | Vault-Linktyp `benannte_naehe`; Brücke in WiRKGEFÜGE |
 | Abstand | Doppellinie mit Lücke und Querstrichen | `nicht_dasselbe`, `verwechselbar_mit`, „muss unterschieden werden“ | Hermes „zu unterscheiden“ |
 | Spannung | Zickzack, zittert | `gegenteil_am_start`, „Gegenpol“ | Reibung (`friction`) in DAS DAZWISCHEN, Zusammenführung (unversioniert) |
-| Widerspruch | Linien, die frontal mit Zähnen aufeinandertreffen | `gegenbeispiel` | Einwand in Grok „Fugenfassung“ 0.2 |
+| Widerspruch | Linien, die frontal mit Zähnen aufeinandertreffen | `gegenbeispiel`, Originalstatus „Gegenbefund“ | Einwand in Grok „Fugenfassung“ 0.2 |
 | Bedingung | Tor/Schwelle | `voraussetzung`, `fundierung` | Grok (Bedingung ≠ Ursache ≠ Erlaubnis), WiRKGEFÜGE, Cursor |
-| Zeitliche Folge | Trittsteine, schreitet | `abstammung`, `phase`, „zeitversetzt“ | WiRKGEFÜGE `zeit`, Grok „drei Zeiten“, Cursor |
-| Gerichteter Übergang | Bogen mit fließenden Winkeln | `reguliert`, `zielzustand`, `behandlt` | Cursor-Phänomenkörper „gerichtete Veränderung“ |
-| Gegenseitigkeit | Doppellinie, beide Richtungen | gerichtete Art in beiden Richtungen im Bestand | Grok/WiRKGEFÜGE: zwei Aussagen, nie automatisch |
+| Zeitliche Folge | Trittsteine, schreitet | `abstammung`, „zeitversetzt“ (Phase gilt als Einordnung) | WiRKGEFÜGE `zeit`, Grok „drei Zeiten“, Cursor |
+| Gerichteter Übergang | Bogen mit ruhenden Winkeln (keine Bewegung, die Wirkung nahelegt) | `reguliert`, `zielzustand`, `behandlt` | Cursor-Phänomenkörper „gerichtete Veränderung“ |
+| Gegenseitigkeit | Doppellinie, beide Richtungen | gerichtete Art in beiden Richtungen mit derselben Art im Bestand | Grok/WiRKGEFÜGE: zwei Aussagen, nie automatisch |
+| Belegte Einzelaussage | Linie mit Belegraute | Kante mit Quelle und inhaltlicher Aussage (z. B. „kann … verringern“) | Stützung in Grok „Fugenfassung“ 0.2 |
+| Statistischer Zusammenhang | weiche Welle, ohne Richtung | „assoziiert“, „verbunden mit erhöhtem Risiko“, „sagt … voraus“ | Unterscheidung Stützung/Folgerung in Grok 0.2 |
+| Begrenzung | Linie endet an einer Schranke | „legt … nicht vollständig fest“ | Geltungsachse und „folgt nicht“ in Grok 0.2 |
 | Offenes Dazwischen | keine Linie, schraffierte Linse | „Forschungsfrage“, `investigated_in_context_of` | „ungeklärt“ und Leerwerte in Grok und „Fuge der Relationen“ 0.2 |
 | Unterbrechung | Linie mit Bruchstelle | nur eigene Arbeit | Bruch/gekittete Bruchstelle in DAS DAZWISCHEN |
 | Nichtverbindung | Arme enden bei 30 %, Kreuz | nur eigene Arbeit | WiRKGEFÜGE (Arme enden bei 45 %) |
 | Einordnung | leiser Strich | alle übrigen Originalkanten | Originalbestand |
 
-Die **Herkunft** einer Verbindung ist getrennt von ihrer Art und als Strichart sichtbar: mit Quelle, aus dem Originalbestand, redaktionelle Nachbarschaft, offen, persönlich, künstlerisch. Eine fehlende Grenzangabe erscheint als „im Bestand nicht angegeben“, nie als „keine Grenze“.
+Die **Herkunft** einer Verbindung ist getrennt von ihrer Art und als Strichart sichtbar: mit Quelle, aus dem Originalbestand, redaktionell vorgeschlagen (nicht fachlich geprüft; auch alle Kanten mit Originalstatus „vorgeschlagen“), offen, persönlich, künstlerisch. Geltungsgrenzen (`limit` oder `boundary`), Erläuterungen, offene Fragen und „ausdrücklich keine Ursache“ werden aus dem Bestand übernommen. Eine fehlende Grenzangabe erscheint als „im Bestand nicht angegeben“, nie als „keine Grenze“.
 
 Die **sechs Lesebewegungen** der Fugenstation (neben, gegen, durch, fehlt, kippt, takt) stammen aus dem ChatGPT-Entwurf „FUGE“ (Juli 2026; Vault-Beleg `MiNDSOURCE/inbox/capture-2026-07-13-T010938-chatgpt-datei-geladen-pr_fen.md`, Datei `FUGE-Neustart/FUGE.html` auf Samsung_X5, Bytegleichheit nicht belegt). Codex hat sie in „FUGEN“ als Leseweisen übernommen. Hier ordnen sie die beiden Beteiligten räumlich neu; sie sind Leseweisen, keine Daten.
 
@@ -101,7 +104,7 @@ Ein Unteragent dieser Sitzung hat alle acht Seiten im eingebauten Browser bedien
 
 ## Prüfung
 
-`scripts/pruefung.mjs` (Playwright-Core, Chromium for Testing, Profil, Temp-Dateien und Bilder auf dem externen Volume). Ergebnis im Protokoll `evidence/pruefung-20261103/protokoll.json`: **45 von 45 bestanden**. Geprüft wurden:
+`scripts/pruefung.mjs` (Playwright-Core, Chromium for Testing, Profil, Temp-Dateien und Bilder auf dem externen Volume). Ergebnis im Protokoll `evidence/pruefung-20261103/protokoll.json`: **46 von 46 bestanden** (nach der Gegenprüfung erneut ausgeführt). Zusätzlich ist die Fassung im echten Variantenraum neben Codex geöffnet: Bilder `50-variantenraum-beide.png`, `51-variantenraum-ort.png` und `52-variantenraum-original.png`; dort reicht das Original bis zum Ende und bleibt innerhalb der Rahmenbreite. Geprüft wurden:
 
 - **Desktop 1440×900**: Einstieg mit WebGL, Ziehen und Zoomen, Gebiet, Ort, Fugenstern, Fuge (Spannung), alle Lesebewegungen, Vergleich, Rückweg über den Pfad, Original vollständig bis zum Ende, Zurück, Browser-Zurück, Fundus-Kapitel mit sieben Abschnitten, Werk des Vaters, Aufnahme spielt und läuft bei Navigation weiter.
 - **Tragen und Kombination**: Energie tragen, zweiten Ort bewusst einfangen, gemeinsame Nachbarn, Lösen.
@@ -125,3 +128,29 @@ Die Bilder liegen in `evidence/pruefung-20261103/bilder/`. Die Bewegungsaufnahme
 - **Screenreader**: nur über Namen und Rollen im Barrierebaum geprüft, nicht mit VoiceOver.
 - **Echte Telefone**: nicht geprüft, nur Emulation.
 - **Lichtwirkung des WebGL-Geländes**: im Headless-Browser gerendert; auf echter Hardware gesehen nur im eingebauten Browserfenster.
+
+## Unabhängige Gegenprüfung (drei Prüfer, 3. November)
+
+Drei unabhängige Prüfer haben vor der Registrierung gegengelesen: Gestaltung gegen die Ablehnungsbilder, Code und Sicherheit, fachliche Ehrlichkeit und Herkunft. Behoben ist Folgendes:
+
+- **Fachlich**: Statistische Zusammenhänge erschienen als Annäherung, belegte Studienaussagen als Einordnung, „Phase“ als Abfolge und Gegenbefunde als Einordnung. 98 Geltungsgrenzen fehlten, weil das Feld `boundary` nicht übernommen wurde. Offene Fragen mit Quelle trugen den Hinweis „nicht geklärt“ statt „gemeinsam untersucht“. Gegenseitigkeit wurde auch bei verschiedenen Arten vergeben. Die Behandlungsbezüge waren animiert, als würden sie wirken. Redaktionelle Vorschläge hießen „Nachbarschaft“.
+- **Werke des Vaters**: Bei 13 Werken standen Maßangaben in der Bildunterschrift, bei neun davon mit „Maßangabe der Quelle“. Unter dem Bild stand ein Metakommentar. Die Bildunterschrift wird jetzt aus Feldern gebaut, und der Build bricht ab, sobald eine Maßangabe auftaucht.
+- **Medien**: Die Prüfangabe erschien als „[object Object]“. Die Kennzeichnung als KI-Erzeugnis bleibt sichtbar.
+- **Oberfläche**: Die Lesebewegungen haben jetzt eigenen Inhalt (beide Texte nebeneinander, gemeinsame Nachbarn als dritte Stimme, Bruchstelle aus der Grenze, gemeinsame Fugenarten). Die Fugensätze sind grammatisch. Gleichnamige Orte tragen einen Unterscheider. Im Fugenstern erscheint jeder Nachbar einmal, mit Zeilenumbruch statt Abschneiden. Kastenraster wurden zum Randvermerk. Rohtypen und Dateipfade liegen in den geschlossenen technischen Details. Die Karussells sind ein Raster. Die Werkbank ist kompakt. Meldungen verschwinden beim Wechsel. Beschriftungen weichen aus oder entfallen. Der Überblick lässt Platz für die Einstiegskarte. Programmatischer Fokus erzeugt keinen Rahmen mehr.
+- **Sicherheit und Speicher**:
+  - Ein kaputter Range-Header ließ den Dienst abstürzen; jetzt antwortet er mit 416.
+  - Nach einem gescheiterten Laden konnte ein Speichervorgang alles überschreiben; jetzt ist Speichern dann gesperrt, und ein unlesbarer Speicher wird mit 503 angehalten.
+  - Gleichzeitiges Speichern ist serialisiert und hat eindeutige Temp-Dateien. Ein veralteter Stand wird mit 409 abgewiesen.
+  - Ein unmaskiertes Feld aus Importen ist jetzt maskiert; Importe werden feldweise neu aufgebaut, und der Server validiert.
+  - Die CSP ist vollständig, `diskutil` hat ein Zeitlimit, Links aus Daten müssen `http(s)` sein.
+  - Gelöscht wird erst nach erfolgreichem Speichern; Rückgängig sucht den Eintrag über seine Kennung.
+  - Ein nicht gespeicherter Werkbank-Entwurf bleibt beim Verlassen erhalten. Escape gilt nicht in Auswahlfeldern.
+  - Die Ortssuche in der Werkbank ist als Combobox bedienbar.
+  - Gezeichnet wird nur bei Bewegung, mit höchstens etwa 30 Bildern pro Sekunde.
+
+Nicht behoben und weiter offen:
+
+- Lange Originale bleiben lange gesetzte Texte, mit Abschnittsleiste, Lagebild und Ortsverweisen, aber ohne zusätzliche visuelle Anker zwischen den Absätzen.
+- Auf schmalen Bildschirmen deckt das weit aufgezogene Leseblatt die Karte fast ganz ab.
+- Gleichnamige Orte werden unterschieden, nicht zusammengeführt.
+- Die Station mit Armen bleibt bei wenigen Beteiligten grafisch schlicht.
