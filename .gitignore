@@ -1,0 +1,8 @@
+node_modules/
+private-data/
+data-readonly/
+output/
+.cache/
+evidence/recherche-20261103/
+evidence/manueller-test-20261103/
+evidence/pruefung-20261103/video/

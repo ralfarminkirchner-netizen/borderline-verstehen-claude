@@ -1,0 +1,237 @@
+{
+  "zeit": "2026-11-03T22:31:37.276Z",
+  "basis": "http://127.0.0.1:4394",
+  "datenordner": "/Volumes/ThunderBolt4_2TB/Development/Projects/borderline-verstehen-claude-20261103/.cache/pruefdaten",
+  "ergebnisse": [
+    {
+      "name": "Einstieg lädt, Grafik",
+      "pass": true,
+      "detail": "webgl"
+    },
+    {
+      "name": "Gebiet geöffnet",
+      "pass": true,
+      "detail": "#/gebiet/adhs-randphanomene"
+    },
+    {
+      "name": "Ort geöffnet",
+      "pass": true,
+      "detail": "#/ort/aufgabenstarre"
+    },
+    {
+      "name": "Fugenstern hat Fugen",
+      "pass": true,
+      "detail": "11 gezeichnet"
+    },
+    {
+      "name": "Fuge geöffnet",
+      "pass": true,
+      "detail": "#/ort/aufgabenstarre/fuge/hyperfokus-2/1636"
+    },
+    {
+      "name": "Vergleich gleicher Fugenart (oder ehrlich: keine weitere)",
+      "pass": true,
+      "detail": "Im Bestand gibt es keine weitere Fuge dieser Art."
+    },
+    {
+      "name": "Lesebewegungen öffnen jeweils eigenen Inhalt",
+      "pass": true,
+      "detail": "{\"neben\":\"Hyperfokus · ADHS · Randphänomene\\n\\nVollständiges Aufgehen in\",\"fehlt\":\"Mögliche dritte Stimmen – Orte, mit denen beide im Bestand v\",\"kippt\":\"Wo sie kippt. Der Bestand nennt für diese Fuge keine Grenze.\",\"takt\":\"Gemeinsame Bewegung. Beide tragen im Bestand Fugen dieser Ar\"}"
+    },
+    {
+      "name": "Rückweg über Pfad zum Ort",
+      "pass": true,
+      "detail": "#/ort/aufgabenstarre"
+    },
+    {
+      "name": "Original geöffnet",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Original vollständig erreichbar",
+      "pass": true,
+      "detail": "{\"text\":3127,\"sichtbar\":837,\"gesamt\":2885,\"artikelBreite\":631.03125}"
+    },
+    {
+      "name": "Zurück vom Original zum Ort",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Browser-Zurück fliegt zurück",
+      "pass": true,
+      "detail": "#/ort/aufgabenstarre/original"
+    },
+    {
+      "name": "Fundus-Kapitel vollständig gesetzt",
+      "pass": true,
+      "detail": "{\"h\":7,\"len\":16011}"
+    },
+    {
+      "name": "Werk des Vaters ganz und ohne Text darüber",
+      "pass": true,
+      "detail": "{\"geladen\":true,\"ueberText\":false}"
+    },
+    {
+      "name": "Aufnahme spielt im gemeinsamen Spieler",
+      "pass": true,
+      "detail": "{\"zeit\":2.184964,\"pausiert\":false,\"fehler\":null}"
+    },
+    {
+      "name": "Spieler läuft bei Navigation weiter",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Zweiten Ort bewusst eingefangen",
+      "pass": true,
+      "detail": "2 in der Hand"
+    },
+    {
+      "name": "Kombination zeigt gemeinsame Nachbarn",
+      "pass": true,
+      "detail": "· keine gemeinsamen Nachbarn im Bestand"
+    },
+    {
+      "name": "Element wieder gelöst",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Eingabe kontrastreich",
+      "pass": true,
+      "detail": "{\"text\":\"17.3\",\"rahmen\":\"3.7\"}"
+    },
+    {
+      "name": "Eigene Fuge gespeichert",
+      "pass": true,
+      "detail": "#/eigen/pruffuge-verfahren-und-erleben"
+    },
+    {
+      "name": "Datei im Prüfdatenordner",
+      "pass": true,
+      "detail": "EMDR als Verfahren (synthetisch); Flashbacks als Erleben (synthetisch); Dissoziation & Erstarrung als –"
+    },
+    {
+      "name": "Nach Neuladen wieder geöffnet",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Bearbeitung mit Verlauf",
+      "pass": true,
+      "detail": "angelegt | geändert: Aussage"
+    },
+    {
+      "name": "Perspektivwechsel bewahrt Kamera und Auswahl",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Notiz nach Neuladen am selben Ort",
+      "pass": true,
+      "detail": "Synthetische Prüffrage an diesem Ort."
+    },
+    {
+      "name": "Gelöscht",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Rückgängig stellt wieder her",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Endgültig gelöscht",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Tastatur: Pfeil wählt Nachbarort",
+      "pass": true,
+      "detail": "#/ort/emdr-2 → #/ort/ego-state-therapie-ifs-teilearbeit"
+    },
+    {
+      "name": "Tastatur: Escape geht eine Ebene zurück",
+      "pass": true,
+      "detail": "#/gebiet/traumaatlas"
+    },
+    {
+      "name": "Fokus sichtbar",
+      "pass": true,
+      "detail": "BUTTON outline solid 3px"
+    },
+    {
+      "name": "Keine Anfragen an fremde Dienste beim Gesamtweg",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Keine Skriptfehler (Desktop)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Bewegungsaufnahme Desktop",
+      "pass": true,
+      "detail": "2291 Bilder, 74 s"
+    },
+    {
+      "name": "Schmal: Blatt von unten, Karte sichtbar",
+      "pass": true,
+      "detail": "{\"top\":337.609375,\"h\":506.390625,\"w\":390,\"vw\":390}"
+    },
+    {
+      "name": "Schmal: kein waagerechtes Abschneiden im Original",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Keine Skriptfehler (schmal)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Bewegungsaufnahme schmal",
+      "pass": true,
+      "detail": "291 Bilder, 13 s"
+    },
+    {
+      "name": "WebGL-Ausfall: Canvas-Gelände übernimmt",
+      "pass": true,
+      "detail": "{\"modus\":\"canvas\",\"ruhig\":true,\"cls\":\"app ruhig\"}"
+    },
+    {
+      "name": "Reduzierte Bewegung erkannt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Reduzierte Bewegung: kein Flug, sofortiger Wechsel",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Keine Skriptfehler (ohne WebGL)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Eingebettet: lädt im Sandbox-Rahmen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Eingebettet: Speichern funktioniert im Sandbox-Rahmen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Eingebettet: Original im eigenen Leseraum scrollbar",
+      "pass": true,
+      "detail": "{\"oben\":70,\"hoehe\":531,\"gesamt\":10684,\"fh\":601}"
+    }
+  ]
+}

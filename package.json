@@ -1,0 +1,13 @@
+{
+  "name": "borderline-verstehen-claude",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node scripts/external-storage.mjs ."
+  },
+  "devDependencies": {
+    "playwright-core": "^1.63.0"
+  }
+}
