@@ -1,0 +1,60 @@
+# Fugenland 2 · Herkunft der Ideen
+
+Stand: 4. November 2026. Harness: Claude (Claude Code, Modell Claude Opus 5.5). Diese Seite zeigt für jeden Baustein, aus welchem früheren Werk die Idee stammt und was ich davon **selbst bedient** habe. Außerdem steht hier, was übernommen, was verworfen und was weiterentwickelt wurde. „Bedient“ heißt: Ich habe es heute im Browser geöffnet, angeklickt und die Wirkung beobachtet. Die Bilder liegen in `evidence/sichtung-20261104/` (nicht im Git, weil sie Inhalte fremder Arbeitsstände zeigen).
+
+## Was ich heute selbst bedient habe
+
+| Werk | Wie geöffnet | Was die Fuge dort **tut** (beobachtet) |
+| --- | --- | --- |
+| DAS DAZWISCHEN, Kimi-Review (`dazwischen-kimi-review-20261026`) | gebaute Fassung `dist/`, nur lesend über einen eigenen statischen Dienst | **Fugenbank**: Je nach Relationsfunktion ist die Fuge eine Fachwerkbrücke mit Widerlagern und Prüfbolzen („benannte Brücke“) oder eine **Messstrecke** mit Lineal („dokumentierte Relation, kein Status“). Reiter Befund, Bedingungen, Herkunft, Revision. Die sechs Knöpfe Öffnen, Einlegen, Umkehren, Lösen, Ersetzen und Revidieren wirken auf die **Spurschiene**: Sie legen Segmente an, kehren die Leserichtung um, setzen einen bewussten Sprung oder legen eine Ersatzroute an, bei der das Original erhalten bleibt. Die Fuge selbst verändern sie nicht. Die Endpunktbelege bleiben ausdrücklich „am Widerlager“. |
+| DAS DAZWISCHEN, Zusammenführung B (`dazwischen-werkraum`, unversionierte Quellen) | aus dem Quellstand in meinen Scratch-Ordner gebaut, Fremdordner unverändert (Git-Status vorher und nachher je 70 Einträge) | Dunkles Nachtinstrument mit Bildknoten („Szene fehlt“). „Fugen auswählen“ blättert durch 57 Beziehungen. Die drei Formvorschläge Übersetzung, Schwierigkeit und Schwelle erscheinen als **anders geformte Linie** (Übersetzung mit Ebenenwechsel). Dazu kommt eine Fugenakte als Textspalte. |
+| DAS DAZWISCHEN, Stufe C (`dazwischen-wirkgefuege`) | gebaute Fassung, lesend | Gefüge mit 34 Knoten und 57 Beziehungen, gleiche Einstiegsseite. Ohne Host-Bridge habe ich keine weitere Fugenfunktion gesehen. |
+| ChatGPT FUGE (`FUGE.html`, Samsung_X5) | Datei direkt geöffnet | Ein linearer Denk-Sampler: Eingang, Schnitt, **Reibung**, Take, **Reichweite**, Rückgabe. In der Reibung **verwandelt** jede der sechs Operationen (neben, gegen, durch, fehlt, kippt, takt) die Frage an zwei Schnitte. Beobachtet: „kippt“ erzeugt „An welcher Stelle kippt die Verbindung … in eine falsche Gleichsetzung?“. Die Reichweite fragt nach Modus, Öffnung, Grenze und Rückkehr. |
+| Grok Fugenfassung | nur das vorhandene Bildschirmbild `screenshots/schwelle-traegt.png`. Die App braucht Datenbank und Umgebung, gestartet habe ich sie nicht. | Schwelle „Übergang prüfen“: Möglichkeit, Regel, Versuch und Wirkung bleiben getrennt. Ein gewählter Satz bekommt das Urteil **trägt**, scheitert oder trifft nicht. |
+| WiRKGEFÜGE (`wirkgefuege`) | statisch geöffnet; der eigene Dienst wurde **nicht** gestartet, weil er Beiträge über einen OpenAI-Zugang erschließt (externe Übermittlung) | Ohne Dienst lädt kein Bestand. Gesehen habe ich nur den Rahmen (Felder, Linsen, Zuordnungsmatrix). Die Fugenstation mit Armen kenne ich aus den Quellen (`public/fugen.js`), nicht aus der Bedienung. |
+| PHÄNOMENAUTiK 3, Kimi-Welt (Variantenraum, Port 4340) | im Browser bedient | Steg, Meer, Schiff, Insel. Die Begegnung ist eine **Handlung im Raum**: Zum Stegende, Boje setzen, Zum Ufer, Zurückziehen, Begegnung abschließen. Jede Handlung ändert Szene und Kamera. |
+| Cursor Phänomenkörper und Verstehen/Galerie (4374, 4370) | im Browser geöffnet | Ohne Backend: „Arbeitsraum nicht erreichbar“. Die Funktionen kenne ich aus `phenomenon-body.ts` (Branch `cursor/phaenomenkoerper-70f4`): Armarten, Anschlussrollen und **erkannte Motive** (Brücke, Verzweigung, Schleife) aus der tatsächlichen Struktur. |
+| Antigravity Zellgewebe | Bild `atlas-sichtung-20261104/atlas-4344.png` | **Membranen** um Gedankenräume. Ein Kapitel erscheint als dieselbe Identität in mehreren Räumen, nicht als Kopie. |
+
+## Warum die mechanische Fugenbank nicht wiederholt wird
+
+`artifacts/RADIKALER-NEUSTART-PROMPT.md` verwirft ausdrücklich „die verworfene mechanische Fugenbank als billige SVG-Metapher“. Ebenso verwirft er „neue Effekte, die Unsicherheit, Fluss, Kausalität oder Evidenz nur vortäuschen“. In der Bedienung habe ich den Grund gesehen: Die Fachwerkbrücke ist eine **Zeichnung über** der Relation. Ihre Knöpfe arbeiten an der Spur, nicht an der Fuge. Die Form behauptet Tragfähigkeit, die nicht geprüft ist.
+
+Daraus folgt für diese Fassung:
+1. Die Gestalt eines Raums entsteht aus seinen **Daten**: so viele Riegel wie Grenzen, so viele Zuströme wie Herkünfte, Membranlage als Schwerpunkt der Stimmen, Steine nur für tatsächlich angegebene Quellen.
+2. Jede Bedienung **verändert diese Fuge oder deine Lesart von ihr**: Riegel ziehen, Wort einlegen, Gegenstimme keilen, Stimme zuschalten, Lücke einordnen, Beitrag benennen.
+3. Keine Form zeigt eine Wirkung. Es gibt keinen Strom, der fließt, und keine Brücke, die trägt. Die Ströme der Entstehung sind gleich breit, weil der Bestand die Herkünfte nicht gewichtet.
+
+## Baustein für Baustein
+
+| Baustein | stammt aus | übernommen | weiterentwickelt |
+| --- | --- | --- | --- |
+| **Übersetzung** (Pass mit Becken) | Verkörperungsvertrag (ChatGPT, „Transduktion und Invarianz“, 2026-08-01, um Z. 1469), Formvorschlag Übersetzung (DAS DAZWISCHEN B), DURCH (ChatGPT FUGE), gemeinsame Kapitelidentität (Antigravity) | die fünf Fragen: erhalten, verändern, nicht übersetzbar, Verfälschung, Rückkehr | Zwei echte Wortlaute desselben Orts aus verschiedenen Gebieten (36 Fälle). Einzelne Wörter werden in Becken gelegt, daraus entsteht ein Übersetzungsvertrag. Der Wortabgleich bleibt eine Markierung auf der Sprachebene und sortiert **nie** selbst ein. |
+| **Gegenhalt** (Fels, Spalt, Steine) | Reibung (DAS DAZWISCHEN B), Einwand (Grok 0.2), GEGEN (ChatGPT FUGE), Gegenhalt und Spalte (Codex-Erkundung 2026-11-04) | Widerspruch bleibt offen, Belege bleiben je Seite | Jede Quelle ist ein eigener Stein, der sich aufnehmen lässt. Eigene Gegenstimmen werden in den Spalt gekeilt. Der Seitenwechsel spiegelt den Raum. Die Regel „Der Spalt schließt sich nicht durch die Zahl der Belege“ steht sichtbar im Raum. |
+| **Schwelle** (Tor mit Riegeln) | Grok „Schwelle – Übergang prüfen“, Formvorschlag Schwelle (B: „eine eingerichtete Schwelle belegt keine erfolgte Überschreitung“), Bedingungsfuge aus dem Auftrag | Möglichkeit, Regel, Versuch und Wirkung getrennt | Jede Bestandsgrenze ist ein Riegel. Ziehen entzieht ihn: Die Aussage zeigt, unter wie vielen ihrer Grenzen sie noch steht, und wird schraffiert. Jeder Riegel lässt sich als erfüllt, ungeklärt oder verletzt prüfen. Die Stufe „Wirkung“ bleibt immer „nicht belegt“. |
+| **Überschneidung** (Membranen) | Antigravity Zellgewebe, Bubble Sets (Collins, Penn, Carpendale 2009), Gruppeninteraktionen (Cencetti u. a. 2021), Cursor-Motive, Atlasregel „unspezifische Überschneidung“ | Fläche statt Linie für Zugehörigkeit, mehr als zwei Beteiligte | 26 echte Beschreibungskontexte (NIMH, NHS und weitere) als Stimmen. Die Lage jedes Phänomens ist der Schwerpunkt seiner gewählten Stimmen. Zu- oder Abschalten ordnet neu in „in allen“, „in mehreren“ und „nur bei …“. Dazu die Unterscheidungsfrage. Es gibt kein Zentrum und keine Ursache. |
+| **Entstehung** (Zusammenfluss) | gemeinsame Sinnbildung (De Jaegher und Di Paolo 2007), Spiralwellenmyzel (ChatGPT, um Z. 995), WiRKGEFÜGE „zeit“, Grok „drei Zeiten“, DAS DAZWISCHEN „Werdung“ | Beiträge, Wendepunkt, gemeinsam Entstandenes getrennt | 21 Orte mit mindestens zwei Herkünften („hervorgegangen aus“). Zu jedem Zustrom gehört ein eigener Beitrag. Der Wendepunkt und das Gemeinsame werden getrennt festgehalten. Flussabwärts führt zum Nachfolger. |
+| **Fehlstelle** (Kammer) | FEHLT (ChatGPT FUGE), Fehlstelle (Codex-Erkundung), Nichtverbindung (WiRKGEFÜGE, Codex FUGEN), ehrliche Unverbundenheit (DAS DAZWISCHEN), typisierte Leerwerte (Grok) | unbekannt, nicht untersucht, nicht zugänglich und bewusst offen bleiben unterscheidbar | Die Lücke ist ein Gegenstand mit einem Rand aus echten Kanten, zum Beispiel 189 Studienkanten zu ADHS ohne festgehaltenen Befund. Dazu das Fundus-Kapitel „Luftschadstoffe“, das keinen Ort hat. Eine Nicht-Verbindung lässt sich mit Grund festhalten. Die Mitte wird nie gefüllt. |
+| **Herkunft und Geltung** (Bohrkern) | W3C PROV (Entity, Activity, Agent; wasDerivedFrom), Grok-Proben, ChatGPT-FUGE-Reichweite, „Endpunktbeleg bleibt am Widerlager“ (DAS DAZWISCHEN) | Schichten, Urteil „trägt / scheitert / trifft nicht“, Reichweite | Schichten unter jeder Fuge: Original → Ableitung → Raumbildung → deine Revision. Fünf Schlussproben werden **aus den Feldern der Fuge** ausgewertet, zum Beispiel ob die Verbindung selbst eine Quelle nennt. |
+| **Feld** | Spiralwellenmyzel (lokale Reifung, Ausbreitung, Umbau), Pad++ (semantischer Zoom, Bederson und Hollan 1994), Lenia und Reaktions-Diffusion nur als Anregung, Kimi-Welt (Handeln im Raum) | Feld statt Graph, Maßstabswechsel | Es gibt keine Kantenlinien mehr. Das Gelände entsteht aus der Ortsdichte, die Fugenorte tragen eigene Zeichen. Die Reifungsschicht entsteht **nur** aus gespeicherten Handlungen: eine Diffusion echter Ereignisse mit Ausbreitungsring nach jeder neuen Handlung und Spiralringen am bearbeiteten Fugenort. Ohne Handlung ruht das Feld. |
+
+## Nicht übernommen, mit Grund
+
+- **Mechanische Fugenbank und Messstrecke als Bild** (Kimi): verworfen durch den Neustart-Auftrag. Übernommen ist nur das Prinzip „Endpunktbeleg bleibt am Widerlager“, als Probe im Bohrkern.
+- **Linearer Wizard** (ChatGPT FUGE): Ralf hat ihn abgelehnt. Übernommen sind nur die Reichweite und die Fragen als Raumfrage.
+- **Dunkles Nachtinstrument** (B, C): verworfen, weil Dunkel-auf-dunkel ausdrücklich nicht gewünscht ist.
+- **Wandernder Punkt, Wasseroptik** (Codex, Cursor): Ein wandernder Punkt belegt nichts, und die Wasseroptik hat Ralf verworfen.
+- **Modellvorschläge über OpenAI** (WiRKGEFÜGE): nicht eingebaut, keine Übermittlung.
+
+## Forschung: geprüft und wie verwendet
+
+Die Literaturangaben aus `fugenland-recherche-20261104/FORSCHUNGSANSATZ-FUGENLAND.md` habe ich bibliografisch über Crossref geprüft: Titel, Autoren, Jahr und Ort stimmen. Die W3C-PROV-Begriffe habe ich am Primer selbst nachgelesen. Den Inhalt der Studien habe ich **nicht** vollständig gelesen. Die PubMed-Central-Seite zu Cencetti u. a. war durch eine Browserprüfung gesperrt. Verwendet werden die Arbeiten nur als Gestaltungsanregung, nie als Beleg für eine Aussage über Menschen.
+
+| Angabe | geprüft |
+| --- | --- |
+| Cencetti, Battiston, Lepri, Karsai: Temporal properties of higher-order interactions in social networks. Scientific Reports 2021 | Crossref, DOI 10.1038/s41598-021-86469-8 |
+| De Jaegher, Di Paolo: Participatory sense-making. Phenomenology and the Cognitive Sciences 2007 | Crossref, DOI 10.1007/s11097-007-9076-9 |
+| Collins, Penn, Carpendale: Bubble Sets. IEEE TVCG 2009 | Crossref, DOI 10.1109/tvcg.2009.122 |
+| Chan: Lenia – Biology of Artificial Life. Complex Systems 2019 | Crossref, DOI 10.25088/complexsystems.28.3.251 |
+| Bederson, Hollan: Pad++. UIST 1994 | Crossref, DOI 10.1145/192426.192435 |
+| W3C PROV Primer | Primer gelesen: Entity, Activity, Agent; wasGeneratedBy, wasDerivedFrom, wasAttributedTo |

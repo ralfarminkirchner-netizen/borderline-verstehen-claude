@@ -3,91 +3,65 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
 <title>Borderline verstehen · Fugenland</title>
-<meta name="description" content="Eine begehbare Karte des Atlasbestands: Gebiete, Orte und die Fugen zwischen ihnen – bis zum vollständigen Original und zur eigenen Arbeit.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%229%22 cy=%2216%22 r=%225%22 fill=%22%237d4e57%22/%3E%3Ccircle cx=%2223%22 cy=%2216%22 r=%225%22 fill=%22%233f6e5a%22/%3E%3Cpath d=%22M14 16h4%22 stroke=%22%231d1a16%22 stroke-width=%222%22/%3E%3C/svg%3E">
-<link rel="stylesheet" href="/app.css">
+<meta name="description" content="Ein Feld, das von seinen Fugen getragen wird: Übersetzung, Gegenhalt, Schwelle, Überschneidung, Fehlstelle, Herkunft – jede anders gebaut, jede anders bedienbar, alle aus dem Atlasbestand.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Cpath d=%22M4 6l10 2-3 8 4 10-11 0z%22 fill=%22%235d554b%22/%3E%3Cpath d=%22M28 6l-10 2 3 8-4 10 11 0z%22 fill=%22%238b7e6c%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/fugenland.css">
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <pattern id="schraffur" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="6" stroke="#8a7f6d" stroke-width="1.2"/>
-    </pattern>
-  </defs>
-</svg>
-
-<div id="app" class="app" data-blatt="zu">
-  <main id="welt" class="welt" aria-label="Karte des Atlas">
-    <canvas id="gelaende" class="gelaende" aria-hidden="true"></canvas>
-    <canvas id="ueberlage" class="ueberlage" role="application" tabindex="0"
-      aria-label="Karte. Pfeiltasten wählen den nächsten Ort in dieser Richtung, Eingabe öffnet ihn, Plus und Minus zoomen, Escape geht eine Ebene zurück."
-      aria-describedby="karten-status"></canvas>
-    <p id="karten-status" class="nur-vorlesen" aria-live="polite"></p>
-    <div id="schwebe" class="schwebe" hidden></div>
-    <button id="flug-ueberspringen" class="flug-ueberspringen" type="button" hidden>Flug überspringen</button>
+<div id="app" class="app" data-ebene="feld">
+  <main id="feld" class="feld" aria-label="Fugenfeld">
+    <canvas id="feld-bild" class="feld-bild" tabindex="0" role="application"
+      aria-label="Fugenfeld. Pfeiltasten verschieben, Plus und Minus zoomen. Die Fugenorte sind über die Liste und die Legende mit der Tabulatortaste erreichbar."
+      aria-describedby="feld-status"></canvas>
+    <p id="feld-status" class="nur-vorlesen" aria-live="polite"></p>
+    <div id="feld-schild" class="feld-schild" hidden></div>
   </main>
 
   <header class="kopf">
-    <nav class="pfad" aria-label="Wo du bist">
-      <ol id="pfad"></ol>
-    </nav>
-    <div class="werkzeug">
-      <div class="suche" role="search">
-        <label for="suche" class="nur-vorlesen">Ort finden</label>
-        <input id="suche" type="search" placeholder="Ort finden …" autocomplete="off" spellcheck="false"
-          role="combobox" aria-expanded="false" aria-controls="treffer" aria-autocomplete="list">
-        <ul id="treffer" class="treffer" role="listbox" hidden></ul>
-      </div>
-      <button id="linsen-knopf" class="knopf rund" type="button" aria-expanded="false" aria-controls="linsen" title="Perspektive">
-        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="9" cy="10" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="15" cy="14" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span class="nur-vorlesen">Perspektive wechseln</span>
-      </button>
-      <button id="eigen-knopf" class="knopf rund eigen" type="button" title="Meine Arbeit">
-        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 19c4-1 6-6 9-9l3 3c-3 3-8 5-9 9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 8l2-2 3 3-2 2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span class="nur-vorlesen">Meine Arbeit</span><span id="eigen-zahl" class="zahl" hidden></span>
-      </button>
-      <button id="info-knopf" class="knopf rund" type="button" title="Wie diese Karte gebaut ist">
-        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6M12 7.5v.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        <span class="nur-vorlesen">Wie diese Karte gebaut ist</span>
-      </button>
-    </div>
-    <div id="linsen" class="linsen" role="group" aria-label="Perspektive" hidden>
-      <button type="button" data-linse="gebiete" aria-pressed="true"><b>Gebiete</b><span>Wo etwas liegt</span></button>
-      <button type="button" data-linse="fugen" aria-pressed="false"><b>Fugenarten</b><span>Wie es zusammenhängt</span></button>
-      <button type="button" data-linse="geltung" aria-pressed="false"><b>Herkunft</b><span>Woher die Verbindung stammt</span></button>
-      <button type="button" data-linse="eigen" aria-pressed="false"><b>Meine Fugen</b><span>Was ich festgehalten habe</span></button>
-      <label class="ruhig"><input type="checkbox" id="ruhig"> Ruhige Ansicht</label>
+    <a class="marke" href="#/feld">
+      <span class="marke-titel">Fugenland</span>
+      <span class="marke-unter">Borderline verstehen · Claude-Fassung</span>
+    </a>
+    <nav id="pfad" class="pfad" aria-label="Wo du bist"></nav>
+    <div class="kopf-werkzeug">
+      <button id="liste-knopf" type="button" class="knopf leise" aria-pressed="false">Als Liste</button>
+      <button id="bewegung-knopf" type="button" class="knopf leise" aria-pressed="false">Bewegung an</button>
+      <span id="speicher-stand" class="speicher-stand" role="status" aria-live="polite"></span>
     </div>
   </header>
 
-  <aside id="blatt" class="blatt" aria-label="Ausgewählter Inhalt" tabindex="-1">
-    <div class="blatt-griff" aria-hidden="true"><span></span></div>
-    <button id="blatt-weit" class="blatt-weit" type="button" hidden>Ganz aufziehen</button>
-    <div id="blatt-inhalt" class="blatt-inhalt"></div>
-  </aside>
+  <aside id="legende" class="legende" aria-label="Fugenarten im Feld"></aside>
 
-  <section id="legende" class="kartenlegende" aria-label="Legende der Perspektive" hidden></section>
-  <section id="willkommen" class="willkommen" aria-labelledby="willkommen-titel" hidden>
-    <button type="button" class="willkommen-zu" id="willkommen-zu" aria-label="Einführung schließen">×</button>
-    <h1 id="willkommen-titel">Borderline verstehen</h1>
-    <p>Eine Karte des ganzen Atlasbestands: zehn Gebiete, 1226 Orte und die Fugen zwischen ihnen. Tippe ein Gebiet oder einen Ort an; jede Ebene öffnet sich bis zum vollständigen Original.</p>
-    <div class="einstiege" id="einstiege"></div>
-  </section>
+  <section id="liste" class="liste" aria-label="Alle Fugenorte als Liste" hidden></section>
 
-  <section id="hand" class="hand" aria-label="Getragene Orte" hidden>
-    <div class="hand-kopf"><b>In der Hand</b> <span id="hand-hinweis"></span></div>
-    <ul id="hand-liste"></ul>
-    <div class="hand-taten">
-      <button id="hand-fuge" class="knopf voll" type="button">Als eigene Fuge festhalten</button>
-      <button id="hand-ablegen" class="knopf" type="button">Ablegen</button>
+  <section id="raum" class="raum" aria-labelledby="raum-titel" hidden>
+    <div class="raum-kopf">
+      <button id="raum-zurueck" type="button" class="knopf zurueck">← Zum Feld</button>
+      <div class="raum-kennung">
+        <p id="raum-art" class="raum-art"></p>
+        <h1 id="raum-titel" class="raum-titel" tabindex="-1"></h1>
+      </div>
+      <button id="schicht-knopf" type="button" class="knopf leise schicht-knopf" aria-pressed="false" aria-controls="raum-schicht">Herkunft und Geltung</button>
+      <div class="raum-wechsel" role="group" aria-label="Fall wechseln">
+        <button id="raum-vor" type="button" class="knopf leise" aria-label="Voriger Fall">‹</button>
+        <span id="raum-zahl" class="raum-zahl"></span>
+        <button id="raum-nach" type="button" class="knopf leise" aria-label="Nächster Fall">›</button>
+      </div>
     </div>
+    <div id="raum-buehne" class="raum-buehne"></div>
+    <div id="raum-schicht" class="raum-schicht"></div>
   </section>
 
-  <section id="spieler" class="spieler" aria-label="Medium" hidden></section>
-  <div id="meldung" class="meldung" role="status" aria-live="polite" hidden></div>
-  <noscript><p class="ohne-skript">Diese Karte braucht JavaScript. Die Originale liegen im Atlasbestand.</p></noscript>
+  <dialog id="original" class="original" aria-labelledby="original-titel">
+    <div class="original-kopf">
+      <h2 id="original-titel"></h2>
+      <button type="button" class="knopf" data-schliessen>Zurück in den Raum</button>
+    </div>
+    <div id="original-text" class="original-text"></div>
+  </dialog>
 </div>
-<script type="module" src="/js/main.mjs"></script>
+<script type="module" src="/fl/app.mjs"></script>
 </body>
 </html>

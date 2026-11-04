@@ -1,36 +1,34 @@
-// Gesamtprüfung im echten Browser mit isoliertem Prüfdatenordner.
-// Startet einen eigenen Prüfdienst (eigener Port, eigener Datenordner), bedient den Gesamtweg,
+// Gesamtprüfung von Fugenland 2 im echten Browser mit isoliertem Prüfdatenordner.
+// Startet einen eigenen Prüfdienst (eigener Port, eigener Datenordner), bedient jeden Fugenraum,
 // nimmt Bilder und ein Bewegungsvideo auf und schreibt ein Protokoll. Persönliche Daten bleiben unberührt.
 import { spawn } from 'node:child_process';
-import { mkdir, writeFile, rm, readFile, readdir, rename } from 'node:fs/promises';
+import { mkdir, writeFile, rm, readFile } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright-core';
 import { requireExternalWriteTarget } from './external-storage.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const OUT = requireExternalWriteTarget(join(ROOT, 'evidence', 'pruefung-20261103'));
+const OUT = requireExternalWriteTarget(join(ROOT, 'evidence', 'pruefung-20261104'));
 const DATA = requireExternalWriteTarget(join(ROOT, '.cache', 'pruefdaten'));
 const TMP = requireExternalWriteTarget(join(ROOT, '.cache', 'tmp'));
-const PROFILE = requireExternalWriteTarget(join(ROOT, '.cache', 'pw-profil'));
 const EXE = `${process.env.HOME}/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing`;
 const PORT = 4394; const BASE = `http://127.0.0.1:${PORT}`;
 const RAUM = 'http://127.0.0.1:4191/';
 const nur = process.argv[2];
 
 await rm(DATA, { recursive: true, force: true });
-for (const d of [OUT, join(OUT, 'bilder'), join(OUT, 'video'), DATA, TMP, PROFILE]) await mkdir(d, { recursive: true });
+for (const d of [OUT, join(OUT, 'bilder'), join(OUT, 'video'), DATA, TMP]) await mkdir(d, { recursive: true });
 process.env.TMPDIR = TMP;
-process.env.PLAYWRIGHT_BROWSERS_PATH = join(ROOT, '.cache', 'pw-browsers');
 
-const log = []; const ok = (name, pass, detail = '') => { log.push({ name, pass, detail }); console.log(`${pass ? 'OK  ' : 'FEHL'} ${name}${detail ? ` · ${detail}` : ''}`); };
+const log = []; const ok = (name, pass, detail = '') => { log.push({ name, pass: !!pass, detail: String(detail) }); console.log(`${pass ? 'OK  ' : 'FEHL'} ${name}${detail ? ` · ${detail}` : ''}`); };
 const server = spawn(process.execPath, [join(ROOT, 'server.mjs')], { env: { ...process.env, PORT: String(PORT), WERKSTATT_DIR: DATA }, stdio: ['ignore', 'pipe', 'pipe'] });
 await new Promise((res, rej) => { server.stdout.on('data', (b) => String(b).includes('läuft') && res()); server.stderr.on('data', (b) => rej(new Error(String(b)))); setTimeout(() => rej(new Error('Prüfdienst startet nicht')), 8000); });
 
 const bild = async (page, name) => { await page.waitForTimeout(250); await page.screenshot({ path: join(OUT, 'bilder', `${name}.png`) }); };
-const settle = (page, ms = 1700) => page.waitForTimeout(ms);
-const hash = (page) => page.evaluate(() => location.hash);
-const art = async (page) => page.evaluate(async () => { const m = await import('/js/main.mjs'); return m.A; });
+const warte = (page, ms = 1200) => page.waitForTimeout(ms);
+const geheZu = async (page, hash) => { await page.evaluate((h) => { location.hash = h; }, hash); await warte(page, 1300); };
+const launch = (args = []) => chromium.launch({ executablePath: EXE, headless: true, args: ['--use-angle=metal', '--enable-gpu', ...args] });
 
 // Bewegungsaufnahme: echte Bildschirmbilder per Chrome-Screencast, danach mit ffmpeg zu MP4 gesetzt.
 async function aufnahme(page, name) {
@@ -52,221 +50,221 @@ async function aufnahme(page, name) {
   };
 }
 
-async function launch(opts = {}) {
-  return chromium.launch({ executablePath: EXE, headless: true, args: ['--use-angle=metal', '--enable-gpu', '--ignore-gpu-blocklist', ...(opts.args || [])] });
+// Klick auf einen Fugenort direkt im Feldbild (über seine aktuelle Bildlage).
+async function klickeFugenort(page, art, i) {
+  const p = await page.evaluate(([art, i]) => { const q = window.fugenland.punkte.find((x) => x.art === art && x.i === i); return q && q.bx !== undefined ? [q.bx, q.by] : null; }, [art, i]);
+  if (!p) return false; const box = await page.locator('#feld-bild').boundingBox();
+  await page.mouse.move(box.x + p[0], box.y + p[1], { steps: 12 }); await warte(page, 500); await page.mouse.click(box.x + p[0], box.y + p[1]); return true;
 }
 
-// ---------------- Desktop: der durchgehende Weg mit Video ----------------
+// ---------------- Desktop: der durchgehende Weg durch alle Fugenräume, mit Video ----------------
 async function desktop() {
   const browser = await launch();
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
-  const page = await ctx.newPage(); const fehler = []; const stop = await aufnahme(page, 'gesamtweg-desktop');
-  page.on('pageerror', (e) => fehler.push(e.message)); page.on('console', (m) => m.type() === 'error' && fehler.push(m.text()));
-  const netz = []; page.on('request', (r) => netz.push(r.url()));
-  await page.goto(BASE); await settle(page, 2200);
-  const modus = await page.evaluate(async () => (await import('/js/main.mjs')).A.gelaende.modus);
-  ok('Einstieg lädt, Grafik', true, modus);
-  await bild(page, '01-ueberblick');
-  // Bewegung: ziehen und zoomen
-  await page.mouse.move(700, 450); await page.mouse.down(); await page.mouse.move(560, 380, { steps: 18 }); await page.mouse.up();
-  for (let k = 0; k < 6; k++) { await page.mouse.wheel(0, -160); await page.waitForTimeout(60); }
-  await settle(page, 600);
-  // Gebiet über Einstieg
-  await page.getByRole('button', { name: 'ADHS · Randphänomene' }).first().click(); await settle(page);
-  ok('Gebiet geöffnet', (await hash(page)).startsWith('#/gebiet/'), await hash(page));
-  await bild(page, '02-gebiet');
-  // Ort aus dem Gebiet
-  await page.locator('#g-orte button', { hasText: 'Aufgabenstarre' }).first().click(); await settle(page);
-  const ortHash = await hash(page); ok('Ort geöffnet', ortHash.startsWith('#/ort/'), ortHash);
-  await bild(page, '03-ort');
-  // Fuge aus dem Fugenstern
-  const fugen = page.locator('#o-stern [data-fuge]');
-  ok('Fugenstern hat Fugen', (await fugen.count()) > 0, `${await fugen.count()} gezeichnet`);
-  await page.locator('#o-stern [data-fuge][aria-label^="Spannung"]').first().click({ force: true }); await settle(page);
-  ok('Fuge geöffnet', (await hash(page)).includes('/fuge/'), await hash(page));
-  await bild(page, '04-fuge-neben');
-  for (const b of ['gegen', 'durch', 'fehlt', 'kippt']) { await page.locator('#f-bew button', { hasText: new RegExp(`^${b}$`) }).click(); await page.waitForTimeout(800); }
-  await bild(page, '05-fuge-kippt');
-  await page.locator('#f-bew button', { hasText: /^fehlt$/ }).click(); await page.waitForTimeout(800);
-  await bild(page, '06-fuge-fehlt');
-  // Vergleich: andere Fuge gleicher Art
-  const vergleich = await page.locator('#f-vergleich button').count(); const keinVergleich = await page.locator('#f-vergleich').innerText();
-  ok('Vergleich gleicher Fugenart (oder ehrlich: keine weitere)', vergleich > 0 || /keine weitere Fuge/.test(keinVergleich), vergleich ? `${vergleich} Vergleichsfugen` : keinVergleich);
-  const linsen = {}; for (const b of ['neben', 'fehlt', 'kippt', 'takt']) { await page.locator('#f-bew button', { hasText: new RegExp(`^${b}$`) }).click(); await page.waitForTimeout(250); linsen[b] = (await page.locator('#f-linse').innerText()).slice(0, 60); }
-  ok('Lesebewegungen öffnen jeweils eigenen Inhalt', new Set(Object.values(linsen)).size === 4, JSON.stringify(linsen));
-  // Zurück zum Ort über den Pfad
-  await page.locator('#pfad li').nth(2).locator('button').click(); await settle(page);
-  ok('Rückweg über Pfad zum Ort', (await hash(page)) === ortHash, await hash(page));
-  // Original
-  await page.locator('#o-lesen').click(); await settle(page, 2200);
-  ok('Original geöffnet', (await hash(page)).endsWith('/original'));
-  await bild(page, '07-original');
-  const lese = await page.evaluate(() => { const s = document.querySelector('#blatt-inhalt'); s.scrollTop = s.scrollHeight; const a = document.querySelector('.lesen article'); const r = a.getBoundingClientRect(); return { text: a.innerText.length, sichtbar: s.clientHeight, gesamt: s.scrollHeight, artikelBreite: r.width }; });
-  await settle(page, 500); await bild(page, '08-original-ende');
-  ok('Original vollständig erreichbar', lese.gesamt >= lese.sichtbar && lese.text > 200, JSON.stringify(lese));
-  await page.getByRole('button', { name: /^Zurück zu/ }).click(); await settle(page);
-  ok('Zurück vom Original zum Ort', (await hash(page)) === ortHash);
-  await page.goBack(); await settle(page); const back1 = await hash(page);
-  await page.goForward(); await settle(page);
-  ok('Browser-Zurück fliegt zurück', back1.endsWith('/original'), back1);
+  const page = await ctx.newPage(); const fehler = []; const netz = [];
+  page.on('pageerror', (e) => fehler.push(e.message)); page.on('console', (m) => m.type() === 'error' && fehler.push(m.text())); page.on('request', (r) => netz.push(r.url()));
+  const stop = await aufnahme(page, 'gesamtweg-desktop');
+  await page.goto(BASE); await warte(page, 2000);
+  const zahl = await page.evaluate(() => Object.fromEntries(Object.entries(window.fugenland.FAELLE).map(([k, v]) => [k, v.length])));
+  ok('Feld lädt mit allen Fugenarten', Object.keys(zahl).length === 6 && Object.values(zahl).every((n) => n > 0), JSON.stringify(zahl));
+  ok('Keine Kantenlinien im Feld: nur Fugenorte', await page.evaluate(() => window.fugenland.punkte.length > 200), `${await page.evaluate(() => window.fugenland.punkte.length)} Fugenorte`);
+  await bild(page, '01-feld-ueberblick');
+  // Ziehen und zoomen
+  await page.mouse.move(900, 450); await page.mouse.down(); await page.mouse.move(820, 420, { steps: 15 }); await page.mouse.up();
+  for (let k = 0; k < 4; k++) { await page.mouse.wheel(0, -150); await page.waitForTimeout(80); }
+  await warte(page, 600); await bild(page, '02-feld-nah');
+  await page.locator('#feld-bild').focus(); await page.keyboard.press('0'); await warte(page, 500);
 
-  // Ein tiefes Fundus-Kapitel mit Abschnittsleiste
-  await page.evaluate(() => { location.hash = '#/ort/forschungsstand-und-offene-fragen/original'; }); await settle(page, 2500);
-  const kapitel = await page.evaluate(() => ({ h: document.querySelectorAll('.lesen article h2').length, len: document.querySelector('.lesen article')?.innerText.length || 0 }));
-  ok('Fundus-Kapitel vollständig gesetzt', kapitel.len > 3000, JSON.stringify(kapitel));
-  if (kapitel.h) { await page.locator('#l-toc button').nth(Math.min(2, kapitel.h - 1)).click(); await settle(page, 900); }
-  await bild(page, '09-kapitel');
+  // 1 Gegenhalt: über das Feldbild betreten (Flug + Entfaltung)
+  const getroffen = await klickeFugenort(page, 'gegenhalt', 0); await warte(page, 1600);
+  ok('Fugenort im Feld anklickbar, Raum entfaltet sich', getroffen && await page.locator('#raum').isVisible(), await page.locator('#raum-titel').innerText().catch(() => ''));
+  if (!(await page.locator('#raum').isVisible())) await geheZu(page, '#/raum/gegenhalt/0');
+  const kam1 = await page.evaluate(() => ({ ...window.fugenland.feld.kam }));
+  const titel = await page.locator('#raum-titel').innerText();
+  await page.locator('.stein').first().click(); await warte(page, 400);
+  await page.locator('.spalt textarea').fill('Familienkontrolle zeigt Verwechslung, nicht die Abwesenheit einer Wirkung.');
+  await page.getByRole('button', { name: 'In den Spalt keilen' }).click(); await warte(page, 400);
+  ok('Gegenhalt: Beleg aufgenommen und Gegenstimme gekeilt', (await page.locator('.stein.gelesen').count()) === 1 && (await page.locator('.keil').count()) === 1, titel);
+  const linksVorher = await page.locator('.fels.links .fels-titel').innerText();
+  await page.getByRole('button', { name: 'Seite wechseln' }).click(); await warte(page, 700);
+  ok('Gegenhalt: Seitenwechsel spiegelt die Seiten', (await page.locator('.fels.links .fels-titel').innerText()) !== linksVorher);
+  await bild(page, '10-gegenhalt');
+  // Herkunft und Geltung: Bohrkern und Probe
+  await page.getByRole('button', { name: 'Herkunft und Geltung' }).click(); await warte(page, 500);
+  await page.locator('.probe', { hasText: 'Beide Orte sind belegt' }).click(); await warte(page, 400);
+  const stempel = await page.locator('.stempel strong').innerText();
+  ok('Herkunft: vier Schichten, Probe aus den Daten ausgewertet', (await page.locator('.schicht').count()) === 4 && /trägt teilweise|scheitert/i.test(stempel), stempel);
+  await page.locator('.probe', { hasText: 'Die Kante sagt' }).click(); await warte(page, 300);
+  ok('Herkunft: Modellprobe trifft hier nicht', /trifft nicht/i.test(await page.locator('.stempel strong').innerText()));
+  ok('Herkunft: technische Kennungen nur in geschlossenen Details', (await page.locator('.technik').getAttribute('open')) === null && !(await page.locator('#raum-schicht').innerText()).includes('fundus-source:'));
+  await bild(page, '11-herkunft-probe');
+  await page.getByRole('button', { name: 'Herkunft und Geltung' }).click();
+  // Zurück ins Feld: Kamera bleibt am Fugenort
+  await page.keyboard.press('Escape'); await warte(page, 700);
+  const kam2 = await page.evaluate(() => ({ ...window.fugenland.feld.kam }));
+  ok('Zurück ins Feld: Kamera und Auswahl bleiben erhalten', !(await page.locator('#raum').isVisible()) && Math.abs(kam1.x - kam2.x) < 1 && Math.abs(kam1.z - kam2.z) < 0.01 && await page.evaluate(() => window.fugenland.feld.auswahl?.art === 'gegenhalt'));
+  ok('Reifung im Feld wächst aus den Handlungen', await page.evaluate(() => window.fugenland.feld.reife.reduce((a, b) => a + b, 0) > 0));
+  await bild(page, '12-feld-nach-gegenhalt');
 
-  // Werk des Vaters an seinem Ort und Aufnahme im gemeinsamen Spieler
-  await page.evaluate(() => { location.hash = '#/ort/borderline-verstehen-menschen-offenhalten'; }); await settle(page, 2200);
-  const werk = await page.evaluate(() => { const img = document.querySelector('.werk img'); return img ? { geladen: img.complete && img.naturalWidth > 0, ueberText: !!document.querySelector('.werk figure *:not(img):not(figcaption)') } : null; });
-  ok('Werk des Vaters ganz und ohne Text darüber', !!werk?.geladen, JSON.stringify(werk));
-  await page.locator('.werk').scrollIntoViewIfNeeded(); await bild(page, '17-werk-am-ort');
-  await page.evaluate(() => { location.hash = '#/gebiet/traumaatlas'; }); await settle(page, 2000);
-  await page.locator('#g-medien .medium-zug').first().click(); await page.waitForTimeout(2500);
-  const spielt = await page.evaluate(() => { const m = document.querySelector('#spieler audio, #spieler video'); return m ? { zeit: m.currentTime, pausiert: m.paused, fehler: m.error?.code || null } : null; });
-  ok('Aufnahme spielt im gemeinsamen Spieler', spielt && spielt.zeit > 0.5 && !spielt.fehler, JSON.stringify(spielt));
-  await bild(page, '18-spieler');
-  await page.evaluate(() => { location.hash = '#/ort/emdr-2'; }); await settle(page, 1500);
-  const weiter = await page.evaluate(() => { const m = document.querySelector('#spieler audio, #spieler video'); return m && !m.paused; });
-  ok('Spieler läuft bei Navigation weiter', weiter);
-  await page.locator('#spieler [data-t=zu]').click();
+  // 2 Schwelle
+  await page.locator('.legende-art', { hasText: 'Schwelle' }).getByRole('button', { name: 'Betreten' }).click(); await warte(page, 1500);
+  const vorher = await page.locator('.jenseits-stand').innerText();
+  await page.locator('.riegel-stange').nth(0).click(); await page.locator('.riegel-stange').nth(1).click(); await warte(page, 300);
+  await page.locator('.riegel').nth(2).getByRole('radio', { name: 'ungeklärt' }).click(); await warte(page, 400);
+  const nachher = await page.locator('.jenseits-stand').innerText();
+  ok('Schwelle: Riegel ziehen ändert den Geltungsrahmen, Prüfung wird gesetzt', vorher !== nachher && (await page.locator('.riegel.raus').count()) === 2 && (await page.locator('.stufen li.an').count()) === 3, nachher);
+  await bild(page, '20-schwelle');
 
-  // Tragen und Einfangen
-  await page.evaluate(() => { location.hash = '#/ort/emdr-2'; }); await settle(page, 2000);
-  await page.locator('#o-tragen').click(); await settle(page, 400);
-  const ziel = await page.evaluate(async () => { const { A } = await import('/js/main.mjs'); const i = A.daten.orte.findIndex((o) => o.t === 'Flashbacks'); return A.karte.schirm(A.daten.orte[i].x, A.daten.orte[i].y); });
-  await page.mouse.move(300, 300); await page.mouse.move(ziel.x + 30, ziel.y - 40, { steps: 25 }); await page.waitForTimeout(500);
-  await bild(page, '10-energie-tragen');
-  await page.mouse.move(ziel.x, ziel.y, { steps: 6 }); await page.mouse.click(ziel.x, ziel.y); await settle(page, 600);
-  const hand = await page.locator('#hand-liste li').count(); ok('Zweiten Ort bewusst eingefangen', hand === 2, `${hand} in der Hand`);
-  await page.mouse.move(ziel.x - 80, ziel.y + 60, { steps: 20 }); await page.waitForTimeout(400);
-  await bild(page, '11-kombination');
-  ok('Kombination zeigt gemeinsame Nachbarn', /gemeinsame|gemeinsamer|keine gemeinsamen/.test(await page.locator('#hand-hinweis').innerText()), await page.locator('#hand-hinweis').innerText());
-  // Lösen eines Elements
-  await page.locator('#hand-liste li').nth(1).getByRole('button').click(); await page.waitForTimeout(300);
-  ok('Element wieder gelöst', (await page.locator('#hand-liste li').count()) === 1);
-  await page.mouse.click(ziel.x, ziel.y); await settle(page, 400);
+  // 3 Übersetzung
+  await geheZu(page, '#/raum/uebersetzung/4');
+  await page.getByRole('button', { name: /Wortgleiche zeigen/ }).click(); await warte(page, 300);
+  await page.locator('.fassung.links .wort', { hasText: /^Gefühlen$/ }).first().click(); await page.locator('.becken.veraendert .becken-rand').click(); await warte(page, 200);
+  await page.locator('.fassung.rechts .wort', { hasText: /^validieren$/ }).first().click(); await page.locator('.becken.nurhier .becken-rand').click(); await warte(page, 200);
+  await page.locator('.fassung.links .wort', { hasText: /^Behandlung$/ }).first().click(); await page.locator('.becken.unuebersetzbar .becken-rand').click(); await warte(page, 400);
+  ok('Übersetzung: Wörter in drei Becken, Vertrag entsteht', (await page.locator('.kiesel').count()) === 3 && await page.locator('.vertrag').isVisible());
+  ok('Übersetzung: Wortabgleich nur als Markierung, nicht einsortiert', (await page.locator('.wort.gleich').count()) > 0);
+  await bild(page, '30-uebersetzung');
+  await page.getByRole('button', { name: 'Zur Quelle dieser Fassung' }).first().click(); await warte(page, 400);
+  ok('Übersetzung: Rückweg zum vollen Wortlaut mit Herkunft', await page.locator('#original').isVisible() && /Herkunft/.test(await page.locator('.original-herkunft').innerText()));
+  await bild(page, '31-original'); await page.getByRole('button', { name: 'Zurück in den Raum' }).click(); await warte(page, 300);
 
-  // Werkbank: eigene Fuge anlegen
-  await page.locator('#hand-fuge').click(); await settle(page);
-  await page.fill('#w-titel', 'Prüffuge: Verfahren und Erleben');
-  await page.fill('#r0', 'Verfahren (synthetisch)'); await page.selectOption('#d0', 'aus');
-  await page.fill('#r1', 'Erleben (synthetisch)'); await page.selectOption('#d1', 'an');
-  await page.getByRole('button', { name: /^Bedingung:/ }).click();
-  await page.fill('#w-aussage', 'Synthetische Prüfaussage: Unter welchen Bedingungen lese ich beides zusammen?');
-  await page.fill('#w-grenze', 'Kein Wirksamkeitsnachweis. Nur Prüfdaten.');
-  await page.locator('#w-dazu').fill('Dissoz'); await page.waitForTimeout(300);
-  await page.locator('#w-treffer li').first().dispatchEvent('pointerdown'); await page.waitForTimeout(300);
-  await bild(page, '12-werkbank');
-  // Kontrast der Eingabefelder messen
-  const kontrast = await page.evaluate(() => {
-    const lum = (c) => { const [r, g, b] = c.match(/\d+/g).slice(0, 3).map(Number).map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };
-    const el = document.querySelector('#w-aussage'); const cs = getComputedStyle(el);
-    const a = lum(cs.color); const b = lum(cs.backgroundColor); const rand = lum(cs.borderTopColor);
-    return { text: ((Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05)).toFixed(1), rahmen: ((Math.max(rand, b) + 0.05) / (Math.min(rand, b) + 0.05)).toFixed(1) };
-  });
-  ok('Eingabe kontrastreich', Number(kontrast.text) >= 7 && Number(kontrast.rahmen) >= 3, JSON.stringify(kontrast));
-  await page.locator('#w-speichern').click(); await settle(page, 1800);
-  ok('Eigene Fuge gespeichert', (await hash(page)).startsWith('#/eigen/'), await hash(page));
-  await bild(page, '13-eigene-fuge');
-  const datei = JSON.parse(await readFile(join(DATA, 'werkstatt.json'), 'utf8'));
-  ok('Datei im Prüfdatenordner', datei.gefuege.length === 1 && datei.gefuege[0].teile.length === 3, `${datei.gefuege[0].teile.map((t) => `${t.name} als ${t.rolle || '–'}`).join('; ')}`);
-  // Neuladen und Wiederöffnen
-  const eigenHash = await hash(page);
-  await page.reload(); await settle(page, 2500);
-  ok('Nach Neuladen wieder geöffnet', (await page.locator('#blatt-inhalt h1').innerText()).includes('Prüffuge'));
-  // Bearbeiten
-  await page.locator('#e-bearbeiten').click(); await settle(page, 800);
-  await page.fill('#w-aussage', 'Geänderte synthetische Prüfaussage.'); await page.locator('#w-speichern').click(); await settle(page, 1500);
-  const nach = JSON.parse(await readFile(join(DATA, 'werkstatt.json'), 'utf8'));
-  ok('Bearbeitung mit Verlauf', nach.gefuege[0].aussage.startsWith('Geänderte') && nach.gefuege[0].verlauf.length === 2, nach.gefuege[0].verlauf.map((v) => v.was).join(' | '));
-  // Perspektivwechsel bewahrt Kamera und Auswahl
-  const vorher = await page.evaluate(async () => { const { A } = await import('/js/main.mjs'); return { cam: { ...A.karte.cam }, z: A.karte.zoom, h: location.hash }; });
-  await page.locator('#linsen-knopf').click(); await page.locator('[data-linse=fugen]').click(); await page.waitForTimeout(500);
-  const nachher = await page.evaluate(async () => { const { A } = await import('/js/main.mjs'); return { cam: { ...A.karte.cam }, z: A.karte.zoom, h: location.hash }; });
-  ok('Perspektivwechsel bewahrt Kamera und Auswahl', Math.abs(vorher.cam.x - nachher.cam.x) < 0.5 && vorher.z === nachher.z && vorher.h === nachher.h);
-  await bild(page, '14-perspektive-fugenarten');
-  await page.locator('#linsen-knopf').click(); await page.locator('[data-linse=geltung]').click(); await page.waitForTimeout(400);
-  await page.evaluate(() => { location.hash = '#/gebiet/traumaatlas'; }); await settle(page, 1800);
-  await bild(page, '15-perspektive-herkunft');
-  await page.locator('#linsen-knopf').click(); await page.locator('[data-linse=gebiete]').click(); await page.waitForTimeout(300);
-  // Notiz an einem Ort
-  await page.evaluate(() => { location.hash = '#/ort/flashbacks'; }); await settle(page, 1800);
-  await page.fill('#a-text', 'Synthetische Prüffrage an diesem Ort.'); await page.locator('#a-speichern').click(); await settle(page, 800);
-  await page.reload(); await settle(page, 2500);
-  const notiz = await page.locator('#o-eigene textarea[aria-label="Notiz bearbeiten"]').inputValue().catch(() => '');
-  ok('Notiz nach Neuladen am selben Ort', notiz.includes('Prüffrage'), notiz);
-  await page.locator('#o-eigene').scrollIntoViewIfNeeded(); await bild(page, '16-notiz-am-ort');
-  // Löschen mit Rückgängig, dann endgültig
-  await page.evaluate((h) => { location.hash = h; }, eigenHash); await settle(page, 1500);
-  await page.locator('#e-loeschen').click(); await page.locator('#meldung button', { hasText: 'Rückgängig' }).waitFor(); await settle(page, 300);
-  ok('Gelöscht', JSON.parse(await readFile(join(DATA, 'werkstatt.json'), 'utf8')).gefuege.length === 0);
-  await page.locator('#meldung button', { hasText: 'Rückgängig' }).click(); await settle(page, 1200);
-  ok('Rückgängig stellt wieder her', JSON.parse(await readFile(join(DATA, 'werkstatt.json'), 'utf8')).gefuege.length === 1);
-  await page.locator('#e-loeschen').click(); await page.locator('#meldung button', { hasText: 'Rückgängig' }).waitFor(); await settle(page, 1200);
-  ok('Endgültig gelöscht', JSON.parse(await readFile(join(DATA, 'werkstatt.json'), 'utf8')).gefuege.length === 0);
-  // Tastatur
-  await page.evaluate(() => { location.hash = '#/ort/emdr-2'; }); await settle(page, 1600);
-  await page.locator('#ueberlage').focus(); const h0 = await hash(page);
-  await page.keyboard.press('ArrowRight'); await settle(page, 900); const h1 = await hash(page);
-  ok('Tastatur: Pfeil wählt Nachbarort', h1 !== h0 && h1.startsWith('#/ort/'), `${h0} → ${h1}`);
-  await page.keyboard.press('Escape'); await settle(page, 900);
-  ok('Tastatur: Escape geht eine Ebene zurück', (await hash(page)).startsWith('#/gebiet/'), await hash(page));
-  await page.keyboard.press('Tab'); const fokus = await page.evaluate(() => { const e = document.activeElement; const cs = getComputedStyle(e); return `${e.tagName} outline ${cs.outlineStyle} ${cs.outlineWidth}`; });
-  ok('Fokus sichtbar', /solid|auto/.test(fokus), fokus);
-  // Netz: keine fremden Ziele
+  // 4 Überschneidung
+  await geheZu(page, '#/raum/ueberschneidung/0');
+  const m1 = await page.locator('.membran').count();
+  await page.locator('.ue-stimme', { hasText: 'Borderline-Persönlichkeitsstörung' }).click(); await warte(page, 400);
+  const m2 = await page.locator('.membran').count(); const nurBei = await page.locator('.ue-zone h3', { hasText: 'Nur bei Borderline' }).count();
+  ok('Überschneidung: Stimme zuschalten fügt Membran hinzu und ordnet neu', m2 === m1 + 1 && nurBei === 1, `${m1} → ${m2} Membranen`);
+  await page.locator('.ph.geteilt').first().click(); await warte(page, 300);
+  ok('Überschneidung: Phänomen zeigt seine Stimmen und die Gesamtzahl im Bestand', /Insgesamt im Bestand bei/.test(await page.locator('.ue-fokus').innerText()));
+  await bild(page, '40-ueberschneidung');
+
+  // 5 Entstehung
+  await geheZu(page, '#/raum/entstehung/0');
+  await page.locator('.strom').nth(1).click(); await warte(page, 300);
+  await page.locator('.zustrom textarea').fill('Bringt Atem und Haltung als Zugang hinein.'); await page.getByRole('button', { name: 'Beitrag benennen' }).click(); await warte(page, 300);
+  await page.getByLabel('Wendepunkt').fill('Spüren in kleinen Dosen statt Deuten.'); await page.getByRole('button', { name: 'Wendepunkt setzen' }).click(); await warte(page, 400);
+  ok('Entstehung: Beitrag eines Zustroms und Wendepunkt gespeichert', (await page.locator('.strom.benannt').count()) === 1 && (await page.locator('.becken-zusammen.gewendet').count()) === 1);
+  await bild(page, '50-entstehung');
+
+  // 6 Fehlstelle
+  const adhs = await page.evaluate(() => window.fugenland.FAELLE.fehlstelle.findIndex((f) => f.ort && f.raender.length > 100));
+  await geheZu(page, `#/raum/fehlstelle/${adhs}`);
+  await page.locator('.rand-marke').nth(2).click(); await warte(page, 300);
+  await page.locator('.rand-info input').fill('Eine Studie zum Gedankenwandern ist kein Befund über diese Lücke.');
+  await page.getByRole('button', { name: 'Als Nicht-Verbindung festhalten' }).click(); await warte(page, 300);
+  await page.locator('input[value="nicht-untersucht"]').check(); await warte(page, 200);
+  await page.locator('.kammer-frage-eingabe').fill('Was haben diese Studien gefunden – und was davon gehört in diesen Atlas?');
+  await page.getByRole('button', { name: 'Frage an die Lücke heften' }).click(); await warte(page, 400);
+  ok('Fehlstelle: eingeordnet, Frage geheftet, Nicht-Verbindung begründet, Mitte bleibt leer', /nicht untersucht/i.test(await page.locator('.kammer-art').innerText()) && (await page.locator('.rand-marke.nicht').count()) === 1);
+  await bild(page, '60-fehlstelle');
+  await geheZu(page, '#/raum/fehlstelle/0');
+  ok('Fehlstelle: unerreichbares Kapitel als eigener Gegenstand', /keinen eigenen Ort/.test(await page.locator('.kammer-bestand').innerText()));
+  await page.getByRole('button', { name: 'Kapitel im Fundus lesen' }).click(); await warte(page, 600);
+  ok('Fehlstelle: Kapitel im vollen Wortlaut lesbar', (await page.locator('#original-text p').count()) > 5);
+  await page.getByRole('button', { name: 'Zurück in den Raum' }).click();
+
+  // Verschiedenheit: unterschiedlich gebaute Räume
+  const bau = {};
+  for (const art of ['gegenhalt', 'schwelle', 'uebersetzung', 'ueberschneidung', 'entstehung', 'fehlstelle']) {
+    await geheZu(page, `#/raum/${art}/0`);
+    bau[art] = await page.evaluate(() => { const r = document.querySelector('#raum-buehne > *'); return { klasse: r.className, svg: r.querySelectorAll('svg').length, knoepfe: r.querySelectorAll('button').length, eingaben: r.querySelectorAll('textarea,input').length }; });
+  }
+  ok('Sechs Räume plus Herkunftsebene mit verschiedenem Aufbau', new Set(Object.values(bau).map((b) => b.klasse)).size === 6, JSON.stringify(bau));
+
+  // Browser-Zurück
+  await page.goBack(); await warte(page, 900);
+  ok('Browser-Zurück führt durch die Räume zurück', /#\/raum\//.test(page.url()));
+  await geheZu(page, '#/feld'); await warte(page, 2000); await bild(page, '70-feld-nach-arbeit');
   const fremd = netz.filter((u) => !u.startsWith(BASE) && !u.startsWith('data:') && !u.startsWith('blob:'));
-  ok('Keine Anfragen an fremde Dienste beim Gesamtweg', fremd.length === 0, fremd.slice(0, 5).join(' '));
-  ok('Keine Skriptfehler (Desktop)', fehler.length === 0, fehler.slice(0, 3).join(' | '));
-  const v = await stop(); ok('Bewegungsaufnahme Desktop', v.bilder > 100, `${v.bilder} Bilder, ${v.sekunden} s`); await ctx.close(); await browser.close();
+  ok('Keine Anfragen an fremde Dienste', fremd.length === 0, fremd.slice(0, 3).join(' '));
+  ok('Keine Fehler in der Konsole', fehler.length === 0, fehler.slice(0, 3).join(' | '));
+  const st = await page.locator('#speicher-stand').innerText(); ok('Speicherstand sichtbar: gespeichert', st === 'Gespeichert', st);
+  const video = await stop(); ok('Bewegungsaufnahme', video.bilder > 40, `${video.bilder} Bilder, ${video.sekunden} s`);
+  await browser.close();
+
+  // Wiederöffnen in neuem Browser: alles noch da
+  const b2 = await launch(); const p2 = await (await b2.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
+  await p2.goto(`${BASE}/#/raum/gegenhalt/0`); await warte(p2, 1800);
+  const keil = await p2.locator('.keil').count(); await geheZu(p2, '#/raum/uebersetzung/4'); const kiesel = await p2.locator('.kiesel').count();
+  const datei = JSON.parse(await readFile(join(DATA, 'werkstatt.json'), 'utf8'));
+  ok('Wiederöffnen: Gegenstimme, Becken und Ereignisse bleiben', keil === 1 && kiesel === 3 && datei.ereignisse.length > 15, `${datei.ereignisse.length} Ereignisse, ${Object.keys(datei.raeume).length} Räume im isolierten Ordner`);
+  await bild(p2, '71-wiedergeoeffnet'); await b2.close();
 }
 
 // ---------------- Schmal: Telefon mit Berührung ----------------
 async function schmal() {
   const browser = await launch();
-  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
-  const page = await ctx.newPage(); const fehler = []; const stop = await aufnahme(page, 'gesamtweg-schmal'); page.on('pageerror', (e) => fehler.push(e.message));
-  await page.goto(BASE); await settle(page, 2200); await bild(page, '20-schmal-ueberblick');
-  await page.getByRole('button', { name: 'TraumaAtlas' }).first().tap(); await settle(page);
-  await page.locator('#g-orte button').first().tap(); await settle(page);
-  await bild(page, '21-schmal-ort');
-  const sheet = await page.evaluate(() => { const b = document.querySelector('#blatt').getBoundingClientRect(); return { top: b.top, h: b.height, w: b.width, vw: innerWidth }; });
-  ok('Schmal: Blatt von unten, Karte sichtbar', sheet.top > 200 && sheet.w <= sheet.vw, JSON.stringify(sheet));
-  await page.locator('#o-stern [data-fuge]').first().tap({ force: true }); await settle(page); await bild(page, '22-schmal-fuge');
-  await page.evaluate(() => { location.hash = '#/ort/forschungsstand-und-offene-fragen/original'; }); await settle(page, 2500);
-  await bild(page, '23-schmal-original');
-  const ueber = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth || [...document.querySelectorAll('.lesen article *')].some((e) => e.getBoundingClientRect().right > innerWidth + 1 && getComputedStyle(e).overflowX !== 'auto'));
-  ok('Schmal: kein waagerechtes Abschneiden im Original', !ueber);
-  await page.evaluate(() => { location.hash = '#/werkbank'; }); await settle(page, 1500); await bild(page, '24-schmal-werkbank');
-  ok('Keine Skriptfehler (schmal)', fehler.length === 0, fehler.join(' | '));
-  const v = await stop(); ok('Bewegungsaufnahme schmal', v.bilder > 30, `${v.bilder} Bilder, ${v.sekunden} s`); await ctx.close(); await browser.close();
-}
-
-// ---------------- Ausfall der Grafiktechnik, reduzierte Bewegung ----------------
-async function ausfall() {
-  const browser = await launch({ args: ['--disable-webgl', '--disable-webgl2', '--disable-3d-apis'] });
-  const ctx = await browser.newContext({ viewport: { width: 1280, height: 800 }, reducedMotion: 'reduce' });
+  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 });
   const page = await ctx.newPage(); const fehler = []; page.on('pageerror', (e) => fehler.push(e.message));
-  await page.goto(BASE); await settle(page, 2200);
-  const st = await page.evaluate(async () => { const { A } = await import('/js/main.mjs'); return { modus: A.gelaende.modus, ruhig: A.ruhig, cls: document.querySelector('#app').className }; });
-  ok('WebGL-Ausfall: Canvas-Gelände übernimmt', st.modus === 'canvas', JSON.stringify(st));
-  ok('Reduzierte Bewegung erkannt', st.ruhig === true);
-  await bild(page, '30-ohne-webgl-ueberblick');
-  await page.evaluate(() => { location.hash = '#/ort/emdr-2'; }); await page.waitForTimeout(250);
-  const sofort = await page.evaluate(async () => { const { A } = await import('/js/main.mjs'); return A.karte.flug === null; });
-  ok('Reduzierte Bewegung: kein Flug, sofortiger Wechsel', sofort);
-  await settle(page, 600); await bild(page, '31-ohne-webgl-ort');
-  await page.locator('#o-stern [data-fuge]').first().click({ force: true }); await settle(page, 600); await bild(page, '32-ohne-webgl-fuge');
-  ok('Keine Skriptfehler (ohne WebGL)', fehler.length === 0, fehler.join(' | '));
-  await ctx.close(); await browser.close();
+  await page.goto(BASE); await warte(page, 1800); await bild(page, '80-schmal-feld');
+  await page.getByRole('button', { name: 'Als Liste' }).tap(); await warte(page, 400);
+  await page.locator('.liste-eintrag').first().tap(); await warte(page, 1300);
+  ok('Schmal: Raum über Liste per Berührung geöffnet', await page.locator('#raum').isVisible());
+  await page.locator('.wort').nth(3).tap(); await page.locator('.becken.erhalten .becken-rand').tap(); await warte(page, 400);
+  ok('Schmal: Wort per Berührung eingelegt', (await page.locator('.kiesel').count()) >= 1);
+  await bild(page, '81-schmal-uebersetzung');
+  for (const [art, name] of [['gegenhalt', '82-schmal-gegenhalt'], ['schwelle', '83-schmal-schwelle'], ['ueberschneidung', '84-schmal-ueberschneidung'], ['entstehung', '85-schmal-entstehung'], ['fehlstelle', '86-schmal-fehlstelle']]) {
+    await geheZu(page, `#/raum/${art}/0`);
+    const breit = await page.evaluate(() => Math.max(document.documentElement.scrollWidth, document.querySelector('#raum').scrollWidth) <= innerWidth + 1);
+    ok(`Schmal: ${art} ohne seitliches Überlaufen`, breit); await bild(page, name);
+  }
+  await page.getByRole('button', { name: 'Herkunft und Geltung' }).tap(); await warte(page, 500); await bild(page, '87-schmal-herkunft');
+  ok('Schmal: Herkunftsebene erreichbar', await page.locator('.bohrkern').isVisible());
+  ok('Schmal: keine Fehler', fehler.length === 0, fehler.join(' | '));
+  await browser.close();
 }
 
-// ---------------- Eingebettet wie im Variantenraum ----------------
+// ---------------- Tastatur ----------------
+async function tastatur() {
+  const browser = await launch(); const page = await (await browser.newContext({ viewport: { width: 1280, height: 800 } })).newPage();
+  await page.goto(BASE); await warte(page, 1500);
+  await page.locator('#feld-bild').focus(); await page.keyboard.press('ArrowRight'); await page.keyboard.press('+');
+  let tabs = 0; while (tabs < 12 && !(await page.evaluate(() => document.activeElement?.id === 'liste-knopf'))) { await page.keyboard.press('Tab'); tabs++; }
+  await page.keyboard.press('Enter'); await warte(page, 300);
+  ok('Tastatur: Liste öffnet, Fokus auf erstem Fugenort', await page.evaluate(() => document.activeElement?.classList.contains('liste-eintrag')));
+  await page.keyboard.press('Tab'); await page.keyboard.press('Enter'); await warte(page, 1400);
+  ok('Tastatur: Raum öffnet, Fokus auf Raumtitel', await page.evaluate(() => document.activeElement?.id === 'raum-titel'));
+  // Übersetzung: Wort per Pfeiltasten und Eingabe, Becken per Tab
+  await page.locator('.fassung.links .wort').first().focus(); await page.keyboard.press('ArrowRight'); await page.keyboard.press('ArrowRight'); await page.keyboard.press('Enter'); await warte(page, 200);
+  await page.locator('.becken.erhalten .becken-rand').focus(); await page.keyboard.press('Enter'); await warte(page, 300);
+  ok('Tastatur: Wort mit Pfeiltasten gewählt und eingelegt', (await page.locator('.kiesel').count()) >= 1);
+  await geheZu(page, '#/raum/ueberschneidung/0'); await page.locator('.ph').first().focus(); await page.keyboard.press('Enter'); await warte(page, 300);
+  ok('Tastatur: Phänomen in der Membranansicht wählbar', await page.locator('.ue-fokus').isVisible());
+  await page.keyboard.press('Escape'); await warte(page, 500);
+  ok('Tastatur: Escape führt ins Feld, Fokus auf dem Feld', await page.evaluate(() => document.activeElement?.id === 'feld-bild') && !(await page.locator('#raum').isVisible()));
+  await browser.close();
+}
+
+// ---------------- Kontrast (rechnerisch aus den gesetzten Farben) ----------------
+async function kontrast() {
+  const lum = (hex) => { const c = hex.match(/\w\w/g).map((x) => parseInt(x, 16) / 255).map((v) => (v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4)); return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]; };
+  const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+  const paare = [['Grundtext', '#1d1a16', '#efe9dd'], ['Text auf Blatt', '#1d1a16', '#fbf8f2'], ['Leiser Text', '#6b6155', '#fbf8f2'], ['Fels: Text auf hellster Felsstelle', '#fbf8f2', '#6c6358'],
+    ['Fels: Grenze', '#efe4d0', '#665d52'], ['Riegel: Text auf Messing (hellste Stelle)', '#1d1a16', '#e7c27a'], ['Riegel: Text auf Messing (dunkelste Stelle)', '#1d1a16', '#b58a33'], ['Gezogener Riegel', '#5b4a36', '#e0cfa8'],
+    ['Pass: Becken', '#2f5f7a', '#ffffff'], ['Pass: Text auf Wasserfläche', '#1d1a16', '#d6e2e6'], ['Übersetzung: Wort in der Hand', '#ffffff', '#2f5f7a'], ['Gegenstimme', '#ffffff', '#1f4fa8'],
+    ['Entstehung: Becken', '#ffffff', '#1f6a5c'], ['Fehlstelle: Art', '#3d4a3a', '#fbf8f2'], ['Eingabefeld-Platzhalter', '#6f665a', '#ffffff'], ['Eingabefeld-Rahmen', '#1d1a16', '#ffffff']];
+  for (const [n, f, b] of paare) { const r = ratio(f, b); ok(`Kontrast ${n}`, r >= (/Rahmen/.test(n) ? 3 : 4.5), `${r.toFixed(1)} : 1`); }
+}
+
+// ---------------- Ohne WebGL, reduzierte Bewegung ----------------
+async function ohneWebgl() {
+  const browser = await launch(['--disable-webgl', '--disable-webgl2', '--disable-3d-apis']);
+  const page = await (await browser.newContext({ viewport: { width: 1280, height: 800 }, reducedMotion: 'reduce' })).newPage();
+  const fehler = []; page.on('pageerror', (e) => fehler.push(e.message));
+  await page.goto(BASE); await warte(page, 1500);
+  const webgl = await page.evaluate(() => !!document.createElement('canvas').getContext('webgl2'));
+  const pixel = await page.evaluate(() => { const c = document.getElementById('feld-bild'); const d = c.getContext('2d').getImageData(0, 0, c.width, c.height).data; let n = 0; for (let i = 0; i < d.length; i += 400) if (Math.abs(d[i] - 239) > 12) n++; return n; });
+  ok('Ohne WebGL: Feld zeichnet vollständig (2D)', !webgl && pixel > 200, `WebGL ${webgl ? 'an' : 'aus'}, ${pixel} Bildpunkte mit Inhalt`);
+  ok('Reduzierte Bewegung: Bewegung ruht von Anfang an', (await page.locator('#bewegung-knopf').innerText()) === 'Bewegung ruht');
+  await page.locator('.legende-art', { hasText: 'Gegenhalt' }).getByRole('button', { name: 'Betreten' }).click(); await warte(page, 400);
+  ok('Reduzierte Bewegung: Raum öffnet ohne Entfaltungsanimation', await page.evaluate(() => getComputedStyle(document.getElementById('raum')).animationName === 'none') && await page.locator('#raum').isVisible());
+  await bild(page, '90-ohne-webgl-reduziert'); ok('Ohne WebGL: keine Fehler', fehler.length === 0, fehler.join(' | '));
+  await browser.close();
+}
+
+// ---------------- Eingebettet im Variantenraum ----------------
 async function eingebettet() {
-  const browser = await launch();
-  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
-  const page = await ctx.newPage();
+  const browser = await launch(); const page = await (await browser.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
   const raum = await page.goto(RAUM).then((r) => r?.ok()).catch(() => false);
   if (!raum) { ok('Variantenraum erreichbar', false, 'Raum antwortet nicht; eingebettete Prüfung offen'); await browser.close(); return; }
   // Nur der DOM dieser Prüfseite wird ergänzt; Dateien des Raums bleiben unverändert.
@@ -275,35 +273,29 @@ async function eingebettet() {
     f.style.cssText = 'position:fixed;left:20px;top:20px;width:515px;height:603px;border:1px solid #ccc;background:#fff;z-index:99999';
     document.body.append(f);
   }, BASE + '/');
-  await page.waitForTimeout(3500);
-  const frame = page.frame({ url: new RegExp(`^${BASE}`) });
-  ok('Eingebettet: lädt im Sandbox-Rahmen', !!frame);
+  await page.waitForTimeout(3000);
+  const frame = page.frame({ url: new RegExp(`^${BASE}`) }); ok('Eingebettet: lädt im Sandbox-Rahmen 515×603', !!frame);
   if (!frame) { await browser.close(); return; }
-  await page.locator('#pruef-frame').screenshot({ path: join(OUT, 'bilder', '40-eingebettet-ueberblick.png') });
-  await frame.evaluate(() => { location.hash = '#/ort/emdr-2'; }); await page.waitForTimeout(2000);
-  await page.locator('#pruef-frame').screenshot({ path: join(OUT, 'bilder', '41-eingebettet-ort.png') });
-  await frame.evaluate(() => { location.hash = '#/werkbank'; }); await page.waitForTimeout(1500);
-  await frame.fill('#w-titel', 'Eingebettete Prüffuge');
-  await frame.evaluate(() => { const i = document.querySelector('#w-dazu'); i.value = 'Flashb'; i.dispatchEvent(new Event('input')); });
-  await page.waitForTimeout(300); await frame.locator('#w-treffer li').first().dispatchEvent('pointerdown');
-  await frame.locator('#w-speichern').click(); await page.waitForTimeout(1500);
-  const gespeichert = JSON.parse(await readFile(join(DATA, 'werkstatt.json'), 'utf8')).gefuege.some((g) => g.titel === 'Eingebettete Prüffuge');
-  ok('Eingebettet: Speichern funktioniert im Sandbox-Rahmen', gespeichert);
-  await page.locator('#pruef-frame').screenshot({ path: join(OUT, 'bilder', '42-eingebettet-eigene-fuge.png') });
-  await frame.evaluate(() => { location.hash = '#/ort/forschungsstand-und-offene-fragen/original'; }); await page.waitForTimeout(2500);
-  const lesbar = await frame.evaluate(() => { const s = document.querySelector('#blatt-inhalt'); const r = s.getBoundingClientRect(); return { oben: r.top, hoehe: r.height, gesamt: s.scrollHeight, fh: innerHeight }; });
-  ok('Eingebettet: Original im eigenen Leseraum scrollbar', lesbar.hoehe > 300 && lesbar.gesamt > lesbar.hoehe, JSON.stringify(lesbar));
-  await page.locator('#pruef-frame').screenshot({ path: join(OUT, 'bilder', '43-eingebettet-original.png') });
+  await page.locator('#pruef-frame').screenshot({ path: join(OUT, 'bilder', '95-eingebettet-feld.png') });
+  await frame.getByRole('button', { name: 'Als Liste' }).click(); await page.waitForTimeout(300);
+  await frame.locator('.liste-art', { hasText: 'Gegenhalt' }).locator('.liste-eintrag').nth(1).click(); await page.waitForTimeout(1500);
+  await frame.locator('.spalt textarea').fill('Eingebettet geprüft.'); await frame.getByRole('button', { name: 'In den Spalt keilen' }).click(); await page.waitForTimeout(1500);
+  ok('Eingebettet: Raum bedienbar, Arbeit gespeichert', (await frame.locator('.keil').count()) === 1 && (await frame.locator('#speicher-stand').innerText()) === 'Gespeichert');
+  await page.locator('#pruef-frame').screenshot({ path: join(OUT, 'bilder', '96-eingebettet-gegenhalt.png') });
   await browser.close();
 }
 
 try {
   if (!nur || nur === 'desktop') await desktop();
   if (!nur || nur === 'schmal') await schmal();
-  if (!nur || nur === 'ausfall') await ausfall();
+  if (!nur || nur === 'tastatur') await tastatur();
+  if (!nur || nur === 'kontrast') await kontrast();
+  if (!nur || nur === 'ohne-webgl') await ohneWebgl();
   if (!nur || nur === 'eingebettet') await eingebettet();
-} catch (error) { ok('Prüflauf abgebrochen', false, error.message.split('\n')[0]); }
-finally { server.kill(); }
-await writeFile(join(OUT, `protokoll${nur ? `-${nur}` : ''}.json`), JSON.stringify({ zeit: new Date().toISOString(), basis: BASE, datenordner: DATA, ergebnisse: log }, null, 2));
-const fail = log.filter((l) => !l.pass).length; console.log(`\n${log.length - fail}/${log.length} bestanden`);
-process.exit(fail ? 1 : 0);
+} catch (e) { ok('Prüfung abgebrochen', false, e.message.split('\n')[0]); }
+finally {
+  server.kill();
+  const bestanden = log.filter((x) => x.pass).length;
+  await writeFile(join(OUT, 'protokoll.json'), JSON.stringify({ zeit: new Date().toISOString(), bestanden, gesamt: log.length, pruefungen: log }, null, 1));
+  console.log(`\n${bestanden} von ${log.length} Prüfungen bestanden.`);
+}

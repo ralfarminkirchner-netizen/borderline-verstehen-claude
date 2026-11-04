@@ -68,7 +68,7 @@ class Anfragefehler extends Error { constructor(status, text) { super(text); thi
 const revision = (text) => createHash('sha256').update(text).digest('hex').slice(0, 16);
 let schreibKette = Promise.resolve();
 
-const EMPTY = () => ({ format: 'fugenland-werkstatt', version: 1, gefuege: [], notizen: [], verlauf: [] });
+const EMPTY = () => ({ format: 'fugenland-werkstatt', version: 2, gefuege: [], notizen: [], verlauf: [], raeume: {}, ereignisse: [] });
 
 // Ein unlesbarer Speicher wird nie als leer behandelt: Lesen und Schreiben halten an.
 async function loadWerkstatt() {
@@ -102,7 +102,13 @@ function validWerkstatt(data) {
   return data.gefuege.every((g) => g && typeof g.id === 'string' && istText(g.titel) && artOk.test(g.art || '') && geltungOk.has(g.geltung)
       && ['aussage', 'gegenaussage', 'grenze', 'perspektive', 'kontext'].every((k) => istText(g[k]))
       && Array.isArray(g.teile) && g.teile.every((t) => t && typeof t.ortId === 'string' && istText(t.rolle) && istText(t.name)))
-    && data.notizen.every((n) => n && typeof n.id === 'string' && typeof n.ortId === 'string' && typeof n.text === 'string');
+    && data.notizen.every((n) => n && typeof n.id === 'string' && typeof n.ortId === 'string' && typeof n.text === 'string')
+    // Fugenräume: persönlicher Zustand je Raum und das Ereignisprotokoll, aus dem das Feld lebt.
+    && (data.raeume === undefined || (data.raeume && typeof data.raeume === 'object' && !Array.isArray(data.raeume)
+      && Object.entries(data.raeume).every(([k, v]) => /^[a-z]{4,20}:[^\s]{1,200}$/.test(k) && v && typeof v === 'object')))
+    && (data.ereignisse === undefined || (Array.isArray(data.ereignisse) && data.ereignisse.length <= 20000
+      && data.ereignisse.every((e) => e && typeof e.art === 'string' && typeof e.raum === 'string' && typeof e.zeit === 'string'
+        && Number.isFinite(e.x) && Number.isFinite(e.y))));
 }
 
 async function serveFile(res, file, req) {
