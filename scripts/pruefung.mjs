@@ -76,6 +76,7 @@ async function desktop() {
   await page.locator('#feld-bild').focus(); await page.keyboard.press('0'); await warte(page, 500);
 
   // 1 Gegenhalt: über das Feldbild betreten (Flug + Entfaltung)
+  const kamVorRaum = await page.evaluate(() => ({ ...window.fugenland.feld.kam }));
   const getroffen = await klickeFugenort(page, 'gegenhalt', 0); await warte(page, 1600);
   ok('Fugenort im Feld anklickbar, Raum entfaltet sich', getroffen && await page.locator('#raum').isVisible(), await page.locator('#raum-titel').innerText().catch(() => ''));
   if (!(await page.locator('#raum').isVisible())) await geheZu(page, '#/raum/gegenhalt/0');
@@ -100,9 +101,9 @@ async function desktop() {
   await bild(page, '11-herkunft-probe');
   await page.getByRole('button', { name: 'Herkunft und Geltung' }).click();
   // Zurück ins Feld: Kamera bleibt am Fugenort
-  await page.keyboard.press('Escape'); await warte(page, 700);
+  await page.keyboard.press('Escape'); await warte(page, 1400);
   const kam2 = await page.evaluate(() => ({ ...window.fugenland.feld.kam }));
-  ok('Zurück ins Feld: Kamera und Auswahl bleiben erhalten', !(await page.locator('#raum').isVisible()) && Math.abs(kam1.x - kam2.x) < 1 && Math.abs(kam1.z - kam2.z) < 0.01 && await page.evaluate(() => window.fugenland.feld.auswahl?.art === 'gegenhalt'));
+  ok('Zurück ins Feld: vorheriger Ausschnitt, Auswahl bleibt', !(await page.locator('#raum').isVisible()) && Math.abs(kamVorRaum.x - kam2.x) < 2 && Math.abs(kamVorRaum.z - kam2.z) < 0.01 && await page.evaluate(() => window.fugenland.feld.auswahl?.art === 'gegenhalt'), `Raum bei z ${kam1.z.toFixed(2)}, zurück auf z ${kam2.z.toFixed(2)}`);
   ok('Reifung im Feld wächst aus den Handlungen', await page.evaluate(() => window.fugenland.feld.reife.reduce((a, b) => a + b, 0) > 0));
   await bild(page, '12-feld-nach-gegenhalt');
 
@@ -330,6 +331,55 @@ async function bindung() {
   await browser.close();
 }
 
+// ---------------- Schritt 5: Umgebung der Auswahl, Rückweg in Stufen ----------------
+async function umgebung() {
+  const browser = await launch(); const page = await (await browser.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
+  const fehler = []; page.on('pageerror', (e) => fehler.push(e.message));
+  await page.goto(BASE); await warte(page, 1800);
+  ok('Schritt 5: ohne Auswahl keine Leinen', await page.evaluate(() => window.fugenland.feld.umgebung === null));
+  // Hover über einem Fugenort
+  const p = await page.evaluate(() => { const f = window.fugenland.feld; const q = window.fugenland.punkte.find((x) => x.art === 'entstehung' && x.i === 0); f.fliegeZu(q.x, q.y, 1.2); return null; }); await warte(page, 1200);
+  const pos = await page.evaluate(() => { const q = window.fugenland.punkte.find((x) => x.art === 'entstehung' && x.i === 0); return [q.bx, q.by]; });
+  const box = await page.locator('#feld-bild').boundingBox(); await page.mouse.move(box.x + pos[0], box.y + pos[1], { steps: 8 }); await warte(page, 500);
+  const u = await page.evaluate(() => { const u = window.fugenland.feld.umgebung; return u && { orte: u.orte.length, nachbarn: u.nachbarn.length }; });
+  ok('Schritt 5: Hover zeigt Leinen zu den Beteiligten und teilende Fugenorte', !!u && u.orte >= 3, JSON.stringify(u));
+  await bild(page, '150-hover-leinen');
+  await page.mouse.move(box.x + 30, box.y + 30); await warte(page, 400);
+  ok('Schritt 5: ohne Hover und Auswahl ruht das Feld wieder ohne Linien', await page.evaluate(() => window.fugenland.feld.umgebung === null));
+  // Rückweg: Ausschnitt merken, Raum, Ort, anderer Raum, Escape in Stufen
+  await page.locator('#feld-bild').focus(); await page.keyboard.press('0'); await warte(page, 500);
+  const vorher = await page.evaluate(() => ({ ...window.fugenland.feld.kam }));
+  await page.locator('.legende-art', { hasText: 'Gegenhalt' }).getByRole('button', { name: 'Betreten' }).click(); await warte(page, 1600);
+  await page.locator('.fels .ortlink').first().click(); await warte(page, 1500);
+  const ort1 = await page.locator('#raum-titel').innerText();
+  await page.locator('.ort-nachbarn .liste-eintrag').first().click(); await warte(page, 1500);
+  const glieder = await page.locator('#pfad .pfad-glied, #pfad [aria-current="page"]').allInnerTexts();
+  ok('Schritt 5: Lesepfad zeigt den Weg über mehrere Räume', glieder.length === 3, glieder.join(' › '));
+  await bild(page, '151-lesepfad');
+  await page.keyboard.press('Escape'); await warte(page, 1000);
+  const t1 = await page.locator('#raum-titel').innerText();
+  await page.keyboard.press('Escape'); await warte(page, 1000);
+  const art2 = await page.locator('#raum').getAttribute('data-art');
+  ok('Schritt 5: Escape geht Stufe für Stufe zurück', t1 === ort1 && art2 === 'gegenhalt', `${t1} → ${art2}`);
+  await page.keyboard.press('Escape'); await warte(page, 1400);
+  const nachher = await page.evaluate(() => ({ ...window.fugenland.feld.kam }));
+  ok('Schritt 5: zurück im Feld mit dem vorherigen Ausschnitt', await page.locator('#raum').isHidden() && Math.abs(nachher.z - vorher.z) < 0.01 && Math.abs(nachher.x - vorher.x) < 2, `z ${vorher.z.toFixed(3)} → ${nachher.z.toFixed(3)}`);
+  // Sprung im Lesepfad
+  await page.locator('.legende-art', { hasText: 'Schwelle' }).getByRole('button', { name: 'Betreten' }).click(); await warte(page, 1600);
+  await page.locator('.jenseits .ortlink').click(); await warte(page, 1400);
+  await page.locator('#pfad .pfad-glied').first().click(); await warte(page, 1400);
+  ok('Schritt 5: Sprung zurück zu einem Glied des Lesepfads', (await page.locator('#raum').getAttribute('data-art')) === 'schwelle' && (await page.locator('#pfad .pfad-glied').count()) === 0);
+  await page.getByRole('button', { name: '← Zum Feld' }).click(); await warte(page, 1400);
+  // Escape während des Flugs kehrt ihn um
+  const start = await page.evaluate(() => ({ ...window.fugenland.feld.kam }));
+  await page.locator('.legende-art', { hasText: 'Entstehung' }).getByRole('button', { name: 'Betreten' }).click(); await page.waitForTimeout(250);
+  await page.keyboard.press('Escape'); await warte(page, 1500);
+  const ende = await page.evaluate(() => ({ ...window.fugenland.feld.kam }));
+  ok('Schritt 5: Escape im Flug kehrt ihn um, der Raum öffnet sich nicht', await page.locator('#raum').isHidden() && Math.abs(ende.x - start.x) < 2 && Math.abs(ende.z - start.z) < 0.01);
+  ok('Schritt 5: keine Fehler', fehler.length === 0, fehler.join(' | '));
+  await browser.close();
+}
+
 // ---------------- Orte, Werke, Spieler, Werkbank (aus Fugenland 1 wieder eingebaut) ----------------
 async function werkbank() {
   const browser = await launch(); const page = await (await browser.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
@@ -434,8 +484,8 @@ async function tastatur() {
   ok('Tastatur: Wort mit Pfeiltasten gewählt und eingelegt', (await page.locator('.kiesel').count()) >= 1);
   await geheZu(page, '#/raum/ueberschneidung/0'); await page.locator('.ph').first().focus(); await page.keyboard.press('Enter'); await warte(page, 300);
   ok('Tastatur: Phänomen in der Membranansicht wählbar', await page.locator('.ue-fokus').isVisible());
-  await page.keyboard.press('Escape'); await warte(page, 500);
-  ok('Tastatur: Escape führt ins Feld, Fokus auf dem Feld', await page.evaluate(() => document.activeElement?.id === 'feld-bild') && !(await page.locator('#raum').isVisible()));
+  for (let k = 0; k < 4 && await page.locator('#raum').isVisible(); k++) { await page.keyboard.press('Escape'); await warte(page, 900); }
+  ok('Tastatur: Escape führt Stufe für Stufe ins Feld, Fokus auf dem Feld', await page.evaluate(() => document.activeElement?.id === 'feld-bild') && !(await page.locator('#raum').isVisible()));
   await browser.close();
 }
 
@@ -495,6 +545,7 @@ try {
   if (!nur || nur === 'zustand') await zustand();
   if (!nur || nur === 'faeden') await faedenPruefung();
   if (!nur || nur === 'bindung') await bindung();
+  if (!nur || nur === 'umgebung') await umgebung();
   if (!nur || nur === 'werkbank') await werkbank();
   if (!nur || nur === 'schmal') await schmal();
   if (!nur || nur === 'tastatur') await tastatur();

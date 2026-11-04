@@ -493,3 +493,9 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .eigen-verlauf ol { padding-left: 1.1rem; margin: 0; font-size: .82rem; display: grid; gap: .3rem; }
 .eigen-verlauf li span { display: block; color: var(--tinte2); }
 .verlauf-erloschen { color: #8a3a12 !important; font-weight: 600; }
+/* Lesepfad: jedes Glied einzeilig; das aktuelle bekommt den meisten Platz. */
+.pfad { overflow: hidden; }
+.pfad > a, .pfad > span:not(.pfad-trenner) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 3ch; max-width: 14ch; flex: 0 1 auto; }
+.pfad > [aria-current="page"] { max-width: 26ch; flex: 1 1 auto; font-weight: 600; }
+.pfad > a:first-child { flex: none; }
+.pfad-trenner { flex: none; color: var(--leise); }

@@ -67,6 +67,16 @@ function urteileImFeld() {
 }
 urteileImFeld();
 
+// Umgebung eines Fugenorts: seine beteiligten Orte und andere Fugenorte, die einen davon teilen (erst bei Hover oder Auswahl).
+const umgebungCache = new Map();
+feld.umgebungVon = (p) => {
+  const k = p.key; if (umgebungCache.has(k) && p.art !== 'eigen') return umgebungCache.get(k);
+  const ids = p.art === 'eigen' ? (werk.daten.gefuege.find((g) => g.id === p.id)?.teile || []).map(ortIndex).filter((i) => i >= 0) : beteiligte(p.art, p.fall);
+  const orte = [...new Set(ids)].map((i) => ({ i, x: karte.orte[i].x, y: karte.orte[i].y, t: karte.orte[i].t }));
+  const nachbarn = [...new Set(orte.flatMap((o) => amOrt.get(o.i) || []).map((e) => punkte.find((q) => q.art === e.art && q.i === e.i)).filter((q) => q && q !== p))];
+  const u = { orte, nachbarn }; umgebungCache.set(k, u); return u;
+};
+
 new ResizeObserver(() => document.documentElement.style.setProperty('--kopf', `${document.querySelector('.kopf').offsetHeight}px`)).observe(document.querySelector('.kopf'));
 
 // Speicherstand sichtbar halten.
@@ -141,6 +151,8 @@ const aufnahmenFuerGebiet = (name) => medien.filter((m) => istAufnahme(m) && THE
 
 // Ein Raum ist offen: ein Fugenraum, ein Ortsraum oder eine eigene Fuge. Alle liegen über dem Feld.
 let aktuell = null; let raumAdresse = null;
+// Lesepfad: die Folge der betretenen Räume und Orte; Escape geht ihn Stufe für Stufe zurück. feldVorher: Ausschnitt vor dem ersten Raum.
+const lesepfad = []; let feldVorher = null;
 function entfalte(x, y, ohneFlug, zeichnen, hash) {
   $('liste').hidden = true; $('liste-knopf').setAttribute('aria-pressed', 'false');
   const zeige = () => {
@@ -148,12 +160,15 @@ function entfalte(x, y, ohneFlug, zeichnen, hash) {
     // Ein neuer Raum beginnt mit geschlossener Herkunftsebene; sie gehört zum Raum, in dem sie geöffnet wurde.
     if (raumAdresse !== hash || raum.hidden) { raum.dataset.schicht = 'aus'; $('schicht-knopf').setAttribute('aria-pressed', 'false'); }
     raumAdresse = hash;
+    const stelle = lesepfad.findIndex((e) => e.hash === hash);
+    if (stelle >= 0) lesepfad.length = stelle + 1; else lesepfad.push({ hash, text: '' });
     if (location.hash !== hash) history.pushState(null, '', hash);
     const warOffen = !raum.hidden; zeichnen(); raum.hidden = false; $('app').dataset.ebene = 'raum';
     if (!warOffen) { raum.classList.remove('entfaltet'); void raum.offsetWidth; raum.classList.add('entfaltet'); }
     raum.style.setProperty('--kopfhoehe', `${raum.querySelector('.raum-kopf').offsetHeight}px`);
     $('raum-buehne').scrollTop = 0; $('raum-titel').focus();
   };
+  if (!aktuell && $('raum').hidden) feldVorher = { ...feld.kam };
   if (ohneFlug || aktuell) { Object.assign(feld.kam, { x, y, z: Math.max(feld.kam.z, 0.9) }); feld.dirty = true; zeige(); }
   else feld.fliegeZu(x, y, Math.max(feld.kam.z, 0.9), zeige);
 }
@@ -350,6 +365,8 @@ function schliessen({ ausVerlauf = false } = {}) {
   if (war?.typ === 'eigen') feld.auswahl = punkte.find((q) => q.art === 'eigen' && q.id === war.g.id) || null;
   feld.dirty = true;
   if (!ausVerlauf) history.pushState(null, '', '#/feld');
+  lesepfad.length = 0; raumAdresse = null;
+  if (feldVorher) { const k = feldVorher; feldVorher = null; feld.fliegeZu(k.x, k.y, k.z); }
   pfad(); $('feld-bild').focus();
   const name = war?.typ === 'fuge' ? war.m.titel(war.fall) : war?.typ === 'ort' ? karte.orte[war.i].t : war?.g?.titel;
   if (name) $('feld-status').textContent = `Zurück im Feld bei ${name}.`;
@@ -359,7 +376,12 @@ function pfad() {
   const n = $('pfad'); leeren(n);
   n.append(h('a', { href: '#/feld', 'aria-current': aktuell ? null : 'page' }, 'Feld'));
   const text = !aktuell ? null : aktuell.typ === 'fuge' ? `${aktuell.m.meta.name}: ${aktuell.m.titel(aktuell.fall)}` : aktuell.typ === 'ort' ? `Ort: ${karte.orte[aktuell.i].t}` : `Eigene Fuge: ${aktuell.g.titel || 'neu'}`;
-  if (text) n.append(h('span', { class: 'pfad-trenner', 'aria-hidden': 'true' }, '›'), h('span', { 'aria-current': 'page' }, text));
+  if (text && lesepfad.length) lesepfad.at(-1).text = text;
+  const kurz = (t) => (t.length > 34 ? `${t.slice(0, 32)}…` : t);
+  lesepfad.forEach((e, k) => {
+    n.append(h('span', { class: 'pfad-trenner', 'aria-hidden': 'true' }, '›'));
+    n.append(k === lesepfad.length - 1 ? h('span', { 'aria-current': 'page', title: e.text }, kurz(e.text)) : h('a', { href: e.hash, class: 'pfad-glied', title: e.text }, kurz(e.text)));
+  });
 }
 
 function oeffneOriginal(titel, text, herkunft) {
@@ -407,7 +429,13 @@ $('raum-zurueck').onclick = () => schliessen();
 $('schicht-knopf').onclick = () => { const an = $('raum').dataset.schicht !== 'an'; $('raum').dataset.schicht = an ? 'an' : 'aus'; $('schicht-knopf').setAttribute('aria-pressed', String(an)); if (an) { $('raum-schicht').scrollIntoView({ block: 'start' }); $('raum-schicht').querySelector('select, button')?.focus({ preventScroll: true }); } };
 $('raum-vor').onclick = () => aktuell?.typ === 'fuge' && oeffnen(aktuell.art, aktuell.i - 1);
 $('raum-nach').onclick = () => aktuell?.typ === 'fuge' && oeffnen(aktuell.art, aktuell.i + 1);
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !$('raum').hidden && !$('original').open && !e.target.closest?.('input, textarea, select')) schliessen(); });
+document.addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape' || $('original').open || e.target.closest?.('input, textarea, select')) return;
+  if (feld.umkehren()) { e.preventDefault(); $('feld-status').textContent = 'Flug umgekehrt.'; return; }
+  if ($('raum').hidden) return;
+  // Eine Stufe zurück im Lesepfad; aus dem ersten Raum zurück ins Feld.
+  if (lesepfad.length > 1) { lesepfad.pop(); history.pushState(null, '', lesepfad.at(-1).hash); route(); } else schliessen();
+});
 
 async function route({ erster = false } = {}) {
   const h1 = location.hash;

@@ -41,6 +41,45 @@ Mehr als zwei Beteiligte gibt es in der Überschneidung (bis zu sechs Stimmen), 
 
 Herkunft jeder Idee, was ich davon bedient habe und wie sie weiterentwickelt wurde: [docs/HERKUNFT-DER-IDEEN.md](docs/HERKUNFT-DER-IDEEN.md). Vorher und nachher an derselben Fuge: [docs/VORHER-NACHHER.md](docs/VORHER-NACHHER.md).
 
+## Fünf Bauschritte aus der FASKA-Sichtung (4. November, nachmittags)
+
+Grundlage: `Artifacts/faska-verknuepfungen-claude-20261104/FASKA-VERKNUEPFUNGEN-FUER-FUGENLAND-CLAUDE.md`, Abschnitte 4–6, und Ralfs Reihenfolge („zuerst die Bedienfehler, danach die weiteren Schritte einzeln mit Bildern“). Jeder Schritt ist ein eigener Commit. Bilder der bedienten Oberfläche liegen in `evidence/schritte-20261104/`.
+
+1. **Bedienfehler** (`7cf292e`):
+   - Die Herkunftsebene schließt beim Raumwechsel; „Zur Quelle“ ist wieder erreichbar.
+   - Die Original-Schicht ist ganz lesbar. Ursache war eine Klassenkollision mit dem Original-Dialog.
+   - Die Art-Auswahl der eigenen Fuge wirkt sofort.
+   - Eine gespeicherte eigene Fuge öffnet sich in der Gestalt ihrer Art, zum Beispiel als Schwelle mit eigenen Riegeln („deine eigene Bedingung, kein Bestand“). Ebenso Gegenhalt, Übersetzung, Entstehung und Fehlstelle. Überschneidung, offene Frage und Nicht-Verbindung bleiben Station, mit Begründung.
+2. **Zustand jeder Fuge** (`c62e86e`):
+   - Dein Urteil über die redaktionelle Raumbildung: trägt, begrenzt, trägt nicht, gilt hier nicht oder offen halten, jeweils mit Grund. Ohne Urteil heißt es „ungeprüft“. Es gibt einen Verlauf.
+   - Das Urteil ist an einen Abdruck des Inhalts gebunden. Ändert sich der Inhalt, erlischt es dauerhaft, auch wenn der alte Inhalt zurückkehrt (OCR-Prinzip).
+   - Jeder Zustand hat eine eigene Marke an der Glyphe.
+   - „Vom Dienst gespeichert“ erscheint erst nach der Schreibbestätigung. Ein geladener Stand heißt „Gespeicherter Stand geladen“.
+3. **Offene Fäden** (`4b5ec6f`):
+   - Gegenstimmen, Lückenfragen und Unterscheidungsfragen stehen in einer Sammlung und im Ortsraum aller Beteiligten.
+   - Schließen geht nur mit Notiz, Wiederöffnen nur mit Grund. Beides bleibt im Verlauf; es gibt keinen Systemdialog.
+   - Ein Faden springt in seinen Raum.
+4. **Bindung eigener Fugen** (`13453ee`):
+   - Jede Beteiligung trägt den Abdruck ihres Ortswortlauts.
+   - Lösen oder Hinzunehmen ergibt „Persönliche Zuordnung erloschen, weil …“, bis du neu bestätigst. Das gilt auch, wenn der Beteiligte zurückkommt.
+   - Ein geänderter Wortlaut ergibt „Ende hat sich geändert, prüfen“.
+   - Der Verlauf zeigt Fassung, vorher, nachher, Grund und Zeit. Im Feld steht die erloschen-Marke.
+5. **Umgebung und Rückweg** (Commit siehe Git-Log):
+   - Hover oder Auswahl zeigt Leinen in der Form der Art: Riss, Riegelstriche, Doppellinie, Zustrom, Punktlinie, Membranrand oder Arm.
+   - Andere Fugenorte am selben Ort werden markiert, höchstens sechs, dazu „weitere N“. Unbeteiligte Fugenorte treten zurück.
+   - Ohne Auswahl ruht das Feld ohne Linien.
+   - Ein Lesepfad mit Sprung zu jedem Glied. Escape geht Stufe für Stufe zurück und kehrt einen laufenden Flug um.
+   - „Zum Feld“ stellt den vorherigen Ausschnitt her.
+
+**Bewusst nicht entschieden**: die Rücknahmespur (Ralfs EINE-APP-Entscheidung, „Zurücknehmen hinterlässt keine Spur“). Es gibt keine neue Regel. Verläufe gibt es nur, wo die fünf Schritte sie ausdrücklich verlangen: bei Fäden, Urteilen und der Fassung eigener Fugen. **OCR**: nicht angeschlossen, nicht erwähnt, kein Modell gestartet. Übernommen sind nur die Prinzipien: Freigabe an den Inhalt gebunden, ungeprüft und „gilt nicht“ als eigene Zustände, nichts automatisch bestätigt.
+
+**Offen aus den Schritten**:
+- Fäden aus eigenen Fugen in Raumgestalt werden nicht gesammelt.
+- Bei erloschener Zuordnung bleibt unten „persönliche Zuordnung“ angewählt; das Banner meldet „erloschen“.
+- Die Zustandsmarken sind klein. Im Überblick sind sie erst beim Hineinzoomen lesbar.
+- Der Kombinator (Ralf: „sowohl als auch“) ist nicht gebaut.
+- Kanten im Ortsraum sind noch nicht nach Art gruppiert.
+
 ## Datenbasis
 
 - Lesebestand wie in Fugenland 1: aus `borderline-verstehen-atlas/dist/atlas-collection.json` nur lesend abgeleitet (`data-readonly/karte.json`, `texte.json`).

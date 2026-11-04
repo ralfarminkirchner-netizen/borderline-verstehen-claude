@@ -79,6 +79,12 @@ export class Feld {
     oc.putImageData(img, 0, 0);
   }
 
+  // Escape während des Flugs: zurück an den Ausgangsausschnitt, das Ziel öffnet sich nicht.
+  umkehren() {
+    if (!this.flug) return false; const f = this.flug; const verstrichen = Math.min(f.dauer, performance.now() - f.t0);
+    this.flug = { von: { ...this.kam }, nach: f.von, t0: performance.now(), dauer: Math.max(200, verstrichen), fertig: null }; return true;
+  }
+
   fliegeZu(x, y, z, fertig) {
     if (ruhig()) { Object.assign(this.kam, { x, y, z }); this.dirty = true; fertig?.(); return; }
     this.flug = { von: { ...this.kam }, nach: { x, y, z }, t0: performance.now(), dauer: 700, fertig };
@@ -129,19 +135,24 @@ export class Feld {
     for (const p of vis) { const ox = p.bx - p.tx, oy = p.by - p.ty, d = Math.hypot(ox, oy), m = abst * 3; if (d > m) { p.bx = p.tx + (ox / d) * m; p.by = p.ty + (oy / d) * m; } }
     c.strokeStyle = 'rgba(60,52,44,0.35)'; c.lineWidth = 0.8;
     for (const p of vis) if (Math.hypot(p.bx - p.tx, p.by - p.ty) > 4) { c.beginPath(); c.moveTo(p.tx, p.ty); c.lineTo(p.bx, p.by); c.stroke(); c.fillStyle = 'rgba(60,52,44,0.6)'; c.fillRect(p.tx - 1, p.ty - 1, 2, 2); }
-    for (const p of vis) this.#zeichen(c, p, p.bx, p.by, s, p === this.hover || p === this.auswahl);
+    // Umgebung der Auswahl: nur für den gewählten oder berührten Fugenort, Leinen in der Form seiner Art.
+    const ziel = this.hover || this.auswahl; this.umgebung = null;
+    if (ziel && ziel.bx !== undefined && this.sichtbar.has(ziel.art) && this.umgebungVon) { this.umgebung = this.umgebungVon(ziel); this.#leinen(c, ziel, this.umgebung, s); }
+    // Mit Auswahl treten unbeteiligte Fugenorte zurück; ihre Namen ruhen.
+    const fokus = this.umgebung ? new Set([ziel, ...this.umgebung.nachbarn.slice(0, 6)]) : null;
+    for (const p of vis) this.#zeichen(c, p, p.bx, p.by, s, p === this.hover || p === this.auswahl, fokus && !fokus.has(p));
     // Semantischer Zoom: nah heran tragen die Fugenorte ihren Namen.
-    if (kam.z > 1.1) { c.font = '600 11px system-ui, sans-serif'; c.textAlign = 'center'; for (const p of vis) { const t = p.titel.length > 34 ? p.titel.slice(0, 32) + '…' : p.titel; c.lineWidth = 3.5; c.strokeStyle = 'rgba(239,233,221,0.95)'; c.strokeText(t, p.bx, p.by + s + 12); c.fillStyle = '#2b251f'; c.fillText(t, p.bx, p.by + s + 12); } }
+    if (kam.z > 1.1 && !fokus) { c.font = '600 11px system-ui, sans-serif'; c.textAlign = 'center'; for (const p of vis) { const t = p.titel.length > 34 ? p.titel.slice(0, 32) + '…' : p.titel; c.lineWidth = 3.5; c.strokeStyle = 'rgba(239,233,221,0.95)'; c.strokeText(t, p.bx, p.by + s + 12); c.fillStyle = '#2b251f'; c.fillText(t, p.bx, p.by + s + 12); } }
     const zeig = this.hover || this.auswahl;
     if (zeig && this.sichtbar.has(zeig.art)) this.#schild(c, zeig);
   }
 
-  #zeichen(c, p, x, y, s, an) {
-    const f = this.farben[p.art]; c.save(); c.translate(x, y); c.lineWidth = an ? 2.2 : 1.4; c.strokeStyle = f; c.fillStyle = f;
+  #zeichen(c, p, x, y, s, an, gedimmt = false) {
+    const f = this.farben[p.art]; c.save(); c.translate(x, y); c.globalAlpha = gedimmt ? 0.22 : 1; c.lineWidth = an ? 2.2 : 1.4; c.strokeStyle = f; c.fillStyle = f;
     const reif = Math.min(6, this.zaehler?.get(p.key) || 0);
     if (reif) { c.strokeStyle = 'rgba(180,86,28,0.85)'; c.lineWidth = 1.3; c.beginPath(); for (let a = 0; a <= reif * Math.PI * 2 / 3; a += 0.15) { const r = s * 0.9 + a * 1.4; c.lineTo(Math.cos(a) * r, Math.sin(a) * r); } c.stroke(); c.strokeStyle = f; c.lineWidth = an ? 2.2 : 1.4; }
     const urteil = this.urteile?.get(p.key);
-    if (urteil === 'traegtnicht' || urteil === 'giltnicht') c.globalAlpha = 0.42;
+    const basis = gedimmt ? 0.22 : urteil === 'traegtnicht' || urteil === 'giltnicht' ? 0.42 : 1; c.globalAlpha = basis;
     switch (p.art) {
       case 'gegenhalt': // zwei Bruchblöcke mit offenem Spalt
         c.beginPath(); c.moveTo(-s, -s * 0.8); c.lineTo(-s * 0.25, -s * 0.8); c.lineTo(-s * 0.45, -s * 0.1); c.lineTo(-s * 0.2, s * 0.8); c.lineTo(-s, s * 0.8); c.closePath(); c.fill();
@@ -150,10 +161,10 @@ export class Feld {
         c.fillRect(-s * 0.8, -s, s * 0.3, s * 2); c.fillRect(s * 0.5, -s, s * 0.3, s * 2);
         const n = Math.min(5, p.n); for (let i = 0; i < n; i++) { const yy = -s * 0.7 + (i * s * 1.4) / Math.max(1, n - 1 || 1); c.fillRect(-s * 0.95, yy - 1, s * 1.9, 2.2); } break; }
       case 'uebersetzung': // zwei Linsen, die sich teilweise decken
-        c.globalAlpha = 0.35; c.beginPath(); c.arc(-s * 0.35, 0, s * 0.75, 0, Math.PI * 2); c.fill(); c.beginPath(); c.arc(s * 0.35, 0, s * 0.75, 0, Math.PI * 2); c.fill(); c.globalAlpha = 1;
+        c.globalAlpha = basis * 0.35; c.beginPath(); c.arc(-s * 0.35, 0, s * 0.75, 0, Math.PI * 2); c.fill(); c.beginPath(); c.arc(s * 0.35, 0, s * 0.75, 0, Math.PI * 2); c.fill(); c.globalAlpha = basis;
         c.beginPath(); c.arc(-s * 0.35, 0, s * 0.75, 0, Math.PI * 2); c.stroke(); c.beginPath(); c.arc(s * 0.35, 0, s * 0.75, 0, Math.PI * 2); c.stroke(); break;
       case 'ueberschneidung': // drei Membranen
-        c.globalAlpha = 0.28; for (let k = 0; k < 3; k++) { const a = -Math.PI / 2 + k * 2.094; c.beginPath(); c.arc(Math.cos(a) * s * 0.45, Math.sin(a) * s * 0.45, s * 0.65, 0, Math.PI * 2); c.fill(); } c.globalAlpha = 1;
+        c.globalAlpha = basis * 0.28; for (let k = 0; k < 3; k++) { const a = -Math.PI / 2 + k * 2.094; c.beginPath(); c.arc(Math.cos(a) * s * 0.45, Math.sin(a) * s * 0.45, s * 0.65, 0, Math.PI * 2); c.fill(); } c.globalAlpha = basis;
         c.beginPath(); c.arc(0, 0, 2.2, 0, Math.PI * 2); c.fill(); break;
       case 'entstehung': // mehrere Zuströme laufen in einem Becken zusammen
         c.lineWidth = an ? 2.6 : 2; c.beginPath(); c.moveTo(-s, -s); c.quadraticCurveTo(-s * 0.2, -s * 0.2, 0, s * 0.2); c.moveTo(0, -s * 1.1); c.lineTo(0, s * 0.2); c.moveTo(s, -s); c.quadraticCurveTo(s * 0.2, -s * 0.2, 0, s * 0.2); c.stroke();
@@ -166,7 +177,7 @@ export class Feld {
         for (let k = -s; k < s; k += 3) { c.beginPath(); c.moveTo(k, -s); c.lineTo(k + s, s); c.stroke(); } c.restore();
         c.fillStyle = '#efe9dd'; c.beginPath(); c.arc(0, 0, s * 0.5, 0, Math.PI * 2); c.fill(); break;
     }
-    c.globalAlpha = 1;
+    c.globalAlpha = basis;
     // Zustandsmarke deines Urteils: gefüllt trägt, halb begrenzt, Kreuz trägt nicht, Strich gilt hier nicht, Ring offen, orange gestrichelt erloschen.
     if (urteil) {
       const mx = s * 1.05, my = s * 1.05, r = 5.6;
@@ -181,10 +192,46 @@ export class Feld {
     c.restore();
   }
 
+  #leinen(c, z, u, s) {
+    const f = this.farben[z.art]; const zx = z.bx, zy = z.by;
+    const enden = u.orte.slice(0, 12).map((o) => ({ ...o, p: this.zuBild(o.x, o.y) }));
+    c.save(); c.strokeStyle = f; c.fillStyle = f; c.lineWidth = 1.6; c.globalAlpha = 0.85;
+    if (z.art === 'ueberschneidung' && enden.length > 1) { // Membranrand um alle Beteiligten
+      const pts = [[zx, zy], ...enden.map((e) => e.p)]; const cx = pts.reduce((a, q) => a + q[0], 0) / pts.length, cy = pts.reduce((a, q) => a + q[1], 0) / pts.length;
+      pts.sort((a, b) => Math.atan2(a[1] - cy, a[0] - cx) - Math.atan2(b[1] - cy, b[0] - cx));
+      c.globalAlpha = 0.12; c.beginPath(); pts.forEach((q, k) => (k ? c.lineTo(q[0], q[1]) : c.moveTo(q[0], q[1]))); c.closePath(); c.fill();
+      c.globalAlpha = 0.7; c.lineJoin = 'round'; c.lineWidth = 2; c.stroke();
+    }
+    for (const e of enden) {
+      const [ex, ey] = e.p; const dx = ex - zx, dy = ey - zy, d = Math.hypot(dx, dy) || 1, nx = -dy / d, ny = dx / d;
+      c.beginPath();
+      switch (z.art) {
+        case 'gegenhalt': { const n = Math.max(4, Math.floor(d / 10)); for (let k = 0; k <= n; k++) { const t = k / n, a = k % 2 ? 4 : -4; c.lineTo(zx + dx * t + nx * a, zy + dy * t + ny * a); } c.stroke(); break; } // Riss
+        case 'schwelle': c.setLineDash([6, 5]); c.moveTo(zx, zy); c.lineTo(ex, ey); c.stroke(); c.setLineDash([]); for (let t = 14; t < d; t += 14) { const px = zx + dx * t / d, py = zy + dy * t / d; c.beginPath(); c.moveTo(px - nx * 4, py - ny * 4); c.lineTo(px + nx * 4, py + ny * 4); c.stroke(); } break; // Riegel
+        case 'uebersetzung': for (const o of [-2.2, 2.2]) { c.beginPath(); c.moveTo(zx + nx * o, zy + ny * o); c.lineTo(ex + nx * o, ey + ny * o); c.stroke(); } break; // zwei Fassungen
+        case 'entstehung': c.moveTo(ex, ey); c.quadraticCurveTo((ex + zx) / 2 + nx * 18, (ey + zy) / 2 + ny * 18, zx, zy); c.stroke(); break; // Zustrom
+        case 'fehlstelle': c.setLineDash([1.5, 5]); c.lineCap = 'round'; c.lineWidth = 2.2; c.moveTo(zx, zy); c.lineTo(ex, ey); c.stroke(); c.setLineDash([]); break; // Rand
+        case 'ueberschneidung': break; // schon als Membran gezeichnet
+        default: c.moveTo(zx, zy); c.lineTo(ex, ey); c.stroke(); // eigene Fuge: Arm
+      }
+      c.globalAlpha = 1; c.beginPath(); c.arc(ex, ey, 3.2, 0, Math.PI * 2); c.fill();
+      if (enden.length <= 8) { c.font = '600 11px system-ui, sans-serif'; c.textAlign = 'center'; c.lineWidth = 3.5; c.strokeStyle = 'rgba(239,233,221,0.95)'; const t = e.t.length > 30 ? e.t.slice(0, 28) + '…' : e.t; c.strokeText(t, ex, ey - 8); c.fillStyle = '#2b251f'; c.fillText(t, ex, ey - 8); c.fillStyle = f; c.strokeStyle = f; c.lineWidth = 1.6; }
+      c.globalAlpha = 0.85;
+    }
+    // andere Fugenorte, die einen Ort teilen: begrenzt markiert
+    c.globalAlpha = 1; c.strokeStyle = '#1d1a16'; c.lineWidth = 1.4; c.setLineDash([3, 3]);
+    for (const n of u.nachbarn.slice(0, 6)) if (n.bx !== undefined) { c.beginPath(); c.arc(n.bx, n.by, s * 1.5, 0, Math.PI * 2); c.stroke(); }
+    c.setLineDash([]); c.restore();
+  }
+
   #schild(c, p) {
     const [x, y] = p.bx !== undefined ? [p.bx, p.by] : this.zuBild(p.x, p.y); c.font = '600 13px system-ui, sans-serif'; const t = p.titel.length > 58 ? p.titel.slice(0, 56) + '…' : p.titel; const t2 = p.artName;
-    const bw = Math.max(c.measureText(t).width, c.measureText(t2).width) + 20; const bx = Math.min(this.w - bw - 8, Math.max(8, x - bw / 2)); const by = y - 58 < 60 ? y + 18 : y - 58;
-    c.fillStyle = 'rgba(251,248,242,0.97)'; c.strokeStyle = '#1d1a16'; c.lineWidth = 1.2; c.beginPath(); c.roundRect(bx, by, bw, 42, 6); c.fill(); c.stroke();
+    const u = this.umgebung; const zusatz = u ? `${u.orte.length > 12 ? `${u.orte.length} Beteiligte, 12 gezeigt` : `${u.orte.length} Beteiligte`}${u.nachbarn.length ? ` · teilt Orte mit ${Math.min(6, u.nachbarn.length)} Fugenorten${u.nachbarn.length > 6 ? `, weitere ${u.nachbarn.length - 6}` : ''}` : ''}` : '';
+    c.font = '500 11px system-ui, sans-serif'; const zw = c.measureText(zusatz).width; c.font = '600 13px system-ui, sans-serif';
+    const hoehe = zusatz ? 58 : 42;
+    const bw = Math.max(c.measureText(t).width, c.measureText(t2).width, zw) + 20; const bx = Math.min(this.w - bw - 8, Math.max(8, x - bw / 2)); const by = y - hoehe - 16 < 60 ? y + 18 : y - hoehe - 16;
+    c.fillStyle = 'rgba(251,248,242,0.97)'; c.strokeStyle = '#1d1a16'; c.lineWidth = 1.2; c.beginPath(); c.roundRect(bx, by, bw, hoehe, 6); c.fill(); c.stroke();
+    if (zusatz) { c.textAlign = 'left'; c.fillStyle = '#4a4339'; c.font = '500 11px system-ui, sans-serif'; c.fillText(zusatz, bx + 10, by + 46); }
     c.textAlign = 'left'; c.fillStyle = this.farben[p.art]; c.font = '600 11px system-ui, sans-serif'; c.fillText(t2.toUpperCase(), bx + 10, by + 13);
     c.fillStyle = '#1d1a16'; c.font = '600 13px system-ui, sans-serif'; c.fillText(t, bx + 10, by + 29);
   }
