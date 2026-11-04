@@ -59,7 +59,7 @@ export function zeichne(buehne, fall, ctx) {
       h('ol', { class: 'riegel-liste', 'aria-label': 'Riegel dieser Schwelle' }, riegel)),
     h('div', { class: 'jenseits' },
       h('p', { class: 'jenseits-kopf' }, `${fall.ort.gebiet} · hinter der Schwelle`),
-      h('h2', { class: 'jenseits-titel' }, fall.ort.t),
+      h('h2', { class: 'jenseits-titel' }, fall.ort.t), h('button', { type: 'button', class: 'ortlink', 'data-ort': String(fall.ort.i) }, 'Ort lesen'),
       h('div', { class: 'jenseits-text' }, absaetze(fall.text)),
       h('p', { class: 'jenseits-stand' }, offen
         ? 'Alle Riegel gezogen. Was ohne diese Grenzen gilt, sagt der Bestand nicht – die Aussage steht jetzt ohne ihren Rahmen.'

@@ -44,3 +44,10 @@ export function speichern() {
   });
   return laeuft;
 }
+
+// Werkbank und Notizen: ändern die gemeinsamen Listen und hinterlassen auf Wunsch ein Ereignis im Feld.
+export function aendereWerk(aendern, ereignis = null) {
+  aendern(werk.daten);
+  if (ereignis) werk.daten.ereignisse.push({ zeit: new Date().toISOString(), ...ereignis, x: Math.round(ereignis.x), y: Math.round(ereignis.y) });
+  vormerken();
+}

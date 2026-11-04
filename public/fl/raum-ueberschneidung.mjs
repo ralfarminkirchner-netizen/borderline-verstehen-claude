@@ -74,7 +74,7 @@ export function zeichne(buehne, fall, ctx) {
 
   const fp = phNach.get(fokus); const fq = punkte.find((q) => q.p === fokus);
   const fokusInfo = fp ? h('div', { class: 'ue-fokus' },
-    h('p', { class: 'ue-fokus-titel' }, fp.t), h('p', {}, fp.s),
+    h('p', { class: 'ue-fokus-titel' }, fp.t), h('p', {}, fp.s), h('button', { type: 'button', class: 'ortlink', 'data-ort': String(fp.i) }, 'Ort lesen'),
     h('p', {}, fq ? `In der gewählten Runde beschrieben bei: ${fq.ks.map((k) => sel[k].t).join(', ')}.` : 'In der gewählten Runde von keiner Stimme beschrieben.'),
     h('p', { class: 'leise' }, `Insgesamt im Bestand bei ${stimmen.filter((v) => v.phaenomene.includes(fokus)).length} von ${stimmen.length} Stimmen.`)) : null;
 

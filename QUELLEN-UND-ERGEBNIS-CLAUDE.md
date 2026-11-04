@@ -26,6 +26,15 @@ Jede Raumart ist **anders gebaut und anders bedienbar**. Die Gestalt kommt aus d
 | **Fehlstelle** | ausgesparte Kammer mit beschriftetem Rand, leere Mitte | Rand abtasten, Lücke einordnen (unbekannt, nicht untersucht, nicht zugänglich, bewusst offen), Frage heften, Nicht-Verbindung begründen | untersucht ohne festgehaltenen Befund; ein Fundus-Kapitel ohne Ort | 63 |
 | **Herkunft und Geltung** | Bohrkern unter jedem Raum: Original → Ableitung → Raumbildung → deine Revision | Verbindung wählen, Schlussprobe ansetzen (trägt teilweise, scheitert, trifft nicht – aus den Feldern ausgewertet), Reichweite lesen | alle Kanten des Raums | in jedem Raum |
 
+### Orte, Werke, Aufnahmen und eigene Arbeit (aus Fugenland 1, jetzt in die Fugen eingebettet)
+
+- **Ortssuche** über alle 1226 Orte (Kopfzeile, mit Pfeiltasten und Eingabe bedienbar).
+- **Ortsraum** für jeden Ort: voller Wortlaut, Herkunft und Quellen. Daneben die Fugenräume, an denen der Ort beteiligt ist; dies ist der Rückweg vom Ort in seine Fugen. Dazu die Kanten des Orts im Bestand.
+- **Ortslinks** führen aus jedem Fugenraum in den Ortsraum der Beteiligten.
+- **Werke von Walter Andreas Kirchner** an den Orten, denen der Bestand sie zuordnet: ganzes Bild, Herkunft ohne Maßangabe, Link zur Künstlerseite, Hinweis „Bildzuordnung als Anregung; keine Deutung des Werks“.
+- **Aufnahmen**: Sie hängen im Bestand an keinem Ort und sind deshalb redaktionell über ihr Thema einem Gebiet zugeordnet, als solche gekennzeichnet, mit KI-Hinweis und Prüfangabe. Es gibt einen gemeinsamen Spieler: Er startet nur auf Klick, lässt sich verkleinern, spielt bei jedem Raumwechsel weiter und hat einen Rückweg zum Ort.
+- **Notizen am Ort** und **Hand**: Orte aufnehmen, daraus eine **eigene Fuge** bilden. Sie ist eine Station mit Armen, mit Rolle und Richtung je Beteiligtem, Aussage, Gegenrichtung, Grenze, Perspektive, Stand und Verlauf mit vorheriger Fassung; auch als Nicht-Verbindung (Arme enden vor der Mitte). Eigene Fugen stehen in blauer Tinte als Fugenorte im Feld und erscheinen im Ortsraum jedes Beteiligten.
+
 Mehr als zwei Beteiligte gibt es in der Überschneidung (bis zu sechs Stimmen), in der Entstehung (bis zu drei Herkünfte und mehrere Nachfolger) und in der Fehlstelle (ein Rand aus bis zu 189 Kanten).
 
 **Lebendig ist nur, was belegt ist.** Jede Handlung in einem Raum wird als Ereignis mit Ort gespeichert. Aus diesen Ereignissen entsteht eine Reifungsschicht im Feld: eine Diffusion echter Ereignisse. Nach jeder neuen Handlung läuft ein Ausbreitungsring vom Fugenort aus, und bearbeitete Fugenorte tragen Spiralringe. Ohne Handlung ruht das Feld. Es gibt keinen wandernden Punkt und keine Strömung, die eine Wirkung nahelegt.
@@ -48,8 +57,8 @@ Herkunft jeder Idee, was ich davon bedient habe und wie sie weiterentwickelt wur
 ## Prüfung
 
 `scripts/pruefung.mjs` startet einen eigenen Prüfdienst (Port 4394) mit eigenem Datenordner `.cache/pruefdaten`. Protokoll: `evidence/pruefung-20261104/protokoll.json`, Bilder: `evidence/pruefung-20261104/bilder/`, Bewegungsaufnahme: `evidence/pruefung-20261104/video/gesamtweg-desktop.mp4` (nicht im Git). Prüfstand:
-- **Letzter vollständiger Lauf (nach allen Änderungen): 61 von 62 bestanden.** Nicht bestanden ist „Variantenraum erreichbar“: Der Raum auf Port 4191 lief zu diesem Zeitpunkt nicht mehr. Er ist nicht mein Dienst, deshalb habe ich ihn nicht gestartet. Die Einbettungsprüfung ist für den Endstand also **offen**.
-- Im vorigen vollständigen Lauf, vor den letzten CSS-Anpassungen für die schmale Ansicht und den Kontrast, bestanden 63 von 63, eingebettet im laufenden Raum. Bilder `95-eingebettet-feld.png` und `96-eingebettet-gegenhalt.png` stammen aus diesem Lauf. Geprüft:
+- **Letzter vollständiger Lauf (nach allen Änderungen, mit Orten, Werken, Spieler und Werkbank): 76 von 77 bestanden.** Nicht bestanden ist „Variantenraum erreichbar“: Der Raum auf Port 4191 lief zu diesem Zeitpunkt nicht mehr. Er ist nicht mein Dienst, deshalb habe ich ihn nicht gestartet. Die Einbettungsprüfung ist für den Endstand also **offen**.
+- Im Lauf vor dem Wiedereinbau, noch vor den letzten CSS-Anpassungen, bestanden 63 von 63, eingebettet im laufenden Raum. Bilder `95-eingebettet-feld.png` und `96-eingebettet-gegenhalt.png` stammen aus diesem Lauf. Geprüft:
 
 - **Desktop 1440×900**:
   - Feld mit allen Raumarten, Ziehen und Zoomen;
@@ -64,6 +73,7 @@ Herkunft jeder Idee, was ich davon bedient habe und wie sie weiterentwickelt wur
   - Browser-Zurück;
   - keine Anfragen an fremde Dienste, keine Konsolenfehler;
   - sichtbarer Speicherstand und Bewegungsaufnahme.
+- **Orte und Werkbank**: Spieler startet nicht von selbst; Suche per Tastatur; Ortsraum mit Wortlaut, Herkunft und Fugenräumen; Notiz; vom Ort in die Fuge und über den Ortslink zurück; Werk mit Herkunft und ohne Maßangabe; Spieler bleibt bei Raumwechsel; Hand mit drei Orten; eigene Fuge anlegen und als Nicht-Verbindung ändern (Verlauf); eigene Fuge im Feld; Wiederöffnen von eigener Fuge und Notiz.
 - **Wiederöffnen** in einem neuen Browser: Gegenstimme, Becken und Ereignisse sind noch da.
 - **Schmal 390×844 mit Berührung**: Raum über die Liste geöffnet, Wort per Berührung eingelegt, fünf Räume ohne seitliches Überlaufen, Herkunftsebene erreichbar.
 - **Tastatur**:
@@ -80,13 +90,8 @@ Die Bilder der Gestaltungsentwicklung liegen in `evidence/entwurf-20261104/`, di
 ## Ausdrücklich offen
 
 - **Menschliche gestalterische Abnahme**: offen. Tests und Screenshots sind kein Gestaltungsurteil.
-- **Aus Fugenland 1 nicht übernommen**:
-  - Ortssuche über alle 1226 Orte und der Leseraum für jeden einzelnen Ort; Originale sind nur aus den Räumen erreichbar;
-  - Werke von Walter Andreas Kirchner an ihren Orten;
-  - der Medienspieler;
-  - die Werkbank für eigene Fugen und Notizen am Ort (Daten bleiben erhalten, werden aber nicht angezeigt).
-
-  Das ist ein echter Rückschritt gegenüber v1 und gehört vor einer Abnahme wieder hinein, diesmal in die Räume eingebettet.
+- **Wiedergabe im Spieler**: Im Headless-Browser startet der Spieler auf Klick und ist nicht pausiert. Die Wiedergabezeit blieb dort aber bei 0. Dass tatsächlich Ton oder Bild läuft, ist damit nicht belegt.
+- **Altdaten-Import** aus dem früheren Atlasformat (`mein-atlasblick.json`): in Fugenland 2 nicht wieder eingebaut.
 - **Dichte im Überblick**: In Gebieten mit vielen Fugenorten (Beziehungen & Borderline, Phänomenatlas) drängen sich die Zeichen trotz Entzerrung. Erst beim Hineinzoomen werden sie einzeln lesbar und tragen ihren Namen.
 - **Gleichförmige Grenzen**: Viele Schwellen im Gebiet „Beziehungen & Borderline“ tragen dieselbe redaktionelle Grenze („Redaktioneller Lernanschluss …“). Das ist der Bestand. Die Riegel unterscheiden sich dort nur durch ihre Fuge, nicht durch den Grenztext.
 - **Fachliche Prüfung** der Raumzuordnung: offen. Die Regeln stehen in `scripts/build-fugenraeume.mjs`.

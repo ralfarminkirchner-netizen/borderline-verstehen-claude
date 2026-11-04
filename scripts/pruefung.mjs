@@ -191,6 +191,68 @@ async function desktop() {
   await bild(p2, '71-wiedergeoeffnet'); await b2.close();
 }
 
+// ---------------- Orte, Werke, Spieler, Werkbank (aus Fugenland 1 wieder eingebaut) ----------------
+async function werkbank() {
+  const browser = await launch(); const page = await (await browser.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
+  const fehler = []; page.on('pageerror', (e) => fehler.push(e.message)); page.on('console', (m) => m.type() === 'error' && fehler.push(m.text()));
+  await page.goto(BASE); await warte(page, 1800);
+  ok('Spieler startet nicht von selbst', !(await page.locator('#spieler').isVisible()));
+  // Suche mit Tastatur
+  await page.locator('#suche').fill('Hyperfok'); await warte(page, 300);
+  const treffer = await page.locator('#treffer li').count(); await page.keyboard.press('ArrowDown'); await page.keyboard.press('Enter'); await warte(page, 1800);
+  ok('Ortssuche: Treffer und Ortsraum per Tastatur', treffer > 0 && /Hyperfokus/.test(await page.locator('#raum-titel').innerText()), `${treffer} Treffer`);
+  ok('Ortsraum: voller Wortlaut, Herkunft, Fugenräume des Orts', (await page.locator('.ort-wortlaut p').count()) > 3 && /Herkunft/.test(await page.locator('.ort-herkunft').innerText()) && (await page.locator('.ort-fuge').count()) >= 1);
+  await bild(page, '100-ortsraum');
+  await page.getByRole('button', { name: 'In die Hand nehmen' }).click();
+  await page.locator('.ort-notizen textarea').fill('Kenne ich vom Zeichnen.'); await page.getByRole('button', { name: 'Notiz anheften' }).click(); await warte(page, 300);
+  ok('Ortsraum: Notiz am Ort angeheftet', (await page.locator('.ort-notizen li').count()) === 1);
+  // Vom Ort in seine Fuge und über den Ortslink zurück zu einem anderen Ort
+  await page.locator('.ort-fuge', { hasText: 'Gegenhalt' }).click(); await warte(page, 1400);
+  ok('Vom Ort in seinen Fugenraum', (await page.locator('#raum').getAttribute('data-art')) === 'gegenhalt');
+  await page.locator('.fels .ortlink').first().click(); await warte(page, 1500);
+  ok('Ortslink im Fugenraum führt in den Ortsraum', (await page.locator('#raum').getAttribute('data-art')) === 'ort');
+  await page.getByRole('button', { name: 'In die Hand nehmen' }).click(); await warte(page, 200);
+  // Werk des Vaters
+  await geheZu(page, '#/ort/266'); await warte(page, 600);
+  const cap = await page.locator('.werk figcaption').first().innerText();
+  ok('Werk von Walter Andreas Kirchner mit Herkunft, ohne Maßangabe, mit Hinweis', /Walter Andreas Kirchner/.test(cap) && /keine Deutung des Werks/.test(cap) && !/\d+\s*(×|x)\s*\d+\s*cm/i.test(cap), cap.split('\n')[0]);
+  await bild(page, '101-ort-werk');
+  await page.getByRole('button', { name: 'In die Hand nehmen' }).click(); await warte(page, 200);
+  // Spieler: startet auf Klick, spielt bei Raumwechsel weiter
+  await page.locator('#suche').fill('Aufgabenstarre'); await warte(page, 300); await page.keyboard.press('Enter'); await warte(page, 1500);
+  await page.locator('.medium-zug').first().click(); await warte(page, 1200);
+  await geheZu(page, '#/raum/schwelle/0');
+  const laeuft = await page.evaluate(() => { const m = document.querySelector('#spieler video, #spieler audio'); return m ? { sichtbar: !document.getElementById('spieler').hidden, zeit: m.currentTime, pausiert: m.paused } : null; });
+  ok('Spieler: auf Klick gestartet, bleibt bei Raumwechsel bestehen', !!laeuft && laeuft.sichtbar, JSON.stringify(laeuft));
+  await bild(page, '102-spieler-im-raum');
+  await page.getByRole('button', { name: 'Spieler schließen' }).click();
+  // Eigene Fuge aus der Hand
+  ok('Hand: drei Orte aufgenommen', (await page.locator('#hand li').count()) === 3);
+  await page.locator('#hand').getByRole('button', { name: 'Eigene Fuge bilden' }).click(); await warte(page, 1500);
+  await page.getByLabel('Name der Fuge').fill('Versunken und gestockt');
+  await page.getByLabel('Aussage').fill('Beides fühlt sich wie ein Zustand an, aus dem ich nicht selbst herauskomme.');
+  await page.locator('[data-rolle="0"]').fill('Sog'); await page.locator('[data-richtung="0"]').selectOption('aus');
+  await page.getByRole('button', { name: 'Fuge speichern' }).click(); await warte(page, 1200);
+  ok('Eigene Fuge: Station mit drei Armen gespeichert', (await page.locator('.arm').count()) === 3 && /angelegt/.test(await page.locator('.eigen-verlauf').innerText()));
+  await bild(page, '103-eigene-fuge');
+  await page.getByLabel('Art der Fuge').selectOption('nichtverbindung'); await page.getByRole('button', { name: 'Fuge speichern' }).click(); await warte(page, 1000);
+  ok('Eigene Fuge: als Nicht-Verbindung geändert, Verlauf mit vorheriger Fassung', (await page.locator('.station-kreuz').count()) === 1 && /geändert/.test(await page.locator('.eigen-verlauf').innerText()));
+  await page.getByRole('button', { name: '← Zum Feld' }).click(); await warte(page, 1500);
+  ok('Eigene Fuge steht als Fugenort im Feld', await page.evaluate(() => window.fugenland.punkte.some((p) => p.art === 'eigen' && p.titel === 'Versunken und gestockt')));
+  await bild(page, '104-feld-mit-eigener-fuge');
+  ok('Werkbank: keine Fehler', fehler.length === 0, fehler.slice(0, 3).join(' | '));
+  await browser.close();
+  // Wiederöffnen
+  const b2 = await launch(); const p2 = await (await b2.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
+  await p2.goto(BASE); await warte(p2, 2000);
+  const id = await p2.evaluate(() => window.fugenland.werk.daten.gefuege.find((g) => g.titel === 'Versunken und gestockt')?.id);
+  await geheZu(p2, `#/eigen/${id}`); const arme = await p2.locator('.arm').count();
+  await p2.locator('#suche').fill('Hyperfok'); await warte(p2, 300); await p2.keyboard.press('Enter'); await warte(p2, 1600);
+  const notiz = await p2.locator('.ort-notizen li').count(); const eigeneAmOrt = await p2.locator('.ort-fuge', { hasText: 'Eigene Fuge' }).count();
+  ok('Wiederöffnen: eigene Fuge, Notiz und Rückweg vom Ort zur eigenen Fuge', !!id && arme === 3 && notiz === 1 && eigeneAmOrt === 1);
+  await b2.close();
+}
+
 // ---------------- Schmal: Telefon mit Berührung ----------------
 async function schmal() {
   const browser = await launch();
@@ -209,7 +271,10 @@ async function schmal() {
     ok(`Schmal: ${art} ohne seitliches Überlaufen`, breit); await bild(page, name);
   }
   await page.getByRole('button', { name: 'Herkunft und Geltung' }).tap(); await warte(page, 500); await bild(page, '87-schmal-herkunft');
-  ok('Schmal: Herkunftsebene erreichbar', await page.locator('.bohrkern').isVisible());
+  const schichtStand = await page.evaluate(() => ({ an: document.getElementById('raum').dataset.schicht, kerne: document.querySelectorAll('.bohrkern').length, sichtbar: (() => { const b = document.querySelector('.bohrkern'); if (!b) return false; const r = b.getBoundingClientRect(); return r.height > 0 && r.top < innerHeight && r.bottom > 0; })() }));
+  ok('Schmal: Herkunftsebene erreichbar', schichtStand.an === 'an' && schichtStand.sichtbar, JSON.stringify(schichtStand));
+  await geheZu(page, '#/ort/266'); await warte(page, 600);
+  ok('Schmal: Ortsraum mit Werk ohne seitliches Überlaufen', await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1) && await page.locator('.werk img').first().isVisible()); await bild(page, '88-schmal-ortsraum');
   ok('Schmal: keine Fehler', fehler.length === 0, fehler.join(' | '));
   await browser.close();
 }
@@ -287,6 +352,7 @@ async function eingebettet() {
 
 try {
   if (!nur || nur === 'desktop') await desktop();
+  if (!nur || nur === 'werkbank') await werkbank();
   if (!nur || nur === 'schmal') await schmal();
   if (!nur || nur === 'tastatur') await tastatur();
   if (!nur || nur === 'kontrast') await kontrast();

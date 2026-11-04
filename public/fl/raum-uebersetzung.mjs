@@ -47,7 +47,7 @@ export function zeichne(buehne, fall, ctx) {
     }));
     return h('article', { class: `fassung ${seite === 0 ? 'links' : 'rechts'}` },
       h('p', { class: 'fassung-gebiet' }, f.gebiet),
-      h('h2', { class: 'fassung-titel' }, f.t),
+      h('h2', { class: 'fassung-titel' }, f.t), h('button', { type: 'button', class: 'ortlink', 'data-ort': String(f.i) }, 'Ort lesen'),
       text,
       h('button', { type: 'button', class: 'knopf leise', onclick: () => ctx.oeffneOriginal(`${f.t} · ${f.gebiet}`, f.text, f.herkunft || f.gebiet) }, 'Zur Quelle dieser Fassung'));
   };

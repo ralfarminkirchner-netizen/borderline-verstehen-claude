@@ -122,10 +122,11 @@ export class Feld {
     for (const p of this.punkte) { p.bx = undefined; if (!this.sichtbar.has(p.art)) continue; const [x, y] = this.zuBild(p.x, p.y); if (x < -30 || y < -30 || x > w + 30 || y > h + 30) continue; p.tx = x; p.ty = y; p.bx = x; p.by = y; vis.push(p); }
     const abst = s * 1.9;
     for (let it = 0; it < 6; it++) for (let a = 0; a < vis.length; a++) for (let b = a + 1; b < vis.length; b++) {
-      const P = vis[a], Q = vis[b]; let dx = Q.bx - P.bx, dy = Q.by - P.by; const dd = Math.hypot(dx, dy);
-      if (dd >= abst) continue; if (dd < 0.01) { dx = Math.cos(a + b); dy = Math.sin(a + b); } const k = (abst - dd) / 2 / Math.max(dd, 0.01);
+      const P = vis[a], Q = vis[b]; let dx = Q.bx - P.bx, dy = Q.by - P.by; let dd = Math.hypot(dx, dy);
+      if (dd >= abst) continue; if (dd < 0.01) { dx = Math.cos(a * 2.4 + b); dy = Math.sin(a * 2.4 + b); dd = 1; } const k = (abst - dd) / 2 / dd;
       P.bx -= dx * k; P.by -= dy * k; Q.bx += dx * k; Q.by += dy * k;
     }
+    for (const p of vis) { const ox = p.bx - p.tx, oy = p.by - p.ty, d = Math.hypot(ox, oy), m = abst * 3; if (d > m) { p.bx = p.tx + (ox / d) * m; p.by = p.ty + (oy / d) * m; } }
     c.strokeStyle = 'rgba(60,52,44,0.35)'; c.lineWidth = 0.8;
     for (const p of vis) if (Math.hypot(p.bx - p.tx, p.by - p.ty) > 4) { c.beginPath(); c.moveTo(p.tx, p.ty); c.lineTo(p.bx, p.by); c.stroke(); c.fillStyle = 'rgba(60,52,44,0.6)'; c.fillRect(p.tx - 1, p.ty - 1, 2, 2); }
     for (const p of vis) this.#zeichen(c, p, p.bx, p.by, s, p === this.hover || p === this.auswahl);
@@ -155,6 +156,9 @@ export class Feld {
       case 'entstehung': // mehrere Zuströme laufen in einem Becken zusammen
         c.lineWidth = an ? 2.6 : 2; c.beginPath(); c.moveTo(-s, -s); c.quadraticCurveTo(-s * 0.2, -s * 0.2, 0, s * 0.2); c.moveTo(0, -s * 1.1); c.lineTo(0, s * 0.2); c.moveTo(s, -s); c.quadraticCurveTo(s * 0.2, -s * 0.2, 0, s * 0.2); c.stroke();
         c.beginPath(); c.ellipse(0, s * 0.45, s * 0.6, s * 0.32, 0, 0, Math.PI * 2); c.fill(); break;
+      case 'eigen': { // deine Fuge: Station mit so vielen Armen wie Beteiligte, blaue Tinte
+        const n = Math.max(2, p.n); c.lineWidth = an ? 2.4 : 1.8; for (let k = 0; k < n; k++) { const a = -Math.PI / 2 + (k / n) * Math.PI * 2; c.beginPath(); c.moveTo(0, 0); c.lineTo(Math.cos(a) * s, Math.sin(a) * s); c.stroke(); c.beginPath(); c.arc(Math.cos(a) * s, Math.sin(a) * s, 2.4, 0, Math.PI * 2); c.fill(); }
+        c.fillStyle = '#efe9dd'; c.beginPath(); c.arc(0, 0, s * 0.32, 0, Math.PI * 2); c.fill(); c.stroke(); break; }
       case 'fehlstelle': // schraffierter Ring, leere Mitte
         c.beginPath(); c.arc(0, 0, s * 0.95, 0, Math.PI * 2); c.stroke(); c.save(); c.beginPath(); c.arc(0, 0, s * 0.95, 0, Math.PI * 2); c.arc(0, 0, s * 0.5, 0, Math.PI * 2, true); c.clip();
         for (let k = -s; k < s; k += 3) { c.beginPath(); c.moveTo(k, -s); c.lineTo(k + s, s); c.stroke(); } c.restore();

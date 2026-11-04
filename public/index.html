@@ -25,6 +25,11 @@
       <span class="marke-unter">Borderline verstehen · Claude-Fassung</span>
     </a>
     <nav id="pfad" class="pfad" aria-label="Wo du bist"></nav>
+    <div class="suche" role="search">
+      <label for="suche" class="nur-vorlesen">Ort finden</label>
+      <input id="suche" type="search" placeholder="Ort finden …" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="treffer" aria-autocomplete="list">
+      <ul id="treffer" class="treffer" role="listbox" aria-label="Gefundene Orte" hidden></ul>
+    </div>
     <div class="kopf-werkzeug">
       <button id="liste-knopf" type="button" class="knopf leise" aria-pressed="false">Als Liste</button>
       <button id="bewegung-knopf" type="button" class="knopf leise" aria-pressed="false">Bewegung an</button>
@@ -53,6 +58,9 @@
     <div id="raum-buehne" class="raum-buehne"></div>
     <div id="raum-schicht" class="raum-schicht"></div>
   </section>
+
+  <section id="hand" class="hand" aria-label="Orte in der Hand" hidden></section>
+  <section id="spieler" class="spieler" aria-label="Spieler" hidden></section>
 
   <dialog id="original" class="original" aria-labelledby="original-titel">
     <div class="original-kopf">

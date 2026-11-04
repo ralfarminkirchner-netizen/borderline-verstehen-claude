@@ -57,7 +57,7 @@ export function zeichne(buehne, fall, ctx) {
     return h('div', { class: `fels ${rechts ? 'rechts' : 'links'}`, style: `clip-path:${poly}` },
       h('div', { class: 'fels-innen' },
         h('p', { class: 'fels-gebiet' }, seite.gebiet),
-        h('h2', { class: 'fels-titel' }, seite.t),
+        h('h2', { class: 'fels-titel' }, seite.t), h('button', { type: 'button', class: 'ortlink', 'data-ort': String(seite.i) }, 'Ort lesen'),
         h('p', { class: 'fels-kurz' }, seite.s),
         aussagen.length
           ? h('ul', { class: 'fels-aussagen' }, aussagen.map((k) => h('li', {}, h('strong', {}, `sagt: ${k.label}`), k.grenze ? h('span', { class: 'fels-grenze' }, `Grenze: ${k.grenze}`) : null)))

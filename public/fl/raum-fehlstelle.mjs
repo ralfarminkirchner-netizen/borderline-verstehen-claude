@@ -47,7 +47,7 @@ export function zeichne(buehne, fall, ctx) {
   const grund = h('input', { class: 'feld-eingabe', 'aria-label': 'Begründung der Nicht-Verbindung', placeholder: 'Warum hängt das hier ausdrücklich nicht zusammen?' });
   const randInfo = r ? h('div', { class: 'rand-info' },
     h('p', { class: 'rand-info-kopf' }, `Am Rand: ${r.gegenueber.gebiet}`),
-    h('p', { class: 'rand-info-titel' }, r.gegenueber.t),
+    h('p', { class: 'rand-info-titel' }, r.gegenueber.t), h('button', { type: 'button', class: 'ortlink', 'data-ort': String(r.gegenueber.i) }, 'Ort lesen'),
     h('p', {}, `Bestand: „${r.label}“. ${r.detail || ''}`),
     r.quellen.length ? h('p', { class: 'leise' }, `Quelle: ${r.quellen.map((q) => q.titel).join(' · ')}`) : null,
     grund,
@@ -71,7 +71,7 @@ export function zeichne(buehne, fall, ctx) {
         h('p', { class: 'kammer-art' }, z.art ? ARTEN.find((a) => a[0] === z.art)[1] : 'noch nicht eingeordnet'),
         h('p', { class: 'kammer-frage' }, z.frage || 'Diese Kammer wird nicht automatisch gefüllt.'))),
     h('div', { class: 'kammer-seite' },
-      h('p', { class: 'kammer-bestand' }, BESTAND[fall.modus]),
+      h('p', { class: 'kammer-bestand' }, BESTAND[fall.modus]), fall.ort ? h('button', { type: 'button', class: 'ortlink', 'data-ort': String(fall.ort.i) }, 'Ort lesen') : null,
       fall.kapitel ? h('div', {}, h('p', { class: 'kammer-kapitel' }, fall.kapitel.anfang.replace(/[#*]/g, '').slice(0, 420) + ' …'),
         h('button', { type: 'button', class: 'knopf leise', onclick: () => ctx.oeffneKapitel(fall.kapitel.datei) }, 'Kapitel im Fundus lesen')) : null,
       h('p', { class: 'kammer-zahl' }, rand.length ? `${rand.length} Kanten bilden den Rand${rand.length > sichtbar.length ? ` (${sichtbar.length} am Kreis, alle unten)` : ''}.` : ''),

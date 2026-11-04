@@ -1,7 +1,7 @@
 {
- "zeit": "2026-11-04T01:12:09.681Z",
- "bestanden": 61,
- "gesamt": 62,
+ "zeit": "2026-11-04T01:52:50.283Z",
+ "bestanden": 76,
+ "gesamt": 77,
  "pruefungen": [
   {
    "name": "Feld lädt mit allen Fugenarten",
@@ -106,7 +106,7 @@
   {
    "name": "Sechs Räume plus Herkunftsebene mit verschiedenem Aufbau",
    "pass": true,
-   "detail": "{\"gegenhalt\":{\"klasse\":\"gegenhalt\",\"svg\":1,\"knoepfe\":13,\"eingaben\":1},\"schwelle\":{\"klasse\":\"schwelle\",\"svg\":0,\"knoepfe\":28,\"eingaben\":0},\"uebersetzung\":{\"klasse\":\"uebersetzung\",\"svg\":0,\"knoepfe\":127,\"eingaben\":0},\"ueberschneidung\":{\"klasse\":\"ueberschneidung\",\"svg\":1,\"knoepfe\":89,\"eingaben\":1},\"entstehung\":{\"klasse\":\"entstehung\",\"svg\":1,\"knoepfe\":4,\"eingaben\":3},\"fehlstelle\":{\"klasse\":\"fehlstelle\",\"svg\":1,\"knoepfe\":2,\"eingaben\":5}}"
+   "detail": "{\"gegenhalt\":{\"klasse\":\"gegenhalt\",\"svg\":1,\"knoepfe\":15,\"eingaben\":1},\"schwelle\":{\"klasse\":\"schwelle\",\"svg\":0,\"knoepfe\":29,\"eingaben\":0},\"uebersetzung\":{\"klasse\":\"uebersetzung\",\"svg\":0,\"knoepfe\":129,\"eingaben\":0},\"ueberschneidung\":{\"klasse\":\"ueberschneidung\",\"svg\":1,\"knoepfe\":90,\"eingaben\":1},\"entstehung\":{\"klasse\":\"entstehung\",\"svg\":1,\"knoepfe\":6,\"eingaben\":3},\"fehlstelle\":{\"klasse\":\"fehlstelle\",\"svg\":1,\"knoepfe\":2,\"eingaben\":5}}"
   },
   {
    "name": "Browser-Zurück führt durch die Räume zurück",
@@ -131,12 +131,82 @@
   {
    "name": "Bewegungsaufnahme",
    "pass": true,
-   "detail": "1192 Bilder, 43 s"
+   "detail": "1021 Bilder, 42 s"
   },
   {
    "name": "Wiederöffnen: Gegenstimme, Becken und Ereignisse bleiben",
    "pass": true,
    "detail": "18 Ereignisse, 6 Räume im isolierten Ordner"
+  },
+  {
+   "name": "Spieler startet nicht von selbst",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Ortssuche: Treffer und Ortsraum per Tastatur",
+   "pass": true,
+   "detail": "3 Treffer"
+  },
+  {
+   "name": "Ortsraum: voller Wortlaut, Herkunft, Fugenräume des Orts",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Ortsraum: Notiz am Ort angeheftet",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Vom Ort in seinen Fugenraum",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Ortslink im Fugenraum führt in den Ortsraum",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Werk von Walter Andreas Kirchner mit Herkunft, ohne Maßangabe, mit Hinweis",
+   "pass": true,
+   "detail": "Walter Andreas Kirchner · Nach dem Bad · 2009 · Marmor. Reproduktion von der Künstlerwebsite. Werk auf der Künstlerseite"
+  },
+  {
+   "name": "Spieler: auf Klick gestartet, bleibt bei Raumwechsel bestehen",
+   "pass": true,
+   "detail": "{\"sichtbar\":true,\"zeit\":0.02322,\"pausiert\":false}"
+  },
+  {
+   "name": "Hand: drei Orte aufgenommen",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Eigene Fuge: Station mit drei Armen gespeichert",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Eigene Fuge: als Nicht-Verbindung geändert, Verlauf mit vorheriger Fassung",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Eigene Fuge steht als Fugenort im Feld",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Werkbank: keine Fehler",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Wiederöffnen: eigene Fuge, Notiz und Rückweg vom Ort zur eigenen Fuge",
+   "pass": true,
+   "detail": ""
   },
   {
    "name": "Schmal: Raum über Liste per Berührung geöffnet",
@@ -175,6 +245,11 @@
   },
   {
    "name": "Schmal: Herkunftsebene erreichbar",
+   "pass": true,
+   "detail": "{\"an\":\"an\",\"kerne\":1,\"sichtbar\":true}"
+  },
+  {
+   "name": "Schmal: Ortsraum mit Werk ohne seitliches Überlaufen",
    "pass": true,
    "detail": ""
   },
@@ -291,7 +366,7 @@
   {
    "name": "Ohne WebGL: Feld zeichnet vollständig (2D)",
    "pass": true,
-   "detail": "WebGL aus, 1048 Bildpunkte mit Inhalt"
+   "detail": "WebGL aus, 1050 Bildpunkte mit Inhalt"
   },
   {
    "name": "Reduzierte Bewegung: Bewegung ruht von Anfang an",
