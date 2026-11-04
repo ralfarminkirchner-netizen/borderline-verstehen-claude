@@ -22,6 +22,7 @@ const ARTEN = [
 ];
 const BESTAND = {
   'befund-fehlt': 'Der Bestand sagt, dass hier untersucht wurde. Einen Befund hält er an dieser Stelle nicht fest.',
+  eigen: 'Diese Lücke hast du selbst gesetzt. Ihr Rand sind die Orte deiner eigenen Fuge; sie ist kein Befund des Bestands.',
   'nicht-erreichbar': 'Das Kapitel liegt im Fundus vor, hat im Atlasbestand aber keinen eigenen Ort. Von der Karte aus ist es nicht erreichbar.',
 };
 

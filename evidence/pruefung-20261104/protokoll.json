@@ -1,7 +1,7 @@
 {
- "zeit": "2026-11-04T01:52:50.283Z",
- "bestanden": 76,
- "gesamt": 77,
+ "zeit": "2026-11-04T13:52:02.467Z",
+ "bestanden": 86,
+ "gesamt": 87,
  "pruefungen": [
   {
    "name": "Feld lädt mit allen Fugenarten",
@@ -131,12 +131,62 @@
   {
    "name": "Bewegungsaufnahme",
    "pass": true,
-   "detail": "1021 Bilder, 42 s"
+   "detail": "1020 Bilder, 41 s"
   },
   {
    "name": "Wiederöffnen: Gegenstimme, Becken und Ereignisse bleiben",
    "pass": true,
    "detail": "18 Ereignisse, 6 Räume im isolierten Ordner"
+  },
+  {
+   "name": "Schritt 1: Original-Schicht ganz lesbar, Quellen im Rahmen",
+   "pass": true,
+   "detail": "{\"breit\":true,\"links\":true,\"ueberlauf\":true}"
+  },
+  {
+   "name": "Schritt 1: Herkunftsebene schließt beim Raumwechsel",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Schritt 1: „Zur Quelle“ nach Raumwechsel erreichbar",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Schritt 1: Art-Auswahl wirkt sofort, Eingaben bleiben",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Schritt 1: eigene Schwelle öffnet sich mit eigenen Riegeln",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Schritt 1: Art, Riegel und gezogener Riegel bleiben beim Wiederöffnen",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Schritt 1: eigene Fuge als gegenhalt",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Schritt 1: eigene Fuge als uebersetzung",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Schritt 1: eigene Fuge als fehlstelle",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Schritt 1: keine Fehler",
+   "pass": true,
+   "detail": ""
   },
   {
    "name": "Spieler startet nicht von selbst",
@@ -176,7 +226,7 @@
   {
    "name": "Spieler: auf Klick gestartet, bleibt bei Raumwechsel bestehen",
    "pass": true,
-   "detail": "{\"sichtbar\":true,\"zeit\":0.02322,\"pausiert\":false}"
+   "detail": "{\"sichtbar\":true,\"zeit\":2.180485,\"pausiert\":false}"
   },
   {
    "name": "Hand: drei Orte aufgenommen",
@@ -366,7 +416,7 @@
   {
    "name": "Ohne WebGL: Feld zeichnet vollständig (2D)",
    "pass": true,
-   "detail": "WebGL aus, 1050 Bildpunkte mit Inhalt"
+   "detail": "WebGL aus, 1056 Bildpunkte mit Inhalt"
   },
   {
    "name": "Reduzierte Bewegung: Bewegung ruht von Anfang an",

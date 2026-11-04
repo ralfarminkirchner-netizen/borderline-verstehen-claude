@@ -81,7 +81,10 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .raum-schicht { position: absolute; z-index: 2; top: var(--kopfhoehe, 66px); right: 0; bottom: 0; width: min(480px, 100%); overflow: auto; background: #f6f1e6; border-left: 2px solid var(--tinte2); box-shadow: -10px 0 30px rgba(30,20,10,.18); transform: translateX(105%); transition: transform .3s ease; visibility: hidden; }
 .raum[data-schicht="an"] .raum-schicht { transform: none; visibility: visible; }
 .raum[data-schicht="an"] .raum-buehne { padding-right: min(480px, 0px); }
-.bohrkern-zeile { grid-template-columns: 1fr !important; }
+.bohrkern-zeile { grid-template-columns: minmax(0, 1fr) !important; }
+/* Lange Quellentitel und Adressen brechen um, statt die Schicht zu sprengen. */
+.schicht, .schicht-quellen li, .stempel { min-width: 0; overflow-wrap: anywhere; }
+.raum-schicht { overflow-x: hidden; }
 .feld-eingabe { width: 100%; background: #fff; border: 2px solid var(--tinte); border-radius: 8px; padding: .45rem .6rem; color: var(--tinte); }
 .feld-eingabe::placeholder { color: #6f665a; }
 
@@ -257,10 +260,10 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .schicht-name { font-weight: 700; font-size: .86rem; }
 .schicht-wer { font-weight: 400; color: var(--tinte2); }
 .schicht-was { font-size: .86rem; }
-.schicht.revision { background: #dfe7f5; border-radius: 10px 10px 0 0; }
-.schicht.raumbildung { background: repeating-linear-gradient(0deg, #efe4cf 0 4px, #eadcc2 4px 8px); }
-.schicht.ableitung { background: repeating-linear-gradient(90deg, #e3d6bd 0 2px, #ddcfb3 2px 9px); }
-.schicht.original { background: radial-gradient(circle at 20% 30%, #cdbb9a 0 2px, transparent 3px) 0 0/14px 12px, #d5c5a6; border-radius: 0 0 10px 10px; }
+.schicht.sch-revision { background: #dfe7f5; border-radius: 10px 10px 0 0; }
+.schicht.sch-raumbildung { background: repeating-linear-gradient(0deg, #efe4cf 0 4px, #eadcc2 4px 8px); }
+.schicht.sch-ableitung { background: repeating-linear-gradient(90deg, #e3d6bd 0 2px, #ddcfb3 2px 9px); }
+.schicht.sch-original { background: radial-gradient(circle at 20% 30%, #cdbb9a 0 2px, transparent 3px) 0 0/14px 12px, #d5c5a6; border-radius: 0 0 10px 10px; }
 .schicht-quellen { margin: .2rem 0 0; padding-left: 1rem; font-size: .82rem; }
 .schicht a, .spalt-detail a { color: #1a3f80; }
 .stempel { margin-top: .5rem; border: 3px double var(--tinte); border-radius: 8px; padding: .4rem .6rem; display: grid; gap: .15rem; background: #fff; font-size: .88rem; }
@@ -440,3 +443,10 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .raum:not([data-schicht="an"]) .raum-schicht { display: none; }
 .raum { overflow: clip; }
 @media (max-width: 860px) { .raum { overflow-x: hidden; overflow-y: auto; } }
+
+/* Eigene Fuge: Umschalter zwischen Gestalt ihrer Art und Station */
+.eigen-rahmen { display: flex; flex-direction: column; min-height: 100%; }
+.eigen-modus { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; padding: .5rem 1rem; background: #e9edf6; border-bottom: 2px solid #1f4fa8; }
+.eigen-modus .knopf[aria-pressed="true"] { background: #1f4fa8; border-color: #1f4fa8; color: #fff; }
+.eigen-innen { flex: 1; display: flex; flex-direction: column; }
+.eigen-innen > * { flex: 1; }

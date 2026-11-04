@@ -191,6 +191,43 @@ async function desktop() {
   await bild(p2, '71-wiedergeoeffnet'); await b2.close();
 }
 
+// ---------------- Schritt 1: Bedienfehler aus der FASKA-Sichtung ----------------
+async function bedienfehler() {
+  const browser = await launch(); const page = await (await browser.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
+  const fehler = []; page.on('pageerror', (e) => fehler.push(e.message));
+  await page.goto(BASE); await warte(page, 1800);
+  await geheZu(page, '#/raum/gegenhalt/0'); await page.getByRole('button', { name: 'Herkunft und Geltung' }).click(); await warte(page, 500);
+  const o = await page.evaluate(() => { const li = document.querySelector('.schicht.sch-original'); const s = document.getElementById('raum-schicht'); const r = s.getBoundingClientRect(); return { breit: li.getBoundingClientRect().right <= r.right + 1, links: [...li.querySelectorAll('a')].every((a) => a.getBoundingClientRect().right <= r.right + 1), ueberlauf: s.scrollWidth <= s.clientWidth + 1 }; });
+  ok('Schritt 1: Original-Schicht ganz lesbar, Quellen im Rahmen', o.breit && o.links && o.ueberlauf, JSON.stringify(o));
+  await bild(page, '110-original-schicht-ganz');
+  await geheZu(page, '#/raum/uebersetzung/4');
+  ok('Schritt 1: Herkunftsebene schließt beim Raumwechsel', (await page.locator('#raum').getAttribute('data-schicht')) === 'aus' && !(await page.locator('.bohrkern').isVisible()));
+  await page.getByRole('button', { name: 'Zur Quelle dieser Fassung' }).last().click(); await warte(page, 400);
+  ok('Schritt 1: „Zur Quelle“ nach Raumwechsel erreichbar', await page.locator('#original').isVisible());
+  await page.getByRole('button', { name: 'Zurück in den Raum' }).click();
+  await geheZu(page, '#/feld');
+  for (const q of ['Hyperfok', 'Aufgabenstarre']) { await page.locator('#suche').fill(q); await warte(page, 300); await page.keyboard.press('Enter'); await warte(page, 1400); await page.getByRole('button', { name: 'In die Hand nehmen' }).click(); }
+  await page.locator('#hand').getByRole('button', { name: 'Eigene Fuge bilden' }).click(); await warte(page, 1200);
+  await page.getByLabel('Name der Fuge').fill('Wann kippt der Sog');
+  await page.getByLabel('Art der Fuge').selectOption('nichtverbindung'); await warte(page, 300);
+  ok('Schritt 1: Art-Auswahl wirkt sofort, Eingaben bleiben', (await page.locator('.station-kreuz').count()) === 1 && /NICHT-VERBINDUNG/i.test(await page.locator('#raum-art').innerText()) && (await page.getByLabel('Name der Fuge').inputValue()) === 'Wann kippt der Sog');
+  await page.getByLabel('Art der Fuge').selectOption('schwelle'); await warte(page, 300);
+  await page.getByLabel('Riegel der eigenen Schwelle').fill('Ich habe vorher geschlafen\nEs gibt einen Termin, der mich herausholt\nJemand darf mich ansprechen');
+  await page.getByRole('button', { name: 'Fuge speichern' }).click(); await warte(page, 1300);
+  ok('Schritt 1: eigene Schwelle öffnet sich mit eigenen Riegeln', (await page.locator('.riegel').count()) === 3 && (await page.locator('.riegel-herkunft', { hasText: 'deine eigene Bedingung' }).count()) === 3);
+  await page.locator('.riegel-stange').nth(1).click(); await warte(page, 1500);
+  await bild(page, '111-eigene-schwelle');
+  const id = await page.evaluate(() => window.fugenland.werk.daten.gefuege.find((g) => g.titel === 'Wann kippt der Sog').id);
+  await page.reload(); await warte(page, 2200); await geheZu(page, `#/eigen/${id}`);
+  ok('Schritt 1: Art, Riegel und gezogener Riegel bleiben beim Wiederöffnen', (await page.locator('.riegel').count()) === 3 && (await page.locator('.riegel.raus').count()) === 1 && /SCHWELLE/i.test(await page.locator('#raum-art').innerText()));
+  for (const [art, cls] of [['gegenhalt', 'gegenhalt'], ['uebersetzung', 'uebersetzung'], ['fehlstelle', 'fehlstelle']]) {
+    await page.getByRole('button', { name: 'Station und Angaben' }).click(); await page.getByLabel('Art der Fuge').selectOption(art); await page.getByRole('button', { name: 'Fuge speichern' }).click(); await warte(page, 900);
+    ok(`Schritt 1: eigene Fuge als ${art}`, (await page.evaluate(() => document.querySelector('.eigen-innen > *')?.className)) === cls);
+  }
+  ok('Schritt 1: keine Fehler', fehler.length === 0, fehler.join(' | '));
+  await browser.close();
+}
+
 // ---------------- Orte, Werke, Spieler, Werkbank (aus Fugenland 1 wieder eingebaut) ----------------
 async function werkbank() {
   const browser = await launch(); const page = await (await browser.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
@@ -248,7 +285,7 @@ async function werkbank() {
   const id = await p2.evaluate(() => window.fugenland.werk.daten.gefuege.find((g) => g.titel === 'Versunken und gestockt')?.id);
   await geheZu(p2, `#/eigen/${id}`); const arme = await p2.locator('.arm').count();
   await p2.locator('#suche').fill('Hyperfok'); await warte(p2, 300); await p2.keyboard.press('Enter'); await warte(p2, 1600);
-  const notiz = await p2.locator('.ort-notizen li').count(); const eigeneAmOrt = await p2.locator('.ort-fuge', { hasText: 'Eigene Fuge' }).count();
+  const notiz = await p2.locator('.ort-notizen li').count(); const eigeneAmOrt = await p2.locator('.ort-fuge', { hasText: 'Versunken und gestockt' }).count();
   ok('Wiederöffnen: eigene Fuge, Notiz und Rückweg vom Ort zur eigenen Fuge', !!id && arme === 3 && notiz === 1 && eigeneAmOrt === 1);
   await b2.close();
 }
@@ -352,6 +389,7 @@ async function eingebettet() {
 
 try {
   if (!nur || nur === 'desktop') await desktop();
+  if (!nur || nur === 'bedienfehler') await bedienfehler();
   if (!nur || nur === 'werkbank') await werkbank();
   if (!nur || nur === 'schmal') await schmal();
   if (!nur || nur === 'tastatur') await tastatur();

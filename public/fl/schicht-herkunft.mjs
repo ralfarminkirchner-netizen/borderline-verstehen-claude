@@ -40,10 +40,10 @@ export function zeichneSchicht(ziel, { art, meta, fall, kanten, zustand, proben,
   const [wort, grund] = probe ? urteil(probe, art, fall, kanten) : [];
 
   const schichten = [
-    { name: 'Deine Revision', wer: 'du', was: zustand.geaendert ? `${ereignisZahl} Handlung${ereignisZahl === 1 ? '' : 'en'} in diesem Raum, zuletzt ${new Date(zustand.geaendert).toLocaleString('de-DE')}.` : 'Noch nichts von dir in diesem Raum.', cls: 'revision' },
-    { name: 'Raumbildung', wer: 'diese Fassung (redaktionell)', was: `${meta.name}: gebildet aus ${fall.gebildetAus || 'dem Bestand'}. Lesart, keine fachliche Prüfung.`, cls: 'raumbildung' },
-    { name: 'Ableitung', wer: 'Lesebestand dieser Fassung', was: k ? `Art gelesen aus ${k.grund || 'dem Originaltyp'}.` : 'Ortstexte unverändert aus dem kanonischen Atlas übernommen.', cls: 'ableitung' },
-    { name: 'Original', wer: k ? k.herkunft : 'kanonischer Atlasbestand', was: k ? `„${k.label}“${k.detail ? ` – ${k.detail}` : ''}${k.grenze ? ` Grenze: ${k.grenze}` : ' Grenze im Bestand nicht angegeben.'}` : 'Ortsbeschreibungen der beteiligten Gebiete.', cls: 'original', quellen: k?.quellen || [] },
+    { name: 'Deine Revision', wer: 'du', was: zustand.geaendert ? `${ereignisZahl} Handlung${ereignisZahl === 1 ? '' : 'en'} in diesem Raum, zuletzt ${new Date(zustand.geaendert).toLocaleString('de-DE')}.` : 'Noch nichts von dir in diesem Raum.', cls: 'sch-revision' },
+    { name: 'Raumbildung', wer: 'diese Fassung (redaktionell)', was: `${meta.name}: gebildet aus ${fall.gebildetAus || 'dem Bestand'}. Lesart, keine fachliche Prüfung.`, cls: 'sch-raumbildung' },
+    { name: 'Ableitung', wer: 'Lesebestand dieser Fassung', was: k ? `Art gelesen aus ${k.grund || 'dem Originaltyp'}.` : 'Ortstexte unverändert aus dem kanonischen Atlas übernommen.', cls: 'sch-ableitung' },
+    { name: 'Original', wer: k ? k.herkunft : 'kanonischer Atlasbestand', was: k ? `„${k.label}“${k.detail ? ` – ${k.detail}` : ''}${k.grenze ? ` Grenze: ${k.grenze}` : ' Grenze im Bestand nicht angegeben.'}` : 'Ortsbeschreibungen der beteiligten Gebiete.', cls: 'sch-original', quellen: k?.quellen || [] },
   ];
 
   ziel.replaceChildren(h('div', { class: 'herkunft' },

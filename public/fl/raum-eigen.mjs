@@ -9,7 +9,21 @@ export const RICHTUNG = { aus: 'geht aus', an: 'kommt an', beides: 'in beide Ric
 export const ARTEN = { offen: 'offene Frage', uebersetzung: 'Übersetzung', gegenhalt: 'Gegenhalt', schwelle: 'Schwelle', ueberschneidung: 'Überschneidung', entstehung: 'Entstehung', fehlstelle: 'Fehlstelle', nichtverbindung: 'Nicht-Verbindung' };
 const GELTUNG = { persoenlich: 'persönliche Zuordnung', offen: 'offene Frage' };
 
+// Eine gespeicherte eigene Fuge öffnet sich in der Gestalt ihrer Art; die Station bleibt der Ort zum Bearbeiten.
 export function zeichne(buehne, g, ctx) {
+  const gestalt = ctx.gespeichert ? ctx.gestalt(g) : null;
+  const modus = ctx.modus() || (gestalt?.fall ? 'gestalt' : 'station');
+  const umschalter = h('div', { class: 'eigen-modus', role: 'group', 'aria-label': 'Ansicht der eigenen Fuge' },
+    h('button', { type: 'button', class: 'knopf mini', 'aria-pressed': String(modus === 'gestalt'), disabled: !gestalt?.fall, onclick: () => { ctx.setzeModus('gestalt'); zeichne(buehne, g, ctx); } }, gestalt?.name ? `Als ${gestalt.name}` : 'Gestalt'),
+    h('button', { type: 'button', class: 'knopf mini', 'aria-pressed': String(modus !== 'gestalt'), onclick: () => { ctx.setzeModus('station'); zeichne(buehne, g, ctx); } }, 'Station und Angaben'),
+    gestalt && !gestalt.fall ? h('span', { class: 'leise' }, gestalt.fehlt) : !ctx.gespeichert ? h('span', { class: 'leise' }, 'Nach dem Speichern öffnet sich die Fuge in der Gestalt ihrer Art.') : null);
+  const innen = h('div', { class: 'eigen-innen' });
+  buehne.replaceChildren(h('div', { class: 'eigen-rahmen' }, umschalter, innen));
+  if (modus === 'gestalt' && gestalt?.fall) { gestalt.modul.zeichne(innen, gestalt.fall, gestalt.ctx); return; }
+  station(innen, g, ctx);
+}
+
+function station(buehne, g, ctx) {
   const n = g.teile.length; const W = 560, C = 280, R = 190; const nicht = g.art === 'nichtverbindung';
   const pos = g.teile.map((_, k) => { const a = -Math.PI / 2 + (k / Math.max(n, 1)) * Math.PI * 2; return [C + Math.cos(a) * R, C + Math.sin(a) * R]; });
   const arme = g.teile.map((t, k) => {
@@ -23,11 +37,14 @@ export function zeichne(buehne, g, ctx) {
   });
   const name = h('input', { class: 'feld-eingabe', value: g.titel || '', 'aria-label': 'Name der Fuge', placeholder: 'Name der Fuge' });
   const feld = (k, l, ph) => { const el = h('textarea', { class: 'feld-eingabe', rows: '2', 'aria-label': l, placeholder: ph }); el.value = g[k] || ''; el.dataset.k = k; return h('label', { class: 'eigen-feld' }, h('span', {}, l), el); };
-  const art = h('select', { 'aria-label': 'Art der Fuge' }, Object.entries(ARTEN).map(([k, v]) => h('option', { value: k, selected: g.art === k }, v)));
+  const art = h('select', { 'aria-label': 'Art der Fuge', onchange: () => ctx.entwurf(lese()) }, Object.entries(ARTEN).map(([k, v]) => h('option', { value: k, selected: g.art === k }, v)));
+  const riegel = h('textarea', { class: 'feld-eingabe', rows: '3', 'aria-label': 'Riegel der eigenen Schwelle', placeholder: 'Eine Bedingung je Zeile – jede wird ein Riegel' });
+  riegel.value = (g.riegel || []).join('\n');
   const lese = () => { const neu = structuredClone(g); neu.titel = name.value.trim(); neu.art = art.value;
     buehne.querySelectorAll('[data-k]').forEach((el) => { neu[el.dataset.k] = el.value.trim(); });
     buehne.querySelectorAll('[data-rolle]').forEach((el) => { neu.teile[Number(el.dataset.rolle)].rolle = el.value.trim(); });
     buehne.querySelectorAll('[data-richtung]').forEach((el) => { neu.teile[Number(el.dataset.richtung)].richtung = el.value; });
+    if (neu.art === 'schwelle' || g.riegel) neu.riegel = riegel.value.split('\n').map((x) => x.trim()).filter(Boolean);
     return neu; };
 
   buehne.replaceChildren(h('div', { class: 'eigen' },
@@ -45,6 +62,7 @@ export function zeichne(buehne, g, ctx) {
     h('div', { class: 'eigen-seite' },
       name, h('label', { class: 'eigen-feld' }, h('span', {}, 'Art'), art),
       feld('aussage', 'Aussage', 'Was verbindet sich hier – in deinen Worten?'),
+      g.art === 'schwelle' ? h('label', { class: 'eigen-feld' }, h('span', {}, 'Riegel (Bedingungen der Schwelle)'), riegel) : null,
       feld('gegenaussage', 'Gegenrichtung', 'Gilt es auch zurück? Mit eigenem Grund – oder leer lassen.'),
       feld('grenze', 'Grenze', 'Wo hört diese Verbindung auf zu gelten?'),
       feld('perspektive', 'Perspektive', 'Aus wessen Sicht?'),

@@ -128,11 +128,14 @@ const THEMA = [[/trauma|prolonged|cognitive processing/i, 'TraumaAtlas'], [/neur
 const aufnahmenFuerGebiet = (name) => medien.filter((m) => istAufnahme(m) && THEMA.some(([re, n]) => n === name && re.test(m.titel)));
 
 // Ein Raum ist offen: ein Fugenraum, ein Ortsraum oder eine eigene Fuge. Alle liegen über dem Feld.
-let aktuell = null;
+let aktuell = null; let raumAdresse = null;
 function entfalte(x, y, ohneFlug, zeichnen, hash) {
   $('liste').hidden = true; $('liste-knopf').setAttribute('aria-pressed', 'false');
   const zeige = () => {
     const [bx, by] = feld.zuBild(x, y); const raum = $('raum'); raum.style.setProperty('--ox', `${bx}px`); raum.style.setProperty('--oy', `${by}px`);
+    // Ein neuer Raum beginnt mit geschlossener Herkunftsebene; sie gehört zum Raum, in dem sie geöffnet wurde.
+    if (raumAdresse !== hash || raum.hidden) { raum.dataset.schicht = 'aus'; $('schicht-knopf').setAttribute('aria-pressed', 'false'); }
+    raumAdresse = hash;
     if (location.hash !== hash) history.pushState(null, '', hash);
     const warOffen = !raum.hidden; zeichnen(); raum.hidden = false; $('app').dataset.ebene = 'raum';
     if (!warOffen) { raum.classList.remove('entfaltet'); void raum.offsetWidth; raum.classList.add('entfaltet'); }
@@ -202,11 +205,59 @@ function zeigeEigen(g, gespeichert) {
   g.teile.forEach((t) => { t.ort = ortIndex(t); });
   entfalte(x, y, true, () => { aktuell = { typ: 'eigen', g, gespeichert, x, y }; zeichneEigen(); }, gespeichert ? `#/eigen/${g.id}` : '#/eigen/neu');
 }
+// Die eigene Fuge in der Gestalt ihrer Art: dieselben Räume, gebaut aus deinen Beteiligten und Angaben.
+const ortObj = (i) => ({ i, id: texte.orte[i].id, t: karte.orte[i].t, r: karte.orte[i].r, gebiet: karte.regionen[karte.orte[i].r].name, k: karte.orte[i].k, s: karte.orte[i].s, x: karte.orte[i].x, y: karte.orte[i].y });
+const eigeneKante = (n, a, b, label, grenze = '') => ({ n: `eigen-${n}`, a, b, label, detail: '', grenze, frage: '', typ: 'eigen', art: 'eigen', grund: 'deine eigene Fuge', herkunft: 'deine eigene Fuge', status: '', quellen: [] });
+const woerter = (t) => [...new Set((t.toLowerCase().match(/[a-zäöüß][a-zäöüß-]{3,}/g) || []))];
+const stammE = (w) => w.replace(/(ungen|ung|en|er|es|e|n|s)$/, '');
+function gestaltFall(g) {
+  const os = g.teile.map(ortIndex).filter((i) => i >= 0); const o = os.map(ortObj); const text = (i) => texte.orte[i].body || karte.orte[i].s;
+  const fehlt = (n, was) => ({ modul: RAEUME[g.art], name: RAEUME[g.art]?.meta.name, fehlt: `Für diese Gestalt braucht die Fuge ${n} ${was}.` });
+  const basis = { gebildetAus: 'deiner eigenen Fuge' };
+  switch (g.art) {
+    case 'schwelle': {
+      if (!o.length || !(g.riegel || []).length) return fehlt('einen Ort und mindestens einen', 'Riegel (Bedingungen im Feld „Riegel“)');
+      return { modul: schwelle, name: 'Schwelle', fall: { ...basis, art: 'schwelle', ort: o[0], text: text(os[0]), riegel: g.riegel.map((r, k) => ({ ...eigeneKante(k, os[0], (os[k + 1] ?? os[0]), r), gegenueber: o[k + 1] || o[0] })) } };
+    }
+    case 'gegenhalt': {
+      if (o.length < 2) return fehlt('zwei', 'Beteiligte');
+      const aussagen = [g.aussage && eigeneKante(0, os[0], os[1], g.aussage), g.gegenaussage && eigeneKante(1, os[1], os[0], g.gegenaussage)].filter(Boolean);
+      return { modul: gegenhalt, name: 'Gegenhalt', fall: { ...basis, art: 'gegenhalt', modus: 'widerspruch', seiten: [o[0], o[1]], aussagen } };
+    }
+    case 'uebersetzung': {
+      if (o.length < 2) return fehlt('zwei', 'Beteiligte');
+      const w = [woerter(text(os[0])), woerter(text(os[1]))]; const s1 = new Set(w[1].map(stammE));
+      return { modul: uebersetzung, name: 'Übersetzung', fall: { ...basis, art: 'uebersetzung', titel: g.titel, fassungen: [0, 1].map((k) => ({ ...o[k], text: text(os[k]), herkunft: texte.orte[os[k]].herkunft?.titel || o[k].gebiet })), wortabgleich: { gemeinsam: w[0].filter((x) => s1.has(stammE(x))), nurHier: [] } } };
+    }
+    case 'entstehung': {
+      if (o.length < 3) return fehlt('mindestens drei', 'Beteiligte (zwei Herkünfte und den Ort, in dem sie zusammenfließen; der letzte Beteiligte ist der Zusammenfluss)');
+      const ziel = os.at(-1);
+      return { modul: entstehung, name: 'Entstehung', fall: { ...basis, art: 'entstehung', ort: o.at(-1), text: text(ziel), herkuenfte: os.slice(0, -1).map((i, k) => ({ ...eigeneKante(k, ziel, i, 'in deiner Fuge zusammengeführt'), quelle: o[k], text: text(i) })), nachfolger: [] } };
+    }
+    case 'fehlstelle': {
+      if (!o.length) return fehlt('einen', 'Beteiligten');
+      return { modul: fehlstelle, name: 'Fehlstelle', fall: { ...basis, art: 'fehlstelle', modus: 'eigen', ort: o[0], raender: os.slice(1).map((i, k) => ({ ...eigeneKante(k, os[0], i, 'in deiner Fuge'), gegenueber: o[k + 1] })) } };
+    }
+    case 'ueberschneidung': return { modul: null, name: 'Überschneidung', fehlt: 'Eine Überschneidung baut sich aus den Beschreibungskontexten des Bestands; deine eigene bleibt als Station mit Armen sichtbar.' };
+    default: return null; // offene Frage und Nicht-Verbindung haben die Station als Gestalt
+  }
+}
+
 function zeichneEigen() {
   const { g, gespeichert, x, y } = aktuell;
   kopf('eigen', `Eigene Fuge · ${eigen.ARTEN[g.art] || 'offene Frage'}`, g.titel || 'Neue eigene Fuge', '', false);
+  const key = `eigen:${g.id}`;
   eigen.zeichne($('raum-buehne'), g, {
     gespeichert, hand: () => hand, teil, oeffneOrt,
+    modus: () => aktuell.modus, setzeModus: (m) => { aktuell.modus = m; },
+    gestalt: (gg) => {
+      const r = gestaltFall(gg); if (!r?.fall) return r;
+      const gctx = { key, daten: fr, fluechtig: aktuell.fluechtig ||= {}, ruhig, gebietsMitte, faelle: [], oeffneFall: () => {},
+        zustand: () => raumZustand(key) || {},
+        handlung: (wasArt, aendern, was) => { handlung(key, wasArt, { x, y }, aendern, was); feld.ereignisse(werk.daten.ereignisse, true); },
+        oeffneOriginal, oeffneKapitel, neuZeichnen: () => zeichneEigen() };
+      return { ...r, ctx: gctx };
+    },
     entwurf: (neu) => { aktuell.g = neu; zeichneEigen(); },
     speichere: (neu) => {
       const jetzt = new Date().toISOString();

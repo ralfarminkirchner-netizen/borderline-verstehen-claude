@@ -36,7 +36,7 @@ export function zeichne(buehne, fall, ctx) {
           zeichne(buehne, fall, ctx);
         },
       }, h('span', { class: 'riegel-griff', 'aria-hidden': 'true' }), h('span', { class: 'riegel-text' }, text)),
-      h('p', { class: 'riegel-herkunft' }, `${r.grenze ? `Grenze: ${r.grenze}` : r.art === 'bedingung' ? 'Bedingung im Modell' : 'Grenze im Bestand nicht angegeben'}${r.quellen.length ? ` · ${r.quellen.length} Quelle${r.quellen.length > 1 ? 'n' : ''}` : ' · ohne Quelle'}`),
+      h('p', { class: 'riegel-herkunft' }, r.typ === 'eigen' ? 'deine eigene Bedingung, kein Bestand' : `${r.grenze ? `Grenze: ${r.grenze}` : r.art === 'bedingung' ? 'Bedingung im Modell' : 'Grenze im Bestand nicht angegeben'}${r.quellen.length ? ` · ${r.quellen.length} Quelle${r.quellen.length > 1 ? 'n' : ''}` : ' · ohne Quelle'}`),
       h('div', { class: 'pruef', role: 'radiogroup', 'aria-label': 'Deine Prüfung dieses Riegels' },
         PRUEF.map(([w, l]) => h('button', {
           type: 'button', role: 'radio', class: `pruef-chip ${w}`, 'aria-checked': String(pruef[rk(r)] === w),
