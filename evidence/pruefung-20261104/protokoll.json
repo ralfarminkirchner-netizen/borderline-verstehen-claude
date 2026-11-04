@@ -1,40 +1,45 @@
 {
- "zeit": "2026-11-04T14:12:41.073Z",
- "bestanden": 7,
- "gesamt": 7,
+ "zeit": "2026-11-04T14:15:42.829Z",
+ "bestanden": 8,
+ "gesamt": 8,
  "pruefungen": [
   {
-   "name": "Schritt 3: Gegenstimme, Lückenfrage und Unterscheidungsfrage in einer Sammlung",
+   "name": "Schritt 4: jede Beteiligung trägt den Abdruck ihres Wortlauts",
    "pass": true,
-   "detail": "Unterscheidungsfrage, Lückenfrage, Gegenstimme"
+   "detail": "3 Beteiligte"
   },
   {
-   "name": "Schritt 3: Schließen ohne Notiz geht nicht",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schritt 3: Schließen mit Notiz und Wiederöffnen mit Grund bleiben im Verlauf",
+   "name": "Schritt 4: der Entwurf kündigt das Erlöschen an",
    "pass": true,
    "detail": ""
   },
   {
-   "name": "Schritt 3: Faden steht im Ortsraum aller Beteiligten",
+   "name": "Schritt 4: Lösen lässt die Zuordnung sichtbar erlöschen, mit Grund",
    "pass": true,
-   "detail": "Gen-Umwelt-Interaktion · ADHS-Merkmale"
+   "detail": "Persönliche Zuordnung erloschen, weil „Rückzug hat mehrere mögliche Bedeutungen“ gelöst wurde (4.11.2026, 15:15:34)."
   },
   {
-   "name": "Schritt 3: Faden springt in seinen Raum",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schritt 3: Fäden und Verlauf nach dem Neuladen",
+   "name": "Schritt 4: Verlauf zeigt Fassung, vorher, nachher, Grund und Zeit",
    "pass": true,
    "detail": ""
   },
   {
-   "name": "Schritt 3: keine Fehler",
+   "name": "Schritt 4: erst neues Bestätigen stellt die Zuordnung her",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Schritt 4: geänderter Ortswortlaut zeigt „Ende hat sich geändert, prüfen“",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Schritt 4: im Feld trägt die eigene Fuge die erloschen-Marke",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Schritt 4: keine Fehler",
    "pass": true,
    "detail": ""
   }

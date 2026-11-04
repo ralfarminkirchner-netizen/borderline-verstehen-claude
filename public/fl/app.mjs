@@ -60,7 +60,11 @@ feld.ereignisse(werk.daten.ereignisse);
 
 // Urteile: an den Inhalt gebunden. Beim Laden erlischt jedes Urteil, dessen Fuge sich inhaltlich geändert hat.
 for (const p of punkte) if (p.fall) { p.abdruck = abdruck(p.fall); if (mussErloeschen(raumZustand(p.key), p.abdruck)) aendereWerk((d) => erloeschen(d.raeume[p.key])); }
-function urteileImFeld() { feld.urteile = new Map(punkte.map((p) => [p.key, feldWert(raumZustand(p.key))]).filter(([, w]) => w)); feld.dirty = true; }
+function urteileImFeld() {
+  feld.urteile = new Map(punkte.map((p) => [p.key, feldWert(raumZustand(p.key))]).filter(([, w]) => w));
+  for (const g of werk.daten.gefuege) if (g.erloschen || g.endeGeaendert) feld.urteile.set(`eigen:${g.id}`, 'erloschen');
+  feld.dirty = true;
+}
 urteileImFeld();
 
 new ResizeObserver(() => document.documentElement.style.setProperty('--kopf', `${document.querySelector('.kopf').offsetHeight}px`)).observe(document.querySelector('.kopf'));
@@ -288,23 +292,54 @@ function zeichneEigen() {
       return { ...r, ctx: gctx };
     },
     entwurf: (neu) => { aktuell.g = neu; zeichneEigen(); },
-    speichere: (neu) => {
-      const jetzt = new Date().toISOString();
-      aendereWerk((d) => {
-        const alt = d.gefuege.find((q) => q.id === neu.id);
-        neu.verlauf = [...(alt?.verlauf || []), alt ? { zeit: jetzt, was: 'geändert', vorher: { ...alt, verlauf: undefined } } : { zeit: jetzt, was: 'angelegt' }].slice(-30);
-        neu.geaendert = jetzt; neu.erstellt ||= jetzt;
-        if (alt) Object.assign(alt, neu); else d.gefuege.push(neu);
-      }, { art: 'eigene-fuge', raum: `eigen:${neu.id}`, x, y, was: neu.titel || 'eigene Fuge' });
-      eigenePunkte(); feld.ereignisse(werk.daten.ereignisse, true);
-      hand.length = 0; zeigeHand(); aktuell = null; zeigeEigen(structuredClone(werk.daten.gefuege.find((q) => q.id === neu.id)), true);
-    },
+    gespeicherteTeile: () => (werk.daten.gefuege.find((q) => q.id === g.id)?.teile || []).map((t) => t.ortId),
+    bestaetige: () => { const neu = structuredClone(werk.daten.gefuege.find((q) => q.id === g.id)); delete neu.erloschen; delete neu.endeGeaendert; neu.geltung = 'persoenlich'; neu.teile.forEach((t) => { t.wortlaut = wortlautAbdruck(ortIndex(t)); }); speichereEigen(neu, 'neu bestätigt', 'Zuordnung neu bestätigt, gegen den heutigen Wortlaut aller Beteiligten', x, y); },
+    speichere: (neu, grund) => speichereEigen(neu, null, grund, x, y),
     loesche: (id) => {
       if (!confirm('Diese eigene Fuge löschen? Ihr Verlauf bleibt im Protokoll vermerkt.')) return;
       aendereWerk((d) => { d.verlauf = [...(d.verlauf || []), { zeit: new Date().toISOString(), was: `gelöscht: ${g.titel || 'eigene Fuge'}`, vorher: d.gefuege.find((q) => q.id === id) }].slice(-200); d.gefuege = d.gefuege.filter((q) => q.id !== id); });
-      eigenePunkte(); schliessen();
+      eigenePunkte(); urteileImFeld(); schliessen();
     },
   });
+}
+
+// Bindung der eigenen Fuge an den Wortlaut ihrer Orte (OCR-Prinzip: Freigabe am konkreten Inhalt; erlischt bei Änderung
+// und bleibt erloschen, auch wenn der alte Wortlaut zurückkehrt). Vorbild: EINE-APP, erlöschende Unterschrift.
+const wortlautAbdruck = (i) => (i >= 0 ? abdruck({ wortlaut: texte.orte[i].body || karte.orte[i].s }) : '');
+const zusammenfassung = (g) => (g ? { titel: g.titel, art: g.art, aussage: g.aussage, geltung: g.geltung, teile: g.teile.map((t) => t.name) } : null);
+function speichereEigen(neu, was, grund, x, y) {
+  const jetzt = new Date().toISOString();
+  aendereWerk((d) => {
+    const alt = d.gefuege.find((q) => q.id === neu.id);
+    const vorher = new Set((alt?.teile || []).map((t) => t.ortId)), nachher = new Set(neu.teile.map((t) => t.ortId));
+    const geloest = (alt?.teile || []).filter((t) => !nachher.has(t.ortId)).map((t) => `„${t.name}“ gelöst`);
+    const dazu = neu.teile.filter((t) => !vorher.has(t.ortId)).map((t) => `„${t.name}“ hinzugenommen`);
+    neu.teile.forEach((t) => { if (!t.wortlaut || !vorher.has(t.ortId)) t.wortlaut = wortlautAbdruck(ortIndex(t)); });
+    if (alt?.erloschen && !was) neu.erloschen = alt.erloschen;
+    if (alt?.endeGeaendert && !was) neu.endeGeaendert = alt.endeGeaendert;
+    const wechsel = [...geloest, ...dazu];
+    if (alt && wechsel.length && alt.geltung === 'persoenlich' && !alt.erloschen) neu.erloschen = { zeit: jetzt, grund: `weil ${wechsel.join(' und ')} wurde` };
+    neu.fassung = (alt?.fassung || 0) + 1;
+    neu.verlauf = [...(alt?.verlauf || []), { fassung: neu.fassung, zeit: jetzt, was: was || (alt ? 'geändert' : 'angelegt'), grund: [grund, alt ? wechsel.join(', ') : ''].filter(Boolean).join(' · '), vorher: zusammenfassung(alt), nachher: zusammenfassung(neu), erloschen: neu.erloschen && !alt?.erloschen ? neu.erloschen.grund : undefined }].slice(-40);
+    neu.geaendert = jetzt; neu.erstellt ||= jetzt;
+    if (alt) { for (const k of Object.keys(alt)) delete alt[k]; Object.assign(alt, neu); } else d.gefuege.push(neu);
+  }, { art: 'eigene-fuge', raum: `eigen:${neu.id}`, x, y, was: neu.titel || 'eigene Fuge' });
+  eigenePunkte(); urteileImFeld(); feld.ereignisse(werk.daten.ereignisse, true);
+  hand.length = 0; zeigeHand(); aktuell = null; zeigeEigen(structuredClone(werk.daten.gefuege.find((q) => q.id === neu.id)), true);
+}
+function pruefeWortlaut() {
+  for (const g of werk.daten.gefuege) {
+    const anders = g.teile.filter((t) => t.wortlaut && t.wortlaut !== wortlautAbdruck(ortIndex(t))).map((t) => t.name);
+    const neu = anders.filter((n) => !(g.endeGeaendert?.orte || []).includes(n));
+    if (!neu.length) continue;
+    const jetzt = new Date().toISOString();
+    aendereWerk(() => {
+      g.endeGeaendert = { zeit: jetzt, orte: [...(g.endeGeaendert?.orte || []), ...neu] };
+      const grund = `weil sich der Wortlaut von ${neu.map((n) => `„${n}“`).join(' und ')} geändert hat`;
+      if (g.geltung === 'persoenlich' && !g.erloschen) g.erloschen = { zeit: jetzt, grund };
+      g.verlauf = [...(g.verlauf || []), { fassung: g.fassung || 1, zeit: jetzt, was: 'Ende hat sich geändert', grund, vorher: null, nachher: null }];
+    });
+  }
 }
 
 function schliessen({ ausVerlauf = false } = {}) {
@@ -384,6 +419,7 @@ async function route({ erster = false } = {}) {
 }
 addEventListener('popstate', () => route());
 await ladeTexte().then(() => texte.orte.forEach((t, i) => ortVonId.set(t.id, i))).then(eigenePunkte);
+pruefeWortlaut(); urteileImFeld();
 route({ erster: true });
 pfad();
 window.fugenland = { feld, punkte, FAELLE, werk, hand };

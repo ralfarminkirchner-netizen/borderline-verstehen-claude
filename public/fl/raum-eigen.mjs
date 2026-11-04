@@ -18,7 +18,12 @@ export function zeichne(buehne, g, ctx) {
     h('button', { type: 'button', class: 'knopf mini', 'aria-pressed': String(modus !== 'gestalt'), onclick: () => { ctx.setzeModus('station'); zeichne(buehne, g, ctx); } }, 'Station und Angaben'),
     gestalt && !gestalt.fall ? h('span', { class: 'leise' }, gestalt.fehlt) : !ctx.gespeichert ? h('span', { class: 'leise' }, 'Nach dem Speichern öffnet sich die Fuge in der Gestalt ihrer Art.') : null);
   const innen = h('div', { class: 'eigen-innen' });
-  buehne.replaceChildren(h('div', { class: 'eigen-rahmen' }, umschalter, innen));
+  // Stand der persönlichen Zuordnung: erloschen bleibt sichtbar, bis du neu bestätigst.
+  const stand = (g.endeGeaendert || g.erloschen) && ctx.gespeichert ? h('div', { class: 'eigen-stand erloschen', role: 'status' },
+    g.endeGeaendert ? h('p', {}, h('strong', {}, 'Ende hat sich geändert, prüfen: '), `Der Wortlaut von ${g.endeGeaendert.orte.map((n) => `„${n}“`).join(' und ')} ist nicht mehr der, gegen den du diese Fuge gesetzt hast.`) : null,
+    g.erloschen ? h('p', {}, h('strong', {}, 'Persönliche Zuordnung erloschen, '), `${g.erloschen.grund} (${new Date(g.erloschen.zeit).toLocaleString('de-DE')}).`) : null,
+    h('button', { type: 'button', class: 'knopf mini', onclick: () => ctx.bestaetige() }, 'Neu bestätigen')) : null;
+  buehne.replaceChildren(h('div', { class: 'eigen-rahmen' }, umschalter, stand || '', innen));
   if (modus === 'gestalt' && gestalt?.fall) { gestalt.modul.zeichne(innen, gestalt.fall, gestalt.ctx); return; }
   station(innen, g, ctx);
 }
@@ -40,6 +45,9 @@ function station(buehne, g, ctx) {
   const art = h('select', { 'aria-label': 'Art der Fuge', onchange: () => ctx.entwurf(lese()) }, Object.entries(ARTEN).map(([k, v]) => h('option', { value: k, selected: g.art === k }, v)));
   const riegel = h('textarea', { class: 'feld-eingabe', rows: '3', 'aria-label': 'Riegel der eigenen Schwelle', placeholder: 'Eine Bedingung je Zeile – jede wird ein Riegel' });
   riegel.value = (g.riegel || []).join('\n');
+  const aenderungsGrund = h('input', { class: 'feld-eingabe', 'aria-label': 'Grund der Änderung', placeholder: 'Grund der Änderung (freiwillig)' });
+  const gespeicherteTeile = ctx.gespeichert ? ctx.gespeicherteTeile() : [];
+  const teileGeaendert = ctx.gespeichert && (gespeicherteTeile.length !== g.teile.length || g.teile.some((t) => !gespeicherteTeile.includes(t.ortId)));
   const lese = () => { const neu = structuredClone(g); neu.titel = name.value.trim(); neu.art = art.value;
     buehne.querySelectorAll('[data-k]').forEach((el) => { neu[el.dataset.k] = el.value.trim(); });
     buehne.querySelectorAll('[data-rolle]').forEach((el) => { neu.teile[Number(el.dataset.rolle)].rolle = el.value.trim(); });
@@ -67,10 +75,16 @@ function station(buehne, g, ctx) {
       feld('grenze', 'Grenze', 'Wo hört diese Verbindung auf zu gelten?'),
       feld('perspektive', 'Perspektive', 'Aus wessen Sicht?'),
       h('fieldset', { class: 'einordnung' }, h('legend', {}, 'Stand'), Object.entries(GELTUNG).map(([k, l]) => h('label', { class: 'einordnung-wahl' }, h('input', { type: 'radio', name: 'geltung', value: k, checked: g.geltung === k, 'data-k': 'geltung' }), h('span', {}, l)))),
+      teileGeaendert && g.geltung === 'persoenlich' && !g.erloschen ? h('p', { class: 'eigen-hinweis' }, 'Du hast Beteiligte gelöst oder hinzugenommen. Beim Speichern erlischt die persönliche Zuordnung sichtbar; du kannst sie danach neu bestätigen.') : null,
+      ctx.gespeichert ? aenderungsGrund : null,
       h('div', { class: 'reihe' },
-        h('button', { type: 'button', class: 'knopf', disabled: g.teile.length < 2, onclick: () => { const neu = lese(); neu.geltung = buehne.querySelector('input[name=geltung]:checked')?.value || 'persoenlich'; ctx.speichere(neu); } }, g.teile.length < 2 ? 'Mindestens zwei Beteiligte' : 'Fuge speichern'),
+        h('button', { type: 'button', class: 'knopf', disabled: g.teile.length < 2, onclick: () => { const neu = lese(); neu.geltung = buehne.querySelector('input[name=geltung]:checked')?.value || 'persoenlich'; ctx.speichere(neu, aenderungsGrund.value.trim()); } }, g.teile.length < 2 ? 'Mindestens zwei Beteiligte' : 'Fuge speichern'),
         ctx.gespeichert ? h('button', { type: 'button', class: 'knopf leise', onclick: () => ctx.loesche(g.id) }, 'Fuge löschen') : null),
-      g.verlauf?.length ? h('section', { class: 'eigen-verlauf' }, h('h3', {}, 'Verlauf'), h('ul', {}, g.verlauf.slice().reverse().map((v) => h('li', {}, `${new Date(v.zeit).toLocaleString('de-DE')} · ${v.was}`)))) : null)));
+      g.verlauf?.length ? h('section', { class: 'eigen-verlauf' }, h('h3', {}, 'Verlauf'), h('ol', {}, g.verlauf.slice().reverse().map((v) => h('li', {},
+        h('strong', {}, `${v.fassung ? `Fassung ${v.fassung} · ` : ''}${v.was}`), ` · ${new Date(v.zeit).toLocaleString('de-DE')}`,
+        v.grund ? h('span', { class: 'verlauf-grund' }, `Grund: ${v.grund}`) : null,
+        v.erloschen ? h('span', { class: 'verlauf-erloschen' }, `Zuordnung erloschen, ${v.erloschen}`) : null,
+        v.vorher && v.nachher ? h('span', { class: 'verlauf-vn' }, `vorher: ${v.vorher.teile.join(', ')} (${v.vorher.art}) → nachher: ${v.nachher.teile.join(', ')} (${v.nachher.art})`) : null)))) : null)));
   // Radio-Eingaben tragen data-k, dürfen aber nur den gewählten Wert liefern.
   buehne.querySelectorAll('input[name=geltung]').forEach((el) => el.removeAttribute('data-k'));
 }

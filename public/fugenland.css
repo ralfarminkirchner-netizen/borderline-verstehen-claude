@@ -484,3 +484,12 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .faeden-sammlung h2 { outline: none; }
 /* Liste und Fäden liegen über einem offenen Raum, damit sie aus jedem Raum heraus bedienbar sind. */
 .liste { z-index: 10; }
+
+/* ── Eigene Fuge: Stand und Verlauf ── */
+.eigen-stand { padding: .5rem 1rem; background: #fbe9da; border-bottom: 2px solid #b4561c; display: grid; gap: .25rem; }
+.eigen-stand p { margin: 0; color: #5a2a0c; }
+.eigen-stand .knopf { justify-self: start; }
+.eigen-hinweis { margin: 0; padding: .4rem .6rem; border-left: 4px solid #b4561c; background: #fdf3ea; font-size: .88rem; }
+.eigen-verlauf ol { padding-left: 1.1rem; margin: 0; font-size: .82rem; display: grid; gap: .3rem; }
+.eigen-verlauf li span { display: block; color: var(--tinte2); }
+.verlauf-erloschen { color: #8a3a12 !important; font-weight: 600; }

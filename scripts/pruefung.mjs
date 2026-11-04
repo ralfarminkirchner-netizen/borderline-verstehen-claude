@@ -297,6 +297,39 @@ async function faedenPruefung() {
   await browser.close();
 }
 
+// ---------------- Schritt 4: eigene Fugen an den Wortlaut ihrer Orte gebunden ----------------
+async function bindung() {
+  const browser = await launch(); const page = await (await browser.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
+  const fehler = []; page.on('pageerror', (e) => fehler.push(e.message));
+  await page.goto(BASE); await warte(page, 1800);
+  for (const q of ['Wutausbruch', 'Scham', 'Rückzug']) { await page.locator('#suche').fill(q); await warte(page, 300); await page.keyboard.press('Enter'); await warte(page, 1400); const b = page.getByRole('button', { name: 'In die Hand nehmen' }); if (await b.count()) await b.click(); }
+  const inHand = await page.locator('#hand li').count();
+  await page.locator('#hand').getByRole('button', { name: 'Eigene Fuge bilden' }).click(); await warte(page, 1200);
+  await page.getByLabel('Name der Fuge').fill('Bindungsprobe'); await page.getByRole('button', { name: 'Fuge speichern' }).click(); await warte(page, 1000);
+  const id = await page.evaluate(() => window.fugenland.werk.daten.gefuege.find((g) => g.titel === 'Bindungsprobe').id);
+  ok('Schritt 4: jede Beteiligung trägt den Abdruck ihres Wortlauts', await page.evaluate((id) => window.fugenland.werk.daten.gefuege.find((g) => g.id === id).teile.every((t) => t.wortlaut), id), `${inHand} Beteiligte`);
+  await page.getByRole('button', { name: 'Station und Angaben' }).click(); const geloest = await page.locator('.plaetze li').last().locator('.liste-eintrag').innerText();
+  await page.locator('.plaetze li').last().getByRole('button', { name: 'lösen' }).click(); await warte(page, 300);
+  ok('Schritt 4: der Entwurf kündigt das Erlöschen an', (await page.locator('.eigen-hinweis').count()) === 1);
+  await page.getByLabel('Grund der Änderung').fill('gehört nicht dazu'); await page.getByRole('button', { name: 'Fuge speichern' }).click(); await warte(page, 1200);
+  const stand = await page.locator('.eigen-stand').innerText();
+  ok('Schritt 4: Lösen lässt die Zuordnung sichtbar erlöschen, mit Grund', new RegExp(`erloschen, weil „${geloest}“ gelöst wurde`).test(stand), stand.split('\n')[0]);
+  await page.getByRole('button', { name: 'Station und Angaben' }).click();
+  const v = await page.locator('.eigen-verlauf li').first().innerText();
+  ok('Schritt 4: Verlauf zeigt Fassung, vorher, nachher, Grund und Zeit', /Fassung 2/.test(v) && /vorher:/.test(v) && /nachher:/.test(v) && /Grund: gehört nicht dazu/.test(v) && /\d{1,2}\.\d{1,2}\.\d{4}/.test(v));
+  await bild(page, '140-zuordnung-erloschen');
+  await page.getByRole('button', { name: 'Neu bestätigen' }).click(); await warte(page, 1200);
+  ok('Schritt 4: erst neues Bestätigen stellt die Zuordnung her', (await page.locator('.eigen-stand').count()) === 0);
+  await warte(page, 800);
+  await page.evaluate(async (id) => { const r = await fetch('/api/werkstatt'); const d = await r.json(); const rev = d.revision; delete d.revision; d.gefuege.find((g) => g.id === id).teile[0].wortlaut = 'frueherer-wortlaut'; await fetch('/api/werkstatt', { method: 'PUT', headers: { 'content-type': 'application/json', 'if-match': rev }, body: JSON.stringify(d) }); }, id);
+  await page.reload(); await warte(page, 2500); await geheZu(page, `#/eigen/${id}`);
+  ok('Schritt 4: geänderter Ortswortlaut zeigt „Ende hat sich geändert, prüfen“', /Ende hat sich geändert, prüfen/.test(await page.locator('.eigen-stand').innerText()));
+  ok('Schritt 4: im Feld trägt die eigene Fuge die erloschen-Marke', await page.evaluate((id) => window.fugenland.feld.urteile.get(`eigen:${id}`) === 'erloschen', id));
+  await bild(page, '141-ende-geaendert');
+  ok('Schritt 4: keine Fehler', fehler.length === 0, fehler.join(' | '));
+  await browser.close();
+}
+
 // ---------------- Orte, Werke, Spieler, Werkbank (aus Fugenland 1 wieder eingebaut) ----------------
 async function werkbank() {
   const browser = await launch(); const page = await (await browser.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
@@ -461,6 +494,7 @@ try {
   if (!nur || nur === 'bedienfehler') await bedienfehler();
   if (!nur || nur === 'zustand') await zustand();
   if (!nur || nur === 'faeden') await faedenPruefung();
+  if (!nur || nur === 'bindung') await bindung();
   if (!nur || nur === 'werkbank') await werkbank();
   if (!nur || nur === 'schmal') await schmal();
   if (!nur || nur === 'tastatur') await tastatur();
