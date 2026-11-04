@@ -12,6 +12,7 @@ import * as entstehung from './raum-entstehung.mjs';
 import * as ortsraum from './raum-ort.mjs';
 import * as eigen from './raum-eigen.mjs';
 import { Spieler, istAufnahme } from './spieler.mjs';
+import * as faeden from './faeden.mjs';
 import { abdruck, mussErloeschen, erloeschen, feldWert, zeichneUrteil, standText } from './urteil.mjs';
 
 const RAEUME = { uebersetzung, gegenhalt, schwelle, ueberschneidung, entstehung, fehlstelle };
@@ -188,6 +189,18 @@ function urteil() {
 // Der Speicherstand aktualisiert nur die Zeile, nicht das Eingabefeld für den Grund.
 werk.hoerer.add(() => { const el = document.querySelector('#raum-urteil .urteil-stand'); if (el && aktuell?.typ === 'fuge') el.textContent = standText(raumZustand(aktuell.key)?.urteil, werk); });
 
+// Offene Fäden aus allen Räumen; jeder Faden auch im Ortsraum seiner Beteiligten.
+const stimmeIndex = new Map(fr.ueberschneidung.stimmen.map((v) => [v.id, v.i]));
+const beteiligteDesFadens = (art, f, z) => art === 'gegenhalt' ? f.seiten.map((x) => x.i) : art === 'fehlstelle' ? (f.ort ? [f.ort.i] : []) : art === 'ueberschneidung' ? [f.ph, ...(z.gewaehlt || f.start).map((id) => stimmeIndex.get(id)).filter((x) => x !== undefined)] : [];
+const alleFaeden = () => faeden.sammle({ faelle: FAELLE, raeume: RAEUME, zustand: raumZustand, beteiligteDesFadens });
+const fadenCtx = () => ({ karte, oeffne: (art, i) => { $('faeden').hidden = true; $('faeden-knopf').setAttribute('aria-pressed', 'false'); oeffnen(art, i); }, oeffneOrt: (i) => { $('faeden').hidden = true; oeffneOrt(i); },
+  aendere: (f, fn, was) => { handlung(f.key, 'faden', RAEUME[f.art].ort(f.fall, ctxBasis), fn, was); feld.ereignisse(werk.daten.ereignisse, true); if (!$('faeden').hidden) faeden.zeichneSammlung($('faeden'), alleFaeden(), fadenCtx()); if (aktuell?.typ === 'ort') zeichneOrt(); } });
+$('faeden-knopf').onclick = () => { const an = $('faeden').hidden; $('faeden').hidden = !an; $('liste').hidden = true; $('faeden-knopf').setAttribute('aria-pressed', String(an)); if (an) { faeden.zeichneSammlung($('faeden'), alleFaeden(), fadenCtx()); $('faeden').querySelector('h2')?.focus(); } };
+function faedenAmOrt(i) {
+  const hier = alleFaeden().filter((f) => f.orte.includes(i));
+  return hier.length ? h('section', { class: 'ort-faeden' }, h('h3', {}, 'Fäden an diesem Ort'), h('ul', { class: 'faeden' }, hier.map((f) => faeden.fadenKarte(f, { ...fadenCtx(), ohneOrte: false })))) : null;
+}
+
 // Ortsraum: jeder der 1226 Orte im vollen Wortlaut, mit seinen Fugenräumen, Werken, Aufnahmen und Notizen.
 async function oeffneOrt(i, { ohneFlug = false } = {}) {
   await ladeTexte(); const o = karte.orte[i]; feld.auswahl = null;
@@ -197,7 +210,7 @@ function zeichneOrt() {
   const i = aktuell.i; const o = karte.orte[i];
   kopf('ort', `Ort · ${karte.regionen[o.r].name}`, o.t, '', false);
   ortsraum.zeichne($('raum-buehne'), i, {
-    karte, texte, medien, farben: FARBEN, artName: (k) => ARTNAME[k] || 'Eintrag',
+    karte, texte, medien, farben: FARBEN, faedenAmOrt, artName: (k) => ARTNAME[k] || 'Eintrag',
     fugenAmOrt: (j) => [...(amOrt.get(j) || []), ...punkte.filter((p) => p.art === 'eigen' && werk.daten.gefuege.find((g) => g.id === p.id)?.teile.some((t) => ortIndex(t) === j)).map((p) => ({ art: 'eigen', i: p.id, titel: p.titel, artName: 'Eigene Fuge' }))],
     oeffne: (art, j) => (art === 'eigen' ? oeffneEigen(j) : oeffnen(art, j)), oeffneOrt,
     aufnahmenFuerGebiet, spiele: (m, r) => spieler.spiele(m, r),

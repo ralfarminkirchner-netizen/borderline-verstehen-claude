@@ -27,6 +27,7 @@ export function zeichne(buehne, i, ctx) {
       h('section', { class: 'ort-fugen' }, h('h3', {}, fugen.length ? `In ${fugen.length} Fugenräumen beteiligt` : 'In keinem Fugenraum beteiligt'),
         fugen.length ? h('ul', {}, fugen.map((f) => h('li', {}, h('button', { type: 'button', class: 'ort-fuge', style: `--farbe:${ctx.farben[f.art]}`, onclick: () => ctx.oeffne(f.art, f.i) },
           h('span', { class: `glyph-css ${f.art}`, 'aria-hidden': 'true' }), h('span', {}, h('strong', {}, f.artName), h('span', {}, f.titel)))))) : h('p', { class: 'leise' }, 'Die Kanten dieses Orts bilden keinen eigenen Fugenraum. Du kannst mit ihm eine eigene Fuge bilden.')),
+      ctx.faedenAmOrt(i),
       h('div', { class: 'reihe' },
         h('button', { type: 'button', class: 'knopf', 'aria-pressed': String(inHand), onclick: () => { ctx.nimm(i); zeichne(buehne, i, ctx); } }, inHand ? 'In der Hand' : 'In die Hand nehmen'),
         h('button', { type: 'button', class: 'knopf leise', onclick: () => ctx.neueFuge([i]) }, 'Eigene Fuge beginnen')),

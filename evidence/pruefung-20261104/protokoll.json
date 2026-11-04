@@ -1,45 +1,40 @@
 {
- "zeit": "2026-11-04T13:56:31.188Z",
- "bestanden": 8,
- "gesamt": 8,
+ "zeit": "2026-11-04T14:12:41.073Z",
+ "bestanden": 7,
+ "gesamt": 7,
  "pruefungen": [
   {
-   "name": "Schritt 2: ohne Urteil steht „ungeprüft“",
+   "name": "Schritt 3: Gegenstimme, Lückenfrage und Unterscheidungsfrage in einer Sammlung",
+   "pass": true,
+   "detail": "Unterscheidungsfrage, Lückenfrage, Gegenstimme"
+  },
+  {
+   "name": "Schritt 3: Schließen ohne Notiz geht nicht",
    "pass": true,
    "detail": ""
   },
   {
-   "name": "Schritt 2: „gespeichert“ erst nach Bestätigung des Dienstes",
-   "pass": true,
-   "detail": "wird gespeichert … → vom Dienst gespeichert"
-  },
-  {
-   "name": "Schritt 2: Urteil liegt in der Datei des Dienstes",
+   "name": "Schritt 3: Schließen mit Notiz und Wiederöffnen mit Grund bleiben im Verlauf",
    "pass": true,
    "detail": ""
   },
   {
-   "name": "Schritt 2: nach dem Neuladen fünf verschiedene Zustände im Feld",
+   "name": "Schritt 3: Faden steht im Ortsraum aller Beteiligten",
    "pass": true,
-   "detail": "begrenzt, giltnicht, offen, traegt, traegtnicht"
+   "detail": "Gen-Umwelt-Interaktion · ADHS-Merkmale"
   },
   {
-   "name": "Schritt 2: Urteil im Raum nach dem Neuladen, als gespeichert",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schritt 2: Inhaltsänderung lässt das Urteil erlöschen, Rückkehr des Inhalts belebt es nicht",
+   "name": "Schritt 3: Faden springt in seinen Raum",
    "pass": true,
    "detail": ""
   },
   {
-   "name": "Schritt 2: erloschen ist im Feld eigener Zustand",
+   "name": "Schritt 3: Fäden und Verlauf nach dem Neuladen",
    "pass": true,
    "detail": ""
   },
   {
-   "name": "Schritt 2: keine Fehler",
+   "name": "Schritt 3: keine Fehler",
    "pass": true,
    "detail": ""
   }

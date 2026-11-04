@@ -262,6 +262,41 @@ async function zustand() {
   await browser.close();
 }
 
+// ---------------- Schritt 3: offene Fäden über alle Räume ----------------
+async function faedenPruefung() {
+  const browser = await launch(); const page = await (await browser.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
+  const fehler = []; page.on('pageerror', (e) => fehler.push(e.message));
+  await page.goto(BASE); await warte(page, 1800);
+  await geheZu(page, '#/raum/gegenhalt/3');
+  await page.locator('.spalt textarea').fill('Gegenstimme für die Fadenprüfung.'); await page.getByRole('button', { name: 'In den Spalt keilen' }).click(); await warte(page, 300);
+  await geheZu(page, '#/raum/fehlstelle/1');
+  await page.locator('.kammer-frage-eingabe').fill('Lückenfrage für die Fadenprüfung?'); await page.getByRole('button', { name: 'Frage an die Lücke heften' }).click(); await warte(page, 300);
+  await geheZu(page, '#/raum/ueberschneidung/2');
+  await page.getByLabel('Deine Unterscheidungsfrage').fill('Unterscheidungsfrage für die Fadenprüfung?'); await page.getByRole('button', { name: 'Frage festhalten' }).click(); await warte(page, 600);
+  await page.getByRole('button', { name: '← Zum Feld' }).click(); await page.getByRole('button', { name: 'Offene Fäden' }).click(); await warte(page, 400);
+  const typen = await page.locator('#faeden .faden-kopf strong').allInnerTexts();
+  ok('Schritt 3: Gegenstimme, Lückenfrage und Unterscheidungsfrage in einer Sammlung', ['Gegenstimme', 'Lückenfrage', 'Unterscheidungsfrage'].every((t) => typen.includes(t)), typen.join(', '));
+  const karte = () => page.locator('#faeden .faden', { hasText: 'Gegenstimme für die Fadenprüfung.' });
+  await karte().getByRole('button', { name: 'Mit Notiz schließen' }).click();
+  ok('Schritt 3: Schließen ohne Notiz geht nicht', (await karte().getAttribute('class')).includes('offen'));
+  await karte().getByLabel('Notiz zum Schließen').fill('Geklärt im Bohrkern.'); await karte().getByRole('button', { name: 'Mit Notiz schließen' }).click(); await warte(page, 400);
+  await karte().getByLabel('Grund zum Wiederöffnen').fill('Neue Quelle.'); await karte().getByRole('button', { name: 'Mit Grund wieder öffnen' }).click(); await warte(page, 400);
+  const verlauf = await karte().locator('.faden-verlauf li').allInnerTexts();
+  ok('Schritt 3: Schließen mit Notiz und Wiederöffnen mit Grund bleiben im Verlauf', verlauf.length === 2 && /geschlossen: Geklärt/.test(verlauf[0]) && /wieder geöffnet: Neue Quelle/.test(verlauf[1]));
+  await bild(page, '130-faeden-sammlung');
+  const orte = await karte().locator('.faden-orte button').allInnerTexts();
+  let ueberall = true;
+  for (const n of orte) { await page.getByRole('button', { name: 'Offene Fäden' }).click(); await warte(page, 200); if (await page.locator('#faeden').isHidden()) await page.getByRole('button', { name: 'Offene Fäden' }).click(); await karte().locator('.faden-orte button', { hasText: n }).first().click(); await warte(page, 1500); ueberall &&= (await page.locator('.ort-faeden .faden', { hasText: 'Gegenstimme für die Fadenprüfung.' }).count()) === 1; }
+  ok('Schritt 3: Faden steht im Ortsraum aller Beteiligten', orte.length === 2 && ueberall, orte.join(' · '));
+  await bild(page, '131-faden-im-ortsraum');
+  await page.locator('.ort-faeden .faden', { hasText: 'Gegenstimme für die Fadenprüfung.' }).getByRole('button', { name: 'Zum Raum' }).click(); await warte(page, 1400);
+  ok('Schritt 3: Faden springt in seinen Raum', (await page.locator('#raum').getAttribute('data-art')) === 'gegenhalt');
+  await warte(page, 1200); await page.reload(); await warte(page, 2200); await page.getByRole('button', { name: 'Offene Fäden' }).click(); await warte(page, 300);
+  ok('Schritt 3: Fäden und Verlauf nach dem Neuladen', (await karte().locator('.faden-verlauf li').count()) === 2);
+  ok('Schritt 3: keine Fehler', fehler.length === 0, fehler.join(' | '));
+  await browser.close();
+}
+
 // ---------------- Orte, Werke, Spieler, Werkbank (aus Fugenland 1 wieder eingebaut) ----------------
 async function werkbank() {
   const browser = await launch(); const page = await (await browser.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
@@ -425,6 +460,7 @@ try {
   if (!nur || nur === 'desktop') await desktop();
   if (!nur || nur === 'bedienfehler') await bedienfehler();
   if (!nur || nur === 'zustand') await zustand();
+  if (!nur || nur === 'faeden') await faedenPruefung();
   if (!nur || nur === 'werkbank') await werkbank();
   if (!nur || nur === 'schmal') await schmal();
   if (!nur || nur === 'tastatur') await tastatur();

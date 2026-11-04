@@ -32,6 +32,7 @@
     </div>
     <div class="kopf-werkzeug">
       <button id="liste-knopf" type="button" class="knopf leise" aria-pressed="false">Als Liste</button>
+      <button id="faeden-knopf" type="button" class="knopf leise" aria-pressed="false" aria-controls="faeden">Offene Fäden</button>
       <button id="bewegung-knopf" type="button" class="knopf leise" aria-pressed="false">Bewegung an</button>
       <span id="speicher-stand" class="speicher-stand" role="status" aria-live="polite"></span>
     </div>
@@ -40,6 +41,7 @@
   <aside id="legende" class="legende" aria-label="Fugenarten im Feld"></aside>
 
   <section id="liste" class="liste" aria-label="Alle Fugenorte als Liste" hidden></section>
+  <section id="faeden" class="liste faeden-sammlung" aria-label="Offene Fäden aus allen Räumen" hidden></section>
 
   <section id="raum" class="raum" aria-labelledby="raum-titel" hidden>
     <div class="raum-kopf">

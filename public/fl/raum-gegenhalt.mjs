@@ -69,7 +69,7 @@ export function zeichne(buehne, fall, ctx) {
 
   const keile = (z.einwaende || []).map((e, n) => h('li', { class: 'keil' },
     h('span', { class: 'keil-text' }, e.text),
-    h('span', { class: 'keil-wer' }, 'deine Gegenstimme'),
+    h('span', { class: 'keil-wer' }, z.faeden?.[`gegenstimme:${e.zeit}`]?.status === 'geschlossen' ? `deine Gegenstimme · als Faden geschlossen: ${z.faeden[`gegenstimme:${e.zeit}`].verlauf.at(-1).notiz}` : 'deine Gegenstimme · offener Faden'),
     h('button', { type: 'button', class: 'knopf mini', onclick: () => { ctx.handlung('gegenstimme-entfernt', (zz) => { zz.einwaende.splice(n, 1); }, e.text); zeichne(buehne, fall, ctx); } }, 'herausnehmen')));
 
   const eingabe = h('textarea', { class: 'feld-eingabe', rows: '2', 'aria-label': 'Eigene Gegenstimme', placeholder: 'Eigene Gegenstimme oder Frage …' });

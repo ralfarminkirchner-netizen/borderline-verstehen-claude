@@ -467,3 +467,20 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .urteil-verlauf { grid-column: 1 / -1; margin: 0; padding-left: 1.1rem; font-size: .78rem; color: var(--leise); }
 @media (max-width: 860px) { .urteil { grid-template-columns: 1fr; } }
 .legende-urteil { margin: .5rem 0 0; font-size: .8rem; }
+
+/* ── Offene Fäden ── */
+.faeden { list-style: none; padding: 0; margin: .4rem 0; display: grid; gap: .5rem; }
+.faden { background: #fff; border: 2px solid #b4561c; border-radius: 10px; padding: .5rem .7rem; display: grid; gap: .3rem; }
+.faden.geschlossen { border-color: var(--linie); background: #f6f1e6; }
+.faden p { margin: 0; }
+.faden-kopf { font-size: .82rem; color: var(--tinte2); }
+.faden-kopf strong { color: #8a3a12; }
+.faden.geschlossen .faden-kopf strong { color: var(--tinte2); }
+.faden-text { font: 600 1rem/1.4 var(--serif); }
+.faden-orte { font-size: .85rem; }
+.faden-verlauf { margin: 0; padding-left: 1.1rem; font-size: .8rem; color: var(--tinte2); }
+.faden .feld-eingabe { flex: 1; min-width: 12rem; }
+.faden .feld-eingabe[aria-invalid="true"] { border-color: #8a2a1e; }
+.faeden-sammlung h2 { outline: none; }
+/* Liste und Fäden liegen über einem offenen Raum, damit sie aus jedem Raum heraus bedienbar sind. */
+.liste { z-index: 10; }
