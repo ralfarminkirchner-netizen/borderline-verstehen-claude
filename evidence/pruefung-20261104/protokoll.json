@@ -1,442 +1,47 @@
 {
- "zeit": "2026-11-04T13:52:02.467Z",
- "bestanden": 86,
- "gesamt": 87,
+ "zeit": "2026-11-04T13:56:31.188Z",
+ "bestanden": 8,
+ "gesamt": 8,
  "pruefungen": [
   {
-   "name": "Feld lädt mit allen Fugenarten",
-   "pass": true,
-   "detail": "{\"uebersetzung\":36,\"gegenhalt\":31,\"schwelle\":29,\"ueberschneidung\":37,\"fehlstelle\":63,\"entstehung\":21}"
-  },
-  {
-   "name": "Keine Kantenlinien im Feld: nur Fugenorte",
-   "pass": true,
-   "detail": "217 Fugenorte"
-  },
-  {
-   "name": "Fugenort im Feld anklickbar, Raum entfaltet sich",
-   "pass": true,
-   "detail": "Familiäre Alternativerklärungen ⟷ Vorgeburtliche Expositionen"
-  },
-  {
-   "name": "Gegenhalt: Beleg aufgenommen und Gegenstimme gekeilt",
-   "pass": true,
-   "detail": "Familiäre Alternativerklärungen ⟷ Vorgeburtliche Expositionen"
-  },
-  {
-   "name": "Gegenhalt: Seitenwechsel spiegelt die Seiten",
+   "name": "Schritt 2: ohne Urteil steht „ungeprüft“",
    "pass": true,
    "detail": ""
   },
   {
-   "name": "Herkunft: vier Schichten, Probe aus den Daten ausgewertet",
+   "name": "Schritt 2: „gespeichert“ erst nach Bestätigung des Dienstes",
    "pass": true,
-   "detail": "TRÄGT TEILWEISE"
+   "detail": "wird gespeichert … → vom Dienst gespeichert"
   },
   {
-   "name": "Herkunft: Modellprobe trifft hier nicht",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Herkunft: technische Kennungen nur in geschlossenen Details",
+   "name": "Schritt 2: Urteil liegt in der Datei des Dienstes",
    "pass": true,
    "detail": ""
   },
   {
-   "name": "Zurück ins Feld: Kamera und Auswahl bleiben erhalten",
+   "name": "Schritt 2: nach dem Neuladen fünf verschiedene Zustände im Feld",
+   "pass": true,
+   "detail": "begrenzt, giltnicht, offen, traegt, traegtnicht"
+  },
+  {
+   "name": "Schritt 2: Urteil im Raum nach dem Neuladen, als gespeichert",
    "pass": true,
    "detail": ""
   },
   {
-   "name": "Reifung im Feld wächst aus den Handlungen",
+   "name": "Schritt 2: Inhaltsänderung lässt das Urteil erlöschen, Rückkehr des Inhalts belebt es nicht",
    "pass": true,
    "detail": ""
   },
   {
-   "name": "Schwelle: Riegel ziehen ändert den Geltungsrahmen, Prüfung wird gesetzt",
-   "pass": true,
-   "detail": "Die Aussage steht unter 5 von 7 ihrer Bestandsgrenzen."
-  },
-  {
-   "name": "Übersetzung: Wörter in drei Becken, Vertrag entsteht",
+   "name": "Schritt 2: erloschen ist im Feld eigener Zustand",
    "pass": true,
    "detail": ""
   },
   {
-   "name": "Übersetzung: Wortabgleich nur als Markierung, nicht einsortiert",
+   "name": "Schritt 2: keine Fehler",
    "pass": true,
    "detail": ""
-  },
-  {
-   "name": "Übersetzung: Rückweg zum vollen Wortlaut mit Herkunft",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Überschneidung: Stimme zuschalten fügt Membran hinzu und ordnet neu",
-   "pass": true,
-   "detail": "4 → 5 Membranen"
-  },
-  {
-   "name": "Überschneidung: Phänomen zeigt seine Stimmen und die Gesamtzahl im Bestand",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Entstehung: Beitrag eines Zustroms und Wendepunkt gespeichert",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Fehlstelle: eingeordnet, Frage geheftet, Nicht-Verbindung begründet, Mitte bleibt leer",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Fehlstelle: unerreichbares Kapitel als eigener Gegenstand",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Fehlstelle: Kapitel im vollen Wortlaut lesbar",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Sechs Räume plus Herkunftsebene mit verschiedenem Aufbau",
-   "pass": true,
-   "detail": "{\"gegenhalt\":{\"klasse\":\"gegenhalt\",\"svg\":1,\"knoepfe\":15,\"eingaben\":1},\"schwelle\":{\"klasse\":\"schwelle\",\"svg\":0,\"knoepfe\":29,\"eingaben\":0},\"uebersetzung\":{\"klasse\":\"uebersetzung\",\"svg\":0,\"knoepfe\":129,\"eingaben\":0},\"ueberschneidung\":{\"klasse\":\"ueberschneidung\",\"svg\":1,\"knoepfe\":90,\"eingaben\":1},\"entstehung\":{\"klasse\":\"entstehung\",\"svg\":1,\"knoepfe\":6,\"eingaben\":3},\"fehlstelle\":{\"klasse\":\"fehlstelle\",\"svg\":1,\"knoepfe\":2,\"eingaben\":5}}"
-  },
-  {
-   "name": "Browser-Zurück führt durch die Räume zurück",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Keine Anfragen an fremde Dienste",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Keine Fehler in der Konsole",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Speicherstand sichtbar: gespeichert",
-   "pass": true,
-   "detail": "Gespeichert"
-  },
-  {
-   "name": "Bewegungsaufnahme",
-   "pass": true,
-   "detail": "1020 Bilder, 41 s"
-  },
-  {
-   "name": "Wiederöffnen: Gegenstimme, Becken und Ereignisse bleiben",
-   "pass": true,
-   "detail": "18 Ereignisse, 6 Räume im isolierten Ordner"
-  },
-  {
-   "name": "Schritt 1: Original-Schicht ganz lesbar, Quellen im Rahmen",
-   "pass": true,
-   "detail": "{\"breit\":true,\"links\":true,\"ueberlauf\":true}"
-  },
-  {
-   "name": "Schritt 1: Herkunftsebene schließt beim Raumwechsel",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schritt 1: „Zur Quelle“ nach Raumwechsel erreichbar",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schritt 1: Art-Auswahl wirkt sofort, Eingaben bleiben",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schritt 1: eigene Schwelle öffnet sich mit eigenen Riegeln",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schritt 1: Art, Riegel und gezogener Riegel bleiben beim Wiederöffnen",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schritt 1: eigene Fuge als gegenhalt",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schritt 1: eigene Fuge als uebersetzung",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schritt 1: eigene Fuge als fehlstelle",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schritt 1: keine Fehler",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Spieler startet nicht von selbst",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Ortssuche: Treffer und Ortsraum per Tastatur",
-   "pass": true,
-   "detail": "3 Treffer"
-  },
-  {
-   "name": "Ortsraum: voller Wortlaut, Herkunft, Fugenräume des Orts",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Ortsraum: Notiz am Ort angeheftet",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Vom Ort in seinen Fugenraum",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Ortslink im Fugenraum führt in den Ortsraum",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Werk von Walter Andreas Kirchner mit Herkunft, ohne Maßangabe, mit Hinweis",
-   "pass": true,
-   "detail": "Walter Andreas Kirchner · Nach dem Bad · 2009 · Marmor. Reproduktion von der Künstlerwebsite. Werk auf der Künstlerseite"
-  },
-  {
-   "name": "Spieler: auf Klick gestartet, bleibt bei Raumwechsel bestehen",
-   "pass": true,
-   "detail": "{\"sichtbar\":true,\"zeit\":2.180485,\"pausiert\":false}"
-  },
-  {
-   "name": "Hand: drei Orte aufgenommen",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Eigene Fuge: Station mit drei Armen gespeichert",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Eigene Fuge: als Nicht-Verbindung geändert, Verlauf mit vorheriger Fassung",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Eigene Fuge steht als Fugenort im Feld",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Werkbank: keine Fehler",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Wiederöffnen: eigene Fuge, Notiz und Rückweg vom Ort zur eigenen Fuge",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schmal: Raum über Liste per Berührung geöffnet",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schmal: Wort per Berührung eingelegt",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schmal: gegenhalt ohne seitliches Überlaufen",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schmal: schwelle ohne seitliches Überlaufen",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schmal: ueberschneidung ohne seitliches Überlaufen",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schmal: entstehung ohne seitliches Überlaufen",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schmal: fehlstelle ohne seitliches Überlaufen",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schmal: Herkunftsebene erreichbar",
-   "pass": true,
-   "detail": "{\"an\":\"an\",\"kerne\":1,\"sichtbar\":true}"
-  },
-  {
-   "name": "Schmal: Ortsraum mit Werk ohne seitliches Überlaufen",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Schmal: keine Fehler",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Tastatur: Liste öffnet, Fokus auf erstem Fugenort",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Tastatur: Raum öffnet, Fokus auf Raumtitel",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Tastatur: Wort mit Pfeiltasten gewählt und eingelegt",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Tastatur: Phänomen in der Membranansicht wählbar",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Tastatur: Escape führt ins Feld, Fokus auf dem Feld",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Kontrast Grundtext",
-   "pass": true,
-   "detail": "14.3 : 1"
-  },
-  {
-   "name": "Kontrast Text auf Blatt",
-   "pass": true,
-   "detail": "16.4 : 1"
-  },
-  {
-   "name": "Kontrast Leiser Text",
-   "pass": true,
-   "detail": "5.7 : 1"
-  },
-  {
-   "name": "Kontrast Fels: Text auf hellster Felsstelle",
-   "pass": true,
-   "detail": "5.6 : 1"
-  },
-  {
-   "name": "Kontrast Fels: Grenze",
-   "pass": true,
-   "detail": "5.1 : 1"
-  },
-  {
-   "name": "Kontrast Riegel: Text auf Messing (hellste Stelle)",
-   "pass": true,
-   "detail": "10.2 : 1"
-  },
-  {
-   "name": "Kontrast Riegel: Text auf Messing (dunkelste Stelle)",
-   "pass": true,
-   "detail": "5.5 : 1"
-  },
-  {
-   "name": "Kontrast Gezogener Riegel",
-   "pass": true,
-   "detail": "5.5 : 1"
-  },
-  {
-   "name": "Kontrast Pass: Becken",
-   "pass": true,
-   "detail": "6.9 : 1"
-  },
-  {
-   "name": "Kontrast Pass: Text auf Wasserfläche",
-   "pass": true,
-   "detail": "13.1 : 1"
-  },
-  {
-   "name": "Kontrast Übersetzung: Wort in der Hand",
-   "pass": true,
-   "detail": "6.9 : 1"
-  },
-  {
-   "name": "Kontrast Gegenstimme",
-   "pass": true,
-   "detail": "7.7 : 1"
-  },
-  {
-   "name": "Kontrast Entstehung: Becken",
-   "pass": true,
-   "detail": "6.4 : 1"
-  },
-  {
-   "name": "Kontrast Fehlstelle: Art",
-   "pass": true,
-   "detail": "8.8 : 1"
-  },
-  {
-   "name": "Kontrast Eingabefeld-Platzhalter",
-   "pass": true,
-   "detail": "5.6 : 1"
-  },
-  {
-   "name": "Kontrast Eingabefeld-Rahmen",
-   "pass": true,
-   "detail": "17.3 : 1"
-  },
-  {
-   "name": "Ohne WebGL: Feld zeichnet vollständig (2D)",
-   "pass": true,
-   "detail": "WebGL aus, 1056 Bildpunkte mit Inhalt"
-  },
-  {
-   "name": "Reduzierte Bewegung: Bewegung ruht von Anfang an",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Reduzierte Bewegung: Raum öffnet ohne Entfaltungsanimation",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Ohne WebGL: keine Fehler",
-   "pass": true,
-   "detail": ""
-  },
-  {
-   "name": "Variantenraum erreichbar",
-   "pass": false,
-   "detail": "Raum antwortet nicht; eingebettete Prüfung offen"
   }
  ]
 }

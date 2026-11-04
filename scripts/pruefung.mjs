@@ -178,7 +178,7 @@ async function desktop() {
   const fremd = netz.filter((u) => !u.startsWith(BASE) && !u.startsWith('data:') && !u.startsWith('blob:'));
   ok('Keine Anfragen an fremde Dienste', fremd.length === 0, fremd.slice(0, 3).join(' '));
   ok('Keine Fehler in der Konsole', fehler.length === 0, fehler.slice(0, 3).join(' | '));
-  const st = await page.locator('#speicher-stand').innerText(); ok('Speicherstand sichtbar: gespeichert', st === 'Gespeichert', st);
+  const st = await page.locator('#speicher-stand').innerText(); ok('Speicherstand sichtbar: gespeichert', st === 'Vom Dienst gespeichert', st);
   const video = await stop(); ok('Bewegungsaufnahme', video.bilder > 40, `${video.bilder} Bilder, ${video.sekunden} s`);
   await browser.close();
 
@@ -225,6 +225,40 @@ async function bedienfehler() {
     ok(`Schritt 1: eigene Fuge als ${art}`, (await page.evaluate(() => document.querySelector('.eigen-innen > *')?.className)) === cls);
   }
   ok('Schritt 1: keine Fehler', fehler.length === 0, fehler.join(' | '));
+  await browser.close();
+}
+
+// ---------------- Schritt 2: dauerhafter, sichtbarer Zustand jeder Fuge ----------------
+async function zustand() {
+  const browser = await launch(); const page = await (await browser.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
+  const fehler = []; page.on('pageerror', (e) => fehler.push(e.message));
+  await page.goto(BASE); await warte(page, 1800);
+  await geheZu(page, '#/raum/schwelle/1');
+  ok('Schritt 2: ohne Urteil steht „ungeprüft“', /Ungeprüft/.test(await page.locator('.urteil-stand').innerText()));
+  await page.locator('.urteil-grund').fill('nur mit Schlaf'); await page.getByRole('radio', { name: 'begrenzt', exact: true }).click();
+  const sofort = await page.locator('.urteil-stand').innerText(); await warte(page, 1500); const danach = await page.locator('.urteil-stand').innerText();
+  ok('Schritt 2: „gespeichert“ erst nach Bestätigung des Dienstes', /wird gespeichert/.test(sofort) && /vom Dienst gespeichert/.test(danach), `${sofort.split(' · ').pop()} → ${danach.split(' · ').pop()}`);
+  const datei = JSON.parse(await readFile(join(DATA, 'werkstatt.json'), 'utf8'));
+  ok('Schritt 2: Urteil liegt in der Datei des Dienstes', Object.values(datei.raeume).some((z) => z.urteil?.wert === 'begrenzt' && z.urteil.grund === 'nur mit Schlaf'));
+  for (const [i, w] of [[2, 'trägt'], [3, 'trägt nicht'], [4, 'gilt hier nicht'], [5, 'offen halten']]) { await geheZu(page, `#/raum/schwelle/${i}`); await page.getByRole('radio', { name: w, exact: true }).click(); }
+  await warte(page, 1500); await page.reload(); await warte(page, 2200);
+  const imFeld = await page.evaluate(() => [...window.fugenland.feld.urteile.values()].sort());
+  ok('Schritt 2: nach dem Neuladen fünf verschiedene Zustände im Feld', new Set(imFeld).size === 5, imFeld.join(', '));
+  await geheZu(page, '#/raum/schwelle/1');
+  ok('Schritt 2: Urteil im Raum nach dem Neuladen, als gespeichert', /begrenzt – nur mit Schlaf/.test(await page.locator('.urteil-stand').innerText()) && /vom Dienst gespeichert/.test(await page.locator('.urteil-stand').innerText()));
+  await bild(page, '120-urteil-im-raum');
+  // Bindung an den Inhalt: geänderter Inhalt löscht das Urteil, Rückkehr des Inhalts belebt es nicht
+  const key = await page.evaluate(() => window.fugenland.punkte.find((x) => x.art === 'schwelle' && x.i === 2).key);
+  const setzeAbdruck = (wert) => page.evaluate(async ([key, wert]) => { const r = await fetch('/api/werkstatt'); const d = await r.json(); const rev = d.revision; delete d.revision; d.raeume[key].urteil.inhalt = wert === 'echt' ? window.fugenland.punkte.find((x) => x.key === key).abdruck : wert; await fetch('/api/werkstatt', { method: 'PUT', headers: { 'content-type': 'application/json', 'if-match': rev }, body: JSON.stringify(d) }); }, [key, wert]);
+  await setzeAbdruck('anderer-inhalt'); await page.reload(); await warte(page, 2500); await geheZu(page, '#/raum/schwelle/2');
+  const erl = await page.locator('.urteil-stand').innerText(); await bild(page, '121-urteil-erloschen'); await warte(page, 1500);
+  await setzeAbdruck('echt'); await page.reload(); await warte(page, 2500); await geheZu(page, '#/raum/schwelle/2');
+  const zurueck = await page.locator('.urteil-stand').innerText();
+  ok('Schritt 2: Inhaltsänderung lässt das Urteil erlöschen, Rückkehr des Inhalts belebt es nicht', /Erloschen/.test(erl) && /Erloschen/.test(zurueck));
+  ok('Schritt 2: erloschen ist im Feld eigener Zustand', await page.evaluate((key) => window.fugenland.feld.urteile.get(key) === 'erloschen', key));
+  await geheZu(page, '#/feld'); await page.evaluate(() => { const q = window.fugenland.punkte.find((x) => x.art === 'schwelle' && x.i === 3); window.fugenland.feld.fliegeZu(q.x, q.y, 2.4); }); await warte(page, 1500);
+  await bild(page, '122-urteile-im-feld');
+  ok('Schritt 2: keine Fehler', fehler.length === 0, fehler.join(' | '));
   await browser.close();
 }
 
@@ -382,7 +416,7 @@ async function eingebettet() {
   await frame.getByRole('button', { name: 'Als Liste' }).click(); await page.waitForTimeout(300);
   await frame.locator('.liste-art', { hasText: 'Gegenhalt' }).locator('.liste-eintrag').nth(1).click(); await page.waitForTimeout(1500);
   await frame.locator('.spalt textarea').fill('Eingebettet geprüft.'); await frame.getByRole('button', { name: 'In den Spalt keilen' }).click(); await page.waitForTimeout(1500);
-  ok('Eingebettet: Raum bedienbar, Arbeit gespeichert', (await frame.locator('.keil').count()) === 1 && (await frame.locator('#speicher-stand').innerText()) === 'Gespeichert');
+  ok('Eingebettet: Raum bedienbar, Arbeit gespeichert', (await frame.locator('.keil').count()) === 1 && (await frame.locator('#speicher-stand').innerText()) === 'Vom Dienst gespeichert');
   await page.locator('#pruef-frame').screenshot({ path: join(OUT, 'bilder', '96-eingebettet-gegenhalt.png') });
   await browser.close();
 }
@@ -390,6 +424,7 @@ async function eingebettet() {
 try {
   if (!nur || nur === 'desktop') await desktop();
   if (!nur || nur === 'bedienfehler') await bedienfehler();
+  if (!nur || nur === 'zustand') await zustand();
   if (!nur || nur === 'werkbank') await werkbank();
   if (!nur || nur === 'schmal') await schmal();
   if (!nur || nur === 'tastatur') await tastatur();

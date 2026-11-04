@@ -12,6 +12,7 @@ import * as entstehung from './raum-entstehung.mjs';
 import * as ortsraum from './raum-ort.mjs';
 import * as eigen from './raum-eigen.mjs';
 import { Spieler, istAufnahme } from './spieler.mjs';
+import { abdruck, mussErloeschen, erloeschen, feldWert, zeichneUrteil, standText } from './urteil.mjs';
 
 const RAEUME = { uebersetzung, gegenhalt, schwelle, ueberschneidung, entstehung, fehlstelle };
 const FARBEN = { uebersetzung: '#2f5f7a', gegenhalt: '#5d554b', schwelle: '#8a4a22', ueberschneidung: '#6b3f78', fehlstelle: '#3d4a3a', entstehung: '#1f6a5c', eigen: '#1f4fa8' };
@@ -56,11 +57,16 @@ await laden();
 const feld = new Feld($('feld-bild'), { orte: karte.orte, regionen, punkte, farben: FARBEN, onOeffnen: (p) => (p.art === 'eigen' ? oeffneEigen(p.id) : oeffnen(p.art, p.i)), onHover: (p) => { $('feld-status').textContent = p ? `${p.artName}: ${p.titel}` : ''; } });
 feld.ereignisse(werk.daten.ereignisse);
 
+// Urteile: an den Inhalt gebunden. Beim Laden erlischt jedes Urteil, dessen Fuge sich inhaltlich geändert hat.
+for (const p of punkte) if (p.fall) { p.abdruck = abdruck(p.fall); if (mussErloeschen(raumZustand(p.key), p.abdruck)) aendereWerk((d) => erloeschen(d.raeume[p.key])); }
+function urteileImFeld() { feld.urteile = new Map(punkte.map((p) => [p.key, feldWert(raumZustand(p.key))]).filter(([, w]) => w)); feld.dirty = true; }
+urteileImFeld();
+
 new ResizeObserver(() => document.documentElement.style.setProperty('--kopf', `${document.querySelector('.kopf').offsetHeight}px`)).observe(document.querySelector('.kopf'));
 
 // Speicherstand sichtbar halten.
 const stand = $('speicher-stand');
-const zeigeStand = (s) => { stand.textContent = { leer: 'Noch keine eigene Arbeit', gespeichert: 'Gespeichert', ungespeichert: 'Wird gleich gespeichert', speichert: 'Speichert …', lädt: 'Lädt …' }[s] || s; stand.dataset.stand = s; };
+const zeigeStand = (s) => { stand.textContent = { leer: 'Noch keine eigene Arbeit', geladen: 'Gespeicherter Stand geladen', gespeichert: 'Vom Dienst gespeichert', ungespeichert: 'Wird gleich gespeichert', speichert: 'Speichert …', lädt: 'Lädt …' }[s] || s; stand.dataset.stand = s; };
 werk.hoerer.add(zeigeStand); zeigeStand(werk.stand);
 
 // Bewegung: folgt der Systemeinstellung, lässt sich hier anhalten.
@@ -81,6 +87,7 @@ function legende() {
           feld.sichtbar.has(art) ? feld.sichtbar.delete(art) : feld.sichtbar.add(art); feld.dirty = true; e.currentTarget.setAttribute('aria-pressed', String(!feld.sichtbar.has(art))); e.currentTarget.textContent = feld.sichtbar.has(art) ? 'ausblenden' : 'einblenden';
         } }, 'ausblenden'))))),
     h('p', { class: 'legende-eigen' }, h('span', { class: 'glyph-css eigen', 'aria-hidden': 'true' }), 'Deine eigenen Fugen stehen in blauer Tinte im Feld. Orte findest du über die Suche oben; im Ortsraum nimmst du sie in die Hand.'),
+    h('p', { class: 'legende-urteil' }, 'Dein Urteil steht als Marke an der Glyphe: ● trägt · ◐ begrenzt · ✕ trägt nicht · – gilt hier nicht · ○ offen halten · orange gestrichelt: erloschen. Ohne Marke: ungeprüft.'),
     h('p', { class: 'legende-fuss' }, 'Ausblenden ändert nur die Sicht, nie den Bestand. Ein Ring um einen Fugenort zeigt, dass du dort gearbeitet hast; die bräunliche Tönung wächst nur aus deinen gespeicherten Handlungen.'));
 }
 legende();
@@ -155,7 +162,7 @@ function oeffnen(art, i, { ohneFlug = false } = {}) {
 function kopf(art, artText, titel, zahl, mitSchicht) {
   $('raum').dataset.art = art; $('raum-art').textContent = artText; $('raum-titel').textContent = titel;
   $('raum-zahl').textContent = zahl || ''; $('raum-vor').hidden = $('raum-nach').hidden = !zahl;
-  $('schicht-knopf').hidden = !mitSchicht; if (!mitSchicht) { $('raum').dataset.schicht = 'aus'; $('schicht-knopf').setAttribute('aria-pressed', 'false'); leeren($('raum-schicht')); }
+  $('schicht-knopf').hidden = !mitSchicht; $('raum-urteil').hidden = !mitSchicht; if (!mitSchicht) { $('raum').dataset.schicht = 'aus'; $('schicht-knopf').setAttribute('aria-pressed', 'false'); leeren($('raum-schicht')); }
   pfad();
 }
 
@@ -169,8 +176,17 @@ function zeichneRaum() {
     oeffneOriginal, oeffneKapitel, neuZeichnen: () => { m.zeichne($('raum-buehne'), fall, ctx); schicht(); },
   };
   const schicht = () => zeichneSchicht($('raum-schicht'), { art, meta: m.meta, fall, kanten: m.kanten(fall), zustand: ctx.zustand(), proben: fr.proben, ereignisZahl: werk.daten.ereignisse.filter((e) => e.raum === key).length, ctx });
-  m.zeichne($('raum-buehne'), fall, ctx); schicht();
+  m.zeichne($('raum-buehne'), fall, ctx); schicht(); urteil();
 }
+function urteil() {
+  if (aktuell?.typ !== 'fuge') return;
+  const { m, fall, key } = aktuell; const inhalt = abdruck(fall);
+  if (mussErloeschen(raumZustand(key), inhalt)) aendereWerk((d) => erloeschen(d.raeume[key]));
+  zeichneUrteil($('raum-urteil'), { zustand: () => raumZustand(key) || {}, inhalt, werk, wiederZeichnen: () => { urteil(); urteileImFeld(); },
+    handlung: (wasArt, aendern, was) => { handlung(key, wasArt, m.ort(fall, ctxBasis), aendern, was); feld.ereignisse(werk.daten.ereignisse, true); } });
+}
+// Der Speicherstand aktualisiert nur die Zeile, nicht das Eingabefeld für den Grund.
+werk.hoerer.add(() => { const el = document.querySelector('#raum-urteil .urteil-stand'); if (el && aktuell?.typ === 'fuge') el.textContent = standText(raumZustand(aktuell.key)?.urteil, werk); });
 
 // Ortsraum: jeder der 1226 Orte im vollen Wortlaut, mit seinen Fugenräumen, Werken, Aufnahmen und Notizen.
 async function oeffneOrt(i, { ohneFlug = false } = {}) {

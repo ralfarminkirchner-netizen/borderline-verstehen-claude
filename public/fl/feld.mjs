@@ -140,6 +140,8 @@ export class Feld {
     const f = this.farben[p.art]; c.save(); c.translate(x, y); c.lineWidth = an ? 2.2 : 1.4; c.strokeStyle = f; c.fillStyle = f;
     const reif = Math.min(6, this.zaehler?.get(p.key) || 0);
     if (reif) { c.strokeStyle = 'rgba(180,86,28,0.85)'; c.lineWidth = 1.3; c.beginPath(); for (let a = 0; a <= reif * Math.PI * 2 / 3; a += 0.15) { const r = s * 0.9 + a * 1.4; c.lineTo(Math.cos(a) * r, Math.sin(a) * r); } c.stroke(); c.strokeStyle = f; c.lineWidth = an ? 2.2 : 1.4; }
+    const urteil = this.urteile?.get(p.key);
+    if (urteil === 'traegtnicht' || urteil === 'giltnicht') c.globalAlpha = 0.42;
     switch (p.art) {
       case 'gegenhalt': // zwei Bruchblöcke mit offenem Spalt
         c.beginPath(); c.moveTo(-s, -s * 0.8); c.lineTo(-s * 0.25, -s * 0.8); c.lineTo(-s * 0.45, -s * 0.1); c.lineTo(-s * 0.2, s * 0.8); c.lineTo(-s, s * 0.8); c.closePath(); c.fill();
@@ -163,6 +165,18 @@ export class Feld {
         c.beginPath(); c.arc(0, 0, s * 0.95, 0, Math.PI * 2); c.stroke(); c.save(); c.beginPath(); c.arc(0, 0, s * 0.95, 0, Math.PI * 2); c.arc(0, 0, s * 0.5, 0, Math.PI * 2, true); c.clip();
         for (let k = -s; k < s; k += 3) { c.beginPath(); c.moveTo(k, -s); c.lineTo(k + s, s); c.stroke(); } c.restore();
         c.fillStyle = '#efe9dd'; c.beginPath(); c.arc(0, 0, s * 0.5, 0, Math.PI * 2); c.fill(); break;
+    }
+    c.globalAlpha = 1;
+    // Zustandsmarke deines Urteils: gefüllt trägt, halb begrenzt, Kreuz trägt nicht, Strich gilt hier nicht, Ring offen, orange gestrichelt erloschen.
+    if (urteil) {
+      const mx = s * 1.05, my = s * 1.05, r = 5.6;
+      c.fillStyle = '#fbf8f2'; c.beginPath(); c.arc(mx, my, r + 2, 0, Math.PI * 2); c.fill();
+      c.strokeStyle = urteil === 'erloschen' ? '#b4561c' : '#1d1a16'; c.fillStyle = '#1d1a16'; c.lineWidth = 1.6;
+      c.beginPath(); if (urteil === 'erloschen') c.setLineDash([2, 2]); c.arc(mx, my, r, 0, Math.PI * 2); c.stroke(); c.setLineDash([]);
+      if (urteil === 'traegt') { c.beginPath(); c.arc(mx, my, r, 0, Math.PI * 2); c.fill(); }
+      if (urteil === 'begrenzt') { c.beginPath(); c.arc(mx, my, r, Math.PI / 2, Math.PI * 1.5); c.closePath(); c.fill(); }
+      if (urteil === 'traegtnicht') { c.beginPath(); c.moveTo(mx - 3.6, my - 3.6); c.lineTo(mx + 3.6, my + 3.6); c.moveTo(mx + 3.6, my - 3.6); c.lineTo(mx - 3.6, my + 3.6); c.stroke(); }
+      if (urteil === 'giltnicht') { c.beginPath(); c.moveTo(mx - 3.4, my); c.lineTo(mx + 3.4, my); c.stroke(); }
     }
     c.restore();
   }

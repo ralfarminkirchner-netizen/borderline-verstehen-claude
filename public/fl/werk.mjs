@@ -2,7 +2,8 @@
 // Gespeichert wird nur auf diesem Rechner über den eigenen Dienst; ein veralteter Stand wird abgewiesen, nicht überschrieben.
 const LEER = () => ({ format: 'fugenland-werkstatt', version: 2, gefuege: [], notizen: [], verlauf: [], raeume: {}, ereignisse: [] });
 
-export const werk = { daten: LEER(), revision: 'neu', hoerer: new Set(), stand: 'lädt' };
+// aenderung zählt jede lokale Änderung; bestaetigt ist die höchste Änderung, deren Schreiben der Dienst bestätigt hat.
+export const werk = { daten: LEER(), revision: 'neu', hoerer: new Set(), stand: 'lädt', aenderung: 0, bestaetigt: 0, sitzung: Math.random().toString(36).slice(2) };
 let timer = null; let laeuft = Promise.resolve();
 
 const melde = (stand) => { werk.stand = stand; for (const f of werk.hoerer) f(stand); };
@@ -13,7 +14,7 @@ export async function laden() {
     if (!r.ok) throw new Error(String(r.status));
     const d = await r.json(); werk.revision = d.revision; delete d.revision;
     werk.daten = { ...LEER(), ...d, raeume: d.raeume || {}, ereignisse: d.ereignisse || [] };
-    melde(werk.daten.ereignisse.length ? 'gespeichert' : 'leer');
+    melde(werk.daten.ereignisse.length ? 'geladen' : 'leer');
   } catch { melde('nicht erreichbar'); }
 }
 
@@ -29,17 +30,17 @@ export function handlung(key, art, ort, aendern, was = '') {
   return z;
 }
 
-function vormerken() { melde('ungespeichert'); clearTimeout(timer); timer = setTimeout(speichern, 500); }
+function vormerken() { werk.aenderung++; melde('ungespeichert'); clearTimeout(timer); timer = setTimeout(speichern, 500); }
 
 export function speichern() {
   laeuft = laeuft.then(async () => {
-    melde('speichert');
+    melde('speichert'); const nr = werk.aenderung;
     try {
       const r = await fetch('/api/werkstatt', { method: 'PUT', headers: { 'content-type': 'application/json', 'if-match': werk.revision }, body: JSON.stringify(werk.daten) });
       const d = await r.json().catch(() => ({}));
       if (r.status === 409) { melde('neuerer Stand vorhanden – bitte neu laden'); return; }
       if (!r.ok) { melde(d.fehler || 'nicht gespeichert'); return; }
-      werk.revision = d.revision; melde('gespeichert');
+      werk.revision = d.revision; werk.bestaetigt = Math.max(werk.bestaetigt, nr); melde('gespeichert');
     } catch { melde('nicht gespeichert – Dienst nicht erreichbar'); }
   });
   return laeuft;
