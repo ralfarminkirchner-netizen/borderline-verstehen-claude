@@ -935,7 +935,8 @@
         off += (wiege + Math.min(4, lang * 0.02) * (a.vonA ? 1 : -1)) * Math.sin(u * Math.PI);
         if (u > len && ausfrans) {
           const f = (u - len) / Math.max(0.001, 1 - len);
-          off += o * Math.pow(f, 1.2) * 13 + Math.sin(f * 5 + j * 2.1 + phase) * f * 6;
+          const fach = opt.ohneKnoten ? 0.4 : 1; // schwache Arme fächern schmal aus: weniger Schleier im Überblick
+          off += (o * Math.pow(f, 1.2) * 13 + Math.sin(f * 5 + j * 2.1 + phase) * f * 6) * fach;
         }
         off *= Math.min(1, u * 4 + 0.3);
         return [p[0] + nx * off, p[1] + ny * off];
@@ -951,7 +952,7 @@
       const off = wiege * Math.sin((d / lang) * Math.PI);
       sEl('circle', { cx: f1(p[0] + nx * off), cy: f1(p[1] + ny * off), r: f1(opt.knoten), fill: c, 'fill-opacity': f1(op * 0.9) }, grp);
     }
-    if (len < 0.995 && ausfrans) for (const q of enden) sEl('circle', { cx: f1(q[0]), cy: f1(q[1]), r: '1.4', fill: c, 'fill-opacity': '0.28' }, grp);
+    if (len < 0.995 && ausfrans && !opt.ohneKnoten) for (const q of enden) sEl('circle', { cx: f1(q[0]), cy: f1(q[1]), r: '1.4', fill: c, 'fill-opacity': '0.28' }, grp);
     // lebendig: die dichten Fasern leuchten (ruhig: nur Form)
     if (leb && opt.glimm) sEl('path', { d: pfadAus(teilBahn(pk, len)), fill: 'none', stroke: opt.stark ? '#8fa0ff' : c, 'stroke-opacity': opt.stark ? '0.38' : '0.22', 'stroke-width': opt.stark ? '11' : '8', 'stroke-linecap': 'round', filter: 'url(#weich)' }, grp);
   }
@@ -1290,7 +1291,7 @@
       // Deckkraft folgt der Passung: je mehr Zähne fehlen, desto leiser – so liest sich das Gewebe als Rangfolge, nicht als Knäuel
       const zp = bewerte(a.i), fehlt = zp.fehlend.length;
       const passung = spaltBleibt(a.i) || e.entscheidung === 'bestritten' ? 0.14 : fehlt <= 1 ? 0.78 : fehlt === 2 ? 0.5 : 0.24;
-      zeichneFasern(grp, a, pk, len, st ? c.tief : c.faser, { stark: st, deckkraft: st ? 0.9 : e.eingerastet ? 0.95 : passung, faser: st ? 1.2 : fehlt <= 1 ? 1.15 : 0.9, fasern: !st && !e.eingerastet && fehlt >= 3 ? 2 : FASERN, ohneKnoten: !st && !e.eingerastet && fehlt >= 3, knoten: st ? 1.9 : 1.5, ausfrans: !e.eingerastet, glimm: hell });
+      zeichneFasern(grp, a, pk, len, st ? c.tief : c.faser, { stark: st, deckkraft: st ? 0.9 : e.eingerastet ? 0.95 : passung, faser: st ? 1.2 : fehlt <= 1 ? 1.15 : 0.9, fasern: !st && !e.eingerastet && fehlt >= 3 ? 2 : FASERN, ohneKnoten: !st && !e.eingerastet && fehlt >= 3, knoten: st ? 1.9 : 1.5, ausfrans: !e.eingerastet, glimm: hell && (st || e.eingerastet || fehlt <= 2) });
       const z = bewerte(a.i);
       // Bestandsform als Schatten, wenn du eine andere Lesart gewählt hast
       if (z.lesart.deine && (st || e.eingerastet)) zeichneArmForm(grp, dicht, a.f.art, c.tief, breiteForm * 0.8, 0, false, { 'stroke-opacity': '0.22', 'fill-opacity': '0.18', transform: 'translate(0,4)' });
