@@ -1,0 +1,22 @@
+[
+ {
+  "schritt": "Statischer Dienst",
+  "seite": "http://127.0.0.1:47917/index.html",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "zaehne": {
+   "lesart": true,
+   "beleg": false,
+   "grenze": false,
+   "wort": false
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol, ohne Quelle, ohne Grenze, kein gemeinsames Wort",
+   "Lesart gedreht: Nähe, nicht Identität – aus beiden Ortstexten"
+  ],
+  "pos": 238,
+  "fehler": [],
+  "netz": []
+ }
+]

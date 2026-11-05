@@ -1,0 +1,42 @@
+[
+ {
+  "k": "D1 Feld still?",
+  "v": {
+   "anim": [],
+   "ruhe": true,
+   "reiz": "ruhig"
+  }
+ },
+ {
+  "k": "D2 nach Klick",
+  "v": {
+   "anim": [],
+   "ruhe": true,
+   "reiz": "ruhig"
+  }
+ },
+ {
+  "k": "D3 Schloss still?",
+  "v": {
+   "anim": [],
+   "ruhe": true,
+   "reiz": "ruhig",
+   "ansicht": "schloss"
+  }
+ },
+ {
+  "k": "D4 Bewegung lebendig geklickt",
+  "v": {
+   "anim": [],
+   "ruhe": true,
+   "reiz": "lebendig",
+   "knopf": "lebendig"
+  }
+ },
+ {
+  "k": "D Ende",
+  "v": {
+   "fehler": []
+  }
+ }
+]

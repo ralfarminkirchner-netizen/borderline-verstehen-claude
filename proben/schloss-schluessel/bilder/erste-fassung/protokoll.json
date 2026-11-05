@@ -1,0 +1,275 @@
+[
+ {
+  "schritt": "01 Start",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "zaehne": {
+   "lesart": false,
+   "beleg": false,
+   "grenze": false,
+   "wort": false
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol, ohne Quelle, ohne Grenze, kein gemeinsames Wort"
+  ],
+  "pos": 238
+ },
+ {
+  "schritt": "02 Anstoß (gehalten)",
+  "quer": true,
+  "LE": 601,
+  "luecke": 238,
+  "mitten": [
+   246.8,
+   382.64666666666665,
+   518.4933333333333,
+   654.34
+  ],
+  "U0": 132,
+  "U1": 706,
+  "mitte": 0,
+  "pos": 62.36808001859882,
+  "meldung": "stößt an: Lesart"
+ },
+ {
+  "schritt": "03 Rückprall",
+  "quer": true,
+  "LE": 601,
+  "luecke": 238,
+  "mitten": [
+   246.8,
+   382.64666666666665,
+   518.4933333333333,
+   654.34
+  ],
+  "U0": 132,
+  "U1": 706,
+  "mitte": 0,
+  "pos": 238.156066437844
+ },
+ {
+  "schritt": "06 Grenze",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "zaehne": {
+   "lesart": false,
+   "beleg": false,
+   "grenze": true,
+   "wort": false
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol, ohne Quelle, ohne Grenze, kein gemeinsames Wort",
+   "Grenze gesetzt: gilt nur, wenn es um den Beginn einer Aufgabe geht, nicht um ihr Ende"
+  ],
+  "pos": 238
+ },
+ {
+  "schritt": "09 Beleg",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "zaehne": {
+   "lesart": false,
+   "beleg": true,
+   "grenze": true,
+   "wort": false
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol, ohne Quelle, ohne Grenze, kein gemeinsames Wort",
+   "Grenze gesetzt: gilt nur, wenn es um den Beginn einer Aufgabe geht, nicht um ihr Ende",
+   "Beleg herangezogen: ADxS-Forum, Mondkatze – aus Aufgabenstarre"
+  ],
+  "pos": 238
+ },
+ {
+  "schritt": "11 Lesart",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "zaehne": {
+   "lesart": true,
+   "beleg": true,
+   "grenze": true,
+   "wort": false
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol, ohne Quelle, ohne Grenze, kein gemeinsames Wort",
+   "Grenze gesetzt: gilt nur, wenn es um den Beginn einer Aufgabe geht, nicht um ihr Ende",
+   "Beleg herangezogen: ADxS-Forum, Mondkatze – aus Aufgabenstarre",
+   "Lesart gedreht: Nähe, nicht Identität – aus beiden Ortstexten"
+  ],
+  "pos": 238
+ },
+ {
+  "schritt": "14 Wort",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "zaehne": {
+   "lesart": true,
+   "beleg": true,
+   "grenze": true,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol, ohne Quelle, ohne Grenze, kein gemeinsames Wort",
+   "Grenze gesetzt: gilt nur, wenn es um den Beginn einer Aufgabe geht, nicht um ihr Ende",
+   "Beleg herangezogen: ADxS-Forum, Mondkatze – aus Aufgabenstarre",
+   "Lesart gedreht: Nähe, nicht Identität – aus beiden Ortstexten",
+   "Wort abgelegt: „Start“ – steht bei beiden"
+  ],
+  "pos": 238
+ },
+ {
+  "schritt": "16 Eingerastet",
+  "aktiv": "Hyperfokus",
+  "eingerastet": true,
+  "modus": null,
+  "zaehne": {
+   "lesart": true,
+   "beleg": true,
+   "grenze": true,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol, ohne Quelle, ohne Grenze, kein gemeinsames Wort",
+   "Grenze gesetzt: gilt nur, wenn es um den Beginn einer Aufgabe geht, nicht um ihr Ende",
+   "Beleg herangezogen: ADxS-Forum, Mondkatze – aus Aufgabenstarre",
+   "Lesart gedreht: Nähe, nicht Identität – aus beiden Ortstexten",
+   "Wort abgelegt: „Start“ – steht bei beiden",
+   "eingerastet, weil: Nähe, nicht Identität · ADxS-Forum, Mondkatze · deine Grenze · …"
+  ],
+  "pos": 0
+ },
+ {
+  "schritt": "18 Erloschen",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "zaehne": {
+   "lesart": true,
+   "beleg": false,
+   "grenze": true,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol, ohne Quelle, ohne Grenze, kein gemeinsames Wort",
+   "Grenze gesetzt: gilt nur, wenn es um den Beginn einer Aufgabe geht, nicht um ihr Ende",
+   "Beleg herangezogen: ADxS-Forum, Mondkatze – aus Aufgabenstarre",
+   "Lesart gedreht: Nähe, nicht Identität – aus beiden Ortstexten",
+   "Wort abgelegt: „Start“ – steht bei beiden",
+   "eingerastet, weil: Nähe, nicht Identität · ADxS-Forum, Mondkatze · deine Grenze · …",
+   "erloschen – Beleg zurückgenommen: ADxS-Forum, Mondkatze"
+  ],
+  "pos": 238
+ },
+ {
+  "schritt": "20 Bund",
+  "aktiv": "Aufgaben bleiben offen",
+  "eingerastet": false,
+  "modus": null,
+  "zaehne": {
+   "lesart": false,
+   "beleg": true,
+   "grenze": true,
+   "wort": false
+  },
+  "verlauf": [
+   "zuerst offen: Abstand, mit Quelle, Grenze benannt, kein gemeinsames Wort"
+  ],
+  "pos": 238
+ },
+ {
+  "schritt": "21 Schattenfuge",
+  "quer": true,
+  "LE": 601,
+  "luecke": 238,
+  "mitten": [
+   246.8,
+   382.64666666666665,
+   518.4933333333333,
+   654.34
+  ],
+  "U0": 132,
+  "U1": 706,
+  "mitte": 0,
+  "pos": 19.79870447163319
+ },
+ {
+  "schritt": "23 Zeitblindheit",
+  "aktiv": "Zeitblindheit",
+  "eingerastet": false,
+  "modus": null,
+  "zaehne": {
+   "lesart": true,
+   "beleg": false,
+   "grenze": false,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: keine Lesart, ohne Quelle, ohne Grenze, gemeinsames Wort",
+   "Lesart gedreht: könnte zusammenhängen – aus Sicht von Wartemodus"
+  ],
+  "pos": 238
+ },
+ {
+  "schritt": "Hauptmaß",
+  "fehler": [],
+  "netz": []
+ },
+ {
+  "schritt": "Tastatur",
+  "ersterFokus": "ort ort-schluessel",
+  "posNachPfeilen": 117.99552013548457,
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "zaehne": {
+   "lesart": true,
+   "beleg": false,
+   "grenze": false,
+   "wort": false
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol, ohne Quelle, ohne Grenze, kein gemeinsames Wort",
+   "Lesart gedreht: Nähe, nicht Identität – aus beiden Ortstexten"
+  ],
+  "pos": 238.1789121959116,
+  "fehler": []
+ },
+ {
+  "schritt": "1280",
+  "fehler": []
+ },
+ {
+  "schritt": "390",
+  "posBeiBeruehrung": 39.74800033051565,
+  "luecke": 120,
+  "fehler": [],
+  "netz": []
+ },
+ {
+  "schritt": "Ruhige Bewegung",
+  "aktiv": "Hyperfokus",
+  "eingerastet": true,
+  "modus": null,
+  "zaehne": {
+   "lesart": true,
+   "beleg": true,
+   "grenze": true,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol, ohne Quelle, ohne Grenze, kein gemeinsames Wort",
+   "Lesart gedreht: Nähe, nicht Identität – aus beiden Ortstexten",
+   "Grenze gesetzt: gilt nur, wenn es um den Beginn geht",
+   "Beleg herangezogen: ADxS-Forum, Mondkatze – aus Aufgabenstarre",
+   "Wort abgelegt: „Start“ – steht bei beiden",
+   "eingerastet, weil: Nähe, nicht Identität · ADxS-Forum, Mondkatze · deine Grenze · …"
+  ],
+  "pos": 0,
+  "fehler": []
+ }
+]

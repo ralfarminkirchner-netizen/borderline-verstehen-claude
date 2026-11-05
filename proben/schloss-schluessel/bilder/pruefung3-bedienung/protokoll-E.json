@@ -1,0 +1,345 @@
+[
+ {
+  "k": "E 1280 feld",
+  "v": {
+   "audit": {
+    "klein": [],
+    "ueber": [],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   },
+   "ziele": [
+    "button.ecke-wort 57×23 „lebendig“",
+    "button.ecke-wort 46×23 „normal“",
+    "button.ecke-wort 24×23 „aus“",
+    "path.arm-treffer 164×16 „Fuge betreten: Delay Aversion “",
+    "path.arm-treffer 10×123 „Fuge betreten: Differential Su“",
+    "path.arm-treffer 20×115 „Fuge betreten: Gen–Umwelt-Korr“",
+    "path.arm-treffer 90×17 „Fuge betreten: Heritabilität i“"
+   ]
+  }
+ },
+ {
+  "k": "E 1280 ort",
+  "v": {
+   "audit": {
+    "klein": [],
+    "ueber": [
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „muss unterschieden werde“ (100% des kleineren)",
+     "span.ps-verb „muss unterschieden werde“ × span.ps-ort „Delay Aversion“ (100% des kleineren)",
+     "span.ps-ort „Delay Aversion“ × span.ps-verb „im Original begrifflich “ (100% des kleineren)",
+     "span.ps-ort „Delay Aversion“ × span.ps-verb „im Original begrifflich “ (100% des kleineren)",
+     "span.ps-ort „Delay Aversion“ × span.ps-verb „muss unterschieden werde“ (100% des kleineren)",
+     "span.ps-verb „muss unterschieden werde“ × span.ps-ort „Gen–Umwelt-Korrelation (“ (51% des kleineren)"
+    ],
+    "aus": [
+     "tspan.: Gen-Umwelt-Korrelation"
+    ],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   }
+  }
+ },
+ {
+  "k": "E 1280 schloss wort",
+  "v": {
+   "audit": {
+    "klein": [],
+    "ueber": [],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   },
+   "ziele": [
+    "button.ecke-wort 57×23 „lebendig“",
+    "button.ecke-wort 46×23 „normal“",
+    "button.ecke-wort 24×23 „aus“",
+    "button.wort 23×24 „Wort ins links ablegen“"
+   ]
+  }
+ },
+ {
+  "k": "E 1280 ende",
+  "v": {
+   "fehler": [],
+   "netz": []
+  }
+ },
+ {
+  "k": "E 1280-gross feld",
+  "v": {
+   "audit": {
+    "klein": [],
+    "ueber": [],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   },
+   "ziele": [
+    "path.arm-treffer 164×16 „Fuge betreten: Delay Aversion “",
+    "path.arm-treffer 10×123 „Fuge betreten: Differential Su“",
+    "path.arm-treffer 20×115 „Fuge betreten: Gen–Umwelt-Korr“",
+    "path.arm-treffer 90×17 „Fuge betreten: Heritabilität i“"
+   ]
+  }
+ },
+ {
+  "k": "E 1280-gross ort",
+  "v": {
+   "audit": {
+    "klein": [],
+    "ueber": [
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „muss unterschieden werde“ (100% des kleineren)",
+     "span.ps-ort „Delay Aversion“ × span.ps-verb „im Original begrifflich “ (100% des kleineren)",
+     "span.ps-ort „Delay Aversion“ × span.ps-verb „im Original begrifflich “ (100% des kleineren)",
+     "span.ps-ort „Delay Aversion“ × span.ps-verb „muss unterschieden werde“ (100% des kleineren)"
+    ],
+    "aus": [
+     "tspan.: Gen-Umwelt-Korrelation"
+    ],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   }
+  }
+ },
+ {
+  "k": "E 1280-gross schloss wort",
+  "v": {
+   "audit": {
+    "klein": [],
+    "ueber": [],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   },
+   "ziele": []
+  }
+ },
+ {
+  "k": "E 1280-gross ende",
+  "v": {
+   "fehler": [],
+   "netz": []
+  }
+ },
+ {
+  "k": "E 1440 feld",
+  "v": {
+   "audit": {
+    "klein": [],
+    "ueber": [],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   },
+   "ziele": [
+    "button.ecke-wort 57×23 „lebendig“",
+    "button.ecke-wort 46×23 „normal“",
+    "button.ecke-wort 24×23 „aus“",
+    "path.arm-treffer 196×19 „Fuge betreten: Delay Aversion “",
+    "path.arm-treffer 13×148 „Fuge betreten: Differential Su“",
+    "path.arm-treffer 109×20 „Fuge betreten: Heritabilität i“"
+   ]
+  }
+ },
+ {
+  "k": "E 1440 ort",
+  "v": {
+   "audit": {
+    "klein": [],
+    "ueber": [
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „muss unterschieden werde“ (100% des kleineren)",
+     "span.ps-verb „muss unterschieden werde“ × span.ps-ort „Delay Aversion“ (100% des kleineren)",
+     "span.ps-ort „Delay Aversion“ × span.ps-verb „im Original begrifflich “ (100% des kleineren)",
+     "span.ps-ort „Delay Aversion“ × span.ps-verb „im Original begrifflich “ (100% des kleineren)",
+     "span.ps-ort „Delay Aversion“ × span.ps-verb „muss unterschieden werde“ (100% des kleineren)",
+     "span.ps-verb „muss unterschieden werde“ × span.ps-ort „Gen–Umwelt-Korrelation (“ (51% des kleineren)"
+    ],
+    "aus": [
+     "tspan.: Gen-Umwelt-Korrelation"
+    ],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   }
+  }
+ },
+ {
+  "k": "E 1440 schloss wort",
+  "v": {
+   "audit": {
+    "klein": [],
+    "ueber": [],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   },
+   "ziele": [
+    "button.ecke-wort 57×23 „lebendig“",
+    "button.ecke-wort 46×23 „normal“",
+    "button.ecke-wort 24×23 „aus“",
+    "button.wort 23×24 „Wort ins links ablegen“"
+   ]
+  }
+ },
+ {
+  "k": "E Ton",
+  "v": {
+   "audioVorher": 0,
+   "audioNachher": 0,
+   "z": {
+    "i": 3,
+    "eingerastet": false,
+    "entscheidung": null,
+    "kitt": false,
+    "wieder": false,
+    "kontext": "bei Stress",
+    "verlauf": []
+   },
+   "zaehne": {
+    "lesart": false,
+    "beleg": true,
+    "grenze": true,
+    "wort": false,
+    "kontext": true
+   },
+   "fehler": []
+  }
+ },
+ {
+  "k": "E 1440 ende",
+  "v": {
+   "fehler": [],
+   "netz": []
+  }
+ },
+ {
+  "k": "E 1440-gross feld",
+  "v": {
+   "audit": {
+    "klein": [],
+    "ueber": [],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   },
+   "ziele": [
+    "path.arm-treffer 196×19 „Fuge betreten: Delay Aversion “",
+    "path.arm-treffer 13×148 „Fuge betreten: Differential Su“",
+    "path.arm-treffer 109×20 „Fuge betreten: Heritabilität i“"
+   ]
+  }
+ },
+ {
+  "k": "E 1440-gross ort",
+  "v": {
+   "audit": {
+    "klein": [],
+    "ueber": [
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „muss unterschieden werde“ (100% des kleineren)",
+     "span.ps-ort „Delay Aversion“ × span.ps-verb „im Original begrifflich “ (100% des kleineren)",
+     "span.ps-ort „Delay Aversion“ × span.ps-verb „im Original begrifflich “ (100% des kleineren)",
+     "span.ps-ort „Delay Aversion“ × span.ps-verb „muss unterschieden werde“ (100% des kleineren)",
+     "tspan. „· Wartemodus“ × tspan.arm-text-art „Abstand“ (28% des kleineren)"
+    ],
+    "aus": [
+     "tspan.: Gen-Umwelt-Korrelation"
+    ],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   }
+  }
+ },
+ {
+  "k": "E 1440-gross schloss wort",
+  "v": {
+   "audit": {
+    "klein": [],
+    "ueber": [],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   },
+   "ziele": []
+  }
+ },
+ {
+  "k": "E 1440-gross ende",
+  "v": {
+   "fehler": [],
+   "netz": []
+  }
+ }
+]

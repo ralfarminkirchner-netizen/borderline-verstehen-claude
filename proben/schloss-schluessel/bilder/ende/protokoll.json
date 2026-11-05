@@ -1,0 +1,301 @@
+[
+ {
+  "schritt": "01 Start",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "lesart": "Gegenpol",
+  "zaehne": {
+   "lesart": false,
+   "beleg": false,
+   "grenze": false,
+   "wort": false
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol · ohne Quelle · ohne Grenze · kein Wort gemeinsam"
+  ],
+  "pos": 274
+ },
+ {
+  "schritt": "02 Anstoß",
+  "quer": true,
+  "LE": 583,
+  "luecke": 274,
+  "mitten": [
+   204.8,
+   342.0666666666667,
+   479.33333333333337,
+   616.6
+  ],
+  "halb": 60.39733333333334,
+  "U0": 112,
+  "U1": 692,
+  "mitte": 0,
+  "pos": 93.25218324822444,
+  "gre": 56,
+  "bel": 62,
+  "s": 1,
+  "meldung": "stößt an: Lesart\nGegenpol – Spitze gegen Spitze, hält auf Abstand"
+ },
+ {
+  "schritt": "02c Lesart",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "lesart": "Nähe, nicht Identität",
+  "zaehne": {
+   "lesart": true,
+   "beleg": false,
+   "grenze": false,
+   "wort": false
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol · ohne Quelle · ohne Grenze · kein Wort gemeinsam",
+   "Lesart: Nähe, nicht Identität – deine Lesart; derselbe Satz sagt auch „Gegenteil am Start“"
+  ],
+  "pos": 274
+ },
+ {
+  "schritt": "03 Grenze",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "lesart": "Nähe, nicht Identität",
+  "zaehne": {
+   "lesart": true,
+   "beleg": false,
+   "grenze": true,
+   "wort": false
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol · ohne Quelle · ohne Grenze · kein Wort gemeinsam",
+   "Lesart: Nähe, nicht Identität – deine Lesart; derselbe Satz sagt auch „Gegenteil am Start“",
+   "Grenze: gilt nur, wenn es um den Anfang einer Aufgabe geht"
+  ],
+  "pos": 274
+ },
+ {
+  "schritt": "04 Beleg",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "lesart": "Nähe, nicht Identität",
+  "zaehne": {
+   "lesart": true,
+   "beleg": true,
+   "grenze": true,
+   "wort": false
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol · ohne Quelle · ohne Grenze · kein Wort gemeinsam",
+   "Lesart: Nähe, nicht Identität – deine Lesart; derselbe Satz sagt auch „Gegenteil am Start“",
+   "Grenze: gilt nur, wenn es um den Anfang einer Aufgabe geht",
+   "Beleg: ADxS-Forum, Mondkatze aus Aufgabenstarre, von dir herangezogen"
+  ],
+  "pos": 274
+ },
+ {
+  "schritt": "04c Wort",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "lesart": "Nähe, nicht Identität",
+  "zaehne": {
+   "lesart": true,
+   "beleg": true,
+   "grenze": true,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol · ohne Quelle · ohne Grenze · kein Wort gemeinsam",
+   "Lesart: Nähe, nicht Identität – deine Lesart; derselbe Satz sagt auch „Gegenteil am Start“",
+   "Grenze: gilt nur, wenn es um den Anfang einer Aufgabe geht",
+   "Beleg: ADxS-Forum, Mondkatze aus Aufgabenstarre, von dir herangezogen",
+   "Wort: „Tun“ = „Tätigkeit“, deine Übersetzung"
+  ],
+  "pos": 274
+ },
+ {
+  "schritt": "05 Eingerastet",
+  "aktiv": "Hyperfokus",
+  "eingerastet": true,
+  "modus": null,
+  "lesart": "Nähe, nicht Identität",
+  "zaehne": {
+   "lesart": true,
+   "beleg": true,
+   "grenze": true,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol · ohne Quelle · ohne Grenze · kein Wort gemeinsam",
+   "Lesart: Nähe, nicht Identität – deine Lesart; derselbe Satz sagt auch „Gegenteil am Start“",
+   "Grenze: gilt nur, wenn es um den Anfang einer Aufgabe geht",
+   "Beleg: ADxS-Forum, Mondkatze aus Aufgabenstarre, von dir herangezogen",
+   "Wort: „Tun“ = „Tätigkeit“, deine Übersetzung",
+   "eingerastet: Nähe, nicht Identität · ADxS-Forum, Mondkatze · deine Grenze · Tun = Tätigkeit"
+  ],
+  "pos": 10
+ },
+ {
+  "schritt": "06 Erloschen",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "lesart": "Nähe, nicht Identität",
+  "zaehne": {
+   "lesart": true,
+   "beleg": false,
+   "grenze": true,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol · ohne Quelle · ohne Grenze · kein Wort gemeinsam",
+   "Lesart: Nähe, nicht Identität – deine Lesart; derselbe Satz sagt auch „Gegenteil am Start“",
+   "Grenze: gilt nur, wenn es um den Anfang einer Aufgabe geht",
+   "Beleg: ADxS-Forum, Mondkatze aus Aufgabenstarre, von dir herangezogen",
+   "Wort: „Tun“ = „Tätigkeit“, deine Übersetzung",
+   "eingerastet: Nähe, nicht Identität · ADxS-Forum, Mondkatze · deine Grenze · Tun = Tätigkeit",
+   "erloschen – Beleg zurückgenommen: ADxS-Forum, Mondkatze"
+  ],
+  "pos": 274
+ },
+ {
+  "schritt": "07 Vorschau",
+  "meldung": "Wartemodus als Schatten\nstößt an der Grenze an – antippen holt ihn ans Schloss"
+ },
+ {
+  "schritt": "07b Bund",
+  "aktiv": "Wartemodus",
+  "eingerastet": false,
+  "modus": null,
+  "lesart": "Nähe",
+  "zaehne": {
+   "lesart": true,
+   "beleg": false,
+   "grenze": false,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: Nähe · ohne Quelle · ohne Grenze · ein Wort gemeinsam"
+  ],
+  "pos": 274
+ },
+ {
+  "schritt": "Hauptmaß 1440",
+  "fehler": [],
+  "netz": []
+ },
+ {
+  "schritt": "Video",
+  "datei": "weg.webm"
+ },
+ {
+  "schritt": "390 Berührung",
+  "aktiv": "Hyperfokus",
+  "eingerastet": true,
+  "modus": null,
+  "lesart": "Nähe, nicht Identität",
+  "zaehne": {
+   "lesart": true,
+   "beleg": true,
+   "grenze": true,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol · ohne Quelle · ohne Grenze · kein Wort gemeinsam",
+   "Lesart: Nähe, nicht Identität – deine Lesart; derselbe Satz sagt auch „Gegenteil am Start“",
+   "Grenze: gilt nur, wenn es um den Anfang geht",
+   "Beleg: ADxS-Forum, Mondkatze aus Aufgabenstarre, von dir herangezogen",
+   "Wort: „Tun“ = „Tätigkeit“, deine Übersetzung",
+   "eingerastet: Nähe, nicht Identität · ADxS-Forum, Mondkatze · deine Grenze · Tun = Tätigkeit"
+  ],
+  "pos": 6.348837209302325,
+  "fehler": [],
+  "netz": []
+ },
+ {
+  "schritt": "1280",
+  "fehler": [],
+  "netz": []
+ },
+ {
+  "schritt": "Zeitblindheit",
+  "aktiv": "Zeitblindheit",
+  "eingerastet": false,
+  "modus": null,
+  "lesart": "keine Fuge",
+  "zaehne": {
+   "lesart": false,
+   "beleg": true,
+   "grenze": true,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: keine Fuge · ohne Quelle · ohne Grenze · ein Wort gemeinsam",
+   "Grenze: gilt nur, wenn es um Termine geht",
+   "Beleg: ADxS-Forum, Mondkatze aus Aufgabenstarre, von dir herangezogen"
+  ],
+  "pos": 202.08807372068887,
+  "meldung": "liegt an, hält nicht\nKeine Fuge im Bestand – die Kante bleibt glatt, nichts hält.",
+  "fehler": []
+ },
+ {
+  "schritt": "Tastatur",
+  "ersterFokus": "ort ort-schluessel",
+  "anstoss": "stößt an: Lesart\nGegenpol – Spitze gegen Spitze, hält auf Abstand",
+  "eingerastetPerTastatur": true,
+  "zaehne": {
+   "lesart": true,
+   "beleg": true,
+   "grenze": true,
+   "wort": true
+  },
+  "nachEscape": false,
+  "fehler": []
+ },
+ {
+  "schritt": "Ruhige Bewegung",
+  "aktiv": "Hyperfokus",
+  "eingerastet": true,
+  "modus": null,
+  "lesart": "Nähe, nicht Identität",
+  "zaehne": {
+   "lesart": true,
+   "beleg": true,
+   "grenze": true,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol · ohne Quelle · ohne Grenze · kein Wort gemeinsam",
+   "Lesart: Nähe, nicht Identität – deine Lesart; derselbe Satz sagt auch „Gegenteil am Start“",
+   "Grenze: gilt nur, wenn es um den Anfang geht",
+   "Beleg: ADxS-Forum, Mondkatze aus Aufgabenstarre, von dir herangezogen",
+   "Wort: „Tun“ = „Tätigkeit“, deine Übersetzung",
+   "eingerastet: Nähe, nicht Identität · ADxS-Forum, Mondkatze · deine Grenze · Tun = Tätigkeit"
+  ],
+  "pos": 10,
+  "laufendeAnimationen": 0,
+  "fehler": []
+ },
+ {
+  "schritt": "Statischer Dienst",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "lesart": "Nähe, nicht Identität",
+  "zaehne": {
+   "lesart": true,
+   "beleg": false,
+   "grenze": false,
+   "wort": false
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol · ohne Quelle · ohne Grenze · kein Wort gemeinsam",
+   "Lesart: Nähe, nicht Identität – deine Lesart; derselbe Satz sagt auch „Gegenteil am Start“"
+  ],
+  "pos": 274,
+  "fehler": [],
+  "netz": []
+ }
+]

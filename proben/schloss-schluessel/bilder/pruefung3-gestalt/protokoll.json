@@ -1,0 +1,378 @@
+[
+ {
+  "schritt": "start",
+  "schrift": {
+   "min": 12,
+   "wo": "P probe „Probe – speichert nicht“"
+  }
+ },
+ {
+  "schritt": "bild",
+  "name": "01-feld-ueberblick-gewebe.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "02-ort-koerper-mit-armen-nah.png"
+ },
+ {
+  "schritt": "ort",
+  "wahl": {
+   "art": "ort",
+   "k": "1012"
+  },
+  "schrift": {
+   "min": 12,
+   "wo": "P probe „Probe – speichert nicht“"
+  }
+ },
+ {
+  "schritt": "bild",
+  "name": "03a-blick-innen.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "03b-blick-aussen.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "03c-blick-spielraum-bestand-schweigt.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "03d-blick-spielraum-mit-text.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "04-naht-zwischen-adhs-und-phaenomenatlas-geoeffnet.png"
+ },
+ {
+  "schritt": "naht",
+  "wahl": {
+   "art": "naht",
+   "k": "ADHS · Randphänomene|Phänomenatlas"
+  }
+ },
+ {
+  "schritt": "bild",
+  "name": "04b-fehlstelle-hohl-in-der-membran.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "05-schloss-schwellen-querschnitt-start.png"
+ },
+ {
+  "schritt": "schloss",
+  "z": {
+   "lesart": false,
+   "beleg": false,
+   "grenze": false,
+   "wort": false,
+   "kontext": false
+  },
+  "schrift": {
+   "min": 12,
+   "wo": "P probe „Probe – speichert nicht“"
+  }
+ },
+ {
+  "schritt": "bild",
+  "name": "06-stein-ablegen-riegel-vorschlag.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "07-kontext-zahn-vorschlag-aus-dem-wortlaut.png"
+ },
+ {
+  "schritt": "vor kontext",
+  "z": {
+   "lesart": true,
+   "beleg": true,
+   "grenze": true,
+   "wort": true,
+   "kontext": false
+  }
+ },
+ {
+  "schritt": "bild",
+  "name": "08a-einrasten-lichtpuls.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "08-schwellen-querschnitt-eingerastet.png"
+ },
+ {
+  "schritt": "eingerastet",
+  "e": {
+   "i": 0,
+   "eingerastet": true,
+   "entscheidung": null,
+   "kitt": false,
+   "wieder": false,
+   "kontext": "besonders bei belohnenden Tätigkeiten",
+   "verlauf": [
+    "ein"
+   ]
+  }
+ },
+ {
+  "schritt": "bild",
+  "name": "09-drei-entscheidungen.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "10a-schloss-erloschen-gekittet.png"
+ },
+ {
+  "schritt": "erloschen",
+  "e": {
+   "i": 0,
+   "eingerastet": false,
+   "entscheidung": null,
+   "kitt": true,
+   "wieder": false,
+   "kontext": null,
+   "verlauf": [
+    "ein",
+    "gefasst",
+    "erloschen"
+   ]
+  }
+ },
+ {
+  "schritt": "bild",
+  "name": "10-feld-gekittete-bruchstelle-nach-erloeschen.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "11a-wiederaufnahme-schloss.png"
+ },
+ {
+  "schritt": "wieder",
+  "e": {
+   "i": 0,
+   "eingerastet": true,
+   "entscheidung": null,
+   "kitt": true,
+   "wieder": true,
+   "kontext": "wenn es um den Anfang einer Aufgabe geht",
+   "verlauf": [
+    "ein",
+    "gefasst",
+    "erloschen",
+    "wieder"
+   ]
+  }
+ },
+ {
+  "schritt": "bild",
+  "name": "11-wiederaufnahme-feld-ueber-der-kittspur.png"
+ },
+ {
+  "schritt": "vorbereitet",
+  "a": "Aufgabenstarre",
+  "b": "Wartemodus",
+  "z": {
+   "lesart": true,
+   "beleg": true,
+   "grenze": true,
+   "wort": true,
+   "kontext": false
+  }
+ },
+ {
+  "schritt": "vorbereitet",
+  "a": "Delay Aversion",
+  "b": "Zeitblindheit",
+  "z": {
+   "lesart": true,
+   "beleg": true,
+   "grenze": true,
+   "wort": true,
+   "kontext": false
+  }
+ },
+ {
+  "schritt": "vorbereitet",
+  "a": "Wartemodus",
+  "b": "Zeitblindheit",
+  "z": {
+   "lesart": true,
+   "beleg": true,
+   "grenze": true,
+   "wort": true,
+   "kontext": false
+  }
+ },
+ {
+  "schritt": "bild",
+  "name": "12a-bestritten-im-schloss.png"
+ },
+ {
+  "schritt": "bestritten",
+  "e": {
+   "i": 30,
+   "eingerastet": false,
+   "entscheidung": "bestritten",
+   "kitt": false,
+   "wieder": false,
+   "kontext": "bei vielen Reizen zugleich",
+   "verlauf": [
+    "ein",
+    "bestritten"
+   ]
+  }
+ },
+ {
+  "schritt": "bild",
+  "name": "13-unter-welcher-voraussetzung-kontext-arme-strecken-sich.png"
+ },
+ {
+  "schritt": "voraus kontext",
+  "nur": [
+   1,
+   10,
+   23
+  ],
+  "zwei": []
+ },
+ {
+  "schritt": "bild",
+  "name": "12-feld-spuren-kitt-bestritten-offen.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "14-regeln-wie-die-riegel-entstehen.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "14b-regeln-strichformen.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "15-einfache-sprache-ki-entwurf-original-daneben.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "16a-lebendig-arm-hakt-mit-lichtpuls.png"
+ },
+ {
+  "schritt": "lebendig",
+  "e": {
+   "i": 1,
+   "eingerastet": true,
+   "entscheidung": null,
+   "kitt": false,
+   "wieder": false,
+   "kontext": "wenn ein Termin den Tag teilt",
+   "verlauf": [
+    "ein"
+   ]
+  }
+ },
+ {
+  "schritt": "bild",
+  "name": "16c-lebendig-danach.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "16b-ruhig-nur-form.png"
+ },
+ {
+  "schritt": "ruhig",
+  "ruhe": true,
+  "laufend": 0
+ },
+ {
+  "schritt": "bild",
+  "name": "17-tastatur-ort-gewaehlt.png"
+ },
+ {
+  "schritt": "tastatur",
+  "wahl": {
+   "art": "ort",
+   "k": "1015"
+  }
+ },
+ {
+  "schritt": "bild",
+  "name": "18-schrift-gross-feld.png"
+ },
+ {
+  "schritt": "hauptweg",
+  "fehler": [],
+  "netz": [],
+  "kennungen": [],
+  "speicher": {
+   "localStorage": 0,
+   "sessionStorage": 0,
+   "cookie": "",
+   "url": false
+  },
+  "schrift": {
+   "min": 12,
+   "wo": "P probe „Probe – speichert nicht“"
+  }
+ },
+ {
+  "schritt": "bild",
+  "name": "19-reduzierte-bewegung-feld.png"
+ },
+ {
+  "schritt": "reduziert",
+  "reiz": "ruhig",
+  "laufend": 0,
+  "ruhe": true,
+  "fehler": []
+ },
+ {
+  "schritt": "bild",
+  "name": "20a-1280-feld.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "20b-1280-schloss-kontext.png"
+ },
+ {
+  "schritt": "1280",
+  "fehler": [],
+  "schrift": {
+   "min": 12,
+   "wo": "P probe „Probe – speichert nicht“"
+  }
+ },
+ {
+  "schritt": "bild",
+  "name": "21a-390-feld.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "21b-390-ort-nah.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "21c-390-ort-ganze-seite.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "21d-390-schloss-oben.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "21e-390-schloss-kontext-stein.png"
+ },
+ {
+  "schritt": "bild",
+  "name": "21f-390-schloss-ganze-seite.png"
+ },
+ {
+  "schritt": "390",
+  "fehler": [],
+  "netz": [],
+  "schrift": {
+   "min": 12,
+   "wo": "P probe „Probe – speichert nicht“"
+  },
+  "ansicht": "schloss",
+  "breite": 390
+ }
+]

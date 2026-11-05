@@ -1,0 +1,284 @@
+[
+ {
+  "k": "B1 Tab-Folge Feld",
+  "v": [
+   "button.ecke-wort lebendig ring=true",
+   "button.ecke-wort normal ring=true",
+   "button.ecke-wort aus ring=true",
+   "button.zahn Lesart ring=true",
+   "button.zahn Beleg ring=true",
+   "button.zahn Grenze ring=true",
+   "button.zahn Wort ring=true",
+   "button.zahn Kontext ring=true",
+   "button.regeln-link Wie die Riegel entstehen → ring=true",
+   "circle.treffer-ort Aufgabenstarre, ADHS · Randp ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Body Doubling, ADHS · Randph ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Delay Aversion, ADHS · Randp ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Differential Susceptibility, ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Gen–Umwelt-Korrelation (rGE) ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Heritabilität ist kein Schic ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Hyperfokus, ADHS · Randphäno ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Reizfilterschwäche, ADHS · R ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Rejection Sensitive Dysphori ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Extreme frühe Umwelt und ADH ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Wartemodus, ADHS · Randphäno ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Zeitblindheit, ADHS · Randph ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Aufgaben bleiben offen, Neur ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Aufmerksamkeit braucht einen ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Erblichkeit in Populationen, ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Gen-Umwelt-Korrelation, Phän ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Hyperfokus (Phänomenatlas),  ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Reize überfluten mich, Neuro ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Unterstützung bleibt ein Ang ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Zeitblindheits-Bericht, Phän ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-ort Zurückweisungssensitivität,  ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-naht Naht zwischen ADHS · Randphä ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-naht Naht zwischen ADHS · Randphä ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-naht Naht zwischen ADHS · Randphä ring=true stroke=rgb(107, 128, 255)",
+   "circle.treffer-naht Naht zwischen ADHS · Randphä ring=true stroke=rgb(107, 128, 255)",
+   "circle.fehlstelle.treffer-fehl Fehlstelle neben Zeitblindhe ring=true stroke=rgb(107, 128, 255)",
+   "circle.fehlstelle.treffer-fehl Fehlstelle neben Gen-Umwelt- ring=true stroke=rgb(107, 128, 255)",
+   "body  ring=false",
+   "button.ecke-wort lebendig ring=true",
+   "button.ecke-wort normal ring=true",
+   "button.ecke-wort aus ring=true"
+  ]
+ },
+ {
+  "k": "B2 Zahn Enter → Fokus",
+  "v": {
+   "fokus": {
+    "el": "body",
+    "ring": false
+   },
+   "voraus": "lesart"
+  }
+ },
+ {
+  "k": "B3 Ort Enter → Fokus",
+  "v": {
+   "fokus": {
+    "el": "circle.treffer-ort",
+    "name": "Aufgabenstarre, ADHS · Randphänomene",
+    "ring": true,
+    "stroke": "rgb(107, 128, 255)",
+    "imBild": true
+   },
+   "wahl": {
+    "art": "ort",
+    "k": "1012"
+   }
+  }
+ },
+ {
+  "k": "B3b Tab nach Ortwahl",
+  "v": [
+   "circle.treffer-ort Body Doubling, ADHS · Randphän ring=true",
+   "circle.treffer-ort Delay Aversion, ADHS · Randphä ring=true",
+   "circle.treffer-ort Differential Susceptibility, A ring=true",
+   "circle.treffer-ort Gen–Umwelt-Korrelation (rGE),  ring=true",
+   "circle.treffer-ort Heritabilität ist kein Schicks ring=true",
+   "circle.treffer-ort Hyperfokus, ADHS · Randphänome ring=true",
+   "circle.treffer-ort Reizfilterschwäche, ADHS · Ran ring=true",
+   "circle.treffer-ort Rejection Sensitive Dysphoria, ring=true",
+   "circle.treffer-ort Extreme frühe Umwelt und ADHD- ring=true",
+   "circle.treffer-ort Wartemodus, ADHS · Randphänome ring=true",
+   "circle.treffer-ort Zeitblindheit, ADHS · Randphän ring=true",
+   "circle.treffer-ort Aufgaben bleiben offen, Neuroa ring=true"
+  ]
+ },
+ {
+  "k": "B4 Dreher Pfeil → Fokus",
+  "v": {
+   "fokus": {
+    "el": "body",
+    "ring": false
+   },
+   "blick": "aussen"
+  }
+ },
+ {
+  "k": "B5 Schloss per Enter",
+  "v": {
+   "ansicht": "schloss",
+   "fokus": {
+    "el": "h2.verbsatz",
+    "name": "Aufgabenstarre · im Original begrifflich benachbar",
+    "ring": false,
+    "imBild": true
+   }
+  }
+ },
+ {
+  "k": "B6 Tab im Schloss",
+  "v": [
+   "button.riegel.riegel-lesart Lesart: greift, Nähe ring=true",
+   "button.riegel.riegel-beleg Beleg: fehlt ring=true",
+   "button.riegel.riegel-grenze Grenze: fehlt ring=true",
+   "button.riegel.riegel-wort Wort: greift, anfangen ring=true",
+   "button.riegel.riegel-kontext Kontext: fehlt ring=true",
+   "button.fundstelle Fundstelle: Aufgabenstarre ring=true",
+   "button.stein-knopf.haupt auflegen ring=true",
+   "button.stein-knopf. wegschieben ring=true",
+   "button.ecke-wort lebendig ring=true",
+   "button.ecke-wort normal ring=true",
+   "button.ecke-wort aus ring=true",
+   "button.zurueck-feld ← zurück ins Feld ring=true",
+   "button.riegel.riegel-lesart Lesart: greift, Nähe ring=true",
+   "button.riegel.riegel-beleg Beleg: fehlt ring=true",
+   "button.riegel.riegel-grenze Grenze: fehlt ring=true",
+   "button.riegel.riegel-wort Wort: greift, anfangen ring=true"
+  ]
+ },
+ {
+  "k": "B7 Riegel Enter → Fokus",
+  "v": {
+   "fokus": {
+    "el": "body",
+    "ring": false
+   },
+   "riegel": "beleg"
+  }
+ },
+ {
+  "k": "B7b danach Tab",
+  "v": {
+   "el": "button.zurueck-feld",
+   "name": "← zurück ins Feld",
+   "ring": true,
+   "imBild": true
+  }
+ },
+ {
+  "k": "B8 auflegen Enter → Fokus",
+  "v": {
+   "fokus": {
+    "el": "body",
+    "ring": false
+   }
+  }
+ },
+ {
+  "k": "B9 eingerastet per Tastatur",
+  "v": {
+   "z": {
+    "i": 1,
+    "eingerastet": true,
+    "entscheidung": null,
+    "kitt": false,
+    "wieder": false,
+    "kontext": "wenn es um den Start geht",
+    "verlauf": [
+     "ein"
+    ]
+   },
+   "fokus": {
+    "el": "body",
+    "ring": false
+   }
+  }
+ },
+ {
+  "k": "B10 Escape im Eingabefeld",
+  "v": {
+   "hatFeld": 1,
+   "ansicht": "feld"
+  }
+ },
+ {
+  "k": "B11 zurück per Escape → Fokus",
+  "v": {
+   "ansicht": "feld",
+   "wahl": {
+    "art": "ort",
+    "k": "1012"
+   },
+   "fokus": {
+    "el": "body",
+    "ring": false
+   }
+  }
+ },
+ {
+  "k": "B11b nächster Tab",
+  "v": {
+   "el": "button.ecke-wort",
+   "name": "lebendig",
+   "ring": true,
+   "imBild": true
+  }
+ },
+ {
+  "k": "B12 Ecke Enter → Fokus",
+  "v": {
+   "fokus": {
+    "el": "body",
+    "ring": false
+   },
+   "reiz": "ruhig"
+  }
+ },
+ {
+  "k": "B13 Naht Enter",
+  "v": {
+   "wahl": {
+    "art": "naht",
+    "k": "ADHS · Randphänomene|Neuroatlas"
+   },
+   "fokus": {
+    "el": "circle.treffer-naht",
+    "name": "Naht zwischen ADHS · Randphänomene und Neuroatlas ",
+    "ring": true,
+    "stroke": "rgb(107, 128, 255)",
+    "imBild": true
+   }
+  }
+ },
+ {
+  "k": "B14 Fehl Enter",
+  "v": {
+   "wahl": {
+    "art": "fehl",
+    "k": 0
+   },
+   "fokus": {
+    "el": "circle.fehlstelle.treffer-fehl",
+    "name": "Fehlstelle neben Zeitblindheits-Bericht und Hyperf",
+    "ring": true,
+    "stroke": "rgb(107, 128, 255)",
+    "imBild": true
+   }
+  }
+ },
+ {
+  "k": "B Ende",
+  "v": {
+   "fehler": [],
+   "audit": {
+    "klein": [],
+    "ueber": [
+     "div.ort-kopf „Fehlstelle · Phänomenatl“ × tspan. „Wartemodus“ (84% des kleineren)",
+     "p.spalte-lead.klein „Zeitblindheits-Bericht u“ × tspan. „Body Doubling“ (100% des kleineren)",
+     "p.dock-text „Die hohle Stelle ist kei“ × tspan. „Reizfilterschwäche“ (100% des kleineren)",
+     "text.gebiet-name „FORSCHUNG & EINORDNUNG“ × div.meldung.an „Erloschen – die Grenze i“ (100% des kleineren)",
+     "tspan. „Aufgaben bleiben“ × text.naht-text „Zwischen ADHS und Neuroa“ (33% des kleineren)"
+    ],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   },
+   "ziele": [
+    "button.ecke-wort 35×23 „ruhig“",
+    "button.ecke-wort 46×23 „normal“",
+    "button.ecke-wort 24×23 „aus“",
+    "path.arm-treffer 18×207 „Fuge betreten: Differential Su“"
+   ]
+  }
+ }
+]

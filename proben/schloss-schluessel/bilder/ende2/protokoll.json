@@ -1,0 +1,457 @@
+[
+ {
+  "schritt": "01 Start",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "lesart": "Gegenpol",
+  "zaehne": {
+   "lesart": false,
+   "beleg": false,
+   "grenze": false,
+   "wort": false
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol · ohne Quelle · ohne Grenze · kein Wort gemeinsam"
+  ],
+  "pos": 274,
+  "profil": {
+   "umfang": "kern",
+   "niveau": "original",
+   "reiz": "lebendig",
+   "ton": false,
+   "schrift": "normal"
+  }
+ },
+ {
+  "schritt": "02 Drei Zähne",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "lesart": "Gegenpol",
+  "zaehne": {
+   "lesart": false,
+   "beleg": true,
+   "grenze": true,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol · ohne Quelle · ohne Grenze · kein Wort gemeinsam",
+   "Grenze: gilt nur, wenn es um den Anfang einer Aufgabe geht",
+   "Beleg: ADxS-Forum, Mondkatze aus Aufgabenstarre, von dir herangezogen",
+   "Wort: „Tun“ = „Tätigkeit“, deine Übersetzung"
+  ],
+  "pos": 274
+ },
+ {
+  "schritt": "04 Feld, Lesart",
+  "ansicht": "feld",
+  "feldWahl": "Aufgabenstarre",
+  "voraus": "lesart",
+  "licht": [
+   "Aufgabenstarre – Hyperfokus"
+  ],
+  "schloss": "Aufgabenstarre",
+  "schluessel": "Hyperfokus",
+  "profil": {
+   "umfang": "kern",
+   "niveau": "original",
+   "reiz": "lebendig",
+   "ton": false,
+   "schrift": "normal"
+  }
+ },
+ {
+  "schritt": "05 Feld, Wort",
+  "ansicht": "feld",
+  "feldWahl": "Aufgabenstarre",
+  "voraus": "wort",
+  "licht": [
+   "Reizfilterschwäche – Reize überfluten mich"
+  ],
+  "schloss": "Aufgabenstarre",
+  "schluessel": "Hyperfokus",
+  "profil": {
+   "umfang": "kern",
+   "niveau": "original",
+   "reiz": "lebendig",
+   "ton": false,
+   "schrift": "normal"
+  }
+ },
+ {
+  "schritt": "05c Feld, Grenze",
+  "ansicht": "feld",
+  "feldWahl": "Aufgabenstarre",
+  "voraus": "grenze",
+  "licht": [],
+  "schloss": "Aufgabenstarre",
+  "schluessel": "Hyperfokus",
+  "profil": {
+   "umfang": "kern",
+   "niveau": "original",
+   "reiz": "lebendig",
+   "ton": false,
+   "schrift": "normal"
+  },
+  "satz": "Keine Fuge rastet allein durch eine Grenze ein. Schwächer leuchtet, wo eine Grenze und genau eine weitere Voraussetzung fehlen."
+ },
+ {
+  "schritt": "06 Ort gewählt",
+  "ansicht": "feld",
+  "feldWahl": "Zeitblindheit",
+  "voraus": "wort",
+  "licht": [
+   "Reizfilterschwäche – Reize überfluten mich"
+  ],
+  "schloss": "Aufgabenstarre",
+  "schluessel": "Hyperfokus",
+  "profil": {
+   "umfang": "kern",
+   "niveau": "original",
+   "reiz": "lebendig",
+   "ton": false,
+   "schrift": "normal"
+  }
+ },
+ {
+  "schritt": "06a Auswahl nach Schloss und zurück",
+  "feldWahl": "Zeitblindheit"
+ },
+ {
+  "schritt": "08 Betreten",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "lesart": "Gegenpol",
+  "zaehne": {
+   "lesart": false,
+   "beleg": true,
+   "grenze": true,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol · ohne Quelle · ohne Grenze · kein Wort gemeinsam",
+   "Grenze: gilt nur, wenn es um den Anfang einer Aufgabe geht",
+   "Beleg: ADxS-Forum, Mondkatze aus Aufgabenstarre, von dir herangezogen",
+   "Wort: „Tun“ = „Tätigkeit“, deine Übersetzung"
+  ],
+  "pos": 274,
+  "ansicht": "schloss",
+  "feldWahl": "Zeitblindheit",
+  "voraus": "lesart",
+  "licht": [
+   "Aufgabenstarre – Hyperfokus"
+  ],
+  "schloss": "Aufgabenstarre",
+  "schluessel": "Hyperfokus",
+  "profil": {
+   "umfang": "kern",
+   "niveau": "original",
+   "reiz": "lebendig",
+   "ton": false,
+   "schrift": "normal"
+  }
+ },
+ {
+  "schritt": "09 Eingerastet",
+  "aktiv": "Hyperfokus",
+  "eingerastet": true,
+  "modus": null,
+  "lesart": "Nähe, nicht Identität",
+  "zaehne": {
+   "lesart": true,
+   "beleg": true,
+   "grenze": true,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol · ohne Quelle · ohne Grenze · kein Wort gemeinsam",
+   "Grenze: gilt nur, wenn es um den Anfang einer Aufgabe geht",
+   "Beleg: ADxS-Forum, Mondkatze aus Aufgabenstarre, von dir herangezogen",
+   "Wort: „Tun“ = „Tätigkeit“, deine Übersetzung",
+   "Lesart: Nähe, nicht Identität – deine Lesart; derselbe Satz sagt auch „Gegenteil am Start“",
+   "eingerastet: Nähe, nicht Identität · ADxS-Forum, Mondkatze · deine Grenze · Tun = Tätigkeit"
+  ],
+  "pos": 10
+ },
+ {
+  "schritt": "10 Feld nach Einrasten",
+  "ansicht": "feld",
+  "feldWahl": "Zeitblindheit",
+  "voraus": "lesart",
+  "licht": [],
+  "schloss": "Aufgabenstarre",
+  "schluessel": "Hyperfokus",
+  "profil": {
+   "umfang": "kern",
+   "niveau": "original",
+   "reiz": "lebendig",
+   "ton": false,
+   "schrift": "normal"
+  }
+ },
+ {
+  "schritt": "11 Anderes Paar",
+  "ansicht": "schloss",
+  "feldWahl": "Zeitblindheit",
+  "voraus": "wort",
+  "licht": [
+   "Reizfilterschwäche – Reize überfluten mich"
+  ],
+  "schloss": "Reizfilterschwäche",
+  "schluessel": "Reize überfluten mich",
+  "profil": {
+   "umfang": "kern",
+   "niveau": "original",
+   "reiz": "lebendig",
+   "ton": false,
+   "schrift": "normal"
+  }
+ },
+ {
+  "schritt": "12 Erloschen",
+  "aktiv": "Hyperfokus",
+  "eingerastet": false,
+  "modus": null,
+  "lesart": "Nähe, nicht Identität",
+  "zaehne": {
+   "lesart": true,
+   "beleg": false,
+   "grenze": true,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: Gegenpol · ohne Quelle · ohne Grenze · kein Wort gemeinsam",
+   "Grenze: gilt nur, wenn es um den Anfang einer Aufgabe geht",
+   "Beleg: ADxS-Forum, Mondkatze aus Aufgabenstarre, von dir herangezogen",
+   "Wort: „Tun“ = „Tätigkeit“, deine Übersetzung",
+   "Lesart: Nähe, nicht Identität – deine Lesart; derselbe Satz sagt auch „Gegenteil am Start“",
+   "eingerastet: Nähe, nicht Identität · ADxS-Forum, Mondkatze · deine Grenze · Tun = Tätigkeit",
+   "erloschen – Beleg zurückgenommen: ADxS-Forum, Mondkatze"
+  ],
+  "pos": 273.9999496571651
+ },
+ {
+  "schritt": "13 Spur",
+  "reihen": 1,
+  "ansicht": "spur"
+ },
+ {
+  "schritt": "14 Zugang offen",
+  "ueberdecktBuehne": 0,
+  "schrift": {
+   "min": 12,
+   "wo": "textPath"
+  }
+ },
+ {
+  "schritt": "15 einfach/kern",
+  "umfang": "kern",
+  "niveau": "einfach",
+  "reiz": "lebendig",
+  "ton": false,
+  "schrift": "normal"
+ },
+ {
+  "schritt": "16b einfach/ganz",
+  "ueberdeckungTextBund": 0,
+  "schrift": {
+   "min": 12,
+   "wo": "textPath"
+  }
+ },
+ {
+  "schritt": "17 original/ganz",
+  "umfang": "ganz",
+  "niveau": "original",
+  "reiz": "ruhig",
+  "ton": false,
+  "schrift": "normal"
+ },
+ {
+  "schritt": "17b ganzer Text",
+  "ansicht": "feld",
+  "feldWahl": "Aufgabenstarre",
+  "voraus": "wort",
+  "licht": [
+   "Reizfilterschwäche – Reize überfluten mich"
+  ],
+  "schloss": "Aufgabenstarre",
+  "schluessel": "Hyperfokus",
+  "profil": {
+   "umfang": "ganz",
+   "niveau": "original",
+   "reiz": "ruhig",
+   "ton": false,
+   "schrift": "normal"
+  }
+ },
+ {
+  "schritt": "18/19 Reiz",
+  "lebendigLaufendeAnimationen": 43,
+  "ruhigLaufendeAnimationen": 0,
+  "profil": {
+   "umfang": "mehr",
+   "niveau": "alltag",
+   "reiz": "ruhig",
+   "ton": true,
+   "schrift": "normal"
+  }
+ },
+ {
+  "schritt": "20b gross + alles",
+  "ueberdeckungTextBund": 0,
+  "schrift": {
+   "min": 15,
+   "wo": "textPath"
+  }
+ },
+ {
+  "schritt": "Hauptweg 1440",
+  "fehler": [],
+  "netz": []
+ },
+ {
+  "schritt": "Video",
+  "datei": "weg2.webm"
+ },
+ {
+  "schritt": "1280",
+  "fehler": [],
+  "netz": []
+ },
+ {
+  "schritt": "390 Kneifen",
+  "ansicht": "feld",
+  "feldWahl": null,
+  "voraus": null,
+  "licht": [],
+  "schloss": "Aufgabenstarre",
+  "schluessel": "Delay Aversion",
+  "profil": {
+   "umfang": "kern",
+   "niveau": "original",
+   "reiz": "lebendig",
+   "ton": false,
+   "schrift": "normal"
+  }
+ },
+ {
+  "schritt": "390 Betreten",
+  "ansicht": "schloss",
+  "feldWahl": null,
+  "voraus": "wort",
+  "licht": [
+   "Reizfilterschwäche – Reize überfluten mich"
+  ],
+  "schloss": "Reizfilterschwäche",
+  "schluessel": "Reize überfluten mich",
+  "profil": {
+   "umfang": "kern",
+   "niveau": "original",
+   "reiz": "lebendig",
+   "ton": false,
+   "schrift": "normal"
+  }
+ },
+ {
+  "schritt": "390 Eingerastet",
+  "aktiv": "Reize überfluten mich",
+  "eingerastet": true,
+  "modus": null,
+  "lesart": "Nähe",
+  "zaehne": {
+   "lesart": true,
+   "beleg": true,
+   "grenze": true,
+   "wort": true
+  },
+  "verlauf": [
+   "zuerst offen: Nähe · mit Quelle · Grenze benannt · kein Wort gemeinsam",
+   "Wort: „Geräusche“ = „Reizen“, deine Übersetzung",
+   "eingerastet: Nähe · eigene Quellen · Grenze im Bestand · Geräusche = Reizen"
+  ],
+  "pos": 6.348837209302325
+ },
+ {
+  "schritt": "27b 390 einfach/alles",
+  "ueberdeckungTextBund": 0,
+  "schrift": {
+   "min": 12,
+   "wo": "SPAN"
+  }
+ },
+ {
+  "schritt": "27c 390 gross",
+  "ueberdeckungTextBund": 0,
+  "griffUeberTitel": 0
+ },
+ {
+  "schritt": "27d 390 Feld gross",
+  "ansicht": "feld",
+  "feldWahl": "Zeitblindheit",
+  "voraus": "wort",
+  "licht": [],
+  "schloss": "Reizfilterschwäche",
+  "schluessel": "Reize überfluten mich",
+  "profil": {
+   "umfang": "kern",
+   "niveau": "original",
+   "reiz": "ruhig",
+   "ton": false,
+   "schrift": "gross"
+  },
+  "schrift": {
+   "min": 15,
+   "wo": "f-name-titel"
+  }
+ },
+ {
+  "schritt": "390 Berührung",
+  "ansicht": "feld",
+  "feldWahl": "Zeitblindheit",
+  "voraus": "wort",
+  "licht": [],
+  "schloss": "Reizfilterschwäche",
+  "schluessel": "Reize überfluten mich",
+  "profil": {
+   "umfang": "mehr",
+   "niveau": "einfach",
+   "reiz": "ruhig",
+   "ton": false,
+   "schrift": "normal"
+  },
+  "fehler": [],
+  "netz": []
+ },
+ {
+  "schritt": "Reduzierte Bewegung",
+  "reizBeimStart": "ruhig",
+  "laufendeAnimationen": 0,
+  "ansicht": "feld",
+  "fehler": []
+ },
+ {
+  "schritt": "Tastatur",
+  "nachGriff": "feld",
+  "ersterFokus": "Aufgabenstarre, ADHS · Randphänomene, gewählt. Enter wählt, Pfeiltasten wandern zum nächsten Zeichen.",
+  "gewaehlt": "Body Doubling",
+  "tabsBisFuge": 13,
+  "fuge": "Fuge Aufgabenstarre und Body Doubling: offen. Enter betritt sie.",
+  "nachEnter": "schloss: Aufgabenstarre – Body Doubling",
+  "nachMinus": "feld",
+  "nachPlus": "schloss",
+  "nachMinus2": "feld",
+  "niveau": "einfach",
+  "fehler": []
+ },
+ {
+  "schritt": "Ohne zugang-texte.js",
+  "hinweis": "einfache Fassung fehlt noch – hier steht das Original",
+  "dateiHinweis": "Einfache Fassungen fehlen noch: die Datei mit den Zugangstexten ist nicht da. Überall steht das Original.",
+  "erwarteterLadefehler": 1,
+  "andereFehler": [],
+  "netz": []
+ }
+]

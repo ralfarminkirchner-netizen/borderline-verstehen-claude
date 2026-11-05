@@ -1,0 +1,543 @@
+[
+ {
+  "k": "C0 390 start",
+  "v": {
+   "audit": {
+    "klein": [],
+    "ueber": [],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   },
+   "ziele": [
+    "button.ecke-wort 57×23 „lebendig“",
+    "button.ecke-wort 46×23 „normal“",
+    "button.ecke-wort 24×23 „aus“",
+    "path.arm-treffer 15×99 „Fuge betreten: Aufgabenstarre “",
+    "path.arm-treffer 71×19 „Fuge betreten: Aufgabenstarre “",
+    "path.arm-treffer 42×15 „Fuge betreten: Delay Aversion “",
+    "path.arm-treffer 83×8 „Fuge betreten: Delay Aversion “",
+    "path.arm-treffer 5×62 „Fuge betreten: Differential Su“",
+    "path.arm-treffer 33×21 „Fuge betreten: Gen–Umwelt-Korr“",
+    "path.arm-treffer 10×57 „Fuge betreten: Gen–Umwelt-Korr“",
+    "path.arm-treffer 44×8 „Fuge betreten: Heritabilität i“",
+    "path.arm-treffer 15×83 „Fuge betreten: Hyperfokus und “",
+    "path.arm-treffer 93×16 „Fuge betreten: Wartemodus und “",
+    "path.arm-treffer 17×29 „Fuge betreten: Aufgabenstarre “",
+    "path.arm-treffer 13×32 „Fuge betreten: Hyperfokus und “"
+   ]
+  }
+ },
+ {
+  "k": "C1 Ort getippt",
+  "v": {
+   "wahl": {
+    "art": "ort",
+    "k": "1012"
+   },
+   "audit": {
+    "klein": [],
+    "ueber": [
+     "h1. „Schloss und Schlüssel“ × tspan. „Differential“ (20% des kleineren)",
+     "p.kopf-unter „Unter welchen Voraussetz“ × tspan. „Differential“ (49% des kleineren)",
+     "p.kopf-unter „Unter welchen Voraussetz“ × tspan. „Susceptibility“ (100% des kleineren)",
+     "p.probe „Probe – speichert nicht“ × tspan. „Delay Aversion“ (57% des kleineren)",
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „im Original begrifflich “ (100% des kleineren)"
+    ],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   }
+  }
+ },
+ {
+  "k": "C2 Schloss",
+  "v": {
+   "ansicht": "schloss",
+   "audit": {
+    "klein": [],
+    "ueber": [
+     "span.vs-ort „Aufgabenstarre“ × span.vs-verb „im Original begrifflich “ (100% des kleineren)",
+     "span.vs-punkt „·“ × span.vs-verb „im Original begrifflich “ (100% des kleineren)",
+     "span.vs-verb „im Original begrifflich “ × span.vs-punkt „·“ (100% des kleineren)"
+    ],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   },
+   "ziele": [
+    "button.ecke-wort 57×23 „lebendig“",
+    "button.ecke-wort 46×23 „normal“",
+    "button.ecke-wort 24×23 „aus“"
+   ]
+  }
+ },
+ {
+  "k": "C3 vor Ziehen",
+  "v": {
+   "stein": {
+    "x": 16,
+    "y": 520.921875,
+    "width": 358,
+    "height": 123.1875
+   },
+   "riegel": {
+    "x": 112,
+    "y": -6.6875,
+    "width": 50,
+    "height": 250
+   },
+   "riegelImBild": false,
+   "touchAction": "none"
+  }
+ },
+ {
+  "k": "C4 nach Fingerziehen",
+  "v": {
+   "zaehne": {
+    "lesart": true,
+    "beleg": true,
+    "grenze": false,
+    "wort": true,
+    "kontext": false
+   },
+   "scrollVor": [
+    633,
+    0
+   ],
+   "scrollNach": [
+    444,
+    0
+   ]
+  }
+ },
+ {
+  "k": "C5 nach Tippen",
+  "v": {
+   "z": {
+    "i": 1,
+    "eingerastet": false,
+    "entscheidung": null,
+    "kitt": false,
+    "wieder": false,
+    "kontext": null,
+    "verlauf": []
+   },
+   "zaehne": {
+    "lesart": true,
+    "beleg": true,
+    "grenze": true,
+    "wort": true,
+    "kontext": false
+   },
+   "audit": {
+    "klein": [],
+    "ueber": [],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   }
+  }
+ },
+ {
+  "k": "C6 zurück",
+  "v": {
+   "z": {
+    "ansicht": "feld",
+    "wahl": {
+     "art": "ort",
+     "k": "1012"
+    },
+    "voraus": null,
+    "aktiv": 1,
+    "riegel": "kontext",
+    "paare": [
+     {
+      "i": 0,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 1,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 2,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 3,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 4,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 5,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 6,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 7,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 8,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 9,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 10,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 11,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 12,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 13,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 14,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 15,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 16,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 17,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 18,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 19,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 20,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 21,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 22,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 23,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 24,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 25,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 26,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 27,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 28,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 29,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 30,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 31,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 32,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 33,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     }
+    ]
+   },
+   "audit": {
+    "klein": [],
+    "ueber": [
+     "h1. „Schloss und Schlüssel“ × tspan. „Differential“ (36% des kleineren)",
+     "p.kopf-unter „Unter welchen Voraussetz“ × tspan. „Differential“ (33% des kleineren)",
+     "p.kopf-unter „Unter welchen Voraussetz“ × tspan. „Susceptibility“ (100% des kleineren)",
+     "p.probe „Probe – speichert nicht“ × tspan. „Delay Aversion“ (70% des kleineren)",
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „im Original begrifflich “ (100% des kleineren)"
+    ],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   }
+  }
+ },
+ {
+  "k": "C7 Naht getippt",
+  "v": {
+   "wahl": {
+    "art": "naht",
+    "k": "ADHS · Randphänomene|Neuroatlas"
+   },
+   "n": {
+    "x": 203.78551813159737,
+    "y": 424.6716735414723,
+    "name": "ADHS · Randphänomene | Neuroatlas"
+   }
+  }
+ },
+ {
+  "k": "C Ende",
+  "v": {
+   "fehler": [],
+   "netz": [],
+   "ziele": [
+    "button.ecke-wort 57×23 „lebendig“",
+    "button.ecke-wort 46×23 „normal“",
+    "button.ecke-wort 24×23 „aus“",
+    "path.arm-treffer 21×138 „Fuge betreten: Aufgabenstarre “",
+    "path.arm-treffer 60×22 „Fuge betreten: Delay Aversion “",
+    "path.arm-treffer 116×11 „Fuge betreten: Delay Aversion “",
+    "path.arm-treffer 7×87 „Fuge betreten: Differential Su“",
+    "path.arm-treffer 14×81 „Fuge betreten: Gen–Umwelt-Korr“",
+    "path.arm-treffer 64×12 „Fuge betreten: Heritabilität i“",
+    "path.arm-treffer 21×116 „Fuge betreten: Hyperfokus und “",
+    "path.arm-treffer 130×22 „Fuge betreten: Wartemodus und “",
+    "path.arm-treffer 20×46 „Fuge betreten: Hyperfokus und “"
+   ]
+  }
+ }
+]

@@ -1,0 +1,1089 @@
+[
+ {
+  "k": "F-A0 start",
+  "v": {
+   "z": {
+    "ansicht": "feld",
+    "wahl": null,
+    "voraus": null,
+    "aktiv": null,
+    "riegel": null,
+    "paare": [
+     {
+      "i": 0,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 1,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 2,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 3,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 4,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 5,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 6,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 7,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 8,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 9,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 10,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 11,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 12,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 13,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 14,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 15,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 16,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 17,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 18,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 19,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 20,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 21,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 22,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 23,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 24,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 25,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 26,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 27,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 28,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 29,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 30,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 31,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 32,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 33,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     }
+    ]
+   },
+   "audit": {
+    "klein": [],
+    "ueber": [],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   },
+   "ziele": [
+    "button.ecke-wort 57×23 „lebendig“",
+    "button.ecke-wort 46×23 „normal“",
+    "button.ecke-wort 24×23 „aus“",
+    "path.arm-treffer 196×19 „Fuge betreten: Delay Aversion “",
+    "path.arm-treffer 13×148 „Fuge betreten: Differential Su“",
+    "path.arm-treffer 109×20 „Fuge betreten: Heritabilität i“"
+   ]
+  }
+ },
+ {
+  "k": "F-A1 Zähne beim Start",
+  "v": {
+   "Lesart": {
+    "text": "Gerade fehlt keinem Arm Lesart als letzter Zahn.",
+    "liste": 0
+   },
+   "Beleg": {
+    "text": "Gerade fehlt keinem Arm Beleg als letzter Zahn.",
+    "liste": 0
+   },
+   "Grenze": {
+    "text": "Gerade fehlt keinem Arm Grenze als letzter Zahn.",
+    "liste": 0
+   },
+   "Wort": {
+    "text": "Keinem Arm fehlt nur Wort. Schwach leuchten die, denen dazu genau ein weiterer Zahn fehlt.",
+    "liste": 1
+   },
+   "Kontext": {
+    "text": "Keinem Arm fehlt nur Kontext. Schwach leuchten die, denen dazu genau ein weiterer Zahn fehlt.",
+    "liste": 1
+   }
+  }
+ },
+ {
+  "k": "F-A2 Ort Aufgabenstarre",
+  "v": {
+   "z": {
+    "art": "ort",
+    "k": "1012"
+   },
+   "audit": {
+    "klein": [],
+    "ueber": [
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „im Original begrifflich “ (100% des kleineren)",
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „im Original begrifflich “ (100% des kleineren)",
+     "span.ps-verb „im Original begrifflich “ × span.ps-ort „Body Doubling“ (51% des kleineren)",
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „muss unterschieden werde“ (100% des kleineren)",
+     "span.ps-verb „muss unterschieden werde“ × span.ps-ort „Delay Aversion“ (100% des kleineren)",
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „im Original begrifflich “ (100% des kleineren)",
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „im Original Gegenpol zu“ (100% des kleineren)",
+     "span.ps-verb „im Original Gegenpol zu“ × span.ps-ort „Hyperfokus“ (100% des kleineren)",
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „muss unterschieden werde“ (100% des kleineren)",
+     "span.ps-verb „muss unterschieden werde“ × span.ps-ort „Aufgaben bleiben offen“ (96% des kleineren)"
+    ],
+    "aus": [
+     "tspan.: Gen-Umwelt-Korrelation"
+    ],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   }
+  }
+ },
+ {
+  "k": "F-A3 Dreher/Umfang",
+  "v": {
+   "ki": 1,
+   "weiter": 1,
+   "blick": "von außen unterschieden⟳",
+   "niveau": "in Alltagssprache⟳",
+   "audit": {
+    "klein": [],
+    "ueber": [
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „im Original begrifflich “ (100% des kleineren)",
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „im Original begrifflich “ (100% des kleineren)",
+     "span.ps-verb „im Original begrifflich “ × span.ps-ort „Body Doubling“ (51% des kleineren)",
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „muss unterschieden werde“ (100% des kleineren)",
+     "span.ps-verb „muss unterschieden werde“ × span.ps-ort „Delay Aversion“ (100% des kleineren)",
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „im Original begrifflich “ (100% des kleineren)",
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „im Original Gegenpol zu“ (100% des kleineren)",
+     "span.ps-verb „im Original Gegenpol zu“ × span.ps-ort „Hyperfokus“ (100% des kleineren)",
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „muss unterschieden werde“ (100% des kleineren)",
+     "span.ps-verb „muss unterschieden werde“ × span.ps-ort „Aufgaben bleiben offen“ (96% des kleineren)"
+    ],
+    "aus": [
+     "tspan.: Gen-Umwelt-Korrelation"
+    ],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   }
+  }
+ },
+ {
+  "k": "F-A4 Schloss",
+  "v": {
+   "z": {
+    "ansicht": "schloss",
+    "wahl": {
+     "art": "ort",
+     "k": "1012"
+    },
+    "voraus": null,
+    "aktiv": 1,
+    "riegel": "beleg",
+    "paare": [
+     {
+      "i": 0,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 1,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 2,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 3,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 4,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 5,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 6,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 7,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 8,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 9,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 10,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 11,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 12,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 13,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 14,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 15,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 16,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 17,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 18,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 19,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 20,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 21,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 22,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 23,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 24,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 25,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 26,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 27,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 28,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 29,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 30,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 31,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 32,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     },
+     {
+      "i": 33,
+      "eingerastet": false,
+      "entscheidung": null,
+      "kitt": false,
+      "wieder": false,
+      "kontext": null,
+      "verlauf": []
+     }
+    ]
+   },
+   "fokus": {
+    "el": "h2.verbsatz",
+    "name": "Aufgabenstarre · im Original begrifflich benachbar",
+    "ring": false,
+    "imBild": true
+   },
+   "audit": {
+    "klein": [],
+    "ueber": [],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   },
+   "ziele": [
+    "button.ecke-wort 57×23 „lebendig“",
+    "button.ecke-wort 46×23 „normal“",
+    "button.ecke-wort 24×23 „aus“",
+    "button.fundstelle 158×17 „Fundstelle: Aufgabenstarre“",
+    "button.stein-knopf 57×23 „auflegen“",
+    "button.stein-knopf 86×23 „wegschieben“"
+   ]
+  }
+ },
+ {
+  "k": "F-A5 Beleg gezogen",
+  "v": {
+   "zaehne": {
+    "lesart": true,
+    "beleg": true,
+    "grenze": false,
+    "wort": true,
+    "kontext": false
+   }
+  }
+ },
+ {
+  "k": "F-A6 Grenze wegschieben",
+  "v": {
+   "wegZahl": [
+    "Vorgeschlagener redaktioneller Bezug; keine identi",
+    "Keine Diagnose und kein Nachweis eines eigenständi",
+    "Alltagsbeschreibung, kein im Original validiertes ",
+    "Vorgeschlagener redaktioneller Bezug; keine identi"
+   ],
+   "danach": "VERSUCH · GRENZE\n\nWo endet die Aussage dieser Fuge? Lege einen Stein auf den Riegel.\n\nVorschlag aus dem Wortlaut – gestrichelt, bis du ihn auflegst\n\nKeine Diagnose und kein Nachweis eines eigenständig validierten Konstrukts.\n\naus Aufgabenstarre · Aussagegrenze\nauflegen\nwegschieben\n\nMehr Vorschläge gibt der Wortlaut nicht her.\n\noder ein eigenes Wort ablegen\n↵ legt ab"
+  }
+ },
+ {
+  "k": "F-A7 eingerastet?",
+  "v": {
+   "kvs": 0,
+   "z": {
+    "i": 1,
+    "eingerastet": true,
+    "entscheidung": null,
+    "kitt": false,
+    "wieder": false,
+    "kontext": "wenn es um den Start geht",
+    "verlauf": [
+     "ein"
+    ]
+   },
+   "ansage": "Eingerastet – unter „wenn es um den Start geht“. Passung ist deine Lesart, kein fachlicher Befund.",
+   "wirkung": "WIRKUNG\n\neingerastet\n\nunter „wenn es um den Start geht“ · deine Lesart, kein fachlicher Befund\n\nGleicher Gedanke? Entscheide, was daraus wird:\n\nFür meinen Weg fassen\n\nDer Arm bleibt eingehakt und wird in deinem Feld golden unterlegt – nur in dieser offenen Seite.\n\nBestreiten\n\nDie Verbindung löst sich wieder. Am Arm bleibt ein ruhiger Querstrich: hier hast du widersprochen.\n\nOffen lassen\n\nBleibt eingehakt, mit einem offenen Ring um den Knoten: weder Zustimmung noch Widerspruch.\n\nAN DIESER FUGE\njetzt\neingerastet unter „wenn es um den Start geht“",
+   "audit": {
+    "klein": [],
+    "ueber": [],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   }
+  }
+ },
+ {
+  "k": "F-A8 Entscheidungen",
+  "v": {
+   "w1": "WIRKUNG\n\neingerastet\n\nunter „wenn es um den Start geht“ · deine Lesart, kein fachlicher Befund\n\nFür meinen Weg fassen: Der Arm bleibt eingehakt und wird in deinem Feld golden unterlegt – nur in dieser",
+   "nachBestritten": "WIRKUNG\n\nbestritten\n\nDie Verbindung hat sich gelöst. Lege eine andere Bedingung auf, um sie unter neuer Lage noch einmal zu prüfen.\n\nAN DIESER FUGE\nzuerst\neingerastet unter „wenn es um den Start geht“\ndann\nfür deinen Weg gefasst\ndann\noffen gelassen\njetzt\nbestritten – die Verbindung hat sich gelöst",
+   "z": {
+    "i": 1,
+    "eingerastet": false,
+    "entscheidung": "bestritten",
+    "kitt": false,
+    "wieder": false,
+    "kontext": "wenn es um den Start geht",
+    "verlauf": [
+     "ein",
+     "gefasst",
+     "offen",
+     "bestritten"
+    ]
+   }
+  }
+ },
+ {
+  "k": "F-A9 nach Bestreiten neu",
+  "v": {
+   "nachAb": {
+    "i": 1,
+    "eingerastet": false,
+    "entscheidung": null,
+    "kitt": false,
+    "wieder": false,
+    "kontext": null,
+    "verlauf": [
+     "ein",
+     "gefasst",
+     "offen",
+     "bestritten"
+    ]
+   },
+   "danach": {
+    "i": 1,
+    "eingerastet": true,
+    "entscheidung": null,
+    "kitt": false,
+    "wieder": true,
+    "kontext": "bei Müdigkeit",
+    "verlauf": [
+     "ein",
+     "gefasst",
+     "offen",
+     "bestritten",
+     "wieder"
+    ]
+   },
+   "wirkung": "WIRKUNG\n\nwieder eingerastet\n\nunter „bei Müdigkeit“ · deine Lesart, kein fachlicher Befund\n\nGleicher Gedanke? Entscheide, was daraus wird:\n\nFür meinen Weg fassen\n\nDer Arm bleibt eingehakt und wird in deinem Feld golden unterlegt – nur in dieser offenen Seite.\n\nBestreiten\n\nDie Verbindung löst sich wie"
+  }
+ },
+ {
+  "k": "F-A10 erloschen",
+  "v": {
+   "z": {
+    "i": 1,
+    "eingerastet": false,
+    "entscheidung": null,
+    "kitt": true,
+    "wieder": true,
+    "kontext": null,
+    "verlauf": [
+     "ein",
+     "gefasst",
+     "offen",
+     "bestritten",
+     "wieder",
+     "erloschen"
+    ]
+   },
+   "wirkung": "WIRKUNG\n\nerloschen\n\nEs fehlt noch: Kontext.\n\nAN DIESER FUGE\nzuerst\noffen gelassen\ndann\nbestritten – die Verbindung hat sich gelöst\ndann\nwieder eingerastet unter „bei Müdigkeit“\njetzt\nerloschen: die Bedingung ist weggenommen, die Lage hat sich geändert",
+   "audit": {
+    "klein": [],
+    "ueber": [],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   }
+  }
+ },
+ {
+  "k": "F-A11 wieder",
+  "v": {
+   "z": {
+    "i": 1,
+    "eingerastet": true,
+    "entscheidung": null,
+    "kitt": true,
+    "wieder": true,
+    "kontext": "am Morgen",
+    "verlauf": [
+     "ein",
+     "gefasst",
+     "offen",
+     "bestritten",
+     "wieder",
+     "erloschen",
+     "wieder"
+    ]
+   },
+   "wirkung": "WIRKUNG\n\nwieder eingerastet\n\nunter „am Morgen“ · deine Lesart, kein fachlicher Befund\n\nGleicher Gedanke? Entscheide, was daraus wird:\n\nFür meinen Weg fassen\n\nDer Arm bleibt eingehakt und wird in deinem Feld golden unterlegt – nur in dieser offenen Seite.\n\nBestreiten\n\nDie Verbindung löst sich wieder."
+  }
+ },
+ {
+  "k": "F-A12 Lesart/Wort",
+  "v": {
+   "dreh": 1,
+   "woerter": 33,
+   "versuch": "VERSUCH · WORT\n\nBeide Kurztexte teilen ein Wort: „anfangen“. Der Riegel greift von selbst.",
+   "audit": {
+    "klein": [],
+    "ueber": [],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   }
+  }
+ },
+ {
+  "k": "F-A13 zurück im Feld",
+  "v": {
+   "wahl": {
+    "art": "ort",
+    "k": "1012"
+   },
+   "paar": {
+    "i": 1,
+    "eingerastet": true,
+    "entscheidung": null,
+    "kitt": true,
+    "wieder": true,
+    "kontext": "am Morgen",
+    "verlauf": [
+     "ein",
+     "gefasst",
+     "offen",
+     "bestritten",
+     "wieder",
+     "erloschen",
+     "wieder"
+    ]
+   },
+   "fokus": {
+    "el": "body",
+    "ring": false
+   },
+   "spalte": "← ganzes Feld\nADHS · RANDPHÄNOMENE · PHÄNOMEN\nAufgabenstarre\n\nDu liest ihn von innen erlebt⟳, im Original⟳.\n\naus „Was Menschen beschreiben“\n\nDer Auftrag ist klar, der Körper startet nicht.\n\nweiterlesen ↓\n\nSEINE ARME – ANTIPPEN BETRITT DIE FUGE\nAufgabenstarre im Original begrifflich benachbart mit Wa"
+  }
+ },
+ {
+  "k": "F-A14 Naht",
+  "v": {
+   "wahl": {
+    "art": "naht",
+    "k": "ADHS · Randphänomene|Neuroatlas"
+   },
+   "spalte": "← ganzes Feld\nNAHT\nZwischen ADHS · Randphänomene und Neuroatlas\n\nHier reichen Arme über die Naht zwischen zwei Gebieten. Ob sie einhaken, entscheiden ihre Voraussetzungen. Die einzelnen Paare:\n\nAufgab",
+   "audit": {
+    "klein": [],
+    "ueber": [
+     "span. „Zwischen“ × span. „ADHS · Randphänomene“ (100% des kleineren)",
+     "span. „ADHS · Randphänomene“ × span. „und“ (21% des kleineren)",
+     "span. „ADHS · Randphänomene“ × span. „Neuroatlas“ (23% des kleineren)",
+     "span.ps-ort „Aufgabenstarre“ × span.ps-verb „muss unterschieden werde“ (100% des kleineren)",
+     "span.ps-verb „muss unterschieden werde“ × span.ps-ort „Aufgaben bleiben offen“ (96% des kleineren)",
+     "span.ps-ort „Reizfilterschwäche“ × span.ps-verb „ähnelt im beschriebenen “ (100% des kleineren)",
+     "span.ps-verb „ähnelt im beschriebenen “ × span.ps-ort „Reize überfluten mich“ (51% des kleineren)"
+    ],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   }
+  }
+ },
+ {
+  "k": "F-A15 Fehlstelle",
+  "v": {
+   "fehlN": 2,
+   "wahl": {
+    "art": "fehl",
+    "k": 0
+   },
+   "spalte": "← ganzes Feld\nFEHLSTELLE · PHÄNOMENATLAS\nHier fehlt ein festgehaltener Befund\n\nZeitblindheits-Bericht und Hyperfokus (Phänomenatlas): wird im Forschungskontext untersucht mit „ADHS / attention-deficit"
+  }
+ },
+ {
+  "k": "F-A16 Regeln",
+  "v": {
+   "audit": {
+    "klein": [],
+    "ueber": [],
+    "aus": [],
+    "quer": false,
+    "kennung": [],
+    "spuren": {
+     "speicher": [],
+     "url": [],
+     "audio": 0
+    },
+    "url": "index.html"
+   }
+  }
+ },
+ {
+  "k": "F-A17 Arm im Feld angeklickt",
+  "v": {
+   "ansicht": "schloss",
+   "aktiv": 18
+  }
+ },
+ {
+  "k": "F-A18 Ende",
+  "v": {
+   "fehler": [],
+   "netz": [],
+   "spuren": {
+    "speicher": [],
+    "url": [],
+    "audio": 0
+   }
+  }
+ }
+]
