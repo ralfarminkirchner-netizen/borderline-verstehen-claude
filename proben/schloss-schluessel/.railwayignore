@@ -1,0 +1,4 @@
+bilder/
+*.cjs
+baue-daten.mjs
+*.md
