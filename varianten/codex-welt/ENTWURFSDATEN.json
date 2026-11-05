@@ -1,0 +1,32 @@
+{
+  "art": "Statische Design-Leinwände, keine Anwendung",
+  "orte": 1226,
+  "regionen": 10,
+  "fugen": 1831,
+  "startort": 1031,
+  "startnachbarn": [
+    1030,
+    1032,
+    1034,
+    1053
+  ],
+  "farbraum": "OKLab",
+  "pigmente": [
+    "#B45D7B",
+    "#C58A7A"
+  ],
+  "mischfarbe": "#BD747B",
+  "mischstufen": [
+    "#B45D7B",
+    "#B6637B",
+    "#B8697B",
+    "#BB6E7B",
+    "#BD747B",
+    "#BF797B",
+    "#C17F7B",
+    "#C3857A",
+    "#C58A7A"
+  ],
+  "wachstum_startfall": false,
+  "produktcode": false
+}

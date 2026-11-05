@@ -1,0 +1,91 @@
+{
+  "kind": "statische Design-Leinwände, keine App-Abnahme",
+  "browser": "Google Chrome",
+  "results": [
+    {
+      "file": "06-begegnungsgrammatik.svg",
+      "viewport": {
+        "width": 1800,
+        "height": 1160
+      },
+      "bytes": 1072655
+    },
+    {
+      "file": "05-begegnung-schmal.svg",
+      "viewport": {
+        "width": 430,
+        "height": 1340
+      },
+      "bytes": 413553
+    },
+    {
+      "file": "04-klanglichtung.svg",
+      "viewport": {
+        "width": 1800,
+        "height": 1160
+      },
+      "bytes": 1838567
+    },
+    {
+      "file": "03-begegnung.svg",
+      "viewport": {
+        "width": 1800,
+        "height": 1160
+      },
+      "bytes": 1189699
+    },
+    {
+      "file": "02-beziehungsgebiet.svg",
+      "viewport": {
+        "width": 1800,
+        "height": 1160
+      },
+      "bytes": 1301785
+    },
+    {
+      "file": "01-weltkarte.svg",
+      "viewport": {
+        "width": 1800,
+        "height": 1160
+      },
+      "bytes": 1312422
+    },
+    {
+      "gallery": "index.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "layout": {
+        "images": 6,
+        "loaded": true,
+        "horizontalOverflow": false,
+        "links": [
+          "DESIGN.md",
+          "BEGEGNUNGSBELEGE.md",
+          "MEDIEN-INVENTAR.md",
+          "PRUEFUNG.md"
+        ]
+      }
+    },
+    {
+      "gallery": "index.html",
+      "viewport": {
+        "width": 430,
+        "height": 900
+      },
+      "layout": {
+        "images": 6,
+        "loaded": true,
+        "horizontalOverflow": false,
+        "links": [
+          "DESIGN.md",
+          "BEGEGNUNGSBELEGE.md",
+          "MEDIEN-INVENTAR.md",
+          "PRUEFUNG.md"
+        ]
+      }
+    }
+  ],
+  "errors": []
+}
