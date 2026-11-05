@@ -1,0 +1,7 @@
+private-data/
+.cache/
+node_modules/
+evidence/
+docs/
+proben/**/bilder/
+output/

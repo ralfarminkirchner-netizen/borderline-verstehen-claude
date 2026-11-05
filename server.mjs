@@ -12,7 +12,10 @@ import { requireExternalWriteTarget, checkVolume, pruefeZiel, ExternalStorageErr
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT || 4393);
-const HOST = '127.0.0.1';
+// Öffentliche Lesefassung (Railway): lauscht nach außen, prüft kein Mac-Volume, speichert nichts.
+const OEFFENTLICH = Boolean(process.env.RAILWAY_ENVIRONMENT || process.env.FUGENLAND_OEFFENTLICH === '1');
+const HOST = OEFFENTLICH ? '0.0.0.0' : '127.0.0.1';
+const PROBEN = join(ROOT, 'proben');
 const PUBLIC = join(ROOT, 'public');
 const CONTENT = join(ROOT, 'data-readonly');
 const PRIVATE_DIR = process.env.WERKSTATT_DIR || join(ROOT, 'private-data');
@@ -21,8 +24,10 @@ const WERKSTATT_FILE = join(PRIVATE_DIR, 'werkstatt.json');
 const MEDIA_ROOTS = { atlas: '/Volumes/ThunderBolt4_2TB/Development/Projects/borderline-verstehen-atlas/dist/assets/media' };
 
 // Startprüfung: ohne registriertes Volume startet der Dienst nicht.
-checkVolume();
-requireExternalWriteTarget(PRIVATE_DIR);
+if (!OEFFENTLICH) {
+  checkVolume();
+  requireExternalWriteTarget(PRIVATE_DIR);
+}
 
 const TYPES = {
   '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8',
@@ -35,6 +40,8 @@ const TYPES = {
 const LOCAL_HOSTS = new Set([`127.0.0.1:${PORT}`, `localhost:${PORT}`, `[::1]:${PORT}`]);
 
 function allowedRequest(req) {
+  // Öffentlich: nur lesen, von jeder Adresse.
+  if (OEFFENTLICH) return req.method === 'GET' || req.method === 'HEAD';
   // Nur Anfragen an die eigene Loopback-Adresse; schreibende Anfragen nur
   // aus derselben Herkunft. Schützt vor fremden Webseiten und DNS-Rebinding.
   if (!LOCAL_HOSTS.has(req.headers.host || '')) return false;
@@ -72,6 +79,7 @@ const EMPTY = () => ({ format: 'fugenland-werkstatt', version: 2, gefuege: [], n
 
 // Ein unlesbarer Speicher wird nie als leer behandelt: Lesen und Schreiben halten an.
 async function loadWerkstatt() {
+  if (OEFFENTLICH) return { data: EMPTY(), revision: 'oeffentlich' }; // persönlicher Speicher wird öffentlich nie gelesen
   if (!existsSync(WERKSTATT_FILE)) return { data: EMPTY(), revision: 'neu' };
   const text = await readFile(WERKSTATT_FILE, 'utf8');
   try { return { data: JSON.parse(text), revision: revision(text) }; }
@@ -140,7 +148,7 @@ function inside(base, rel) {
 
 const server = createServer(async (req, res) => {
   try {
-    if (!allowedRequest(req)) return send(res, 403, { fehler: 'Nur lokale Anfragen dieser Oberfläche.' });
+    if (!allowedRequest(req)) return send(res, 403, { fehler: OEFFENTLICH ? 'Diese öffentliche Fassung speichert nichts.' : 'Nur lokale Anfragen dieser Oberfläche.' });
     const url = new URL(req.url, `http://${req.headers.host}`);
     const path = decodeURIComponent(url.pathname);
 
@@ -168,6 +176,11 @@ const server = createServer(async (req, res) => {
     }
     if (path.startsWith('/inhalt/')) {
       const file = inside(CONTENT, path.slice('/inhalt/'.length));
+      return file ? await serveFile(res, file, req) : send(res, 404, { fehler: 'nicht gefunden' });
+    }
+    if (path.startsWith('/proben/')) {
+      const rel2 = path.slice('/proben/'.length);
+      const file = inside(PROBEN, rel2.endsWith('/') || rel2 === '' ? rel2 + 'index.html' : rel2);
       return file ? await serveFile(res, file, req) : send(res, 404, { fehler: 'nicht gefunden' });
     }
     if (path.startsWith('/medien/')) {
