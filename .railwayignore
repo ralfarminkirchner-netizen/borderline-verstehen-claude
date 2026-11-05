@@ -1,7 +1,14 @@
-private-data/
-.cache/
+# Railway lädt nur die Gesamt-App (app/) und die Laufzeitdateien der Schloss-Probe hoch.
 node_modules/
+private-data/
+data-readonly/
 evidence/
 docs/
-proben/**/bilder/
+public/
+scripts/
 output/
+.cache/
+proben/**/bilder/
+proben/**/*.cjs
+proben/**/*.md
+proben/**/*.webm

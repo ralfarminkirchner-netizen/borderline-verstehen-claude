@@ -1,0 +1,119 @@
+Die Schnittmenge zwischen der Autismus-Spektrum-Störung (ASS) und der Borderline-Persönlichkeitsstörung (BPS) gehört zu den komplexesten Feldern der modernen Klinischen Psychologie
+1
+. Auf der Verhaltensebene können sich beide Bedingungen verblüffend ähnlich sehen, beruhen jedoch auf grundlegend unterschiedlichen inneren Mechanismen und Neurobiologien
+2
+.
+1. Die Symptomüberlappungen auf der Oberfläche
+Emotionale Ausbrüche: Sowohl autistische Menschen als auch Personen mit BPD erleben Phasen intensiver emotionaler Überforderung
+2
+. Bei BPD handelt es sich typischerweise um Affektkrisen, die durch interpersonelle Reize (z. B. wahrgenommene Ablehnung oder Verlassensangst) ausgelöst werden
+3
+. Bei Autismus handelt es sich meist um Meltdowns oder Shutdowns, die Folge von Reizüberflutung (reizbedingter Überstimulation), Exekutivfunktionsüberlastung oder unvorhergesehenen Veränderungen sind
+3
+6
+.
+Schwierigkeiten in Beziehungen: Beide Profile berichten von Problemen im zwischenmenschlichen Bereich
+2
+3
+. Bei Autismus resultieren diese primär aus Differenzen in der pragmatischen Kommunikation, dem Fehlinterpretieren sozialer Cues oder sozialer Erschöpfung
+2
+. Bei BPD stehen Bindungsängste, eine panische Angst vor dem Verlassenwerden sowie das Oszillieren zwischen Idealisierung und Entwertung im Vordergrund
+2
+3
+.
+Empfindlichkeit gegenüber Ablehnung: Autistische Personen (insbesondere bei gleichzeitig vorliegendem ADHS/AuDHD) erleben häufig eine ausgeprägte Rejection Sensitivity (RSD), die dem BPD-Kriterium der Verlassensangst und affektiven Instabilität zum Verwechseln ähnlich sehen kann
+4
+.
+Impulsivität und Selbstverletzung: Verhaltensweisen wie Kopfschlagen oder Schlagen gegen Gegenstände kommen sowohl bei autistischen Meltdowns (aus Frustration und sensorischem Overload) als auch bei BPD (zur Reduktion emotionaler Spannung oder Dissoziationsbeendigung) vor
+3
+5
+.
+2. Die zentralen Unterscheidungsmerkmale
+Empirische Studien (z. B. Vergleiche von autistischen Frauen und Frauen mit BPD) zeigen, dass sich beide Gruppen trotz Oberflächenähnlichkeiten klinisch hochpräzise abgrenzen lassen
+4
+9
+:
+Identitätskonzept und Selbstbild:
+BPD: Zersplittertes, drastisch schwankendes Selbstbild; Neigung, die Identität, Interessen und Werte wechselnder Bezugspersonen zu übernehmen
+3
+. In Studien stellt die Identitätsstörung das stärkste Trennkriterium zur ASS dar
+4
+9
+.
+Autismus: Grundlegend stabiles, wenn auch oft von der Umgebung unverstandenes Selbstkonzept, das stark an eigenen Spezialinteressen verankert ist
+3
+.
+Sensorische Verarbeitung:
+Autismus: Prägnante Atypien in der sensorischen Verarbeitung (Hypo- oder Hyperreaktivität auf Geräusche, Licht, Texturen), Tics, Stimming sowie ein starkes Bedürfnis nach Routinen und Vorhersehbarkeit
+3
+. Sensorische Verarbeitungsschwierigkeiten bilden das stärkste Unterscheidungsmerkmal zu BPD
+4
+9
+.
+BPD: Sensorische Phänomene sind in der Regel primär emotional oder dissoziativ gekoppelt
+3
+.
+Soziale Kognition & Maskierung (Social Camouflaging):
+Autismus: Betroffene berichten über erhebliche Anstrengungen beim Verstehen neurotypischer Sozialregeln und nutzen kognitive Maskierung (Camouflaging), was zu extremer sozialer Erschöpfung führt
+1
+4
+.
+BPD: Soziale Situationen werden oft intuitiv gut erfasst, aber durch die Brille interpersoneller Bedrohung oder Ablehnung interpretiert
+3
+.
+3. Vergleichende Übersicht
+Phänomenbereich
+Autismus-Spektrum (ASS)
+Borderline-Persönlichkeitsstörung (BPD)
+
+Auslöser von Ausbrüchen
+Meltdowns/Shutdowns: Reizüberflutung, Kontrollverlust, Überreizung
+3
+.
+Affektkrisen: Beziehungsstress, Invalidation, Verlassensangst
+3
+.
+
+Identität
+Stabil, oft an Spezialinteressen gekoppelt
+3
+.
+Zersplittert, schwankend, von Bezugspersonen abhängig
+3
+.
+
+Sensorik
+Ausgeprägte Hypo-/Hyperreaktivität, Stimming, Tics
+3
+.
+Sensorik primär emotional/dissoziativ gekoppelt
+3
+.
+
+Beziehungsdynamik
+Erschöpfung durch Maskierung; Rückzugsbedürfnis
+1
+3
+.
+Idealisierung/Entwertung; Panik vor Verlassenwerden
+3
+.
+
+Therapeutischer Fokus
+Neuro-affirmative Umweltanpassung, Masking-Abbau, Reizreduktion
+10
+.
+Psychotherapie (DBT, MBT, TFP) zur Emotions- und Beziehungsregulation
+10
+11
+.
+4. Fehldiagnostik bei Frauen und AFAB-Personen
+In der Praxis werden autistische Frauen und Personen, die bei der Geburt als weiblich zugewiesen wurden (AFAB), im Kindesalter aufgrund von Social Camouflaging (Maskierung) häufig nicht erkannt
+1
+. Wenn im Jugend- oder Erwachsenenalter die Kapazitäten durch chronische Überforderung zusammenbrechen, werden Meltdowns und autistischer Burnout von Fachkräften ohne Autismus-Expertise routinemäßig als BPD-typische Affektdysregulation und Beziehungsinstabilität fehldiagnostiziert
+1
+.
+Gleichzeitig ist eine echte Komorbidität (das gleichzeitige Vorliegen von Autismus und BPD) mit geschätzten 4 % möglich – Betroffene mit dieser Doppeldiagnose tragen oft eine hohe Last an psychosozialer Beeinträchtigung
+8
+.
+Möchtest du näher darauf eingehen, wie Behandlungsansätze wie die Dialektisch-Behaviorale Therapie (DBT) angepasst werden müssen, wenn ein autistisches Profil vorliegt?

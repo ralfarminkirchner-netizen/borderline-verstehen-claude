@@ -1,0 +1,17 @@
+Prüfnotiz zum ergänzten Deep-Research-Bericht
+
+Recherche im bestehenden Notebook: 22 zitierte Treffer. Bericht und neun abrufbare Webquellen ergänzt; der zusätzliche APA-Volltextimport scheiterte. Nicht alle Recherchetreffer sind geprüft. Frühere Berichte bleiben als Bestand erhalten.
+
+Für den Atlas gegengeprüft:
+
+• AWMF, 17.06.2026: Version 2.0 ist als Anmeldung ausgewiesen, nicht als verabschiedete Neufassung. https://www.awmf.org/aktuelles/awmf-aktuell/borderline-persoenlichkeitsstoerung-1
+
+• Family Connections 2024: aktiver Vergleich; Veränderungen innerhalb einer Gruppe belegen keinen Vorteil gegenüber der anderen. Die Follow-up-Angaben verlangen besondere Vorsicht. https://onlinelibrary.wiley.com/doi/full/10.1111/famp.13089
+
+• Online/Präsenz 2026: nicht randomisiert; daraus folgt kein Gleichwertigkeitsnachweis. https://link.springer.com/article/10.1186/s40479-026-00341-7
+
+• Entwicklung 2024: prospektive Zusammenhänge sind keine individuelle Ursachenerklärung; eine Rangfolge von Schutzfaktoren ist durch das geprüfte Abstract nicht belegt. https://pubmed.ncbi.nlm.nih.gov/39243819/
+
+• Bewegung 2022: kleiner abgeschlossener Versuch ohne nachgewiesenen Vorteil beim negativen Affekt gegenüber dem Vergleich; keine Langzeitprüfung. https://cpe.psychopen.eu/index.php/cpe/article/view/7495
+
+Nicht übernommen: pauschale Superkraft-, Vagus-, Gleichwertigkeits- oder Überlegenheitsbehauptungen. NotebookLM dient der Suche und Synthese; Originalprüfung und Atlas-Freigabe bleiben eigene Schritte. Keine automatische Synchronisation.

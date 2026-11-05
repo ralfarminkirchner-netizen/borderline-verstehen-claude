@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="765.72pt" height="483.84pt" viewBox="0 0 765.72 483.84" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-27T17:39:53.452738</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 483.84 
+L 765.72 483.84 
+L 765.72 0 
+L 0 0 
+z
+" style="fill: #faf7ef"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 270.423 284.0544 
+L 495.297 284.0544 
+Q 509.805 284.0544 509.805 275.184 
+L 509.805 177.6096 
+Q 509.805 168.7392 495.297 168.7392 
+L 270.423 168.7392 
+Q 255.915 168.7392 255.915 177.6096 
+L 255.915 275.184 
+Q 255.915 284.0544 270.423 284.0544 
+z
+" clip-path="url(#p36ce6dec4e)" style="fill: #fffdf7; stroke: #173d42; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 34.668 253.008 
+L 223.272 253.008 
+Q 237.78 253.008 237.78 244.1376 
+L 237.78 119.952 
+Q 237.78 111.0816 223.272 111.0816 
+L 34.668 111.0816 
+Q 20.16 111.0816 20.16 119.952 
+L 20.16 244.1376 
+Q 20.16 253.008 34.668 253.008 
+z
+" clip-path="url(#p36ce6dec4e)" style="fill: #fffdf7; stroke: #315b82; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 546.075 253.008 
+L 731.052 253.008 
+Q 745.56 253.008 745.56 244.1376 
+L 745.56 119.952 
+Q 745.56 111.0816 731.052 111.0816 
+L 546.075 111.0816 
+Q 531.567 111.0816 531.567 119.952 
+L 531.567 244.1376 
+Q 531.567 253.008 546.075 253.008 
+z
+" clip-path="url(#p36ce6dec4e)" style="fill: #fffdf7; stroke: #a55038; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 250.286774 210.8736 
+Q 245.03338 210.8736 241.680642 210.8736 
+" clip-path="url(#p36ce6dec4e)" style="fill: none; stroke: #315b82; stroke-width: 1.7; stroke-linecap: round"/>
+    <path d="M 248.080642 214.0736 
+L 241.680642 210.8736 
+L 248.080642 207.6736 
+z
+" clip-path="url(#p36ce6dec4e)" style="fill: #315b82; stroke: #315b82; stroke-width: 1.7; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 515.433226 210.8736 
+Q 520.68662 210.8736 524.039358 210.8736 
+" clip-path="url(#p36ce6dec4e)" style="fill: none; stroke: #a55038; stroke-width: 1.7; stroke-linecap: round"/>
+    <path d="M 517.639358 207.6736 
+L 524.039358 210.8736 
+L 517.639358 214.0736 
+z
+" clip-path="url(#p36ce6dec4e)" style="fill: #a55038; stroke: #a55038; stroke-width: 1.7; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 190.629 443.7216 
+L 575.091 443.7216 
+Q 589.599 443.7216 589.599 434.8512 
+L 589.599 337.2768 
+Q 589.599 328.4064 575.091 328.4064 
+L 190.629 328.4064 
+Q 176.121 328.4064 176.121 337.2768 
+L 176.121 434.8512 
+Q 176.121 443.7216 190.629 443.7216 
+z
+" clip-path="url(#p36ce6dec4e)" style="fill: #fffdf7; stroke: #946218; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 382.86 288.274662 
+Q 382.86 306.229728 382.86 322.284136 
+" clip-path="url(#p36ce6dec4e)" style="fill: none; stroke: #946218; stroke-width: 1.7; stroke-linecap: round"/>
+    <path d="M 386.06 315.884136 
+L 382.86 322.284136 
+L 379.66 315.884136 
+z
+" clip-path="url(#p36ce6dec4e)" style="fill: #946218; stroke: #946218; stroke-width: 1.7; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #173d42; font: 24px 'DejaVu Serif'; text-anchor: start" x="31.041" y="51.70185" transform="rotate(-0 31.041 51.70185)">Eine Hilfe hat Wirkung – und einen Preis</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #53616b; font: 11px 'DejaVu Sans'; text-anchor: start" x="31.041" y="64.512" transform="rotate(-0 31.041 64.512)">Konzeptuelles Prüfbild für Unterstützung. Keine validierte Skala und kein Wirksamkeitsnachweis.</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #173d42; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="284.931" y="204.637275" transform="rotate(-0 284.931 204.637275)">Konkrete Unterstützung</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(284.931 227.722359)">Erinnerung · Tagesplan</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(284.931 241.87357)">Reizschutz · Begleitung</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #315b82; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="49.176" y="146.979675" transform="rotate(-0 49.176 146.979675)">Mögliche Entlastung</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(49.176 170.064759)">Weniger Suchaufwand</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(49.176 184.21597)">Mehr Orientierung</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(49.176 198.367181)">Bessere Erholung</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(49.176 212.518392)">Leichtere Teilnahme</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #a55038; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="560.583" y="146.979675" transform="rotate(-0 560.583 146.979675)">Mögliche Zusatzlast</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(560.583 170.064759)">Pflege und Einrichtung</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(560.583 184.21597)">Unterbrechungen</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(560.583 198.367181)">Reiz oder Druck</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(560.583 212.518392)">Abhängigkeit</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #946218; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="205.137" y="364.135725" transform="rotate(-0 205.137 364.135725)">Entscheidend: Person, Aufgabe und Zeitpunkt</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(205.137 387.389559)">Was verbessert sich für wen? Was kostet es?</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(205.137 401.54077)">Lässt sich die Hilfe wählen, ändern und abschalten?</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #53616b; font: 10.5px 'DejaVu Sans'; text-anchor: start" x="31.041" y="461.4624" transform="rotate(-0 31.041 461.4624)">Das Ziel ist verfügbare Handlungsfähigkeit. Eine ruhigere Oberfläche allein belegt noch keine geringere Gesamtbelastung.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p36ce6dec4e">
+   <rect x="20.16" y="20.16" width="725.4" height="443.52"/>
+  </clipPath>
+ </defs>
+</svg>

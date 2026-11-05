@@ -1,0 +1,92 @@
+.atlas-companion{max-width:58rem;margin-inline:auto;padding:clamp(1rem,3vw,2.5rem);color:var(--ink,#1c3140);background:var(--paper,#f9fbfa);border-radius:1.3rem;line-height:1.6}.atlas-companion h2{font-size:clamp(1.7rem,3.4vw,2.8rem);line-height:1.15;margin-top:0}.atlas-companion p{max-width:70ch}.atlas-companion label{display:grid;gap:.35rem;margin-block:.9rem}.atlas-companion input,.atlas-companion textarea,.atlas-companion select,.ac-dictation textarea{width:100%;min-width:0;box-sizing:border-box;padding:.75rem;border:1px solid #8daba8;border-radius:.6rem;background:#fff;color:#18332f;font:inherit}.atlas-companion textarea{resize:vertical}.atlas-companion button,.ac-dictation button{min-height:44px;padding:.65rem 1rem;border:1px solid #6e908d;border-radius:.65rem;background:#edf5f3;color:#183d37;font:inherit;cursor:pointer}.atlas-companion button:hover,.ac-dictation button:hover{background:#dcebe7}.atlas-companion button:disabled,.ac-dictation button:disabled{opacity:.55;cursor:default}.atlas-companion :focus-visible,.ac-dictation :focus-visible{outline:3px solid #0c746b;outline-offset:3px}.atlas-companion details{border-block-start:1px solid #abc1bb;padding-block:1rem}.atlas-companion summary{cursor:pointer;font-weight:650;min-height:32px}.atlas-companion fieldset{border:1px solid #abc1bb;border-radius:.8rem;padding:.7rem 1rem}.atlas-companion .ac-check{display:flex;align-items:center;gap:.65rem}.atlas-companion .ac-check input{width:1.1rem;height:1.1rem;flex:none}.atlas-companion pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:24rem;overflow:auto;background:#edf3ef;padding:1rem;border-radius:.7rem;font-size:.85em}.ac-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-block:.8rem}.ac-answer{white-space:pre-wrap;overflow-wrap:anywhere;margin-block:1rem}.ac-origin{font-weight:650}.ac-dictation{margin-block:.45rem 1rem}.ac-dictation [data-dictation-editor]{padding:1rem;border-inline-start:3px solid #7eaaa3;margin-top:.5rem}.ac-dictation p{font-size:.9em}.atlas-companion [hidden],.ac-dictation [hidden]{display:none!important}
+html[data-atlas-motion="reduced"] *,html[data-atlas-motion="reduced"] *::before,html[data-atlas-motion="reduced"] *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+html[data-atlas-transparency="solid"] :is(.atlas-companion,.pw-editor,.pw-archive,.atlas-focus-panel,.shared-detail){backdrop-filter:none!important;background-color:#f7faf8!important}
+html[data-atlas-contrast="high"] :is(.atlas-companion,.pw-workbench,.shared-atlas){color:#071a18!important}html[data-atlas-contrast="high"] :is(p,small,label,summary){opacity:1!important}html[data-atlas-contrast="high"] :is(button,input,textarea,select){border-color:#163b34!important}
+html[data-atlas-text="large"]{font-size:112.5%}html[data-atlas-text="larger"]{font-size:125%}
+@media(max-width:520px){.atlas-companion{padding:1rem;border-radius:.8rem}.ac-actions>button{flex:1 1 12rem}.atlas-companion fieldset{padding:.6rem}}
+
+.atlas-companion [data-ac-sources]{display:flex;flex-wrap:wrap;gap:.6rem;margin-block:1rem}.atlas-companion [data-ac-sources] a{padding:.6rem;border:1px solid currentColor;border-radius:.5rem;color:inherit}
+
+/* Companion rooms share the mineral palette; original media retain their pixels. */
+#shared-atlas :is(#shared-view.personal-workbench,.personal-workbench,.notebook-library,.media-room,.relationship-workshop,.atlas-personal,.skill-workshop,.atlas-companion){
+  --ink:#e4edf0;--muted:#b1c6d1;--paper:#101f2b;--line:#6c8b9b55;--mint:#8ed5d0;
+  --nl-dark:#101f2b;--nl-paper:#e4edf0;--nl-muted:#b1c6d1;--nl-copper:#e8aaa3;
+  --pw-paper:#101f2b;--pw-ink:#e4edf0;--pw-muted:#b1c6d1;--pw-copper:#8ed5d0;--pw-line:#6c8b9b55;--pw-accent:#a4d6df;
+  --rw-line:#6c8b9b55;--rw-soft:#173044;--rw-ink:#e4edf0;
+  --sw-deep:#101f2b;--sw-surface:#173044;--sw-ink:#e4edf0;--sw-muted:#b1c6d1;--sw-line:#6c8b9b55;--sw-accent:#a4d6df;--sw-accent-ink:#101f2b;
+  background:#101f2b!important;background-image:none!important;color:#e4edf0!important;color-scheme:dark;
+  min-width:0;box-sizing:border-box;font-family:Manrope,system-ui,sans-serif;line-height:1.65;
+}
+#shared-atlas :is(#shared-view.personal-workbench,.personal-workbench,.notebook-library,.media-room,.skill-workshop){max-height:calc(100svh - var(--atlas-shell-height,122px));overflow:auto!important;overscroll-behavior:contain;min-height:0!important}
+#shared-atlas :is(#shared-view.personal-workbench,.notebook-library,.media-room,.relationship-workshop,.atlas-personal,.skill-workshop,.atlas-companion) :is(h1,h2,h3,h4){font-family:Manrope,system-ui,sans-serif!important;color:#e4edf0!important;letter-spacing:normal}
+#shared-atlas :is(.notebook-library,.media-room,.relationship-workshop,.atlas-personal,.atlas-companion) h2{font-size:clamp(22px,3vw,32px);line-height:1.25}
+#shared-atlas :is(.notebook-library,.media-room) :is(.nl-header h1,.nl-collection-heading h2){font-size:clamp(26px,4vw,38px)!important;line-height:1.2}
+#shared-atlas :is(.notebook-library,.media-room) :is(.nl-reader,.nl-reading-surface,.notebook-context-item,.nl-image,.nl-pages,.nl-page){background:#101f2b!important;color:#e4edf0!important}
+#shared-atlas :is(.notebook-library,.media-room) :is(.nl-header,.nl-reader-heading,.nl-find,.nl-shelf-item,.notebook-context-tree,.notebook-context-tree ul){border-color:#6c8b9b55!important}
+#shared-atlas :is(.notebook-library,.media-room) :is(p,li,figcaption,.nl-door-label strong,.nl-material-label strong){color:#e4edf0!important}
+#shared-atlas :is(.notebook-library,.media-room) :is(small,.nl-reader-position,.nl-result-count,.notebook-context-kind,.notebook-context-match,.notebook-context-limits,.nl-door-label>span,.nl-material-label>span,.nl-material-label>em){color:#b1c6d1!important}
+#shared-atlas :is(.notebook-library,.media-room) :is(.nl-wave,.nl-film,.nl-visual){background:#173044!important}
+#shared-atlas :is(.notebook-library,.media-room) :is(audio,video){color-scheme:dark}
+#shared-atlas :is(.notebook-library,.media-room) .nl-reader{padding:24px clamp(16px,4vw,56px) 40px}
+#shared-atlas :is(#shared-view.personal-workbench,.notebook-library,.media-room,.relationship-workshop,.atlas-personal,.skill-workshop,.atlas-companion) :is(button,summary){min-height:44px!important;box-sizing:border-box;touch-action:manipulation}
+#shared-atlas :is(#shared-view.personal-workbench,.notebook-library,.media-room,.relationship-workshop,.atlas-personal,.skill-workshop,.atlas-companion) button{background:#173044!important;color:#e4edf0!important;border:1px solid #6c8b9b66!important;border-radius:8px;white-space:normal}
+#shared-atlas :is(#shared-view.personal-workbench,.notebook-library,.media-room,.relationship-workshop,.atlas-personal,.skill-workshop,.atlas-companion) button:hover{background:#234456!important;border-color:#9dbdc9!important}
+#shared-atlas :is(#shared-view.personal-workbench,.relationship-workshop,.atlas-personal,.skill-workshop,.atlas-companion) :is(button[aria-pressed=true],button[aria-selected=true],button[type=submit],.pw-primary,.sw-primary){background:#a4d6df!important;color:#101f2b!important;border-color:#a4d6df!important}
+#shared-atlas :is(#shared-view.personal-workbench,.notebook-library,.media-room,.relationship-workshop,.atlas-personal,.skill-workshop,.atlas-companion) button:disabled{opacity:.45;cursor:default}
+#shared-atlas :is(#shared-view.personal-workbench,.notebook-library,.media-room,.relationship-workshop,.atlas-personal,.skill-workshop,.atlas-companion) :is(input:not([type=checkbox]):not([type=radio]),textarea,select){background:#173044!important;color:#e4edf0!important;border:1px solid #7f9dad!important;border-radius:6px;min-height:44px;width:100%;max-width:100%;min-width:0;box-sizing:border-box;padding:10px 12px;font:inherit}
+#shared-atlas :is(#shared-view.personal-workbench,.notebook-library,.media-room,.relationship-workshop,.atlas-personal,.skill-workshop,.atlas-companion) :is(input,textarea)::placeholder{color:#abc1cd!important;opacity:1}
+#shared-atlas :is(#shared-view.personal-workbench,.notebook-library,.media-room,.relationship-workshop,.atlas-personal,.skill-workshop,.atlas-companion) :is(input[type=checkbox],input[type=radio]){accent-color:#a4d6df}
+#shared-atlas :is(#shared-view.personal-workbench,.notebook-library,.media-room,.relationship-workshop,.atlas-personal,.skill-workshop,.atlas-companion) details{background:transparent!important;color:#e4edf0!important;border-color:#6c8b9b55!important}
+#shared-atlas :is(#shared-view.personal-workbench,.notebook-library,.media-room,.relationship-workshop,.atlas-personal,.skill-workshop,.atlas-companion) summary{background:transparent!important;color:#cce2ea!important;cursor:pointer;padding-block:10px}
+#shared-atlas :is(#shared-view.personal-workbench,.notebook-library,.media-room,.relationship-workshop,.atlas-personal,.skill-workshop,.atlas-companion) :is(button,a,input,textarea,select,summary):focus-visible{outline:3px solid #8ed5d0!important;outline-offset:3px!important}
+#shared-atlas :is(#shared-view.personal-workbench,.notebook-library,.media-room,.relationship-workshop,.atlas-personal,.skill-workshop,.atlas-companion) a{color:#a4d6df!important;text-underline-offset:3px;overflow-wrap:anywhere}
+#shared-atlas :is(.personal-workbench,.relationship-workshop,.atlas-personal,.atlas-companion) :is(.pw-archive,.pw-status,.pw-editor,.pw-preview,.rw-note,.rw-boundary,blockquote,.personal-mark,.personal-confirm,.personal-status,.personal-meanings .personal-field,pre){background:#173044!important;color:#e4edf0!important;border-color:#6c8b9b66!important}
+#shared-atlas :is(.personal-workbench,.relationship-workshop,.atlas-personal) :is(.rw-meta,.personal-help,.pw-note,.pw-privacy,.pw-step-hint,small){color:#b1c6d1!important}
+#shared-atlas .personal-workbench .pw-station.is-past .pw-station-number{background:#234456!important;color:#e4edf0!important}
+#shared-atlas .personal-workbench .pw-header{padding-block:28px}
+#shared-atlas .personal-workbench .pw-header h2{font-size:clamp(25px,3.4vw,38px)!important;line-height:1.2}
+#shared-atlas .personal-workbench .pw-header-mark{color:#8ed5d0}
+#shared-atlas .personal-workbench .pw-tabs{overflow-x:auto;max-width:100%}
+#shared-atlas .relationship-workshop{border-radius:0}
+#shared-atlas .relationship-workshop :is(.rw-note,.rw-boundary){border-left-color:#a4d6df!important}
+#shared-atlas .skill-workshop :is(.sw-refine>div,.sw-practice-types button,.sw-ownlist,.sw-sessionend){background:#173044!important}
+#shared-atlas .atlas-companion fieldset{border-color:#6c8b9b66}
+html[data-atlas-transparency=solid] #shared-atlas :is(.atlas-companion,.pw-editor,.pw-archive){background:#173044!important}
+html[data-atlas-contrast=high] #shared-atlas :is(.atlas-companion,.personal-workbench,.atlas-personal,.relationship-workshop,.notebook-library){color:#fff!important}
+html[data-atlas-contrast=high] #shared-atlas :is(.atlas-companion,.personal-workbench,.atlas-personal,.relationship-workshop,.notebook-library) :is(button,input,textarea,select){border-color:#d5e7ee!important}
+@media(max-width:650px){
+  #shared-atlas :is(#shared-view.personal-workbench,.notebook-library,.media-room,.relationship-workshop,.atlas-personal,.skill-workshop,.atlas-companion){max-width:100%;overflow-x:hidden}
+  #shared-atlas :is(.notebook-library,.media-room) :is(.nl-header,.nl-reader-heading){flex-wrap:wrap;gap:12px}
+  #shared-atlas :is(.notebook-library,.media-room) :is(.nl-header,.nl-collection,.nl-landing,.nl-reader){padding-inline:16px}
+  #shared-atlas :is(.notebook-library,.media-room) .nl-find>div{grid-template-columns:minmax(0,1fr)}
+  #shared-atlas :is(.personal-workbench,.relationship-workshop,.atlas-personal,.skill-workshop,.atlas-companion) :is(input:not([type=checkbox]):not([type=radio]),textarea,select){font-size:16px!important}
+  #shared-atlas :is(.personal-workbench,.relationship-workshop,.atlas-personal) :is(.pw-body,.rw-grid){grid-template-columns:minmax(0,1fr)}
+  #shared-atlas :is(.pw-actions,.pw-copy-actions,.rw-row,.ac-actions){flex-wrap:wrap}
+  #shared-atlas :is(.pw-actions,.pw-copy-actions,.rw-row,.ac-actions)>button{max-width:100%;flex:1 1 150px}
+}
+
+/* These wrappers sit outside the room roots and need their own surface scope. */
+body:has(#shared-atlas:not([hidden])){background:#101f2b!important;color:#e4edf0;color-scheme:dark}
+body:has(#shared-atlas:not([hidden])) #inhalt{background:#101f2b!important}
+#shared-atlas #shared-view:has(>.notebook-library,>.relationship-workshop,>.atlas-personal,>.atlas-companion){background:#101f2b!important;color:#e4edf0}
+#shared-atlas #shared-view .ar-profile-manager{background:#173044f5!important;color:#e4edf0!important;border-color:#8ba8b84d}
+#shared-atlas #shared-view .ar-profile-manager>summary{display:list-item;min-height:44px;padding-block:10px;color:#e4edf0!important;background:transparent!important;font:inherit;line-height:1.5;cursor:pointer}
+#shared-atlas #shared-view .ar-profile-manager>summary::marker{color:#a4d6df}
+#shared-atlas #shared-view .ar-profile-manager>summary:focus-visible{outline:3px solid #8ed5d0;outline-offset:3px}
+
+/* Media windows are mounted on body so they can accompany every Atlas room. */
+body:has(#shared-atlas:not([hidden])) .atlas-player-host .atlas-player{--ap-ink:#e4edf0;background:#173044f5!important;color:#e4edf0!important;border:1px solid #91b0c05c;box-shadow:0 24px 80px #030e1cb3,0 4px 18px #030e1c66;color-scheme:dark}
+body:has(#shared-atlas:not([hidden])) .atlas-player :is(.atlas-player-title,p,label,summary,li,.atlas-player-transcript){color:#e4edf0!important}
+body:has(#shared-atlas:not([hidden])) .atlas-player .atlas-player-header{border-bottom-color:#91b0c033}
+body:has(#shared-atlas:not([hidden])) .atlas-player :is(button,select){min-height:44px;min-width:44px;background:#102838!important;color:#e4edf0!important;border:1px solid #91b0c077;line-height:1.3}
+body:has(#shared-atlas:not([hidden])) .atlas-player button:hover{background:#264b60!important;border-color:#a4d6df}
+body:has(#shared-atlas:not([hidden])) .atlas-player :is(button,select,summary,a):focus-visible{outline:3px solid #8ed5d0;outline-offset:3px}
+body:has(#shared-atlas:not([hidden])) .atlas-player :is(.atlas-player-layout,.atlas-player-extra){background:transparent!important;border-color:#91b0c033;color:#e4edf0}
+body:has(#shared-atlas:not([hidden])) .atlas-player :is(.atlas-player-layout,.atlas-player-extra)>summary{min-height:44px;padding-block:12px;color:#c3dce4!important;background:transparent!important;cursor:pointer}
+body:has(#shared-atlas:not([hidden])) .atlas-player .atlas-player-status{color:#b1c6d1!important;opacity:1}
+body:has(#shared-atlas:not([hidden])) .atlas-player a{color:#a4d6df!important}
+body:has(#shared-atlas:not([hidden])) .atlas-player .atlas-player-resize{width:44px;min-height:44px!important;background:#294e60!important;color:#e4edf0!important}
+body:has(#shared-atlas:not([hidden])) .atlas-player :is(video,audio){color-scheme:dark}
+#shared-atlas button.atlas-media-launch{min-height:44px;background:#173044!important;color:#e4edf0!important;border-color:#91b0c077!important;box-shadow:none}
+#shared-atlas button.atlas-media-launch:hover{background:#264b60!important}
+@media(max-width:480px){body:has(#shared-atlas:not([hidden])) .atlas-player .atlas-player-header{gap:6px;padding-inline:10px}body:has(#shared-atlas:not([hidden])) .atlas-player .atlas-player-window-actions{gap:3px}body:has(#shared-atlas:not([hidden])) .atlas-player .atlas-player-layout-tools select{min-width:0;max-width:100%}}

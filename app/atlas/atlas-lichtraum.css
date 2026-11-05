@@ -1,0 +1,392 @@
+/* Lichtraum. Light is the studio. Dark remains the explicit or system choice. */
+html[data-appearance="light"]{
+  color-scheme:light;
+  --ink:#1d1d1f;
+  --muted:#6e6e73;
+  --paper:#f5f5f7;
+  --deep:#ffffff;
+  --surface:#ffffff;
+  --line:#d2d2d7;
+  --mint:#0071a8;
+  --peach:#9a5b12;
+  --lilac:#5856d6;
+  --rose:#9a4a58;
+  --reading:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",system-ui,sans-serif;
+}
+html[data-appearance="light"] body{background:#f5f5f7;color:#1d1d1f}
+html[data-appearance="light"] a:hover,
+html[data-appearance="light"] .text-link:hover{color:#0071e3}
+html[data-appearance="light"] button:hover{background:#e8e8ed;color:#1d1d1f;border-color:#c7c7cc}
+html[data-appearance="light"] :is(.lead,.note,details p,.reader-summary,.reader-body p,.atlas-invitation,.source-intro){color:#3a3a3c}
+html[data-appearance="light"] .atlas-cartography{background:radial-gradient(ellipse at 42% 38%,#fff 0%,#eef3f6 52%,#e3ebf0 100%)}
+html[data-appearance="light"] .atlas-reader{background:#fff;color:#1d1d1f}
+html[data-appearance="light"] .atlas-node{color:#1d1d1f}
+html[data-appearance="light"] .atlas-node:hover{color:#1d1d1f;background:#ffffffcc}
+html[data-appearance="light"] .atlas-edge-label{stroke:#f5f5f7}
+html[data-appearance="light"] .reaction-map{background:radial-gradient(ellipse,#d7ebe4 0%,transparent 68%)}
+html[data-appearance="light"] dialog{background:#fff;color:#1d1d1f}
+html[data-appearance="light"] dialog p{color:#3a3a3c}
+
+html[data-appearance="light"] #shared-atlas{
+  --weave-ink:#1d1d1f;--weave-paper:#ffffff;--atlas-ground:#f5f5f7;--atlas-ink:#1d1d1f;
+  --font-display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif;
+  --font-body:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",system-ui,sans-serif;
+  background:#f5f5f7!important;color:#1d1d1f;font-family:var(--font-body)
+}
+html[data-appearance="light"] #shared-atlas .atlas-shell{background:#f5f5f7f2!important;border-color:#d2d2d7;color:#1d1d1f;backdrop-filter:blur(18px)}
+html[data-appearance="light"] #shared-atlas .atlas-shell-identity strong,
+html[data-appearance="light"] #shared-atlas :is(h2,h3,.aw-poem h2){font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif!important;color:#1d1d1f;font-weight:600;letter-spacing:-.03em}
+html[data-appearance="light"] #shared-atlas .atlas-shell :is(button,summary){color:#1d1d1f}
+html[data-appearance="light"] #shared-atlas .atlas-shell-filter-panel,
+html[data-appearance="light"] #shared-atlas .shared-more-tools>div{background:#fff;color:#1d1d1f;border-color:#d2d2d7;border-radius:16px;box-shadow:0 18px 50px #1d1d1f1f}
+html[data-appearance="light"] #shared-atlas .atlas-shell-filter-panel :is(input,select),
+html[data-appearance="light"] #shared-atlas .shared-more-tools button{background:#f5f5f7!important;color:#1d1d1f!important;border-color:#d2d2d7!important}
+html[data-appearance="light"] #shared-atlas :is(button,a,input,select,summary,[tabindex]):focus-visible{outline-color:#0071e3!important}
+
+.atlas-appearance{display:flex;align-items:center;gap:4px;min-height:44px}
+.atlas-appearance>span{font-size:12px;color:#6e6e73;margin-right:4px}
+.atlas-appearance button{min-height:32px;padding:4px 10px;border-radius:999px;border:1px solid #d2d2d7;background:#fff;color:#1d1d1f;font-size:12px}
+.atlas-appearance button[aria-pressed=true]{background:#1d1d1f;color:#fff;border-color:#1d1d1f}
+html[data-appearance="dark"] .atlas-appearance button{background:#1a2336;color:#f5ebd9;border-color:#f5ebd944}
+html[data-appearance="dark"] .atlas-appearance>span{color:#c8c4cc}
+
+html[data-appearance="light"] #shared-atlas:is([data-selected-view=landscape],[data-selected-view=fractal],[data-selected-view=graph],[data-selected-view=heatmap],[data-selected-view=chapter],[data-selected-view=constellation]) #shared-view,
+html[data-appearance="light"] #shared-view .atlas-rooms{background:#f5f5f7!important}
+html[data-appearance="light"] #shared-view .aw-world{background:radial-gradient(ellipse at 50% 42%,#fff 0%,#e8eef3 48%,#d5e1ea 100%)!important;color:#1d1d1f}
+html[data-appearance="light"] #shared-atlas[data-selected-view=fractal] #shared-view .aw-world{background:radial-gradient(ellipse at 50% 38%,#f7fbf8 0%,#e4f0e8 50%,#d5e4dc 100%)!important}
+html[data-appearance="light"] .aw-atmosphere{background:linear-gradient(180deg,#ffffff88,transparent 28%)}
+html[data-appearance="light"] .aw-poem h2,
+html[data-appearance="light"] .aw-kicker,
+html[data-appearance="light"] .aw-poem p,
+html[data-appearance="light"] .aw-topline,
+html[data-appearance="light"] .aw-topline nav,
+html[data-appearance="light"] .aw-topline nav button{color:#1d1d1f!important}
+html[data-appearance="light"] .aw-kicker{letter-spacing:.04em;color:#6e6e73!important}
+html[data-appearance="light"] .aw-room-link{color:#1d1d1f!important;background:#ffffffcc!important;border-color:#d2d2d7!important;border-radius:999px!important}
+html[data-appearance="light"] #shared-view .atlas-rooms .aw-place,
+html[data-appearance="light"] #shared-view .aw-place,
+html[data-appearance="light"] #shared-view .aw-place-entry,
+html[data-appearance="light"] #shared-view .aw-world .aw-place:not(.aw-place-entry){background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;color:#1d1d1f!important;text-shadow:0 0 8px #fff,0 0 16px #fff,0 1px 0 #fff!important}
+html[data-appearance="light"] #shared-view .aw-place>span,
+html[data-appearance="light"] #shared-view .aw-place small{color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif}
+html[data-appearance="light"] #shared-view .aw-world .aw-controls{background:#ffffffd6;border:1px solid #d2d2d7;border-radius:16px;backdrop-filter:blur(16px)}
+html[data-appearance="light"] #shared-view .aw-world .aw-controls button,
+html[data-appearance="light"] #shared-view .aw-controls button{color:#1d1d1f}
+html[data-appearance="light"] #shared-view .aw-world .aw-controls [aria-pressed=true]{background:#1d1d1f;color:#fff}
+html[data-appearance="light"] #shared-view .aw-world .aw-controls [data-tour]{color:#0071a8}
+html[data-appearance="light"] .aw-journey{background:#fff;color:#1d1d1f;border-radius:20px;box-shadow:0 18px 50px #1d1d1f1c;clip-path:none}
+html[data-appearance="light"] .aw-journey p{color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,sans-serif}
+html[data-appearance="light"] #shared-view .aw-journey button{color:#1d1d1f;border-bottom-color:#d2d2d7}
+html[data-appearance="light"] .aw-legend{color:#3a3a3c}
+html[data-appearance="light"] .aw-legend[open]{background:#fff;color:#1d1d1f;border-radius:16px;border-top:0;box-shadow:0 16px 40px #1d1d1f1a}
+
+html[data-appearance="light"] #shared-view :is(.ns-space,.hm-space,.rh-space,.cw-space,.cw-world,.cw-room){background:#f5f5f7!important;color:#1d1d1f}
+html[data-appearance="light"] .ns-space{--ns-ink:#1d1d1f;--ns-muted:#6e6e73;background:#f5f5f7;color:#1d1d1f}
+html[data-appearance="light"] .ns-space .ns-viewport{background:radial-gradient(ellipse at 30% 20%,#8ed2bd2e,transparent 46%),radial-gradient(ellipse at 80% 10%,#b7a5df24,transparent 42%),linear-gradient(#fbfbfd,#eef2f5)}
+html[data-appearance="light"] .ns-space .ns-heading h2,
+html[data-appearance="light"] .ns-space .ns-node-title,
+html[data-appearance="light"] .ns-space .ns-context strong{color:#1d1d1f}
+html[data-appearance="light"] .ns-space .ns-node:before{background:linear-gradient(160deg,#fff,color-mix(in srgb,var(--ns-node-color) 24%,#fff))}
+html[data-appearance="light"] .ns-space .ns-node.ns-center:before{background:linear-gradient(160deg,#fff,#e7f6f1)}
+html[data-appearance="light"] .ns-space .aj-joint text{fill:#1d1d1f;stroke:#f5f5f7}
+html[data-appearance="light"] .ns-space .aj-panel{background:#fff;color:#1d1d1f;border-radius:22px;box-shadow:0 24px 60px #1d1d1f24}
+html[data-appearance="light"] .ns-space .aj-panel h3{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,sans-serif;color:#1d1d1f}
+html[data-appearance="light"] .ns-space .aj-family{text-transform:none;letter-spacing:0;font-size:13px;color:#6e6e73}
+html[data-appearance="light"] .ns-space .aj-panel .aj-endpoint{background:#f5f5f7;color:#1d1d1f;clip-path:none;border-radius:16px}
+html[data-appearance="light"] .ns-space .aj-panel .aj-endpoint-1{background:#e7f4ef;color:#1d1d1f}
+html[data-appearance="light"] .ns-space .ns-caption{background:linear-gradient(90deg,#f5f5f7f5,#f5f5f700)}
+
+html[data-appearance="light"] #shared-view .cw-room{color:#1d1d1f;background:linear-gradient(180deg,#fff,#eef3f6)!important}
+html[data-appearance="light"] #shared-view .cw-room .cw-environment::after{background:linear-gradient(180deg,#ffffffc7,transparent 30%,transparent 68%,#f5f5f7ea)}
+html[data-appearance="light"] #shared-view .cw-room .cw-place{color:#1d1d1f;text-shadow:0 1px 0 #fff,0 10px 24px #fff}
+html[data-appearance="light"] #shared-view .cw-room .cw-detail,
+html[data-appearance="light"] #shared-view .cw-room .cw-about>div{background:#fffffffa;color:#1d1d1f;border-color:#d2d2d7;border-radius:20px}
+html[data-appearance="light"] #shared-view .cw-room button,
+html[data-appearance="light"] #shared-view .cw-room summary,
+html[data-appearance="light"] #shared-view .cw-room .cw-topic select{color:#1d1d1f;background:#ffffffb8}
+html[data-appearance="light"] #shared-atlas[data-selected-view=chapter] #shared-view .cw-room{box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--cw-accent,#8ed2bd) 35%,transparent)}
+
+html[data-appearance="light"] .rh-space{--rh-ink:#1d1d1f;background:#f5f5f7!important;color:#1d1d1f}
+html[data-appearance="light"] .rh-corner,
+html[data-appearance="light"] .rh-column,
+html[data-appearance="light"] .rh-row,
+html[data-appearance="light"] .rh-scale,
+html[data-appearance="light"] .rh-totals{color:#6e6e73}
+html[data-appearance="light"] .rh-label-selected{color:#1d1d1f}
+html[data-appearance="light"] #shared-atlas #shared-view .atlas-rooms .rh-space .rh-matrix button.rh-cell-empty{background:#e8e8ed;color:#6e6e73}
+html[data-appearance="light"] #shared-atlas #shared-view .atlas-rooms .rh-space .rh-matrix button.rh-cell[aria-pressed=true]{color:#1d1d1f;background:#fff;border-color:#1d1d1f;box-shadow:0 8px 24px #1d1d1f1a}
+
+html[data-appearance="light"] #shared-view .atlas-rooms .atlas-dynamics{--ds-ink:#1d1d1f;--ds-muted:#6e6e73;background:#fff;color:#1d1d1f;border-radius:24px;box-shadow:0 16px 40px #1d1d1f10}
+html[data-appearance="light"] #shared-view .atlas-dynamics button{color:#1d1d1f;border-color:#d2d2d7}
+html[data-appearance="light"] #shared-view .atlas-dynamics button[aria-pressed=true],
+html[data-appearance="light"] #shared-view .dynamics-transport button:first-child{color:#fff;background:#1d1d1f;border-color:#1d1d1f}
+html[data-appearance="light"] #shared-view .dynamics-drawing{background:radial-gradient(ellipse at 40% 45%,#8ed2bd22,transparent 68%)}
+
+html[data-appearance="light"] #shared-view .ar-inspector{background:#fffffffa!important;color:#1d1d1f!important;border-radius:22px 22px 0 0;border-top:0}
+html[data-appearance="light"] #shared-view .ar-inspector :is(h3,p,small,button,summary,label,a){color:#1d1d1f!important}
+html[data-appearance="light"] #shared-atlas #shared-reader:not([hidden]){background:#fff!important;color:#1d1d1f;border-left:0;border-radius:24px 0 0 24px;box-shadow:-28px 0 70px #1d1d1f1c}
+html[data-appearance="light"] #shared-atlas #shared-reader h2{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,sans-serif;color:#1d1d1f;font-weight:600}
+html[data-appearance="light"] #shared-atlas[data-selected-view=skills] #shared-view,
+html[data-appearance="light"] #shared-atlas[data-selected-view=context] #shared-view,
+html[data-appearance="light"] #shared-atlas[data-selected-view=lab] #shared-view,
+html[data-appearance="light"] #shared-atlas[data-selected-view=personal] #shared-view,
+html[data-appearance="light"] #shared-atlas[data-selected-view=constellation] #shared-view{background:#f5f5f7!important;color:#1d1d1f}
+html[data-appearance="light"] .atlas-player{background:#fffffffa!important;color:#1d1d1f;border-radius:20px!important;border-top:0!important}
+
+.ns-space .aj-joint.aj-is-editorial .aj-line{stroke-dasharray:8 7}
+.ns-space .aj-joint[data-family=threshold] .aj-line{stroke-width:2.4}
+.ns-space .aj-joint.aj-open[data-family=threshold] .aj-ornament{animation:aj-sill .55s cubic-bezier(.23,1,.32,1) both}
+.ns-space .aj-joint[data-family=flow] .aj-line{stroke-linecap:round}
+.ns-space .aj-register,.ns-space .aj-boundary{font-size:13px;line-height:1.5}
+@keyframes aj-sill{from{opacity:0;stroke-width:8}to{opacity:1;stroke-width:2}}
+
+html[data-appearance="light"] #shared-atlas .atlas-primary button,
+html[data-appearance="light"] #shared-atlas .atlas-subnavigation button,
+html[data-appearance="light"] #shared-atlas .atlas-shell-tools :is(summary,button),
+html[data-appearance="light"] #shared-atlas .atlas-shell-identity,
+html[data-appearance="light"] #shared-atlas .atlas-shell-identity small{color:#1d1d1f!important}
+html[data-appearance="light"] #shared-atlas .atlas-primary button[aria-pressed=true],
+html[data-appearance="light"] #shared-atlas .atlas-subnavigation button[aria-pressed=true]{color:#1d1d1f!important;background:#e4e4e8!important;box-shadow:inset 0 -3px #1d1d1f!important;font-weight:650}
+
+html[data-appearance="light"] #shared-view .aw-place>span{font-weight:650}
+.aw-caption{position:absolute;z-index:6;top:58px;left:28px;max-width:28ch;margin:0;color:#3a3a3c;font-size:13px;line-height:1.4;pointer-events:none}
+.aw-places{z-index:5}
+.aw-relations{position:absolute;inset:0;z-index:4;width:100%;height:100%;overflow:visible;pointer-events:none}
+.aw-relation{cursor:pointer}
+.aw-relation:focus,.aw-relation:focus-visible{outline:none!important}
+.aw-relation:focus-visible .aw-relation-line{stroke-width:4.2}
+.aw-relation-line{fill:none;stroke:#143028;stroke-width:3;stroke-linecap:round;filter:drop-shadow(0 0 1px #fff)}
+.aw-relation-branch{fill:none;stroke:#143028;stroke-width:3.4;stroke-linecap:round;filter:drop-shadow(0 0 1px #fff)}
+.aw-relation.is-open .aw-relation-branch{animation:aw-branch .7s cubic-bezier(.23,1,.32,1) both}
+@keyframes aw-branch{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.aw-relation-hit{fill:none;stroke:transparent;stroke-width:28;pointer-events:stroke}
+.aw-bridge-line{fill:none;stroke:var(--aj-color,#3a6);stroke-linecap:round;opacity:.85}
+.aw-bridge text{font:600 11px -apple-system,BlinkMacSystemFont,system-ui,sans-serif;fill:#1d1d1f;stroke:#fff;stroke-width:4;paint-order:stroke}
+.aw-relation.is-editorial .aw-relation-line{stroke-dasharray:10 8}
+.aw-relation-note{position:absolute;z-index:8;left:20px;bottom:86px;width:min(360px,calc(100% - 40px));padding:16px 18px;background:#fff;color:#1d1d1f;border-radius:18px;box-shadow:0 16px 40px #1d1d1f22}
+.aw-relation-note strong{display:block;font-size:13px;margin-bottom:6px}
+.aw-relation-note p{margin:0 0 8px;font-size:15px;line-height:1.4}
+.aw-relation-note button{min-height:40px;margin-right:8px;border-radius:999px;border:0!important;background:#1d1d1f!important;color:#fff!important;opacity:1!important}
+.aw-relation-note button:last-of-type{background:#fff!important;color:#1d1d1f!important;border:1px solid #1d1d1f!important}
+
+.ns-space .aj-joint .aj-line{stroke-width:7!important}
+.ns-space .aj-joint .aj-hit{stroke-width:56!important}
+.ns-space .aj-joint.aj-open .aj-line,.ns-space .aj-joint.ns-edge-focus .aj-line{stroke-width:13!important}
+.ns-space .aj-panel{left:16px!important;right:auto!important;top:auto!important;bottom:76px!important;width:min(440px,calc(100% - 32px))!important;max-height:min(300px,42%)!important;border-radius:20px!important}
+.ns-space .aj-diagram{min-height:168px}
+.ns-space .aj-diagram svg{height:150px}
+.ns-space .aj-diagram-line{stroke-width:10!important}
+.ns-space .aj-panel .aj-endpoint{top:108px!important}
+.ns-space .ns-caption{z-index:6}
+
+html[data-appearance="light"] #shared-view .cw-room{background:#f4f7f5!important;color:#1d1d1f!important}
+html[data-appearance="light"] #shared-view .cw-room .cw-environment{background:#f6f7f4!important}
+html[data-appearance="light"] #shared-view .cw-room .cw-environment::after{background:none!important}
+html[data-appearance="light"] #shared-view .cw-room .cw-scene{opacity:1!important}
+html[data-appearance="light"] #shared-atlas .atlas-subnavigation span{color:#1d1d1f!important;font-weight:650}
+html[data-appearance="light"] #shared-view .cw-room .cw-controls summary{color:#fff!important;background:transparent!important;opacity:1!important}
+html[data-appearance="light"] #shared-view .cw-room .cw-heading h2{color:#1d1d1f!important;text-shadow:none!important}
+html[data-appearance="light"] #shared-view .cw-room :is(h2,h3,p,small,button,summary,label,span){color:#1d1d1f}
+html[data-appearance="light"] #shared-view .cw-room .cw-place{background:transparent!important;color:#1d1d1f!important;text-shadow:0 0 8px #fff,0 1px 0 #fff!important;border-radius:0;box-shadow:none;padding:8px}
+html[data-appearance="light"] #shared-view .cw-room .cw-place-title,
+html[data-appearance="light"] #shared-view .cw-room .cw-place-action,
+html[data-appearance="light"] #shared-view .cw-room .cw-heading h2,
+html[data-appearance="light"] #shared-view .cw-room .cw-ground>p{color:#1d1d1f!important;text-shadow:0 0 8px #fff,0 1px 0 #fff!important}
+html[data-appearance="light"] #shared-view .cw-room .cw-controls{background:#1d1d1f;border-radius:16px;padding:6px 8px}
+html[data-appearance="light"] #shared-view .cw-room .cw-controls :is(button,label,span){color:#fff!important}
+html[data-appearance="light"] #shared-view .cw-room .cw-modes button,
+html[data-appearance="light"] #shared-view .cw-room .cw-topic select{color:#1d1d1f!important;background:#fff!important;border:1px solid #1d1d1f!important}
+html[data-appearance="light"] #shared-view .cw-room .cw-modes button[aria-pressed=true],
+html[data-appearance="light"] #shared-view .cw-room .cw-controls>button{color:#fff!important;background:#1d1d1f!important;border-color:#1d1d1f!important}
+html[data-appearance="light"] #shared-view .cw-room .cw-detail,
+html[data-appearance="light"] #shared-view .cw-room .cw-about>div{background:#fff!important;color:#1d1d1f!important;border-radius:20px}
+html[data-appearance="light"] #shared-view .cw-room .cw-detail :is(h3,p,small){color:#1d1d1f!important}
+html[data-appearance="light"] #shared-atlas #shared-reader:not([hidden]){background:#fff!important;color:#1d1d1f!important}
+html[data-appearance="light"] #shared-atlas #shared-reader :is(p,small,span,h2,h3,h4,summary,label,li){color:#1d1d1f!important}
+html[data-appearance="light"] #shared-atlas #shared-reader :is(button,input,textarea,select){background:#f5f5f7!important;color:#1d1d1f!important;border-color:#c7c7cc!important}
+html[data-appearance="light"] #shared-view .ar-inspector,
+html[data-appearance="light"] #shared-view .ar-inspector :is(h3,p,small,button,summary,label){background:#fff!important;color:#1d1d1f!important}
+html[data-appearance="light"] .rh-space,
+html[data-appearance="light"] .rh-space :is(h2,p,summary,button){color:#1d1d1f!important}
+html[data-appearance="light"] #shared-atlas[data-selected-view=skills] #shared-view :is(h2,h3,p,li,summary,label){color:#1d1d1f!important}
+html[data-appearance="light"] .atlas-node,
+html[data-appearance="light"] .atlas-edge-label,
+html[data-appearance="light"] .reader-summary,
+html[data-appearance="light"] .reader-body p{color:#1d1d1f!important;stroke:#fff}
+
+#shared-view.atlas-passage{animation:atlas-passage 1s cubic-bezier(.77,0,.175,1)}
+@keyframes atlas-passage{from{opacity:.2;transform:translate3d(0,36px,0) scale(.94)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){#shared-view.atlas-passage{animation:none}}
+html.atlas-reduced #shared-view.atlas-passage,
+html.atlas-motion-paused #shared-view.atlas-passage{animation:none}
+
+@media(max-width:700px){
+  .aw-poem,.aw-caption{display:none!important}
+  html[data-appearance="light"] #shared-atlas .atlas-shell{padding:0 10px!important}
+  html[data-appearance="light"] #shared-atlas .atlas-shell-top{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;grid-template-rows:44px 40px!important;height:auto!important;min-height:0!important;gap:0!important;align-items:center!important}
+  html[data-appearance="light"] #shared-atlas .atlas-shell-identity{grid-column:1;grid-row:1;min-width:0;overflow:hidden}
+  html[data-appearance="light"] #shared-atlas .atlas-shell-identity small{display:none!important}
+  html[data-appearance="light"] #shared-atlas .atlas-shell-identity strong{font-size:18px!important;max-width:none;overflow:hidden;text-overflow:ellipsis}
+  html[data-appearance="light"] #shared-atlas .atlas-shell-tools summary>span{display:none!important}
+  html[data-appearance="light"] #shared-atlas .atlas-shell-tools{grid-column:2;grid-row:1;position:static!important}
+  html[data-appearance="light"] #shared-atlas .atlas-primary{grid-column:1/-1;grid-row:2;width:100%}
+  html[data-appearance="light"] .aw-journey{left:12px;right:12px;width:auto}
+  .aw-relation-note,.ns-space .aj-panel{left:10px!important;right:10px!important;width:auto!important;max-height:38%!important}
+}
+
+/* Small screens keep the title and the three direct controls in separate space. */
+#shared-atlas .atlas-shell-tools>details{padding:0;border:0}
+html:not([data-appearance="light"]) .aw-caption{color:#a9b8c9}
+@media(max-width:700px){
+ #shared-atlas .atlas-shell-tools .atlas-motion-panel>summary>span{display:none!important}
+ #shared-atlas .atlas-shell-tools .atlas-motion-panel>summary{min-width:28px;justify-content:center}
+ #shared-atlas .atlas-shell-tools .atlas-motion-panel>summary::before{margin:0}
+ html[data-appearance="light"] #shared-atlas .atlas-shell-identity strong{font-family:Newsreader,Georgia,serif!important;font-size:18px!important}
+}
+
+html[data-appearance="light"] #shared-view .cw-room .cw-place-title{color:#1d1d1f!important;text-shadow:none!important;font-weight:650}
+#shared-view.atlas-zoom-out{animation:atlas-zoom-out .88s cubic-bezier(.77,0,.175,1) both;transform-origin:50% 42%}
+#shared-view.atlas-zoom-in{animation:atlas-zoom-in .92s cubic-bezier(.23,1,.32,1) both;transform-origin:50% 42%}
+@keyframes atlas-zoom-out{from{transform:scale(1)}to{transform:scale(1.62)}}
+@keyframes atlas-zoom-in{from{transform:scale(1.62)}to{transform:scale(1)}}
+html.atlas-reduced #shared-view.atlas-zoom-out,
+html.atlas-reduced #shared-view.atlas-zoom-in,
+html.atlas-motion-paused #shared-view.atlas-zoom-out,
+html.atlas-motion-paused #shared-view.atlas-zoom-in{animation:none!important}
+@media(prefers-reduced-motion:reduce){#shared-view.atlas-zoom-out,#shared-view.atlas-zoom-in{animation:none!important}}
+
+html[data-appearance="light"] #shared-atlas[data-selected-view=skills] #shared-view.skill-workshop[data-sw-mode]{
+  --sw-ink:#1d1d1f;--sw-muted:#3a3a3c;--sw-line:#1d1d1f;--sw-surface:#fff;--sw-deep:#e7f2ec;--sw-accent:#0c6b52;--sw-accent-ink:#fff;
+  background:#e7f2ec!important;background-image:none!important;color:#1d1d1f!important;color-scheme:light
+}
+html[data-appearance="light"] #shared-atlas[data-selected-view=skills] #shared-view.skill-workshop[data-sw-mode] :is(h2,h3,p,span,a,summary){color:#1d1d1f!important}
+html[data-appearance="light"] #shared-atlas[data-selected-view=skills] #shared-view.skill-workshop[data-sw-mode] button{background:#fff!important;color:#1d1d1f!important;border-color:#1d1d1f!important}
+html[data-appearance="light"] #shared-atlas[data-selected-view=skills] #shared-view.skill-workshop[data-sw-mode] button[aria-pressed=true]{background:#0c6b52!important;color:#fff!important;border-color:#0c6b52!important}
+html[data-appearance="light"] .skill-workshop :is(h2,h3,h4,p,li,summary,label,button){color:#1d1d1f}
+html[data-appearance="light"] .skill-workshop button{background:#fff;border-color:#1d1d1f;color:#1d1d1f}
+html[data-appearance="light"] .skill-workshop button[aria-pressed=true]{background:#1d1d1f;color:#fff}
+html[data-appearance="light"] #shared-atlas[data-selected-view=constellation] #shared-view .ns-space{background:linear-gradient(180deg,#fffaf3,#f3e6d4)!important}
+html[data-appearance="light"] #shared-atlas[data-selected-view=constellation] .ns-path-status{color:#66502d}
+html[data-appearance="light"] .atlas-player{color:#1d1d1f}
+@media(max-width:700px){
+  html[data-appearance="light"] .skill-workshop{padding:18px 14px 28px!important}
+  html[data-appearance="light"] #shared-view .cw-room .cw-controls{flex-wrap:wrap;max-width:100%}
+}
+
+/* Runde 4: Themenraum ohne Schleier, Ast und Bühnen in derselben Helligkeit. */
+html[data-appearance="light"] #shared-view .cw-room{
+  background:#f1f4f7!important;color:#1d1d1f!important;box-shadow:none!important
+}
+html[data-appearance="light"] #shared-view .cw-room .cw-environment,
+html[data-appearance="light"] #shared-view .cw-room .cw-environment::after{
+  background:transparent!important;background-image:none!important
+}
+html[data-appearance="light"] #shared-view .cw-room .cw-scene{opacity:1!important;filter:none!important}
+html[data-appearance="light"] #shared-view .cw-room .cw-places{background:none!important}
+html[data-appearance="light"] #shared-view .cw-room .cw-heading small{
+  color:#3a3a3c!important;font-size:13px!important;font-weight:650!important;letter-spacing:0!important;text-transform:none!important
+}
+html[data-appearance="light"] #shared-view .cw-room .cw-place-title,
+html[data-appearance="light"] #shared-view .cw-room .cw-place-action,
+html[data-appearance="light"] #shared-view .cw-room .cw-ground>p{
+  color:#1d1d1f!important;text-shadow:none!important;opacity:1!important
+}
+html[data-appearance="light"] #shared-view .cw-room .cw-place-title{font-weight:700!important;font-size:16px!important}
+html[data-appearance="light"] #shared-view .cw-room .cw-place-action{color:#3a3a3c!important;font-weight:600!important}
+html[data-appearance="light"] #shared-atlas .atlas-subnavigation>span{
+  color:#1d1d1f!important;background:#e4e4e8!important;font-weight:650!important;border-radius:999px;box-shadow:inset 0 -3px #1d1d1f
+}
+html[data-appearance="light"] #shared-view .cw-room .cw-controls{
+  background:#fff!important;color:#1d1d1f!important;border:1px solid #1d1d1f!important;border-radius:18px!important;box-shadow:0 10px 28px #1d1d1f18!important
+}
+html[data-appearance="light"] #shared-view .cw-room .cw-controls :is(button,label,span){
+  color:#1d1d1f!important;opacity:1!important;background:transparent!important
+}
+html[data-appearance="light"] #shared-view .cw-room .cw-about>summary{
+  color:#fff!important;background:#1d1d1f!important;border:1px solid #1d1d1f!important;border-radius:999px!important;
+  font-weight:650!important;opacity:1!important;padding:8px 14px!important;min-height:44px
+}
+html[data-appearance="light"] #shared-view .cw-room .cw-modes button{
+  color:#1d1d1f!important;background:#fff!important;border:1px solid #1d1d1f!important;opacity:1!important
+}
+html[data-appearance="light"] #shared-view .cw-room .cw-modes button[aria-pressed=true]{
+  color:#fff!important;background:#1d1d1f!important
+}
+.aw-relation-branch{stroke:#143028;stroke-width:8;stroke-linecap:round}
+.aw-relation[data-family="branch"] .aw-relation-branch{filter:drop-shadow(0 12px 10px #1d1d1f2e)}
+
+.lr-stage-banner{position:relative;z-index:8;margin:0;padding:12px 22px;background:#fff;color:#1d1d1f;font:600 15px/1.4 -apple-system,BlinkMacSystemFont,system-ui,sans-serif;border-bottom:1px solid #d2d2d7}
+html[data-appearance="light"] #shared-view.lr-stage-skill{
+  background:radial-gradient(ellipse at 12% 0%,#f6d7c4 0%,transparent 36%),linear-gradient(180deg,#fbf7f1,#f1e6d8)!important;color:#1d1d1f!important
+}
+html[data-appearance="light"] #shared-view.lr-stage-skill .sw-safety{max-width:68ch;margin:0 0 18px;color:#1d1d1f!important;font-size:16px;line-height:1.45;font-weight:600}
+html[data-appearance="light"] #shared-view.lr-stage-media{background:#e7eef6!important}
+html[data-appearance="light"] #shared-view.lr-stage-media .notebook-library{
+  --nl-dark:#e7eef6;--nl-paper:#1d1d1f;--nl-muted:#3a3a3c;--nl-copper:#0b6bcb;
+  background:radial-gradient(ellipse at 80% 0%,#fff 0%,transparent 42%),linear-gradient(180deg,#f7fafc,#e3ebf4)!important;color:#1d1d1f!important
+}
+html[data-appearance="light"] #shared-view.lr-stage-media .notebook-library :is(h1,h2,h3,p,a,button,span,li){color:#1d1d1f!important}
+html[data-appearance="light"] #shared-view.lr-stage-media .notebook-library button{border:1px solid #1d1d1f!important;background:#fff!important;min-height:44px}
+html[data-appearance="light"] #shared-view.lr-stage-karte .ns-space{
+  background:radial-gradient(ellipse at 50% 18%,#fff 0%,transparent 46%),linear-gradient(180deg,#fff8ef,#f3e2cc)!important
+}
+html[data-appearance="light"] #shared-view.lr-stage-karte .ns-space button,
+html[data-appearance="light"] #shared-view.lr-stage-karte .ns-space .ns-search-toggle{
+  background:#fff!important;color:#1d1d1f!important;border:1px solid #1d1d1f!important
+}
+html[data-appearance="light"] .atlas-player.lr-media-window{
+  background:linear-gradient(160deg,#fff,#e7eef6)!important;color:#1d1d1f!important;border:1px solid #1d1d1f!important;
+  animation:lr-window-in .7s cubic-bezier(.23,1,.32,1) both
+}
+@keyframes lr-window-in{from{transform:translate3d(0,28px,0) scale(.94)}to{transform:none}}
+html[data-appearance="light"] #shared-view .atlas-dynamics{
+  --ds-ink:#1d1d1f;--ds-muted:#3a3a3c;--ds-accent:#8a5a12;background:#f6f1e8!important;color:#1d1d1f!important
+}
+html[data-appearance="light"] #shared-view .atlas-dynamics :is(h3,p,button,span,summary,label){color:#1d1d1f}
+html[data-appearance="light"] #shared-view .dynamics-drawing text{stroke:#fff;fill:#1d1d1f}
+html[data-appearance="light"] #shared-view .ds-speech,
+html[data-appearance="light"] #shared-view .ds-tension,
+html[data-appearance="light"] #shared-view .ds-open-label{fill:#1d1d1f!important}
+html[data-appearance="light"] #shared-view .ds-person{fill:#fff;stroke:#1d1d1f}
+html[data-appearance="light"] #shared-view .ds-fold{opacity:.92;stroke:#1d1d1f33}
+.lr-ride{position:relative;height:calc(100svh - var(--atlas-shell-height,146px));min-height:480px;overflow:hidden;background:#f1f4f7;perspective:1200px}
+.lr-ride-camera{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
+.lr-ride-stop{position:absolute;inset:0;overflow:hidden;background:#f1f4f7;transform:translate3d(0,0,calc(var(--z) * -1600px))}
+.lr-ride .aw-world,.lr-ride .ns-space,.lr-ride .atlas-dynamics{height:100%!important;min-height:0!important}
+.lr-ride-hud{position:absolute;z-index:6;left:22px;bottom:22px;display:flex;align-items:center;gap:12px;padding:8px 8px 8px 16px;background:#fff;color:#1d1d1f;border:1px solid #1d1d1f;border-radius:999px}
+.lr-ride-hud p{margin:0;font:600 15px/1.3 -apple-system,BlinkMacSystemFont,system-ui,sans-serif}
+.lr-ride-hud button{min-height:44px;border-radius:999px;border:0;background:#1d1d1f;color:#fff;padding:8px 14px;font:inherit;cursor:pointer}
+.lr-ride-settled{perspective:none;overflow:auto}
+.lr-ride-settled .lr-ride-camera,.lr-ride-settled .lr-ride-stop{position:relative;transform:none!important;height:auto;overflow:visible}
+.lr-ride-settled .lr-ride-hud{display:none}
+.lr-arrival{position:absolute;z-index:24;left:0;right:0;bottom:0;top:var(--atlas-shell-height,146px);overflow:hidden;pointer-events:none}
+.lr-arrival img{width:100%;height:100%;object-fit:cover;transform-origin:50% 42%;animation:lr-arrive 1.05s cubic-bezier(.77,0,.175,1) both}
+@keyframes lr-arrive{0%{transform:scale(1);opacity:1}72%{opacity:1}100%{transform:scale(1.72) translateY(-8%);opacity:0}}
+html.atlas-reduced .lr-arrival,html.atlas-motion-paused .lr-arrival,html.atlas-quiet .lr-arrival{display:none!important}
+@media(prefers-reduced-motion:reduce){
+  .lr-arrival,.atlas-player.lr-media-window{animation:none!important}
+  .lr-arrival{display:none!important}
+}
+html[data-appearance="light"] #shared-atlas #shared-view.lr-stage-media .notebook-library{
+  --nl-dark:#e7eef6;--nl-paper:#1d1d1f;--nl-muted:#3a3a3c;--nl-copper:#0b6bcb;--ink:#1d1d1f;--paper:#f4f8fb;
+  background:radial-gradient(ellipse at 78% 0%,#fff 0%,transparent 42%),linear-gradient(180deg,#f4f8fb,#dce6f0)!important;
+  color:#1d1d1f!important;color-scheme:light
+}
+html[data-appearance="light"] #shared-atlas #shared-view.lr-stage-media .notebook-library :is(h1,h2,h3,h4,p,a,button,span,li,strong,small,figcaption){color:#1d1d1f!important}
+html[data-appearance="light"] #shared-atlas #shared-view.lr-stage-media .notebook-library :is(.nl-wave,.nl-film,.nl-visual,.nl-reader,.nl-image,.nl-page,.nl-shelf-item){background:#fff!important;color:#1d1d1f!important;border:1px solid #1d1d1f22}
+html[data-appearance="light"] #shared-atlas #shared-view.lr-stage-media .notebook-library button{background:#fff!important;color:#1d1d1f!important;border:1px solid #1d1d1f!important}
+html[data-appearance="light"] #shared-atlas[data-selected-view=constellation] #shared-view :is(.ns-space button,.ns-search-toggle,.ar-profile-manager,.ar-profile-manager summary){
+  background:#fffdf8!important;color:#1d1d1f!important;border-color:#1d1d1f!important
+}
+html[data-appearance="light"] #shared-atlas[data-selected-view=skills] #shared-view.skill-workshop[data-sw-mode].lr-stage-skill .sw-kicker{color:#0c4a38!important}
+html[data-appearance="light"] #shared-atlas[data-selected-view=skills] #shared-view.skill-workshop[data-sw-mode].lr-stage-skill .sw-tabs button{color:#1d1d1f!important;opacity:1!important}
+html[data-appearance="light"] #shared-atlas[data-selected-view=skills] #shared-view.skill-workshop[data-sw-mode].lr-stage-skill .sw-tabs :is([aria-current=page],[aria-pressed=true]){color:#0c4a38!important;border-bottom-color:#0c4a38!important;font-weight:700}
+@media(max-width:700px){
+  .lr-stage-banner{padding:10px 14px;font-size:14px}
+  .lr-ride{min-height:100svh}
+  .lr-ride-hud{left:10px;right:10px;bottom:10px;justify-content:space-between}
+  html[data-appearance="light"] #shared-view.lr-stage-skill .sw-titleline{flex-direction:column;align-items:flex-start;gap:8px}
+  html[data-appearance="light"] #shared-view .cw-room .cw-controls{max-width:100%}
+  #shared-atlas .atlas-subnavigation{overflow-x:auto;flex-wrap:nowrap}
+  #shared-atlas .atlas-subnavigation :is(button,span){white-space:nowrap;flex:none}
+}

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="765.72pt" height="483.84pt" viewBox="0 0 765.72 483.84" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-27T17:39:53.387863</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 483.84 
+L 765.72 483.84 
+L 765.72 0 
+L 0 0 
+z
+" style="fill: #faf7ef"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 45.549 235.2672 
+L 284.931 235.2672 
+Q 299.439 235.2672 299.439 226.3968 
+L 299.439 124.3872 
+Q 299.439 115.5168 284.931 115.5168 
+L 45.549 115.5168 
+Q 31.041 115.5168 31.041 124.3872 
+L 31.041 226.3968 
+Q 31.041 235.2672 45.549 235.2672 
+z
+" clip-path="url(#p7148d09772)" style="fill: #fffdf7; stroke: #a55038; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 480.789 235.2672 
+L 720.171 235.2672 
+Q 734.679 235.2672 734.679 226.3968 
+L 734.679 124.3872 
+Q 734.679 115.5168 720.171 115.5168 
+L 480.789 115.5168 
+Q 466.281 115.5168 466.281 124.3872 
+L 466.281 226.3968 
+Q 466.281 235.2672 480.789 235.2672 
+z
+" clip-path="url(#p7148d09772)" style="fill: #fffdf7; stroke: #315b82; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 241.407 425.9808 
+L 524.313 425.9808 
+Q 538.821 425.9808 538.821 417.1104 
+L 538.821 310.6656 
+Q 538.821 301.7952 524.313 301.7952 
+L 241.407 301.7952 
+Q 226.899 301.7952 226.899 310.6656 
+L 226.899 417.1104 
+Q 226.899 425.9808 241.407 425.9808 
+z
+" clip-path="url(#p7148d09772)" style="fill: #fffdf7; stroke: #173d42; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 265.123958 298.47665 
+Q 219.644311 268.530746 175.752103 239.630086 
+" clip-path="url(#p7148d09772)" style="fill: none; stroke: #173d42; stroke-width: 1.7; stroke-linecap: round"/>
+    <path d="M 179.337617 245.822347 
+L 175.752103 239.630086 
+L 182.85722 240.477031 
+z
+" clip-path="url(#p7148d09772)" style="fill: #173d42; stroke: #173d42; stroke-width: 1.7; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 500.596042 298.47665 
+Q 546.075689 268.530746 589.967897 239.630086 
+" clip-path="url(#p7148d09772)" style="fill: none; stroke: #173d42; stroke-width: 1.7; stroke-linecap: round"/>
+    <path d="M 582.86278 240.477031 
+L 589.967897 239.630086 
+L 586.382383 245.822347 
+z
+" clip-path="url(#p7148d09772)" style="fill: #173d42; stroke: #173d42; stroke-width: 1.7; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 303.066 175.392 
+L 462.654 175.392 
+" clip-path="url(#p7148d09772)" style="fill: none; stroke-dasharray: 6.29,2.72; stroke-dashoffset: 0; stroke: #946218; stroke-width: 1.7"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #173d42; font: 23px 'DejaVu Serif'; text-anchor: start" x="31.041" y="51.085756" transform="rotate(-0 31.041 51.085756)">Wenn ein Zusammenhang seine Bedeutung ändert</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #53616b; font: 11px 'DejaVu Sans'; text-anchor: start" x="31.041" y="64.512" transform="rotate(-0 31.041 64.512)">Ein Beispiel zum Lesen von Beobachtungsstudien – kein vollständiges Modell für ADHS.</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #a55038; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="60.057" y="151.246125" transform="rotate(-0 60.057 151.246125)">Exposition</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(60.057 174.499959)">Zum Beispiel Rauchen</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(60.057 188.65117)">in der Schwangerschaft</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #315b82; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="495.297" y="151.414875" transform="rotate(-0 495.297 151.414875)">Späteres Ergebnis</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(495.297 174.499959)">Zum Beispiel eine</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(495.297 188.65117)">ADHS-Diagnose</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #946218; font: 10px 'DejaVu Sans'; text-anchor: middle" x="382.86" y="164.304" transform="rotate(-0 382.86 164.304)">beobachtete Assoziation</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #173d42; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="255.915" y="337.524525" transform="rotate(-0 255.915 337.524525)">Gemeinsame familiäre Einflüsse</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(255.915 360.778359)">Genetische und soziale Faktoren</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(255.915 374.92957)">können mit beiden Größen</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(255.915 389.080781)">zusammenhängen.</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #53616b; font: 11px 'DejaVu Sans'" transform="translate(34.668 442.202122)">Geschwistervergleiche können geteilte Einflüsse teilweise kontrollieren. Sie beseitigen nicht jede Verzerrung.</text>
+    <text style="fill: #53616b; font: 11px 'DejaVu Sans'" transform="translate(34.668 457.0272)">Ein schwächerer Zusammenhang verlangt eine engere Erklärung; er beweist nicht, dass Umwelt unwichtig ist.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p7148d09772">
+   <rect x="20.16" y="20.16" width="725.4" height="443.52"/>
+  </clipPath>
+ </defs>
+</svg>

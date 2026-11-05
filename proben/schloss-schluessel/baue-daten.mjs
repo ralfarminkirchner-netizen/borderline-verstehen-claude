@@ -29,19 +29,19 @@ const TEXTE = join(BESTAND, 'texte.json');
 const RAEUME = join(BESTAND, 'fugenraeume.json');
 const ZIEL = join(HIER, 'daten.js');
 
-const SCHLOSS = { titel: 'Aufgabenstarre', gebiet: 'ADHS · Randphänomene' };
+const SCHLOSS = { titel: 'Die Angst vor Verlust ist groß', gebiet: 'Beziehungen & Borderline' };
 const AUSWAHL = [
-  // erster Eintrag = Startfall
-  { titel: 'Hyperfokus', gebiet: 'ADHS · Randphänomene' },
-  { titel: 'Wartemodus', gebiet: 'ADHS · Randphänomene' },
-  { titel: 'Body Doubling', gebiet: 'ADHS · Randphänomene' },
-  { titel: 'Delay Aversion', gebiet: 'ADHS · Randphänomene' },
-  { titel: 'Zeitblindheit', gebiet: 'ADHS · Randphänomene' },
-  { titel: 'Aufgaben bleiben offen', gebiet: 'Neuroatlas' },
-  { titel: 'Heritabilität ist kein Schicksal', gebiet: 'ADHS · Randphänomene' },
+  // erster Eintrag = Startfall: Bedürfnis trifft begrenzte Verfügbarkeit
+  { titel: 'Auch meine Grenze gilt', gebiet: 'Beziehungen & Borderline' },
+  { titel: 'Eine Antwort bleibt aus', gebiet: 'Beziehungen & Borderline' },
+  { titel: 'Wenn Nähe zur Verpflichtung wird', gebiet: 'Beziehungen & Borderline' },
+  { titel: 'Verlassenheitsangst und Vermeidungsbemühungen', gebiet: 'Diagnose & Differenzierung' },
+  { titel: 'Abstand wünschen', gebiet: 'Beziehungen & Borderline' },
+  { titel: 'Rückzug hat mehrere mögliche Bedeutungen', gebiet: 'Beziehungen & Borderline' },
 ];
-// Zeitblindheit hat keine Bestandsfuge zu Aufgabenstarre: Sie hängt bewusst am Bund, als Fall der glatten Kante.
-// Alle anderen Feldfugen von Aufgabenstarre hängen ebenfalls daran (geprüft unten, sonst Abbruch).
+// „Abstand wünschen“ und „Rückzug hat mehrere mögliche Bedeutungen“ haben keine Bestandsfuge zur Verlustangst:
+// Sie hängen bewusst am Bund, als Fall der glatten Kante (zunächst inkommensurabel).
+// Alle anderen Feldfugen der Verlustangst hängen ebenfalls daran (geprüft unten, sonst Abbruch).
 
 const ART_WORT = {
   einordnung: 'Einordnung', offen: 'offen', abstand: 'Abstand', widerspruch: 'Widerspruch',
@@ -454,10 +454,17 @@ function relax(pkte, anker, dmin, runden = 260) {
   }
   return pkte;
 }
-function gebietsLage(orte, dicht = 1) {
+function gebietsLage(orte, dicht = 1, heim = false) {
   const cx = orte.reduce((a, i) => a + karte.orte[i].x, 0) / orte.length;
   const cy = orte.reduce((a, i) => a + karte.orte[i].y, 0) / orte.length;
   const roh = orte.map((i) => ({ x: karte.orte[i].x - cx, y: karte.orte[i].y - cy }));
+  // Heimgebiet: Liegt es auf der Karte als schmaler Streifen, wird es in beiden Richtungen auf gleiche
+  // Ausdehnung gestreckt. Reihenfolge und Nachbarschaft der Orte bleiben, nur das Seitenverhältnis ändert sich.
+  if (heim && roh.length > 2) {
+    const sd = (k) => Math.sqrt(roh.reduce((a, p) => a + p[k] * p[k], 0) / roh.length) || 1;
+    const sx = sd('x'), sy = sd('y'), g = Math.sqrt(sx * sy);
+    for (const p of roh) { p.x *= g / sx; p.y *= g / sy; }
+  }
   let nn = [];
   for (let i = 0; i < roh.length; i++) {
     let m = Infinity;
@@ -468,7 +475,7 @@ function gebietsLage(orte, dicht = 1) {
   const median = nn.length ? nn[Math.floor(nn.length / 2)] : 1;
   const k = (1.3 / (median || 1)) * dicht;
   const anker = roh.map((p) => ({ x: p.x * k, y: p.y * k }));
-  const pkte = relax(anker.map((p) => ({ ...p })), anker, 1.12);
+  const pkte = relax(anker.map((p) => ({ ...p })), anker, heim ? 1.5 : 1.12);
   const r = Math.max(0.6, ...pkte.map((p) => Math.hypot(p.x, p.y) + 0.6));
   return { cx, cy, pkte, r };
 }
@@ -479,7 +486,7 @@ for (const i of feldOrte) {
   nachGebiet.get(r).push(i);
 }
 const lagen = new Map();
-for (const [r, orte] of nachGebiet) lagen.set(r, { orte, ...gebietsLage(orte, r === heimR ? 1 : 0.55) });
+for (const [r, orte] of nachGebiet) lagen.set(r, { orte, ...gebietsLage(orte, r === heimR ? 1 : 0.55, r === heimR) });
 const heimLage = lagen.get(heimR);
 const fremde = [...lagen.keys()].filter((r) => r !== heimR).sort((a, b) => a - b);
 for (const r of fremde) {
@@ -543,7 +550,7 @@ const feld = {
     begrenzung: begrenzt
       ? `Es wären mehr als ${FELD_MAX} Orte. Alle Orte des Gebiets bleiben; von den übrigen bleiben die mit den meisten Fugen ins Gebiet (bei Gleichstand nach Titel).`
       : 'Begrenzt wird erst bei sehr großen Feldern; hier fehlt nichts.',
-    lage: 'Innerhalb eines Gebiets folgt die Lage der Karte, gleichmäßig gestreckt (andere Gebiete enger) und so weit auseinandergeschoben, dass sich Zeichen nicht berühren. Andere Gebiete stehen in der Richtung, in der sie auf der Karte liegen, aber näher herangerückt.',
+    lage: 'Innerhalb eines Gebiets folgt die Lage der Karte, gestreckt (das eigene Gebiet in beiden Richtungen auf gleiche Ausdehnung, andere Gebiete enger) und so weit auseinandergeschoben, dass sich Zeichen nicht berühren. Andere Gebiete stehen in der Richtung, in der sie auf der Karte liegen, aber näher herangerückt.',
   },
   technisch: { heimGebiet: heimR, orteGesamt: feldOrte.length, nachbarnGesamt: nachbarnAlle, fugenGesamt: feldFugen.length, paareGesamt: feldPaare.length, begrenzt, feldMax: FELD_MAX },
 };

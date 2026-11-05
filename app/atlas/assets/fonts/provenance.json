@@ -1,0 +1,76 @@
+{
+  "source": "https://github.com/google/fonts",
+  "retrieved": "2026-11-02",
+  "license": "SIL Open Font License 1.1; see both included OFL files",
+  "files": [
+    {
+      "file": "Newsreader-Variable.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/8b0a1d0f5983c89bc2b93f1b5fb55f9e252744b5/ofl/newsreader/Newsreader%5Bopsz%2Cwght%5D.ttf",
+      "sha256": "8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1",
+      "bytes": 451664,
+      "axes": {
+        "wght": [
+          200.0,
+          800.0
+        ],
+        "opsz": [
+          6.0,
+          72.0
+        ]
+      },
+      "verified_characters": "ÄÖÜäöüßẞ„“‚‘–—",
+      "name": "Newsreader 16pt",
+      "version": "Version 1.003"
+    },
+    {
+      "file": "Newsreader-Italic-Variable.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/8b0a1d0f5983c89bc2b93f1b5fb55f9e252744b5/ofl/newsreader/Newsreader-Italic%5Bopsz%2Cwght%5D.ttf",
+      "sha256": "796668611f80b64d5adf182fde3b6f29ed83b4e7cbec7b96937e84ac01364792",
+      "bytes": 495684,
+      "axes": {
+        "wght": [
+          200.0,
+          800.0
+        ],
+        "opsz": [
+          6.0,
+          72.0
+        ]
+      },
+      "verified_characters": "ÄÖÜäöüßẞ„“‚‘–—",
+      "name": "Newsreader 16pt",
+      "version": "Version 1.003"
+    },
+    {
+      "file": "Manrope-Variable.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/b31870aff700ab7a1d74fa0c6887d95beb9e0037/ofl/manrope/Manrope%5Bwght%5D.ttf",
+      "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+      "bytes": 164700,
+      "axes": {
+        "wght": [
+          200.0,
+          800.0
+        ]
+      },
+      "verified_characters": "ÄÖÜäöüßẞ„“‚‘–—",
+      "name": "Manrope ExtraLight",
+      "version": "Version 4.505"
+    },
+    {
+      "file": "OFL-Newsreader.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/8b0a1d0f5983c89bc2b93f1b5fb55f9e252744b5/ofl/newsreader/OFL.txt",
+      "sha256": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8",
+      "bytes": 4394
+    },
+    {
+      "file": "OFL-Manrope.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/b31870aff700ab7a1d74fa0c6887d95beb9e0037/ofl/manrope/OFL.txt",
+      "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b",
+      "bytes": 4387
+    }
+  ],
+  "prior_local_material_examined": [
+    "Dazwischen: Source Serif 4 Variable and Fira Code imports, font files and license location",
+    "Tisch: Newsreader Latin variable WOFF2, OFL and provenance note; full optical-size variable upstream chosen for this atlas"
+  ]
+}

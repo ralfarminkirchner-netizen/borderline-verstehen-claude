@@ -1,0 +1,273 @@
+{
+  "version": 1,
+  "title": "Skillkoffer · Kleine Schritte, eigene Wahl",
+  "editorialNote": "Eigenständig formulierte Alltagshilfen. Sie stellen keine Diagnose und ersetzen keine Behandlung. Wirkung und Passung sind individuell. Du kannst jeden Schritt verändern, überspringen oder beenden.",
+  "sources": {
+    "who": {"label": "WHO · Doing What Matters in Times of Stress (2020; Handbuch und Sprachfassungen)", "url": "https://www.who.int/publications/i/item/9789240003927", "type": "Fachvermittlung / Selbsthilfe", "note": "Die offizielle Seite bietet auch eine deutsche Textfassung und begleitende Audios. Die Alltagshilfen hier sind eigenständige Formulierungen; aus der Quelle folgt kein Wirksamkeitsnachweis für diese App."},
+    "va": {"label": "VA · PTSD Coach Online: Be in the moment (Englisch)", "url": "https://www.ptsd.va.gov/apps/ptsdcoachonline/tools/be-in-the-moment/pages/page-2.html", "type": "Fachvermittlung / Selbsthilfe", "note": "Offizielle Seite mit zwei angeleiteten Aktivitäten zur Orientierung in Körper und Umgebung. Hier wird das Prinzip aufgegriffen; es handelt sich nicht um eine Wiedergabe der VA-Anleitung."},
+    "va-app": {"label": "VA · PTSD Coach: Ziele, Werkzeuge und Grenzen (Englisch)", "url": "https://www.ptsd.va.gov/appvid/mobile/ptsdcoach_app.asp", "type": "Fachvermittlung / Selbsthilfe", "note": "Die VA beschreibt Werkzeuge für den Umgang mit Belastung und verweist auf professionelle Unterstützung. Die App ersetzt weder Behandlung noch eine fachliche Beurteilung; Aussagen zur Original-App sind nicht auf diesen Atlas übertragbar."},
+    "dbt": {"label": "Marsha M. Linehan · DBT Skills Training Manual, Revised Edition (Guilford, 2025)", "url": "https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462556359", "type": "Verlagsinformation zu einem Fachmanual; geschütztes Original", "note": "Die Verlagsseite beschreibt Achtsamkeit, zwischenmenschliche Fertigkeiten, Emotionsregulation und Stresstoleranz. Die Texte hier sind eigene Alltagshilfen und keine Originalhandouts oder vollständige DBT-Behandlung."},
+    "trauma": {"label": "Ralf Kirchner · TraumaAtlas Wasser: ursprüngliche Übungsbibliothek", "url": null, "type": "Vorhandene Originalarbeit", "note": "Die ursprünglichen Varianten bleiben im Originalprojekt erhalten. Hier werden kenntlich gemachte, vorsichtigere Anpassungen verwendet."}
+  },
+  "skills": [
+    {
+      "id": "orientieren", "title": "Hier im Raum ankommen", "subtitle": "Ein ruhiger Blick nach außen", "need": ["orientierung", "ueberlastung"], "goal": "Gegenwart finden", "environment": ["unterwegs", "zuhause", "arbeit"], "preference": ["sehen", "ohne-koerperfokus", "still"], "minutes": 2,
+      "purpose": "Die Umgebung wieder als konkrete Gegenwart erfassen, wenn vieles gleichzeitig auf dich einwirkt oder sich unwirklich anfühlt. Du musst dabei weder ruhig werden noch etwas Bestimmtes spüren.",
+      "when": "Nach einem Schreck, bei Gedankenkreisen, vor einer Antwort oder beim Wechsel zwischen zwei Situationen.",
+      "limits": "Prüfe zuerst tatsächliche Gefahr. Wenn du Schutz oder medizinische Hilfe brauchst, hat das Vorrang. Bei stärkerem Schwindel oder Unwirklichkeitsgefühl abbrechen; schnelle Augenbewegungen sind nicht erforderlich.",
+      "materials": "Nichts. Ein vertrauter Gegenstand ist optional.",
+      "steps": [
+        {"title": "Einen überschaubaren Platz wählen", "text": "Bleib dort, wo du ausreichend sicher bist. Du darfst sitzen, stehen oder dich langsam bewegen. Die Augen bleiben so geöffnet, wie es angenehm ist."},
+        {"title": "Drei konkrete Dinge finden", "text": "Suche in bequemer Blickweite drei neutrale Dinge: etwa eine Kante, eine Farbe, ein Fenster. Benenne sie sachlich. Kein schneller Blickwechsel und keine Suchleistung nötig.", "seconds": 30},
+        {"title": "Die Gegenwart beschreiben", "text": "Ergänze, wenn hilfreich: Ich bin gerade an diesem Ort. Vor mir ist … Als Nächstes kann ich … Du musst niemandem etwas beweisen."},
+        {"title": "Eine kleine Wahl treffen", "text": "Möchtest du bleiben, etwas trinken, den Ort wechseln oder jemanden ansprechen? Wähle eine erreichbare nächste Handlung. Mehr Orientierung darf genügen."}
+      ],
+      "variants": ["Nur einen Gegenstand beschreiben.", "Statt Sehen einen vertrauten Klang oder einen tastbaren Gegenstand wählen.", "Gemeinsam mit einer vertrauten Person den Raum benennen."],
+      "origin": {"kind": "Vorhandene Arbeit · redaktionell angepasst", "text": "Aus der Orientierungsübung des TraumaAtlas Wasser weiterentwickelt; ergänzt durch das Außenorientierungsprinzip aus WHO/VA. Keine Übernahme einer Traumabehandlung und keine Behauptung eines bestimmten Nervenreflexes.", "sources": ["trauma", "who", "va"]},
+      "alternatives": ["sinnesanker", "reizpause", "kontakt"], "atlasTerms": ["Orientierung", "Dissoziation", "Überlastung"],
+      "media": {"src": "/media/trauma-exercises/sos-orientieren.mp4", "poster": "/media/trauma-exercises/sos-orientieren.jpg", "label": "Licht im Raum", "description": "Stummer, abstrakter Lichtstrahl in einem dunklen Raum. Optionaler Bildimpuls; die Übung funktioniert vollständig ohne Video.", "credit": "TraumaAtlas Wasser · KI-generierte Illustration aus dem Originalbestand, keine fachliche Demonstration"}
+    },
+    {
+      "id": "sinnesanker", "title": "Ein Sinn genügt", "subtitle": "Die 5–4–3–2–1-Idee ohne Pflichtprogramm", "need": ["orientierung", "anspannung"], "goal": "Aufmerksamkeit verankern", "environment": ["unterwegs", "zuhause", "arbeit"], "preference": ["sehen", "hoeren", "ohne-koerperfokus", "still"], "minutes": 3,
+      "purpose": "Aufmerksamkeit an etwas Überschaubares in der Umgebung binden. Es geht um Kontakt zur Gegenwart, nicht darum, eine vorgeschriebene Zahl von Reizen abzuarbeiten.",
+      "when": "Wenn Grübeln, viele Eindrücke oder eine Erinnerung den verfügbaren Aufmerksamkeitsraum füllen.",
+      "limits": "Gerüche, Berührung und Geräusche können selbst unangenehm sein. Lass jeden Sinn aus, der nicht passt. Bei sensorischer Überlastung lieber Reize reduzieren, statt weitere zu suchen.",
+      "materials": "Optional ein neutraler Gegenstand; Essen, Duft oder Berührung sind nicht nötig.",
+      "steps": [
+        {"title": "Einen zugänglichen Sinn wählen", "text": "Sehen, Hören oder Tasten an einem Gegenstand: Was ist gerade am wenigsten anstrengend? Die Wahl darf auch keine Übung sein."},
+        {"title": "Ein Detail beschreiben", "text": "Beschreibe eine Farbe, eine Form, einen Klang oder die Oberfläche des Gegenstands. Bleibe bei äußerlich Feststellbarem.", "seconds": 30},
+        {"title": "Freiwillig ergänzen", "text": "Wenn es hilft, suche weitere Details. Die bekannte Zählfolge 5–4–3–2–1 ist eine Möglichkeit, kein Ziel. Ein einziges Detail reicht."},
+        {"title": "Wieder zur Aufgabe finden", "text": "Schau auf deine nächste kleine Handlung. Hat die Übung Orientierung geschaffen oder war sie zu viel? Beides ist eine brauchbare Rückmeldung."}
+      ],
+      "variants": ["Ein Foto eines vertrauten Ortes betrachten.", "Eine Farbe im Raum suchen.", "In geräuschvoller Umgebung ausschließlich visuelle Details wählen."],
+      "origin": {"kind": "Vorhandene Arbeit · redaktionell angepasst", "text": "Die Sinnesübung aus TraumaAtlas Wasser bleibt als Ursprung erhalten. Hier entfallen feste Sinnespflichten und zusätzliche Kältereize. WHO und VA vermitteln verwandte Grounding-Prinzipien; diese Fassung ist eine eigene Anpassung.", "sources": ["trauma", "who", "va"]},
+      "alternatives": ["orientieren", "reizpause"], "atlasTerms": ["Grounding", "Sinnesverarbeitung", "Trigger"]
+    },
+    {
+      "id": "atempause", "title": "Dem Atem Platz lassen", "subtitle": "Ohne Anhalten, ohne Leistung", "need": ["anspannung"], "goal": "Tempo verringern", "environment": ["zuhause", "arbeit", "unterwegs"], "preference": ["atem", "still"], "minutes": 2,
+      "purpose": "Eine kurze Pause schaffen, in der Atmen ohne besondere Vorgabe möglich ist. Eine angenehm etwas längere Ausatmung ist optional; eine bestimmte Atemfrequenz wird nicht verlangt.",
+      "when": "Wenn du Atemaufmerksamkeit gewöhnlich angenehm findest und gerade keinen akuten körperlichen Notfall hast.",
+      "limits": "Bei Luftnot, Brustschmerz oder unklaren körperlichen Beschwerden medizinisch abklären. Atembeobachtung kann Panik verstärken. Bei Schwindel, Luftschnappen oder Unbehagen normal weiteratmen und nach außen orientieren.",
+      "materials": "Keine. Ein bequemer Platz kann helfen.",
+      "steps": [
+        {"title": "Die Wahl prüfen", "text": "Ist Atem gerade ein hilfreicher Fokus? Falls nicht, wähle einen Gegenstand im Raum. Es gibt nichts durchzuhalten."},
+        {"title": "Normal weiteratmen", "text": "Lass den Atem kommen und gehen. Du brauchst nicht tief einzuatmen. Die Augen können geöffnet bleiben.", "seconds": 20},
+        {"title": "Nur wenn angenehm", "text": "Vielleicht darf die nächste Ausatmung etwas gelassener enden. Erzwinge keine Länge, halte die Luft nicht an und lass die nächste Einatmung von selbst kommen.", "seconds": 20},
+        {"title": "Den Fokus wieder öffnen", "text": "Sieh dich kurz um. Entscheide frei, ob du weitermachen, wechseln oder beenden möchtest. Ein anderer Skill kann besser passen."}
+      ],
+      "variants": ["Ohne Atemveränderung nur eine Pause machen.", "Einen neutralen Gegenstand ansehen statt den Atem beobachten."],
+      "origin": {"kind": "Vorhandene Arbeit · deutlich veränderte Anpassung", "text": "Aus dem Atemthema des TraumaAtlas Wasser entwickelt. Das dortige doppelte Einatmen wird hier nicht angeleitet. Diese freiwillige Alltagspause ist weder Atemtherapie noch das Originalverfahren eines physiologischen Seufzers.", "sources": ["trauma", "va-app"]},
+      "alternatives": ["orientieren", "reizpause"], "atlasTerms": ["Körperzustand", "Panik", "Stress"]
+    },
+    {
+      "id": "entscheidungsraum", "title": "Zwischen Impuls und Antwort", "subtitle": "Eine Pause mit Handlungsspielraum", "need": ["anspannung", "konflikt"], "goal": "Bewusst antworten", "environment": ["unterwegs", "zuhause", "arbeit"], "preference": ["denken", "still", "schreiben"], "minutes": 2,
+      "purpose": "Eine impulsive Nachricht oder Handlung kurz unterbrechen und den nächsten Schritt an deinem Ziel ausrichten. Ein starkes Gefühl darf dabei bestehen bleiben.",
+      "when": "Vor dem Absenden, bei Streit oder wenn sich sofortiges Handeln zwingend anfühlt.",
+      "limits": "Bei tatsächlicher Gefahr nicht auf ruhige Gefühle warten: Schutz, Weggehen oder Hilfe können die richtige Handlung sein. Diese Pause verpflichtet nicht zum Bleiben oder zum Nachgeben.",
+      "materials": "Optional Notiz oder Entwurfsfeld. Nichts absenden müssen.",
+      "steps": [
+        {"title": "Die nächste Handlung aufschieben", "text": "Lege die Nachricht als Entwurf ab oder nimm einen kleinen Abstand. Du musst nicht erstarren. Wenn möglich, sag: Ich brauche einen Moment."},
+        {"title": "Kurz außen orientieren", "text": "Was geschieht tatsächlich um dich? Was ist dein Impuls? Was wäre jetzt sicher? Ein kurzer Satz pro Frage genügt.", "seconds": 30},
+        {"title": "Zwei Möglichkeiten sehen", "text": "Zum Beispiel: jetzt sachlich nachfragen oder später antworten. Welche Möglichkeit schützt deine Grenze und passt zu deinem längerfristigen Ziel?"},
+        {"title": "Einen Schritt bewusst wählen", "text": "Handle klein und konkret. Du darfst eine Antwort vertagen. Bewerte später die Handlung, ohne dich für das Gefühl zu verurteilen."}
+      ],
+      "variants": ["Eine Nachricht an dich selbst statt an die andere Person schreiben.", "Ein vertrautes Wort als Pausensignal verwenden."],
+      "origin": {"kind": "Eigene Anpassung eines DBT-Prinzips", "text": "Angelehnt an Linehans STOP-Skill: unterbrechen, Abstand gewinnen, beobachten und bewusst handeln. Eigenständig formulierte, sanftere Alltagshilfe; kein Originalhandout und kein vollständiges DBT-Training.", "sources": ["dbt"]},
+      "alternatives": ["reizpause", "grenze", "fakten"], "atlasTerms": ["DBT", "Impuls", "Beziehungsschleife"]
+    },
+    {
+      "id": "reizpause", "title": "Weniger auf einmal", "subtitle": "Die Umgebung darf sich ändern", "need": ["ueberlastung", "anspannung"], "goal": "Reizlast senken", "environment": ["zuhause", "arbeit", "unterwegs"], "preference": ["ohne-koerperfokus", "still", "handeln"], "minutes": 3,
+      "purpose": "Eine vermeidbare Belastung reduzieren, statt zusätzliche Selbstregulation zu verlangen. Besonders sinnvoll, wenn Licht, Lärm, Kommunikation oder mehrere Aufgaben zu viel werden.",
+      "when": "Bei sensorischer Belastung, Erschöpfung, vielen offenen Kanälen oder Übergängen. Eine Diagnose ist dafür nicht nötig.",
+      "limits": "Gehörschutz im Verkehr oder Abschalten wichtiger Warnsignale kann gefährlich sein. Prüfe deine Umgebung. Dauerhaft unpassende Arbeitsbedingungen brauchen mehr als eine kurze Pause.",
+      "materials": "Optional Kopfhörer, ruhigerer Ort oder Möglichkeit, Benachrichtigungen vorübergehend zu begrenzen.",
+      "steps": [
+        {"title": "Die größte Last benennen", "text": "Wähle nur eine: Lautstärke, Licht, Nähe, Bildschirm, Gespräch oder Aufgabenmenge. Du musst nicht alles analysieren."},
+        {"title": "Eine Stellschraube ändern", "text": "Zum Beispiel: einen Tab schließen, Lautstärke senken, Abstand nehmen oder um eine schriftliche Information bitten. Wähle etwas tatsächlich Erlaubtes und Sicheres."},
+        {"title": "Eine Pause zulassen", "text": "Lass die neue Situation kurz wirken. Keine zusätzliche Atem- oder Körperaufgabe nötig.", "seconds": 60},
+        {"title": "Mit kleinerer Last fortsetzen", "text": "Was kann warten? Welche Unterstützung oder Anpassung wäre morgen hilfreich? Notiere bei Bedarf genau diese eine Änderung."}
+      ],
+      "variants": ["Mit einer Person ein reizärmeres Gesprächsformat vereinbaren.", "Unterwegs einen ruhigeren Randbereich suchen, wenn sicher."],
+      "origin": {"kind": "Eigene redaktionelle Alltagshilfe", "text": "Umgebungsanpassung als eigener Zugang zu Überlastung. Kein manualisierter Therapiebaustein und kein Beleg dafür, wodurch deine Überlastung verursacht wird.", "sources": ["va-app"]},
+      "alternatives": ["orientieren", "minischritt", "kontakt"], "atlasTerms": ["Sinnesverarbeitung", "ADHS", "Autismus", "Überlastung"]
+    },
+    {
+      "id": "kontakt", "title": "Kontakt ohne Erklärenmüssen", "subtitle": "Eine konkrete Bitte an eine sichere Person", "need": ["kontakt", "anspannung"], "goal": "Unterstützung bekommen", "environment": ["zuhause", "unterwegs", "arbeit"], "preference": ["kontakt", "sprechen", "schreiben"], "minutes": 4,
+      "purpose": "Nicht alles allein tragen und eine kleine, zustimmungsfähige Bitte formulieren. Kontakt kann helfen, muss aber nicht passen; die andere Person darf ehrlich antworten.",
+      "when": "Wenn Gesellschaft oder praktische Hilfe willkommen wäre und eine ausreichend vertrauenswürdige Person erreichbar ist.",
+      "limits": "Keine Person wählen, vor der du dich schützen musst. Nähe, Blickkontakt und Berührung sind keine Pflicht. Ablehnung oder Nichterreichbarkeit beweisen nichts über deinen Wert.",
+      "materials": "Optional Telefon oder Nachricht. Alternativ eine verlässliche Beratungsstelle.",
+      "steps": [
+        {"title": "Die Art von Hilfe wählen", "text": "Was wäre hilfreich: zuhören, gemeinsam schweigen, ein kurzer Spaziergang oder eine praktische Aufgabe? Wähle eine Bitte, keine vollständige Lebensgeschichte."},
+        {"title": "Eine begrenzte Anfrage machen", "text": "Zum Beispiel: Hast du heute zehn Minuten? Mir ist gerade viel. Ich brauche keine Lösung, sondern etwas Gesellschaft. Persönliche Details sind freiwillig."},
+        {"title": "Zustimmung und Grenzen abwarten", "text": "Frage, was die Person anbieten kann. Vereinbart Dauer und Form. Beide dürfen verändern oder beenden.", "seconds": 30},
+        {"title": "Einen zweiten Weg bereithalten", "text": "Falls niemand kann: Wähle einen anderen Kontakt, einen öffentlichen sicheren Ort oder zunächst eine Außenorientierung. Unterstützung muss nicht von einer einzigen Person abhängen."}
+      ],
+      "variants": ["Nur eine kurze Textnachricht schicken.", "Gemeinsam etwas Alltägliches tun statt über Gefühle zu sprechen."],
+      "origin": {"kind": "Vorhandene Arbeit · redaktionell angepasst", "text": "Die Co-Regulationsidee aus TraumaAtlas Wasser wird zu einer einvernehmlichen Kontaktanfrage. Frühere pauschale Aussagen über automatische oder überlegene Wirkung werden hier nicht übernommen.", "sources": ["trauma", "va-app"]},
+      "alternatives": ["orientieren", "schutzplan", "grenze"], "atlasTerms": ["Co-Regulation", "Bindung", "Unterstützung"],
+      "media": {"src": "/media/trauma-exercises/co-regulation.mp4", "poster": "/media/trauma-exercises/co-regulation.jpg", "label": "Zwei Lichtfelder", "description": "Zwei abstrakte, langsam leuchtende Formen. Symbolischer Bildimpuls; keine Aussage darüber, wie Nähe sich anfühlen muss.", "credit": "TraumaAtlas Wasser · KI-generierte Illustration aus dem Originalbestand, keine fachliche Demonstration"}
+    },
+    {
+      "id": "fakten", "title": "Geschehen, Bedeutung, offene Frage", "subtitle": "Drei Spalten statt einer Gewissheit", "need": ["verstehen", "konflikt"], "goal": "Deutungen prüfen", "environment": ["zuhause", "arbeit"], "preference": ["schreiben", "denken", "ohne-koerperfokus"], "minutes": 5,
+      "purpose": "Ein Ereignis von seiner Bedeutung unterscheiden und Unsicherheit sichtbar machen. Gefühle dürfen ernst genommen werden, auch wenn die Erklärung noch offen ist.",
+      "when": "Wenn eine Nachricht, ein Tonfall oder Schweigen zu einer sehr sicheren Schlussfolgerung führt.",
+      "limits": "Wiederholte Drohungen, Gewalt oder dokumentierte Grenzverletzungen werden durch alternative Deutungen nicht harmlos. Diese Übung ist kein Auftrag, dir selbst zu misstrauen oder jemanden zu diagnostizieren.",
+      "materials": "Papier oder freiwillige Notiz. Namen sind unnötig.",
+      "steps": [
+        {"title": "Nur das Geschehen festhalten", "text": "Was hätte eine Kamera oder eine wörtliche Mitschrift erfasst? Zum Beispiel: Auf meine Frage kam bis heute keine Antwort. Vermeide zunächst Motive."},
+        {"title": "Die eigene Bedeutung ergänzen", "text": "Was bedeutet das für dich? Zum Beispiel: Ich fürchte, unwichtig zu sein. Benenne dies als Deutung oder Befürchtung, nicht als feststehende Absicht der anderen Person."},
+        {"title": "Eine Alternative und Gegenbelege suchen", "text": "Welche andere Erklärung ist möglich? Was spricht für oder gegen beide? Auch die Möglichkeit einer realen Zurückweisung oder Grenzverletzung darf bestehen bleiben.", "seconds": 60},
+        {"title": "Eine klärbare Frage wählen", "text": "Welche Information fehlt? Formuliere eine respektvolle Nachfrage oder einen eigenen Schutzschritt. Du brauchst keine endgültige Erklärung, um eine Grenze zu setzen."}
+      ],
+      "variants": ["Mit einer neutralen Vertrauensperson sortieren.", "Nur eine offene Frage notieren, wenn Schreiben zu viel ist."],
+      "origin": {"kind": "Eigene redaktionelle Vergleichshilfe", "text": "Eigenständige Struktur zum Trennen von Beobachtung und Hypothese. Verwandt mit kognitiven und DBT-orientierten Prüfprinzipien, aber keine Reproduktion eines Originalarbeitsblatts.", "sources": ["dbt"]},
+      "alternatives": ["entscheidungsraum", "grenze", "kontakt"], "atlasTerms": ["Gelernte Bedeutung", "Zurückweisung", "Hypothese"]
+    },
+    {
+      "id": "grenze", "title": "Eine Grenze in einem Satz", "subtitle": "Klarheit ohne Ferndiagnose", "need": ["konflikt", "schutz"], "goal": "Grenze ausdrücken", "environment": ["zuhause", "arbeit", "unterwegs"], "preference": ["sprechen", "schreiben", "denken"], "minutes": 5,
+      "purpose": "Eine konkrete Grenze und deinen eigenen nächsten Schritt vorbereiten. Du musst die andere Person nicht psychologisch erklären, um unerwünschtes Verhalten zu benennen.",
+      "when": "Vor einem schwierigen Gespräch, bei wiederkehrender Überforderung oder wenn deine Zustimmung übergangen wird.",
+      "limits": "Ein Gespräch ist bei Gewalt, Einschüchterung oder Abhängigkeit nicht immer sicher. Dann können Abstand, Dokumentation und fachliche Unterstützung Vorrang haben. Eine gute Formulierung garantiert keine gute Reaktion.",
+      "materials": "Optional eine Notiz; bei Bedarf Unterstützung für einen Schutzplan.",
+      "steps": [
+        {"title": "Verhalten konkret benennen", "text": "Wähle einen beobachtbaren Punkt: Wenn ich angeschrien werde … Vermeide Charakterurteile und Diagnosen."},
+        {"title": "Die Grenze formulieren", "text": "Ergänze: … möchte ich das Gespräch unterbrechen. Oder: Ich möchte nicht berührt werden. Ein Nein braucht keine ausführliche Rechtfertigung."},
+        {"title": "Den eigenen nächsten Schritt wählen", "text": "Was kannst du selbst tun, wenn die Grenze nicht respektiert wird? Zum Beispiel den Raum verlassen, die Antwort vertagen oder Unterstützung holen. Prüfe die Sicherheit."},
+        {"title": "Kurz proben", "text": "Lies den Satz leise oder laut. Ist er klar, realistisch und dein eigener? Du darfst ihn schriftlich mitteilen oder das Gespräch nicht führen.", "seconds": 30}
+      ],
+      "variants": ["Die Bitte zuerst schriftlich vorbereiten.", "Eine unterstützende Person zum Gespräch hinzunehmen, wenn das hilfreich und sicher ist."],
+      "origin": {"kind": "Eigene redaktionelle Gesprächshilfe", "text": "Alltagshilfe mit Bezug zur zwischenmenschlichen Fertigkeitenarbeit der DBT. Keine wörtliche Übernahme von DEAR MAN oder anderen geschützten Materialien.", "sources": ["dbt"]},
+      "alternatives": ["schutzplan", "kontakt", "beziehungspause"], "atlasTerms": ["Grenze", "Macht", "Autonomie"]
+    },
+    {
+      "id": "beziehungspause", "title": "Eine Pause mit Rückkehr", "subtitle": "Unterbrechen, ohne im Unklaren zu lassen", "need": ["konflikt", "anspannung"], "goal": "Eskalation unterbrechen", "environment": ["zuhause", "arbeit"], "preference": ["sprechen", "schreiben", "handeln"], "minutes": 4,
+      "purpose": "Ein überhitztes Gespräch unterbrechen und eine überprüfbare Möglichkeit der Fortsetzung anbieten. Eine Pause soll Handlungsspielraum schaffen, keine Strafe sein.",
+      "when": "Wenn beide grundsätzlich sicher sind, das Gespräch aber gerade nicht mehr konstruktiv geführt werden kann.",
+      "limits": "Bei Gewalt, Verfolgung oder Kontrolle steht Schutz vor gemeinsamer Vereinbarung. Du schuldest dann keine Rückkehr in ein unsicheres Gespräch. Eine Pause darf nicht benutzt werden, um berechtigte Themen dauerhaft zu blockieren.",
+      "materials": "Optional Uhr oder Kalender; ein sicherer Rückzugsort.",
+      "steps": [
+        {"title": "Die Pause klar benennen", "text": "Zum Beispiel: Ich merke, dass ich gerade nicht gut zuhören kann. Ich möchte hier eine Pause machen. Bleib bei deiner Wahrnehmung."},
+        {"title": "Eine Rückkehr anbieten", "text": "Wenn sicher und gewollt: Können wir um … für zehn Minuten weiterreden? Ist eine Zeit noch unklar, vereinbare einen Zeitpunkt für die nächste Nachricht."},
+        {"title": "Die Pause tatsächlich nutzen", "text": "Keine Streitnachrichten nachschieben. Wähle Reizreduktion, einen kleinen Ortswechsel oder Kontakt zu einer unterstützenden Person.", "seconds": 60},
+        {"title": "Neu entscheiden", "text": "Bei der Rückkehr: Ist das Gespräch jetzt möglich? Ein Thema und eine Frage genügen. Falls nicht, begründet neu vereinbaren oder Unterstützung suchen."}
+      ],
+      "variants": ["Ein vorher vereinbartes Pausenwort nutzen.", "Schriftlich fortsetzen, wenn das weniger belastend ist."],
+      "origin": {"kind": "Eigene redaktionelle Beziehungshilfe", "text": "Verbindet Unterbrechung und konkrete Rückkehr als Alltagspraxis. Keine Garantie für Beziehungsreparatur und kein Ersatz für Schutz oder Paarberatung.", "sources": ["dbt"]},
+      "alternatives": ["grenze", "reizpause", "schutzplan"], "atlasTerms": ["Beziehungsschleife", "Reparatur", "Konflikt"]
+    },
+    {
+      "id": "minischritt", "title": "Zwei Minuten Handlung", "subtitle": "Eine Aufgabe verkleinern", "need": ["antrieb", "ueberlastung"], "goal": "Anfangen ermöglichen", "environment": ["zuhause", "arbeit"], "preference": ["handeln", "ohne-koerperfokus", "still"], "minutes": 3,
+      "purpose": "Eine zu große Aufgabe in einen sichtbaren ersten Schritt verwandeln. Der Versuch zählt auch dann, wenn du nach kurzer Zeit aufhörst.",
+      "when": "Bei Startschwierigkeiten, Erschöpfung oder vielen offenen Aufgaben. Das sagt nichts darüber aus, ob ADHS, Stress, Schlafmangel oder etwas anderes beteiligt ist.",
+      "limits": "Kein Mittel gegen akute schwere Erschöpfung oder medizinische Probleme. Essen, Schlaf, Ruhe und Unterstützung sind keine Aufgabenhindernisse, die überwunden werden müssen.",
+      "materials": "Nur das für einen winzigen Schritt Benötigte.",
+      "steps": [
+        {"title": "Eine Aufgabe wählen", "text": "Wähle etwas, das dir gerade wirklich nützt. Nicht die ganze Liste. Wenn Ruhe wichtiger ist, darf Ruhe die Entscheidung sein."},
+        {"title": "Bis zur sichtbaren Handlung verkleinern", "text": "Zum Beispiel: das Dokument öffnen, einen Teller hinstellen oder eine Frage notieren. So klein, dass keine weitere Planung nötig ist."},
+        {"title": "Freiwillig ausprobieren", "text": "Beginne ohne Verpflichtung weiterzumachen. Wenn ein Timer hilft, starte ihn selbst. Du darfst vorher beenden.", "seconds": 120},
+        {"title": "Fortsetzen oder schließen", "text": "Ist ein weiterer kleiner Schritt möglich und sinnvoll? Sonst notiere den nächsten Einstieg. Aufhören nach zwei Minuten ist eine erlaubte Variante."}
+      ],
+      "variants": ["Eine Person bittet nur um ein kurzes Startsignal.", "Material schon für später bereitlegen statt heute weiterzuarbeiten."],
+      "origin": {"kind": "Eigene redaktionelle Alltagshilfe", "text": "Allgemeines Prinzip der Aufgabenverkleinerung. Keine spezifische ADHS-Behandlung und kein Wirksamkeitsversprechen für diese App-Fassung.", "sources": []},
+      "alternatives": ["reizpause", "kontakt", "werte"], "atlasTerms": ["ADHS", "Exekutive Funktionen", "Selbstwirksamkeit"]
+    },
+    {
+      "id": "gedankenabstand", "title": "Ein Gedanke ist gerade da", "subtitle": "Benennen, ohne ihn wegzudrücken", "need": ["verstehen", "anspannung"], "goal": "Abstand gewinnen", "environment": ["zuhause", "arbeit", "unterwegs"], "preference": ["denken", "schreiben", "ohne-koerperfokus", "still"], "minutes": 3,
+      "purpose": "Einen belastenden Gedanken als aktuellen Gedanken wahrnehmen. Du musst ihn weder bekämpfen noch für falsch erklären.",
+      "when": "Wenn ein Selbsturteil oder eine Befürchtung immer wieder die ganze Aufmerksamkeit beansprucht.",
+      "limits": "Reale Warnzeichen und konkrete Gefahren bleiben wichtig. Bei aufdrängenden Erinnerungen nicht absichtlich tiefer einsteigen. Wenn Benennen stärker belastet, nach außen orientieren oder Kontakt suchen.",
+      "materials": "Optional Papier. Keine persönlichen Details nötig.",
+      "steps": [
+        {"title": "Einen kurzen Gedanken wählen", "text": "Nur die Überschrift, nicht die ganze Geschichte. Zum Beispiel: Ich werde abgelehnt. Nimm keinen Inhalt, der dich gerade überwältigt."},
+        {"title": "Die Formulierung verändern", "text": "Probiere: Ich bemerke gerade den Gedanken, dass ich abgelehnt werde. Das ist ein sprachlicher Abstand, keine Widerlegung."},
+        {"title": "Auf etwas Gegenwärtiges zurückkommen", "text": "Sieh einen Gegenstand oder lies eine Zeile. Der Gedanke darf im Hintergrund bleiben. Du brauchst ihn nicht verschwinden zu lassen.", "seconds": 30},
+        {"title": "Eine kleine passende Handlung wählen", "text": "Was wäre unabhängig von diesem Gedanken ein hilfreicher nächster Schritt? Zum Beispiel eine klare Frage, eine Pause oder ein eigenes Vorhaben."}
+      ],
+      "variants": ["Den Gedanken als Notiz mit der Überschrift Befürchtung ablegen.", "Nur den ersten Satz ausprobieren und dann beenden."],
+      "origin": {"kind": "Eigene Anpassung eines Selbsthilfeprinzips", "text": "Angelehnt an das Unhooking-Prinzip des WHO-Stresshandbuchs. Eigenständige Formulierung; kein Originalskript und keine vollständige ACT-Übung.", "sources": ["who"]},
+      "alternatives": ["fakten", "orientieren", "kontakt"], "atlasTerms": ["Grübeln", "Selbstwert", "Erklärungsmodell"]
+    },
+    {
+      "id": "freundlicher-satz", "title": "Ein fairer Satz an mich", "subtitle": "Nicht schönreden, weniger verletzen", "need": ["scham", "anspannung"], "goal": "Selbstangriff unterbrechen", "environment": ["zuhause", "arbeit", "unterwegs"], "preference": ["denken", "schreiben", "still", "ohne-koerperfokus"], "minutes": 3,
+      "purpose": "Für einen Moment eine sachliche und faire Sprache zu dir selbst finden. Selbstfreundlichkeit darf nüchtern sein; du musst keine positiven Sätze glauben.",
+      "when": "Nach einem Fehler, einer Zurückweisung oder wenn Scham in pauschale Selbstabwertung umschlägt.",
+      "limits": "Freundliche Sprache hebt Verantwortung nicht auf. Wenn Mitgefühlsübungen unangenehm sind, wähle eine rein sachliche Beschreibung oder einen äußeren Anker. Keine Hand auf den Körper legen müssen.",
+      "materials": "Optional eine kurze Notiz.",
+      "steps": [
+        {"title": "Die harte Formulierung erkennen", "text": "Benennen genügt: Gerade greife ich mich stark an. Du musst den verletzenden Satz nicht wiederholen."},
+        {"title": "Zum konkreten Ereignis zurückkehren", "text": "Was ist tatsächlich passiert? Ein Fehler in einer Handlung ist eine engere Aussage als ein Urteil über deinen ganzen Wert."},
+        {"title": "Einen glaubwürdigen Satz finden", "text": "Zum Beispiel: Das war schwer. Ich kann einen nächsten Schritt prüfen. Oder: Ich muss mich nicht zusätzlich beschimpfen. Wähle eigene Worte.", "seconds": 30},
+        {"title": "Reparatur oder Fürsorge wählen", "text": "Braucht es eine Entschuldigung, eine Korrektur, Ruhe oder Unterstützung? Eine kleine hilfreiche Handlung ist genug."}
+      ],
+      "variants": ["Einen sachlichen Satz formulieren, als würdest du einen Vorgang beschreiben.", "Eine faire Formulierung mit einer vertrauten Person finden."],
+      "origin": {"kind": "Eigene Anpassung eines Selbsthilfeprinzips", "text": "Vom Freundlichkeitsprinzip im WHO-Stresshandbuch angeregt. Keine Übernahme der Originalillustrationen und kein Ersatz für die Bearbeitung anhaltender Scham in Behandlung.", "sources": ["who"]},
+      "alternatives": ["kontakt", "fakten", "minischritt"], "atlasTerms": ["Scham", "Schuld", "Selbstwert"]
+    },
+    {
+      "id": "werte", "title": "Was mir jetzt wichtig ist", "subtitle": "Eine Richtung statt eines Leistungsziels", "need": ["antrieb", "verstehen"], "goal": "Eigene Richtung finden", "environment": ["zuhause", "arbeit", "unterwegs"], "preference": ["denken", "schreiben", "handeln"], "minutes": 4,
+      "purpose": "In einer unübersichtlichen Situation eine selbst gewählte Richtung finden und einen kleinen passenden Schritt ableiten.",
+      "when": "Wenn fremde Erwartungen, Unsicherheit oder viele Aufgaben die eigene Orientierung verdecken.",
+      "limits": "Werte sind keine Pflicht, immer fürsorglich oder produktiv zu sein. Schutz, Autonomie und Erholung dürfen vorne stehen. Strukturelle Hindernisse werden nicht durch die richtige Haltung gelöst.",
+      "materials": "Optional ein Wort auf Papier.",
+      "steps": [
+        {"title": "Einen Bereich wählen", "text": "Nur heute und nur ein Bereich: Umgang mit mir, Kontakt, Arbeit oder Erholung. Keine Lebensbilanz nötig."},
+        {"title": "Ein eigenes Richtungswort finden", "text": "Zum Beispiel Klarheit, Neugier, Schutz, Verlässlichkeit oder Freundlichkeit. Welches Wort gehört dir und klingt nicht nur nach einer Erwartung?"},
+        {"title": "Eine kleine Handlung ableiten", "text": "Was könntest du in wenigen Minuten tun, das diese Richtung ausdrückt? Eine Frage stellen, eine Grenze sagen, etwas vorbereiten oder bewusst Pause machen."},
+        {"title": "Freiwillig beginnen", "text": "Probiere den Schritt oder plane einen konkreten Zeitpunkt. Miss nicht deinen Wert daran, ob er heute gelingt.", "seconds": 60}
+      ],
+      "variants": ["Zwei mögliche Richtungen nebeneinander stehen lassen.", "Nur das Wort speichern und später weiterdenken."],
+      "origin": {"kind": "Eigene Anpassung eines Selbsthilfeprinzips", "text": "Angelehnt an werteorientiertes Handeln im WHO-Stresshandbuch. Diese kurze App-Fassung ist kein vollständiges ACT-Verfahren und kein Originalarbeitsblatt.", "sources": ["who"]},
+      "alternatives": ["minischritt", "grenze", "reizpause"], "atlasTerms": ["Identität", "Werte", "Entwicklung"]
+    },
+    {
+      "id": "abend", "title": "Den Tag auslaufen lassen", "subtitle": "Ein Übergang, kein Einschlafbefehl", "need": ["schlaf", "ueberlastung"], "goal": "Abend entlasten", "environment": ["zuhause"], "preference": ["handeln", "still", "ohne-koerperfokus"], "minutes": 5,
+      "purpose": "Zwischen Tagesaufgaben und Ruhe einen überschaubaren Übergang schaffen. Das Ziel ist weniger Anforderung, nicht erzwungener Schlaf.",
+      "when": "Wenn Aufgaben gedanklich weiterlaufen oder der Abend ohne erkennbaren Übergang beginnt.",
+      "limits": "Bei anhaltenden Schlafproblemen fachliche Unterstützung suchen. Keine umfassende Schlaftherapie. Dunkelheit und Stille sind nicht für alle angenehm; nutze Licht oder vertraute Geräusche nach deinem Bedarf.",
+      "materials": "Optional Papier, Getränk oder vertrautes Licht. Keine speziellen Produkte nötig.",
+      "steps": [
+        {"title": "Ein Ende markieren", "text": "Beende eine kleine Tageshandlung: Dokument schließen, Arbeitszeug beiseitelegen oder einen Platz freiräumen. Nicht erst alles fertig machen."},
+        {"title": "Offenes parken", "text": "Schreibe höchstens drei offene Punkte und den nächsten möglichen Zeitpunkt auf. Du musst sie heute nicht lösen."},
+        {"title": "Die Umgebung passend machen", "text": "Wähle eine Veränderung, die dir gewöhnlich guttut: weniger Benachrichtigungen, anderes Licht, bequemere Kleidung oder ein ruhigerer Platz."},
+        {"title": "Eine anspruchsarme Tätigkeit wählen", "text": "Etwas Vertrautes lesen, ein ruhiges Hörangebot oder einfach sitzen. Kein Einschlafziel und kein Pflichtprogramm.", "seconds": 120}
+      ],
+      "variants": ["Den Übergang vor einer Ruhepause am Tag nutzen.", "Mit einer vertrauten Person einen ruhigen Tagesabschluss vereinbaren."],
+      "origin": {"kind": "Vorhandene Arbeit · redaktionell angepasst", "text": "Das Abendthema aus TraumaAtlas Wasser wird ohne pauschale physiologische Erklärungen und ohne vorgeschriebene Körperreize weitergeführt. Keine manualisierte Insomniebehandlung.", "sources": ["trauma"]},
+      "alternatives": ["reizpause", "gedankenabstand", "kontakt"], "atlasTerms": ["Schlaf", "Stress", "Erholung"],
+      "media": {"src": "/media/trauma-exercises/abend.mp4", "poster": "/media/trauma-exercises/abend.jpg", "label": "Abendhorizont", "description": "Ein abstrakter, gedämpfter Horizont mit warmem Licht. Stummer optionaler Bildimpuls, keine Schlafanleitung.", "credit": "TraumaAtlas Wasser · KI-generierte Illustration aus dem Originalbestand, keine fachliche Demonstration"}
+    },
+    {
+      "id": "bewegungswechsel", "title": "Die Position verändern", "subtitle": "Kleine Bewegung nach eigener Wahl", "need": ["antrieb", "anspannung"], "goal": "Eine andere Handlung erproben", "environment": ["zuhause", "arbeit", "unterwegs"], "preference": ["bewegung", "handeln"], "minutes": 2,
+      "purpose": "Eine festgefahrene Situation durch eine selbst gewählte kleine Bewegung unterbrechen. Es geht um Wahlmöglichkeit, nicht darum, Stress aus dem Körper zu schütteln.",
+      "when": "Wenn langes Sitzen, Starre oder unruhiges Warten unangenehm wird und eine Veränderung körperlich möglich ist.",
+      "limits": "Nicht bei Schwindel, Sturzgefahr oder Schmerzen erzwingen. Hilfsmittel und körperliche Einschränkungen berücksichtigen. Starke Aktivierung kann zu viel sein; keine intensive Bewegung nötig.",
+      "materials": "Ein sicherer Platz; vorhandene Hilfsmittel bei Bedarf.",
+      "steps": [
+        {"title": "Eine mögliche Veränderung wählen", "text": "Zum Beispiel die Sitzposition ändern, die Hände anders ablegen, einmal aufstehen oder wenige Schritte gehen. Nur was für dich sicher ist."},
+        {"title": "Langsam ausprobieren", "text": "Mach die gewählte Veränderung ohne Dehnen bis an Grenzen und ohne Leistungsziel. Augen offen lassen ist möglich.", "seconds": 20},
+        {"title": "Nach außen orientieren", "text": "Schau auf einen Gegenstand in der neuen Position. Du musst keine inneren Empfindungen prüfen."},
+        {"title": "Passung bewerten", "text": "Möchtest du so bleiben, zurückwechseln oder etwas anderes versuchen? Unangenehm ist ein ausreichender Grund zum Beenden."}
+      ],
+      "variants": ["Nur eine kleine Handbewegung.", "Im Sitzen einen Gegenstand an einen anderen Platz legen."],
+      "origin": {"kind": "Vorhandene Themen · eigenständige Anpassung", "text": "Aus den Aktivierungs- und Bewegungsthemen des TraumaAtlas Wasser. Behauptungen über das Ausschütteln von Stresshormonen werden nicht übernommen. Kein somatisches Traumabehandlungsverfahren.", "sources": ["trauma"]},
+      "alternatives": ["orientieren", "reizpause", "minischritt"], "atlasTerms": ["Körperzustand", "Handlungsspielraum", "Erstarrung"]
+    },
+    {
+      "id": "schutzplan", "title": "Mein nächster sicherer Schritt", "subtitle": "Unterstützung vorher greifbar machen", "need": ["schutz", "kontakt"], "goal": "Hilfe erreichbar machen", "environment": ["zuhause", "arbeit", "unterwegs"], "preference": ["schreiben", "kontakt", "handeln", "ohne-koerperfokus"], "minutes": 5,
+      "purpose": "In einer ruhigen Phase vorbereiten, wen du bei Überforderung oder Gefahr erreichen kannst und welche praktischen Schritte möglich sind.",
+      "when": "Zum Vorbereiten wiederkehrender schwieriger Situationen, möglichst bevor eine akute Krise entsteht.",
+      "limits": "Bei unmittelbarer Gefahr oder akuter Selbst- oder Fremdgefährdung jetzt Hilfe holen: in Deutschland und der EU 112, andernorts die örtliche Notrufnummer. Dieser kurze Plan ersetzt keine professionelle Krisenplanung.",
+      "materials": "Eine zugängliche Notiz oder ein vertrauter Kontakt. Persönliche Daten müssen nicht in dieser App gespeichert werden.",
+      "steps": [
+        {"title": "Eine konkrete Situation wählen", "text": "Zum Beispiel: Wenn ich nach einem Streit allein nicht weiterweiß. Keine ausführliche belastende Erinnerung nötig."},
+        {"title": "Zwei erreichbare Wege notieren", "text": "Eine vertraute Person und eine professionelle Anlaufstelle oder Notrufoption. Prüfe die tatsächliche Erreichbarkeit für deinen Wohnort; nicht auf einen einzigen Kontakt verlassen."},
+        {"title": "Den ersten praktischen Schritt bestimmen", "text": "Was hilft dir, den Weg zu nutzen? Eine kurze vorbereitete Nachricht, ein gespeicherter Kontakt oder ein sicherer Treffpunkt. Absprachen mit beteiligten Personen treffen."},
+        {"title": "Zugänglichkeit prüfen", "text": "Findest du den Plan auch ohne diese App? Eine persönliche Kopie kann hilfreich sein. Veröffentliche private Telefonnummern nicht im Atlas."}
+      ],
+      "variants": ["Den Plan gemeinsam mit Therapie oder Beratung erarbeiten.", "Nur die nächste Anlaufstelle prüfen, wenn ein ganzer Plan zu viel ist."],
+      "origin": {"kind": "Eigene redaktionelle Vorbereitungshilfe", "text": "Vom niedrigschwelligen Zugang zu Unterstützung in PTSD Coach angeregt. Kein standardisierter Safety-Planning-Interventionsplan und kein automatisches Risikoscreening.", "sources": ["va-app"]},
+      "alternatives": ["kontakt", "grenze", "orientieren"], "atlasTerms": ["Schutz", "Krise", "Unterstützung"]
+    }
+  ]
+}

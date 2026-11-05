@@ -5,12 +5,13 @@
   "version": "0.1.0",
   "scripts": {
     "start": "node server.mjs",
-    "check": "node scripts/external-storage.mjs ."
+    "check": "node scripts/external-storage.mjs .",
+    "start:app": "node app/server.mjs"
   },
   "devDependencies": {
     "playwright-core": "^1.63.0"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   }
 }

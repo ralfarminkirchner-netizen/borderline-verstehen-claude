@@ -1,10 +1,10 @@
-// Erzeugt von baue-daten.mjs am 2026-11-05T01:26:51.375Z – nicht von Hand ändern.
+// Erzeugt von baue-daten.mjs am 2026-11-05T10:43:41.747Z – nicht von Hand ändern.
 // Quelle: Lesebestand ../../data-readonly/karte.json und ../../data-readonly/texte.json (nur lesend).
 window.SCHLOSS_DATEN = {
  "format": "schloss-schluessel-probe",
  "version": 5,
  "herkunft": {
-  "erzeugt": "2026-11-05T01:26:51.375Z",
+  "erzeugt": "2026-11-05T10:43:41.747Z",
   "skript": "baue-daten.mjs",
   "lesebestand": "Borderline verstehen · Fugenland-Lesebestand (nur lesend)",
   "karte": {
@@ -50,40 +50,29 @@ window.SCHLOSS_DATEN = {
    }
   ]
  },
- "schloss": 1012,
+ "schloss": 1031,
  "orte": {
-  "152": {
-   "titel": "Erblichkeit in Populationen",
+  "219": {
+   "titel": "Unterstützung und versteckte Kosten",
    "gebiet": "Phänomenatlas",
    "ortsart": "Begriff",
-   "kurz": "Erblichkeit beschreibt Unterschiede einer Population unter bestimmten Bedingungen und ist keine Prozentangabe für eine Person.",
+   "kurz": "Vorhandenes Forschungsthema als Bezugspunkt. Sein Name bezeichnet keine bestätigte Diagnose oder Ursache.",
    "mehr": [
     {
      "titel": "Im Eintrag",
-     "text": "Erblichkeit beschreibt genetisch zuordenbare Varianz unter bestimmten Populations- und Umweltbedingungen.: Sie zerlegt keine einzelne Person in genetische und umweltbedingte Anteile und misst keine Änderbarkeit. Definition für untersuchte Populationen Begriffsrahmen; kein individuelles Zeitfenster Longitudinale Zwillingsanalysen finden genetische Mitwirkung sowohl an stabilen als auch an altersbezogen veränderten ADHS-Merkmalen.: Hohe Erblichkeit liefert keine individuelle Prognose und schließt veränderbare Bedingungen nicht aus. 1.480 Zwillingspaare Mehrere Entwicklungszeitpunkte im Kindes- und Jugendalter"
+     "text": "Welche Beobachtung ist nötig, und wie viel zusätzliche Organisationsarbeit erzeugt ihre Erhebung? Bezug zur Forschung: Häufigere Befragungen erhöhten in einem Experiment die empfundene Last, ohne die Teilnahmequote entsprechend zu verändern. Eine längere Befragung zeigte ein anderes Wirkungsprofil.: Dieser Anschluss eröffnet einen Vergleich; er validiert keine Behandlung und keine Entstehungsursache des vorhandenen Begriffs. Studierende sind keine klinische ADHS- oder Autismus-Stichprobe. Mehr Fragen sind nicht stets schädlicher. Teilnahme, Belastung und Aussagekraft müssen getrennt geprüft werden. Forschungsbezug auf den genannten Befund; vorhandener Begriff aus der Zeitblind-Forschung Konzeptioneller Anschluss nach Befundstand vom 27. Oktober 2026"
     }
    ],
    "quellen": [
     {
-     "titel": "Visscher, Hill & Wray: Heritability in the genomics era — concepts and misconceptions",
-     "kurz": "Visscher, Hill & Wray: Heritability in the genomics era — concepts and misconceptions",
+     "titel": "The effects of assessment intensity on participant burden, compliance, within-person variance, and within-person relationships in ambulatory assessment",
+     "kurz": "The effects of assessment intensity on participant burden, compliance, within-person variance, and within-person relationships in ambulatory assessment",
      "art": "Quelle",
      "zitat": "",
      "technisch": {
-      "schluessel": "fundus-source:grundlagen-01",
-      "url": "https://doi.org/10.1038/nrg2322",
-      "titelBestand": "Visscher, Hill & Wray: Heritability in the genomics era — concepts and misconceptions"
-     }
-    },
-    {
-     "titel": "Developmental Twin Study of Attention Problems: High Heritabilities Throughout Development",
-     "kurz": "Developmental Twin Study of Attention Problems: High Heritabilities Throughout Development",
-     "art": "Quelle",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "fundus-source:adhs-twin-development-2013",
-      "url": "https://jamanetwork.com/journals/jamapsychiatry/fullarticle/1555120",
-      "titelBestand": "Developmental Twin Study of Attention Problems: High Heritabilities Throughout Development"
+      "schluessel": "fundus-source:anschluss-ema-2022",
+      "url": "https://link.springer.com/article/10.3758/s13428-021-01683-6",
+      "titelBestand": "The effects of assessment intensity on participant burden, compliance, within-person variance, and within-person relationships in ambulatory assessment"
      }
     }
    ],
@@ -91,7 +80,213 @@ window.SCHLOSS_DATEN = {
     "innen": [
      {
       "abschnitt": "Kurztext",
-      "text": "Erblichkeit beschreibt Unterschiede einer Population unter bestimmten Bedingungen und ist keine Prozentangabe für eine Person."
+      "text": "Vorhandenes Forschungsthema als Bezugspunkt. Sein Name bezeichnet keine bestätigte Diagnose oder Ursache."
+     }
+    ],
+    "aussen": [],
+    "spielraum": []
+   },
+   "bedingungen": [],
+   "grenzSaetze": [],
+   "herkunft": "Phänomenatlas · Neurodiversität: Gene, Umwelt und Entwicklung",
+   "technisch": {
+    "ortIndex": 219,
+    "textKennung": "fundus:bezug-unterstutzung-und-versteckte-kosten",
+    "herkunftPfad": "atlas-source/wissensfundus/neurodiversitaet-genetik-umwelt-20261027"
+   },
+   "feld": {
+    "x": 8.005,
+    "y": 3.94
+   }
+  },
+  "274": {
+   "titel": "Dissoziative Störungsbilder",
+   "gebiet": "Neuroatlas",
+   "ortsart": "Kontext",
+   "kurz": "Unterschiedliche Formen von Entfremdung, Erinnerungslücken und Diskontinuität des Selbsterlebens. Einzelne Erlebnisse bestimmen keine Unterform.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "Dissociative disorders",
+     "kurz": "Dissociative disorders",
+     "art": "Gesundheitsinformation",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "neuro-source:nhs-dissociation",
+      "url": "https://www.nhs.uk/mental-health/conditions/dissociative-disorders/",
+      "titelBestand": "Dissociative disorders"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Kurztext",
+      "text": "Unterschiedliche Formen von Entfremdung, Erinnerungslücken und Diskontinuität des Selbsterlebens. Einzelne Erlebnisse bestimmen keine Unterform."
+     }
+    ],
+    "aussen": [],
+    "spielraum": []
+   },
+   "bedingungen": [],
+   "grenzSaetze": [],
+   "herkunft": "Neuroatlas · Atlas des Erlebens",
+   "technisch": {
+    "ortIndex": 274,
+    "textKennung": "context:dissociation",
+    "herkunftPfad": "packages/atlas/src/catalog.ts"
+   },
+   "feld": {
+    "x": 1.132,
+    "y": 9.416
+   }
+  },
+  "339": {
+   "titel": "Scham oder Schuld",
+   "gebiet": "Neuroatlas",
+   "ortsart": "Phänomen",
+   "kurz": "Beschämung oder Selbstvorwürfe belasten.",
+   "mehr": [
+    {
+     "titel": "Im Eintrag",
+     "text": "Posttraumatische Belastungsstörung: Anhaltende Scham oder Selbstbeschuldigung. Nur im berichteten Traumabezug einordnen; Dauer und Beeinträchtigung sind entscheidend. Komplexe posttraumatische Belastungsstörung: Traumabezogene tiefe Scham oder Schuld. Die ICD-11-Einordnung setzt PTBS voraus; diese zusätzlichen Merkmale allein ergeben keine komplexe PTBS. Depressive Störungsbilder: Belastende Schuldgefühle. Veränderung, Dauer und Beeinträchtigung beachten; körperliche und andere Erklärungen bleiben offen. Anorexie, Bulimie & Binge-Eating: Schuld oder Scham nach Essanfällen. Die Unterformen haben unterschiedliche Bedingungen; Essverhalten und körperlichen Zustand gemeinsam einordnen."
+    }
+   ],
+   "quellen": [
+    {
+     "titel": "Post-Traumatic Stress Disorder",
+     "kurz": "Post-Traumatic Stress Disorder",
+     "art": "Gesundheitsinformation",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "neuro-source:nimh-ptsd",
+      "url": "https://www.nimh.nih.gov/health/publications/post-traumatic-stress-disorder-ptsd",
+      "titelBestand": "Post-Traumatic Stress Disorder"
+     }
+    },
+    {
+     "titel": "Post-traumatic stress disorder · NG116",
+     "kurz": "Post-traumatic stress disorder · NG116",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "neuro-source:nice-ptsd",
+      "url": "https://www.nice.org.uk/guidance/ng116/chapter/recommendations",
+      "titelBestand": "Post-traumatic stress disorder · NG116"
+     }
+    },
+    {
+     "titel": "Depression",
+     "kurz": "Depression",
+     "art": "Gesundheitsinformation",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "neuro-source:nimh-depression",
+      "url": "https://www.nimh.nih.gov/health/publications/depression",
+      "titelBestand": "Depression"
+     }
+    },
+    {
+     "titel": "Eating Disorders: What You Need to Know",
+     "kurz": "Eating Disorders: What You Need to Know",
+     "art": "Gesundheitsinformation",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "neuro-source:nimh-eating",
+      "url": "https://www.nimh.nih.gov/health/publications/eating-disorders",
+      "titelBestand": "Eating Disorders: What You Need to Know"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Kurztext",
+      "text": "Beschämung oder Selbstvorwürfe belasten."
+     }
+    ],
+    "aussen": [],
+    "spielraum": []
+   },
+   "bedingungen": [],
+   "grenzSaetze": [],
+   "herkunft": "Neuroatlas · Atlas des Erlebens",
+   "technisch": {
+    "ortIndex": 339,
+    "textKennung": "neuro:shame-guilt",
+    "herkunftPfad": "packages/atlas/src/catalog.ts"
+   },
+   "feld": {
+    "x": 0.031,
+    "y": 9.496
+   }
+  },
+  "560": {
+   "titel": "Beobachtung und Deutung",
+   "gebiet": "Beziehungswerkstatt",
+   "ortsart": "Perspektive",
+   "kurz": "Eine Episode hat einen Wortlaut, einen Zeitpunkt und einen Zusammenhang. Deine Interpretation ist eine eigene, veränderbare Ebene. Beides darf nebeneinander sichtbar bleiben.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "National Center for PTSD · Kommunikation in Familien",
+     "kurz": "National Center for PTSD · Kommunikation in Familien",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "relationship-source:va",
+      "url": "https://www.ptsd.va.gov/family/how_family_member.asp",
+      "titelBestand": "National Center for PTSD · Kommunikation in Familien"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Kurztext",
+      "text": "Eine Episode hat einen Wortlaut, einen Zeitpunkt und einen Zusammenhang. Deine Interpretation ist eine eigene, veränderbare Ebene. Beides darf nebeneinander sichtbar bleiben."
+     }
+    ],
+    "aussen": [],
+    "spielraum": []
+   },
+   "bedingungen": [],
+   "grenzSaetze": [],
+   "herkunft": "Phänomenatlas · Beziehungswerkstatt",
+   "technisch": {
+    "ortIndex": 560,
+    "textKennung": "relationship:beobachtung",
+    "herkunftPfad": "dist/relationship-model.mjs"
+   },
+   "feld": {
+    "x": -3.849,
+    "y": 9.969
+   }
+  },
+  "561": {
+   "titel": "Nähe, Freiheit und Grenzen",
+   "gebiet": "Beziehungswerkstatt",
+   "ortsart": "Perspektive",
+   "kurz": "Nähe kann gewünscht und gleichzeitig als Druck erlebt werden. Bindungstheorie ist ein Zugang zu Beziehungserfahrungen; eine einzelne Reaktion begründet keinen festen Bindungstyp.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "Traumainformierte Praxis · Sicherheit und Wahlmöglichkeiten",
+     "kurz": "Traumainformierte Praxis · Sicherheit und Wahlmöglichkeiten",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "relationship-source:gov",
+      "url": "https://www.gov.uk/government/publications/working-definition-of-trauma-informed-practice/working-definition-of-trauma-informed-practice",
+      "titelBestand": "Traumainformierte Praxis · Sicherheit und Wahlmöglichkeiten"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Kurztext",
+      "text": "Nähe kann gewünscht und gleichzeitig als Druck erlebt werden. Bindungstheorie ist ein Zugang zu Beziehungserfahrungen; eine einzelne Reaktion begründet keinen festen Bindungstyp."
      }
     ],
     "aussen": [],
@@ -99,126 +294,39 @@ window.SCHLOSS_DATEN = {
    },
    "bedingungen": [
     {
-     "klausel": "unter bestimmten Bedingungen",
-     "satz": "Erblichkeit beschreibt Unterschiede einer Population unter bestimmten Bedingungen und ist keine Prozentangabe für eine Person. ### Erblichkeit beschreibt genetisch zuordenbare Varianz unter bestimmten Populations- und Umweltbedingungen.",
-     "abschnitt": "Eintrag"
-    },
-    {
-     "klausel": "unter bestimmten Populations- und Umweltbedingungen",
-     "satz": "Erblichkeit beschreibt Unterschiede einer Population unter bestimmten Bedingungen und ist keine Prozentangabe für eine Person. ### Erblichkeit beschreibt genetisch zuordenbare Varianz unter bestimmten Populations- und Umweltbedingungen.",
-     "abschnitt": "Eintrag"
+     "klausel": "wenn jemand gerade Abstand braucht?",
+     "satz": "Bleibt die Beziehung freiwillig, auch wenn jemand gerade Abstand braucht?",
+     "abschnitt": "Weiterfragen"
     }
    ],
    "grenzSaetze": [],
-   "herkunft": "Phänomenatlas · Neurodiversität: Gene, Umwelt und Entwicklung",
+   "herkunft": "Phänomenatlas · Beziehungswerkstatt",
    "technisch": {
-    "ortIndex": 152,
-    "textKennung": "fundus:heritabilitaet",
-    "herkunftPfad": "atlas-source/wissensfundus/neurodiversitaet-genetik-umwelt-20261027"
+    "ortIndex": 561,
+    "textKennung": "relationship:autonomie",
+    "herkunftPfad": "dist/relationship-model.mjs"
    },
    "feld": {
-    "x": 4.851,
-    "y": 2.416
+    "x": -3.329,
+    "y": 9.001
    }
   },
-  "160": {
-   "titel": "Gen-Umwelt-Korrelation",
-   "gebiet": "Phänomenatlas",
-   "ortsart": "Begriff",
-   "kurz": "Genetisch mitgeprägte Eigenschaften können mit erlebten, ausgelösten oder ausgewählten Umwelten zusammenhängen.",
-   "mehr": [
-    {
-     "titel": "Im Eintrag",
-     "text": "Kindliche ADHS-bezogene genetische Profile, Symptome und beobachtetes Erziehungsverhalten hängen statistisch zusammen; dies ist mit evokativer Gen-Umwelt-Korrelation vereinbar.: Die statistische Vermittlung beweist keine einzelne Richtung und weist Kindern keine Verantwortung für elterliches Verhalten zu. 803 Kinder und ihre Familien Genetisches Profil und späteres Verhalten; 2023 Trioanalysen unterscheiden direkte Vererbung von möglichen indirekten Elterneffekten; für elterliche ADHS-Polygenscores wurde kein allgemeiner indirekter Effekt nachgewiesen.: Unvollständige Polygenscores und Stichprobenauswahl begrenzen Nullbefunde; indirekte genetische Effekte sind nicht direkt gemessene Erziehung. Klinische ADHS-Trios und 14.959 Mutter-Vater-Kind-Trios Elterngenotypen und kindliche Merkmale, unter anderem mit acht Jahren Neue Trioverfahren können direkte und bestimmte indirekte genetische Beiträge trennen; ihre jeweilige Identifizierbarkeit ist ausdrücklich zu prüfen.: Die maternale GxE-Anwendung der PGSTRI-Arbeit betrifft orofaziale Spalten, nicht Autismus; sie darf nicht als bestätigte Autismus-GxE dargestellt werden. Methodensimulationen, Autismus-Trios und getrennte Spalten-Trios Methodenentwicklung und Anwendungen; 2026 Transaktionale und ökologische Modelle betrachten Kinder, Bezugspersonen, Institutionen und Zeit gemeinsam; Gen-Umwelt-Korrelation ergänzt eine mögliche statistische Ebene.: Die Rahmen benennen weder eine individuelle Schuld noch eine einheitliche biologische Kausalkette. Allgemeine Entwicklungs- und Kontextmodelle Wiederholte Person-Kontext-Interaktion über Zeit Nischenkonstruktion modelliert, wie Organismen ihre Umwelten mitgestalten und so Selektionsbedingungen verändern können.: Evolutionäres Populationsmodell ist kein Beweis für individuelle Nischenwahl, konkrete ADHS-Ursachen oder eine therapeutische Lebensform. Zwei-Locus-Modell der Nischenkonstruktion Populationsentwicklung über Generationen Welche Reaktion folgt auf welches Verhalten, und welche Unterstützung verändert die konkrete Wechselwirkung? Bezug zur Forschung: Die untersuchte Verbindung von polygenem ADHS-Risiko, kindlichen Symptomen und Erziehungsdimensionen ist mit einer Reaktion des Umfelds auf kindliche Eigenschaften vereinbar.: Dieser Anschluss eröffnet einen Vergleich; er validiert keine Behandlung und keine Entstehungsursache des vorhandenen Begriffs. Statistische Vermittlung beweist keine eindeutige Wirkungsrichtung. Sie begründet weder Schuldzuweisung an Kinder noch die Behauptung, ungünstige Interaktionen seien unveränderbar. Forschungsbezug auf den genannten Befund; vorhandener Begriff aus dem Atlas Konzeptioneller Anschluss nach Befundstand vom 27. Oktober 2026"
-    }
-   ],
+  "562": {
+   "titel": "Anspannung und Handlungsspielraum",
+   "gebiet": "Beziehungswerkstatt",
+   "ortsart": "Perspektive",
+   "kurz": "Unter hoher Anspannung kann eine Pause helfen, die nächste Handlung bewusster zu wählen. Unterstützung darf angeboten werden; die andere Person muss sie nicht annehmen.",
+   "mehr": [],
    "quellen": [
     {
-     "titel": "Youth Polygenic Scores, Youth ADHD Symptoms, and Parenting Dimensions: An Evocative Gene-Environment Correlation Study",
-     "kurz": "Youth Polygenic Scores, Youth ADHD Symptoms, and Parenting Dimensions: An Evocative Gene-Environment Correlation Study",
+     "titel": "National Center for PTSD · Kommunikation in Familien",
+     "kurz": "National Center for PTSD · Kommunikation in Familien",
      "art": "Quelle",
      "zitat": "",
      "technisch": {
-      "schluessel": "fundus-source:adhs-evocative-rge-2023",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10560546/",
-      "titelBestand": "Youth Polygenic Scores, Youth ADHD Symptoms, and Parenting Dimensions: An Evocative Gene-Environment Correlation Study"
-     }
-    },
-    {
-     "titel": "Joint polygenic and environmental risks for childhood attention-deficit/hyperactivity disorder (ADHD) and ADHD symptom dimensions",
-     "kurz": "Joint polygenic and environmental risks for childhood attention-deficit/hyperactivity disorder (ADHD) and ADHD symptom dimensions",
-     "art": "Quelle",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "fundus-source:graph-mooney-2023",
-      "url": "https://doi.org/10.1002/jcv2.12152",
-      "titelBestand": "Joint polygenic and environmental risks for childhood attention-deficit/hyperactivity disorder (ADHD) and ADHD symptom dimensions"
-     }
-    },
-    {
-     "titel": "Investigating Direct and Indirect Genetic Effects in Attention-Deficit/Hyperactivity Disorder Using Parent-Offspring Trios",
-     "kurz": "Investigating Direct and Indirect Genetic Effects in Attention-Deficit/Hyperactivity Disorder Using Parent-Offspring Trios",
-     "art": "Quelle",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "fundus-source:adhs-trios-direct-indirect-2023",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10369485/",
-      "titelBestand": "Investigating Direct and Indirect Genetic Effects in Attention-Deficit/Hyperactivity Disorder Using Parent-Offspring Trios"
-     }
-    },
-    {
-     "titel": "Intergenerational transmission of polygenic predisposition for neuropsychiatric traits on emotional and behavioural difficulties in childhood",
-     "kurz": "Intergenerational transmission of polygenic predisposition for neuropsychiatric traits on emotional and behavioural difficulties in childhood",
-     "art": "Quelle",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "fundus-source:graph-allegrini-2025",
-      "url": "https://www.nature.com/articles/s41467-025-57694-w",
-      "titelBestand": "Intergenerational transmission of polygenic predisposition for neuropsychiatric traits on emotional and behavioural difficulties in childhood"
-     }
-    },
-    {
-     "titel": "Estimation of direct and indirect polygenic effects and gene–environment interactions using polygenic scores in case–parent trio studies",
-     "kurz": "Estimation of direct and indirect polygenic effects and gene–environment interactions using polygenic scores in case–parent trio studies",
-     "art": "Quelle",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "fundus-source:graph-wang-2026",
-      "url": "https://doi.org/10.1038/s41588-026-02601-2",
-      "titelBestand": "Estimation of direct and indirect polygenic effects and gene–environment interactions using polygenic scores in case–parent trio studies"
-     }
-    },
-    {
-     "titel": "A Unified Theory of Development: A Dialectic Integration of Nature and Nurture",
-     "kurz": "A Unified Theory of Development: A Dialectic Integration of Nature and Nurture",
-     "art": "Quelle",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "fundus-source:theorie-04",
-      "url": "https://doi.org/10.1111/j.1467-8624.2009.01378.x",
-      "titelBestand": "A Unified Theory of Development: A Dialectic Integration of Nature and Nurture"
-     }
-    },
-    {
-     "titel": "The Bioecological Model of Human Development",
-     "kurz": "The Bioecological Model of Human Development",
-     "art": "Quelle",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "fundus-source:theorie-05",
-      "url": "https://doi.org/10.1002/9780470147658.chpsy0114",
-      "titelBestand": "The Bioecological Model of Human Development"
-     }
-    },
-    {
-     "titel": "The evolutionary consequences of niche construction: a theoretical investigation using two-locus theory",
-     "kurz": "The evolutionary consequences of niche construction: a theoretical investigation using two-locus theory",
-     "art": "Quelle",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "fundus-source:theorie-07",
-      "url": "https://doi.org/10.1046/j.1420-9101.1996.9030293.x",
-      "titelBestand": "The evolutionary consequences of niche construction: a theoretical investigation using two-locus theory"
+      "schluessel": "relationship-source:va",
+      "url": "https://www.ptsd.va.gov/family/how_family_member.asp",
+      "titelBestand": "National Center for PTSD · Kommunikation in Familien"
      }
     }
    ],
@@ -226,151 +334,47 @@ window.SCHLOSS_DATEN = {
     "innen": [
      {
       "abschnitt": "Kurztext",
-      "text": "Genetisch mitgeprägte Eigenschaften können mit erlebten, ausgelösten oder ausgewählten Umwelten zusammenhängen."
+      "text": "Unter hoher Anspannung kann eine Pause helfen, die nächste Handlung bewusster zu wählen. Unterstützung darf angeboten werden; die andere Person muss sie nicht annehmen."
      }
     ],
     "aussen": [],
     "spielraum": []
    },
-   "bedingungen": [],
+   "bedingungen": [
+    {
+     "klausel": "bei dir",
+     "satz": "Woran merkst du Anspannung bei dir, und welche Pause kannst du selbst gestalten?",
+     "abschnitt": "Weiterfragen"
+    }
+   ],
    "grenzSaetze": [],
-   "herkunft": "Phänomenatlas · Neurodiversität: Gene, Umwelt und Entwicklung",
+   "herkunft": "Phänomenatlas · Beziehungswerkstatt",
    "technisch": {
-    "ortIndex": 160,
-    "textKennung": "fundus:rge",
-    "herkunftPfad": "atlas-source/wissensfundus/neurodiversitaet-genetik-umwelt-20261027"
+    "ortIndex": 562,
+    "textKennung": "relationship:regulation",
+    "herkunftPfad": "dist/relationship-model.mjs"
    },
    "feld": {
-    "x": 5.179,
-    "y": 1.362
+    "x": -4.226,
+    "y": 8.366
    }
   },
-  "300": {
-   "titel": "Aufgaben bleiben offen",
-   "gebiet": "Neuroatlas",
-   "ortsart": "Phänomen",
-   "kurz": "Begonnenes wird trotz Vorhaben nicht abgeschlossen.",
-   "mehr": [
-    {
-     "titel": "Im Eintrag",
-     "text": "ADHS: Aufgabenabschluss und Befolgen von Schritten erschwert. Entwicklungsverlauf und mehrere Lebensbereiche prüfen; dieses einzelne Merkmal ist unspezifisch. Zwanghafte Persönlichkeitsstörung: Starre Standards können Fertigstellen verhindern. Überdauernde Unflexibilität mit Folgen für Alltag und Beziehungen; von unerwünschten Zwangsritualen unterscheiden."
-    }
-   ],
+  "563": {
+   "titel": "Erleben anerkennen",
+   "gebiet": "Beziehungswerkstatt",
+   "ortsart": "Perspektive",
+   "kurz": "Du kannst anerkennen, dass eine Erfahrung schmerzt, und deine Sicht auf die Tatsachen offenhalten. Anerkennung verpflichtet weder zur Zustimmung noch zur Aufgabe eigener Grenzen.",
+   "mehr": [],
    "quellen": [
     {
-     "titel": "ADHD: What You Need to Know",
-     "kurz": "ADHD: What You Need to Know",
-     "art": "Gesundheitsinformation",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "neuro-source:nimh-adhd",
-      "url": "https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know",
-      "titelBestand": "ADHD: What You Need to Know"
-     }
-    },
-    {
-     "titel": "Obsessive-compulsive personality disorder",
-     "kurz": "Obsessive-compulsive personality disorder",
-     "art": "Gesundheitsinformation",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "neuro-source:medline-ocpd",
-      "url": "https://medlineplus.gov/ency/article/000942.htm",
-      "titelBestand": "Obsessive-compulsive personality disorder"
-     }
-    }
-   ],
-   "blick": {
-    "innen": [
-     {
-      "abschnitt": "Kurztext",
-      "text": "Begonnenes wird trotz Vorhaben nicht abgeschlossen."
-     }
-    ],
-    "aussen": [],
-    "spielraum": []
-   },
-   "bedingungen": [],
-   "grenzSaetze": [],
-   "herkunft": "Neuroatlas · Atlas des Erlebens",
-   "technisch": {
-    "ortIndex": 300,
-    "textKennung": "neuro:unfinished-tasks",
-    "herkunftPfad": "packages/atlas/src/catalog.ts"
-   },
-   "feld": {
-    "x": -0.025,
-    "y": 5.005
-   }
-  },
-  "309": {
-   "titel": "Reize überfluten mich",
-   "gebiet": "Neuroatlas",
-   "ortsart": "Phänomen",
-   "kurz": "Die Menge oder Intensität von Reizen wird überwältigend.",
-   "mehr": [
-    {
-     "titel": "Im Eintrag",
-     "text": "Autismus-Spektrum: Intensive sensorische Eindrücke können überwältigen. Sensorische Überforderung ist kontextabhängig; ihr Auftreten allein erlaubt keine diagnostische Zuordnung."
-    }
-   ],
-   "quellen": [
-    {
-     "titel": "Sensory differences",
-     "kurz": "Sensory differences",
-     "art": "Gesundheitsinformation",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "neuro-source:nhs-sensory",
-      "url": "https://www.autismcentral.nhs.uk/guidance/sensory-differences",
-      "titelBestand": "Sensory differences"
-     }
-    }
-   ],
-   "blick": {
-    "innen": [
-     {
-      "abschnitt": "Kurztext",
-      "text": "Die Menge oder Intensität von Reizen wird überwältigend."
-     }
-    ],
-    "aussen": [],
-    "spielraum": []
-   },
-   "bedingungen": [],
-   "grenzSaetze": [],
-   "herkunft": "Neuroatlas · Atlas des Erlebens",
-   "technisch": {
-    "ortIndex": 309,
-    "textKennung": "neuro:sensory-overload",
-    "herkunftPfad": "packages/atlas/src/catalog.ts"
-   },
-   "feld": {
-    "x": 0.718,
-    "y": 5.821
-   }
-  },
-  "816": {
-   "titel": "Zeitblindheits-Bericht",
-   "gebiet": "Phänomenatlas",
-   "ortsart": "Phänomen",
-   "kurz": "Community- und Fachbegriff für schwach verfügbares Zeitgefühl",
-   "mehr": [
-    {
-     "titel": "Im Eintrag",
-     "text": "Bibliografischer Kontakt; kein geprüfter Studienbefund. Auch genannt: time blindness, time-blindness"
-    }
-   ],
-   "quellen": [
-    {
-     "titel": "The Time We See: ADHD, Neuroqueer Temporality, and Graphic Medicine.",
-     "kurz": "The Time We See: ADHD, Neuroqueer Temporality, and Graphic Medicine.",
+     "titel": "National Center for PTSD · Kommunikation in Familien",
+     "kurz": "National Center for PTSD · Kommunikation in Familien",
      "art": "Quelle",
      "zitat": "",
      "technisch": {
-      "schluessel": "research-source:source:pmid:40059708",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/40059708/",
-      "titelBestand": "The Time We See: ADHD, Neuroqueer Temporality, and Graphic Medicine."
+      "schluessel": "relationship-source:va",
+      "url": "https://www.ptsd.va.gov/family/how_family_member.asp",
+      "titelBestand": "National Center for PTSD · Kommunikation in Familien"
      }
     }
    ],
@@ -378,7 +382,7 @@ window.SCHLOSS_DATEN = {
     "innen": [
      {
       "abschnitt": "Kurztext",
-      "text": "Community- und Fachbegriff für schwach verfügbares Zeitgefühl"
+      "text": "Du kannst anerkennen, dass eine Erfahrung schmerzt, und deine Sicht auf die Tatsachen offenhalten. Anerkennung verpflichtet weder zur Zustimmung noch zur Aufgabe eigener Grenzen."
      }
     ],
     "aussen": [],
@@ -386,73 +390,33 @@ window.SCHLOSS_DATEN = {
    },
    "bedingungen": [],
    "grenzSaetze": [],
-   "herkunft": "Phänomenatlas · bibliografische Forschungslandkarte",
+   "herkunft": "Phänomenatlas · Beziehungswerkstatt",
    "technisch": {
-    "ortIndex": 816,
-    "textKennung": "research:phenomenon:time:time-blindness",
-    "herkunftPfad": "neurodivergenz-gesamtapp-chatgpt/forschung.json"
+    "ortIndex": 563,
+    "textKennung": "relationship:validierung",
+    "herkunftPfad": "dist/relationship-model.mjs"
    },
    "feld": {
-    "x": 6.79,
-    "y": 2.885
+    "x": -4.222,
+    "y": 11.847
    }
   },
-  "860": {
-   "titel": "Zurückweisungssensitivität",
-   "gebiet": "Phänomenatlas",
-   "ortsart": "Phänomen",
-   "kurz": "Starke Reaktion auf erwartete oder wahrgenommene Zurückweisung",
-   "mehr": [
-    {
-     "titel": "Im Eintrag",
-     "text": "Kein verbleibender direkter Literaturkontakt nach der Umfangsbegrenzung. Auch genannt: rejection sensitivity, rejection-sensitive dysphoria"
-    }
-   ],
-   "quellen": [],
-   "blick": {
-    "innen": [
-     {
-      "abschnitt": "Kurztext",
-      "text": "Starke Reaktion auf erwartete oder wahrgenommene Zurückweisung"
-     }
-    ],
-    "aussen": [],
-    "spielraum": []
-   },
-   "bedingungen": [],
-   "grenzSaetze": [],
-   "herkunft": "Phänomenatlas · bibliografische Forschungslandkarte",
-   "technisch": {
-    "ortIndex": 860,
-    "textKennung": "research:phenomenon:emotion:rejection-sensitivity",
-    "herkunftPfad": "neurodivergenz-gesamtapp-chatgpt/forschung.json"
-   },
-   "feld": {
-    "x": 5.641,
-    "y": 3.539
-   }
-  },
-  "939": {
-   "titel": "Hyperfokus",
-   "gebiet": "Phänomenatlas",
-   "ortsart": "Phänomen",
-   "kurz": "Sehr intensive und anhaltende Bindung an eine Tätigkeit",
-   "mehr": [
-    {
-     "titel": "Im Eintrag",
-     "text": "Bibliografischer Kontakt; kein geprüfter Studienbefund. Auch genannt: hyperfocus, hyper-focus"
-    }
-   ],
+  "565": {
+   "titel": "Mehr als eine mögliche Innenwelt",
+   "gebiet": "Beziehungswerkstatt",
+   "ortsart": "Perspektive",
+   "kurz": "Du kennst dein Erleben unmittelbar. Was jemand anderes denkt oder beabsichtigt, bleibt ohne dessen Auskunft eine Hypothese. Auch eine plausible Erklärung kann falsch sein.",
+   "mehr": [],
    "quellen": [
     {
-     "titel": "Determinants of hyperfocus in the context of escapism and gaming motivations, flow, and ADHD symptoms among adult video gamers.",
-     "kurz": "Determinants of hyperfocus in the context of escapism and gaming motivations, flow, and ADHD symptoms among adult video gamers.",
+     "titel": "National Center for PTSD · Kommunikation in Familien",
+     "kurz": "National Center for PTSD · Kommunikation in Familien",
      "art": "Quelle",
      "zitat": "",
      "technisch": {
-      "schluessel": "research-source:source:pmid:42229071",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42229071/",
-      "titelBestand": "Determinants of hyperfocus in the context of escapism and gaming motivations, flow, and ADHD symptoms among adult video gamers."
+      "schluessel": "relationship-source:va",
+      "url": "https://www.ptsd.va.gov/family/how_family_member.asp",
+      "titelBestand": "National Center for PTSD · Kommunikation in Familien"
      }
     }
    ],
@@ -460,7 +424,7 @@ window.SCHLOSS_DATEN = {
     "innen": [
      {
       "abschnitt": "Kurztext",
-      "text": "Sehr intensive und anhaltende Bindung an eine Tätigkeit"
+      "text": "Du kennst dein Erleben unmittelbar. Was jemand anderes denkt oder beabsichtigt, bleibt ohne dessen Auskunft eine Hypothese. Auch eine plausible Erklärung kann falsch sein."
      }
     ],
     "aussen": [],
@@ -468,99 +432,15 @@ window.SCHLOSS_DATEN = {
    },
    "bedingungen": [],
    "grenzSaetze": [],
-   "herkunft": "Phänomenatlas · bibliografische Forschungslandkarte",
+   "herkunft": "Phänomenatlas · Beziehungswerkstatt",
    "technisch": {
-    "ortIndex": 939,
-    "textKennung": "research:phenomenon:strengths:hyperfocus",
-    "herkunftPfad": "neurodivergenz-gesamtapp-chatgpt/forschung.json"
+    "ortIndex": 565,
+    "textKennung": "relationship:mentalisieren",
+    "herkunftPfad": "dist/relationship-model.mjs"
    },
    "feld": {
-    "x": 6.7,
-    "y": 3.986
-   }
-  },
-  "1012": {
-   "titel": "Aufgabenstarre",
-   "gebiet": "ADHS · Randphänomene",
-   "ortsart": "Phänomen",
-   "kurz": "Der Auftrag ist klar, der Körper startet nicht. Kein Desinteresse im Satz — eher ein Nicht-Hineinkommen. Im deutschsprachigen Forum taucht das als „nicht ins Tun kommen“ und als Folge unklarer Dauer auf („vorher nichts anfangen“).",
-   "mehr": [
-    {
-     "titel": "Verwandt und zu unterscheiden",
-     "text": "Könnte zusammenhängen mit Wartemodus (Start wird bis nach dem Termin verschoben) und Body Doubling (Anwesenheit als Anker, Community, ungetestet). Delay Aversion trifft Belohnungsaufschub, nicht notwendig den Start. Hyperfokus ist oft das Gegenteil am Start — Nähe, nicht Identität. Hohe populationsweite Heritabilität schließt Passung/Gerüst für den Start nicht aus."
-    }
-   ],
-   "quellen": [
-    {
-     "titel": "ADxS-Forum, Mondkatze",
-     "kurz": "ADxS-Forum, Mondkatze",
-     "art": "Forum",
-     "zitat": "dass ich vorher nichts anfangen kann, weil ich einfach nicht einschätzen kann, wie lange ich für etwas brauche",
-     "technisch": {
-      "schluessel": "adhs-source:d1325eab5cb1",
-      "url": "https://adhs-forum.adxs.org/t/adhs-und-zeitblindheit/18778",
-      "titelBestand": "ADxS-Forum, Mondkatze"
-     }
-    },
-    {
-     "titel": "AWMF-Leitlinie",
-     "kurz": "AWMF-Leitlinie",
-     "art": "Leitlinie",
-     "zitat": "gekennzeichnet durch die drei Kernsymptome: Aufmerksamkeitsstörung und / oder Impulsivität und Hyperaktivität",
-     "technisch": {
-      "schluessel": "adhs-source:bafe985ae0a3",
-      "url": "https://register.awmf.org/de/leitlinien/detail/028-045",
-      "titelBestand": "AWMF 028-045 / NLM-Ask"
-     }
-    }
-   ],
-   "blick": {
-    "innen": [
-     {
-      "abschnitt": "Was Menschen beschreiben",
-      "text": "Der Auftrag ist klar, der Körper startet nicht. Kein Desinteresse im Satz — eher ein Nicht-Hineinkommen. Im deutschsprachigen Forum taucht das als „nicht ins Tun kommen“ und als Folge unklarer Dauer auf („vorher nichts anfangen“)."
-     }
-    ],
-    "aussen": [
-     {
-      "abschnitt": "Was das nicht ist",
-      "text": "Nicht Faulheit. Nicht automatisch Depression, auch wenn Antriebslosigkeit überlappen kann — das ist nicht geprüft."
-     },
-     {
-      "abschnitt": "Verwandt und zu unterscheiden",
-      "text": "Könnte zusammenhängen mit Wartemodus (Start wird bis nach dem Termin verschoben) und Body Doubling (Anwesenheit als Anker, Community, ungetestet). Delay Aversion trifft Belohnungsaufschub, nicht notwendig den Start. Hyperfokus ist oft das Gegenteil am Start — Nähe, nicht Identität. Hohe populationsweite Heritabilität schließt Passung/Gerüst für den Start nicht aus."
-     }
-    ],
-    "spielraum": []
-   },
-   "bedingungen": [],
-   "grenzSaetze": [
-    {
-     "satz": "Keine Diagnose und kein Nachweis eines eigenständig validierten Konstrukts.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Das damalige Initiation-Notebook war leer; daraus folgt keine Studienbestätigung und keine belegte Wirkung von Body Doubling.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Nicht Faulheit.",
-     "abschnitt": "Was das nicht ist"
-    },
-    {
-     "satz": "Nicht automatisch Depression, auch wenn Antriebslosigkeit überlappen kann — das ist nicht geprüft.",
-     "abschnitt": "Was das nicht ist"
-    }
-   ],
-   "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-   "technisch": {
-    "ortIndex": 1012,
-    "textKennung": "adhs:aufgabenstarre",
-    "herkunftPfad": "phaenomenatlas-ernst/daten/karten/aufgabenstarre.md"
-   },
-   "feld": {
-    "x": -0.777,
-    "y": 1.237
+    "x": -4.589,
+    "y": 10.794
    }
   },
   "1013": {
@@ -653,976 +533,405 @@ window.SCHLOSS_DATEN = {
     "herkunftPfad": "phaenomenatlas-ernst/daten/karten/body-doubling.md"
    },
    "feld": {
-    "x": -1.786,
-    "y": 0.417
+    "x": -8.837,
+    "y": -1.231
    }
   },
-  "1014": {
-   "titel": "Delay Aversion",
-   "gebiet": "ADHS · Randphänomene",
+  "1025": {
+   "titel": "Gefühle überrollen mich",
+   "gebiet": "Beziehungen & Borderline",
    "ortsart": "Phänomen",
-   "kurz": "Warten ist nicht neutral. Aufschub einer Belohnung oder eines Endes ist schwer zu ertragen. ADxS fasst Alltagsformen: Warten unerträglich; lieber noch etwas tun als zu früh da sein und stillhalten.",
-   "mehr": [
-    {
-     "titel": "Verwandt und zu unterscheiden",
-     "text": "Könnte zusammenhängen mit Wartemodus (Vermeidung des Wartens durch leeren Vormittag) und Zeitblindheit (Schätzfehler). Das sind drei Karten, nicht eine Wahrheit. Aufgabenstarre trifft den Start, nicht notwendig Belohnungsaufschub. Delay Aversion ist kein Beleg für „Erziehung verursacht ADHS“ — motivationaler Pfad ≠ rGE-Schuldnarrativ."
-    }
-   ],
+   "kurz": "Das Gefühl ist schon sehr groß, bevor ein nächster Schritt klar wird. Erleben, Handlungsdruck und tatsächliche Handlung lassen sich getrennt betrachten.",
+   "mehr": [],
    "quellen": [
     {
-     "titel": "Sonuga-Barke 2002",
-     "kurz": "Sonuga-Barke 2002",
-     "art": "Studie",
-     "zitat": "delay aversion and poor inhibitory control are independent co-existing characteristics of AD/HD (combined type)",
-     "technisch": {
-      "schluessel": "adhs-source:28cfccd9cfd9",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/11864715/",
-      "titelBestand": "Sonuga-Barke 2002"
-     }
-    },
-    {
-     "titel": "Noreika et al. 2013",
-     "kurz": "Noreika et al. 2013",
-     "art": "Studie",
-     "zitat": "The most consistent impairments in ADHD are found in sensorimotor synchronisation, duration discrimination, reproduction and delay discounting",
-     "technisch": {
-      "schluessel": "adhs-source:cfb32f094c24",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/23022430/",
-      "titelBestand": "Noreika et al. 2013"
-     }
-    },
-    {
-     "titel": "ADxS Zeitaufwand",
-     "kurz": "ADxS Zeitaufwand",
-     "art": "Ableitung",
+     "titel": "Psychologische Therapien bei Borderline · Cochrane-Übersicht",
+     "kurz": "Psychologische Therapien bei Borderline · Cochrane-Übersicht",
+     "art": "Quelle",
      "zitat": "",
      "technisch": {
-      "schluessel": "adhs-source:ac6ca4bf60c5",
-      "url": "https://www.adxs.org/",
-      "titelBestand": "ADxS Zeitaufwand / NLM cited_text"
+      "schluessel": "cochrane-2020",
+      "url": "https://www.cochrane.org/evidence/CD012955_psychological-therapies-people-borderline-personality-disorder",
+      "titelBestand": "Psychologische Therapien bei Borderline · Cochrane-Übersicht"
      }
     }
    ],
    "blick": {
     "innen": [
      {
-      "abschnitt": "Was Menschen beschreiben",
-      "text": "Warten ist nicht neutral. Aufschub einer Belohnung oder eines Endes ist schwer zu ertragen. ADxS fasst Alltagsformen: Warten unerträglich; lieber noch etwas tun als zu früh da sein und stillhalten."
+      "abschnitt": "Im Alltag",
+      "text": "Eine Verabredung wird kurzfristig abgesagt. Mira spürt Druck im Brustkorb und tippt sofort eine lange Nachricht."
      }
     ],
-    "aussen": [
+    "aussen": [],
+    "spielraum": [
      {
-      "abschnitt": "Was das nicht ist",
-      "text": "Nicht dass jemand unhöflich ist, wenn er nicht wartet. Nicht identisch mit Zeitblindheit (Schätzen vs. Ertragen)."
-     },
-     {
-      "abschnitt": "Verwandt und zu unterscheiden",
-      "text": "Könnte zusammenhängen mit Wartemodus (Vermeidung des Wartens durch leeren Vormittag) und Zeitblindheit (Schätzfehler). Das sind drei Karten, nicht eine Wahrheit. Aufgabenstarre trifft den Start, nicht notwendig Belohnungsaufschub. Delay Aversion ist kein Beleg für „Erziehung verursacht ADHS“ — motivationaler Pfad ≠ rGE-Schuldnarrativ."
+      "abschnitt": "Handlungsspielraum",
+      "text": "Die Nachricht zunächst als eigenen Entwurf behalten. Einen bereits vertrauten, sicheren Schritt zur Pause nutzen und erst später über den Kontakt entscheiden. Was fühle ich, was möchte ich gerade tun, und welchen Teil davon will ich tatsächlich ausführen?"
      }
-    ],
-    "spielraum": []
+    ]
    },
    "bedingungen": [],
-   "grenzSaetze": [
-    {
-     "satz": "Modell zu aversiv erlebtem Aufschub, kein Diagnoseverfahren.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Delay Aversion, zeitliches Diskontieren und Wartemodus bezeichnen unterschiedliche Gegenstände.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Nicht dass jemand unhöflich ist, wenn er nicht wartet.",
-     "abschnitt": "Was das nicht ist"
-    },
-    {
-     "satz": "Nicht identisch mit Zeitblindheit (Schätzen vs. Ertragen).",
-     "abschnitt": "Was das nicht ist"
-    }
-   ],
-   "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
    "technisch": {
-    "ortIndex": 1014,
-    "textKennung": "adhs:delay-aversion",
-    "herkunftPfad": "phaenomenatlas-ernst/daten/karten/delay-aversion.md"
+    "ortIndex": 1025,
+    "textKennung": "relationship-original:gefuehlswelle",
+    "herkunftPfad": ""
    },
    "feld": {
-    "x": -0.369,
-    "y": -1.472
+    "x": -1.056,
+    "y": -1.953
    }
   },
-  "1015": {
-   "titel": "Differential Susceptibility",
-   "gebiet": "ADHS · Randphänomene",
+  "1026": {
+   "titel": "Wut wird laut",
+   "gebiet": "Beziehungen & Borderline",
    "ortsart": "Phänomen",
-   "kurz": "Manche Kinder scheinen von schlechten und guten Kontexten stärker bewegt zu werden als andere — nicht nur „anfällig für Schaden“.",
-   "mehr": [
-    {
-     "titel": "Verwandt und zu unterscheiden",
-     "text": "Nicht dasselbe wie rGE (Korrelation ≠ Interaktion). Benannte Nähe zu Heritabilität-ist-kein-Schicksal (hohe h² schließt Ausprägungsabhängigkeit nicht aus). Nicht dasselbe wie Extreme-Umwelt-Kausalität (selten, klarer Quasi-Experiment-Status)."
-    }
-   ],
-   "quellen": [
-    {
-     "titel": "Belsky & Pluess 2009",
-     "kurz": "Belsky & Pluess 2009",
-     "art": "Übersicht",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "adhs-source:a3c5c76c6f99",
-      "url": "https://doi.org/10.1037/a0017376",
-      "titelBestand": "Belsky & Pluess 2009"
-     }
-    },
-    {
-     "titel": "Østergaard et al. 2020",
-     "kurz": "Østergaard et al. 2020",
-     "art": "Studie",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "adhs-source:1763b56b73b9",
-      "url": "https://doi.org/10.1038/s41398-020-01019-6",
-      "titelBestand": "Østergaard et al. 2020"
-     }
-    }
-   ],
+   "kurz": "Ärger kann auf eine Verletzung hinweisen. Was jemand im Ärger tut, bleibt eine eigene Frage von Verantwortung und Schutz.",
+   "mehr": [],
+   "quellen": [],
    "blick": {
     "innen": [
      {
-      "abschnitt": "Was Menschen beschreiben",
-      "text": "Manche Kinder scheinen von schlechten und guten Kontexten stärker bewegt zu werden als andere — nicht nur „anfällig für Schaden“."
+      "abschnitt": "Im Alltag",
+      "text": "Nach einer spöttischen Bemerkung erhebt Jan die Stimme und schlägt eine Tür zu. Die andere Person erschrickt."
      }
     ],
-    "aussen": [
+    "aussen": [],
+    "spielraum": [
      {
-      "abschnitt": "Was das nicht ist",
-      "text": "Keine Onset-Ursache. Keine Eltern-Schuldformel. Kein Ersatz für Twin-/PRS-Befunde."
-     },
-     {
-      "abschnitt": "Verwandt und zu unterscheiden",
-      "text": "Nicht dasselbe wie rGE (Korrelation ≠ Interaktion). Benannte Nähe zu Heritabilität-ist-kein-Schicksal (hohe h² schließt Ausprägungsabhängigkeit nicht aus). Nicht dasselbe wie Extreme-Umwelt-Kausalität (selten, klarer Quasi-Experiment-Status)."
+      "abschnitt": "Handlungsspielraum",
+      "text": "Die einschüchternde Handlung unterbrechen. Später den eigenen Anteil konkret benennen und die ursprüngliche Verletzung gesondert besprechen, soweit Kontakt möglich ist. Welches Verhalten muss jetzt aufhören, und welches Anliegen bleibt danach zu klären?"
      }
-    ],
-    "spielraum": []
+    ]
    },
    "bedingungen": [],
-   "grenzSaetze": [
-    {
-     "satz": "Heritabilität ist ein Populationsmaß und erklärt keine einzelne Biografie.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Genetische Beiträge, Umweltbeiträge und Interaktionen sind nicht gegeneinander austauschbar.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Hohe Heritabilität bedeutet keine Unveränderlichkeit.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Keine Onset-Ursache.",
-     "abschnitt": "Was das nicht ist"
-    },
-    {
-     "satz": "Keine Eltern-Schuldformel.",
-     "abschnitt": "Was das nicht ist"
-    },
-    {
-     "satz": "Kein Ersatz für Twin-/PRS-Befunde.",
-     "abschnitt": "Was das nicht ist"
-    }
-   ],
-   "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
    "technisch": {
-    "ortIndex": 1015,
-    "textKennung": "adhs:differential-susceptibility",
-    "herkunftPfad": "phaenomenatlas-ernst/daten/karten/differential-susceptibility.md"
+    "ortIndex": 1026,
+    "textKennung": "relationship-original:wut",
+    "herkunftPfad": ""
    },
    "feld": {
-    "x": 0.689,
-    "y": -2.383
+    "x": -0.352,
+    "y": -4.785
    }
   },
-  "1016": {
-   "titel": "Gen–Umwelt-Korrelation (rGE)",
-   "gebiet": "ADHS · Randphänomene",
+  "1027": {
+   "titel": "Innen fühlt es sich leer an",
+   "gebiet": "Beziehungen & Borderline",
    "ortsart": "Phänomen",
-   "kurz": "Dasselbe Kind „erzeugt“ oft andere Reaktionen in der Umgebung als ein anderes Kind — und man liest das fälschlich als reine Erziehungswirkung auf den Onset.",
-   "mehr": [
-    {
-     "titel": "Verwandt und zu unterscheiden",
-     "text": "Verwandt als Voraussetzung: Heritabilität-ist-kein-Schicksal (ACE/rGE lesbar machen). Nicht dasselbe wie extreme Umwelt-Kausalität (ERA/VLBW) und nicht dasselbe wie Differential Susceptibility (Interaktion ≠ Korrelation). Nicht-dasselbe-Pfad zu RSD: soziale Last und Kritikschmerz beweisen keinen Eltern-Onset. Claim Ceiling: keine Kante „Eltern verursachen ADHS“."
-    }
-   ],
-   "quellen": [
-    {
-     "titel": "Thapar et al. 2013",
-     "kurz": "Thapar et al. 2013",
-     "art": "Übersicht",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "adhs-source:a0faf51c33f5",
-      "url": "https://doi.org/10.1111/j.1469-7610.2012.02611.x",
-      "titelBestand": "Thapar et al. 2013"
-     }
-    },
-    {
-     "titel": "Østergaard et al. 2020",
-     "kurz": "Østergaard et al. 2020",
-     "art": "Studie",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "adhs-source:1763b56b73b9",
-      "url": "https://doi.org/10.1038/s41398-020-01019-6",
-      "titelBestand": "Østergaard et al. 2020"
-     }
-    }
-   ],
+   "kurz": "Leere ist ein beschreibbares Erleben und keine vollständige Erklärung. Es verdient Aufmerksamkeit, ohne es aus einer einzelnen Situation zu etikettieren.",
+   "mehr": [],
+   "quellen": [],
    "blick": {
     "innen": [
      {
-      "abschnitt": "Was Menschen beschreiben",
-      "text": "Dasselbe Kind „erzeugt“ oft andere Reaktionen in der Umgebung als ein anderes Kind — und man liest das fälschlich als reine Erziehungswirkung auf den Onset."
+      "abschnitt": "Im Alltag",
+      "text": "Nach einem intensiven Wochenende sagt Alex: „Jetzt ist alles weg. Ich weiß gar nicht, was ich will.“"
      }
     ],
-    "aussen": [
+    "aussen": [],
+    "spielraum": [
      {
-      "abschnitt": "Was das nicht ist",
-      "text": "Keine Fawn-/Trauma-Erklärung. Keine Spektrum-Obertheorie."
-     },
-     {
-      "abschnitt": "Verwandt und zu unterscheiden",
-      "text": "Verwandt als Voraussetzung: Heritabilität-ist-kein-Schicksal (ACE/rGE lesbar machen). Nicht dasselbe wie extreme Umwelt-Kausalität (ERA/VLBW) und nicht dasselbe wie Differential Susceptibility (Interaktion ≠ Korrelation). Nicht-dasselbe-Pfad zu RSD: soziale Last und Kritikschmerz beweisen keinen Eltern-Onset. Claim Ceiling: keine Kante „Eltern verursachen ADHS“."
+      "abschnitt": "Handlungsspielraum",
+      "text": "In eigenen Worten genauer beschreiben: leer, taub, erschöpft, orientierungslos? Bei anhaltender oder stark belastender Erfahrung passende fachliche Unterstützung suchen. Was fehlt gerade am ehesten: Gefühl, Verbindung, Orientierung, Kraft oder etwas anderes?"
      }
-    ],
-    "spielraum": []
-   },
-   "bedingungen": [],
-   "grenzSaetze": [
-    {
-     "satz": "Heritabilität ist ein Populationsmaß und erklärt keine einzelne Biografie.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Genetische Beiträge, Umweltbeiträge und Interaktionen sind nicht gegeneinander austauschbar.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Hohe Heritabilität bedeutet keine Unveränderlichkeit.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Keine Fawn-/Trauma-Erklärung.",
-     "abschnitt": "Was das nicht ist"
-    },
-    {
-     "satz": "Keine Spektrum-Obertheorie.",
-     "abschnitt": "Was das nicht ist"
-    }
-   ],
-   "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-   "technisch": {
-    "ortIndex": 1016,
-    "textKennung": "adhs:gen-umwelt-korrelation-rge",
-    "herkunftPfad": "phaenomenatlas-ernst/daten/karten/gen-umwelt-korrelation-rge.md"
-   },
-   "feld": {
-    "x": 1.97,
-    "y": -1.245
-   }
-  },
-  "1017": {
-   "titel": "Heritabilität ist kein Schicksal",
-   "gebiet": "ADHS · Randphänomene",
-   "ortsart": "Phänomen",
-   "kurz": "Menschen hören „ADHS ist zu X Prozent genetisch“ und lesen daraus: unveränderlich, oder umgekehrt: die Umwelt entscheidet allein, ob es „wirklich“ wird.",
-   "mehr": [
-    {
-     "titel": "Verwandt und zu unterscheiden",
-     "text": "Verwandt: Gen–Umwelt-Korrelation (rGE) — inherited und noninherited interdependent (Thapar 2013). Gegenbeispiel-Pfad: extreme frühe Umwelt (ERA, VLBW) — Populations-Twin-Samples unterrepräsentieren das. Nicht dasselbe: Differential Susceptibility (Plasticity/Interaktion ≠ Varianzanteil h²). Benannte Nähe zu Aufgabenstarre/Gerüst: hohe h² macht Intervention nicht sinnlos."
-    }
-   ],
-   "quellen": [
-    {
-     "titel": "Faraone & Larsson 2019 Mol Psychiatry",
-     "kurz": "Faraone & Larsson 2019 Mol Psychiatry",
-     "art": "Übersicht",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "adhs-source:ca613bf3efe5",
-      "url": "https://doi.org/10.1038/s41380-018-0070-0",
-      "titelBestand": "Faraone & Larsson 2019 Mol Psychiatry"
-     }
-    },
-    {
-     "titel": "Larsson et al. 2014 Psychol Med",
-     "kurz": "Larsson et al. 2014 Psychol Med",
-     "art": "Studie",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "adhs-source:c5a276db39cd",
-      "url": "https://doi.org/10.1017/S0033291713002493",
-      "titelBestand": "Larsson et al. 2014 Psychol Med"
-     }
-    },
-    {
-     "titel": "Thapar et al. 2013",
-     "kurz": "Thapar et al. 2013",
-     "art": "Übersicht",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "adhs-source:a0faf51c33f5",
-      "url": "https://doi.org/10.1111/j.1469-7610.2012.02611.x",
-      "titelBestand": "Thapar et al. 2013"
-     }
-    }
-   ],
-   "blick": {
-    "innen": [
-     {
-      "abschnitt": "Was Menschen beschreiben",
-      "text": "Menschen hören „ADHS ist zu X Prozent genetisch“ und lesen daraus: unveränderlich, oder umgekehrt: die Umwelt entscheidet allein, ob es „wirklich“ wird."
-     }
-    ],
-    "aussen": [
-     {
-      "abschnitt": "Was das nicht ist",
-      "text": "Keine Erklärung einzelner Biografien. Keine Autismus-h². Keine Beziehungs- oder Eltern-Ursache."
-     },
-     {
-      "abschnitt": "Verwandt und zu unterscheiden",
-      "text": "Verwandt: Gen–Umwelt-Korrelation (rGE) — inherited und noninherited interdependent (Thapar 2013). Gegenbeispiel-Pfad: extreme frühe Umwelt (ERA, VLBW) — Populations-Twin-Samples unterrepräsentieren das. Nicht dasselbe: Differential Susceptibility (Plasticity/Interaktion ≠ Varianzanteil h²). Benannte Nähe zu Aufgabenstarre/Gerüst: hohe h² macht Intervention nicht sinnlos."
-     }
-    ],
-    "spielraum": []
-   },
-   "bedingungen": [],
-   "grenzSaetze": [
-    {
-     "satz": "Heritabilität ist ein Populationsmaß und erklärt keine einzelne Biografie.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Genetische Beiträge, Umweltbeiträge und Interaktionen sind nicht gegeneinander austauschbar.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Hohe Heritabilität bedeutet keine Unveränderlichkeit.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Keine Erklärung einzelner Biografien.",
-     "abschnitt": "Was das nicht ist"
-    },
-    {
-     "satz": "Keine Autismus-h².",
-     "abschnitt": "Was das nicht ist"
-    },
-    {
-     "satz": "Keine Beziehungs- oder Eltern-Ursache.",
-     "abschnitt": "Was das nicht ist"
-    }
-   ],
-   "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-   "technisch": {
-    "ortIndex": 1017,
-    "textKennung": "adhs:heritabilitaet-nicht-schicksal",
-    "herkunftPfad": "phaenomenatlas-ernst/daten/karten/heritabilitaet-nicht-schicksal.md"
-   },
-   "feld": {
-    "x": 0.84,
-    "y": -0.539
-   }
-  },
-  "1018": {
-   "titel": "Hyperfokus",
-   "gebiet": "ADHS · Randphänomene",
-   "ortsart": "Phänomen",
-   "kurz": "Vollständiges Aufgehen in einer Tätigkeit, oft einer interessanten. Die Umgebung fällt weg. Zeit kann sich anfühlen, als gäbe es sie nicht. Danach: Stunden sind um, der Rest des Tages ist unberührt.",
-   "mehr": [
-    {
-     "titel": "Verwandt und zu unterscheiden",
-     "text": "Könnte zusammenhängen mit Zeitblindheit (Stunden weg). Aufgabenstarre ist oft das Gegenteil am Start — Nähe, nicht Identität. Flow-Forschung ist nicht eingelesen. Interesse-/Passungskosten können die Erscheinung von Hyperfokus formen, ohne h² zu widerlegen."
-    }
-   ],
-   "quellen": [
-    {
-     "titel": "ADDitude",
-     "kurz": "ADDitude",
-     "art": "Klinik",
-     "zitat": "Hyperfocus refers to an intense fixation on an interest or activity for an extended period of time",
-     "technisch": {
-      "schluessel": "adhs-source:22ead006b401",
-      "url": "https://www.additudemag.com/understanding-adhd-hyperfocus/",
-      "titelBestand": "ADDitude / NLM cited_text 30.08.2026"
-     }
-    }
-   ],
-   "blick": {
-    "innen": [
-     {
-      "abschnitt": "Was Menschen beschreiben",
-      "text": "Vollständiges Aufgehen in einer Tätigkeit, oft einer interessanten. Die Umgebung fällt weg. Zeit kann sich anfühlen, als gäbe es sie nicht. Danach: Stunden sind um, der Rest des Tages ist unberührt."
-     }
-    ],
-    "aussen": [
-     {
-      "abschnitt": "Was das nicht ist",
-      "text": "Nicht automatisch Produktivität. Nicht dass jemand „sich zusammenreißen“ kann, sobald es langweilig wird, und das Gegenteil beweist fehlenden Willen."
-     },
-     {
-      "abschnitt": "Verwandt und zu unterscheiden",
-      "text": "Könnte zusammenhängen mit Zeitblindheit (Stunden weg). Aufgabenstarre ist oft das Gegenteil am Start — Nähe, nicht Identität. Flow-Forschung ist nicht eingelesen. Interesse-/Passungskosten können die Erscheinung von Hyperfokus formen, ohne h² zu widerlegen."
-     }
-    ],
-    "spielraum": []
+    ]
    },
    "bedingungen": [
     {
-     "klausel": "besonders bei belohnenden Tätigkeiten",
-     "satz": "Barkley dort zitiert: Schwierigkeiten, die Aufmerksamkeit zu wechseln, besonders bei belohnenden Tätigkeiten.",
-     "abschnitt": "Was Berichte sagen"
+     "klausel": "Bei anhaltender oder stark belastender Erfahrung passende fachliche Unterstützung suchen",
+     "satz": "Bei anhaltender oder stark belastender Erfahrung passende fachliche Unterstützung suchen.",
+     "abschnitt": "Handlungsspielraum"
     }
    ],
-   "grenzSaetze": [
-    {
-     "satz": "Kein eigenständiges DSM-Kriterium.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Ob verschiedene Fachliteraturen dasselbe Konstrukt meinen, bleibt offen.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Eine vereinfachte Dopaminmangel-Erklärung wird nicht als belegt übernommen.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Nicht automatisch Produktivität.",
-     "abschnitt": "Was das nicht ist"
-    },
-    {
-     "satz": "Nicht dass jemand „sich zusammenreißen“ kann, sobald es langweilig wird, und das Gegenteil beweist fehlenden Willen.",
-     "abschnitt": "Was das nicht ist"
-    }
-   ],
-   "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
    "technisch": {
-    "ortIndex": 1018,
-    "textKennung": "adhs:hyperfokus",
-    "herkunftPfad": "phaenomenatlas-ernst/daten/karten/hyperfokus.md"
+    "ortIndex": 1027,
+    "textKennung": "relationship-original:leere",
+    "herkunftPfad": ""
    },
    "feld": {
-    "x": 1.26,
-    "y": 1.796
+    "x": 2.811,
+    "y": 3.058
    }
   },
-  "1019": {
-   "titel": "Reizfilterschwäche",
-   "gebiet": "ADHS · Randphänomene",
+  "1028": {
+   "titel": "Rückzug hat mehrere mögliche Bedeutungen",
+   "gebiet": "Beziehungen & Borderline",
    "ortsart": "Phänomen",
-   "kurz": "Zu viel kommt durch. Geräusche, Licht, Etiketten, Stimmen im Raum. Nach Überreizung kann es dauern, bis der Körper wieder still wird. Im deutschsprachigen Forum: kleinste Geräusche wie ein Einschlag.",
-   "mehr": [
-    {
-     "titel": "Verwandt und zu unterscheiden",
-     "text": "Könnte zusammenhängen mit Überwältigung, die als RSD gelesen wird — das wäre Verwechslung. Schlaf/Chronotyp ist nicht Reizfilter. Sensorische Last in Alltagsumwelten ist nicht dasselbe wie ADHD-ähnliche Symptome nach extremer früher Deprivation/VLBW."
-    }
-   ],
-   "quellen": [
-    {
-     "titel": "ADxS-Forum",
-     "kurz": "ADxS-Forum",
-     "art": "Forum",
-     "zitat": "Manchmal dauert es Tage, bis ich mich wieder „normal“ fühle",
-     "technisch": {
-      "schluessel": "adhs-source:dfdfa2683faa",
-      "url": "https://adhs-forum.adxs.org/t/hyperakusis-und-misophonie-was-hilft/19841",
-      "titelBestand": "ADxS-Forum / NLM cited_text 30.08.2026"
-     }
-    },
-    {
-     "titel": "Ghanizadeh Abstract",
-     "kurz": "Ghanizadeh Abstract",
-     "art": "Studie",
-     "zitat": "ADHD and sensory problems may occur together and interact",
-     "technisch": {
-      "schluessel": "adhs-source:52346ef12a5a",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/21852983/",
-      "titelBestand": "Ghanizadeh Abstract"
-     }
-    }
-   ],
+   "kurz": "Wenig sprechen oder weggehen kann verschiedenes bedeuten. Der ähnliche äußere Eindruck ersetzt die Auskunft der Person und den Verlauf nicht.",
+   "mehr": [],
+   "quellen": [],
    "blick": {
     "innen": [
      {
-      "abschnitt": "Was Menschen beschreiben",
-      "text": "Zu viel kommt durch. Geräusche, Licht, Etiketten, Stimmen im Raum. Nach Überreizung kann es dauern, bis der Körper wieder still wird. Im deutschsprachigen Forum: kleinste Geräusche wie ein Einschlag."
+      "abschnitt": "Im Alltag",
+      "text": "Bei einem Gespräch verstummt Lou, schaut auf den Boden und verlässt den Raum."
      }
     ],
-    "aussen": [
+    "aussen": [],
+    "spielraum": [
      {
-      "abschnitt": "Was das nicht ist",
-      "text": "Nicht „zuviel Theater“. Nicht identisch mit Autismus-Sensorik, auch wenn die Literatur überlappt."
-     },
-     {
-      "abschnitt": "Verwandt und zu unterscheiden",
-      "text": "Könnte zusammenhängen mit Überwältigung, die als RSD gelesen wird — das wäre Verwechslung. Schlaf/Chronotyp ist nicht Reizfilter. Sensorische Last in Alltagsumwelten ist nicht dasselbe wie ADHD-ähnliche Symptome nach extremer früher Deprivation/VLBW."
+      "abschnitt": "Handlungsspielraum",
+      "text": "Eine ausdrücklich gewünschte Pause respektieren. Wenn Kontakt möglich ist, später offen nach Erleben und hilfreichen Bedingungen fragen; keine Erklärung erzwingen. Was weiß ich aus Lous eigener Auskunft, und was ergänze ich nur?"
      }
-    ],
-    "spielraum": []
-   },
-   "bedingungen": [],
-   "grenzSaetze": [
-    {
-     "satz": "Keine Diagnose und kein nachgewiesener eigenständiger ADHS-Kern.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Sensorische Überlastung und Misophonie sind zu unterscheiden; Forum- und Selbsttestzahlen sind keine Bevölkerungsprävalenz.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Nicht „zuviel Theater“.",
-     "abschnitt": "Was das nicht ist"
-    },
-    {
-     "satz": "Nicht identisch mit Autismus-Sensorik, auch wenn die Literatur überlappt.",
-     "abschnitt": "Was das nicht ist"
-    }
-   ],
-   "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-   "technisch": {
-    "ortIndex": 1019,
-    "textKennung": "adhs:reizfilterschwaeche",
-    "herkunftPfad": "phaenomenatlas-ernst/daten/karten/reizfilterschwaeche.md"
-   },
-   "feld": {
-    "x": -1.604,
-    "y": 2.261
-   }
-  },
-  "1020": {
-   "titel": "Rejection Sensitive Dysphoria",
-   "gebiet": "ADHS · Randphänomene",
-   "ortsart": "Phänomen",
-   "kurz": "Heftiger emotionaler Schmerz bei tatsächlicher oder vermuteter Zurückweisung, Kritik, Bloßstellung. Stärker und schwerer zu steuern als „das hat wehgetan“.",
-   "mehr": [
-    {
-     "titel": "Verwandt und zu unterscheiden",
-     "text": "Könnte zusammenhängen mit allgemeiner emotionaler Dysregulation. Reizfilter ist sensorisch, nicht sozial — Nähe nur wenn beides als Überwältigung erlebt wird, nicht als Identität. ZurückweisungsSchmerz ist kein Beleg dafür, dass Elternschaft ADHS-Onset verursacht; evokative rGE und soziale Last sind zu trennen."
-    }
-   ],
-   "quellen": [
-    {
-     "titel": "Cleveland Clinic",
-     "kurz": "Cleveland Clinic",
-     "art": "Klinik",
-     "zitat": "Though RSD isn't an officially recognized symptom or diagnosis, it's still a term that experts use",
-     "technisch": {
-      "schluessel": "adhs-source:5e174fe7afa7",
-      "url": "https://my.clevelandclinic.org/health/diseases/24099-rejection-sensitive-dysphoria-rsd",
-      "titelBestand": "Cleveland Clinic"
-     }
-    },
-    {
-     "titel": "Dodson, ADDitude",
-     "kurz": "Dodson, ADDitude",
-     "art": "Klinik",
-     "zitat": "Individuals with RSD feel “unbearable” pain as a result of perceived or actual rejection, teasing, or criticism",
-     "technisch": {
-      "schluessel": "adhs-source:977c7ddd8a2c",
-      "url": "https://www.additudemag.com/rejection-sensitive-dysphoria-adhd-emotional-dysregulation/",
-      "titelBestand": "Dodson, ADDitude / NLM cited_text 30.08.2026"
-     }
-    },
-    {
-     "titel": "AWMF-Leitlinie",
-     "kurz": "AWMF-Leitlinie",
-     "art": "Leitlinie",
-     "zitat": "soziale Schwierigkeiten in der Familie, im Kontakt mit Gleichaltrigen und Beziehungspartnern",
-     "technisch": {
-      "schluessel": "adhs-source:bafe985ae0a3",
-      "url": "https://register.awmf.org/de/leitlinien/detail/028-045",
-      "titelBestand": "AWMF 028-045 / NLM-Ask"
-     }
-    },
-    {
-     "titel": "Hirsch et al., 2018, PubMed-Titel",
-     "kurz": "Hirsch et al., 2018, PubMed-Titel",
-     "art": "Studie",
-     "zitat": "Emotional dysregulation is a primary symptom in adult Attention-Deficit/Hyperactivity Disorder (ADHD)",
-     "technisch": {
-      "schluessel": "adhs-source:08db2cd93e5a",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/29477097/",
-      "titelBestand": "Hirsch et al., 2018, PubMed-Titel"
-     }
-    }
-   ],
-   "blick": {
-    "innen": [
-     {
-      "abschnitt": "Was Menschen beschreiben",
-      "text": "Heftiger emotionaler Schmerz bei tatsächlicher oder vermuteter Zurückweisung, Kritik, Bloßstellung. Stärker und schwerer zu steuern als „das hat wehgetan“."
-     }
-    ],
-    "aussen": [
-     {
-      "abschnitt": "Was das nicht ist",
-      "text": "Nicht identisch mit Borderline. Nicht „zu empfindlich“ als Charakter. Nicht RSQ."
-     },
-     {
-      "abschnitt": "Verwandt und zu unterscheiden",
-      "text": "Könnte zusammenhängen mit allgemeiner emotionaler Dysregulation. Reizfilter ist sensorisch, nicht sozial — Nähe nur wenn beides als Überwältigung erlebt wird, nicht als Identität. ZurückweisungsSchmerz ist kein Beleg dafür, dass Elternschaft ADHS-Onset verursacht; evokative rGE und soziale Last sind zu trennen."
-     }
-    ],
-    "spielraum": []
+    ]
    },
    "bedingungen": [
     {
-     "klausel": "bei tatsächlicher oder vermuteter Zurückweisung",
-     "satz": "Heftiger emotionaler Schmerz bei tatsächlicher oder vermuteter Zurückweisung, Kritik, Bloßstellung.",
-     "abschnitt": "Was Menschen beschreiben"
+     "klausel": "Bei einem Gespräch verstummt Lou",
+     "satz": "Bei einem Gespräch verstummt Lou, schaut auf den Boden und verlässt den Raum.",
+     "abschnitt": "Im Alltag"
     },
     {
-     "klausel": "bei Erwachsenen mit ADHS",
-     "satz": "Dodson in ADDitude: RSD als häufig einschränkende Form emotionaler Dysregulation bei Erwachsenen mit ADHS; Schmerz durch wahrgenommene oder tatsächliche Zurückweisung, Spott, Kritik.",
-     "abschnitt": "Was Berichte sagen"
-    },
-    {
-     "klausel": "nur wenn beides als Überwältigung erlebt wird",
-     "satz": "Reizfilter ist sensorisch, nicht sozial — Nähe nur wenn beides als Überwältigung erlebt wird, nicht als Identität.",
-     "abschnitt": "Verwandt und zu unterscheiden"
+     "klausel": "Wenn Kontakt möglich ist",
+     "satz": "Wenn Kontakt möglich ist, später offen nach Erleben und hilfreichen Bedingungen fragen; keine Erklärung erzwingen.",
+     "abschnitt": "Handlungsspielraum"
     }
    ],
-   "grenzSaetze": [
-    {
-     "satz": "Keine eigene etablierte Diagnose.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Zurückweisungssensitivität, RSD und allgemeine emotionale Dysregulation dürfen nicht gleichgesetzt werden.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Befunde zu sozialem Schmerz validieren nicht automatisch RSD.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Nicht identisch mit Borderline.",
-     "abschnitt": "Was das nicht ist"
-    },
-    {
-     "satz": "Nicht „zu empfindlich“ als Charakter.",
-     "abschnitt": "Was das nicht ist"
-    },
-    {
-     "satz": "Nicht RSQ.",
-     "abschnitt": "Was das nicht ist"
-    }
-   ],
-   "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
    "technisch": {
-    "ortIndex": 1020,
-    "textKennung": "adhs:rsd",
-    "herkunftPfad": "phaenomenatlas-ernst/daten/karten/rsd.md"
+    "ortIndex": 1028,
+    "textKennung": "relationship-original:rueckzug",
+    "herkunftPfad": ""
    },
    "feld": {
-    "x": 1.664,
-    "y": 0.493
+    "x": 0.855,
+    "y": 0.311
    }
   },
-  "1021": {
-   "titel": "Extreme frühe Umwelt und ADHD-ähnliche Symptome",
-   "gebiet": "ADHS · Randphänomene",
+  "1029": {
+   "titel": "Mir selbst oder der Welt fremd",
+   "gebiet": "Beziehungen & Borderline",
    "ortsart": "Phänomen",
-   "kurz": "Nach schweren frühen Entbehrungen oder sehr früher Frühgeburt bleiben Aufmerksamkeits- und Regulationsprobleme, die ADHD-ähnlich aussehen können.",
-   "mehr": [
+   "kurz": "„Ich stehe neben mir“ und „alles wirkt unwirklich“ beschreiben Erleben. Sie bestimmen für sich genommen weder Ursache noch eine bestimmte Diagnose.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Nach einer angespannten Begegnung sagt Kim, der Raum habe weit entfernt gewirkt und die eigene Stimme fremd."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Beschreiben, wann es anfängt und aufhört, ohne eine verborgene Geschichte zu suchen. Bei neuem, wiederkehrendem oder beunruhigendem Erleben fachlich abklären lassen. Was war anders an mir, an der Umgebung oder an meiner Erinnerung — und was ist mir sicher bekannt?"
+     }
+    ]
+   },
+   "bedingungen": [
     {
-     "titel": "Verwandt und zu unterscheiden",
-     "text": "Gegenbeispiel zur Lesart „hohe h² ⇒ Umwelt egal“: ERA und VP/VLBW. Nicht dasselbe wie Alltags-rGE. Nicht dasselbe wie Differential Susceptibility als allgemeine Alltags-GxE (Empirie oft schwach)."
+     "klausel": "Bei neuem",
+     "satz": "Bei neuem, wiederkehrendem oder beunruhigendem Erleben fachlich abklären lassen.",
+     "abschnitt": "Handlungsspielraum"
     }
    ],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1029,
+    "textKennung": "relationship-original:entfremdung",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": -0.212,
+    "y": 4.436
+   }
+  },
+  "1030": {
+   "titel": "Eine Antwort bleibt aus",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Eine offene Nachricht kann viel Bedeutung bekommen. Zeitablauf, eigener Wunsch und unbekannte Gründe des Gegenübers bleiben verschiedene Ebenen.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Seit gestern ist eine Nachricht unbeantwortet. Deniz schaut immer wieder aufs Telefon und möchte nachlegen."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Kontaktvereinbarungen prüfen. Die nächste Nachricht nicht allein zur sofortigen Beruhigung benutzen; den eigenen Unterstützungsbedarf zunächst unabhängig versorgen. Welche Information fehlt mir, und welche Gewissheit versuche ich durch eine weitere Nachricht zu bekommen?"
+     }
+    ]
+   },
+   "bedingungen": [],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1030,
+    "textKennung": "relationship-original:antwort-aus",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": -0.135,
+    "y": -3.323
+   }
+  },
+  "1031": {
+   "titel": "Die Angst vor Verlust ist groß",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Die Angst ist als Erleben ernst zu nehmen. Sie beweist nicht, dass eine Trennung bevorsteht, und verpflichtet das Gegenüber nicht zu unbegrenzter Rückversicherung.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Beim Abschied sagt Pat: „Wenn du gehst, bin ich dir wohl nicht wichtig.“ Dabei ist nur ein Abend allein geplant."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Den Wunsch ohne Loyalitätsprüfung formulieren: „Abschiede fallen mir heute schwer. Ich kümmere mich um meinen Abend; was wir vereinbart haben, bleibt bestehen.“ Kann ich meine Angst zeigen und zugleich die Freiheit der anderen Person bestehen lassen?"
+     }
+    ]
+   },
+   "bedingungen": [],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1031,
+    "textKennung": "relationship-original:verlustangst",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": 2.691,
+    "y": -1.958
+   }
+  },
+  "1032": {
+   "titel": "Wenn Nähe zur Verpflichtung wird",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Verbundenheit kann gewünscht sein und trotzdem Druck erzeugen. Entscheidend ist, ob eine andere Antwort oder ein Nein praktisch möglich bleibt.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "„Nach allem, was ich für dich getan habe, kannst du wenigstens vorbeikommen.“ Die angesprochene Person hatte abgesagt."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Konkrete Vereinbarung, eigenen Wunsch und Beziehung voneinander trennen. Einen Besuch nicht als Beweis von Liebe oder Dankbarkeit verlangen. Welche freie Entscheidung bleibt der anderen Person, ohne dafür abgewertet zu werden?"
+     }
+    ]
+   },
+   "bedingungen": [],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1032,
+    "textKennung": "relationship-original:naehe-druck",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": -1.14,
+    "y": 0.038
+   }
+  },
+  "1033": {
+   "titel": "Abstand wünschen",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Ein Wunsch nach Abstand kann konkret gelten, ohne die ganze Beziehung zu erklären. Weder eine Diagnosevermutung noch ein eigener Kontaktwunsch hebt ihn auf.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Robin sagt: „Diese Woche möchte ich keine Nachrichten. Ich melde mich selbst.“ Sam möchte sofort fragen, ob noch Hoffnung besteht."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Die benannte Pause gelten lassen und einen Entwurf für die eigene Reflexion behalten. Unterstützung an anderer erreichbarer Stelle organisieren. Wie kann ich die offene Frage aushalten, ohne die gerade klare Grenze wieder zu öffnen?"
+     }
+    ]
+   },
+   "bedingungen": [],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1033,
+    "textKennung": "relationship-original:abstand",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": -2.864,
+    "y": -2.288
+   }
+  },
+  "1034": {
+   "titel": "Auch meine Grenze gilt",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Anteilnahme und begrenzte Verfügbarkeit können zusammengehören. Anerkennung eines Bedürfnisses verlangt keine Aufgabe der eigenen Entscheidung.",
+   "mehr": [],
    "quellen": [
     {
-     "titel": "Franz et al. 2018 Pediatrics",
-     "kurz": "Franz et al. 2018 Pediatrics",
-     "art": "Studie",
+     "titel": "Family Connections · Unterstützung für Angehörige",
+     "kurz": "Family Connections · Unterstützung für Angehörige",
+     "art": "Quelle",
      "zitat": "",
      "technisch": {
-      "schluessel": "adhs-source:abc342d972d7",
-      "url": "https://doi.org/10.1542/peds.2017-1645",
-      "titelBestand": "Franz et al. 2018 Pediatrics"
-     }
-    },
-    {
-     "titel": "Rauch/Confounding Sibling-Designs",
-     "kurz": "Rauch/Confounding Sibling-Designs",
-     "art": "Übersicht",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "adhs-source:e145096be60b",
-      "url": "https://doi.org/10.1111/jcpp.12124",
-      "titelBestand": "Rauch/Confounding Sibling-Designs"
+      "schluessel": "family-2024",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11659101/",
+      "titelBestand": "Family Connections · Unterstützung für Angehörige"
      }
     }
    ],
    "blick": {
     "innen": [
      {
-      "abschnitt": "Was Menschen beschreiben",
-      "text": "Nach schweren frühen Entbehrungen oder sehr früher Frühgeburt bleiben Aufmerksamkeits- und Regulationsprobleme, die ADHD-ähnlich aussehen können."
+      "abschnitt": "Im Alltag",
+      "text": "Ein Freund möchte, dass Toni nachts immer erreichbar ist. Toni braucht Schlaf und möchte trotzdem unterstützen."
      }
     ],
-    "aussen": [
+    "aussen": [],
+    "spielraum": [
      {
-      "abschnitt": "Was das nicht ist",
-      "text": "Keine allgemeine Umwelt-Formel. Keine biografische Eltern-Erklärung."
-     },
-     {
-      "abschnitt": "Verwandt und zu unterscheiden",
-      "text": "Gegenbeispiel zur Lesart „hohe h² ⇒ Umwelt egal“: ERA und VP/VLBW. Nicht dasselbe wie Alltags-rGE. Nicht dasselbe wie Differential Susceptibility als allgemeine Alltags-GxE (Empirie oft schwach)."
+      "abschnitt": "Handlungsspielraum",
+      "text": "Eine tragbare Zusage machen, etwa zu einem vereinbarten Gespräch. Nicht mehr anbieten, als tatsächlich gehalten werden kann; ergänzende fachliche Unterstützung gemeinsam erwägen. Welche Unterstützung ist verlässlich möglich, ohne dass sie meine eigene Versorgung aufzehrt?"
      }
-    ],
-    "spielraum": []
+    ]
    },
    "bedingungen": [],
-   "grenzSaetze": [
-    {
-     "satz": "Heritabilität ist ein Populationsmaß und erklärt keine einzelne Biografie.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Genetische Beiträge, Umweltbeiträge und Interaktionen sind nicht gegeneinander austauschbar.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Hohe Heritabilität bedeutet keine Unveränderlichkeit.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Keine allgemeine Umwelt-Formel.",
-     "abschnitt": "Was das nicht ist"
-    },
-    {
-     "satz": "Keine biografische Eltern-Erklärung.",
-     "abschnitt": "Was das nicht ist"
-    }
-   ],
-   "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
    "technisch": {
-    "ortIndex": 1021,
-    "textKennung": "adhs:umwelt-extreme-adhs",
-    "herkunftPfad": "phaenomenatlas-ernst/daten/karten/umwelt-extreme-adhs.md"
+    "ortIndex": 1034,
+    "textKennung": "relationship-original:eigene-grenze",
+    "herkunftPfad": ""
    },
    "feld": {
-    "x": -0.599,
-    "y": -0.274
-   }
-  },
-  "1022": {
-   "titel": "Wartemodus",
-   "gebiet": "ADHS · Randphänomene",
-   "ortsart": "Phänomen",
-   "kurz": "Ein Termin später am Tag legt den Raum davor still. Nicht unbedingt Angst vor dem Termin — der Block „danach ist Zeit, davor ist keine“. Manche können bis dahin nichts anfangen, weil sie nicht schätzen, wie lange etwas dauert, und das Risiko eingehen, den Termin zu verpassen.",
-   "mehr": [
-    {
-     "titel": "Verwandt und zu unterscheiden",
-     "text": "Könnte zusammenhängen mit Zeitblindheit (Dauer unklar) und Aufgabenstarre (Start gelingt nicht). Delay Aversion beschreibt, dass Warten schwer ist — Wartemodus kann die Strategie sein, Warten zu vermeiden, indem man den Block leer lässt. Das ist benannte Nähe, nicht Identität. Termin-/Kalenderumwelt moduliert Kosten der Erscheinung; das hebt keine Onset-Ursache."
-    }
-   ],
-   "quellen": [
-    {
-     "titel": "ADxS-Forum, Mondkatze",
-     "kurz": "ADxS-Forum, Mondkatze",
-     "art": "Forum",
-     "zitat": "Teilweise ist es so schlimm, dass ich vorher nichts anfangen kann, weil ich einfach nicht einschätzen kann, wie lange ich für etwas brauche",
-     "technisch": {
-      "schluessel": "adhs-source:d1325eab5cb1",
-      "url": "https://adhs-forum.adxs.org/t/adhs-und-zeitblindheit/18778",
-      "titelBestand": "ADxS-Forum, Mondkatze"
-     }
-    },
-    {
-     "titel": "ADxS Zeitaufwand",
-     "kurz": "ADxS Zeitaufwand",
-     "art": "Ableitung",
-     "zitat": "",
-     "technisch": {
-      "schluessel": "adhs-source:ac6ca4bf60c5",
-      "url": "https://www.adxs.org/",
-      "titelBestand": "ADxS Zeitaufwand / NLM cited_text"
-     }
-    },
-    {
-     "titel": "Sonuga-Barke 2002",
-     "kurz": "Sonuga-Barke 2002",
-     "art": "Studie",
-     "zitat": "delay aversion and poor inhibitory control are independent co-existing characteristics of AD/HD (combined type)",
-     "technisch": {
-      "schluessel": "adhs-source:28cfccd9cfd9",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/11864715/",
-      "titelBestand": "Sonuga-Barke 2002"
-     }
-    },
-    {
-     "titel": "NICE NG87 Übersicht",
-     "kurz": "NICE NG87 Übersicht",
-     "art": "Leitlinie",
-     "zitat": "waiting mode auf der Uebersichtsseite nicht genannt, NICE spricht dort von service organisation and training",
-     "technisch": {
-      "schluessel": "adhs-source:167cf4e4c0d9",
-      "url": "https://www.nice.org.uk/guidance/ng87",
-      "titelBestand": "NICE NG87 Übersicht, NLM-Ask 02.09.2026"
-     }
-    }
-   ],
-   "blick": {
-    "innen": [
-     {
-      "abschnitt": "Was Menschen beschreiben",
-      "text": "Ein Termin später am Tag legt den Raum davor still. Nicht unbedingt Angst vor dem Termin — der Block „danach ist Zeit, davor ist keine“. Manche können bis dahin nichts anfangen, weil sie nicht schätzen, wie lange etwas dauert, und das Risiko eingehen, den Termin zu verpassen."
-     }
-    ],
-    "aussen": [
-     {
-      "abschnitt": "Was das nicht ist",
-      "text": "Nicht Vorfreude. Nicht dass der Termin unwichtig wäre. Nicht dass jemand den Vormittag „verschwendet“ im moralischen Sinn."
-     },
-     {
-      "abschnitt": "Verwandt und zu unterscheiden",
-      "text": "Könnte zusammenhängen mit Zeitblindheit (Dauer unklar) und Aufgabenstarre (Start gelingt nicht). Delay Aversion beschreibt, dass Warten schwer ist — Wartemodus kann die Strategie sein, Warten zu vermeiden, indem man den Block leer lässt. Das ist benannte Nähe, nicht Identität. Termin-/Kalenderumwelt moduliert Kosten der Erscheinung; das hebt keine Onset-Ursache."
-     }
-    ],
-    "spielraum": []
-   },
-   "bedingungen": [],
-   "grenzSaetze": [
-    {
-     "satz": "Alltagsbeschreibung, kein im Original validiertes eigenes Konstrukt.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Mögliche Beiträge von Zeitverarbeitung, Angst, Belohnungsaufschub und Initiation bleiben offen.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Nicht Vorfreude.",
-     "abschnitt": "Was das nicht ist"
-    },
-    {
-     "satz": "Nicht dass der Termin unwichtig wäre.",
-     "abschnitt": "Was das nicht ist"
-    },
-    {
-     "satz": "Nicht dass jemand den Vormittag „verschwendet“ im moralischen Sinn.",
-     "abschnitt": "Was das nicht ist"
-    }
-   ],
-   "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-   "technisch": {
-    "ortIndex": 1022,
-    "textKennung": "adhs:wartemodus",
-    "herkunftPfad": "phaenomenatlas-ernst/daten/karten/wartemodus.md"
-   },
-   "feld": {
-    "x": -1.729,
-    "y": -0.977
-   }
-  },
-  "1023": {
-   "titel": "Zeitblindheit",
-   "gebiet": "ADHS · Randphänomene",
-   "ortsart": "Phänomen",
-   "kurz": "Die innere Uhr liefert kein brauchbares Gefühl dafür, wie lange etwas dauert oder wie weit ein Termin noch ist. Im Forum: Wege und Tätigkeiten werden in Stundenblöcken geplant, weil Minuten unsicher machen. Manche sind chronisch zu früh, nicht zu spät.",
-   "mehr": [
-    {
-     "titel": "Verwandt und zu unterscheiden",
-     "text": "Könnte zusammenhängen mit Wartemodus (der Termin blockiert den Vormittag) und Delay Aversion (Warten ist schwer). Hyperfokus kann Zeit „verschwinden“ lassen — anderes Erleben, keine Identität. Timing-Laborbefunde sind nicht dasselbe wie ADHD-ähnliche Symptome nach extremer früher Umwelt."
-    }
-   ],
-   "quellen": [
-    {
-     "titel": "Noreika et al. 2013",
-     "kurz": "Noreika et al. 2013",
-     "art": "Studie",
-     "zitat": "ADHD patients are consistently impaired in three major timing domains, in motor timing, perceptual timing and temporal foresight",
-     "technisch": {
-      "schluessel": "adhs-source:cfb32f094c24",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/23022430/",
-      "titelBestand": "Noreika et al. 2013"
-     }
-    },
-    {
-     "titel": "AWMF-Leitlinie",
-     "kurz": "AWMF-Leitlinie",
-     "art": "Leitlinie",
-     "zitat": "gekennzeichnet durch die drei Kernsymptome: Aufmerksamkeitsstörung und / oder Impulsivität und Hyperaktivität",
-     "technisch": {
-      "schluessel": "adhs-source:bafe985ae0a3",
-      "url": "https://register.awmf.org/de/leitlinien/detail/028-045",
-      "titelBestand": "AWMF 028-045 / NLM-Ask"
-     }
-    },
-    {
-     "titel": "ADxS-Forum, Mondkatze",
-     "kurz": "ADxS-Forum, Mondkatze",
-     "art": "Forum",
-     "zitat": "es mir total schwer fällt Zeiten einzuschätzen, die ich für bestimmte Wege oder auch Tätigkeiten",
-     "technisch": {
-      "schluessel": "adhs-source:d1325eab5cb1",
-      "url": "https://adhs-forum.adxs.org/t/adhs-und-zeitblindheit/18778",
-      "titelBestand": "ADxS-Forum, Mondkatze"
-     }
-    }
-   ],
-   "blick": {
-    "innen": [
-     {
-      "abschnitt": "Was Menschen beschreiben",
-      "text": "Die innere Uhr liefert kein brauchbares Gefühl dafür, wie lange etwas dauert oder wie weit ein Termin noch ist. Im Forum: Wege und Tätigkeiten werden in Stundenblöcken geplant, weil Minuten unsicher machen. Manche sind chronisch zu früh, nicht zu spät."
-     }
-    ],
-    "aussen": [
-     {
-      "abschnitt": "Was das nicht ist",
-      "text": "Nicht Faulheit, nicht Absicht, andere warten zu lassen. Nicht dass die Wanduhr falsch geht."
-     },
-     {
-      "abschnitt": "Verwandt und zu unterscheiden",
-      "text": "Könnte zusammenhängen mit Wartemodus (der Termin blockiert den Vormittag) und Delay Aversion (Warten ist schwer). Hyperfokus kann Zeit „verschwinden“ lassen — anderes Erleben, keine Identität. Timing-Laborbefunde sind nicht dasselbe wie ADHD-ähnliche Symptome nach extremer früher Umwelt."
-     }
-    ],
-    "spielraum": []
-   },
-   "bedingungen": [],
-   "grenzSaetze": [
-    {
-     "satz": "Alltagsname und Labor-Timing sind zu unterscheiden.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Das damalige Notebook enthielt Leitlinien-Portalseiten, keine vollständigen Leitlinien; fehlender Begriff auf einer Portalseite belegt keine vollständige Abwesenheit in der Fachliteratur.",
-     "abschnitt": "Aussagegrenze"
-    },
-    {
-     "satz": "Nicht Faulheit, nicht Absicht, andere warten zu lassen.",
-     "abschnitt": "Was das nicht ist"
-    },
-    {
-     "satz": "Nicht dass die Wanduhr falsch geht.",
-     "abschnitt": "Was das nicht ist"
-    }
-   ],
-   "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-   "technisch": {
-    "ortIndex": 1023,
-    "textKennung": "adhs:zeitblindheit",
-    "herkunftPfad": "phaenomenatlas-ernst/daten/karten/zeitblindheit.md"
-   },
-   "feld": {
-    "x": 0.44,
-    "y": 0.685
+    "x": 3.456,
+    "y": 1.715
    }
   },
   "1035": {
@@ -1656,48 +965,800 @@ window.SCHLOSS_DATEN = {
     "herkunftPfad": ""
    },
    "feld": {
-    "x": 4.82,
-    "y": -0.712
+    "x": 4.303,
+    "y": 0.409
    }
   },
-  "1222": {
-   "titel": "Aufmerksamkeit braucht einen Verlauf",
-   "gebiet": "Forschung & Einordnung",
-   "ortsart": "Kapitel",
-   "kurz": "Konzentrationsprobleme können verschiedene Bedingungen haben und gleichzeitig auftreten. Sinnvolle Fragen sind: Seit wann bestehen sie, in welchen Lebensbereichen zeigen sie sich und welche Belastungen verändern sie? Die geprüften NICE-Empfehlungen verlangen eine umfassende Entwicklungsgeschichte; einzelne Skalen genüg",
+  "1036": {
+   "titel": "Eine Rückmeldung trifft sehr tief",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Eine Bemerkung kann sich wie ein Urteil über den ganzen Menschen anfühlen. Die konkrete Rückmeldung und ihre Bedeutung für das Selbstbild lassen sich auseinanderhalten.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Eine Kollegin sagt: „Die Datei war zu spät fertig.“ Fin hört darin: „Auf dich ist kein Verlass.“"
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Die konkrete Sache klären und die Wirkung gesondert benennen. Bei globaler Abwertung darf eine Grenze gesetzt werden, statt sich vollständig zu erklären. Was wurde tatsächlich kritisiert, und welchen zusätzlichen Satz über mich höre ich mit?"
+     }
+    ]
+   },
+   "bedingungen": [
+    {
+     "klausel": "Bei globaler Abwertung darf eine Grenze gesetzt werden",
+     "satz": "Bei globaler Abwertung darf eine Grenze gesetzt werden, statt sich vollständig zu erklären.",
+     "abschnitt": "Handlungsspielraum"
+    }
+   ],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1036,
+    "textKennung": "relationship-original:kritik",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": -2.865,
+    "y": 0.424
+   }
+  },
+  "1037": {
+   "titel": "Vom Fehler zum ganzen Selbst",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Eine konkrete Verantwortung kann untersucht werden, ohne daraus ein umfassendes Werturteil über die eigene Person zu machen.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Nach einem scharfen Satz denkt Iman: „Ich mache alles kaputt. Mit mir kann niemand sein.“"
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Eine konkrete Handlung und deren Wirkung benennen. Einen nächsten veränderbaren Schritt wählen; zusätzliche Unterstützung für die eigene Scham suchen. Was muss ich verantworten, und welches pauschale Urteil über meinen Wert füge ich hinzu?"
+     }
+    ]
+   },
+   "bedingungen": [],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1037,
+    "textKennung": "relationship-original:scham-schuld",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": -1.476,
+    "y": 3.628
+   }
+  },
+  "1038": {
+   "titel": "Mein Bild von mir wechselt",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Wie jemand sich erlebt, kann über Situationen und Beziehungen wechseln. Die eigene Beschreibung ist ein Anfang; ein einzelner Wechsel erklärt noch kein längerfristiges Muster.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Nach einem guten Treffen fühlt Jule sich liebenswert und sicher. Nach einer unbeantworteten Einladung erscheint dieselbe Person sich plötzlich unerwünscht."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Die verschiedenen Selbstbeschreibungen nebeneinander halten. Nach eigenen Werten, Interessen und tragenden Erfahrungen fragen, die in beiden Situationen zugänglich bleiben können. Was sehe ich in der einen Situation an mir, das mir in der anderen völlig verloren geht?"
+     }
+    ]
+   },
+   "bedingungen": [],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1038,
+    "textKennung": "relationship-original:selbstbild",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": 1.126,
+    "y": -5.323
+   }
+  },
+  "1039": {
+   "titel": "Ich bin mehr als die Rolle, in der du mich siehst",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Selbstverständnis, Fremdzuschreibung und situative Rolle sind verschiedene Beziehungen. Keine davon umfasst einen Menschen vollständig.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "In der Familie gilt Mara als „die Schwierige“. Bei der Arbeit wird sie als verlässlich erlebt; selbst beschreibt sie sich gerade als erschöpft."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Fragen: Wer sieht wen in welcher Situation als was — und mit welcher Folge? Die eigene Beschreibung neben der Zuschreibung stehen lassen. Welche Erwartung hängt an diesem Namen, und was wird dadurch an mir übersehen?"
+     }
+    ]
+   },
+   "bedingungen": [
+    {
+     "klausel": "Bei der Arbeit wird sie als verlässlich erlebt",
+     "satz": "Bei der Arbeit wird sie als verlässlich erlebt; selbst beschreibt sie sich gerade als erschöpft.",
+     "abschnitt": "Im Alltag"
+    }
+   ],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1039,
+    "textKennung": "relationship-original:mensch-rolle",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": 1.582,
+    "y": -0.939
+   }
+  },
+  "1040": {
+   "titel": "Welche Erwartung gilt hier eigentlich?",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "„Normal“ kann häufig, zweckmäßig, institutionell erwartet oder moralisch geboten bedeuten. Diese Maßstäbe entscheiden nicht alle dieselbe Frage.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Bei einem Familienessen soll jede Person lange bleiben. Ari braucht eine frühe Pause und wird deshalb als unhöflich bezeichnet."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Die konkrete Funktion der Regel besprechen und eine tragbare Alternative suchen. Den Wert einer Person nicht daran messen, ob sie eine Gewohnheit erfüllt. Geht es gerade um praktische Abstimmung, Gewohnheit, Macht oder eine moralische Forderung?"
+     }
+    ]
+   },
+   "bedingungen": [
+    {
+     "klausel": "Bei einem Familienessen soll jede Person lange bleiben",
+     "satz": "Bei einem Familienessen soll jede Person lange bleiben.",
+     "abschnitt": "Im Alltag"
+    }
+   ],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1040,
+    "textKennung": "relationship-original:normen",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": -1.756,
+    "y": 1.385
+   }
+  },
+  "1041": {
+   "titel": "Was geschah — und was bedeutet es für mich?",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Wortlaut und Handlung können festgehalten werden. Die Bedeutung, die jemand ihnen gibt, darf sichtbar bleiben und zugleich veränderbar sein.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "„Sie hat mich demonstrativ ignoriert“, sagt Ben. Auf Nachfrage: Sie blickte beim Vorbeigehen auf ihr Telefon und grüßte nicht."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Zuerst Handlung und Wortlaut notieren, dann die eigene Bedeutung. Wenn eine Klärung möglich und willkommen ist, offen nachfragen. Welcher Teil meines Satzes beschreibt etwas Wahrnehmbares, welcher Teil meine Schlussfolgerung?"
+     }
+    ]
+   },
+   "bedingungen": [
+    {
+     "klausel": "Wenn eine Klärung möglich und willkommen ist",
+     "satz": "Wenn eine Klärung möglich und willkommen ist, offen nachfragen.",
+     "abschnitt": "Handlungsspielraum"
+    }
+   ],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1041,
+    "textKennung": "relationship-original:beobachtung-deutung",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": -2.238,
+    "y": -0.937
+   }
+  },
+  "1042": {
+   "titel": "Die andere Innenwelt bleibt eine Hypothese",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Auch eine sehr plausible Vermutung ist keine unmittelbare Kenntnis fremder Gedanken. Die Person darf etwas anderes meinen als erwartet.",
    "mehr": [],
    "quellen": [
     {
-     "titel": "Attention deficit hyperactivity disorder: diagnosis and management — selected diagnostic recommendations",
-     "kurz": "Attention deficit hyperactivity disorder: diagnosis and management — selected diagnostic recommendations",
+     "titel": "Psychologische Therapien bei Borderline · Cochrane-Übersicht",
+     "kurz": "Psychologische Therapien bei Borderline · Cochrane-Übersicht",
      "art": "Quelle",
      "zitat": "",
      "technisch": {
-      "schluessel": "verified:nice-ng87-diagnosis-selected",
-      "url": "https://www.nice.org.uk/guidance/ng87/chapter/recommendations",
-      "titelBestand": "Attention deficit hyperactivity disorder: diagnosis and management — selected diagnostic recommendations"
+      "schluessel": "cochrane-2020",
+      "url": "https://www.cochrane.org/evidence/CD012955_psychological-therapies-people-borderline-personality-disorder",
+      "titelBestand": "Psychologische Therapien bei Borderline · Cochrane-Übersicht"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "„Du willst doch nur, dass ich mich schlecht fühle“, sagt Nika nach einer kritischen Nachfrage."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Die eigene Erfahrung als eigene benennen. Eine zweite Erklärung zulassen und prüfen, welche Information sie stützen oder widerlegen würde. Welche Aussage über das Gegenüber behandle ich gerade wie eine sichere Tatsache?"
+     }
+    ]
+   },
+   "bedingungen": [
+    {
+     "klausel": "während die vermutete Absicht falsch bleibt",
+     "satz": "Eine verletzende Wirkung kann real sein, während die vermutete Absicht falsch bleibt.",
+     "abschnitt": "Mögliche Deutung"
+    }
+   ],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1042,
+    "textKennung": "relationship-original:andere-innenwelt",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": -0.272,
+    "y": 1.234
+   }
+  },
+  "1043": {
+   "titel": "Wirkung hören, Absicht getrennt erklären",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Eine Erklärung der eigenen Absicht kann wichtig sein. Sie ersetzt nicht die Auseinandersetzung damit, was konkret geschehen ist und wie es ankam.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Nach einem Witz sagt Eli: „Das hat mich vor allen bloßgestellt.“ Die Antwort lautet: „War doch nur Spaß.“"
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Den konkreten eigenen Beitrag anerkennen: „Ich habe das vor den anderen gesagt.“ Die Absicht anschließend gesondert erklären, ohne die Wirkung zurückzunehmen. Bleibt meine Anerkennung auch dann stehen, wenn ich anschließend meine Absicht beschreibe?"
+     }
+    ]
+   },
+   "bedingungen": [
+    {
+     "klausel": "wenn ich anschließend meine Absicht beschreibe?",
+     "satz": "Bleibt meine Anerkennung auch dann stehen, wenn ich anschließend meine Absicht beschreibe?",
+     "abschnitt": "Handlungsspielraum"
+    }
+   ],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1043,
+    "textKennung": "relationship-original:wirkung-absicht",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": -3.93,
+    "y": -0.627
+   }
+  },
+  "1044": {
+   "titel": "Erleben anerkennen, ohne alles zu bestätigen",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Dass etwas schmerzt, kann anerkannt werden, während die Deutung der Tatsachen offenbleibt. Auch die eigene Grenze darf bestehen.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "„Du hast mich absichtlich stehen lassen“, sagt eine Person. Die andere möchte den Schmerz ernst nehmen, teilt aber die behauptete Absicht nicht."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Zunächst das Verstandene in eigenen Worten zurückgeben; bei Bedarf nachfragen. Die eigene Sicht und eine bestehende Grenze klar danebenstellen. Was kann ich ehrlich anerkennen, ohne Zustimmung vorzutäuschen oder mich selbst aufzugeben?"
+     }
+    ]
+   },
+   "bedingungen": [
+    {
+     "klausel": "bei Bedarf nachfragen",
+     "satz": "Zunächst das Verstandene in eigenen Worten zurückgeben; bei Bedarf nachfragen.",
+     "abschnitt": "Handlungsspielraum"
+    }
+   ],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1044,
+    "textKennung": "relationship-original:validierung",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": -0.315,
+    "y": 2.716
+   }
+  },
+  "1045": {
+   "titel": "Mein Anteil hat eine konkrete Form",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Verantwortung wird an einer Handlung und ihrer Veränderung bearbeitbar. Sie ist weder totale Selbstschuld noch eine automatische Halbierung zwischen zwei Personen.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Zwei Menschen streiten. Eine Person hat beleidigt; die andere hat eine Verabredung ohne Nachricht ausfallen lassen."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Den eigenen konkreten Beitrag und eine Veränderung benennen. Für das Verhalten der anderen Person eine eigene Klärung oder Schutzentscheidung treffen. Welche Handlung kann ich verändern, und welche Zuständigkeit gehört ausdrücklich jemand anderem?"
+     }
+    ]
+   },
+   "bedingungen": [],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1045,
+    "textKennung": "relationship-original:verantwortung",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": -0.005,
+    "y": -0.913
+   }
+  },
+  "1046": {
+   "titel": "Missverständnis und Macht sind zwei Fragen",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Verständigung kann an unterschiedlichen Erfahrungsweisen scheitern. Gegenseitiges Missverstehen bedeutet trotzdem keine gleiche Freiheit oder gleiche Folgen.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Ein Vorgesetzter hält eine Bitte um klare schriftliche Absprachen für Misstrauen. Die Mitarbeiterin erlebt spontane mündliche Änderungen als schwer bewältigbar."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Eine konkrete Kommunikationsform erproben und ihre Folgen gemeinsam prüfen. Zusätzlich benennen, wer Entscheidungen trifft und wer Nachteile tragen muss. Was braucht bessere Übersetzung — und was braucht eine veränderte Entscheidung oder Grenze?"
+     }
+    ]
+   },
+   "bedingungen": [],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1046,
+    "textKennung": "relationship-original:passung-macht",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": 1.226,
+    "y": 1.868
+   }
+  },
+  "1047": {
+   "titel": "Eine Pause bekommt eine tragbare Form",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Unterbrechen kann einen Handlungsspielraum eröffnen. Eine Pause braucht keine sofortige Lösung; Rückkehr und Grenzen dürfen konkret vereinbart werden.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Ein Gespräch wird immer lauter. Eine Person sagt: „Ich brauche eine Pause. Morgen kann ich überlegen, ob ich weiterreden möchte.“"
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Die Unterbrechung tatsächlich einhalten. Eigene Anspannung anders versorgen; nur die Rückkehr vereinbaren, der beide freiwillig zustimmen können. Welche Zusage wurde wirklich gemacht, und was wünsche ich mir zusätzlich?"
+     }
+    ]
+   },
+   "bedingungen": [
+    {
+     "klausel": "Bei Bedrohung oder Übergriffen reicht ein Gesprächsformat allein nicht als Schutz",
+     "satz": "Bei Bedrohung oder Übergriffen reicht ein Gesprächsformat allein nicht als Schutz.",
+     "abschnitt": "Offene Fragen"
+    }
+   ],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1047,
+    "textKennung": "relationship-original:pause",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": 0.878,
+    "y": -2.254
+   }
+  },
+  "1048": {
+   "titel": "Wiedergutmachung gewährt keinen Anspruch auf Antwort",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Ein veränderter Umgang wird durch Handlungen sichtbar. Eine Entschuldigung kann Verantwortung ausdrücken und lässt dem Gegenüber seine Entscheidung.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Nach einer Grenzüberschreitung schreibt eine Person eine überarbeitete Entschuldigung. Die andere hatte ausdrücklich keinen weiteren Kontakt gewünscht."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Den Text für die eigene Arbeit behalten und die benannte Grenze respektieren. Die Veränderung am eigenen Verhalten beginnen, auch ohne Rückmeldung. Was will ich ändern, das ich auch dann verantworten kann, wenn keine Versöhnung folgt?"
+     }
+    ]
+   },
+   "bedingungen": [
+    {
+     "klausel": "wenn keine Versöhnung folgt?",
+     "satz": "Was will ich ändern, das ich auch dann verantworten kann, wenn keine Versöhnung folgt?",
+     "abschnitt": "Handlungsspielraum"
+    }
+   ],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1048,
+    "textKennung": "relationship-original:reparatur",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": -1.744,
+    "y": -3.283
+   }
+  },
+  "1049": {
+   "titel": "Eine Geschichte hat mehrere Einflüsse",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Entwicklung lässt sich nicht auf eine Person oder ein Ereignis reduzieren. Konkrete verletzende Handlungen bleiben benennbar, während die Erklärung eines ganzen Verlaufs offen ist.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "Kindheitsbelastungen und Borderline · Metaanalyse",
+     "kurz": "Kindheitsbelastungen und Borderline · Metaanalyse",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "adversity-2020",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31630389/",
+      "titelBestand": "Kindheitsbelastungen und Borderline · Metaanalyse"
      }
     },
     {
-     "titel": "The Relationship of Attention-Deficit/Hyperactivity Disorder With Posttraumatic Stress Disorder: A Two-Sample Mendelian Randomization and Population-Based Sibling Comparison Study",
-     "kurz": "The Relationship of Attention-Deficit/Hyperactivity Disorder With Posttraumatic Stress Disorder: A Two-Sample Mendelian Randomization and Population-Based Sibling Comparison Study",
+     "titel": "Prospektive Risikofaktoren · Was zeitlich vorausgeht",
+     "kurz": "Prospektive Risikofaktoren · Was zeitlich vorausgeht",
      "art": "Quelle",
      "zitat": "",
      "technisch": {
-      "schluessel": "verified:wendt-2023-adhd-ptsd",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/36335070/",
-      "titelBestand": "The Relationship of Attention-Deficit/Hyperactivity Disorder With Posttraumatic Stress Disorder: A Two-Sample Mendelian Randomization and Population-Based Sibling Comparison Study"
+      "schluessel": "prospective-2016",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27709988/",
+      "titelBestand": "Prospektive Risikofaktoren · Was zeitlich vorausgeht"
      }
     },
     {
-     "titel": "Is Adult ADHD a Childhood-Onset Neurodevelopmental Disorder? Evidence From a Four-Decade Longitudinal Cohort Study",
-     "kurz": "Is Adult ADHD a Childhood-Onset Neurodevelopmental Disorder? Evidence From a Four-Decade Longitudinal Cohort Study",
+     "titel": "Entwicklung im Zusammenspiel · mehrstufige Metaanalyse",
+     "kurz": "Entwicklung im Zusammenspiel · mehrstufige Metaanalyse",
      "art": "Quelle",
      "zitat": "",
      "technisch": {
-      "schluessel": "verified:moffitt-2015-adult-adhd",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/25998281/",
-      "titelBestand": "Is Adult ADHD a Childhood-Onset Neurodevelopmental Disorder? Evidence From a Four-Decade Longitudinal Cohort Study"
+      "schluessel": "development-2024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39243819/",
+      "titelBestand": "Entwicklung im Zusammenspiel · mehrstufige Metaanalyse"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Eine erwachsene Person möchte verstehen, wie frühe Belastungen, eigene Voraussetzungen und spätere Beziehungen mit heutigen Schwierigkeiten zusammenhängen."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Bekanntes, Berichtetes und Vermutetes trennen. Für die heutige Unterstützung fragen, was konkret verändert werden kann, ohne eine vollständige Ursprungsgeschichte zu erzwingen. Was ist als Erfahrung belegt, was als Zusammenhang vermutet, und was bleibt offen?"
+     }
+    ]
+   },
+   "bedingungen": [],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1049,
+    "textKennung": "relationship-original:entwicklung",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": -4.32,
+    "y": 0.813
+   }
+  },
+  "1050": {
+   "titel": "Ähnliches Erleben, verschiedene Zusammenhänge",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Überforderung, Rückzug oder schwankendes Erleben können Vergleichsfragen öffnen. Ähnlichkeit allein setzt Borderline, Trauma und Neurodivergenz nicht gleich.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Zwei Personen berichten, in Gesprächen „dichtzumachen“. Bei einer stehen Reize im Vordergrund, bei der anderen Erinnerungsbezüge; beide wissen noch nicht genau, was geschieht."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Von der eigenen Erfahrung ausgehen: Seit wann, in welchen Situationen, mit welchem Verlauf und welcher Beeinträchtigung? Diese Beobachtungen können ein fachliches Gespräch vorbereiten. Was sieht nur ähnlich aus, und welche Unterschiede zeigt die eigene Geschichte?"
+     }
+    ]
+   },
+   "bedingungen": [
+    {
+     "klausel": "Bei einer stehen Reize im Vordergrund",
+     "satz": "Bei einer stehen Reize im Vordergrund, bei der anderen Erinnerungsbezüge; beide wissen noch nicht genau, was geschieht.",
+     "abschnitt": "Im Alltag"
+    },
+    {
+     "klausel": "bei der anderen Erinnerungsbezüge",
+     "satz": "Bei einer stehen Reize im Vordergrund, bei der anderen Erinnerungsbezüge; beide wissen noch nicht genau, was geschieht.",
+     "abschnitt": "Im Alltag"
+    }
+   ],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1050,
+    "textKennung": "relationship-original:ueberlappung",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": -2.584,
+    "y": 2.623
+   }
+  },
+  "1051": {
+   "titel": "Was kostet das scheinbare Gelingen?",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Ein ruhiges Gespräch ist ein Ergebnis; geringe Erschöpfung ein anderes. Unterstützung wird verständlicher, wenn auch Vorbereitung, Erholung und Verteilung der Arbeit sichtbar werden.",
+   "mehr": [],
+   "quellen": [],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Ein Treffen verlief ohne Streit. Danach braucht eine Person zwei Tage Erholung; die andere hatte währenddessen ständig vermittelt."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Neben dem Ergebnis auch die Kosten besprechen: Wer hat vorbereitet, verzichtet, beruhigt, begleitet und sich erholt? Eine veränderte Bedingung ausprobieren. Was würde Erfolg bedeuten, wenn die Belastung beider Personen mitgezählt wird?"
+     }
+    ]
+   },
+   "bedingungen": [
+    {
+     "klausel": "wenn die Belastung beider Personen mitgezählt wird?",
+     "satz": "Was würde Erfolg bedeuten, wenn die Belastung beider Personen mitgezählt wird?",
+     "abschnitt": "Handlungsspielraum"
+    }
+   ],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1051,
+    "textKennung": "relationship-original:unterstuetzungskosten",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": 6.065,
+    "y": 3.125
+   }
+  },
+  "1052": {
+   "titel": "Unterstützung gemeinsam passend machen",
+   "gebiet": "Beziehungen & Borderline",
+   "ortsart": "Phänomen",
+   "kurz": "Strukturierte Psychotherapie, persönliche Ziele und verlässliche Absprachen gehören in eine fachliche Behandlungsplanung. Eine einzelne Reflexion in der App ersetzt diesen Rahmen nicht.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "APA-Leitlinie zur Behandlung der Borderline-Persönlichkeitsstörung",
+     "kurz": "APA-Leitlinie zur Behandlung der Borderline-Persönlichkeitsstörung",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "apa-2024",
+      "url": "https://psychiatryonline.org/doi/10.1176/appi.ajp.24181010",
+      "titelBestand": "APA-Leitlinie zur Behandlung der Borderline-Persönlichkeitsstörung"
+     }
+    },
+    {
+     "titel": "Psychologische Therapien bei Borderline · Cochrane-Übersicht",
+     "kurz": "Psychologische Therapien bei Borderline · Cochrane-Übersicht",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "cochrane-2020",
+      "url": "https://www.cochrane.org/evidence/CD012955_psychological-therapies-people-borderline-personality-disorder",
+      "titelBestand": "Psychologische Therapien bei Borderline · Cochrane-Übersicht"
+     }
+    },
+    {
+     "titel": "Psychotherapien für Erwachsene mit Borderline · systematische Übersicht",
+     "kurz": "Psychotherapien für Erwachsene mit Borderline · systematische Übersicht",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "psychotherapy-2024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37902689/",
+      "titelBestand": "Psychotherapien für Erwachsene mit Borderline · systematische Übersicht"
+     }
+    },
+    {
+     "titel": "BOOTS · DBT und Schematherapie im direkten Vergleich",
+     "kurz": "BOOTS · DBT und Schematherapie im direkten Vergleich",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "boots-2026",
+      "url": "https://jamanetwork.com/journals/jamapsychiatry/article-abstract/2848044",
+      "titelBestand": "BOOTS · DBT und Schematherapie im direkten Vergleich"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Im Alltag",
+      "text": "Eine Person möchte weniger unter Gefühlswechseln leiden und Beziehungen tragbarer gestalten. Sie fragt, welches Verfahren zu ihren Zielen und Umständen passt."
+     }
+    ],
+    "aussen": [],
+    "spielraum": [
+     {
+      "abschnitt": "Handlungsspielraum",
+      "text": "Mit einer qualifizierten Fachperson Ziele, Rahmen, Sicherheit, Begleiterkrankungen und Präferenzen besprechen. Fortlaufend prüfen, was im eigenen Alltag tatsächlich besser oder schwerer wird. Welche konkrete Veränderung wäre für mich bedeutsam, und woran würden wir sie gemeinsam erkennen?"
+     }
+    ]
+   },
+   "bedingungen": [
+    {
+     "klausel": "unter Gefühlswechseln leiden und Beziehungen tragbarer gestalten",
+     "satz": "Eine Person möchte weniger unter Gefühlswechseln leiden und Beziehungen tragbarer gestalten.",
+     "abschnitt": "Im Alltag"
+    }
+   ],
+   "grenzSaetze": [],
+   "herkunft": "Borderline verstehen · Beziehungskarte",
+   "technisch": {
+    "ortIndex": 1052,
+    "textKennung": "relationship-original:behandlung",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": 2.271,
+    "y": 0.797
+   }
+  },
+  "1053": {
+   "titel": "Verlassenheitsangst und Vermeidungsbemühungen",
+   "gebiet": "Diagnose & Differenzierung",
+   "ortsart": "Phänomen",
+   "kurz": "Starke Reaktionen auf tatsächliches oder befürchtetes Verlassenwerden.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "Borderline Personality Disorder – NIMH",
+     "kurz": "Borderline Personality Disorder – NIMH",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "source:bpd:ae3d3e3e08a0aad",
+      "url": "https://www.nimh.nih.gov/health/publications/borderline-personality-disorder",
+      "titelBestand": "Borderline Personality Disorder – NIMH"
+     }
+    },
+    {
+     "titel": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022",
+     "kurz": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "source:bpd:58630727af716c7",
+      "url": "https://register.awmf.org/de/leitlinien/detail/038-015",
+      "titelBestand": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022"
      }
     }
    ],
@@ -1705,7 +1766,313 @@ window.SCHLOSS_DATEN = {
     "innen": [
      {
       "abschnitt": "Kurztext",
-      "text": "Konzentrationsprobleme können verschiedene Bedingungen haben und gleichzeitig auftreten. Sinnvolle Fragen sind: Seit wann bestehen sie, in welchen Lebensbereichen zeigen sie sich und welche Belastungen verändern sie? Die geprüften NICE-Empfehlungen verlangen eine umfassende Entwicklungsgeschichte; einzelne Skalen genüg"
+      "text": "Starke Reaktionen auf tatsächliches oder befürchtetes Verlassenwerden."
+     }
+    ],
+    "aussen": [],
+    "spielraum": []
+   },
+   "bedingungen": [],
+   "grenzSaetze": [
+    {
+     "satz": "Paraphrase einer Domäne; keine vollständige Diagnoseregel.",
+     "abschnitt": "Aussagegrenze"
+    }
+   ],
+   "herkunft": "Phänomenatlas · Borderline, Neurodivergenz und Trauma · Dossier vom 20. Oktober",
+   "technisch": {
+    "ortIndex": 1053,
+    "textKennung": "dossier:phenomenon:bpd:bps-ph-001",
+    "herkunftPfad": "Lokale Originalquelle · vollständige Herkunft im lokalen Provenienzarchiv erhalten."
+   },
+   "feld": {
+    "x": 0.968,
+    "y": -9.289
+   }
+  },
+  "1055": {
+   "titel": "Identitätsunsicherheit",
+   "gebiet": "Diagnose & Differenzierung",
+   "ortsart": "Phänomen",
+   "kurz": "Deutlich instabiles Selbstbild oder Selbstgefühl.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "Borderline Personality Disorder – NIMH",
+     "kurz": "Borderline Personality Disorder – NIMH",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "source:bpd:ae3d3e3e08a0aad",
+      "url": "https://www.nimh.nih.gov/health/publications/borderline-personality-disorder",
+      "titelBestand": "Borderline Personality Disorder – NIMH"
+     }
+    },
+    {
+     "titel": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022",
+     "kurz": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "source:bpd:58630727af716c7",
+      "url": "https://register.awmf.org/de/leitlinien/detail/038-015",
+      "titelBestand": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Kurztext",
+      "text": "Deutlich instabiles Selbstbild oder Selbstgefühl."
+     }
+    ],
+    "aussen": [],
+    "spielraum": []
+   },
+   "bedingungen": [],
+   "grenzSaetze": [
+    {
+     "satz": "Paraphrase einer Domäne; keine vollständige Diagnoseregel.",
+     "abschnitt": "Aussagegrenze"
+    }
+   ],
+   "herkunft": "Phänomenatlas · Borderline, Neurodivergenz und Trauma · Dossier vom 20. Oktober",
+   "technisch": {
+    "ortIndex": 1055,
+    "textKennung": "dossier:phenomenon:bpd:bps-ph-003",
+    "herkunftPfad": "Lokale Originalquelle · vollständige Herkunft im lokalen Provenienzarchiv erhalten."
+   },
+   "feld": {
+    "x": 0.285,
+    "y": -10.162
+   }
+  },
+  "1060": {
+   "titel": "Intensive schwer regulierbare Wut",
+   "gebiet": "Diagnose & Differenzierung",
+   "ortsart": "Phänomen",
+   "kurz": "Übermäßige Wut oder Schwierigkeiten ihrer Regulation.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "Borderline Personality Disorder – NIMH",
+     "kurz": "Borderline Personality Disorder – NIMH",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "source:bpd:ae3d3e3e08a0aad",
+      "url": "https://www.nimh.nih.gov/health/publications/borderline-personality-disorder",
+      "titelBestand": "Borderline Personality Disorder – NIMH"
+     }
+    },
+    {
+     "titel": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022",
+     "kurz": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "source:bpd:58630727af716c7",
+      "url": "https://register.awmf.org/de/leitlinien/detail/038-015",
+      "titelBestand": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Kurztext",
+      "text": "Übermäßige Wut oder Schwierigkeiten ihrer Regulation."
+     }
+    ],
+    "aussen": [],
+    "spielraum": []
+   },
+   "bedingungen": [],
+   "grenzSaetze": [
+    {
+     "satz": "Paraphrase einer Domäne; keine vollständige Diagnoseregel.",
+     "abschnitt": "Aussagegrenze"
+    }
+   ],
+   "herkunft": "Phänomenatlas · Borderline, Neurodivergenz und Trauma · Dossier vom 20. Oktober",
+   "technisch": {
+    "ortIndex": 1060,
+    "textKennung": "dossier:phenomenon:bpd:bps-ph-008",
+    "herkunftPfad": "Lokale Originalquelle · vollständige Herkunft im lokalen Provenienzarchiv erhalten."
+   },
+   "feld": {
+    "x": 1.026,
+    "y": -11.992
+   }
+  },
+  "1072": {
+   "titel": "Schwankender Selbstwert",
+   "gebiet": "Diagnose & Differenzierung",
+   "ortsart": "Phänomen",
+   "kurz": "Selbstbewertung kann mit negativer Erregung stark wechseln.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "Negative affective arousal precedes lower self-esteem in BPD: experience sampling",
+     "kurz": "Negative affective arousal precedes lower self-esteem in BPD: experience sampling",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "source:bpd:6b39efc6d9b8635",
+      "url": "https://link.springer.com/article/10.1186/s40479-023-00229-w",
+      "titelBestand": "Negative affective arousal precedes lower self-esteem in BPD: experience sampling"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Kurztext",
+      "text": "Selbstbewertung kann mit negativer Erregung stark wechseln."
+     }
+    ],
+    "aussen": [],
+    "spielraum": []
+   },
+   "bedingungen": [],
+   "grenzSaetze": [
+    {
+     "satz": "Keine Bewertung des tatsächlichen persönlichen Werts.",
+     "abschnitt": "Aussagegrenze"
+    }
+   ],
+   "herkunft": "Phänomenatlas · Borderline, Neurodivergenz und Trauma · Dossier vom 20. Oktober",
+   "technisch": {
+    "ortIndex": 1072,
+    "textKennung": "dossier:phenomenon:bpd:bps-ph-020",
+    "herkunftPfad": "Lokale Originalquelle · vollständige Herkunft im lokalen Provenienzarchiv erhalten."
+   },
+   "feld": {
+    "x": 1.383,
+    "y": -10.312
+   }
+  },
+  "1193": {
+   "titel": "Digitale Kontrolle ist ein Beziehungsgeschehen",
+   "gebiet": "Forschung & Einordnung",
+   "ortsart": "Kapitel",
+   "kurz": "Überwachung kann über Nachrichten, Kontozugänge, Geräte oder Standortfreigaben fortgesetzt werden. Woodlocks Befragung von 152 Fachkräften und 46 Betroffenen beschreibt, wie Technik zur Einschüchterung und Isolation eingesetzt wurde.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "The Abuse of Technology in Domestic Violence and Stalking",
+     "kurz": "The Abuse of Technology in Domestic Violence and Stalking",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "verified:woodlock-2017-abstract",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27178564/",
+      "titelBestand": "The Abuse of Technology in Domestic Violence and Stalking"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Kurztext",
+      "text": "Überwachung kann über Nachrichten, Kontozugänge, Geräte oder Standortfreigaben fortgesetzt werden. Woodlocks Befragung von 152 Fachkräften und 46 Betroffenen beschreibt, wie Technik zur Einschüchterung und Isolation eingesetzt wurde."
+     }
+    ],
+    "aussen": [],
+    "spielraum": []
+   },
+   "bedingungen": [
+    {
+     "klausel": "bei der handelnden Person",
+     "satz": "Verantwortung für Überwachung und Drohungen liegt bei der handelnden Person.",
+     "abschnitt": "Eintrag"
+    }
+   ],
+   "grenzSaetze": [],
+   "herkunft": "Atlasintegration · öffentlich geprüfte Quellen",
+   "technisch": {
+    "ortIndex": 1193,
+    "textKennung": "verified-section:wave2-digital-control",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": 6.623,
+    "y": 12.033
+   }
+  },
+  "1194": {
+   "titel": "Schutz braucht einen passenden nächsten Schritt",
+   "gebiet": "Forschung & Einordnung",
+   "ortsart": "Kapitel",
+   "kurz": "Bei möglicher digitaler Überwachung kann ein Gerät, auf das die kontrollierende Person keinen Zugriff hat, den Zugang zu Unterstützung erleichtern. Die australische eSafety-Behörde empfiehlt, Sicherheitsänderungen an die konkrete Lage anzupassen und möglichst mit spezialisierter Beratung zu planen.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "Online safety checklist",
+     "kurz": "Online safety checklist",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "verified:esafety-online-safety-2026",
+      "url": "https://www.esafety.gov.au/key-topics/domestic-family-violence/online-safety-checklist",
+      "titelBestand": "Online safety checklist"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Kurztext",
+      "text": "Bei möglicher digitaler Überwachung kann ein Gerät, auf das die kontrollierende Person keinen Zugriff hat, den Zugang zu Unterstützung erleichtern. Die australische eSafety-Behörde empfiehlt, Sicherheitsänderungen an die konkrete Lage anzupassen und möglichst mit spezialisierter Beratung zu planen."
+     }
+    ],
+    "aussen": [],
+    "spielraum": []
+   },
+   "bedingungen": [
+    {
+     "klausel": "Bei möglicher digitaler Überwachung kann ein Gerät",
+     "satz": "Bei möglicher digitaler Überwachung kann ein Gerät, auf das die kontrollierende Person keinen Zugriff hat, den Zugang zu Unterstützung erleichtern.",
+     "abschnitt": "Eintrag"
+    }
+   ],
+   "grenzSaetze": [],
+   "herkunft": "Atlasintegration · öffentlich geprüfte Quellen",
+   "technisch": {
+    "ortIndex": 1194,
+    "textKennung": "verified-section:wave2-digital-safety",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": 8.894,
+    "y": 12.18
+   }
+  },
+  "1201": {
+   "titel": "Ein Zusammenhang ist keine Gewaltprognose",
+   "gebiet": "Forschung & Einordnung",
+   "ortsart": "Kapitel",
+   "kurz": "Eine Metaanalyse fand Zusammenhänge zwischen Narzissmus und Aggression auch ohne Provokation. Daraus lässt sich weder die Häufigkeit eines konkreten Übergriffs noch eine notwendige Schamreaktion ableiten.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "The Link between Narcissism and Aggression: A Meta-Analytic Review",
+     "kurz": "The Link between Narcissism and Aggression: A Meta-Analytic Review",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "verified:kjaervik-2021-aggression-review-abstract",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34292012/",
+      "titelBestand": "The Link between Narcissism and Aggression: A Meta-Analytic Review"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Kurztext",
+      "text": "Eine Metaanalyse fand Zusammenhänge zwischen Narzissmus und Aggression auch ohne Provokation. Daraus lässt sich weder die Häufigkeit eines konkreten Übergriffs noch eine notwendige Schamreaktion ableiten."
      }
     ],
     "aussen": [],
@@ -1715,231 +2082,447 @@ window.SCHLOSS_DATEN = {
    "grenzSaetze": [],
    "herkunft": "Atlasintegration · öffentlich geprüfte Quellen",
    "technisch": {
-    "ortIndex": 1222,
-    "textKennung": "verified-section:wave2-attention-development-context",
+    "ortIndex": 1201,
+    "textKennung": "verified-section:wave2-aggression-korrelationsgrenze",
     "herkunftPfad": ""
    },
    "feld": {
-    "x": 2.492,
-    "y": 4.187
+    "x": 6.953,
+    "y": 13.085
+   }
+  },
+  "1202": {
+   "titel": "Rückzug braucht eine genaue Frage",
+   "gebiet": "Forschung & Einordnung",
+   "ortsart": "Kapitel",
+   "kurz": "Rückzug kann unterschiedliche Funktionen haben. Für eine festgestellte soziale Angststörung empfiehlt NICE Erwachsenen eine spezifische individuelle KVT.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "Social Anxiety Disorder: Recognition, Assessment and Treatment — Recommendations",
+     "kurz": "Social Anxiety Disorder: Recognition, Assessment and Treatment — Recommendations",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "verified:nice-cg159-social-anxiety",
+      "url": "https://www.nice.org.uk/guidance/cg159/chapter/recommendations",
+      "titelBestand": "Social Anxiety Disorder: Recognition, Assessment and Treatment — Recommendations"
+     }
+    },
+    {
+     "titel": "Autism spectrum disorder in adults: diagnosis and management · NICE CG142",
+     "kurz": "Autism spectrum disorder in adults: diagnosis and management · NICE CG142",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "verified:nice-cg142",
+      "url": "https://www.nice.org.uk/guidance/cg142",
+      "titelBestand": "Autism spectrum disorder in adults: diagnosis and management · NICE CG142"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Kurztext",
+      "text": "Rückzug kann unterschiedliche Funktionen haben. Für eine festgestellte soziale Angststörung empfiehlt NICE Erwachsenen eine spezifische individuelle KVT."
+     }
+    ],
+    "aussen": [],
+    "spielraum": []
+   },
+   "bedingungen": [],
+   "grenzSaetze": [],
+   "herkunft": "Atlasintegration · öffentlich geprüfte Quellen",
+   "technisch": {
+    "ortIndex": 1202,
+    "textKennung": "verified-section:wave2-rueckzug-behandlungskontext",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": 5.751,
+    "y": 17.838
+   }
+  },
+  "1209": {
+   "titel": "Angehörigenhilfe und die Bedeutung eines aktiven Vergleichs",
+   "gebiet": "Forschung & Einordnung",
+   "ortsart": "Kapitel",
+   "kurz": "Family Connections bietet Angehörigen einen strukturierten Zugang zu Fertigkeiten und Unterstützung. In der geprüften randomisierten Studie mit 121 Angehörigen ergaben sich gegenüber einer aktiven Vergleichsversorgung keine statistisch signifikanten Gruppenunterschiede.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "“Family Connections”, a program for relatives of people with borderline personality disorder: A randomized controlled trial",
+     "kurz": "“Family Connections”, a program for relatives of people with borderline personality disorder: A randomized controlled trial",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "verified:guillen-2024-abstract",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39624006/",
+      "titelBestand": "“Family Connections”, a program for relatives of people with borderline personality disorder: A randomized controlled trial"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Kurztext",
+      "text": "Family Connections bietet Angehörigen einen strukturierten Zugang zu Fertigkeiten und Unterstützung. In der geprüften randomisierten Studie mit 121 Angehörigen ergaben sich gegenüber einer aktiven Vergleichsversorgung keine statistisch signifikanten Gruppenunterschiede."
+     }
+    ],
+    "aussen": [],
+    "spielraum": []
+   },
+   "bedingungen": [],
+   "grenzSaetze": [],
+   "herkunft": "Atlasintegration · öffentlich geprüfte Quellen",
+   "technisch": {
+    "ortIndex": 1209,
+    "textKennung": "verified-section:wave2-family-connections-comparison",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": 14.421,
+    "y": 9.716
+   }
+  },
+  "1212": {
+   "titel": "Unterstützung hat einen Kontext",
+   "gebiet": "Forschung & Einordnung",
+   "ortsart": "Kapitel",
+   "kurz": "In drei Experimenten mit insgesamt 257 Frauen wirkte unauffällige Unterstützung vor einer belastenden Redeaufgabe günstiger auf die emotionale Stressreaktion als sichtbare oder fehlende Unterstützung. Der Befund betrifft ein spezifisches Laborarrangement.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "Effects of Social Support Visibility on Adjustment to Stress: Experimental Evidence",
+     "kurz": "Effects of Social Support Visibility on Adjustment to Stress: Experimental Evidence",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "verified:bolger-amarel-2007-abstract",
+      "url": "https://www.columbia.edu/~nb2229/docs/bolger-amarel-support-experiments-2006.pdf",
+      "titelBestand": "Effects of Social Support Visibility on Adjustment to Stress: Experimental Evidence"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Kurztext",
+      "text": "In drei Experimenten mit insgesamt 257 Frauen wirkte unauffällige Unterstützung vor einer belastenden Redeaufgabe günstiger auf die emotionale Stressreaktion als sichtbare oder fehlende Unterstützung. Der Befund betrifft ein spezifisches Laborarrangement."
+     }
+    ],
+    "aussen": [],
+    "spielraum": []
+   },
+   "bedingungen": [],
+   "grenzSaetze": [],
+   "herkunft": "Atlasintegration · öffentlich geprüfte Quellen",
+   "technisch": {
+    "ortIndex": 1212,
+    "textKennung": "verified-section:wave2-support-context",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": 15.292,
+    "y": 10.393
+   }
+  },
+  "1221": {
+   "titel": "Selbstmitgefühl: wofür ein Versuch spricht",
+   "gebiet": "Forschung & Einordnung",
+   "ortsart": "Kapitel",
+   "kurz": "Selbstmitgefühl kann eine erlernbare Form des Umgangs mit belastenden Gefühlen sein. Ein kurzes Experiment bei 48 Menschen mit Depression zeigte einen Vorteil gegenüber Warten.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "Self-compassion as an emotion regulation strategy in major depressive disorder",
+     "kurz": "Self-compassion as an emotion regulation strategy in major depressive disorder",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "verified:diedrich-2014-self-compassion",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24929927/",
+      "titelBestand": "Self-compassion as an emotion regulation strategy in major depressive disorder"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Kurztext",
+      "text": "Selbstmitgefühl kann eine erlernbare Form des Umgangs mit belastenden Gefühlen sein. Ein kurzes Experiment bei 48 Menschen mit Depression zeigte einen Vorteil gegenüber Warten."
+     }
+    ],
+    "aussen": [],
+    "spielraum": []
+   },
+   "bedingungen": [
+    {
+     "klausel": "bei 48 Menschen mit Depression zeigte einen Vorteil gegenüber Warten",
+     "satz": "Ein kurzes Experiment bei 48 Menschen mit Depression zeigte einen Vorteil gegenüber Warten.",
+     "abschnitt": "Eintrag"
+    }
+   ],
+   "grenzSaetze": [],
+   "herkunft": "Atlasintegration · öffentlich geprüfte Quellen",
+   "technisch": {
+    "ortIndex": 1221,
+    "textKennung": "verified-section:wave2-self-compassion-outcome",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": 8.233,
+    "y": 11.298
+   }
+  },
+  "1223": {
+   "titel": "Schutz hängt nicht an einem Grenzwert",
+   "gebiet": "Forschung & Einordnung",
+   "ortsart": "Kapitel",
+   "kurz": "Kontrollverhalten wird verständlicher, wenn konkrete Einschränkungen sichtbar werden: Überwachung, erschwerter Zugang zu Geld oder Unterstützung, Drohungen und Angst vor Konsequenzen. Eine untersuchte Skalen-Grenze aus einer Scheidungsstichprobe legt keine universelle Sicherheitsgrenze fest.",
+   "mehr": [],
+   "quellen": [
+    {
+     "titel": "Toward a Standard Approach to Operationalizing Coercive Control and Classifying Violence Types",
+     "kurz": "Toward a Standard Approach to Operationalizing Coercive Control and Classifying Violence Types",
+     "art": "Quelle",
+     "zitat": "",
+     "technisch": {
+      "schluessel": "verified:hardesty-2015-coercive-control",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4553695/",
+      "titelBestand": "Toward a Standard Approach to Operationalizing Coercive Control and Classifying Violence Types"
+     }
+    }
+   ],
+   "blick": {
+    "innen": [
+     {
+      "abschnitt": "Kurztext",
+      "text": "Kontrollverhalten wird verständlicher, wenn konkrete Einschränkungen sichtbar werden: Überwachung, erschwerter Zugang zu Geld oder Unterstützung, Drohungen und Angst vor Konsequenzen. Eine untersuchte Skalen-Grenze aus einer Scheidungsstichprobe legt keine universelle Sicherheitsgrenze fest."
+     }
+    ],
+    "aussen": [],
+    "spielraum": []
+   },
+   "bedingungen": [
+    {
+     "klausel": "wenn konkrete Einschränkungen sichtbar werden",
+     "satz": "Kontrollverhalten wird verständlicher, wenn konkrete Einschränkungen sichtbar werden: Überwachung, erschwerter Zugang zu Geld oder Unterstützung, Drohungen und Angst vor Konsequenzen.",
+     "abschnitt": "Eintrag"
+    }
+   ],
+   "grenzSaetze": [],
+   "herkunft": "Atlasintegration · öffentlich geprüfte Quellen",
+   "technisch": {
+    "ortIndex": 1223,
+    "textKennung": "verified-section:wave2-control-safety-thresholds",
+    "herkunftPfad": ""
+   },
+   "feld": {
+    "x": 7.7,
+    "y": 12.262
    }
   }
  },
  "paare": [
   {
-   "a": 1012,
-   "b": 1018,
+   "a": 1031,
+   "b": 1034,
    "fugen": [
     {
-     "richtung": "Aufgabenstarre → Hyperfokus",
+     "richtung": "Die Angst vor Verlust ist groß → Auch meine Grenze gilt",
      "vomSchloss": true,
-     "art": "spannung",
-     "artWort": "Gegenpol",
-     "label": "im Original als Gegenpol beschrieben",
-     "grund": "dem Originaltyp „Gegenpol“",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Bedürfnis trifft begrenzte Verfügbarkeit",
+     "grund": "der Originalbezeichnung „Bedürfnis trifft begrenzte Verfügbarkeit“",
      "geltung": "redaktionell",
      "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Ein starkes Bedürfnis und die Grenze des Gegenübers dürfen zugleich ernst genommen werden.",
      "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
      "technisch": {
-      "fugeIndex": 1616,
-      "typ": "gegenteil_am_start",
-      "gegen": 1636
-     }
-    },
-    {
-     "richtung": "Hyperfokus → Aufgabenstarre",
-     "vomSchloss": false,
-     "art": "spannung",
-     "artWort": "Gegenpol",
-     "label": "im Original als Gegenpol beschrieben",
-     "grund": "dem Originaltyp „Gegenpol“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1636,
-      "typ": "gegenteil_am_start",
-      "gegen": 1616
+      "fugeIndex": 1660,
+      "typ": "",
+      "gegen": null
      }
     }
    ],
    "lesarten": [
     {
-     "art": "spannung",
-     "artWort": "Gegenpol",
-     "wort": "Gegenpol",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
      "ausBestand": true,
-     "auchImSatz": [
-      "Nähe, nicht Identität"
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Bedürfnis trifft begrenzte Verfügbarkeit",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1031,
+   "b": 1030,
+   "fugen": [
+    {
+     "richtung": "Eine Antwort bleibt aus → Die Angst vor Verlust ist groß",
+     "vomSchloss": false,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Eine mögliche Bedeutung des Wartens",
+     "grund": "der Originalbezeichnung „Eine mögliche Bedeutung des Wartens“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Eine unbeantwortete Nachricht kann in einer erfundenen Situation als drohender Verlust erlebt werden. Der Zeitablauf beweist diese Bedeutung nicht.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1657,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Eine mögliche Bedeutung des Wartens",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1031,
+   "b": 1032,
+   "fugen": [
+    {
+     "richtung": "Die Angst vor Verlust ist groß → Wenn Nähe zur Verpflichtung wird",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Wenn Beruhigung eingefordert wird",
+     "grund": "der Originalbezeichnung „Wenn Beruhigung eingefordert wird“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Aus eigener Angst kann eine Forderung nach Kontakt entstehen. Die Angst begründet keinen Anspruch auf Verfügbarkeit.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1659,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Wenn Beruhigung eingefordert wird",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1031,
+   "b": 1053,
+   "fugen": [
+    {
+     "richtung": "Verlassenheitsangst und Vermeidungsbemühungen → Die Angst vor Verlust ist groß",
+     "vomSchloss": false,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "unterscheidet Symptomdomäne und Alltagsszene",
+     "grund": "der belegten Originalaussage „unterscheidet Symptomdomäne und Alltagsszene“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Die Szene belegt weder einen Bindungstyp noch Borderline. Ein klassifikatorischer Bezug ist kein Ursachenbeleg und keine Diagnose einer in einer Szene beschriebenen Person.",
+     "detail": "Das Dossier bezeichnet Verlassenheitsangst als klinische Symptomdomäne. Die fiktive Abschiedsszene zeigt dagegen nur einen Satz, berichtete Angst und einen Kontaktwunsch. Nebeneinander wird sichtbar, wie viel mehr als eine einzelne Episode eine diagnostische Beurteilung benötigt.",
+     "quellen": [
+      {
+       "titel": "Borderline Personality Disorder – NIMH",
+       "kurz": "Borderline Personality Disorder – NIMH",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "source:bpd:ae3d3e3e08a0aad",
+        "url": "https://www.nimh.nih.gov/health/publications/borderline-personality-disorder",
+        "titelBestand": "Borderline Personality Disorder – NIMH"
+       }
+      },
+      {
+       "titel": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022",
+       "kurz": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "source:bpd:58630727af716c7",
+        "url": "https://register.awmf.org/de/leitlinien/detail/038-015",
+        "titelBestand": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022"
+       }
+      }
      ],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "im Original als Gegenpol beschrieben",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      },
-      {
-       "woher": "Aufgabenstarre",
-       "satz": "Hyperfokus ist oft das Gegenteil am Start — Nähe, nicht Identität.",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "",
-       "auchImSatz": [
-        "Nähe, nicht Identität"
-       ]
-      },
-      {
-       "woher": "Hyperfokus",
-       "satz": "Aufgabenstarre ist oft das Gegenteil am Start — Nähe, nicht Identität.",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "",
-       "auchImSatz": [
-        "Nähe, nicht Identität"
-       ]
-      }
-     ]
-    },
-    {
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "wort": "Nähe, nicht Identität",
-     "ausBestand": false,
-     "auchImSatz": [
-      "Gegenteil am Start"
-     ],
-     "belege": [
-      {
-       "woher": "Aufgabenstarre",
-       "satz": "Hyperfokus ist oft das Gegenteil am Start — Nähe, nicht Identität.",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "",
-       "auchImSatz": [
-        "Gegenteil am Start"
-       ]
-      },
-      {
-       "woher": "Hyperfokus",
-       "satz": "Aufgabenstarre ist oft das Gegenteil am Start — Nähe, nicht Identität.",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "",
-       "auchImSatz": [
-        "Gegenteil am Start"
-       ]
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1012,
-   "b": 1022,
-   "fugen": [
-    {
-     "richtung": "Aufgabenstarre → Wartemodus",
-     "vomSchloss": true,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
+     "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
      "technisch": {
-      "fugeIndex": 1612,
-      "typ": "benannte_naehe",
-      "gegen": 1646
-     }
-    },
-    {
-     "richtung": "Wartemodus → Aufgabenstarre",
-     "vomSchloss": false,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1646,
-      "typ": "benannte_naehe",
-      "gegen": 1612
+      "fugeIndex": 1749,
+      "typ": "",
+      "gegen": null
      }
     }
    ],
    "lesarten": [
     {
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "wort": "Nähe",
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
      "ausBestand": true,
      "auchImSatz": [],
      "belege": [
       {
        "woher": "Bestandsfuge",
-       "satz": "im Original als begrifflich benachbart beschrieben",
+       "satz": "unterscheidet Symptomdomäne und Alltagsszene",
        "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      }
-     ]
-    },
-    {
-     "art": "zusammenhang",
-     "artWort": "Zusammenhang",
-     "wort": "könnte zusammenhängen",
-     "ausBestand": false,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Aufgabenstarre",
-       "satz": "Könnte zusammenhängen mit Wartemodus (Start wird bis nach dem Termin verschoben) und Body Doubling (Anwesenheit als Anker, Community, ungetestet).",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "Start wird bis nach dem Termin verschoben",
-       "auchImSatz": []
-      },
-      {
-       "woher": "Wartemodus",
-       "satz": "Könnte zusammenhängen mit Zeitblindheit (Dauer unklar) und Aufgabenstarre (Start gelingt nicht).",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "Start gelingt nicht",
-       "auchImSatz": []
-      }
-     ]
-    },
-    {
-     "art": "offen",
-     "artWort": "offen",
-     "wort": "ob trennbar",
-     "ausBestand": false,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Aufgabenstarre",
-       "satz": "Ob Starre, Wartemodus und Prokrastination trennbar sind.",
-       "abschnitt": "Offene Fragen",
-       "klammer": "",
-       "auchImSatz": []
+       "status": "redaktionelle Zuordnung"
       }
      ]
     }
@@ -1947,177 +2530,8 @@ window.SCHLOSS_DATEN = {
    "saetzeOhneFuge": []
   },
   {
-   "a": 1012,
-   "b": 1013,
-   "fugen": [
-    {
-     "richtung": "Aufgabenstarre → Body Doubling",
-     "vomSchloss": true,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1613,
-      "typ": "benannte_naehe",
-      "gegen": 1617
-     }
-    },
-    {
-     "richtung": "Body Doubling → Aufgabenstarre",
-     "vomSchloss": false,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1617,
-      "typ": "benannte_naehe",
-      "gegen": 1613
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "wort": "Nähe",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "im Original als begrifflich benachbart beschrieben",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      }
-     ]
-    },
-    {
-     "art": "zusammenhang",
-     "artWort": "Zusammenhang",
-     "wort": "könnte zusammenhängen",
-     "ausBestand": false,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Aufgabenstarre",
-       "satz": "Könnte zusammenhängen mit Wartemodus (Start wird bis nach dem Termin verschoben) und Body Doubling (Anwesenheit als Anker, Community, ungetestet).",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "Anwesenheit als Anker, Community, ungetestet",
-       "auchImSatz": []
-      },
-      {
-       "woher": "Body Doubling",
-       "satz": "Könnte zusammenhängen mit Aufgabenstarre (Start/Dranbleiben).",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "Start/Dranbleiben",
-       "auchImSatz": []
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1012,
-   "b": 1014,
-   "fugen": [
-    {
-     "richtung": "Aufgabenstarre → Delay Aversion",
-     "vomSchloss": true,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "muss unterschieden werden von",
-     "grund": "dem Originaltyp „nicht dasselbe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1614,
-      "typ": "nicht_dasselbe",
-      "gegen": 1622
-     }
-    },
-    {
-     "richtung": "Delay Aversion → Aufgabenstarre",
-     "vomSchloss": false,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "muss unterschieden werden von",
-     "grund": "dem Originaltyp „nicht dasselbe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1622,
-      "typ": "nicht_dasselbe",
-      "gegen": 1614
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "abstand",
-     "artWort": "Abstand",
-     "wort": "Abstand",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "muss unterschieden werden von",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      },
-      {
-       "woher": "Aufgabenstarre",
-       "satz": "Delay Aversion trifft Belohnungsaufschub, nicht notwendig den Start.",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "",
-       "auchImSatz": []
-      },
-      {
-       "woher": "Delay Aversion",
-       "satz": "Aufgabenstarre trifft den Start, nicht notwendig Belohnungsaufschub.",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "",
-       "auchImSatz": []
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1012,
-   "b": 1023,
+   "a": 1031,
+   "b": 1033,
    "fugen": [],
    "lesarten": [
     {
@@ -2137,71 +2551,47 @@ window.SCHLOSS_DATEN = {
    "saetzeOhneFuge": []
   },
   {
-   "a": 1012,
-   "b": 300,
+   "a": 1031,
+   "b": 1028,
+   "fugen": [],
+   "lesarten": [
+    {
+     "art": "keine",
+     "artWort": "keine",
+     "wort": "keine Fuge",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestand",
+       "satz": "Im Lesebestand gibt es keine Fuge zwischen beiden Orten."
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1030,
+   "b": 1041,
    "fugen": [
     {
-     "richtung": "Aufgabenstarre → Aufgaben bleiben offen",
+     "richtung": "Eine Antwort bleibt aus → Was geschah — und was bedeutet es für mich?",
      "vomSchloss": true,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "muss unterschieden werden von",
-     "grund": "der Originalbezeichnung „muss unterschieden werden von“",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Zeitablauf von Erklärung trennen",
+     "grund": "der Originalbezeichnung „Zeitablauf von Erklärung trennen“",
      "geltung": "redaktionell",
      "geltungWort": "redaktionell zugeordnet",
-     "status": "redaktionelle-zuordnung",
-     "statusWort": "redaktionelle Zuordnung",
-     "grenze": "Startschwierigkeit und Abschlussproblem sind keine gleichbedeutenden Kriterien und erlauben für sich weder eine ADHS- noch eine andere Diagnose.",
-     "detail": "Die Randphänomen-Karte beschreibt den erschwerten Beginn einer beabsichtigten Aufgabe. Der Neuroatlas-Eintrag beschreibt bereits begonnene, aber nicht abgeschlossene Aufgaben. Der Vergleich trennt zwei Momente des Handlungsverlaufs und macht alternative Bedingungen sichtbar.",
-     "quellen": [
-      {
-       "titel": "ADxS-Forum, Mondkatze",
-       "kurz": "ADxS-Forum, Mondkatze",
-       "art": "Forum",
-       "zitat": "",
-       "technisch": {
-        "schluessel": "adhs-source:d1325eab5cb1",
-        "url": "https://adhs-forum.adxs.org/t/adhs-und-zeitblindheit/18778",
-        "titelBestand": "ADxS-Forum, Mondkatze"
-       }
-      },
-      {
-       "titel": "AWMF-Leitlinie",
-       "kurz": "AWMF-Leitlinie",
-       "art": "Leitlinie",
-       "zitat": "",
-       "technisch": {
-        "schluessel": "adhs-source:bafe985ae0a3",
-        "url": "https://register.awmf.org/de/leitlinien/detail/028-045",
-        "titelBestand": "AWMF 028-045 / NLM-Ask"
-       }
-      },
-      {
-       "titel": "ADHD: What You Need to Know",
-       "kurz": "ADHD: What You Need to Know",
-       "art": "Gesundheitsinformation",
-       "zitat": "",
-       "technisch": {
-        "schluessel": "neuro-source:nimh-adhd",
-        "url": "https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know",
-        "titelBestand": "ADHD: What You Need to Know"
-       }
-      },
-      {
-       "titel": "Obsessive-compulsive personality disorder",
-       "kurz": "Obsessive-compulsive personality disorder",
-       "art": "Gesundheitsinformation",
-       "zitat": "",
-       "technisch": {
-        "schluessel": "neuro-source:medline-ocpd",
-        "url": "https://medlineplus.gov/ency/article/000942.htm",
-        "titelBestand": "Obsessive-compulsive personality disorder"
-       }
-      }
-     ],
-     "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Die fehlende Antwort ist bekannt; ihr Grund bleibt ohne weitere Auskunft offen.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
      "technisch": {
-      "fugeIndex": 1733,
+      "fugeIndex": 1658,
       "typ": "",
       "gegen": null
      }
@@ -2209,17 +2599,17 @@ window.SCHLOSS_DATEN = {
    ],
    "lesarten": [
     {
-     "art": "abstand",
-     "artWort": "Abstand",
-     "wort": "Abstand",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
      "ausBestand": true,
      "auchImSatz": [],
      "belege": [
       {
        "woher": "Bestandsfuge",
-       "satz": "muss unterschieden werden von",
+       "satz": "Zeitablauf von Erklärung trennen",
        "geltung": "redaktionell zugeordnet",
-       "status": "redaktionelle Zuordnung"
+       "status": ""
       }
      ]
     }
@@ -2227,117 +2617,44 @@ window.SCHLOSS_DATEN = {
    "saetzeOhneFuge": []
   },
   {
-   "a": 1012,
-   "b": 1017,
+   "a": 1032,
+   "b": 1039,
    "fugen": [
     {
-     "richtung": "Aufgabenstarre → Heritabilität ist kein Schicksal",
+     "richtung": "Wenn Nähe zur Verpflichtung wird → Ich bin mehr als die Rolle, in der du mich siehst",
      "vomSchloss": true,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Die Rolle verpflichtet nicht zu allem",
+     "grund": "der Originalbezeichnung „Die Rolle verpflichtet nicht zu allem“",
      "geltung": "redaktionell",
      "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Familien- oder Partnerschaftsrollen können Erwartungen tragen. Sie ersetzen keine konkrete Vereinbarung oder Zustimmung.",
      "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
      "technisch": {
-      "fugeIndex": 1615,
-      "typ": "benannte_naehe",
-      "gegen": 1634
-     }
-    },
-    {
-     "richtung": "Heritabilität ist kein Schicksal → Aufgabenstarre",
-     "vomSchloss": false,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1634,
-      "typ": "benannte_naehe",
-      "gegen": 1615
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "wort": "Nähe",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "im Original als begrifflich benachbart beschrieben",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      },
-      {
-       "woher": "Heritabilität ist kein Schicksal",
-       "satz": "Benannte Nähe zu Aufgabenstarre/Gerüst: hohe h² macht Intervention nicht sinnlos.",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "",
-       "auchImSatz": []
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1013,
-   "b": 1018,
-   "fugen": [
-    {
-     "richtung": "Body Doubling → Hyperfokus",
-     "vomSchloss": true,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1618,
-      "typ": "benannte_naehe",
+      "fugeIndex": 1661,
+      "typ": "",
       "gegen": null
      }
     }
    ],
    "lesarten": [
     {
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "wort": "Nähe",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
      "ausBestand": true,
      "auchImSatz": [],
      "belege": [
       {
        "woher": "Bestandsfuge",
-       "satz": "im Original als begrifflich benachbart beschrieben",
+       "satz": "Die Rolle verpflichtet nicht zu allem",
        "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
+       "status": ""
       }
      ]
     }
@@ -2345,44 +2662,44 @@ window.SCHLOSS_DATEN = {
    "saetzeOhneFuge": []
   },
   {
-   "a": 1013,
-   "b": 1017,
+   "a": 1032,
+   "b": 1040,
    "fugen": [
     {
-     "richtung": "Body Doubling → Heritabilität ist kein Schicksal",
+     "richtung": "Wenn Nähe zur Verpflichtung wird → Welche Erwartung gilt hier eigentlich?",
      "vomSchloss": true,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Welche Pflicht wird behauptet?",
+     "grund": "der Originalbezeichnung „Welche Pflicht wird behauptet?“",
      "geltung": "redaktionell",
      "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Der Vergleich fragt nach der Herkunft einer Erwartung: Gewohnheit, Sachvereinbarung oder moralische Forderung.",
      "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
      "technisch": {
-      "fugeIndex": 1619,
-      "typ": "benannte_naehe",
+      "fugeIndex": 1662,
+      "typ": "",
       "gegen": null
      }
     }
    ],
    "lesarten": [
     {
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "wort": "Nähe",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
      "ausBestand": true,
      "auchImSatz": [],
      "belege": [
       {
        "woher": "Bestandsfuge",
-       "satz": "im Original als begrifflich benachbart beschrieben",
+       "satz": "Welche Pflicht wird behauptet?",
        "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
+       "status": ""
       }
      ]
     }
@@ -2390,230 +2707,44 @@ window.SCHLOSS_DATEN = {
    "saetzeOhneFuge": []
   },
   {
-   "a": 1014,
-   "b": 1022,
+   "a": 1033,
+   "b": 1048,
    "fugen": [
     {
-     "richtung": "Delay Aversion → Wartemodus",
+     "richtung": "Abstand wünschen → Wiedergutmachung gewährt keinen Anspruch auf Antwort",
      "vomSchloss": true,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Kontaktgrenze bleibt bestehen",
+     "grund": "der Originalbezeichnung „Kontaktgrenze bleibt bestehen“",
      "geltung": "redaktionell",
      "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Ein Entwurf kann der eigenen Klärung dienen. Eine Entschuldigung hebt ein ausdrücklich benanntes Kontakt-Nein nicht auf.",
      "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
      "technisch": {
-      "fugeIndex": 1620,
-      "typ": "benannte_naehe",
-      "gegen": 1647
-     }
-    },
-    {
-     "richtung": "Wartemodus → Delay Aversion",
-     "vomSchloss": false,
-     "art": "uebergang",
-     "artWort": "Übergang",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „mögliche Strategie gegen“; die Bezeichnung im Bestand nennt nur begriffliche Nachbarschaft. Vorgeschlagen, nicht fachlich geprüft",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1647,
-      "typ": "kann_strategie_sein_gegen",
-      "gegen": 1620
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "wort": "Nähe",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "im Original als begrifflich benachbart beschrieben",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      }
-     ]
-    },
-    {
-     "art": "uebergang",
-     "artWort": "Übergang",
-     "wort": "Übergang",
-     "ausBestand": false,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge (Gegenrichtung)",
-       "satz": "im Original als begrifflich benachbart beschrieben",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      }
-     ]
-    },
-    {
-     "art": "zusammenhang",
-     "artWort": "Zusammenhang",
-     "wort": "könnte zusammenhängen",
-     "ausBestand": false,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Delay Aversion",
-       "satz": "Könnte zusammenhängen mit Wartemodus (Vermeidung des Wartens durch leeren Vormittag) und Zeitblindheit (Schätzfehler).",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "Vermeidung des Wartens durch leeren Vormittag",
-       "auchImSatz": []
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1014,
-   "b": 1023,
-   "fugen": [
-    {
-     "richtung": "Delay Aversion → Zeitblindheit",
-     "vomSchloss": true,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1621,
-      "typ": "benannte_naehe",
-      "gegen": 1650
-     }
-    },
-    {
-     "richtung": "Zeitblindheit → Delay Aversion",
-     "vomSchloss": false,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1650,
-      "typ": "benannte_naehe",
-      "gegen": 1621
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "wort": "Nähe",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "im Original als begrifflich benachbart beschrieben",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      }
-     ]
-    },
-    {
-     "art": "zusammenhang",
-     "artWort": "Zusammenhang",
-     "wort": "könnte zusammenhängen",
-     "ausBestand": false,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Delay Aversion",
-       "satz": "Könnte zusammenhängen mit Wartemodus (Vermeidung des Wartens durch leeren Vormittag) und Zeitblindheit (Schätzfehler).",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "Schätzfehler",
-       "auchImSatz": []
-      },
-      {
-       "woher": "Zeitblindheit",
-       "satz": "Könnte zusammenhängen mit Wartemodus (der Termin blockiert den Vormittag) und Delay Aversion (Warten ist schwer).",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "Warten ist schwer",
-       "auchImSatz": []
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1014,
-   "b": 1016,
-   "fugen": [
-    {
-     "richtung": "Delay Aversion → Gen–Umwelt-Korrelation (rGE)",
-     "vomSchloss": true,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "muss unterschieden werden von",
-     "grund": "dem Originaltyp „nicht dasselbe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1623,
-      "typ": "nicht_dasselbe",
+      "fugeIndex": 1663,
+      "typ": "",
       "gegen": null
      }
     }
    ],
    "lesarten": [
     {
-     "art": "abstand",
-     "artWort": "Abstand",
-     "wort": "Abstand",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
      "ausBestand": true,
      "auchImSatz": [],
      "belege": [
       {
        "woher": "Bestandsfuge",
-       "satz": "muss unterschieden werden von",
+       "satz": "Kontaktgrenze bleibt bestehen",
        "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
+       "status": ""
       }
      ]
     }
@@ -2621,641 +2752,44 @@ window.SCHLOSS_DATEN = {
    "saetzeOhneFuge": []
   },
   {
-   "a": 1015,
-   "b": 1016,
+   "a": 1033,
+   "b": 1047,
    "fugen": [
     {
-     "richtung": "Differential Susceptibility → Gen–Umwelt-Korrelation (rGE)",
+     "richtung": "Abstand wünschen → Eine Pause bekommt eine tragbare Form",
      "vomSchloss": true,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "muss unterschieden werden von",
-     "grund": "dem Originaltyp „nicht dasselbe“",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Eine konkrete Unterbrechung",
+     "grund": "der Originalbezeichnung „Eine konkrete Unterbrechung“",
      "geltung": "redaktionell",
      "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Zeitpunkt und Bedingungen einer Pause ergeben sich aus tatsächlichen Zusagen; der eigene Wunsch ergänzt keine Zustimmung.",
      "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
      "technisch": {
-      "fugeIndex": 1624,
-      "typ": "nicht_dasselbe",
-      "gegen": 1629
-     }
-    },
-    {
-     "richtung": "Gen–Umwelt-Korrelation (rGE) → Differential Susceptibility",
-     "vomSchloss": false,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "muss unterschieden werden von",
-     "grund": "dem Originaltyp „nicht dasselbe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1629,
-      "typ": "nicht_dasselbe",
-      "gegen": 1624
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "abstand",
-     "artWort": "Abstand",
-     "wort": "Abstand",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "muss unterschieden werden von",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      },
-      {
-       "woher": "Gen–Umwelt-Korrelation (rGE)",
-       "satz": "Nicht dasselbe wie extreme Umwelt-Kausalität (ERA/VLBW) und nicht dasselbe wie Differential Susceptibility (Interaktion ≠ Korrelation).",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "Interaktion ≠ Korrelation",
-       "auchImSatz": []
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1015,
-   "b": 1017,
-   "fugen": [
-    {
-     "richtung": "Differential Susceptibility → Heritabilität ist kein Schicksal",
-     "vomSchloss": true,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1625,
-      "typ": "benannte_naehe",
-      "gegen": 1633
-     }
-    },
-    {
-     "richtung": "Heritabilität ist kein Schicksal → Differential Susceptibility",
-     "vomSchloss": false,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "muss unterschieden werden von",
-     "grund": "dem Originaltyp „nicht dasselbe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1633,
-      "typ": "nicht_dasselbe",
-      "gegen": 1625
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "wort": "Nähe",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "im Original als begrifflich benachbart beschrieben",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      }
-     ]
-    },
-    {
-     "art": "abstand",
-     "artWort": "Abstand",
-     "wort": "Abstand",
-     "ausBestand": false,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge (Gegenrichtung)",
-       "satz": "muss unterschieden werden von",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1015,
-   "b": 1021,
-   "fugen": [
-    {
-     "richtung": "Differential Susceptibility → Extreme frühe Umwelt und ADHD-ähnliche Symptome",
-     "vomSchloss": true,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "muss unterschieden werden von",
-     "grund": "dem Originaltyp „nicht dasselbe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1626,
-      "typ": "nicht_dasselbe",
-      "gegen": 1644
-     }
-    },
-    {
-     "richtung": "Extreme frühe Umwelt und ADHD-ähnliche Symptome → Differential Susceptibility",
-     "vomSchloss": false,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "muss unterschieden werden von",
-     "grund": "dem Originaltyp „nicht dasselbe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1644,
-      "typ": "nicht_dasselbe",
-      "gegen": 1626
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "abstand",
-     "artWort": "Abstand",
-     "wort": "Abstand",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "muss unterschieden werden von",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1016,
-   "b": 1017,
-   "fugen": [
-    {
-     "richtung": "Gen–Umwelt-Korrelation (rGE) → Heritabilität ist kein Schicksal",
-     "vomSchloss": true,
-     "art": "bedingung",
-     "artWort": "Bedingung",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „Voraussetzung“; die Bezeichnung im Bestand nennt nur begriffliche Nachbarschaft. Vorgeschlagen, nicht fachlich geprüft",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1627,
-      "typ": "voraussetzung",
-      "gegen": 1631
-     }
-    },
-    {
-     "richtung": "Heritabilität ist kein Schicksal → Gen–Umwelt-Korrelation (rGE)",
-     "vomSchloss": false,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1631,
-      "typ": "benannte_naehe",
-      "gegen": 1627
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "bedingung",
-     "artWort": "Bedingung",
-     "wort": "Bedingung",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "im Original als begrifflich benachbart beschrieben",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      }
-     ]
-    },
-    {
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "wort": "Nähe",
-     "ausBestand": false,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge (Gegenrichtung)",
-       "satz": "im Original als begrifflich benachbart beschrieben",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1016,
-   "b": 1021,
-   "fugen": [
-    {
-     "richtung": "Gen–Umwelt-Korrelation (rGE) → Extreme frühe Umwelt und ADHD-ähnliche Symptome",
-     "vomSchloss": true,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "muss unterschieden werden von",
-     "grund": "dem Originaltyp „nicht dasselbe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1628,
-      "typ": "nicht_dasselbe",
-      "gegen": 1643
-     }
-    },
-    {
-     "richtung": "Extreme frühe Umwelt und ADHD-ähnliche Symptome → Gen–Umwelt-Korrelation (rGE)",
-     "vomSchloss": false,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "muss unterschieden werden von",
-     "grund": "dem Originaltyp „nicht dasselbe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1643,
-      "typ": "nicht_dasselbe",
-      "gegen": 1628
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "abstand",
-     "artWort": "Abstand",
-     "wort": "Abstand",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "muss unterschieden werden von",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1016,
-   "b": 1020,
-   "fugen": [
-    {
-     "richtung": "Gen–Umwelt-Korrelation (rGE) → Rejection Sensitive Dysphoria",
-     "vomSchloss": true,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "muss unterschieden werden von",
-     "grund": "dem Originaltyp „nicht dasselbe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1630,
-      "typ": "nicht_dasselbe",
-      "gegen": 1641
-     }
-    },
-    {
-     "richtung": "Rejection Sensitive Dysphoria → Gen–Umwelt-Korrelation (rGE)",
-     "vomSchloss": false,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "muss unterschieden werden von",
-     "grund": "dem Originaltyp „nicht dasselbe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1641,
-      "typ": "nicht_dasselbe",
-      "gegen": 1630
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "abstand",
-     "artWort": "Abstand",
-     "wort": "Abstand",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "muss unterschieden werden von",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1017,
-   "b": 1021,
-   "fugen": [
-    {
-     "richtung": "Heritabilität ist kein Schicksal → Extreme frühe Umwelt und ADHD-ähnliche Symptome",
-     "vomSchloss": true,
-     "art": "widerspruch",
-     "artWort": "Widerspruch",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „Gegenbeispiel“; die Bezeichnung im Bestand nennt nur begriffliche Nachbarschaft. Vorgeschlagen, nicht fachlich geprüft",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1632,
-      "typ": "gegenbeispiel",
-      "gegen": 1642
-     }
-    },
-    {
-     "richtung": "Extreme frühe Umwelt und ADHD-ähnliche Symptome → Heritabilität ist kein Schicksal",
-     "vomSchloss": false,
-     "art": "widerspruch",
-     "artWort": "Widerspruch",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „Gegenbeispiel“; die Bezeichnung im Bestand nennt nur begriffliche Nachbarschaft. Vorgeschlagen, nicht fachlich geprüft",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1642,
-      "typ": "gegenbeispiel",
-      "gegen": 1632
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "widerspruch",
-     "artWort": "Widerspruch",
-     "wort": "Widerspruch",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "im Original als begrifflich benachbart beschrieben",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1018,
-   "b": 1023,
-   "fugen": [
-    {
-     "richtung": "Hyperfokus → Zeitblindheit",
-     "vomSchloss": true,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1635,
-      "typ": "benannte_naehe",
-      "gegen": 1651
-     }
-    },
-    {
-     "richtung": "Zeitblindheit → Hyperfokus",
-     "vomSchloss": false,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1651,
-      "typ": "benannte_naehe",
-      "gegen": 1635
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "wort": "Nähe",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "im Original als begrifflich benachbart beschrieben",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      }
-     ]
-    },
-    {
-     "art": "zusammenhang",
-     "artWort": "Zusammenhang",
-     "wort": "könnte zusammenhängen",
-     "ausBestand": false,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Hyperfokus",
-       "satz": "Könnte zusammenhängen mit Zeitblindheit (Stunden weg).",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "Stunden weg",
-       "auchImSatz": []
-      }
-     ]
-    },
-    {
-     "art": "abstand",
-     "artWort": "Abstand",
-     "wort": "keine Identität",
-     "ausBestand": false,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Zeitblindheit",
-       "satz": "Hyperfokus kann Zeit „verschwinden“ lassen — anderes Erleben, keine Identität.",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "",
-       "auchImSatz": []
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1018,
-   "b": 1017,
-   "fugen": [
-    {
-     "richtung": "Hyperfokus → Heritabilität ist kein Schicksal",
-     "vomSchloss": true,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1637,
-      "typ": "benannte_naehe",
+      "fugeIndex": 1664,
+      "typ": "",
       "gegen": null
      }
     }
    ],
    "lesarten": [
     {
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "wort": "Nähe",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
      "ausBestand": true,
      "auchImSatz": [],
      "belege": [
       {
        "woher": "Bestandsfuge",
-       "satz": "im Original als begrifflich benachbart beschrieben",
+       "satz": "Eine konkrete Unterbrechung",
        "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
+       "status": ""
       }
      ]
     }
@@ -3263,110 +2797,44 @@ window.SCHLOSS_DATEN = {
    "saetzeOhneFuge": []
   },
   {
-   "a": 1019,
-   "b": 1020,
+   "a": 1033,
+   "b": 1028,
    "fugen": [
     {
-     "richtung": "Reizfilterschwäche → Rejection Sensitive Dysphoria",
+     "richtung": "Abstand wünschen → Rückzug hat mehrere mögliche Bedeutungen",
      "vomSchloss": true,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „verwechselbar mit“; die Bezeichnung im Bestand nennt nur begriffliche Nachbarschaft. Vorgeschlagen, nicht fachlich geprüft",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Grenze und vermutete Erklärung trennen",
+     "grund": "der Originalbezeichnung „Grenze und vermutete Erklärung trennen“",
      "geltung": "redaktionell",
      "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Ein ausdrücklich gewünschter Abstand ist eine Information. Die Erklärung des Rückzugs bleibt eine andere Frage.",
      "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
      "technisch": {
-      "fugeIndex": 1638,
-      "typ": "verwechselbar_mit",
-      "gegen": 1640
-     }
-    },
-    {
-     "richtung": "Rejection Sensitive Dysphoria → Reizfilterschwäche",
-     "vomSchloss": false,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „verwechselbar mit“; die Bezeichnung im Bestand nennt nur begriffliche Nachbarschaft. Vorgeschlagen, nicht fachlich geprüft",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1640,
-      "typ": "verwechselbar_mit",
-      "gegen": 1638
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "abstand",
-     "artWort": "Abstand",
-     "wort": "Abstand",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "im Original als begrifflich benachbart beschrieben",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1019,
-   "b": 1021,
-   "fugen": [
-    {
-     "richtung": "Reizfilterschwäche → Extreme frühe Umwelt und ADHD-ähnliche Symptome",
-     "vomSchloss": true,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "muss unterschieden werden von",
-     "grund": "dem Originaltyp „nicht dasselbe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1639,
-      "typ": "nicht_dasselbe",
+      "fugeIndex": 1665,
+      "typ": "",
       "gegen": null
      }
     }
    ],
    "lesarten": [
     {
-     "art": "abstand",
-     "artWort": "Abstand",
-     "wort": "Abstand",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
      "ausBestand": true,
      "auchImSatz": [],
      "belege": [
       {
        "woher": "Bestandsfuge",
-       "satz": "muss unterschieden werden von",
+       "satz": "Grenze und vermutete Erklärung trennen",
        "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
+       "status": ""
       }
      ]
     }
@@ -3374,133 +2842,44 @@ window.SCHLOSS_DATEN = {
    "saetzeOhneFuge": []
   },
   {
-   "a": 1022,
-   "b": 1023,
+   "a": 1034,
+   "b": 1044,
    "fugen": [
     {
-     "richtung": "Wartemodus → Zeitblindheit",
+     "richtung": "Auch meine Grenze gilt → Erleben anerkennen, ohne alles zu bestätigen",
      "vomSchloss": true,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Anerkennen und Nein sagen",
+     "grund": "der Originalbezeichnung „Anerkennen und Nein sagen“",
      "geltung": "redaktionell",
      "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Die Erfahrung einer anderen Person kann anerkannt werden, während die eigene Verfügbarkeit begrenzt bleibt.",
      "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
      "technisch": {
-      "fugeIndex": 1645,
-      "typ": "benannte_naehe",
-      "gegen": 1649
-     }
-    },
-    {
-     "richtung": "Zeitblindheit → Wartemodus",
-     "vomSchloss": false,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1649,
-      "typ": "benannte_naehe",
-      "gegen": 1645
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "wort": "Nähe",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "im Original als begrifflich benachbart beschrieben",
-       "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
-      }
-     ]
-    },
-    {
-     "art": "zusammenhang",
-     "artWort": "Zusammenhang",
-     "wort": "könnte zusammenhängen",
-     "ausBestand": false,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Wartemodus",
-       "satz": "Könnte zusammenhängen mit Zeitblindheit (Dauer unklar) und Aufgabenstarre (Start gelingt nicht).",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "Dauer unklar",
-       "auchImSatz": []
-      },
-      {
-       "woher": "Zeitblindheit",
-       "satz": "Könnte zusammenhängen mit Wartemodus (der Termin blockiert den Vormittag) und Delay Aversion (Warten ist schwer).",
-       "abschnitt": "Verwandt und zu unterscheiden",
-       "klammer": "der Termin blockiert den Vormittag",
-       "auchImSatz": []
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1022,
-   "b": 1017,
-   "fugen": [
-    {
-     "richtung": "Wartemodus → Heritabilität ist kein Schicksal",
-     "vomSchloss": true,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "im Original als begrifflich benachbart beschrieben",
-     "grund": "dem Originaltyp „benannte Nähe“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
-     "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
-     "technisch": {
-      "fugeIndex": 1648,
-      "typ": "benannte_naehe",
+      "fugeIndex": 1666,
+      "typ": "",
       "gegen": null
      }
     }
    ],
    "lesarten": [
     {
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "wort": "Nähe",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
      "ausBestand": true,
      "auchImSatz": [],
      "belege": [
       {
        "woher": "Bestandsfuge",
-       "satz": "im Original als begrifflich benachbart beschrieben",
+       "satz": "Anerkennen und Nein sagen",
        "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
+       "status": ""
       }
      ]
     }
@@ -3508,44 +2887,44 @@ window.SCHLOSS_DATEN = {
    "saetzeOhneFuge": []
   },
   {
-   "a": 1023,
-   "b": 1021,
+   "a": 1034,
+   "b": 1051,
    "fugen": [
     {
-     "richtung": "Zeitblindheit → Extreme frühe Umwelt und ADHD-ähnliche Symptome",
+     "richtung": "Auch meine Grenze gilt → Was kostet das scheinbare Gelingen?",
      "vomSchloss": true,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "muss unterschieden werden von",
-     "grund": "dem Originaltyp „nicht dasselbe“",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Was ist dauerhaft tragbar?",
+     "grund": "der Originalbezeichnung „Was ist dauerhaft tragbar?“",
      "geltung": "redaktionell",
      "geltungWort": "redaktionell zugeordnet",
-     "status": "proposed",
-     "statusWort": "vorgeschlagen",
-     "grenze": "",
-     "detail": "Vorgeschlagener redaktioneller Bezug; keine identische Ursache oder automatische Diagnose.",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Bei einer Zusage zählen auch Vorbereitung, Erholung und Arbeit der unterstützenden Person.",
      "quellen": [],
-     "herkunft": "Phänomenatlas ernst · vorgeschlagene Karte",
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
      "technisch": {
-      "fugeIndex": 1652,
-      "typ": "nicht_dasselbe",
+      "fugeIndex": 1667,
+      "typ": "",
       "gegen": null
      }
     }
    ],
    "lesarten": [
     {
-     "art": "abstand",
-     "artWort": "Abstand",
-     "wort": "Abstand",
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
      "ausBestand": true,
      "auchImSatz": [],
      "belege": [
       {
        "woher": "Bestandsfuge",
-       "satz": "muss unterschieden werden von",
+       "satz": "Was ist dauerhaft tragbar?",
        "geltung": "redaktionell zugeordnet",
-       "status": "vorgeschlagen"
+       "status": ""
       }
      ]
     }
@@ -3553,12 +2932,1407 @@ window.SCHLOSS_DATEN = {
    "saetzeOhneFuge": []
   },
   {
-   "a": 1013,
+   "a": 1035,
+   "b": 1034,
+   "fugen": [
+    {
+     "richtung": "Unterstützung bleibt ein Angebot → Auch meine Grenze gilt",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Freiwillige Unterstützung",
+     "grund": "der Originalbezeichnung „Freiwillige Unterstützung“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Ein Angebot bleibt Unterstützung, wenn es abgelehnt und seine Form gemeinsam begrenzt werden kann.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1668,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Freiwillige Unterstützung",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1035,
+   "b": 1051,
+   "fugen": [
+    {
+     "richtung": "Unterstützung bleibt ein Angebot → Was kostet das scheinbare Gelingen?",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Wirkung und Aufwand getrennt prüfen",
+     "grund": "der Originalbezeichnung „Wirkung und Aufwand getrennt prüfen“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Gemeinsame Hilfe wird nicht allein an sichtbarer Ruhe beurteilt. Ihre Bedingungen und Kosten gehören zur Rückschau.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1669,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Wirkung und Aufwand getrennt prüfen",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1025,
+   "b": 1047,
+   "fugen": [
+    {
+     "richtung": "Gefühle überrollen mich → Eine Pause bekommt eine tragbare Form",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Zwischen Impuls und Handlung",
+     "grund": "der Originalbezeichnung „Zwischen Impuls und Handlung“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Reflexionsangebot, kein Wirkversprechen und kein Ersatz für einen persönlich passenden Krisen- oder Behandlungsplan.",
+     "detail": "Eine gewählte Unterbrechung kann Raum für die Entscheidung über eine nächste Handlung anbieten.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1670,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Zwischen Impuls und Handlung",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1025,
+   "b": 1041,
+   "fugen": [
+    {
+     "richtung": "Gefühle überrollen mich → Was geschah — und was bedeutet es für mich?",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Gefühl und Bedeutung nebeneinander",
+     "grund": "der Originalbezeichnung „Gefühl und Bedeutung nebeneinander“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Ein Gefühl ist berichtetes Erleben; die Erklärung der auslösenden Situation bleibt zusätzlich prüfbar.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1671,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Gefühl und Bedeutung nebeneinander",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1026,
+   "b": 1045,
+   "fugen": [
+    {
+     "richtung": "Wut wird laut → Mein Anteil hat eine konkrete Form",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Gefühl und Verhalten unterscheiden",
+     "grund": "der Originalbezeichnung „Gefühl und Verhalten unterscheiden“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Ärger kann ernst genommen werden, während eine verletzende oder einschüchternde Handlung konkret verantwortet wird.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1672,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Gefühl und Verhalten unterscheiden",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1026,
+   "b": 1047,
+   "fugen": [
+    {
+     "richtung": "Wut wird laut → Eine Pause bekommt eine tragbare Form",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Einschüchternde Handlung unterbrechen",
+     "grund": "der Originalbezeichnung „Einschüchternde Handlung unterbrechen“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Eine Unterbrechung richtet sich auf konkretes Verhalten. Bei Bedrohung braucht Schutz eine eigenständige Entscheidung.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1673,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Einschüchternde Handlung unterbrechen",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1027,
+   "b": 1051,
+   "fugen": [
+    {
+     "richtung": "Innen fühlt es sich leer an → Was kostet das scheinbare Gelingen?",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Ruhig aussehen ist nicht entlastet sein",
+     "grund": "der Originalbezeichnung „Ruhig aussehen ist nicht entlastet sein“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Eine ruhige Außenwirkung sagt noch nicht, wie viel Kraft, Verbindung oder Orientierung eine Person erlebt.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1674,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Ruhig aussehen ist nicht entlastet sein",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1028,
+   "b": 1029,
+   "fugen": [
+    {
+     "richtung": "Rückzug hat mehrere mögliche Bedeutungen → Mir selbst oder der Welt fremd",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Ähnlicher Eindruck, verschiedene Fragen",
+     "grund": "der Originalbezeichnung „Ähnlicher Eindruck, verschiedene Fragen“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Wenig sprechen, weggehen und ein fremdes Selbsterleben können nebeneinander beschrieben werden, ohne sie gleichzusetzen.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1675,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Ähnlicher Eindruck, verschiedene Fragen",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1028,
+   "b": 1042,
+   "fugen": [
+    {
+     "richtung": "Rückzug hat mehrere mögliche Bedeutungen → Die andere Innenwelt bleibt eine Hypothese",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Keine Absicht aus Schweigen ableiten",
+     "grund": "der Originalbezeichnung „Keine Absicht aus Schweigen ableiten“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Ohne eigene Auskunft bleibt die Erklärung eines Rückzugs offen. Eine ausdrücklich gesetzte Grenze gilt dennoch.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1676,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Keine Absicht aus Schweigen ableiten",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1029,
+   "b": 1050,
+   "fugen": [
+    {
+     "richtung": "Mir selbst oder der Welt fremd → Ähnliches Erleben, verschiedene Zusammenhänge",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Verlauf statt Etikett vergleichen",
+     "grund": "der Originalbezeichnung „Verlauf statt Etikett vergleichen“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Beginn, Dauer und eigenes Erleben öffnen genauere Fragen als die äußere Ähnlichkeit.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1677,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Verlauf statt Etikett vergleichen",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1036,
+   "b": 1037,
+   "fugen": [
+    {
+     "richtung": "Eine Rückmeldung trifft sehr tief → Vom Fehler zum ganzen Selbst",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Von einer Episode zum ganzen Selbst",
+     "grund": "der Originalbezeichnung „Von einer Episode zum ganzen Selbst“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Der Vergleich fragt, ob aus einer konkreten Rückmeldung ein umfassendes negatives Selbsturteil entsteht.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1678,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Von einer Episode zum ganzen Selbst",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1036,
+   "b": 1043,
+   "fugen": [
+    {
+     "richtung": "Eine Rückmeldung trifft sehr tief → Wirkung hören, Absicht getrennt erklären",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Rückmeldung und Verletzung gesondert hören",
+     "grund": "der Originalbezeichnung „Rückmeldung und Verletzung gesondert hören“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Eine Sachfrage kann geklärt und eine verletzende Wirkung zugleich anerkannt werden.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1679,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Rückmeldung und Verletzung gesondert hören",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1036,
+   "b": 1041,
+   "fugen": [
+    {
+     "richtung": "Eine Rückmeldung trifft sehr tief → Was geschah — und was bedeutet es für mich?",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Den zusätzlichen Satz erkennen",
+     "grund": "der Originalbezeichnung „Den zusätzlichen Satz erkennen“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Was gesagt wurde und welches Urteil über sich selbst jemand daraus hört, bleiben gesondert sichtbar.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1680,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Den zusätzlichen Satz erkennen",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1037,
+   "b": 1045,
+   "fugen": [
+    {
+     "richtung": "Vom Fehler zum ganzen Selbst → Mein Anteil hat eine konkrete Form",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Konkreter Anteil statt Totalurteil",
+     "grund": "der Originalbezeichnung „Konkreter Anteil statt Totalurteil“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Eine veränderbare Handlung ist genauer als das Urteil, als ganzer Mensch falsch oder an allem schuld zu sein.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1681,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Konkreter Anteil statt Totalurteil",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1038,
+   "b": 1039,
+   "fugen": [
+    {
+     "richtung": "Mein Bild von mir wechselt → Ich bin mehr als die Rolle, in der du mich siehst",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Mehrere Perspektiven auf dieselbe Person",
+     "grund": "der Originalbezeichnung „Mehrere Perspektiven auf dieselbe Person“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Selbstbewertung, Fremdzuschreibung und situative Rolle dürfen nebeneinander stehen, ohne einen Menschen darauf zu reduzieren.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1682,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Mehrere Perspektiven auf dieselbe Person",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1038,
+   "b": 1030,
+   "fugen": [
+    {
+     "richtung": "Mein Bild von mir wechselt → Eine Antwort bleibt aus",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Eine offene Vergleichsfrage",
+     "grund": "der Originalbezeichnung „Eine offene Vergleichsfrage“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Die erfundene Situation lädt dazu ein, Selbstbewertung in unterschiedlichen Beziehungssituationen zu vergleichen.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1683,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Eine offene Vergleichsfrage",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1039,
+   "b": 1040,
+   "fugen": [
+    {
+     "richtung": "Ich bin mehr als die Rolle, in der du mich siehst → Welche Erwartung gilt hier eigentlich?",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Rollen tragen Erwartungen",
+     "grund": "der Originalbezeichnung „Rollen tragen Erwartungen“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Die Betrachtung fragt, welche Erwartung eine Rolle auslöst und welche Folgen eine Abweichung hat.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1684,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Rollen tragen Erwartungen",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1039,
+   "b": 1046,
+   "fugen": [
+    {
+     "richtung": "Ich bin mehr als die Rolle, in der du mich siehst → Missverständnis und Macht sind zwei Fragen",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Wer darf wen definieren?",
+     "grund": "der Originalbezeichnung „Wer darf wen definieren?“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Eine Zuschreibung und die Macht, Folgen daran zu knüpfen, sind verschiedene und gemeinsam relevante Ebenen.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1685,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Wer darf wen definieren?",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1041,
+   "b": 1042,
+   "fugen": [
+    {
+     "richtung": "Was geschah — und was bedeutet es für mich? → Die andere Innenwelt bleibt eine Hypothese",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Wissen und Vermutung kennzeichnen",
+     "grund": "der Originalbezeichnung „Wissen und Vermutung kennzeichnen“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Eine beobachtete Handlung erlaubt mehrere Deutungen; vermutete Gedanken sollen als Vermutung erkennbar bleiben.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1686,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Wissen und Vermutung kennzeichnen",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1042,
+   "b": 1043,
+   "fugen": [
+    {
+     "richtung": "Die andere Innenwelt bleibt eine Hypothese → Wirkung hören, Absicht getrennt erklären",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Fremde Absicht bleibt fremde Auskunft",
+     "grund": "der Originalbezeichnung „Fremde Absicht bleibt fremde Auskunft“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Die bekannte Wirkung ist kein unmittelbarer Beweis einer Absicht; eine erklärte Absicht beseitigt die Wirkung nicht.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1687,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Fremde Absicht bleibt fremde Auskunft",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1043,
+   "b": 1044,
+   "fugen": [
+    {
+     "richtung": "Wirkung hören, Absicht getrennt erklären → Erleben anerkennen, ohne alles zu bestätigen",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Erfahrung ernst nehmen",
+     "grund": "der Originalbezeichnung „Erfahrung ernst nehmen“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Eine Wirkung kann anerkannt werden, ohne jede Interpretation zu bestätigen oder eine bestimmte Gegenreaktion zu erwarten.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1688,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Erfahrung ernst nehmen",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1044,
+   "b": 1045,
+   "fugen": [
+    {
+     "richtung": "Erleben anerkennen, ohne alles zu bestätigen → Mein Anteil hat eine konkrete Form",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Anerkennung bekommt eine Handlung",
+     "grund": "der Originalbezeichnung „Anerkennung bekommt eine Handlung“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Wenn ein eigener Beitrag bekannt ist, kann er konkret benannt und verändert werden.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1689,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Anerkennung bekommt eine Handlung",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1045,
+   "b": 1048,
+   "fugen": [
+    {
+     "richtung": "Mein Anteil hat eine konkrete Form → Wiedergutmachung gewährt keinen Anspruch auf Antwort",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Verändern ohne Gegenleistung",
+     "grund": "der Originalbezeichnung „Verändern ohne Gegenleistung“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Die eigene Veränderung darf nicht davon abhängig gemacht werden, dass eine andere Person sofort antwortet oder versöhnt ist.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1690,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Verändern ohne Gegenleistung",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1046,
+   "b": 1040,
+   "fugen": [
+    {
+     "richtung": "Missverständnis und Macht sind zwei Fragen → Welche Erwartung gilt hier eigentlich?",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Verständigung und Entscheidungsrecht",
+     "grund": "der Originalbezeichnung „Verständigung und Entscheidungsrecht“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Nicht jede Schwierigkeit ist durch bessere Übersetzung lösbar. Wer Regeln setzt und Nachteile trägt, bleibt eine zusätzliche Frage.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1691,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Verständigung und Entscheidungsrecht",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1047,
    "b": 1035,
    "fugen": [
     {
-     "richtung": "Body Doubling → Unterstützung bleibt ein Angebot",
+     "richtung": "Eine Pause bekommt eine tragbare Form → Unterstützung bleibt ein Angebot",
      "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Später gemeinsam prüfen",
+     "grund": "der Originalbezeichnung „Später gemeinsam prüfen“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Wenn beide wieder Kontakt möchten, kann besprochen werden, welche Unterstützung in einer angespannten Situation willkommen ist.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1692,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Später gemeinsam prüfen",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1049,
+   "b": 1050,
+   "fugen": [
+    {
+     "richtung": "Eine Geschichte hat mehrere Einflüsse → Ähnliches Erleben, verschiedene Zusammenhänge",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Geschichten nicht vereinheitlichen",
+     "grund": "der Originalbezeichnung „Geschichten nicht vereinheitlichen“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Beziehungsgeschichte, Entwicklungsprofil und heutige Belastung werden gemeinsam betrachtet, ohne einander vollständig zu erklären.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1693,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Geschichten nicht vereinheitlichen",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1049,
+   "b": 1045,
+   "fugen": [
+    {
+     "richtung": "Eine Geschichte hat mehrere Einflüsse → Mein Anteil hat eine konkrete Form",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Entstehung und aktuelle Handlung trennen",
+     "grund": "der Originalbezeichnung „Entstehung und aktuelle Handlung trennen“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Offene Fragen zur Entwicklung verhindern nicht, dass eine heutige verletzende Handlung konkret benannt wird.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1694,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Entstehung und aktuelle Handlung trennen",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1050,
+   "b": 1052,
+   "fugen": [
+    {
+     "richtung": "Ähnliches Erleben, verschiedene Zusammenhänge → Unterstützung gemeinsam passend machen",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Beobachtungen in die fachliche Klärung mitnehmen",
+     "grund": "der Originalbezeichnung „Beobachtungen in die fachliche Klärung mitnehmen“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Eigene Beschreibungen zu Beginn, Verlauf und Beeinträchtigung können das Gespräch vorbereiten; sie ersetzen keine Diagnostik.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1695,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Beobachtungen in die fachliche Klärung mitnehmen",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1051,
+   "b": 1052,
+   "fugen": [
+    {
+     "richtung": "Was kostet das scheinbare Gelingen? → Unterstützung gemeinsam passend machen",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Alltagsfolgen als gemeinsame Frage",
+     "grund": "der Originalbezeichnung „Alltagsfolgen als gemeinsame Frage“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Die Planung kann neben Beschwerden auch Autonomie, Belastung und die Tragbarkeit konkreter Unterstützung besprechen.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1696,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Alltagsfolgen als gemeinsame Frage",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1052,
+   "b": 1045,
+   "fugen": [
+    {
+     "richtung": "Unterstützung gemeinsam passend machen → Mein Anteil hat eine konkrete Form",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Ziele als konkrete Veränderungen",
+     "grund": "der Originalbezeichnung „Ziele als konkrete Veränderungen“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Eine persönliche Zielvereinbarung kann benennen, welches Verhalten und welcher Alltag sich verändern sollen.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1697,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Ziele als konkrete Veränderungen",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1052,
+   "b": 1035,
+   "fugen": [
+    {
+     "richtung": "Unterstützung gemeinsam passend machen → Unterstützung bleibt ein Angebot",
+     "vomSchloss": true,
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "label": "Beziehungshilfe hat einen eigenen Rahmen",
+     "grund": "der Originalbezeichnung „Beziehungshilfe hat einen eigenen Rahmen“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "",
+     "statusWort": "",
+     "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+     "detail": "Freiwillige Unterstützung im Alltag und strukturierte Behandlung können nebeneinander stehen. Freundschaft wird damit nicht zum Therapieauftrag.",
+     "quellen": [],
+     "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+     "technisch": {
+      "fugeIndex": 1698,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "einordnung",
+     "artWort": "Einordnung",
+     "wort": "Einordnung",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "Beziehungshilfe hat einen eigenen Rahmen",
+       "geltung": "redaktionell zugeordnet",
+       "status": ""
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1035,
+   "b": 1013,
+   "fugen": [
+    {
+     "richtung": "Body Doubling → Unterstützung bleibt ein Angebot",
+     "vomSchloss": false,
      "art": "aussage",
      "artWort": "Aussage",
      "label": "stellt Formen freiwilliger Unterstützung gegenüber",
@@ -3621,161 +4395,49 @@ window.SCHLOSS_DATEN = {
    "saetzeOhneFuge": []
   },
   {
-   "a": 1016,
-   "b": 160,
+   "a": 1025,
+   "b": 562,
    "fugen": [
     {
-     "richtung": "Gen–Umwelt-Korrelation (rGE) → Gen-Umwelt-Korrelation",
-     "vomSchloss": true,
-     "art": "einordnung",
-     "artWort": "Einordnung",
-     "label": "vertieft denselben Fachbegriff",
-     "grund": "der Originalbezeichnung „vertieft denselben Fachbegriff“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "redaktionelle-zuordnung",
-     "statusWort": "redaktionelle Zuordnung",
-     "grenze": "Statistische Zusammenhänge rekonstruieren keine persönliche Lebensgeschichte. Evozierende Zusammenhänge begründen weder eine Verantwortung des Kindes für erlittene Behandlung noch eine einzelne gesicherte Entwicklungsursache.",
-     "detail": "Die ADHS-Karte trennt passive, aktive und evozierende Gen-Umwelt-Korrelation. Der Fundus erläutert dazu konkrete statistische Befunde und die Grenzen von Trio- und Vermittlungsanalysen. Der Rückweg erweitert einen Begriff um bezeichnete Forschungsdesigns.",
-     "quellen": [
-      {
-       "titel": "Thapar et al. 2013",
-       "kurz": "Thapar et al. 2013",
-       "art": "Übersicht",
-       "zitat": "",
-       "technisch": {
-        "schluessel": "adhs-source:a0faf51c33f5",
-        "url": "https://doi.org/10.1111/j.1469-7610.2012.02611.x",
-        "titelBestand": "Thapar et al. 2013"
-       }
-      },
-      {
-       "titel": "Østergaard et al. 2020",
-       "kurz": "Østergaard et al. 2020",
-       "art": "Studie",
-       "zitat": "",
-       "technisch": {
-        "schluessel": "adhs-source:1763b56b73b9",
-        "url": "https://doi.org/10.1038/s41398-020-01019-6",
-        "titelBestand": "Østergaard et al. 2020"
-       }
-      },
-      {
-       "titel": "Youth Polygenic Scores, Youth ADHD Symptoms, and Parenting Dimensions: An Evocative Gene-Environment Correlation Study",
-       "kurz": "Youth Polygenic Scores, Youth ADHD Symptoms, and Parenting Dimensions: An Evocative Gene-Environment Correlation Study",
-       "art": "Quelle",
-       "zitat": "",
-       "technisch": {
-        "schluessel": "fundus-source:adhs-evocative-rge-2023",
-        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10560546/",
-        "titelBestand": "Youth Polygenic Scores, Youth ADHD Symptoms, and Parenting Dimensions: An Evocative Gene-Environment Correlation Study"
-       }
-      },
-      {
-       "titel": "Investigating Direct and Indirect Genetic Effects in Attention-Deficit/Hyperactivity Disorder Using Parent-Offspring Trios",
-       "kurz": "Investigating Direct and Indirect Genetic Effects in Attention-Deficit/Hyperactivity Disorder Using Parent-Offspring Trios",
-       "art": "Quelle",
-       "zitat": "",
-       "technisch": {
-        "schluessel": "fundus-source:adhs-trios-direct-indirect-2023",
-        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10369485/",
-        "titelBestand": "Investigating Direct and Indirect Genetic Effects in Attention-Deficit/Hyperactivity Disorder Using Parent-Offspring Trios"
-       }
-      }
-     ],
-     "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
-     "technisch": {
-      "fugeIndex": 1735,
-      "typ": "",
-      "gegen": null
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "einordnung",
-     "artWort": "Einordnung",
-     "wort": "Einordnung",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "vertieft denselben Fachbegriff",
-       "geltung": "redaktionell zugeordnet",
-       "status": "redaktionelle Zuordnung"
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1017,
-   "b": 152,
-   "fugen": [
-    {
-     "richtung": "Heritabilität ist kein Schicksal → Erblichkeit in Populationen",
+     "richtung": "Gefühle überrollen mich → Anspannung und Handlungsspielraum",
      "vomSchloss": true,
      "art": "aussage",
      "artWort": "Aussage",
-     "label": "präzisiert einen Populationsbegriff",
-     "grund": "der belegten Originalaussage „präzisiert einen Populationsbegriff“",
+     "label": "illustriert einen wählbaren Handlungsspielraum",
+     "grund": "der belegten Originalaussage „illustriert einen wählbaren Handlungsspielraum“",
      "geltung": "redaktionell",
      "geltungWort": "redaktionell zugeordnet",
      "status": "redaktionelle-zuordnung",
      "statusWort": "redaktionelle Zuordnung",
-     "grenze": "Heritabilität ist kein genetischer Prozentanteil einer einzelnen Person, kein Maß der Veränderbarkeit und keine individuelle Prognose.",
-     "detail": "Beide Einträge behandeln den Unterschied zwischen Heritabilität in einer untersuchten Population und Aussagen über eine einzelne Person. Die Randphänomen-Karte erläutert verbreitete Fehlinterpretationen; der Fundus ergänzt Entwicklungs- und Zwillingsbefunde.",
+     "grenze": "Die Szene ist keine persönliche Fallbeschreibung und kein Wirksamkeitsnachweis. Eine Pause muss zur Situation passen und verpflichtet die andere Person nicht, alles auszuhalten.",
+     "detail": "Die fiktive Absageszene trennt körperlichen Druck, die Bedeutung einer Nachricht und den Impuls zu antworten. Die Werkstattkarte öffnet die Frage nach einer selbst gewählten Pause bei hoher Erregung. Die Verbindung macht aus der allgemeinen Frage einen konkreten, frei prüfbaren Ablauf.",
      "quellen": [
       {
-       "titel": "Faraone & Larsson 2019 Mol Psychiatry",
-       "kurz": "Faraone & Larsson 2019 Mol Psychiatry",
-       "art": "Übersicht",
-       "zitat": "",
-       "technisch": {
-        "schluessel": "adhs-source:ca613bf3efe5",
-        "url": "https://doi.org/10.1038/s41380-018-0070-0",
-        "titelBestand": "Faraone & Larsson 2019 Mol Psychiatry"
-       }
-      },
-      {
-       "titel": "Larsson et al. 2014 Psychol Med",
-       "kurz": "Larsson et al. 2014 Psychol Med",
-       "art": "Studie",
-       "zitat": "",
-       "technisch": {
-        "schluessel": "adhs-source:c5a276db39cd",
-        "url": "https://doi.org/10.1017/S0033291713002493",
-        "titelBestand": "Larsson et al. 2014 Psychol Med"
-       }
-      },
-      {
-       "titel": "Visscher, Hill & Wray: Heritability in the genomics era — concepts and misconceptions",
-       "kurz": "Visscher, Hill & Wray: Heritability in the genomics era — concepts and misconceptions",
+       "titel": "Psychologische Therapien bei Borderline · Cochrane-Übersicht",
+       "kurz": "Psychologische Therapien bei Borderline · Cochrane-Übersicht",
        "art": "Quelle",
        "zitat": "",
        "technisch": {
-        "schluessel": "fundus-source:grundlagen-01",
-        "url": "https://doi.org/10.1038/nrg2322",
-        "titelBestand": "Visscher, Hill & Wray: Heritability in the genomics era — concepts and misconceptions"
+        "schluessel": "cochrane-2020",
+        "url": "https://www.cochrane.org/evidence/CD012955_psychological-therapies-people-borderline-personality-disorder",
+        "titelBestand": "Psychologische Therapien bei Borderline · Cochrane-Übersicht"
        }
       },
       {
-       "titel": "Developmental Twin Study of Attention Problems: High Heritabilities Throughout Development",
-       "kurz": "Developmental Twin Study of Attention Problems: High Heritabilities Throughout Development",
+       "titel": "National Center for PTSD · Kommunikation in Familien",
+       "kurz": "National Center for PTSD · Kommunikation in Familien",
        "art": "Quelle",
        "zitat": "",
        "technisch": {
-        "schluessel": "fundus-source:adhs-twin-development-2013",
-        "url": "https://jamanetwork.com/journals/jamapsychiatry/fullarticle/1555120",
-        "titelBestand": "Developmental Twin Study of Attention Problems: High Heritabilities Throughout Development"
+        "schluessel": "relationship-source:va",
+        "url": "https://www.ptsd.va.gov/family/how_family_member.asp",
+        "titelBestand": "National Center for PTSD · Kommunikation in Familien"
        }
       }
      ],
      "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
      "technisch": {
-      "fugeIndex": 1736,
+      "fugeIndex": 1741,
       "typ": "",
       "gegen": null
      }
@@ -3791,7 +4453,7 @@ window.SCHLOSS_DATEN = {
      "belege": [
       {
        "woher": "Bestandsfuge",
-       "satz": "präzisiert einen Populationsbegriff",
+       "satz": "illustriert einen wählbaren Handlungsspielraum",
        "geltung": "redaktionell zugeordnet",
        "status": "redaktionelle Zuordnung"
       }
@@ -3801,49 +4463,38 @@ window.SCHLOSS_DATEN = {
    "saetzeOhneFuge": []
   },
   {
-   "a": 1018,
-   "b": 939,
+   "a": 1041,
+   "b": 560,
    "fugen": [
     {
-     "richtung": "Hyperfokus → Hyperfokus",
+     "richtung": "Was geschah — und was bedeutet es für mich? → Beobachtung und Deutung",
      "vomSchloss": true,
      "art": "aussage",
      "artWort": "Aussage",
-     "label": "stellt unterschiedliche Begriffsfassungen gegenüber",
-     "grund": "der belegten Originalaussage „stellt unterschiedliche Begriffsfassungen gegenüber“",
+     "label": "illustriert dieselbe Unterscheidung",
+     "grund": "der belegten Originalaussage „illustriert dieselbe Unterscheidung“",
      "geltung": "redaktionell",
      "geltungWort": "redaktionell zugeordnet",
      "status": "redaktionelle-zuordnung",
      "statusWort": "redaktionelle Zuordnung",
-     "grenze": "Der bibliografische Kontakt im Phänomenkatalog ist ausdrücklich kein geprüfter Studienbefund. Die Verbindung belegt weder einen diagnostischen Status noch eine universelle Stärke oder eine einheitliche Ursache.",
-     "detail": "Die ADHS-Karte beschreibt anhaltendes Aufgehen in einer Tätigkeit und begrenzte Forschungsabgrenzung. Der Phänomenkatalog führt eine knappe alternative Beschreibung sehr intensiver Bindung an eine Tätigkeit. Beide Fassungen bleiben als unterschiedliche Zugänge zum verwendeten Begriff erkennbar.",
+     "grenze": "Mehrere mögliche Erklärungen sind nicht automatisch gleich wahrscheinlich. Die Unterscheidung hebt tatsächliche Wirkungen und überprüfbare Grenzverletzungen nicht auf.",
+     "detail": "Die fiktive Szene unterscheidet ein ausgebliebenes Grüßen und den Blick aufs Telefon von der Zuschreibung einer demonstrativen Absicht. Die Werkstattkarte fragt allgemeiner, was eine Kamera erfassen könnte und was eine veränderbare Deutung bleibt.",
      "quellen": [
       {
-       "titel": "ADDitude",
-       "kurz": "ADDitude",
-       "art": "Klinik",
-       "zitat": "",
-       "technisch": {
-        "schluessel": "adhs-source:22ead006b401",
-        "url": "https://www.additudemag.com/understanding-adhd-hyperfocus/",
-        "titelBestand": "ADDitude / NLM cited_text 30.08.2026"
-       }
-      },
-      {
-       "titel": "Determinants of hyperfocus in the context of escapism and gaming motivations, flow, and ADHD symptoms among adult video gamers.",
-       "kurz": "Determinants of hyperfocus in the context of escapism and gaming motivations, flow, and ADHD symptoms among adult video gamers.",
+       "titel": "National Center for PTSD · Kommunikation in Familien",
+       "kurz": "National Center for PTSD · Kommunikation in Familien",
        "art": "Quelle",
        "zitat": "",
        "technisch": {
-        "schluessel": "research-source:source:pmid:42229071",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/42229071/",
-        "titelBestand": "Determinants of hyperfocus in the context of escapism and gaming motivations, flow, and ADHD symptoms among adult video gamers."
+        "schluessel": "relationship-source:va",
+        "url": "https://www.ptsd.va.gov/family/how_family_member.asp",
+        "titelBestand": "National Center for PTSD · Kommunikation in Familien"
        }
       }
      ],
      "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
      "technisch": {
-      "fugeIndex": 1737,
+      "fugeIndex": 1742,
       "typ": "",
       "gegen": null
      }
@@ -3859,7 +4510,7 @@ window.SCHLOSS_DATEN = {
      "belege": [
       {
        "woher": "Bestandsfuge",
-       "satz": "stellt unterschiedliche Begriffsfassungen gegenüber",
+       "satz": "illustriert dieselbe Unterscheidung",
        "geltung": "redaktionell zugeordnet",
        "status": "redaktionelle Zuordnung"
       }
@@ -3869,174 +4520,242 @@ window.SCHLOSS_DATEN = {
    "saetzeOhneFuge": []
   },
   {
-   "a": 1019,
-   "b": 309,
+   "a": 1042,
+   "b": 565,
    "fugen": [
     {
-     "richtung": "Reizfilterschwäche → Reize überfluten mich",
+     "richtung": "Die andere Innenwelt bleibt eine Hypothese → Mehr als eine mögliche Innenwelt",
      "vomSchloss": true,
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "label": "ähnelt im beschriebenen Erleben",
-     "grund": "der Originalbezeichnung „ähnelt im beschriebenen Erleben“",
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "illustriert vorsichtige Perspektivübernahme",
+     "grund": "der belegten Originalaussage „illustriert vorsichtige Perspektivübernahme“",
      "geltung": "redaktionell",
      "geltungWort": "redaktionell zugeordnet",
      "status": "redaktionelle-zuordnung",
      "statusWort": "redaktionelle Zuordnung",
-     "grenze": "Ähnliches Erleben beweist keine identische Ursache und weder ADHS noch Autismus. Die in der ADHS-Karte beschriebene kleine, überwiegend elternberichtete Studienbasis ist nicht mit einer eindeutigen diagnostischen Zuordnung gleichzusetzen.",
-     "detail": "Die ADHS-Randkarte beschreibt Überforderung durch Geräusche, Licht und mehrere gleichzeitige Reize. Der Neuroatlas führt sensorische Überlastung mit einer Autismusperspektive. Der Vergleich erlaubt, Ähnlichkeit des Erlebens und verschiedene Entwicklungs- und Lebenskontexte nebeneinander zu untersuchen.",
+     "grenze": "Die mögliche Unkenntnis einer Absicht entkräftet die erlebte Wirkung nicht. Mentalisieren bedeutet weder Gedankenlesen noch die Pflicht, trotz Gefährdung weiter im Kontakt zu bleiben.",
+     "detail": "Die Szene zeigt eine verletzende Kritik und die darüber hinausgehende Zuschreibung einer Verletzungsabsicht. Die Werkstattkarte behandelt fremde Absichten als Hypothesen und fragt nach Alternativen sowie Gegenbelegen. Beide Zugänge verbinden Selbstbericht, Wirkung und offene Innenperspektive.",
      "quellen": [
       {
-       "titel": "Ghanizadeh Abstract",
-       "kurz": "Ghanizadeh Abstract",
-       "art": "Studie",
+       "titel": "Psychologische Therapien bei Borderline · Cochrane-Übersicht",
+       "kurz": "Psychologische Therapien bei Borderline · Cochrane-Übersicht",
+       "art": "Quelle",
        "zitat": "",
        "technisch": {
-        "schluessel": "adhs-source:52346ef12a5a",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/21852983/",
-        "titelBestand": "Ghanizadeh Abstract"
+        "schluessel": "cochrane-2020",
+        "url": "https://www.cochrane.org/evidence/CD012955_psychological-therapies-people-borderline-personality-disorder",
+        "titelBestand": "Psychologische Therapien bei Borderline · Cochrane-Übersicht"
        }
       },
       {
-       "titel": "Sensory differences",
-       "kurz": "Sensory differences",
+       "titel": "National Center for PTSD · Kommunikation in Familien",
+       "kurz": "National Center for PTSD · Kommunikation in Familien",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "relationship-source:va",
+        "url": "https://www.ptsd.va.gov/family/how_family_member.asp",
+        "titelBestand": "National Center for PTSD · Kommunikation in Familien"
+       }
+      }
+     ],
+     "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
+     "technisch": {
+      "fugeIndex": 1743,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "illustriert vorsichtige Perspektivübernahme",
+       "geltung": "redaktionell zugeordnet",
+       "status": "redaktionelle Zuordnung"
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1044,
+   "b": 563,
+   "fugen": [
+    {
+     "richtung": "Erleben anerkennen, ohne alles zu bestätigen → Erleben anerkennen",
+     "vomSchloss": true,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "illustriert Anerkennung ohne Zustimmung",
+     "grund": "der belegten Originalaussage „illustriert Anerkennung ohne Zustimmung“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Anerkennung beweist die behauptete Absicht nicht und verlangt keine Zustimmung oder Grenzaufgabe. Sie ist kein Verfahren, mit dem sich eine bestimmte Reaktion der anderen Person garantieren lässt.",
+     "detail": "Die Szene trennt den Schmerz über ein Stehengelassenwerden von einer behaupteten Absicht. Die Werkstattkarte zeigt denselben Raum zwischen dem Anerkennen von Erleben, offenen Fakten und eigenen Grenzen.",
+     "quellen": [
+      {
+       "titel": "National Center for PTSD · Kommunikation in Familien",
+       "kurz": "National Center for PTSD · Kommunikation in Familien",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "relationship-source:va",
+        "url": "https://www.ptsd.va.gov/family/how_family_member.asp",
+        "titelBestand": "National Center for PTSD · Kommunikation in Familien"
+       }
+      }
+     ],
+     "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
+     "technisch": {
+      "fugeIndex": 1744,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "illustriert Anerkennung ohne Zustimmung",
+       "geltung": "redaktionell zugeordnet",
+       "status": "redaktionelle Zuordnung"
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1034,
+   "b": 561,
+   "fugen": [
+    {
+     "richtung": "Auch meine Grenze gilt → Nähe, Freiheit und Grenzen",
+     "vomSchloss": true,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "verbindet Nähe mit freiwilliger Verfügbarkeit",
+     "grund": "der belegten Originalaussage „verbindet Nähe mit freiwilliger Verfügbarkeit“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Eine Kapazitätsgrenze ist kein Beweis mangelnder Bindung. Die Texte bestimmen keine allgemeine richtige Menge an Nähe und weisen keiner Person eine Pflicht zu dauernder Verfügbarkeit zu.",
+     "detail": "Die Nachtszene behandelt den Wunsch nach Unterstützung und den eigenen Schlafbedarf. Die Werkstattkarte fragt nach freiwilliger Nähe und dem Recht auf Abstand. Der gemeinsame Blick macht konkrete Zusagen und Belastungsgrenzen besprechbar.",
+     "quellen": [
+      {
+       "titel": "Family Connections · Unterstützung für Angehörige",
+       "kurz": "Family Connections · Unterstützung für Angehörige",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "family-2024",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11659101/",
+        "titelBestand": "Family Connections · Unterstützung für Angehörige"
+       }
+      },
+      {
+       "titel": "Traumainformierte Praxis · Sicherheit und Wahlmöglichkeiten",
+       "kurz": "Traumainformierte Praxis · Sicherheit und Wahlmöglichkeiten",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "relationship-source:gov",
+        "url": "https://www.gov.uk/government/publications/working-definition-of-trauma-informed-practice/working-definition-of-trauma-informed-practice",
+        "titelBestand": "Traumainformierte Praxis · Sicherheit und Wahlmöglichkeiten"
+       }
+      }
+     ],
+     "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
+     "technisch": {
+      "fugeIndex": 1745,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "verbindet Nähe mit freiwilliger Verfügbarkeit",
+       "geltung": "redaktionell zugeordnet",
+       "status": "redaktionelle Zuordnung"
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1037,
+   "b": 339,
+   "fugen": [
+    {
+     "richtung": "Vom Fehler zum ganzen Selbst → Scham oder Schuld",
+     "vomSchloss": true,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "stellt Verantwortung und Selbsturteil gegenüber",
+     "grund": "der belegten Originalaussage „stellt Verantwortung und Selbsturteil gegenüber“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Ein Schamgefühl diagnostiziert weder PTSD, komplexe PTSD, Depression noch eine Essstörung. Konkrete Verantwortung und eine pauschale Selbstverurteilung sind unterschiedliche Fragen.",
+     "detail": "Die fiktive Szene unterscheidet einen konkreten scharfen Satz von einem Urteil über den ganzen persönlichen Wert. Der Neuroatlas ordnet Scham und Schuld unterschiedlichen möglichen Kontexten zu. Die Verbindung erlaubt, Verantwortungsübernahme, berichtetes Erleben und diagnostische Fragen getrennt zu halten.",
+     "quellen": [
+      {
+       "titel": "Post-Traumatic Stress Disorder",
+       "kurz": "Post-Traumatic Stress Disorder",
        "art": "Gesundheitsinformation",
        "zitat": "",
        "technisch": {
-        "schluessel": "neuro-source:nhs-sensory",
-        "url": "https://www.autismcentral.nhs.uk/guidance/sensory-differences",
-        "titelBestand": "Sensory differences"
-       }
-      }
-     ],
-     "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
-     "technisch": {
-      "fugeIndex": 1738,
-      "typ": "",
-      "gegen": null
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "annaeherung",
-     "artWort": "Nähe",
-     "wort": "Nähe",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "ähnelt im beschriebenen Erleben",
-       "geltung": "redaktionell zugeordnet",
-       "status": "redaktionelle Zuordnung"
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1020,
-   "b": 860,
-   "fugen": [
-    {
-     "richtung": "Rejection Sensitive Dysphoria → Zurückweisungssensitivität",
-     "vomSchloss": true,
-     "art": "abstand",
-     "artWort": "Abstand",
-     "label": "muss begrifflich unterschieden werden von",
-     "grund": "der Originalbezeichnung „muss begrifflich unterschieden werden von“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "redaktionelle-zuordnung",
-     "statusWort": "redaktionelle Zuordnung",
-     "grenze": "RSD ist hier keine eigenständige anerkannte Diagnose. Ein Fragebogen zu Zurückweisungssensitivität validiert nicht automatisch RSD; die Phänomenkarte besitzt nach Umfangsbegrenzung keinen direkten Literaturkontakt.",
-     "detail": "Die ADHS-Karte unterscheidet Rejection Sensitive Dysphoria als verbreiteten Ausdruck von etablierteren Konstrukten der Zurückweisungssensitivität und allgemeiner Emotionsdysregulation. Die knappe Phänomenkarte beschreibt Reaktionen auf erwartete oder wahrgenommene Zurückweisung. Der Vergleich hält die unterschiedlichen Begriffsebenen offen.",
-     "quellen": [
-      {
-       "titel": "Cleveland Clinic",
-       "kurz": "Cleveland Clinic",
-       "art": "Klinik",
-       "zitat": "",
-       "technisch": {
-        "schluessel": "adhs-source:5e174fe7afa7",
-        "url": "https://my.clevelandclinic.org/health/diseases/24099-rejection-sensitive-dysphoria-rsd",
-        "titelBestand": "Cleveland Clinic"
-       }
-      }
-     ],
-     "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
-     "technisch": {
-      "fugeIndex": 1739,
-      "typ": "",
-      "gegen": null
-     }
-    }
-   ],
-   "lesarten": [
-    {
-     "art": "abstand",
-     "artWort": "Abstand",
-     "wort": "Abstand",
-     "ausBestand": true,
-     "auchImSatz": [],
-     "belege": [
-      {
-       "woher": "Bestandsfuge",
-       "satz": "muss begrifflich unterschieden werden von",
-       "geltung": "redaktionell zugeordnet",
-       "status": "redaktionelle Zuordnung"
-      }
-     ]
-    }
-   ],
-   "saetzeOhneFuge": []
-  },
-  {
-   "a": 1023,
-   "b": 816,
-   "fugen": [
-    {
-     "richtung": "Zeitblindheit → Zeitblindheits-Bericht",
-     "vomSchloss": true,
-     "art": "aussage",
-     "artWort": "Aussage",
-     "label": "ordnet einen Alltagsbegriff ein",
-     "grund": "der belegten Originalaussage „ordnet einen Alltagsbegriff ein“",
-     "geltung": "redaktionell",
-     "geltungWort": "redaktionell zugeordnet",
-     "status": "redaktionelle-zuordnung",
-     "statusWort": "redaktionelle Zuordnung",
-     "grenze": "Alltagserfahrungen und Laboraufgaben sind keine identischen Messgrößen. Der bibliografische Kontakt der Phänomenkarte ist kein geprüfter Studienbefund; aus dem Begriff folgt keine persönliche Diagnose.",
-     "detail": "Die ADHS-Karte trennt Erfahrungen mit Zeitgefühl, Zukunft und rechtzeitigem Beginn von eng operationalisierten Aufgaben zur Zeitverarbeitung. Die Phänomenkarte bewahrt Zeitblindheit als Community- und Fachbegriff. Beide Einstiege führen zu einer präziseren Frage danach, welcher Aspekt von Zeit gerade gemeint ist.",
-     "quellen": [
-      {
-       "titel": "Noreika et al. 2013",
-       "kurz": "Noreika et al. 2013",
-       "art": "Studie",
-       "zitat": "",
-       "technisch": {
-        "schluessel": "adhs-source:cfb32f094c24",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/23022430/",
-        "titelBestand": "Noreika et al. 2013"
+        "schluessel": "neuro-source:nimh-ptsd",
+        "url": "https://www.nimh.nih.gov/health/publications/post-traumatic-stress-disorder-ptsd",
+        "titelBestand": "Post-Traumatic Stress Disorder"
        }
       },
       {
-       "titel": "The Time We See: ADHD, Neuroqueer Temporality, and Graphic Medicine.",
-       "kurz": "The Time We See: ADHD, Neuroqueer Temporality, and Graphic Medicine.",
+       "titel": "Post-traumatic stress disorder · NG116",
+       "kurz": "Post-traumatic stress disorder · NG116",
        "art": "Quelle",
        "zitat": "",
        "technisch": {
-        "schluessel": "research-source:source:pmid:40059708",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/40059708/",
-        "titelBestand": "The Time We See: ADHD, Neuroqueer Temporality, and Graphic Medicine."
+        "schluessel": "neuro-source:nice-ptsd",
+        "url": "https://www.nice.org.uk/guidance/ng116/chapter/recommendations",
+        "titelBestand": "Post-traumatic stress disorder · NG116"
        }
       }
      ],
      "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
      "technisch": {
-      "fugeIndex": 1740,
+      "fugeIndex": 1746,
       "typ": "",
       "gegen": null
      }
@@ -4052,7 +4771,7 @@ window.SCHLOSS_DATEN = {
      "belege": [
       {
        "woher": "Bestandsfuge",
-       "satz": "ordnet einen Alltagsbegriff ein",
+       "satz": "stellt Verantwortung und Selbsturteil gegenüber",
        "geltung": "redaktionell zugeordnet",
        "status": "redaktionelle Zuordnung"
       }
@@ -4062,71 +4781,709 @@ window.SCHLOSS_DATEN = {
    "saetzeOhneFuge": []
   },
   {
-   "a": 1018,
-   "b": 1222,
+   "a": 1029,
+   "b": 274,
    "fugen": [
     {
-     "richtung": "Aufmerksamkeit braucht einen Verlauf → Hyperfokus",
+     "richtung": "Mir selbst oder der Welt fremd → Dissoziative Störungsbilder",
+     "vomSchloss": true,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "öffnet differenzierende Fragen",
+     "grund": "der belegten Originalaussage „öffnet differenzierende Fragen“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Die fiktive Szene beweist weder eine dissoziative Störung noch eine verborgene Traumageschichte. Neue, wiederkehrende oder auffällige Zustände können eine passende fachliche und körperliche Abklärung brauchen.",
+     "detail": "Die Szene beschreibt einen fremd wirkenden Raum und eine fremd klingende eigene Stimme nach Stress. Der Neuroatlas-Kontext unterscheidet Selbst-, Umwelt- und Erinnerungserleben und fragt nach Beginn, Verlauf und anderen Erklärungen.",
+     "quellen": [
+      {
+       "titel": "Dissociative disorders",
+       "kurz": "Dissociative disorders",
+       "art": "Gesundheitsinformation",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "neuro-source:nhs-dissociation",
+        "url": "https://www.nhs.uk/mental-health/conditions/dissociative-disorders/",
+        "titelBestand": "Dissociative disorders"
+       }
+      }
+     ],
+     "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
+     "technisch": {
+      "fugeIndex": 1747,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "öffnet differenzierende Fragen",
+       "geltung": "redaktionell zugeordnet",
+       "status": "redaktionelle Zuordnung"
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1051,
+   "b": 219,
+   "fugen": [
+    {
+     "richtung": "Was kostet das scheinbare Gelingen? → Unterstützung und versteckte Kosten",
+     "vomSchloss": true,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "vergleicht Ergebnis und zusätzlichen Aufwand",
+     "grund": "der belegten Originalaussage „vergleicht Ergebnis und zusätzlichen Aufwand“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Eine Befragungsstudie mit Studierenden ist kein Beleg für die Ursache individueller Beziehungskosten und keine klinische ADHS- oder Autismusstudie. Dies ist ein ausdrücklich konzeptioneller Vergleich, keine gemeinsame Wirkungsmessung.",
+     "detail": "Die fiktive Szene macht den Unterschied zwischen einem von außen gelungenen Treffen und berichteten Erholungskosten sichtbar. Der Fundus-Anschluss fragt nach der zusätzlichen Last von Erhebungen und trennt Teilnahme, Belastung und Aussagekraft. Beide richten den Blick auf Kosten, die ein sichtbares Ergebnis allein nicht beschreibt.",
+     "quellen": [
+      {
+       "titel": "The effects of assessment intensity on participant burden, compliance, within-person variance, and within-person relationships in ambulatory assessment",
+       "kurz": "The effects of assessment intensity on participant burden, compliance, within-person variance, and within-person relationships in ambulatory assessment",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "fundus-source:anschluss-ema-2022",
+        "url": "https://link.springer.com/article/10.3758/s13428-021-01683-6",
+        "titelBestand": "The effects of assessment intensity on participant burden, compliance, within-person variance, and within-person relationships in ambulatory assessment"
+       }
+      }
+     ],
+     "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
+     "technisch": {
+      "fugeIndex": 1748,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "vergleicht Ergebnis und zusätzlichen Aufwand",
+       "geltung": "redaktionell zugeordnet",
+       "status": "redaktionelle Zuordnung"
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1038,
+   "b": 1055,
+   "fugen": [
+    {
+     "richtung": "Identitätsunsicherheit → Mein Bild von mir wechselt",
      "vomSchloss": false,
      "art": "aussage",
      "artWort": "Aussage",
-     "label": "grenzt ein Phänomen von einer Ursachenzuweisung ab",
-     "grund": "der belegten Originalaussage „grenzt ein Phänomen von einer Ursachenzuweisung ab“",
+     "label": "unterscheidet diagnostischen Begriff und situatives Erleben",
+     "grund": "der belegten Originalaussage „unterscheidet diagnostischen Begriff und situatives Erleben“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Schwankende Selbstbewertung in einer einzelnen Szene ist nicht gleichbedeutend mit einer anhaltenden Identitätsstörung. Der Vergleich vervollständigt kein Diagnosekriterium und erklärt keine Ursache.",
+     "detail": "Der Dossierbegriff Identitätsunsicherheit gehört zu einem klinischen Kriterienkontext. Die fiktive Szene zeigt unterschiedliche eigene Selbstbewertungen nach zwei Begegnungen und lässt Dauer, andere Lebensbereiche und Beeinträchtigung ausdrücklich offen.",
+     "quellen": [
+      {
+       "titel": "Borderline Personality Disorder – NIMH",
+       "kurz": "Borderline Personality Disorder – NIMH",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "source:bpd:ae3d3e3e08a0aad",
+        "url": "https://www.nimh.nih.gov/health/publications/borderline-personality-disorder",
+        "titelBestand": "Borderline Personality Disorder – NIMH"
+       }
+      },
+      {
+       "titel": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022",
+       "kurz": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "source:bpd:58630727af716c7",
+        "url": "https://register.awmf.org/de/leitlinien/detail/038-015",
+        "titelBestand": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022"
+       }
+      }
+     ],
+     "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
+     "technisch": {
+      "fugeIndex": 1750,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "unterscheidet diagnostischen Begriff und situatives Erleben",
+       "geltung": "redaktionell zugeordnet",
+       "status": "redaktionelle Zuordnung"
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1026,
+   "b": 1060,
+   "fugen": [
+    {
+     "richtung": "Intensive schwer regulierbare Wut → Wut wird laut",
+     "vomSchloss": false,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "unterscheidet Gefühl und verantwortbares Verhalten",
+     "grund": "der belegten Originalaussage „unterscheidet Gefühl und verantwortbares Verhalten“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Ein einzelner Wutausbruch erlaubt keine Persönlichkeitsdiagnose. Eine Verletzungserfahrung rechtfertigt keine Einschüchterung; Schutz und das Stoppen gefährdender Handlungen bleiben eigenständige Aufgaben.",
+     "detail": "Der klinische Dossierbegriff beschreibt intensive, schwer regulierbare Wut. Die fiktive Szene trennt die berichtete Kränkung von lautem Sprechen, Türschlagen und der Angst anderer. Der Vergleich erlaubt, emotionales Erleben und die Verantwortung für konkrete Handlungen zugleich zu betrachten.",
+     "quellen": [
+      {
+       "titel": "Borderline Personality Disorder – NIMH",
+       "kurz": "Borderline Personality Disorder – NIMH",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "source:bpd:ae3d3e3e08a0aad",
+        "url": "https://www.nimh.nih.gov/health/publications/borderline-personality-disorder",
+        "titelBestand": "Borderline Personality Disorder – NIMH"
+       }
+      },
+      {
+       "titel": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022",
+       "kurz": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "source:bpd:58630727af716c7",
+        "url": "https://register.awmf.org/de/leitlinien/detail/038-015",
+        "titelBestand": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022"
+       }
+      }
+     ],
+     "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
+     "technisch": {
+      "fugeIndex": 1752,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "unterscheidet Gefühl und verantwortbares Verhalten",
+       "geltung": "redaktionell zugeordnet",
+       "status": "redaktionelle Zuordnung"
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1038,
+   "b": 1072,
+   "fugen": [
+    {
+     "richtung": "Schwankender Selbstwert → Mein Bild von mir wechselt",
+     "vomSchloss": false,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "unterscheidet Selbstwert und Situationsbewertung",
+     "grund": "der belegten Originalaussage „unterscheidet Selbstwert und Situationsbewertung“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Schwankender Selbstwert ist keine Bewertung des tatsächlichen persönlichen Werts. Eine fiktive Alltagsszene validiert kein Konstrukt und belegt keine Persönlichkeitsstörung.",
+     "detail": "Der Dossierbegriff schwankender Selbstwert beschreibt ein transdiagnostisch untersuchtes Konstrukt. Die fiktive Szene stellt Selbstbewertungen nach verschiedenen Beziehungssituationen gegenüber. Damit lässt sich fragen, ob ein momentanes Urteil, ein längerer Verlauf oder andere Aspekte des Selbstbilds gemeint sind.",
+     "quellen": [
+      {
+       "titel": "Negative affective arousal precedes lower self-esteem in BPD: experience sampling",
+       "kurz": "Negative affective arousal precedes lower self-esteem in BPD: experience sampling",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "source:bpd:6b39efc6d9b8635",
+        "url": "https://link.springer.com/article/10.1186/s40479-023-00229-w",
+        "titelBestand": "Negative affective arousal precedes lower self-esteem in BPD: experience sampling"
+       }
+      }
+     ],
+     "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
+     "technisch": {
+      "fugeIndex": 1756,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "unterscheidet Selbstwert und Situationsbewertung",
+       "geltung": "redaktionell zugeordnet",
+       "status": "redaktionelle Zuordnung"
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1046,
+   "b": 1193,
+   "fugen": [
+    {
+     "richtung": "Digitale Kontrolle ist ein Beziehungsgeschehen → Missverständnis und Macht sind zwei Fragen",
+     "vomSchloss": false,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "unterscheidet Verständigungsfragen und tatsächliche Kontrolle",
+     "grund": "der belegten Originalaussage „unterscheidet Verständigungsfragen und tatsächliche Kontrolle“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Redaktionelle Lesebrücke zwischen den angegebenen Texten. Quellen belegen nur ihren jeweils bezeichneten Inhalt und Prüfstand. Keine Gleichsetzung von Populationen, Diagnose, individuelle Ursache oder bestätigte Wirksamkeit einer Methode.",
+     "detail": "Die Beziehungsszene hält kommunikative Passung und Entscheidungsmacht auseinander. Die neue Quelle beschreibt tatsächlich eingesetzte Technik zur Einschüchterung und Isolation. Die Verbindung macht deutlich, weshalb bessere Übersetzung eine Frage sein kann, ohne ausgeübte Kontrolle zum bloßen Missverständnis oder alten Trigger umzudeuten.",
+     "quellen": [
+      {
+       "titel": "The Abuse of Technology in Domestic Violence and Stalking",
+       "kurz": "The Abuse of Technology in Domestic Violence and Stalking",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "verified:woodlock-2017-abstract",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27178564/",
+        "titelBestand": "The Abuse of Technology in Domestic Violence and Stalking"
+       }
+      }
+     ],
+     "herkunft": "Redaktionelle Lesebrücke aus geprüften Wave-2-Abschnitten und vorhandenem Atlas",
+     "technisch": {
+      "fugeIndex": 1779,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "unterscheidet Verständigungsfragen und tatsächliche Kontrolle",
+       "geltung": "redaktionell zugeordnet",
+       "status": "redaktionelle Zuordnung"
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1034,
+   "b": 1194,
+   "fugen": [
+    {
+     "richtung": "Schutz braucht einen passenden nächsten Schritt → Auch meine Grenze gilt",
+     "vomSchloss": false,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "unterscheidet persönliche Zusage und technischen Schutzplan",
+     "grund": "der belegten Originalaussage „unterscheidet persönliche Zusage und technischen Schutzplan“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Redaktionelle Lesebrücke zwischen den angegebenen Texten. Quellen belegen nur ihren jeweils bezeichneten Inhalt und Prüfstand. Keine Gleichsetzung von Populationen, Diagnose, individuelle Ursache oder bestätigte Wirksamkeit einer Methode.",
+     "detail": "Die Alltagsszene fragt, welche Erreichbarkeit freiwillig und tragbar zugesagt werden kann. Bei möglicher technischer Überwachung kommt eine eigenständige Schutzfrage hinzu: sichere Kommunikation und Änderungen an Zugängen müssen zur konkreten Lage passen. Die allgemeine Grenzkarte ersetzt diesen technischen und gegebenenfalls spezialisierten Schutzplan nicht.",
+     "quellen": [
+      {
+       "titel": "Online safety checklist",
+       "kurz": "Online safety checklist",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "verified:esafety-online-safety-2026",
+        "url": "https://www.esafety.gov.au/key-topics/domestic-family-violence/online-safety-checklist",
+        "titelBestand": "Online safety checklist"
+       }
+      },
+      {
+       "titel": "Family Connections · Unterstützung für Angehörige",
+       "kurz": "Family Connections · Unterstützung für Angehörige",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "family-2024",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11659101/",
+        "titelBestand": "Family Connections · Unterstützung für Angehörige"
+       }
+      }
+     ],
+     "herkunft": "Redaktionelle Lesebrücke aus geprüften Wave-2-Abschnitten und vorhandenem Atlas",
+     "technisch": {
+      "fugeIndex": 1781,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "unterscheidet persönliche Zusage und technischen Schutzplan",
+       "geltung": "redaktionell zugeordnet",
+       "status": "redaktionelle Zuordnung"
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1046,
+   "b": 1201,
+   "fugen": [
+    {
+     "richtung": "Ein Zusammenhang ist keine Gewaltprognose → Missverständnis und Macht sind zwei Fragen",
+     "vomSchloss": false,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "unterscheidet Erklärung von Macht und Schutz",
+     "grund": "der belegten Originalaussage „unterscheidet Erklärung von Macht und Schutz“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Redaktionelle Lesebrücke. Die Quellen belegen nur die jeweils bezeichneten Endpunktinhalte und ihren dokumentierten Prüfstand. Die Verbindung ist kein Ursachen-, Diagnose-, Häufigkeits- oder Wirksamkeitsnachweis und erweitert den Prüfstand historischer Quellen nicht.",
+     "detail": "Die Metaanalyse liefert keine individuelle Gewaltprognose. Der bestehende Lerntext fragt getrennt nach kommunikativer Passung und Entscheidungsmacht. Eine mögliche Erklärung von Reaktionen beantwortet deshalb nicht, wer Handlungsspielraum hat oder wer Nachteile trägt.",
+     "quellen": [
+      {
+       "titel": "The Link between Narcissism and Aggression: A Meta-Analytic Review",
+       "kurz": "The Link between Narcissism and Aggression: A Meta-Analytic Review",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "verified:kjaervik-2021-aggression-review-abstract",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34292012/",
+        "titelBestand": "The Link between Narcissism and Aggression: A Meta-Analytic Review"
+       }
+      }
+     ],
+     "herkunft": "Lesebrücke aus Batch B und vorhandenem Atlas",
+     "technisch": {
+      "fugeIndex": 1790,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "unterscheidet Erklärung von Macht und Schutz",
+       "geltung": "redaktionell zugeordnet",
+       "status": "redaktionelle Zuordnung"
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1028,
+   "b": 1202,
+   "fugen": [
+    {
+     "richtung": "Rückzug braucht eine genaue Frage → Rückzug hat mehrere mögliche Bedeutungen",
+     "vomSchloss": false,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "vergleicht ähnliche Erscheinungen mit verschiedenen Bedeutungen",
+     "grund": "der belegten Originalaussage „vergleicht ähnliche Erscheinungen mit verschiedenen Bedeutungen“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Redaktionelle Lesebrücke. Die Quellen belegen nur die jeweils bezeichneten Endpunktinhalte und ihren dokumentierten Prüfstand. Die Verbindung ist kein Ursachen-, Diagnose-, Häufigkeits- oder Wirksamkeitsnachweis und erweitert den Prüfstand historischer Quellen nicht.",
+     "detail": "Der neue Abschnitt begrenzt die Übertragung einer Angstbehandlung auf jeden Rückzug. Der bestehende Lerntext unterscheidet beobachtbares Weggehen von vermuteter Absicht oder Diagnose. Erholung, Angst, Überlastung und eine gewählte Pause sind Fragen an den Kontext, keine automatische Zuordnung.",
+     "quellen": [
+      {
+       "titel": "Social Anxiety Disorder: Recognition, Assessment and Treatment — Recommendations",
+       "kurz": "Social Anxiety Disorder: Recognition, Assessment and Treatment — Recommendations",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "verified:nice-cg159-social-anxiety",
+        "url": "https://www.nice.org.uk/guidance/cg159/chapter/recommendations",
+        "titelBestand": "Social Anxiety Disorder: Recognition, Assessment and Treatment — Recommendations"
+       }
+      },
+      {
+       "titel": "Autism spectrum disorder in adults: diagnosis and management · NICE CG142",
+       "kurz": "Autism spectrum disorder in adults: diagnosis and management · NICE CG142",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "verified:nice-cg142",
+        "url": "https://www.nice.org.uk/guidance/cg142",
+        "titelBestand": "Autism spectrum disorder in adults: diagnosis and management · NICE CG142"
+       }
+      }
+     ],
+     "herkunft": "Lesebrücke aus Batch B und vorhandenem Atlas",
+     "technisch": {
+      "fugeIndex": 1792,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "vergleicht ähnliche Erscheinungen mit verschiedenen Bedeutungen",
+       "geltung": "redaktionell zugeordnet",
+       "status": "redaktionelle Zuordnung"
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1035,
+   "b": 1209,
+   "fugen": [
+    {
+     "richtung": "Angehörigenhilfe und die Bedeutung eines aktiven Vergleichs → Unterstützung bleibt ein Angebot",
+     "vomSchloss": false,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "ordnet Angehörigenhilfe als freiwilliges Angebot ein",
+     "grund": "der belegten Originalaussage „ordnet Angehörigenhilfe als freiwilliges Angebot ein“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Redaktionelle Lesebrücke, kein neuer Studienbefund. Quellen tragen nur die jeweils bezeichneten Endpunktinhalte; ihre Vereinigung belegt keine geprüfte Kausalität, persönliche Diagnose oder Wirksamkeit des Atlaswerkzeugs.",
+     "detail": "Das Angehörigenprogramm untersucht Unterstützung unter strukturierten Bedingungen. Die Alltagsszene macht dagegen das Recht sichtbar, ein Hilfsangebot abzulehnen. Ein nicht überlegener aktiver Vergleichsarm begründet weder eine Pflicht zur Teilnahme noch eine Pflicht zur Verfügbarkeit des Gegenübers.",
+     "quellen": [
+      {
+       "titel": "“Family Connections”, a program for relatives of people with borderline personality disorder: A randomized controlled trial",
+       "kurz": "“Family Connections”, a program for relatives of people with borderline personality disorder: A randomized controlled trial",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "verified:guillen-2024-abstract",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39624006/",
+        "titelBestand": "“Family Connections”, a program for relatives of people with borderline personality disorder: A randomized controlled trial"
+       }
+      }
+     ],
+     "herkunft": "Redaktionelle Lesebrücke aus Batch C und vorhandenem Atlas",
+     "technisch": {
+      "fugeIndex": 1801,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "ordnet Angehörigenhilfe als freiwilliges Angebot ein",
+       "geltung": "redaktionell zugeordnet",
+       "status": "redaktionelle Zuordnung"
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1035,
+   "b": 1212,
+   "fugen": [
+    {
+     "richtung": "Unterstützung hat einen Kontext → Unterstützung bleibt ein Angebot",
+     "vomSchloss": false,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "stellt Laborunterstützung und vereinbarte Alltagshilfe gegenüber",
+     "grund": "der belegten Originalaussage „stellt Laborunterstützung und vereinbarte Alltagshilfe gegenüber“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Redaktionelle Lesebrücke, kein neuer Studienbefund. Quellen tragen nur die jeweils bezeichneten Endpunktinhalte; ihre Vereinigung belegt keine geprüfte Kausalität, persönliche Diagnose oder Wirksamkeit des Atlaswerkzeugs.",
+     "detail": "Der Laborbefund zu unauffälliger Unterstützung vor einer Redeaufgabe erklärt nicht, was eine Person in einer Beziehung braucht. Die Alltagsszene stellt deshalb die ausgesprochene Bitte, Zustimmung und das Recht zur Ablehnung in den Mittelpunkt. Aus dem Befund folgt keine Erlaubnis zu heimlicher Steuerung.",
+     "quellen": [
+      {
+       "titel": "Effects of Social Support Visibility on Adjustment to Stress: Experimental Evidence",
+       "kurz": "Effects of Social Support Visibility on Adjustment to Stress: Experimental Evidence",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "verified:bolger-amarel-2007-abstract",
+        "url": "https://www.columbia.edu/~nb2229/docs/bolger-amarel-support-experiments-2006.pdf",
+        "titelBestand": "Effects of Social Support Visibility on Adjustment to Stress: Experimental Evidence"
+       }
+      }
+     ],
+     "herkunft": "Redaktionelle Lesebrücke aus Batch C und vorhandenem Atlas",
+     "technisch": {
+      "fugeIndex": 1805,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "stellt Laborunterstützung und vereinbarte Alltagshilfe gegenüber",
+       "geltung": "redaktionell zugeordnet",
+       "status": "redaktionelle Zuordnung"
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1037,
+   "b": 1221,
+   "fugen": [
+    {
+     "richtung": "Selbstmitgefühl: wofür ein Versuch spricht → Vom Fehler zum ganzen Selbst",
+     "vomSchloss": false,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "ergänzt die Lernszene um eine Methodenfrage",
+     "grund": "der belegten Originalaussage „ergänzt die Lernszene um eine Methodenfrage“",
      "geltung": "redaktionell",
      "geltungWort": "redaktionell zugeordnet",
      "status": "redaktionelle-zuordnung",
      "statusWort": "redaktionelle Zuordnung",
      "grenze": "Redaktionelle Lesebrücke zwischen den benannten Texten; keine zusätzliche Studie und kein Beleg einer kausalen Wirkung. Quellen und Lesegrade gelten jeweils für ihren Endpunkt.",
-     "detail": "Die vorhandene vorgeschlagene Karte beschreibt Hyperfokus und offene Begriffsfragen. Der neue Abschnitt erläutert, warum ein solches Phänomen keine eigenständige Entscheidung zwischen ADHS und Trauma erlaubt. Der Vorschlagsstatus und die historischen Quellen der Karte bleiben sichtbar.",
+     "detail": "Die erfundene Beziehungsszene trennt konkrete Verantwortung vom pauschalen Urteil über den eigenen Wert. Der neue Abschnitt eröffnet dazu eine freiwillige Erkundung des inneren Umgangstons. Die Szene ist kein Versuchsergebnis, und die Studie bestätigt nicht den Verlauf dieser erfundenen Situation.",
      "quellen": [
       {
-       "titel": "Attention deficit hyperactivity disorder: diagnosis and management — selected diagnostic recommendations",
-       "kurz": "Attention deficit hyperactivity disorder: diagnosis and management — selected diagnostic recommendations",
+       "titel": "Self-compassion as an emotion regulation strategy in major depressive disorder",
+       "kurz": "Self-compassion as an emotion regulation strategy in major depressive disorder",
        "art": "Quelle",
        "zitat": "",
        "technisch": {
-        "schluessel": "verified:nice-ng87-diagnosis-selected",
-        "url": "https://www.nice.org.uk/guidance/ng87/chapter/recommendations",
-        "titelBestand": "Attention deficit hyperactivity disorder: diagnosis and management — selected diagnostic recommendations"
-       }
-      },
-      {
-       "titel": "The Relationship of Attention-Deficit/Hyperactivity Disorder With Posttraumatic Stress Disorder: A Two-Sample Mendelian Randomization and Population-Based Sibling Comparison Study",
-       "kurz": "The Relationship of Attention-Deficit/Hyperactivity Disorder With Posttraumatic Stress Disorder: A Two-Sample Mendelian Randomization and Population-Based Sibling Comparison Study",
-       "art": "Quelle",
-       "zitat": "",
-       "technisch": {
-        "schluessel": "verified:wendt-2023-adhd-ptsd",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/36335070/",
-        "titelBestand": "The Relationship of Attention-Deficit/Hyperactivity Disorder With Posttraumatic Stress Disorder: A Two-Sample Mendelian Randomization and Population-Based Sibling Comparison Study"
-       }
-      },
-      {
-       "titel": "Is Adult ADHD a Childhood-Onset Neurodevelopmental Disorder? Evidence From a Four-Decade Longitudinal Cohort Study",
-       "kurz": "Is Adult ADHD a Childhood-Onset Neurodevelopmental Disorder? Evidence From a Four-Decade Longitudinal Cohort Study",
-       "art": "Quelle",
-       "zitat": "",
-       "technisch": {
-        "schluessel": "verified:moffitt-2015-adult-adhd",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/25998281/",
-        "titelBestand": "Is Adult ADHD a Childhood-Onset Neurodevelopmental Disorder? Evidence From a Four-Decade Longitudinal Cohort Study"
-       }
-      },
-      {
-       "titel": "ADDitude",
-       "kurz": "ADDitude",
-       "art": "Klinik",
-       "zitat": "",
-       "technisch": {
-        "schluessel": "adhs-source:22ead006b401",
-        "url": "https://www.additudemag.com/understanding-adhd-hyperfocus/",
-        "titelBestand": "ADDitude / NLM cited_text 30.08.2026"
+        "schluessel": "verified:diedrich-2014-self-compassion",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24929927/",
+        "titelBestand": "Self-compassion as an emotion regulation strategy in major depressive disorder"
        }
       }
      ],
      "herkunft": "Redaktionelle Lesebrücke · Prüfgruppe D",
      "technisch": {
-      "fugeIndex": 1824,
+      "fugeIndex": 1822,
       "typ": "",
       "gegen": null
      }
@@ -4142,7 +5499,132 @@ window.SCHLOSS_DATEN = {
      "belege": [
       {
        "woher": "Bestandsfuge",
-       "satz": "grenzt ein Phänomen von einer Ursachenzuweisung ab",
+       "satz": "ergänzt die Lernszene um eine Methodenfrage",
+       "geltung": "redaktionell zugeordnet",
+       "status": "redaktionelle Zuordnung"
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1046,
+   "b": 1223,
+   "fugen": [
+    {
+     "richtung": "Schutz hängt nicht an einem Grenzwert → Missverständnis und Macht sind zwei Fragen",
+     "vomSchloss": false,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "trennt Verständigung von Handlungsmacht",
+     "grund": "der belegten Originalaussage „trennt Verständigung von Handlungsmacht“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Redaktionelle Lesebrücke zwischen den benannten Texten; keine zusätzliche Studie und kein Beleg einer kausalen Wirkung. Quellen und Lesegrade gelten jeweils für ihren Endpunkt.",
+     "detail": "Die vorhandene Lernszene fragt nach unterschiedlicher Entscheidungsmacht bei Missverständnissen. Der neue Abschnitt erweitert den Blick auf Kontrolle und Schutz. Der Zusammenhang behauptet nicht, dass die erfundene Arbeitsszene bereits eine Gewalttypologie erfüllt.",
+     "quellen": [
+      {
+       "titel": "Toward a Standard Approach to Operationalizing Coercive Control and Classifying Violence Types",
+       "kurz": "Toward a Standard Approach to Operationalizing Coercive Control and Classifying Violence Types",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "verified:hardesty-2015-coercive-control",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4553695/",
+        "titelBestand": "Toward a Standard Approach to Operationalizing Coercive Control and Classifying Violence Types"
+       }
+      }
+     ],
+     "herkunft": "Redaktionelle Lesebrücke · Prüfgruppe D",
+     "technisch": {
+      "fugeIndex": 1825,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "trennt Verständigung von Handlungsmacht",
+       "geltung": "redaktionell zugeordnet",
+       "status": "redaktionelle Zuordnung"
+      }
+     ]
+    }
+   ],
+   "saetzeOhneFuge": []
+  },
+  {
+   "a": 1034,
+   "b": 1223,
+   "fugen": [
+    {
+     "richtung": "Schutz hängt nicht an einem Grenzwert → Auch meine Grenze gilt",
+     "vomSchloss": false,
+     "art": "aussage",
+     "artWort": "Aussage",
+     "label": "verbindet Grenzen mit Handlungsspielraum",
+     "grund": "der belegten Originalaussage „verbindet Grenzen mit Handlungsspielraum“",
+     "geltung": "redaktionell",
+     "geltungWort": "redaktionell zugeordnet",
+     "status": "redaktionelle-zuordnung",
+     "statusWort": "redaktionelle Zuordnung",
+     "grenze": "Redaktionelle Lesebrücke zwischen den benannten Texten; keine zusätzliche Studie und kein Beleg einer kausalen Wirkung. Quellen und Lesegrade gelten jeweils für ihren Endpunkt.",
+     "detail": "Die vorhandene Szene beschreibt eine tragbare persönliche Zusage. Der neue Abschnitt eröffnet zusätzlich die Frage, ob Nein-Sagen tatsächlich möglich ist und welche Konsequenzen drohen. Nicht jede Verfügbarkeitsfrage wird dadurch zu Zwangskontrolle erklärt.",
+     "quellen": [
+      {
+       "titel": "Toward a Standard Approach to Operationalizing Coercive Control and Classifying Violence Types",
+       "kurz": "Toward a Standard Approach to Operationalizing Coercive Control and Classifying Violence Types",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "verified:hardesty-2015-coercive-control",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4553695/",
+        "titelBestand": "Toward a Standard Approach to Operationalizing Coercive Control and Classifying Violence Types"
+       }
+      },
+      {
+       "titel": "Family Connections · Unterstützung für Angehörige",
+       "kurz": "Family Connections · Unterstützung für Angehörige",
+       "art": "Quelle",
+       "zitat": "",
+       "technisch": {
+        "schluessel": "family-2024",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11659101/",
+        "titelBestand": "Family Connections · Unterstützung für Angehörige"
+       }
+      }
+     ],
+     "herkunft": "Redaktionelle Lesebrücke · Prüfgruppe D",
+     "technisch": {
+      "fugeIndex": 1826,
+      "typ": "",
+      "gegen": null
+     }
+    }
+   ],
+   "lesarten": [
+    {
+     "art": "aussage",
+     "artWort": "Aussage",
+     "wort": "Aussage",
+     "ausBestand": true,
+     "auchImSatz": [],
+     "belege": [
+      {
+       "woher": "Bestandsfuge",
+       "satz": "verbindet Grenzen mit Handlungsspielraum",
        "geltung": "redaktionell zugeordnet",
        "status": "redaktionelle Zuordnung"
       }
@@ -4153,92 +5635,181 @@ window.SCHLOSS_DATEN = {
   }
  ],
  "bunde": {
-  "1012": [
+  "1025": [
+   46,
+   16,
+   17
+  ],
+  "1026": [
+   19,
+   55,
+   18
+  ],
+  "1027": [
+   20
+  ],
+  "1028": [
+   22,
+   21,
+   60
+  ],
+  "1029": [
+   23,
+   52
+  ],
+  "1030": [
+   6
+  ],
+  "1031": [
    0,
    1,
    2,
    3,
    4,
-   5,
-   6
+   5
   ],
-  "1013": [
-   8,
+  "1032": [
    7,
-   26
+   8
   ],
-  "1014": [
+  "1033": [
+   10,
    11,
-   9,
-   10
+   9
   ],
-  "1015": [
-   14,
+  "1034": [
    12,
+   50,
+   58,
+   65,
    13
   ],
-  "1016": [
-   16,
-   27,
-   15,
-   17
+  "1035": [
+   61,
+   14,
+   45,
+   62,
+   15
   ],
-  "1017": [
-   28,
-   18
-  ],
-  "1018": [
-   33,
-   20,
-   29,
-   19
-  ],
-  "1019": [
-   22,
-   30,
-   21
-  ],
-  "1020": [
-   31
-  ],
-  "1022": [
+  "1036": [
    24,
-   23
+   26,
+   25
   ],
-  "1023": [
-   25,
+  "1037": [
+   27,
+   51,
+   63
+  ],
+  "1038": [
+   29,
+   28,
+   54,
+   56
+  ],
+  "1039": [
+   31,
+   30
+  ],
+  "1041": [
+   47,
    32
+  ],
+  "1042": [
+   48,
+   33
+  ],
+  "1043": [
+   34
+  ],
+  "1044": [
+   49,
+   35
+  ],
+  "1045": [
+   36
+  ],
+  "1046": [
+   57,
+   59,
+   64,
+   37
+  ],
+  "1047": [
+   38
+  ],
+  "1049": [
+   39,
+   40
+  ],
+  "1050": [
+   41
+  ],
+  "1051": [
+   42,
+   53
+  ],
+  "1052": [
+   43,
+   44
   ]
  },
  "feld": {
   "orte": [
-   1012,
-   1013,
-   1014,
-   1015,
-   1016,
-   1017,
-   1018,
-   1019,
-   1020,
-   1021,
-   1022,
-   1023,
-   300,
-   1222,
-   152,
-   160,
-   939,
-   309,
+   1025,
+   1026,
+   1027,
+   1028,
+   1029,
+   1030,
+   1031,
+   1032,
+   1033,
+   1034,
    1035,
-   816,
-   860
+   1036,
+   1037,
+   1038,
+   1039,
+   1040,
+   1041,
+   1042,
+   1043,
+   1044,
+   1045,
+   1046,
+   1047,
+   1048,
+   1049,
+   1050,
+   1051,
+   1052,
+   1223,
+   1209,
+   562,
+   560,
+   1013,
+   1193,
+   274,
+   1201,
+   563,
+   1055,
+   1060,
+   565,
+   561,
+   1202,
+   339,
+   1194,
+   1072,
+   1221,
+   1212,
+   219,
+   1053
   ],
   "paare": [
    1,
-   2,
-   3,
    6,
+   2,
    0,
    7,
    8,
@@ -4259,7 +5830,6 @@ window.SCHLOSS_DATEN = {
    23,
    24,
    25,
-   5,
    26,
    27,
    28,
@@ -4267,66 +5837,117 @@ window.SCHLOSS_DATEN = {
    30,
    31,
    32,
-   33
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   3,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60,
+   61,
+   62,
+   63,
+   64,
+   65
   ],
   "gebiete": [
    {
-    "name": "ADHS · Randphänomene",
+    "name": "Beziehungen & Borderline",
     "mitte": {
      "x": 0,
      "y": 0
     },
-    "radius": 3.372,
+    "radius": 7.422,
     "heim": true
-   },
-   {
-    "name": "Neuroatlas",
-    "mitte": {
-     "x": 0.347,
-     "y": 5.413
-    },
-    "radius": 1.152,
-    "heim": false
    },
    {
     "name": "Forschung & Einordnung",
     "mitte": {
-     "x": 2.492,
-     "y": 4.187
+     "x": 9.234,
+     "y": 12.351
+    },
+    "radius": 7.099,
+    "heim": false
+   },
+   {
+    "name": "Beziehungswerkstatt",
+    "mitte": {
+     "x": -4.043,
+     "y": 9.995
+    },
+    "radius": 2.46,
+    "heim": false
+   },
+   {
+    "name": "ADHS · Randphänomene",
+    "mitte": {
+     "x": -8.837,
+     "y": -1.231
     },
     "radius": 0.6,
     "heim": false
    },
    {
-    "name": "Phänomenatlas",
+    "name": "Neuroatlas",
     "mitte": {
-     "x": 5.832,
-     "y": 2.838
+     "x": 0.581,
+     "y": 9.456
     },
-    "radius": 2.214,
+    "radius": 1.152,
     "heim": false
    },
    {
-    "name": "Beziehungen & Borderline",
+    "name": "Diagnose & Differenzierung",
     "mitte": {
-     "x": 4.82,
-     "y": -0.712
+     "x": 0.916,
+     "y": -10.439
+    },
+    "radius": 2.157,
+    "heim": false
+   },
+   {
+    "name": "Phänomenatlas",
+    "mitte": {
+     "x": 8.005,
+     "y": 3.94
     },
     "radius": 0.6,
     "heim": false
    }
   ],
   "regel": {
-   "text": "Das Feld zeigt alle Orte im Gebiet „ADHS · Randphänomene“, zu dem Aufgabenstarre gehört, dazu jeden Ort, der mit einem von ihnen durch eine Fuge im Lesebestand verbunden ist, und diese Fugen.",
+   "text": "Das Feld zeigt alle Orte im Gebiet „Beziehungen & Borderline“, zu dem Die Angst vor Verlust ist groß gehört, dazu jeden Ort, der mit einem von ihnen durch eine Fuge im Lesebestand verbunden ist, und diese Fugen.",
    "begrenzung": "Begrenzt wird erst bei sehr großen Feldern; hier fehlt nichts.",
-   "lage": "Innerhalb eines Gebiets folgt die Lage der Karte, gleichmäßig gestreckt (andere Gebiete enger) und so weit auseinandergeschoben, dass sich Zeichen nicht berühren. Andere Gebiete stehen in der Richtung, in der sie auf der Karte liegen, aber näher herangerückt."
+   "lage": "Innerhalb eines Gebiets folgt die Lage der Karte, gestreckt (das eigene Gebiet in beiden Richtungen auf gleiche Ausdehnung, andere Gebiete enger) und so weit auseinandergeschoben, dass sich Zeichen nicht berühren. Andere Gebiete stehen in der Richtung, in der sie auf der Karte liegen, aber näher herangerückt."
   },
   "technisch": {
-   "heimGebiet": 5,
-   "orteGesamt": 21,
-   "nachbarnGesamt": 9,
-   "fugenGesamt": 50,
-   "paareGesamt": 33,
+   "heimGebiet": 6,
+   "orteGesamt": 49,
+   "nachbarnGesamt": 21,
+   "fugenGesamt": 64,
+   "paareGesamt": 64,
    "begrenzt": false,
    "feldMax": 160
   }
@@ -4334,63 +5955,122 @@ window.SCHLOSS_DATEN = {
  "fehlstellen": [
   {
    "orte": [
-    816,
-    939
-   ],
-   "gebiet": "Phänomenatlas",
-   "modus": "befund-fehlt",
-   "gebildetAus": "Originalkanten „untersucht in / im Kontext von“ ohne festgehaltenen Befund",
-   "label": "wird im Forschungskontext untersucht mit",
-   "gegenueber": {
-    "titel": "ADHS / attention-deficit/hyperactivity disorder",
-    "gebiet": "Phänomenatlas",
-    "technisch": {
-     "ortIndex": 1009
-    }
-   },
-   "detail": "Titel/Abstract wurden geprüft. Der Record zeigt Forschungskontakt, nicht Prävalenz, Ursache, individuelle Diagnose oder allgemeine Geltung.",
-   "technisch": {
-    "gegen": 1009
-   }
-  },
-  {
-   "orte": [
-    160
+    219
    ],
    "gebiet": "Phänomenatlas",
    "modus": "befund-fehlt",
    "gebildetAus": "Originalkanten „untersucht in / im Kontext von“ ohne festgehaltenen Befund",
    "label": "öffnet eine Forschungsfrage zu",
    "gegenueber": {
-    "titel": "Systemische Therapie",
+    "titel": "Unterstützung und versteckte Kosten",
     "gebiet": "Phänomenatlas",
     "technisch": {
-     "ortIndex": 206
+     "ortIndex": 219
     }
    },
-   "detail": "Welche Reaktion folgt auf welches Verhalten, und welche Unterstützung verändert die konkrete Wechselwirkung? Bezug zur Forschung: Die untersuchte Verbindung von polygenem ADHS-Risiko, kindlichen Symptomen und Erziehungsdimensionen ist mit einer Reaktion des Umfelds auf kindliche Eigenschaften vereinbar.",
+   "detail": "Welche Beobachtung ist nötig, und wie viel zusätzliche Organisationsarbeit erzeugt ihre Erhebung? Bezug zur Forschung: Häufigere Befragungen erhöhten in einem Experiment die empfundene Last, ohne die Teilnahmequote entsprechend zu verändern. Eine längere Befragung zeigte ein anderes Wirkungsprofil.",
    "technisch": {
-    "gegen": 206
+    "gegen": 219
    }
   },
   {
    "orte": [
-    160
+    562
    ],
-   "gebiet": "Phänomenatlas",
+   "gebiet": "Beziehungswerkstatt",
    "modus": "befund-fehlt",
    "gebildetAus": "Originalkanten „untersucht in / im Kontext von“ ohne festgehaltenen Befund",
    "label": "öffnet eine Forschungsfrage zu",
    "gegenueber": {
-    "titel": "Systemische Therapie",
-    "gebiet": "TraumaAtlas",
+    "titel": "Anspannung und Handlungsspielraum",
+    "gebiet": "Beziehungswerkstatt",
     "technisch": {
-     "ortIndex": 13
+     "ortIndex": 562
     }
    },
-   "detail": "Welche Reaktion folgt auf welches Verhalten, und welche Unterstützung verändert die konkrete Wechselwirkung? Bezug zur Forschung: Die untersuchte Verbindung von polygenem ADHS-Risiko, kindlichen Symptomen und Erziehungsdimensionen ist mit einer Reaktion des Umfelds auf kindliche Eigenschaften vereinbar.",
+   "detail": "Welches benannte Problem soll Unterstützung verändern, unabhängig von der Frage nach dem Neurotyp? Bezug zur Forschung: Bei ausgewählten autistischen Erwachsenen ohne intellektuelle Beeinträchtigung verbesserte DBT die berichtete Emotionsregulation gegenüber einer Warteliste. Die Verbesserung blieb in der Nachbeobachtung erkennbar.",
    "technisch": {
-    "gegen": 13
+    "gegen": 562
+   }
+  },
+  {
+   "orte": [
+    561
+   ],
+   "gebiet": "Beziehungswerkstatt",
+   "modus": "befund-fehlt",
+   "gebildetAus": "Originalkanten „untersucht in / im Kontext von“ ohne festgehaltenen Befund",
+   "label": "öffnet eine Forschungsfrage zu",
+   "gegenueber": {
+    "titel": "Nähe, Freiheit und Grenzen",
+    "gebiet": "Beziehungswerkstatt",
+    "technisch": {
+     "ortIndex": 561
+    }
+   },
+   "detail": "Welche Anforderung, Angst, sensorische Belastung, Unklarheit oder Autonomieverletzung liegt tatsächlich vor? Bezug zur Forschung: Angst und autistische Merkmale trugen in den Befragungen jeweils zur statistischen Erklärung extremer Anforderungsvermeidung bei. Ein einheitlicher Bedrohungsmechanismus folgt daraus nicht.",
+   "technisch": {
+    "gegen": 561
+   }
+  },
+  {
+   "orte": [
+    565
+   ],
+   "gebiet": "Beziehungswerkstatt",
+   "modus": "befund-fehlt",
+   "gebildetAus": "Originalkanten „untersucht in / im Kontext von“ ohne festgehaltenen Befund",
+   "label": "öffnet eine Forschungsfrage zu",
+   "gegenueber": {
+    "titel": "Mehr als eine mögliche Innenwelt",
+    "gebiet": "Beziehungswerkstatt",
+    "technisch": {
+     "ortIndex": 565
+    }
+   },
+   "detail": "Welche tatsächliche Rückmeldung prüft die vermutete Innenwelt, statt sie aus einem Etikett abzuleiten? Bezug zur Forschung: Die erste Informationskettenstudie fand Vorteile gleich zusammengesetzter Gruppen. Die größere registrierte Replikation fand keinen entsprechenden Unterschied der Informationsübertragung; Beziehungsbewertungen zeigten ein anderes Muster.",
+   "technisch": {
+    "gegen": 565
+   }
+  },
+  {
+   "orte": [
+    563
+   ],
+   "gebiet": "Beziehungswerkstatt",
+   "modus": "befund-fehlt",
+   "gebildetAus": "Originalkanten „untersucht in / im Kontext von“ ohne festgehaltenen Befund",
+   "label": "öffnet eine Forschungsfrage zu",
+   "gegenueber": {
+    "titel": "Erleben anerkennen",
+    "gebiet": "Beziehungswerkstatt",
+    "technisch": {
+     "ortIndex": 563
+    }
+   },
+   "detail": "Welche gemeinsame Handlung wird leichter, und bleibt sie für das Kind bedeutsam und zumutbar? Bezug zur Forschung: PACT zeigt, dass ein gezieltes Kommunikationsangebot bestimmte soziale Kommunikations- und beobachtete Merkmalsendpunkte langfristig beeinflussen kann. Entwicklungsunterstützung ist auch bei erheblicher genetischer Mitwirkung möglich.",
+   "technisch": {
+    "gegen": 563
+   }
+  },
+  {
+   "orte": [
+    560
+   ],
+   "gebiet": "Beziehungswerkstatt",
+   "modus": "befund-fehlt",
+   "gebildetAus": "Originalkanten „untersucht in / im Kontext von“ ohne festgehaltenen Befund",
+   "label": "öffnet eine Forschungsfrage zu",
+   "gegenueber": {
+    "titel": "Beobachtung und Deutung",
+    "gebiet": "Beziehungswerkstatt",
+    "technisch": {
+     "ortIndex": 560
+    }
+   },
+   "detail": "Bleibt der Zusammenhang nach passenden Negativkontrollen und familiären Vergleichen bestehen? Bezug zur Forschung: In der Infektionsstudie veränderten familienbasierte Kontrollen die Deutung beobachteter Autismuszusammenhänge. Eine plausible biologische Geschichte allein reicht deshalb nicht als Nachweis einer Umweltverursachung.",
+   "technisch": {
+    "gegen": 560
    }
   }
  ]

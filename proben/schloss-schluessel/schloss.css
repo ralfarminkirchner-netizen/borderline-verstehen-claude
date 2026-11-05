@@ -301,3 +301,6 @@ svg [tabindex]:focus, svg [tabindex]:focus-visible { outline: none; }
 /* Sätze eines Orts beim Stift Lesart: in seiner eigenen Wand statt gestapelt in der Mitte */
 .wand-satz { margin: 14px 0 0; padding: 8px 0 0 10px; border-left: 3px solid var(--wand); font: 400 calc(14.5px * var(--sf))/1.45 var(--serif); color: var(--tinte); }
 .wand-satz-woher { display: block; margin-bottom: 2px; font: 500 calc(12px * var(--sf))/1.3 var(--grotesk); color: var(--tinte-3); }
+
+.atlas-rueckweg { display: block; padding: 8px 40px 0; font: 500 13px/1.4 var(--grotesk); color: var(--blau); text-decoration: none; }
+.atlas-rueckweg:hover { text-decoration: underline; }

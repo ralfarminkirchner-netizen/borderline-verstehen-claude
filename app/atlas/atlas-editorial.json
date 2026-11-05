@@ -1,0 +1,20 @@
+{
+  "version": "2026-11-02.1",
+  "corrections": [
+    {
+      "id": "walking-regulation-qualification",
+      "match": {
+        "entryId": "trauma:b:bewegung-gehen",
+        "textIncludes": "Rhythmische Bewegung drosselt den Sympathikus und entlädt Stresschemie"
+      },
+      "originalExcerpt": "Rhythmische Bewegung drosselt den Sympathikus und entlädt Stresschemie – die Basis jeder Regulation.",
+      "editorialText": "Ein Spaziergang oder eine andere passende Form von Bewegung kann Wohlbefinden und psychische Gesundheit unterstützen. Auch kleine, selbst gewählte Bewegungseinheiten können ein Anfang sein. Ob Bewegung gerade hilfreich ist und welche Form passt, ist individuell; sie ist eine Möglichkeit neben anderen Wegen der Selbstfürsorge.",
+      "boundary": "Die frühere Formulierung wird hier präzisiert: Die geprüften WHO- und NIMH-Informationen belegen weder eine garantierte unmittelbare Senkung des Sympathikus noch ein wörtliches Entladen von Stresschemie oder Bewegung als notwendige Grundlage jeder Regulation. Diese redaktionelle Prüfung liefert keinen neuen Nachweis für einen bestimmten Wirkmechanismus. Sie bewertet die Formulierung, nicht die persönliche Erfahrung mit Bewegung. Das Original bleibt über den Quellenrückweg erhalten.",
+      "sourceUrls": [
+        "https://www.who.int/news-room/fact-sheets/detail/physical-activity",
+        "https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health"
+      ],
+      "reviewLevel": "Originalpassage sowie offizielle WHO- und NIMH-Fachinformationen gelesen; eng begrenzte redaktionelle Präzisierung, keine neue systematische Literaturprüfung und keine vollständige Prüfung aller Originalquellen."
+    }
+  ]
+}

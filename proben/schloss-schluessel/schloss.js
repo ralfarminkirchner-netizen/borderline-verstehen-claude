@@ -27,18 +27,23 @@
   const SLOT_NAME = { lesart: 'Lesart', beleg: 'Beleg', grenze: 'Grenze', wort: 'Wort', kontext: 'Kontext' };
   // Greifen nur die Arten, die die Regel nennt: „Nähe“ und „könnte zusammenhängen“.
   const NESTEND = new Set(['annaeherung', 'zusammenhang']);
+  // Redaktionelle Einordnung („diese beiden zusammen lesen“) greift als Lesart, ebenso eine belegte Aussage,
+  // die ausdrücklich „verbindet“. „unterscheidet“ oder „vergleicht“ halten beide auseinander.
+  const lesartGreift = (les) => NESTEND.has(les.art) || les.art === 'einordnung' || (les.art === 'aussage' && /^verbindet\b/.test((les.belege && les.belege[0] && les.belege[0].satz) || ''));
   const TRENNEND = new Set(['spannung', 'widerspruch', 'abstand', 'begrenzung']);
-  const GEBIET_FARBE = { 'ADHS · Randphänomene': 'blau', Neuroatlas: 'minze', 'Phänomenatlas': 'koralle', 'Beziehungen & Borderline': 'pflaume', 'Forschung & Einordnung': 'schiefer' };
+  const GEBIET_FARBE = { 'ADHS · Randphänomene': 'blau', Neuroatlas: 'minze', 'Phänomenatlas': 'koralle', 'Beziehungen & Borderline': 'pflaume', 'Forschung & Einordnung': 'schiefer', Beziehungswerkstatt: 'ocker', 'Diagnose & Differenzierung': 'petrol' };
   const FARBEN = {
     blau: { tief: '#2f45d6', dunkel: '#1b2994', hauch: '#d3dbfb', licht: '#f1f4ff', faser: '#5367e0' },
     minze: { tief: '#1a8467', dunkel: '#0f5c47', hauch: '#c8ecdf', licht: '#eefaf5', faser: '#2f9a7a' },
     koralle: { tief: '#d05a33', dunkel: '#8f3517', hauch: '#ffd9ca', licht: '#fff4ef', faser: '#d9734f' },
     pflaume: { tief: '#9a3a74', dunkel: '#6a2050', hauch: '#f4dbea', licht: '#fcf3f8', faser: '#ad5689' },
     schiefer: { tief: '#4d5e7e', dunkel: '#2f3b52', hauch: '#e0e6ef', licht: '#f6f8fb', faser: '#687a99' },
+    ocker: { tief: '#a86a12', dunkel: '#6e4407', hauch: '#f6e2bf', licht: '#fdf7ec', faser: '#bd8231' },
+    petrol: { tief: '#1f6f86', dunkel: '#124858', hauch: '#cbe6ee', licht: '#f0f8fb', faser: '#3a879c' },
   };
   const farbeG = (g) => FARBEN[GEBIET_FARBE[g] || 'schiefer'];
   const farbe = (ort) => farbeG(ort.gebiet);
-  const KURZ_GEBIET = { 'ADHS · Randphänomene': 'ADHS', 'Beziehungen & Borderline': 'Beziehungen', 'Forschung & Einordnung': 'Forschung' };
+  const KURZ_GEBIET = { 'ADHS · Randphänomene': 'ADHS', 'Beziehungen & Borderline': 'Beziehungen', 'Forschung & Einordnung': 'Forschung', 'Diagnose & Differenzierung': 'Diagnose' };
   const kurzG = (g) => KURZ_GEBIET[g] || g;
 
   // Gleicher Titel in zwei Gebieten (zweimal „Hyperfokus“): der Ort außerhalb des Heimgebiets trägt sein Gebiet im Namen
@@ -146,7 +151,7 @@
     const auto = autoWoerter(i);
     const w = e.wort;
     const z = {
-      lesart: { greift: NESTEND.has(les.art), les, deine: !les.ausBestand, bestand: p.lesarten[0] },
+      lesart: { greift: lesartGreift(les), les, deine: !les.ausBestand, bestand: p.lesarten[0] },
       beleg: { greift: bestQ.length > 0 || !!e.beleg, bestand: bestQ, dein: e.beleg },
       grenze: { greift: !!bestG || !!e.grenze, bestand: bestG, dein: e.grenze },
       wort: { greift: auto.length > 0 || !!(w && w.art === 'uebersetzung'), auto, dein: w },
@@ -485,6 +490,10 @@
 
   /* ================= Feld: Lage, Membranen, Nähte, Fehlstellen ================= */
   const FELD_ORTE = D.feld.orte.map(String);
+  const BUND_ORTE = new Set((D.bunde[D.schloss] || []).flatMap((i) => [String(D.paare[i].a), String(D.paare[i].b)]));
+  const FUGEN_ZAHL = new Map();
+  for (const i of D.feld.paare) for (const x of [D.paare[i].a, D.paare[i].b]) FUGEN_ZAHL.set(String(x), (FUGEN_ZAHL.get(String(x)) || 0) + 1);
+  const FUGEN_JE_ORT = (k) => FUGEN_ZAHL.get(k) || 0;
   const FELD_PAARE = D.feld.paare.filter((i) => paar(i).fugen.length);
   const W = {};
   for (const k of FELD_ORTE) W[k] = { x: D.orte[k].feld.x, y: D.orte[k].feld.y };
@@ -1395,7 +1404,7 @@
       sEl('path', { d: umrissPfad({ ...F, R: F.R * 0.62 }, phase), fill: 'none', stroke: c.tief, 'stroke-opacity': '0.22', 'stroke-width': '1', 'stroke-dasharray': '1.5 3' }, grp);
       sEl('ellipse', { cx: f1(F.x - F.R * 0.28), cy: f1(F.y - F.R * 0.34), rx: f1(F.R * 0.34), ry: f1(F.R * 0.18), fill: '#ffffff', 'fill-opacity': '0.75', transform: `rotate(-24 ${f1(F.x - F.R * 0.28)} ${f1(F.y - F.R * 0.34)})` }, grp);
       for (const b of F.beulen) if (b.art === 'offen') { const r = radius(F, b.th) * 0.92; sEl('circle', { cx: f1(F.x + Math.cos(b.th) * r), cy: f1(F.y + Math.sin(b.th) * r), r: f1(F.R * 0.22), fill: '#ffffff', stroke: c.tief, 'stroke-width': '1.4' }, grp); }
-      namen.push({ k, x: F.x, y: F.y, R: F.R * 1.3, o, gewaehlt: gewaehlt || inFuge, leise, hover: S.hover === k });
+      namen.push({ k, x: F.x, y: F.y, R: F.R * 1.3, o, gewaehlt: gewaehlt || inFuge, leise, hover: S.hover === k, rang: (k === String(D.schloss) ? 100 : 0) + (BUND_ORTE.has(k) ? 50 : 0) + FUGEN_JE_ORT(k) });
       hart.push({ l: F.x - F.R * 1.25, r: F.x + F.R * 1.25, t: F.y - F.R * 1.25, b: F.y + F.R * 1.25 });
     }
 
@@ -1496,7 +1505,7 @@
   // Namen so legen, dass sie weder einander noch Körper, Schilder oder Faserbahnen überdecken
   function legeNamen(namen, hart, weich) {
     const sfak = PROFIL.schrift === 'gross' ? 1.25 : 1;
-    namen.sort((a, b) => Number(b.gewaehlt) - Number(a.gewaehlt) || Number(b.hover) - Number(a.hover) || Number(a.leise) - Number(b.leise));
+    namen.sort((a, b) => Number(b.gewaehlt) - Number(a.gewaehlt) || Number(b.hover) - Number(a.hover) || Number(a.leise) - Number(b.leise) || b.rang - a.rang);
     for (const n of namen) {
       if (n.x < -n.R || n.x > FL.w + n.R || n.y < -n.R || n.y > FL.h + n.R) continue; // Körper außerhalb des Bildes: kein Name
       const gr = n.gewaehlt ? 19 : schmal() ? 12 : 13;
@@ -1517,7 +1526,8 @@
       let best = null, bestS = Infinity, bestH = Infinity;
       for (const c of kand) { const r = rect(c); const h = fl(r, hart); const st = h * 3 + fl(r, weich) + (r.t < 2 || r.b > FL.h - 2 ? 5000 : 0); if (st < bestS) { best = c; bestS = st; bestH = h; } if (st === 0) break; }
       // schmal und kein Platz: der Name erscheint erst beim Antippen oder Heranzoomen
-      if (schmal() && bestH > 4 && !n.gewaehlt && !n.hover) continue;
+      // kein Platz: der Name erscheint erst beim Zeigen oder Antippen (Schloss, Bund und vielverbundene Orte zuerst)
+      if (bestH > 4 && !n.gewaehlt && !n.hover) continue;
       hart.push(rect(best));
       const t = sEl('text', { x: f1(best.x), y: f1(best.y + gr * 0.92 * sfak), class: `ort-name${n.gewaehlt ? ' gewaehlt' : ''}${n.leise ? ' leise' : ''}`, 'text-anchor': best.a }, gSchrift);
       zeilen.forEach((z, j) => { const ts = sEl('tspan', { x: f1(best.x), dy: j ? '1.15em' : '0' }, t); ts.textContent = z; });
@@ -2089,7 +2099,7 @@
         const d = hEl('p', 'versuch-satz deine', el);
         hEl('b', '', d, `„${les.wort}“ ist deine Lesart`);
         d.appendChild(document.createTextNode(` – der Bestand sagt: ${z.lesart.bestand.artWort}.`));
-      } else hEl('p', 'versuch-satz', el, z.lesart.greift ? `„${les.wort}“ greift: diese Lesart lässt beide ineinandergreifen.` : `„${les.wort}“ greift nicht: ${TRENNEND.has(les.art) ? 'diese Lesart hält beide auseinander.' : 'diese Lesart sagt nicht, dass beide zusammengehören.'}`);
+      } else hEl('p', 'versuch-satz', el, z.lesart.greift ? (les.art === 'einordnung' ? `„${les.belege[0].satz}“ greift: Der Bestand ordnet beide redaktionell einander zu – eine Lesehilfe, kein Befund.` : `„${les.wort}“ greift: diese Lesart lässt beide ineinandergreifen.`) : `„${les.wort}“ greift nicht: ${TRENNEND.has(les.art) ? 'diese Lesart hält beide auseinander.' : 'diese Lesart sagt nicht, dass beide zusammengehören.'}`);
       if (les.auchImSatz && les.auchImSatz.length) hEl('p', 'auch-satz', el, `Derselbe Satz sagt auch: ${les.auchImSatz.map((w) => `„${w}“`).join(', ')}.`);
       // Sätze eines Orts stehen in dessen Wand; hier nur die Bestandsfuge selbst
       const ortsTitel = [paar(i).A.titel, paar(i).B.titel];

@@ -1,0 +1,61 @@
+/*
+ * Self-hosted, unmodified variable fonts from the official google/fonts repository.
+ * Both families are distributed under SIL Open Font License 1.1.
+ * Exact upstream revisions, file hashes and verified German characters:
+ * assets/fonts/provenance.json
+ * Licenses: assets/fonts/OFL-Newsreader.txt and assets/fonts/OFL-Manrope.txt
+ * No request to a third-party font service is needed at runtime.
+ */
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("./assets/fonts/Newsreader-Variable.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("./assets/fonts/Newsreader-Italic-Variable.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("./assets/fonts/Manrope-Variable.ttf") format("truetype");
+}
+
+:root {
+  --atlas-font-editorial: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --atlas-font-interface: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+  --atlas-font-reading: "Newsreader", "Iowan Old Style", Georgia, serif;
+}
+
+/* Opt-in helpers: importing this file does not replace existing app typography. */
+.atlas-type-title,
+.atlas-type-reading {
+  font-family: var(--atlas-font-editorial);
+  font-optical-sizing: auto;
+  font-kerning: normal;
+}
+
+.atlas-type-interface {
+  font-family: var(--atlas-font-interface);
+  font-kerning: normal;
+}
+
+.atlas-type-reading {
+  font-family: var(--atlas-font-reading);
+}
+
+/* Newsreader has a real italic face; Manrope's upstream family has no italics. */
+.atlas-type-reading :is(em, cite),
+.atlas-type-title :is(em, cite) {
+  font-style: italic;
+}

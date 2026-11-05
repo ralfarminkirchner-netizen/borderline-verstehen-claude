@@ -1,0 +1,99 @@
+Obwohl die komplexe Posttraumatische Belastungsstörung (kPTBS) und die Borderline-Persönlichkeitsstörung (BPS) erhebliche Phänomenüberschneidungen aufweisen – insbesondere bei emotionaler Dysregulation, Dissoziationsneigung und Beziehungs- bzw. Selbstwertstörungen –, unterscheiden sich beide Krankheitsbilder in der klinischen Differentialdiagnostik in wesentlichen Kernbereichen
+1
+.
+Die zentralen Unterscheidungsmerkmale
+Ätiologie und Traumakriterium:
+kPTBS: Die Exposition gegenüber schwerem, lang anhaltendem oder wiederholtem Trauma (z. B. chronische Misshandlung, Vernachlässigung oder Gefangenschaft), aus dem ein Entkommen unmöglich oder extrem erschwert war, ist ein zwingendes diagnostisches Pflichtkriterium
+2
+.
+BPS: Trauma oder Missbrauch in der Kindheit kommt sehr häufig vor (ca. 70–80 % der Betroffenen)
+6
+, ist jedoch kein notwendiges diagnostisches Kriterium
+2
+. BPS kann sich auch aus dem Zusammenspiel einer biologisch-temperamentalen Verwundbarkeit mit einem invalidierenden Umfeld entwickeln
+2
+.
+Selbstbild und Identität:
+kPTBS: Das Selbstbild ist anhaltend und durchgehend negativ geprägt
+3
+. Betroffene empfinden sich durchgehend als beschädigt, wertlos oder von tiefen Schuld- und Schamgefühlen erfüllt
+3
+.
+BPS: Es liegt eine Identitätsdiffusion und ein drastisch fluktuierendes Selbstbild vor
+3
+. Die Eigenwahrnehmung schwankt extrem zwischen Selbstidealisierung und Selbstentwertung und ist stark von aktuellen Beziehungen und Stimmungen abhängig
+3
+.
+Beziehungsdynamik:
+kPTBS: Im Vordergrund stehen sozialer Rückzug, Vermeidung von Nähe und ein chronisches Misstrauen gegenüber anderen Personen, um sich vor potenzieller erneuter Verletzung zu schützen
+3
+.
+BPS: Beziehungen verlaufen typischerweise hochgradig instabil und intensiv
+3
+. Es besteht eine panische Angst vor dem Verlassenwerden, was zu extremen Oszillationen zwischen Beziehungsanklammerung (Idealisierung) und abruptem Abstoßen (Entwertung) führt
+3
+.
+Affektdysregulation und Impulsivität:
+kPTBS: Die Affektdysregulation zeigt sich primär in dauerhaft erhöhter Hypervigilanz, anhaltendem Bedrohungserleben, Verzweiflung oder emotionaler Taubheit (Numbing)
+4
+.
+BPS: Stimmungs- und Affektschwankungen verlaufen hochreaktiv und schwanken oft stunden- bis tageweise, getriggert durch interpersonelle Reize (z. B. empfundene Ablehnung)
+7
+. Zudem sind schädliche Impulsivität, Suiziddrohungen und Parasuizidalität (Selbstverletzung zur Dissoziationsbeendigung) zentrale BPS-Kriterien
+7
+.
+Vergleichende Übersicht
+Phänomenbereich
+Komplexe PTBS (kPTBS)
+Borderline-Persönlichkeitsstörung (BPS)
+
+Traumahistorie
+Zwingendes Kernkriterium (chronisches Extremtrauma)
+2
+Sehr häufig, aber kein diagnostisches Pflichtkriterium
+2
+
+Selbstbild
+Durchgehend stabil negativ („beschädigt, wertlos“)
+3
+Fluktuierend, instabil, Identitätsdiffusion
+3
+
+Beziehungsmuster
+Vermeidung von Nähe, Rückzug, Misstrauen
+3
+Instabil; Oszillieren zwischen Idealisierung und Entwertung / Verlassensangst
+3
+
+Affektdynamik
+Chronische Hypervigilanz, Taubheit, anhaltende Belastung
+4
+Reaktiv auf interpersonelle Reize; schwankend in Stunden/Tagen
+7
+
+Impulsivität / Parasuizid
+Weniger zentral; primär auf Traumareize bezogen
+3
+7
+Typisches Leitsymptom (Selbstverletzung, Risikoverhalten)
+7
+
+Nosologie
+Offizielle Diagnose in der ICD-11 (fehlt im DSM-5)
+3
+Klassifiziert im DSM-5 und der ICD-11 („Borderline-Muster“)
+16
+Diagnostische Systematik (ICD-11 vs. DSM-5)
+In der ICD-11 wird die kPTBS als eigenständige Kategorie geführt und setzt sich aus den drei PTBS-Kernsymptomen (Wiedererleben, Vermeidung, Bedrohungserleben) sowie den drei Symptomen der Störung der Selbstorganisation (DSO: Affektdysregulation, negatives Selbstbild, Beziehungsstörungen) zusammen
+2
+4
+. Im DSM-5 existiert die kPTBS bislang nicht als eigene Diagnose
+15
+. Die BPS hingegen wird in der ICD-11 primär als Schweregrad einer Persönlichkeitsstörung mit dem optionalen Qualifier „Borderline-Muster“ erfasst
+16
+17
+.
+Da ungefähr die Hälfte aller Personen mit kPTBS gleichzeitig die Kriterien einer BPS erfüllt, ist die Abgrenzung in der Praxis anspruchsvoll und beide Diagnosen können auch gemeinsam vorliegen
+2
+.
+🔍 Möchtest du genauer beleuchten, wie sich diese Abgrenzung verhält, wenn zusätzlich Neurodivergenz (wie Autismus oder ADHS/AuDHD) oder eine Bipolar-II-Störung im Spiel ist?

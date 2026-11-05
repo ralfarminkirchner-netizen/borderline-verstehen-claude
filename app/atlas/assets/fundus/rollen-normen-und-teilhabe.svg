@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="821.52pt" height="539.28pt" viewBox="0 0 821.52 539.28" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-27T17:39:53.515760</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 539.28 
+L 821.52 539.28 
+L 821.52 0 
+L 0 0 
+z
+" style="fill: #faf7ef"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path d="M 215.46 224.7336 
+L 410.76 274.6296 
+" clip-path="url(#pd57c11dd48)" style="fill: none; stroke-dasharray: 4.81,2.08; stroke-dashoffset: 0; stroke: #53616b; stroke-width: 1.3"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 606.06 224.7336 
+L 410.76 274.6296 
+" clip-path="url(#pd57c11dd48)" style="fill: none; stroke-dasharray: 4.81,2.08; stroke-dashoffset: 0; stroke: #53616b; stroke-width: 1.3"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 215.46 319.536 
+L 410.76 274.6296 
+" clip-path="url(#pd57c11dd48)" style="fill: none; stroke-dasharray: 4.81,2.08; stroke-dashoffset: 0; stroke: #53616b; stroke-width: 1.3"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 606.06 319.536 
+L 410.76 274.6296 
+" clip-path="url(#pd57c11dd48)" style="fill: none; stroke-dasharray: 4.81,2.08; stroke-dashoffset: 0; stroke: #53616b; stroke-width: 1.3"/>
+   </g>
+   <g id="patch_2">
+    <path d="M 39.69 227.2284 
+L 367.794 227.2284 
+Q 383.418 227.2284 383.418 217.2492 
+L 383.418 107.478 
+Q 383.418 97.4988 367.794 97.4988 
+L 39.69 97.4988 
+Q 24.066 97.4988 24.066 107.478 
+L 24.066 217.2492 
+Q 24.066 227.2284 39.69 227.2284 
+z
+" clip-path="url(#pd57c11dd48)" style="fill: #fffdf7; stroke: #173d42; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 453.726 227.2284 
+L 781.83 227.2284 
+Q 797.454 227.2284 797.454 217.2492 
+L 797.454 107.478 
+Q 797.454 97.4988 781.83 97.4988 
+L 453.726 97.4988 
+Q 438.102 97.4988 438.102 107.478 
+L 438.102 217.2492 
+Q 438.102 227.2284 453.726 227.2284 
+z
+" clip-path="url(#pd57c11dd48)" style="fill: #fffdf7; stroke: #946218; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 39.69 451.7604 
+L 367.794 451.7604 
+Q 383.418 451.7604 383.418 441.7812 
+L 383.418 332.01 
+Q 383.418 322.0308 367.794 322.0308 
+L 39.69 322.0308 
+Q 24.066 322.0308 24.066 332.01 
+L 24.066 441.7812 
+Q 24.066 451.7604 39.69 451.7604 
+z
+" clip-path="url(#pd57c11dd48)" style="fill: #fffdf7; stroke: #a55038; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 453.726 451.7604 
+L 781.83 451.7604 
+Q 797.454 451.7604 797.454 441.7812 
+L 797.454 332.01 
+Q 797.454 322.0308 781.83 322.0308 
+L 453.726 322.0308 
+Q 438.102 322.0308 438.102 332.01 
+L 438.102 441.7812 
+Q 438.102 451.7604 453.726 451.7604 
+z
+" clip-path="url(#pd57c11dd48)" style="fill: #fffdf7; stroke: #315b82; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #173d42; font: 25px 'DejaVu Serif'; text-anchor: start" x="31.878" y="49.135294" transform="rotate(-0 31.878 49.135294)">Vier Fragen an dieselbe Situation</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #53616b; font: 11px 'DejaVu Sans'; text-anchor: start" x="31.878" y="65.0664" transform="rotate(-0 31.878 65.0664)">Begriffe zusammen lesen, ohne sie gleichzusetzen. Konzeptuelle Orientierung, kein getestetes Wirkmodell.</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #173d42; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="55.314" y="136.554525" transform="rotate(-0 55.314 136.554525)">Als wer handle ich hier?</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(55.314 162.857559)">Rolle und Perspektive</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(55.314 177.00877)">Zum Beispiel als Kollegin, Freund oder Lernender.</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(55.314 191.159981)">Ein situativer Bezug beschreibt nicht die ganze Person.</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #946218; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="469.35" y="136.554525" transform="rotate(-0 469.35 136.554525)">Welcher Maßstab gilt?</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(469.35 162.857559)">Norm und Entscheidungsmacht</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(469.35 177.00877)">Wer legt Tempo, Kommunikation und Leistung fest?</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(469.35 191.159981)">Statistik, soziale Erwartung und Diagnose trennen.</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #a55038; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="55.314" y="361.086525" transform="rotate(-0 55.314 361.086525)">Was wird verborgen oder kompensiert?</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(55.314 387.389559)">Masking und Camouflaging</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(55.314 401.54077)">Welche Merkmale werden überspielt, wie und warum?</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(55.314 415.691981)">Das ist nicht automatisch jede Rollenübernahme.</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #315b82; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="469.35" y="361.255275" transform="rotate(-0 469.35 361.255275)">Was erschwert oder ermöglicht Teilhabe?</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(469.35 387.389559)">Barrieren und Unterstützung</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(469.35 401.54077)">Welche Bedingung lässt sich konkret verändern?</text>
+    <text style="fill: #173d42; font: 10.5px 'DejaVu Sans'" transform="translate(469.35 415.691981)">Zugang und Wohlbefinden getrennt überprüfen.</text>
+   </g>
+   <g id="text_11">
+    <g id="patch_6">
+     <path d="M 257.815781 290.391206 
+L 563.704219 290.391206 
+L 563.704219 253.878394 
+L 257.815781 253.878394 
+z
+" style="fill: #faf7ef"/>
+    </g>
+    <text style="fill: #173d42; font: 700 17px 'DejaVu Sans'; text-anchor: middle" x="410.76" y="276.825738" transform="rotate(-0 410.76 276.825738)">Eine Person in einer Situation</text>
+   </g>
+   <g id="text_12">
+    <g id="patch_7">
+     <path d="M 315.264531 311.355369 
+L 506.255469 311.355369 
+L 506.255469 292.789431 
+L 315.264531 292.789431 
+z
+" style="fill: #faf7ef"/>
+    </g>
+    <text style="fill: #53616b; font: 11px 'DejaVu Sans'; text-anchor: middle" x="410.76" y="305.107712" transform="rotate(-0 410.76 305.107712)">Kein Begriff erschöpft die Person.</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #53616b; font: 10.5px 'DejaVu Sans'" transform="translate(35.784 482.515589)">Die gestrichelten Linien bedeuten: gemeinsam befragen. Sie behaupten weder Gleichheit noch eine bewiesene Ursache.</text>
+    <text style="fill: #53616b; font: 10.5px 'DejaVu Sans'" transform="translate(35.784 496.6668)">Die Unterscheidungen, Quellen und historischen Diagnosegrenzen stehen im Kapitel „Rollen, Normen und diagnostische Grenzen“.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pd57c11dd48">
+   <rect x="20.16" y="20.16" width="781.2" height="498.96"/>
+  </clipPath>
+ </defs>
+</svg>

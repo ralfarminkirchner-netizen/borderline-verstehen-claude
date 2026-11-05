@@ -1,0 +1,143 @@
+.relationship-scene{--rs-paper:#f5eee0;--rs-ink:#342c40;--rs-coral:#cb6950;--rs-teal:#39756f;--rs-rule:#d1c6b4;background:var(--rs-paper);color:var(--rs-ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:clamp(20px,4vw,64px);color-scheme:light;min-height:100%;box-sizing:border-box;isolation:isolate;accent-color:var(--rs-teal);caret-color:var(--rs-teal);scrollbar-color:var(--rs-teal) var(--rs-paper)}
+
+.relationship-scene *{box-sizing:border-box}
+.relationship-scene ::selection{background:#d4b19b;color:var(--rs-ink)}
+.relationship-scene button,.relationship-scene input{font:inherit}
+.relationship-scene button{cursor:pointer;border:0;border-radius:0;min-height:44px;background:transparent;color:var(--rs-ink);padding:10px 14px;font-weight:600;line-height:1.35;letter-spacing:0;text-transform:none;box-shadow:none;transition:background-color .16s ease-out,color .16s ease-out}
+.relationship-scene button:hover{background:#e7dece}
+.relationship-scene button:disabled{opacity:.4;cursor:default}
+.relationship-scene button:focus-visible,.relationship-scene summary:focus-visible,.relationship-scene input:focus-visible{outline:3px solid var(--rs-teal);outline-offset:4px}
+.relationship-scene button svg{width:22px;height:22px;stroke:currentColor;stroke-width:1.7;fill:none;flex:none}
+.relationship-scene h2,.relationship-scene h3{color:var(--rs-ink);font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.035em;line-height:1.08;margin:0;text-wrap:balance}
+.relationship-scene p{font-size:16px;line-height:1.65;margin:14px 0;max-width:70ch;color:inherit}
+.relationship-scene .rs-header{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;padding-bottom:30px;border-bottom:1px solid var(--rs-rule)}
+.relationship-scene h2{font-size:clamp(36px,4.6vw,66px);max-width:850px}
+.relationship-scene .rs-header p{max-width:62ch;font-size:18px;margin:20px 0 0}
+.relationship-scene .rs-close{display:flex;align-items:center;gap:8px;white-space:nowrap;border-bottom:1px solid var(--rs-ink);flex:none;margin-top:6px}
+.relationship-scene .rs-perspective{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:24px 0}
+.relationship-scene .rs-perspective>span{font-size:14px;margin-right:12px}
+.relationship-scene .rs-perspective button{font-size:14px;border:1px solid var(--rs-rule);font-weight:500}
+.relationship-scene .rs-perspective button[aria-pressed=true]{background:var(--rs-ink);color:var(--rs-paper);border-color:var(--rs-ink)}
+.relationship-scene .rs-stage-world{background:#e9dfce;padding:22px 24px 16px;overflow:hidden}
+.relationship-scene .rs-world-title{display:flex;justify-content:space-between;align-items:baseline;gap:20px}
+.relationship-scene .rs-world-title>span:first-child{font-family:Georgia,"Times New Roman",serif;font-size:27px;letter-spacing:-.025em}
+.relationship-scene .rs-world-title>span:last-child{font-size:13px;font-variant-numeric:tabular-nums}
+.relationship-scene .rs-diagram{width:100%;height:auto;display:block;max-height:480px;overflow:visible;margin:4px 0 0}
+.relationship-scene .rs-diagram text{font-family:system-ui,-apple-system,sans-serif;fill:var(--rs-ink)}
+.relationship-scene .rs-diagram path{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.relationship-scene .rs-diagram .rs-baseline{stroke:var(--rs-ink);stroke-width:1;opacity:.3}
+.relationship-scene .rs-diagram .rs-lane-label{font-size:12px;letter-spacing:1.7px;fill:#63585d}
+.relationship-scene .rs-diagram .rs-wording{font-family:Georgia,serif;font-size:36px;letter-spacing:-.6px}
+.relationship-scene .rs-diagram .rs-descend{stroke:var(--rs-ink);stroke-width:2;stroke-dasharray:4 5}
+.relationship-scene .rs-diagram .rs-small{font-size:14px}
+.relationship-scene .rs-diagram .rs-option-path{stroke:#b5aa9c;stroke-width:1.5;stroke-dasharray:3 6}
+.relationship-scene .rs-diagram .rs-chosen-path{stroke:#b45b45;stroke-width:5}
+.relationship-scene .rs-diagram .rs-branch{font-size:18px;fill:#6c615f}
+.relationship-scene .rs-diagram .rs-branch-active{fill:var(--rs-ink);font-weight:650}
+.relationship-scene .rs-diagram .rs-pause-mark{stroke:#b45b45;stroke-width:4}
+.relationship-scene .rs-diagram .rs-action-path{stroke:var(--rs-teal);stroke-width:5}
+.relationship-scene .rs-diagram .rs-action-path.rs-protect{stroke:var(--rs-ink)}
+.relationship-scene .rs-diagram .rs-action-text{font-size:22px;fill:var(--rs-teal);font-weight:650}
+.relationship-scene .rs-diagram .rs-response-path{stroke:var(--rs-teal);stroke-width:2.5;stroke-dasharray:5 6}
+.relationship-scene .rs-diagram .rs-return-path{stroke:var(--rs-ink);stroke-width:1.5;opacity:.65}
+.relationship-scene .rs-diagram .rs-current{font-weight:700}
+.relationship-scene .rs-diagram-alternative{font-size:13px;line-height:1.6;border-top:1px solid #c9bdab;padding-top:12px}
+.relationship-scene .rs-diagram-alternative strong{font-weight:650}
+.relationship-scene .rs-sequence{padding:0;margin:0 0 36px;border-bottom:1px solid var(--rs-rule)}
+.relationship-scene .rs-sequence ol{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));padding:0;margin:0;list-style:none}
+.relationship-scene .rs-sequence li{min-width:0}
+.relationship-scene .rs-sequence button{display:flex;align-items:center;justify-content:flex-start;gap:8px;width:100%;padding:18px 8px;font-size:12px;font-weight:500;border-bottom:3px solid transparent;text-align:left;min-height:64px}
+.relationship-scene .rs-sequence button span{font-variant-numeric:tabular-nums;opacity:.6;font-size:11px}
+.relationship-scene .rs-sequence button[aria-current=step]{border-color:var(--rs-coral);font-weight:750;background:#e9dfce}
+.relationship-scene .rs-explore{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,76px);align-items:start}
+.relationship-scene .rs-explanation h3{font-size:clamp(30px,3vw,44px);max-width:16ch}
+.relationship-scene .rs-explanation>p{max-width:60ch}
+.relationship-scene .rs-question{color:#66515a;font-size:14px;border-top:1px solid var(--rs-rule);padding-top:16px;margin-top:22px}
+.relationship-scene .rs-choices{border:0;padding:0;margin:0;min-width:0}
+.relationship-scene .rs-choices legend{font-size:14px;font-weight:700;padding:0 0 10px}
+.relationship-scene .rs-choice{display:flex;align-items:flex-start;gap:14px;padding:15px 0;cursor:pointer;border-top:1px solid var(--rs-rule)}
+.relationship-scene .rs-choice input{width:19px;height:19px;margin:3px 0 0;flex:none}
+.relationship-scene .rs-choice>span{display:block}
+.relationship-scene .rs-choice strong{display:block;font-size:16px;font-weight:650}
+.relationship-scene .rs-choice>span>span{display:block;font-size:14px;line-height:1.6;margin-top:5px;color:#5d5058}
+.relationship-scene .rs-choice:has(input:checked){color:var(--rs-teal)}
+.relationship-scene .rs-boundary{display:flex;align-items:flex-start;gap:18px;margin-top:32px;padding:24px 0;border-top:1px solid var(--rs-coral);border-bottom:1px solid var(--rs-coral)}
+.relationship-scene .rs-boundary>svg{width:28px;height:28px;fill:none;stroke:var(--rs-coral);stroke-width:1.7;flex:none}
+.relationship-scene .rs-boundary strong{font-size:18px}
+.relationship-scene .rs-boundary p{font-size:14px;margin:8px 0 0;max-width:90ch}
+.relationship-scene .rs-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:28px 0 48px;padding-top:20px;border-top:1px solid var(--rs-rule)}
+.relationship-scene .rs-status{font-size:13px;margin:0;text-align:center}
+.relationship-scene .rs-next,.relationship-scene .rs-skill{display:inline-flex;align-items:center;justify-content:center;gap:20px;background:var(--rs-ink);color:var(--rs-paper);padding:14px 20px;font-size:14px}
+.relationship-scene .rs-next:hover,.relationship-scene .rs-skill:hover{background:#51445c}
+.relationship-scene .rs-grounding{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1fr);gap:clamp(24px,4vw,60px);align-items:center;padding:36px 0;border-top:1px solid var(--rs-rule)}
+.relationship-scene .rs-grounding figure{margin:0;min-width:0}
+.relationship-scene .rs-grounding video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#221e29}
+.relationship-scene .rs-grounding figcaption{font-size:11px;line-height:1.55;max-width:55ch;margin-top:10px;color:#65565f}
+.relationship-scene .rs-grounding h3{font-size:clamp(30px,3vw,42px);max-width:18ch}
+.relationship-scene .rs-grounding p{font-size:15px}
+.relationship-scene .rs-grounding .rs-small-print{font-size:12px;color:#65565f;margin-top:12px}
+.relationship-scene .rs-origin{border-top:1px solid var(--rs-rule);padding:20px 0 0}
+.relationship-scene .rs-origin summary{font-size:14px;font-weight:600;cursor:pointer;padding:10px 0;min-height:44px}
+.relationship-scene .rs-origin>div{padding:4px 0 16px}
+.relationship-scene .rs-origin p{font-size:13px;max-width:90ch}
+.relationship-scene .rs-origin-links{display:flex;gap:12px;flex-wrap:wrap}
+.relationship-scene .rs-origin-links button{font-size:13px;border-bottom:1px solid var(--rs-teal);padding-left:0;padding-right:0;color:var(--rs-teal)}
+
+@media(max-width:900px){.relationship-scene{padding:28px}
+.relationship-scene .rs-header{gap:20px}
+.relationship-scene .rs-header p{font-size:16px}
+.relationship-scene .rs-sequence ol{grid-template-columns:repeat(4,minmax(0,1fr))}
+.relationship-scene .rs-sequence button{padding:12px 9px;min-height:48px}
+.relationship-scene .rs-explore{gap:30px}
+.relationship-scene .rs-stage-world{padding:20px 16px}
+.relationship-scene .rs-diagram{min-width:720px}
+.relationship-scene .rs-stage-world{overflow-x:auto;scrollbar-width:thin}
+.relationship-scene .rs-diagram-alternative{min-width:0}
+.relationship-scene .rs-grounding{grid-template-columns:1fr 1.1fr;gap:28px}
+}
+
+@media(max-width:600px){.relationship-scene{padding:22px 18px}
+.relationship-scene .rs-header{display:block;padding-bottom:20px}
+.relationship-scene h2{font-size:40px;max-width:12ch}
+.relationship-scene .rs-header p{font-size:15px}
+.relationship-scene .rs-close{margin:22px 0 0;padding-left:0}
+.relationship-scene .rs-perspective{padding:22px 0;gap:8px}
+.relationship-scene .rs-perspective>span{width:100%;font-size:13px;margin-bottom:4px}
+.relationship-scene .rs-perspective button{flex:1;font-size:12px;padding:10px}
+.relationship-scene .rs-world-title{display:block}
+.relationship-scene .rs-world-title>span:first-child{display:block;font-size:25px}
+.relationship-scene .rs-world-title>span:last-child{display:block;margin-top:7px}
+.relationship-scene .rs-diagram{min-width:660px;margin-top:16px}
+.relationship-scene .rs-diagram-alternative{font-size:12px;line-height:1.7;width:100%;min-width:calc(100vw - 72px);max-width:calc(100vw - 72px)}
+.relationship-scene .rs-sequence{margin-bottom:28px}
+.relationship-scene .rs-sequence ol{grid-template-columns:repeat(3,minmax(0,1fr))}
+.relationship-scene .rs-sequence button{font-size:11px;gap:6px;padding:11px 6px}
+.relationship-scene .rs-explore{display:block}
+.relationship-scene .rs-explanation h3{font-size:34px;max-width:19ch}
+.relationship-scene .rs-explanation p{font-size:15px}
+.relationship-scene .rs-choices{margin-top:28px}
+.relationship-scene .rs-choice{padding:14px 0}
+.relationship-scene .rs-choice>span>span{font-size:13px}
+.relationship-scene .rs-footer{margin-bottom:32px;gap:10px;flex-wrap:wrap}
+.relationship-scene .rs-status{font-size:12px;max-width:40%;order:0}
+.relationship-scene .rs-footer button{font-size:13px}
+.relationship-scene .rs-next{padding:12px 16px;gap:8px}
+.relationship-scene .rs-grounding{grid-template-columns:1fr;gap:24px;padding-top:28px}
+.relationship-scene .rs-grounding h3{font-size:34px}
+.relationship-scene .rs-grounding figure{order:1}
+.relationship-scene .rs-skill{width:100%;font-size:14px}
+.relationship-scene .rs-boundary{gap:12px;padding:20px 0}
+.relationship-scene .rs-boundary p{font-size:13px}
+.relationship-scene .rs-origin-links{display:block}
+.relationship-scene .rs-origin-links button{display:block;margin-bottom:8px;text-align:left}
+}
+
+@media(prefers-reduced-motion:reduce){.relationship-scene *{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+}
+
+
+/* Keep this scene legible inside the retained Atlas view. */
+#shared-view .relationship-scene h2{font-size:clamp(36px,4.6vw,66px);letter-spacing:-.035em}
+#shared-view .relationship-scene p{max-width:70ch;line-height:1.65}
+#shared-atlas .relationship-scene button:focus-visible,#shared-atlas .relationship-scene input:focus-visible{outline:3px solid var(--rs-teal);outline-offset:4px}
+@media(max-width:600px){#shared-view .relationship-scene h2{font-size:40px;max-width:12ch}}
