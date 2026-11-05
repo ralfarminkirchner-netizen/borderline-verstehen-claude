@@ -18,13 +18,20 @@ const TYPEN = {
   '.mp3': 'audio/mpeg', '.m4a': 'audio/mp4', '.wav': 'audio/wav', '.mp4': 'video/mp4', '.webm': 'video/webm',
   '.woff2': 'font/woff2', '.woff': 'font/woff', '.ttf': 'font/ttf', '.txt': 'text/plain; charset=utf-8', '.pdf': 'application/pdf', '.vtt': 'text/vtt',
 };
+// Große Mediendateien werden nicht mit hochgeladen (Railway-Upload bricht nach 30 s ab). Fehlen sie
+// lokal, leitet der Server auf dieselbe Datei im öffentlichen kanonischen Atlas um (nur lesend; am
+// 5.11.2026 alle 42 Dateien gleich groß, Stichprobe von 8 Prüfsummen gleich).
+const MEDIEN_QUELLE = process.env.MEDIEN_QUELLE || 'https://borderline-verstehen-atlas-production.up.railway.app';
 const SCHUTZ = { 'x-content-type-options': 'nosniff', 'referrer-policy': 'no-referrer', 'x-robots-tag': 'noindex, nofollow' };
 
 function nichtGefunden(res) { res.writeHead(404, { 'content-type': 'text/plain; charset=utf-8', ...SCHUTZ }); res.end('Nicht gefunden'); }
 
-async function liefere(req, res, datei) {
+async function liefere(req, res, datei, pfad = '') {
   let info;
-  try { info = await stat(datei); } catch { return nichtGefunden(res); }
+  try { info = await stat(datei); } catch {
+    if (pfad.startsWith('/assets/media/') && MEDIEN_QUELLE) { res.writeHead(302, { location: MEDIEN_QUELLE + encodeURI(pfad), ...SCHUTZ }); return res.end(); }
+    return nichtGefunden(res);
+  }
   if (!info.isFile()) return nichtGefunden(res);
   const typ = TYPEN[extname(datei).toLowerCase()] || 'application/octet-stream';
   const kopf = { 'content-type': typ, 'accept-ranges': 'bytes', 'cache-control': /\.(html|mjs|js|css|json)$/.test(datei) ? 'no-cache' : 'public, max-age=86400', ...SCHUTZ };
@@ -56,5 +63,5 @@ createServer((req, res) => {
   const rel = normalize(pfad.endsWith('/') ? pfad + 'index.html' : pfad).replace(/^([/\\])+/, '');
   const datei = join(ATLAS, rel);
   if (!datei.startsWith(ATLAS + sep)) return nichtGefunden(res);
-  liefere(req, res, datei);
+  liefere(req, res, datei, pfad);
 }).listen(Number(process.env.PORT || 8080), '0.0.0.0');

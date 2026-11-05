@@ -12,3 +12,6 @@
 - Ohne Profilserver: `/api/personal` fehlt, der Atlas meldet das selbst; nichts wird gespeichert.
   `atlas-work-supplement.mjs` fehlt schon im Originalstand.
 - `/schloss/` liefert die Laufzeitdateien aus `proben/schloss-schluessel/`.
+- Auf Railway fehlen die großen Medien (`assets/media`, 173 MB): Der Upload bricht nach 30 s ab. Der Server
+  leitet sie auf dieselben Dateien im öffentlichen kanonischen Atlas um (borderline-verstehen-atlas-production);
+  am 5.11. alle 42 gleich groß, 8 Prüfsummen stichprobenhaft gleich. Lokal und auf GitHub liegen sie vollständig.

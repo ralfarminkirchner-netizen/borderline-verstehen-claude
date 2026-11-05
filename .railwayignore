@@ -12,3 +12,5 @@ proben/**/bilder/
 proben/**/*.cjs
 proben/**/*.md
 proben/**/*.webm
+# Medien kommen per Umleitung aus dem öffentlichen kanonischen Atlas (siehe app/server.mjs)
+app/atlas/assets/media/
