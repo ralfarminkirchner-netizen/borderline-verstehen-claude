@@ -1,0 +1,101 @@
+{
+  "datum": "2026-11-04",
+  "autor": "Codex",
+  "bildwerkzeug": "Image Gen",
+  "geltung": "Vorschlag; keine Implementierung und keine Abnahme der App",
+  "menschliche_richtung": "Ralf möchte die ersten drei Richtungen verbinden und je Raum weitere Gestaltungen. Die weiteren fünf Bilder sind neue Vorschläge.",
+  "bilder": [
+    {
+      "datei": "01-feld.png",
+      "titel": "Feld",
+      "original": "/Volumes/ThunderBolt4_2TB/HomeData/.codex/generated_images/01a1a654-3109-7992-82f6-5f1a98bde743/exec-67bd3ed2-fa7a-4455-b920-fef67ffc4513.png",
+      "sha256": "ebe2e36fdc73edfb7896ab46166dd4b7eafcc04919f4b4b9135214348a7e9406",
+      "art": "erzeugter Gestaltungsentwurf",
+      "bediente_software": false,
+      "visuelle_referenzen": []
+    },
+    {
+      "datei": "02-gegenhalt.png",
+      "titel": "Gegenhalt",
+      "original": "/Volumes/ThunderBolt4_2TB/HomeData/.codex/generated_images/01a1a654-3109-7992-82f6-5f1a98bde743/exec-cce93c3d-997a-4083-ae5c-b1900e59650b.png",
+      "sha256": "929643a4085fd3c5380674e6b71771c23b73a1663c95735feeb95cc118501258",
+      "art": "erzeugter Gestaltungsentwurf",
+      "bediente_software": false,
+      "visuelle_referenzen": []
+    },
+    {
+      "datei": "03-schwelle.png",
+      "titel": "Schwelle",
+      "original": "/Volumes/ThunderBolt4_2TB/HomeData/.codex/generated_images/01a1a654-3109-7992-82f6-5f1a98bde743/exec-f048e7a4-2185-4c96-aba7-e36a75428cf2.png",
+      "sha256": "309b06c0ccc3b3d5a740c7cf16cd09f2dd9e36db1ee22f25c3802886eec32311",
+      "art": "erzeugter Gestaltungsentwurf",
+      "bediente_software": false,
+      "visuelle_referenzen": []
+    },
+    {
+      "datei": "04-uebersetzung.png",
+      "titel": "Übersetzung",
+      "original": "/Volumes/ThunderBolt4_2TB/HomeData/.codex/generated_images/01a1a654-3109-7992-82f6-5f1a98bde743/exec-d913a128-f11f-4703-87d7-56023d3bb247.png",
+      "sha256": "ad4ca54585cc26b0fdefde7fb23589780acbcf3d2bc15eac99abf04645aee4f8",
+      "art": "erzeugter Gestaltungsentwurf",
+      "bediente_software": false,
+      "visuelle_referenzen": [
+        "01-feld.png",
+        "02-gegenhalt.png",
+        "03-schwelle.png"
+      ]
+    },
+    {
+      "datei": "05-ueberschneidung.png",
+      "titel": "Überschneidung",
+      "original": "/Volumes/ThunderBolt4_2TB/HomeData/.codex/generated_images/01a1a654-3109-7992-82f6-5f1a98bde743/exec-58410a45-d7c1-43cf-a4cb-491358957f9b.png",
+      "sha256": "0301d01fc43d1a499be7cdc1afdb1780353f2d56a81ab30aa581e394e3910d6e",
+      "art": "erzeugter Gestaltungsentwurf",
+      "bediente_software": false,
+      "visuelle_referenzen": [
+        "01-feld.png",
+        "02-gegenhalt.png",
+        "03-schwelle.png"
+      ]
+    },
+    {
+      "datei": "06-entstehung.png",
+      "titel": "Entstehung",
+      "original": "/Volumes/ThunderBolt4_2TB/HomeData/.codex/generated_images/01a1a654-3109-7992-82f6-5f1a98bde743/exec-6c746844-d830-4fa0-87c5-373e4eb1d547.png",
+      "sha256": "a680914e78277f178c6278fc53a6b1dea62f639f7b4e3882e4ef3cf32b0ff047",
+      "art": "erzeugter Gestaltungsentwurf",
+      "bediente_software": false,
+      "visuelle_referenzen": [
+        "01-feld.png",
+        "02-gegenhalt.png",
+        "03-schwelle.png"
+      ]
+    },
+    {
+      "datei": "07-fehlstelle.png",
+      "titel": "Fehlstelle",
+      "original": "/Volumes/ThunderBolt4_2TB/HomeData/.codex/generated_images/01a1a654-3109-7992-82f6-5f1a98bde743/exec-519f19ca-7ed0-481f-8bfa-dfd2c45faa03.png",
+      "sha256": "e71cddd6e581ad911be949819198fb3dc44f687b6b626b026af132942f30482e",
+      "art": "erzeugter Gestaltungsentwurf",
+      "bediente_software": false,
+      "visuelle_referenzen": [
+        "01-feld.png",
+        "02-gegenhalt.png",
+        "03-schwelle.png"
+      ]
+    },
+    {
+      "datei": "08-sprachentwurf.png",
+      "titel": "Gesprochener Beitrag und sichtbarer Entwurf",
+      "original": "/Volumes/ThunderBolt4_2TB/HomeData/.codex/generated_images/01a1a654-3109-7992-82f6-5f1a98bde743/exec-6475f20d-c127-4018-88ee-7b397e2310da.png",
+      "sha256": "f0e0aec4fe19f287fb7bf1a32a210693990af57a9b9a4c5fb8cb4f34c6f1413f",
+      "art": "erzeugter Gestaltungsentwurf",
+      "bediente_software": false,
+      "visuelle_referenzen": [
+        "01-feld.png",
+        "02-gegenhalt.png",
+        "03-schwelle.png"
+      ]
+    }
+  ]
+}
