@@ -1,0 +1,1341 @@
+{
+ "format": "lebende-welt-startfall",
+ "version": 1,
+ "erzeugt": "2026-11-06T00:33:50.773Z",
+ "hinweis": "Aus data-readonly/karte.json und texte.json abgeleitet; Felder w/rolle/q_eff sind Vorschlag des Datenmodells (DATENMODELL.md), kein Bestand.",
+ "modell": {
+  "BASIS": {
+   "zusammenhang": 1,
+   "folge": 0.6,
+   "aussage": 0.7,
+   "annaeherung": 0.6,
+   "uebergang": 0.5,
+   "bedingung": 0.45,
+   "einordnung": 0.25
+  },
+  "folge_abstammung": 0.3,
+  "GFAK": {
+   "quelle": 1,
+   "original": 0.7,
+   "redaktionell": 0.35,
+   "offen": 0
+  },
+  "KQ": 1.5,
+  "GMAX": 1,
+  "C": 2,
+  "formel_w": "w = basis(art) · g(geltung) · (1 − e^(−q_eff/1.5)), 0 für trennend/offen",
+  "formel_S": "A = Σ r_i² · (1 + Gmax·(1 − e^(−W/c))),  W = Σ_Paare (1 − Π(1 − w_f))",
+  "deckel": "Gmax_eff = Gmax · max g(geltung) der beitragenden Fugen (quelle 1 · original 0.7 · redaktionell 0.35)",
+  "anker_regel": "Fugen mit anker: q_eff = 0 (Quellen der Orte, laut anker kein unabhängiger Beleg); Varianten V1/V2 zum Vergleich",
+  "quellen_dedupliziert": "q_eff zählt verschiedene Werke (URL/Titel), nicht Schlüssel"
+ },
+ "zentrum": {
+  "i": 1031,
+  "t": "Die Angst vor Verlust ist groß",
+  "region": "Beziehungen & Borderline",
+  "k": "phenomenon",
+  "s": "Die Angst ist als Erleben ernst zu nehmen. Sie beweist nicht, dass eine Trennung bevorsteht, und verpflichtet das Gegenüber nicht zu unbegrenzter Rückversicherung.",
+  "x": -131.6,
+  "y": -241,
+  "grad": 4,
+  "text_herkunft": "Borderline verstehen · Beziehungskarte",
+  "text_quellen": [],
+  "tags": [
+   "Nähe & Abstand"
+  ],
+  "text": "## Im Alltag\nBeim Abschied sagt Pat: „Wenn du gehst, bin ich dir wohl nicht wichtig.“ Dabei ist nur ein Abend allein geplant.\n\n## Beobachtung\nDer geplante Abschied und Pats Satz sind bekannt. Angst und Kontaktwunsch können als eigene Erfahrung benannt werden.\n\n## Mögliche Deutung\nEin Abschied wird hier möglicherweise als Beziehungsurteil gelesen. Diese Bedeutung muss weder geteilt noch als absichtlicher Druck festgelegt werden.\n\n## Offene Fragen\nEine Episode belegt keinen Bindungstyp und keine Borderline-Diagnose. Frühere Erfahrungen können bedeutsam sein, ohne aus dem Satz rekonstruierbar zu werden.\n\n## Handlungsspielraum\nDen Wunsch ohne Loyalitätsprüfung formulieren: „Abschiede fallen mir heute schwer. Ich kümmere mich um meinen Abend; was wir vereinbart haben, bleibt bestehen.“\n\nKann ich meine Angst zeigen und zugleich die Freiheit der anderen Person bestehen lassen?"
+ },
+ "fugen_1": [
+  {
+   "fuge": 1657,
+   "a": 1030,
+   "b": 1031,
+   "a_t": "Eine Antwort bleibt aus",
+   "b_t": "Die Angst vor Verlust ist groß",
+   "art": "einordnung",
+   "typ": "",
+   "geltung": "redaktionell",
+   "status": "",
+   "label": "Eine mögliche Bedeutung des Wartens",
+   "grund": "der Originalbezeichnung „Eine mögliche Bedeutung des Wartens“",
+   "detail": "Eine unbeantwortete Nachricht kann in einer erfundenen Situation als drohender Verlust erlebt werden. Der Zeitablauf beweist diese Bedeutung nicht.",
+   "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+   "frage": "",
+   "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+   "quellen": [],
+   "anker": [],
+   "rolle": "verbindend",
+   "q_eff": 0,
+   "w": 0
+  },
+  {
+   "fuge": 1659,
+   "a": 1031,
+   "b": 1032,
+   "a_t": "Die Angst vor Verlust ist groß",
+   "b_t": "Wenn Nähe zur Verpflichtung wird",
+   "art": "einordnung",
+   "typ": "",
+   "geltung": "redaktionell",
+   "status": "",
+   "label": "Wenn Beruhigung eingefordert wird",
+   "grund": "der Originalbezeichnung „Wenn Beruhigung eingefordert wird“",
+   "detail": "Aus eigener Angst kann eine Forderung nach Kontakt entstehen. Die Angst begründet keinen Anspruch auf Verfügbarkeit.",
+   "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+   "frage": "",
+   "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+   "quellen": [],
+   "anker": [],
+   "rolle": "verbindend",
+   "q_eff": 0,
+   "w": 0
+  },
+  {
+   "fuge": 1660,
+   "a": 1031,
+   "b": 1034,
+   "a_t": "Die Angst vor Verlust ist groß",
+   "b_t": "Auch meine Grenze gilt",
+   "art": "einordnung",
+   "typ": "",
+   "geltung": "redaktionell",
+   "status": "",
+   "label": "Bedürfnis trifft begrenzte Verfügbarkeit",
+   "grund": "der Originalbezeichnung „Bedürfnis trifft begrenzte Verfügbarkeit“",
+   "detail": "Ein starkes Bedürfnis und die Grenze des Gegenübers dürfen zugleich ernst genommen werden.",
+   "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+   "frage": "",
+   "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+   "quellen": [],
+   "anker": [],
+   "rolle": "verbindend",
+   "q_eff": 0,
+   "w": 0
+  },
+  {
+   "fuge": 1749,
+   "a": 1053,
+   "b": 1031,
+   "a_t": "Verlassenheitsangst und Vermeidungsbemühungen",
+   "b_t": "Die Angst vor Verlust ist groß",
+   "art": "aussage",
+   "typ": "",
+   "geltung": "redaktionell",
+   "status": "redaktionelle-zuordnung",
+   "label": "unterscheidet Symptomdomäne und Alltagsszene",
+   "grund": "der belegten Originalaussage „unterscheidet Symptomdomäne und Alltagsszene“",
+   "detail": "Das Dossier bezeichnet Verlassenheitsangst als klinische Symptomdomäne. Die fiktive Abschiedsszene zeigt dagegen nur einen Satz, berichtete Angst und einen Kontaktwunsch. Nebeneinander wird sichtbar, wie viel mehr als eine einzelne Episode eine diagnostische Beurteilung benötigt.",
+   "grenze": "Die Szene belegt weder einen Bindungstyp noch Borderline. Ein klassifikatorischer Bezug ist kein Ursachenbeleg und keine Diagnose einer in einer Szene beschriebenen Person.",
+   "frage": "",
+   "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
+   "quellen": [
+    {
+     "schluessel": "source:bpd:ae3d3e3e08a0aad",
+     "titel": "Borderline Personality Disorder – NIMH",
+     "art": "",
+     "url": "https://www.nimh.nih.gov/health/publications/borderline-personality-disorder",
+     "autoren": "",
+     "jahr": "",
+     "stelle": ""
+    },
+    {
+     "schluessel": "source:bpd:58630727af716c7",
+     "titel": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022",
+     "art": "",
+     "url": "https://register.awmf.org/de/leitlinien/detail/038-015",
+     "autoren": "",
+     "jahr": "",
+     "stelle": ""
+    }
+   ],
+   "anker": [
+    {
+     "ort": 1053,
+     "rolle": "Vorhandene Quellenzuordnung dieses gelesenen Eintrags; kein neuer unabhängiger Beleg für die Querverbindung."
+    }
+   ],
+   "rolle": "trennend:label",
+   "q_eff": 0,
+   "w": 0
+  }
+ ],
+ "nachbarn_1": [
+  {
+   "i": 1030,
+   "t": "Eine Antwort bleibt aus",
+   "region": "Beziehungen & Borderline",
+   "k": "phenomenon",
+   "s": "Eine offene Nachricht kann viel Bedeutung bekommen. Zeitablauf, eigener Wunsch und unbekannte Gründe des Gegenübers bleiben verschiedene Ebenen.",
+   "x": -181.9,
+   "y": -286.1,
+   "grad": 3,
+   "text_herkunft": "Borderline verstehen · Beziehungskarte",
+   "text_quellen": [],
+   "tags": [
+    "Nähe & Abstand"
+   ],
+   "text": "## Im Alltag\nSeit gestern ist eine Nachricht unbeantwortet. Deniz schaut immer wieder aufs Telefon und möchte nachlegen.\n\n## Beobachtung\nEine Antwort liegt noch nicht vor. Bekannt ist außerdem, was genau geschrieben und gegebenenfalls vereinbart wurde.\n\n## Mögliche Deutung\n„Ich werde verlassen“ oder „ich bin lästig“ können sich sehr überzeugend anfühlen. Ohne weitere Auskunft sind sie keine bestätigten Gründe des Schweigens.\n\n## Offene Fragen\nBeschäftigung, Unklarheit, Überforderung, ein Wunsch nach Abstand oder andere Gründe bleiben möglich. Die App wählt keine davon als Wahrheit aus.\n\n## Handlungsspielraum\nKontaktvereinbarungen prüfen. Die nächste Nachricht nicht allein zur sofortigen Beruhigung benutzen; den eigenen Unterstützungsbedarf zunächst unabhängig versorgen.\n\nWelche Information fehlt mir, und welche Gewissheit versuche ich durch eine weitere Nachricht zu bekommen?"
+  },
+  {
+   "i": 1032,
+   "t": "Wenn Nähe zur Verpflichtung wird",
+   "region": "Beziehungen & Borderline",
+   "k": "phenomenon",
+   "s": "Verbundenheit kann gewünscht sein und trotzdem Druck erzeugen. Entscheidend ist, ob eine andere Antwort oder ein Nein praktisch möglich bleibt.",
+   "x": -206.6,
+   "y": -184.6,
+   "grad": 3,
+   "text_herkunft": "Borderline verstehen · Beziehungskarte",
+   "text_quellen": [],
+   "tags": [
+    "Nähe & Abstand"
+   ],
+   "text": "## Im Alltag\n„Nach allem, was ich für dich getan habe, kannst du wenigstens vorbeikommen.“ Die angesprochene Person hatte abgesagt.\n\n## Beobachtung\nVergangene Hilfe wird mit einem aktuellen Besuchswunsch verknüpft. Eine konkrete frühere Vereinbarung ist noch nicht benannt.\n\n## Mögliche Deutung\nEs könnte Dankesschuld eingefordert werden. Möglich ist auch, dass eine wirkliche gemeinsame Verpflichtung ungeschickt angesprochen wird; das muss geklärt werden.\n\n## Offene Fragen\nEin Wortlaut allein zeigt nicht alle Absprachen oder Machtverhältnisse. Eine liebevolle Absicht würde den erlebten Druck trotzdem nicht automatisch beseitigen.\n\n## Handlungsspielraum\nKonkrete Vereinbarung, eigenen Wunsch und Beziehung voneinander trennen. Einen Besuch nicht als Beweis von Liebe oder Dankbarkeit verlangen.\n\nWelche freie Entscheidung bleibt der anderen Person, ohne dafür abgewertet zu werden?"
+  },
+  {
+   "i": 1034,
+   "t": "Auch meine Grenze gilt",
+   "region": "Beziehungen & Borderline",
+   "k": "phenomenon",
+   "s": "Anteilnahme und begrenzte Verfügbarkeit können zusammengehören. Anerkennung eines Bedürfnisses verlangt keine Aufgabe der eigenen Entscheidung.",
+   "x": -115,
+   "y": -132.7,
+   "grad": 7,
+   "text_herkunft": "Borderline verstehen · Beziehungskarte",
+   "text_quellen": [
+    {
+     "schluessel": "family-2024",
+     "titel": "Family Connections · Unterstützung für Angehörige",
+     "art": "",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11659101/",
+     "autoren": "",
+     "jahr": "",
+     "stelle": ""
+    }
+   ],
+   "tags": [
+    "Nähe & Abstand"
+   ],
+   "text": "## Im Alltag\nEin Freund möchte, dass Toni nachts immer erreichbar ist. Toni braucht Schlaf und möchte trotzdem unterstützen.\n\n## Beobachtung\nEs gibt eine Bitte um ständige Erreichbarkeit und Tonis Bedürfnis nach einer Nachtruhe. Beides kann konkret benannt werden.\n\n## Mögliche Deutung\n„Wenn ich Nein sage, lasse ich ihn fallen“ wäre eine zusätzliche Schlussfolgerung. Eine Grenze ist nicht schon Gleichgültigkeit.\n\n## Offene Fragen\nWelche andere Unterstützung verfügbar ist und was beide tragen können, braucht persönliche Klärung. Es gibt keine passende Standardzusage für alle Beziehungen.\n\n## Handlungsspielraum\nEine tragbare Zusage machen, etwa zu einem vereinbarten Gespräch. Nicht mehr anbieten, als tatsächlich gehalten werden kann; ergänzende fachliche Unterstützung gemeinsam erwägen.\n\nWelche Unterstützung ist verlässlich möglich, ohne dass sie meine eigene Versorgung aufzehrt?"
+  },
+  {
+   "i": 1053,
+   "t": "Verlassenheitsangst und Vermeidungsbemühungen",
+   "region": "Diagnose & Differenzierung",
+   "k": "phenomenon",
+   "s": "Starke Reaktionen auf tatsächliches oder befürchtetes Verlassenwerden.",
+   "x": -121.8,
+   "y": -735.8,
+   "grad": 1,
+   "text_herkunft": "Phänomenatlas · Borderline, Neurodivergenz und Trauma · Dossier vom 20. Oktober",
+   "text_quellen": [
+    {
+     "schluessel": "source:bpd:ae3d3e3e08a0aad",
+     "titel": "Borderline Personality Disorder – NIMH",
+     "art": "",
+     "url": "https://www.nimh.nih.gov/health/publications/borderline-personality-disorder",
+     "autoren": "",
+     "jahr": "",
+     "stelle": ""
+    },
+    {
+     "schluessel": "source:bpd:58630727af716c7",
+     "titel": "S3 Borderline-Persönlichkeitsstörung 038-015; Fassung 14.11.2022",
+     "art": "",
+     "url": "https://register.awmf.org/de/leitlinien/detail/038-015",
+     "autoren": "",
+     "jahr": "",
+     "stelle": ""
+    }
+   ],
+   "tags": [
+    "Klinische Symptomdomänen"
+   ],
+   "text": "## Begriffstyp\nKlinische Symptomdomäne\n\n## Evidenzstatus\ndiagnostisch anerkannt\n\n## Vertrauen / Grenze\nKlassifikatorisch anerkannt; keine Ursachenevidenz\n\n## Bedingungen\nBPS-Kriterium; einzeln nicht spezifisch\n\n## Aussagegrenze\nParaphrase einer Domäne; keine vollständige Diagnoseregel.\n\n## Herkunft\nRedaktionelle Rekonstruktion aus datierten Quellen; kein persönlicher Befund"
+  }
+ ],
+ "fugen_2": [
+  {
+   "fuge": 1658,
+   "a": 1030,
+   "b": 1041,
+   "a_t": "Eine Antwort bleibt aus",
+   "b_t": "Was geschah — und was bedeutet es für mich?",
+   "art": "einordnung",
+   "typ": "",
+   "geltung": "redaktionell",
+   "status": "",
+   "label": "Zeitablauf von Erklärung trennen",
+   "grund": "der Originalbezeichnung „Zeitablauf von Erklärung trennen“",
+   "detail": "Die fehlende Antwort ist bekannt; ihr Grund bleibt ohne weitere Auskunft offen.",
+   "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+   "frage": "",
+   "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+   "quellen": [],
+   "anker": [],
+   "rolle": "trennend:label",
+   "q_eff": 0,
+   "w": 0
+  },
+  {
+   "fuge": 1661,
+   "a": 1032,
+   "b": 1039,
+   "a_t": "Wenn Nähe zur Verpflichtung wird",
+   "b_t": "Ich bin mehr als die Rolle, in der du mich siehst",
+   "art": "einordnung",
+   "typ": "",
+   "geltung": "redaktionell",
+   "status": "",
+   "label": "Die Rolle verpflichtet nicht zu allem",
+   "grund": "der Originalbezeichnung „Die Rolle verpflichtet nicht zu allem“",
+   "detail": "Familien- oder Partnerschaftsrollen können Erwartungen tragen. Sie ersetzen keine konkrete Vereinbarung oder Zustimmung.",
+   "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+   "frage": "",
+   "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+   "quellen": [],
+   "anker": [],
+   "rolle": "verbindend",
+   "q_eff": 0,
+   "w": 0
+  },
+  {
+   "fuge": 1662,
+   "a": 1032,
+   "b": 1040,
+   "a_t": "Wenn Nähe zur Verpflichtung wird",
+   "b_t": "Welche Erwartung gilt hier eigentlich?",
+   "art": "einordnung",
+   "typ": "",
+   "geltung": "redaktionell",
+   "status": "",
+   "label": "Welche Pflicht wird behauptet?",
+   "grund": "der Originalbezeichnung „Welche Pflicht wird behauptet?“",
+   "detail": "Der Vergleich fragt nach der Herkunft einer Erwartung: Gewohnheit, Sachvereinbarung oder moralische Forderung.",
+   "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+   "frage": "",
+   "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+   "quellen": [],
+   "anker": [],
+   "rolle": "verbindend",
+   "q_eff": 0,
+   "w": 0
+  },
+  {
+   "fuge": 1666,
+   "a": 1034,
+   "b": 1044,
+   "a_t": "Auch meine Grenze gilt",
+   "b_t": "Erleben anerkennen, ohne alles zu bestätigen",
+   "art": "einordnung",
+   "typ": "",
+   "geltung": "redaktionell",
+   "status": "",
+   "label": "Anerkennen und Nein sagen",
+   "grund": "der Originalbezeichnung „Anerkennen und Nein sagen“",
+   "detail": "Die Erfahrung einer anderen Person kann anerkannt werden, während die eigene Verfügbarkeit begrenzt bleibt.",
+   "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+   "frage": "",
+   "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+   "quellen": [],
+   "anker": [],
+   "rolle": "verbindend",
+   "q_eff": 0,
+   "w": 0
+  },
+  {
+   "fuge": 1667,
+   "a": 1034,
+   "b": 1051,
+   "a_t": "Auch meine Grenze gilt",
+   "b_t": "Was kostet das scheinbare Gelingen?",
+   "art": "einordnung",
+   "typ": "",
+   "geltung": "redaktionell",
+   "status": "",
+   "label": "Was ist dauerhaft tragbar?",
+   "grund": "der Originalbezeichnung „Was ist dauerhaft tragbar?“",
+   "detail": "Bei einer Zusage zählen auch Vorbereitung, Erholung und Arbeit der unterstützenden Person.",
+   "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+   "frage": "",
+   "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+   "quellen": [],
+   "anker": [],
+   "rolle": "verbindend",
+   "q_eff": 0,
+   "w": 0
+  },
+  {
+   "fuge": 1668,
+   "a": 1035,
+   "b": 1034,
+   "a_t": "Unterstützung bleibt ein Angebot",
+   "b_t": "Auch meine Grenze gilt",
+   "art": "einordnung",
+   "typ": "",
+   "geltung": "redaktionell",
+   "status": "",
+   "label": "Freiwillige Unterstützung",
+   "grund": "der Originalbezeichnung „Freiwillige Unterstützung“",
+   "detail": "Ein Angebot bleibt Unterstützung, wenn es abgelehnt und seine Form gemeinsam begrenzt werden kann.",
+   "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+   "frage": "",
+   "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+   "quellen": [],
+   "anker": [],
+   "rolle": "verbindend",
+   "q_eff": 0,
+   "w": 0
+  },
+  {
+   "fuge": 1683,
+   "a": 1038,
+   "b": 1030,
+   "a_t": "Mein Bild von mir wechselt",
+   "b_t": "Eine Antwort bleibt aus",
+   "art": "einordnung",
+   "typ": "",
+   "geltung": "redaktionell",
+   "status": "",
+   "label": "Eine offene Vergleichsfrage",
+   "grund": "der Originalbezeichnung „Eine offene Vergleichsfrage“",
+   "detail": "Die erfundene Situation lädt dazu ein, Selbstbewertung in unterschiedlichen Beziehungssituationen zu vergleichen.",
+   "grenze": "Redaktioneller Lernanschluss; keine nachgewiesene Ursache, Diagnose oder individuelle Vorhersage.",
+   "frage": "",
+   "herkunft": "Vorhandene Beziehungskarte · redaktionelle Lesebeziehung",
+   "quellen": [],
+   "anker": [],
+   "rolle": "verbindend",
+   "q_eff": 0,
+   "w": 0
+  },
+  {
+   "fuge": 1745,
+   "a": 1034,
+   "b": 561,
+   "a_t": "Auch meine Grenze gilt",
+   "b_t": "Nähe, Freiheit und Grenzen",
+   "art": "aussage",
+   "typ": "",
+   "geltung": "redaktionell",
+   "status": "redaktionelle-zuordnung",
+   "label": "verbindet Nähe mit freiwilliger Verfügbarkeit",
+   "grund": "der belegten Originalaussage „verbindet Nähe mit freiwilliger Verfügbarkeit“",
+   "detail": "Die Nachtszene behandelt den Wunsch nach Unterstützung und den eigenen Schlafbedarf. Die Werkstattkarte fragt nach freiwilliger Nähe und dem Recht auf Abstand. Der gemeinsame Blick macht konkrete Zusagen und Belastungsgrenzen besprechbar.",
+   "grenze": "Eine Kapazitätsgrenze ist kein Beweis mangelnder Bindung. Die Texte bestimmen keine allgemeine richtige Menge an Nähe und weisen keiner Person eine Pflicht zu dauernder Verfügbarkeit zu.",
+   "frage": "",
+   "herkunft": "Redaktionelle Verbindung vorhandener Atlasinhalte",
+   "quellen": [
+    {
+     "schluessel": "family-2024",
+     "titel": "Family Connections · Unterstützung für Angehörige",
+     "art": "",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11659101/",
+     "autoren": "",
+     "jahr": "",
+     "stelle": ""
+    },
+    {
+     "schluessel": "relationship-source:gov",
+     "titel": "Traumainformierte Praxis · Sicherheit und Wahlmöglichkeiten",
+     "art": "",
+     "url": "https://www.gov.uk/government/publications/working-definition-of-trauma-informed-practice/working-definition-of-trauma-informed-practice",
+     "autoren": "",
+     "jahr": "",
+     "stelle": ""
+    }
+   ],
+   "anker": [
+    {
+     "ort": 1034,
+     "rolle": "Vorhandene Quellenzuordnung dieses gelesenen Eintrags; kein neuer unabhängiger Beleg für die Querverbindung."
+    },
+    {
+     "ort": 561,
+     "rolle": "Vorhandene Quellenzuordnung dieses gelesenen Eintrags; kein neuer unabhängiger Beleg für die Querverbindung."
+    }
+   ],
+   "rolle": "verbindend",
+   "q_eff": 0,
+   "w": 0
+  },
+  {
+   "fuge": 1781,
+   "a": 1194,
+   "b": 1034,
+   "a_t": "Schutz braucht einen passenden nächsten Schritt",
+   "b_t": "Auch meine Grenze gilt",
+   "art": "aussage",
+   "typ": "",
+   "geltung": "redaktionell",
+   "status": "redaktionelle-zuordnung",
+   "label": "unterscheidet persönliche Zusage und technischen Schutzplan",
+   "grund": "der belegten Originalaussage „unterscheidet persönliche Zusage und technischen Schutzplan“",
+   "detail": "Die Alltagsszene fragt, welche Erreichbarkeit freiwillig und tragbar zugesagt werden kann. Bei möglicher technischer Überwachung kommt eine eigenständige Schutzfrage hinzu: sichere Kommunikation und Änderungen an Zugängen müssen zur konkreten Lage passen. Die allgemeine Grenzkarte ersetzt diesen technischen und gegebenenfalls spezialisierten Schutzplan nicht.",
+   "grenze": "Redaktionelle Lesebrücke zwischen den angegebenen Texten. Quellen belegen nur ihren jeweils bezeichneten Inhalt und Prüfstand. Keine Gleichsetzung von Populationen, Diagnose, individuelle Ursache oder bestätigte Wirksamkeit einer Methode.",
+   "frage": "",
+   "herkunft": "Redaktionelle Lesebrücke aus geprüften Wave-2-Abschnitten und vorhandenem Atlas",
+   "quellen": [
+    {
+     "schluessel": "verified:esafety-online-safety-2026",
+     "titel": "Online safety checklist",
+     "art": "",
+     "url": "https://www.esafety.gov.au/key-topics/domestic-family-violence/online-safety-checklist",
+     "autoren": [
+      "Australian eSafety Commissioner"
+     ],
+     "jahr": 2026,
+     "stelle": ""
+    },
+    {
+     "schluessel": "family-2024",
+     "titel": "Family Connections · Unterstützung für Angehörige",
+     "art": "",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11659101/",
+     "autoren": "",
+     "jahr": "",
+     "stelle": ""
+    }
+   ],
+   "anker": [
+    {
+     "ort": 1194,
+     "rolle": "Vorhandene Quellenzuordnung dieses Endpunkts; kein zusätzlicher Beleg einer Kausalität oder Wirksamkeit der redaktionellen Verbindung."
+    },
+    {
+     "ort": 1034,
+     "rolle": "Vorhandene Quellenzuordnung dieses Endpunkts; kein zusätzlicher Beleg einer Kausalität oder Wirksamkeit der redaktionellen Verbindung."
+    }
+   ],
+   "rolle": "trennend:label",
+   "q_eff": 0,
+   "w": 0
+  },
+  {
+   "fuge": 1826,
+   "a": 1223,
+   "b": 1034,
+   "a_t": "Schutz hängt nicht an einem Grenzwert",
+   "b_t": "Auch meine Grenze gilt",
+   "art": "aussage",
+   "typ": "",
+   "geltung": "redaktionell",
+   "status": "redaktionelle-zuordnung",
+   "label": "verbindet Grenzen mit Handlungsspielraum",
+   "grund": "der belegten Originalaussage „verbindet Grenzen mit Handlungsspielraum“",
+   "detail": "Die vorhandene Szene beschreibt eine tragbare persönliche Zusage. Der neue Abschnitt eröffnet zusätzlich die Frage, ob Nein-Sagen tatsächlich möglich ist und welche Konsequenzen drohen. Nicht jede Verfügbarkeitsfrage wird dadurch zu Zwangskontrolle erklärt.",
+   "grenze": "Redaktionelle Lesebrücke zwischen den benannten Texten; keine zusätzliche Studie und kein Beleg einer kausalen Wirkung. Quellen und Lesegrade gelten jeweils für ihren Endpunkt.",
+   "frage": "",
+   "herkunft": "Redaktionelle Lesebrücke · Prüfgruppe D",
+   "quellen": [
+    {
+     "schluessel": "verified:hardesty-2015-coercive-control",
+     "titel": "Toward a Standard Approach to Operationalizing Coercive Control and Classifying Violence Types",
+     "art": "",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4553695/",
+     "autoren": [
+      "Jennifer L. Hardesty",
+      "Kimberly A. Crossman",
+      "Megan L. Haselschwerdt",
+      "Marcela Raffaelli",
+      "Brian G. Ogolsky",
+      "Michael P. Johnson"
+     ],
+     "jahr": 2015,
+     "stelle": ""
+    },
+    {
+     "schluessel": "family-2024",
+     "titel": "Family Connections · Unterstützung für Angehörige",
+     "art": "",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11659101/",
+     "autoren": "",
+     "jahr": "",
+     "stelle": ""
+    }
+   ],
+   "anker": [
+    {
+     "ort": 1223,
+     "rolle": "Neue redaktionelle Synthese; nur der ausdrücklich dokumentierte Originalquellen-Leseumfang."
+    },
+    {
+     "ort": 1034,
+     "rolle": "Vorhandene Quellenzuordnung, in diesem Brückenschritt nicht erneut vollständig geprüft."
+    }
+   ],
+   "rolle": "verbindend",
+   "q_eff": 0,
+   "w": 0
+  }
+ ],
+ "nachbarn_2": [
+  {
+   "i": 1041,
+   "t": "Was geschah — und was bedeutet es für mich?",
+   "region": "Beziehungen & Borderline",
+   "k": "phenomenon",
+   "s": "Wortlaut und Handlung können festgehalten werden. Die Bedeutung, die jemand ihnen gibt, darf sichtbar bleiben und zugleich veränderbar sein.",
+   "x": -229,
+   "y": -212.4,
+   "grad": 5,
+   "text_herkunft": "Borderline verstehen · Beziehungskarte",
+   "text_quellen": [],
+   "tags": [
+    "Verständigung & Verantwortung"
+   ]
+  },
+  {
+   "i": 1039,
+   "t": "Ich bin mehr als die Rolle, in der du mich siehst",
+   "region": "Beziehungen & Borderline",
+   "k": "phenomenon",
+   "s": "Selbstverständnis, Fremdzuschreibung und situative Rolle sind verschiedene Beziehungen. Keine davon umfasst einen Menschen vollständig.",
+   "x": -158.9,
+   "y": -214.6,
+   "grad": 4,
+   "text_herkunft": "Borderline verstehen · Beziehungskarte",
+   "text_quellen": [],
+   "tags": [
+    "Selbstbild & Zuschreibung"
+   ]
+  },
+  {
+   "i": 1040,
+   "t": "Welche Erwartung gilt hier eigentlich?",
+   "region": "Beziehungen & Borderline",
+   "k": "phenomenon",
+   "s": "„Normal“ kann häufig, zweckmäßig, institutionell erwartet oder moralisch geboten bedeuten. Diese Maßstäbe entscheiden nicht alle dieselbe Frage.",
+   "x": -221.2,
+   "y": -148,
+   "grad": 3,
+   "text_herkunft": "Borderline verstehen · Beziehungskarte",
+   "text_quellen": [],
+   "tags": [
+    "Selbstbild & Zuschreibung"
+   ]
+  },
+  {
+   "i": 1044,
+   "t": "Erleben anerkennen, ohne alles zu bestätigen",
+   "region": "Beziehungen & Borderline",
+   "k": "phenomenon",
+   "s": "Dass etwas schmerzt, kann anerkannt werden, während die Deutung der Tatsachen offenbleibt. Auch die eigene Grenze darf bestehen.",
+   "x": -195.5,
+   "y": -118.9,
+   "grad": 4,
+   "text_herkunft": "Borderline verstehen · Beziehungskarte",
+   "text_quellen": [],
+   "tags": [
+    "Verständigung & Verantwortung"
+   ]
+  },
+  {
+   "i": 1051,
+   "t": "Was kostet das scheinbare Gelingen?",
+   "region": "Beziehungen & Borderline",
+   "k": "phenomenon",
+   "s": "Ein ruhiges Gespräch ist ein Ergebnis; geringe Erschöpfung ein anderes. Unterstützung wird verständlicher, wenn auch Vorbereitung, Erholung und Verteilung der Arbeit sichtbar werden.",
+   "x": -56.8,
+   "y": -90.6,
+   "grad": 5,
+   "text_herkunft": "Borderline verstehen · Beziehungskarte",
+   "text_quellen": [],
+   "tags": [
+    "Entwicklung & Unterstützung"
+   ]
+  },
+  {
+   "i": 1035,
+   "t": "Unterstützung bleibt ein Angebot",
+   "region": "Beziehungen & Borderline",
+   "k": "phenomenon",
+   "s": "Gemeinsam ruhiger werden ist ein möglicher Zugang. Das Gegenüber behält seine Entscheidung; Unterstützung wird nicht zum Anspruch auf Anwesenheit.",
+   "x": -93.9,
+   "y": -173.6,
+   "grad": 7,
+   "text_herkunft": "Borderline verstehen · Beziehungskarte",
+   "text_quellen": [],
+   "tags": [
+    "Nähe & Abstand"
+   ]
+  },
+  {
+   "i": 1038,
+   "t": "Mein Bild von mir wechselt",
+   "region": "Beziehungen & Borderline",
+   "k": "phenomenon",
+   "s": "Wie jemand sich erlebt, kann über Situationen und Beziehungen wechseln. Die eigene Beschreibung ist ein Anfang; ein einzelner Wechsel erklärt noch kein längerfristiges Muster.",
+   "x": -160.8,
+   "y": -348.8,
+   "grad": 4,
+   "text_herkunft": "Borderline verstehen · Beziehungskarte",
+   "text_quellen": [],
+   "tags": [
+    "Selbstbild & Zuschreibung"
+   ]
+  },
+  {
+   "i": 561,
+   "t": "Nähe, Freiheit und Grenzen",
+   "region": "Beziehungswerkstatt",
+   "k": "perspective",
+   "s": "Nähe kann gewünscht und gleichzeitig als Druck erlebt werden. Bindungstheorie ist ein Zugang zu Beziehungserfahrungen; eine einzelne Reaktion begründet keinen festen Bindungstyp.",
+   "x": -203,
+   "y": 216.7,
+   "grad": 3,
+   "text_herkunft": "Phänomenatlas · Beziehungswerkstatt",
+   "text_quellen": [
+    {
+     "schluessel": "relationship-source:gov",
+     "titel": "Traumainformierte Praxis · Sicherheit und Wahlmöglichkeiten",
+     "art": "",
+     "url": "https://www.gov.uk/government/publications/working-definition-of-trauma-informed-practice/working-definition-of-trauma-informed-practice",
+     "autoren": "",
+     "jahr": "",
+     "stelle": ""
+    }
+   ],
+   "tags": [
+    "bindung"
+   ]
+  },
+  {
+   "i": 1194,
+   "t": "Schutz braucht einen passenden nächsten Schritt",
+   "region": "Forschung & Einordnung",
+   "k": "chapter",
+   "s": "Bei möglicher digitaler Überwachung kann ein Gerät, auf das die kontrollierende Person keinen Zugriff hat, den Zugang zu Unterstützung erleichtern. Die australische eSafety-Behörde empfiehlt, Sicherheitsänderungen an die konkrete Lage anzupassen und möglichst mit spezialisierter Beratung zu planen.",
+   "x": 37.9,
+   "y": 77.2,
+   "grad": 1,
+   "text_herkunft": "Atlasintegration · öffentlich geprüfte Quellen",
+   "text_quellen": [
+    {
+     "schluessel": "verified:esafety-online-safety-2026",
+     "titel": "Online safety checklist",
+     "art": "",
+     "url": "https://www.esafety.gov.au/key-topics/domestic-family-violence/online-safety-checklist",
+     "autoren": [
+      "Australian eSafety Commissioner"
+     ],
+     "jahr": 2026,
+     "stelle": ""
+    }
+   ],
+   "tags": [
+    "Macht",
+    "Grenzen",
+    "Schutz",
+    "Digitale Kontrolle"
+   ]
+  },
+  {
+   "i": 1223,
+   "t": "Schutz hängt nicht an einem Grenzwert",
+   "region": "Forschung & Einordnung",
+   "k": "chapter",
+   "s": "Kontrollverhalten wird verständlicher, wenn konkrete Einschränkungen sichtbar werden: Überwachung, erschwerter Zugang zu Geld oder Unterstützung, Drohungen und Angst vor Konsequenzen. Eine untersuchte Skalen-Grenze aus einer Scheidungsstichprobe legt keine universelle Sicherheitsgrenze fest.",
+   "x": -29.6,
+   "y": 74.8,
+   "grad": 2,
+   "text_herkunft": "Atlasintegration · öffentlich geprüfte Quellen",
+   "text_quellen": [
+    {
+     "schluessel": "verified:hardesty-2015-coercive-control",
+     "titel": "Toward a Standard Approach to Operationalizing Coercive Control and Classifying Violence Types",
+     "art": "",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4553695/",
+     "autoren": [
+      "Jennifer L. Hardesty",
+      "Kimberly A. Crossman",
+      "Megan L. Haselschwerdt",
+      "Marcela Raffaelli",
+      "Brian G. Ogolsky",
+      "Michael P. Johnson"
+     ],
+     "jahr": 2015,
+     "stelle": ""
+    }
+   ],
+   "tags": [
+    "Beziehungen",
+    "Macht",
+    "Grenzen",
+    "Schutz"
+   ]
+  }
+ ],
+ "region": {
+  "name": "Beziehungen & Borderline",
+  "summary": "Die vorhandene Beziehungskarte bleibt mit ihren Innen-, Außen- und Handlungsperspektiven nutzbar.",
+  "count": 28,
+  "x": -185,
+  "y": -186,
+  "r": 194,
+  "links": [
+   [
+    9,
+    9
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    7,
+    4
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    5,
+    1
+   ]
+  ],
+  "index": 6,
+  "orte": [
+   {
+    "i": 1025,
+    "t": "Gefühle überrollen mich",
+    "x": -204.5,
+    "y": -244.7,
+    "grad": 3
+   },
+   {
+    "i": 1026,
+    "t": "Wut wird laut",
+    "x": -191.1,
+    "y": -324.3,
+    "grad": 3
+   },
+   {
+    "i": 1027,
+    "t": "Innen fühlt es sich leer an",
+    "x": -124.2,
+    "y": -96,
+    "grad": 1
+   },
+   {
+    "i": 1028,
+    "t": "Rückzug hat mehrere mögliche Bedeutungen",
+    "x": -169.9,
+    "y": -177.8,
+    "grad": 4
+   },
+   {
+    "i": 1029,
+    "t": "Mir selbst oder der Welt fremd",
+    "x": -189.1,
+    "y": -50.6,
+    "grad": 3
+   },
+   {
+    "i": 1030,
+    "t": "Eine Antwort bleibt aus",
+    "x": -181.9,
+    "y": -286.1,
+    "grad": 3
+   },
+   {
+    "i": 1031,
+    "t": "Die Angst vor Verlust ist groß",
+    "x": -131.6,
+    "y": -241,
+    "grad": 4
+   },
+   {
+    "i": 1032,
+    "t": "Wenn Nähe zur Verpflichtung wird",
+    "x": -206.6,
+    "y": -184.6,
+    "grad": 3
+   },
+   {
+    "i": 1033,
+    "t": "Abstand wünschen",
+    "x": -241.3,
+    "y": -247.9,
+    "grad": 3
+   },
+   {
+    "i": 1034,
+    "t": "Auch meine Grenze gilt",
+    "x": -115,
+    "y": -132.7,
+    "grad": 7
+   },
+   {
+    "i": 1035,
+    "t": "Unterstützung bleibt ein Angebot",
+    "x": -93.9,
+    "y": -173.6,
+    "grad": 7
+   },
+   {
+    "i": 1036,
+    "t": "Eine Rückmeldung trifft sehr tief",
+    "x": -241.7,
+    "y": -173.4,
+    "grad": 3
+   },
+   {
+    "i": 1037,
+    "t": "Vom Fehler zum ganzen Selbst",
+    "x": -211.8,
+    "y": -81.8,
+    "grad": 4
+   },
+   {
+    "i": 1038,
+    "t": "Mein Bild von mir wechselt",
+    "x": -160.8,
+    "y": -348.8,
+    "grad": 4
+   },
+   {
+    "i": 1039,
+    "t": "Ich bin mehr als die Rolle, in der du mich siehst",
+    "x": -158.9,
+    "y": -214.6,
+    "grad": 4
+   },
+   {
+    "i": 1040,
+    "t": "Welche Erwartung gilt hier eigentlich?",
+    "x": -221.2,
+    "y": -148,
+    "grad": 3
+   },
+   {
+    "i": 1041,
+    "t": "Was geschah — und was bedeutet es für mich?",
+    "x": -229,
+    "y": -212.4,
+    "grad": 5
+   },
+   {
+    "i": 1042,
+    "t": "Die andere Innenwelt bleibt eine Hypothese",
+    "x": -190.2,
+    "y": -151.4,
+    "grad": 4
+   },
+   {
+    "i": 1043,
+    "t": "Wirkung hören, Absicht getrennt erklären",
+    "x": -264.5,
+    "y": -199.6,
+    "grad": 3
+   },
+   {
+    "i": 1044,
+    "t": "Erleben anerkennen, ohne alles zu bestätigen",
+    "x": -195.5,
+    "y": -118.9,
+    "grad": 4
+   },
+   {
+    "i": 1045,
+    "t": "Mein Anteil hat eine konkrete Form",
+    "x": -193.4,
+    "y": -210.4,
+    "grad": 6
+   },
+   {
+    "i": 1046,
+    "t": "Missverständnis und Macht sind zwei Fragen",
+    "x": -158.7,
+    "y": -129,
+    "grad": 5
+   },
+   {
+    "i": 1047,
+    "t": "Eine Pause bekommt eine tragbare Form",
+    "x": -167.8,
+    "y": -252.6,
+    "grad": 4
+   },
+   {
+    "i": 1048,
+    "t": "Wiedergutmachung gewährt keinen Anspruch auf Antwort",
+    "x": -220.4,
+    "y": -281.2,
+    "grad": 2
+   },
+   {
+    "i": 1049,
+    "t": "Eine Geschichte hat mehrere Einflüsse",
+    "x": -274.9,
+    "y": -162.7,
+    "grad": 2
+   },
+   {
+    "i": 1050,
+    "t": "Ähnliches Erleben, verschiedene Zusammenhänge",
+    "x": -233.2,
+    "y": -114.8,
+    "grad": 3
+   },
+   {
+    "i": 1051,
+    "t": "Was kostet das scheinbare Gelingen?",
+    "x": -56.8,
+    "y": -90.6,
+    "grad": 5
+   },
+   {
+    "i": 1052,
+    "t": "Unterstützung gemeinsam passend machen",
+    "x": -138.7,
+    "y": -161.4,
+    "grad": 4
+   }
+  ]
+ },
+ "cluster_1": {
+  "n": 5,
+  "W": 0,
+  "mischgrad": 0,
+  "flaeche_faktor": 1,
+  "radius_gesamt_rel": 2.236,
+  "radius_summe_der_teile_flaeche": 2.236,
+  "kanten": [],
+  "trennPaare": 1
+ },
+ "cluster_2": {
+  "n": 15,
+  "W": 0,
+  "mischgrad": 0,
+  "flaeche_faktor": 1,
+  "radius_gesamt_rel": 3.873,
+  "radius_summe_der_teile_flaeche": 3.873,
+  "kanten": [],
+  "trennPaare": 4
+ },
+ "belegte_fugen_1": 0,
+ "belegte_fugen_2": [],
+ "quellentragend_1": [
+  1749
+ ],
+ "quellentragend_2": [
+  {
+   "fuge": 1745,
+   "a": "Auch meine Grenze gilt",
+   "b": "Nähe, Freiheit und Grenzen",
+   "q": 2,
+   "anker": 2,
+   "rolle": "verbindend",
+   "label": "verbindet Nähe mit freiwilliger Verfügbarkeit"
+  },
+  {
+   "fuge": 1781,
+   "a": "Schutz braucht einen passenden nächsten Schritt",
+   "b": "Auch meine Grenze gilt",
+   "q": 2,
+   "anker": 2,
+   "rolle": "trennend:label",
+   "label": "unterscheidet persönliche Zusage und technischen Schutzplan"
+  },
+  {
+   "fuge": 1826,
+   "a": "Schutz hängt nicht an einem Grenzwert",
+   "b": "Auch meine Grenze gilt",
+   "q": 2,
+   "anker": 2,
+   "rolle": "verbindend",
+   "label": "verbindet Grenzen mit Handlungsspielraum"
+  }
+ ],
+ "region6_fugen": {
+  "n": 64,
+  "intern": 42,
+  "nach_aussen": {
+   "Forschung & Einordnung": 9,
+   "Beziehungswerkstatt": 5,
+   "Diagnose & Differenzierung": 4,
+   "Neuroatlas": 2,
+   "ADHS · Randphänomene": 1,
+   "Phänomenatlas": 1
+  },
+  "rollen": {
+   "verbindend": 46,
+   "trennend:label": 18
+  },
+  "w_gt0": 0
+ },
+ "naechste_belegte_orte": [
+  {
+   "i": 1187,
+   "t": "Persönlichkeitsfunktion entwickelt sich",
+   "region": "Forschung & Einordnung",
+   "abstand": 807,
+   "partner": [
+    {
+     "j": 1175,
+     "t": "Persönlichkeitsmerkmale zeigen sich in Situationen",
+     "region": "Forschung & Einordnung",
+     "w": 0.085
+    }
+   ]
+  },
+  {
+   "i": 1180,
+   "t": "Neuroentwicklung bekommt einen eigenen Zugang",
+   "region": "Forschung & Einordnung",
+   "abstand": 864.7,
+   "partner": [
+    {
+     "j": 1174,
+     "t": "Warum Studien zu Autismus und PTSD unterschiedliche Zahlen nennen",
+     "region": "Forschung & Einordnung",
+     "w": 0.085
+    }
+   ]
+  },
+  {
+   "i": 1175,
+   "t": "Persönlichkeitsmerkmale zeigen sich in Situationen",
+   "region": "Forschung & Einordnung",
+   "abstand": 946.2,
+   "partner": [
+    {
+     "j": 1187,
+     "t": "Persönlichkeitsfunktion entwickelt sich",
+     "region": "Forschung & Einordnung",
+     "w": 0.085
+    }
+   ]
+  },
+  {
+   "i": 1174,
+   "t": "Warum Studien zu Autismus und PTSD unterschiedliche Zahlen nennen",
+   "region": "Forschung & Einordnung",
+   "abstand": 967.8,
+   "partner": [
+    {
+     "j": 1180,
+     "t": "Neuroentwicklung bekommt einen eigenen Zugang",
+     "region": "Forschung & Einordnung",
+     "w": 0.085
+    }
+   ]
+  },
+  {
+   "i": 274,
+   "t": "Dissoziative Störungsbilder",
+   "region": "Neuroatlas",
+   "abstand": 1187.6,
+   "partner": [
+    {
+     "j": 351,
+     "t": "Sich selbst fremd",
+     "region": "Neuroatlas",
+     "w": 0.122
+    },
+    {
+     "j": 352,
+     "t": "Die Welt wirkt unwirklich",
+     "region": "Neuroatlas",
+     "w": 0.122
+    },
+    {
+     "j": 353,
+     "t": "Lücken in der Erinnerung",
+     "region": "Neuroatlas",
+     "w": 0.122
+    },
+    {
+     "j": 354,
+     "t": "Selbsterleben unterbrochen",
+     "region": "Neuroatlas",
+     "w": 0.122
+    },
+    {
+     "j": 337,
+     "t": "Selbstbild wechselt",
+     "region": "Neuroatlas",
+     "w": 0.122
+    }
+   ]
+  },
+  {
+   "i": 339,
+   "t": "Scham oder Schuld",
+   "region": "Neuroatlas",
+   "abstand": 1207.2,
+   "partner": [
+    {
+     "j": 263,
+     "t": "Selbst & Beziehungen",
+     "region": "Neuroatlas",
+     "w": 0.085
+    },
+    {
+     "j": 272,
+     "t": "Posttraumatische Belastungsstörung",
+     "region": "Neuroatlas",
+     "w": 0.122
+    },
+    {
+     "j": 273,
+     "t": "Komplexe posttraumatische Belastungsstörung",
+     "region": "Neuroatlas",
+     "w": 0.122
+    },
+    {
+     "j": 278,
+     "t": "Depressive Störungsbilder",
+     "region": "Neuroatlas",
+     "w": 0.122
+    },
+    {
+     "j": 289,
+     "t": "Anorexie, Bulimie & Binge-Eating",
+     "region": "Neuroatlas",
+     "w": 0.122
+    }
+   ]
+  },
+  {
+   "i": 285,
+   "t": "Tic-Störungen / Tourette",
+   "region": "Neuroatlas",
+   "abstand": 1221.5,
+   "partner": [
+    {
+     "j": 394,
+     "t": "Unwillkürliche Bewegungen",
+     "region": "Neuroatlas",
+     "w": 0.122
+    },
+    {
+     "j": 395,
+     "t": "Unwillkürliche Laute",
+     "region": "Neuroatlas",
+     "w": 0.122
+    }
+   ]
+  },
+  {
+   "i": 529,
+   "t": "Dialektisch-Behaviorale Therapie (DBT)",
+   "region": "TraumaAtlas",
+   "abstand": 1227.1,
+   "partner": [
+    {
+     "j": 54,
+     "t": "Dialektisch-Behaviorale Therapie (DBT)",
+     "region": "TraumaAtlas",
+     "w": 0.085
+    }
+   ]
+  }
+ ],
+ "varianten": {
+  "V0_streng_anker_0": {
+   "erster_grad": {
+    "W": 0,
+    "deckel_g": 0,
+    "flaeche_faktor": 1,
+    "kanten": []
+   },
+   "zweiter_grad": {
+    "W": 0,
+    "deckel_g": 0,
+    "flaeche_faktor": 1,
+    "kanten": []
+   },
+   "region6": {
+    "W": 0,
+    "deckel_g": 0,
+    "flaeche_faktor": 1,
+    "kanten": []
+   },
+   "fugen_w_gt0_gesamt": 1141
+  },
+  "V1_anker_halb": {
+   "erster_grad": {
+    "W": 0,
+    "deckel_g": 0,
+    "flaeche_faktor": 1,
+    "kanten": []
+   },
+   "zweiter_grad": {
+    "W": 0.238,
+    "deckel_g": 0.35,
+    "flaeche_faktor": 1.039,
+    "kanten": [
+     [
+      "Auch meine Grenze gilt",
+      "Nähe, Freiheit und Grenzen",
+      0.119
+     ],
+     [
+      "Auch meine Grenze gilt",
+      "Schutz hängt nicht an einem Grenzwert",
+      0.119
+     ]
+    ]
+   },
+   "region6": {
+    "W": 0,
+    "deckel_g": 0,
+    "flaeche_faktor": 1,
+    "kanten": []
+   },
+   "fugen_w_gt0_gesamt": 1194
+  },
+  "V2_anker_voll": {
+   "erster_grad": {
+    "W": 0,
+    "deckel_g": 0,
+    "flaeche_faktor": 1,
+    "kanten": []
+   },
+   "zweiter_grad": {
+    "W": 0.361,
+    "deckel_g": 0.35,
+    "flaeche_faktor": 1.058,
+    "kanten": [
+     [
+      "Auch meine Grenze gilt",
+      "Nähe, Freiheit und Grenzen",
+      0.18
+     ],
+     [
+      "Auch meine Grenze gilt",
+      "Schutz hängt nicht an einem Grenzwert",
+      0.18
+     ]
+    ]
+   },
+   "region6": {
+    "W": 0,
+    "deckel_g": 0,
+    "flaeche_faktor": 1,
+    "kanten": []
+   },
+   "fugen_w_gt0_gesamt": 1194
+  }
+ },
+ "farben": {
+  "quelle": "proben/schloss-schluessel/schloss.js Z. 34–43 (tief)",
+  "gebiete": {
+   "Beziehungen & Borderline": "#9a3a74",
+   "Diagnose & Differenzierung": "#1f6f86",
+   "Beziehungswerkstatt": "#a86a12",
+   "Forschung & Einordnung": "#4d5e7e"
+  },
+  "oklab_mitte_pflaume_petrol": "#6f5a7d",
+  "hinweis_pflaume_petrol": "Fuge 1749 ist trennend: diese Mischfarbe darf NICHT erscheinen; beide Farben bleiben nebeneinander.",
+  "oklab_mitte_pflaume_ocker": "#a15553"
+ },
+ "befund": "Im strengen Modell trägt keine der 4 Fugen erster und 10 Fugen zweiter Ordnung eine Verstärkung (W = 0). Die 3 redaktionellen Einordnungen haben keine Quelle; Fuge 1749 trägt zwei Quellen (NIMH, AWMF S3), ist aber eine Unterscheidung (trennend) und ihre Quellen sind laut anker Quellen des Diagnose-Orts, kein Beleg der Querverbindung."
+}
