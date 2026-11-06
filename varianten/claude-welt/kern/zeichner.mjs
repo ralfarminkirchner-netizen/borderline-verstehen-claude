@@ -333,6 +333,121 @@ export function platziereNamen(ctx, kandidaten, { groesse = 13, vorbelegt = [] }
   return ergebnis;
 }
 
+// Ortsnamen in der lebenden Welt: mit Luft zwischen den Namen, nicht über fremden Körpern,
+// möglichst wenige fremde Körper zugedeckt (wo sie dicht stehen, einige), lange Namen in höchstens drei Zeilen, und ruhig von Bild zu Bild (wer eben stand, bleibt, wo er stand).
+// kandidaten: [{ text, x, y, r, groesse, gewicht, w }] nach Vorrang sortiert; w.i ist der Ort. Wer keinen Platz findet,
+// macht dem Nächsten Platz, bis hoechstens Namen stehen.
+// hindernisse: [{ x, y, r, i }] Körper auf dem Schirm; erlaubt(box, kandidat): darf hier ein Name liegen?
+// vorher: Map Ort → Lage aus dem letzten Bild (wird hier fortgeschrieben).
+export function platziereOrtsnamen(ctx, kandidaten, { vorbelegt = [], hindernisse = [], erlaubt = () => true, vorher = new Map(),
+  luft = 8, mindestAbstand = 56, breiteMax = 230, zeilenMax = 3, koerperMax = 2, hoechstens = Infinity, schirm = { w: Infinity, h: Infinity } } = {}) {
+  const belegt = [...vorbelegt];
+  const ergebnis = [];
+  const naechste = new Map();
+  // Körper in ein Raster, damit jede Probe nur ihre Nachbarschaft ansieht
+  const Z = 48, raster = new Map();
+  for (const h of hindernisse) {
+    for (let gx = Math.floor((h.x - h.r) / Z); gx <= Math.floor((h.x + h.r) / Z); gx++)
+      for (let gy = Math.floor((h.y - h.r) / Z); gy <= Math.floor((h.y + h.r) / Z); gy++) {
+        const s = `${gx},${gy}`; if (!raster.has(s)) raster.set(s, []); raster.get(s).push(h);
+      }
+  }
+  // Wie viele fremde Körper deckt ein Name zu? (kern: welcher Teil des Körpers zählt)
+  const zugedeckt = (box, eigen, kern) => {
+    const gesehen = new Set();
+    for (let gx = Math.floor(box[0] / Z); gx <= Math.floor(box[2] / Z); gx++)
+      for (let gy = Math.floor(box[1] / Z); gy <= Math.floor(box[3] / Z); gy++) {
+        for (const h of raster.get(`${gx},${gy}`) || []) {
+          if (h.i === eigen || gesehen.has(h)) continue;
+          const qx = Math.max(box[0], Math.min(h.x, box[2])), qy = Math.max(box[1], Math.min(h.y, box[3]));
+          if (Math.hypot(qx - h.x, qy - h.y) < h.r * kern + 1) gesehen.add(h);
+        }
+      }
+    return gesehen.size;
+  };
+  // Wie dicht stehen Körper um einen Punkt? (Körper je Quadratpixel im Umkreis R)
+  const dichteUm = (x, y, R = 90) => {
+    let n = 0;
+    for (let gx = Math.floor((x - R) / Z); gx <= Math.floor((x + R) / Z); gx++)
+      for (let gy = Math.floor((y - R) / Z); gy <= Math.floor((y + R) / Z); gy++)
+        for (const h of raster.get(`${gx},${gy}`) || []) if (Math.hypot(h.x - x, h.y - y) < R) n++;
+    return n / (Math.PI * R * R); // Körper, die in mehreren Zellen stehen, zählen mehrfach; das schadet nicht, es macht nur nachsichtiger
+  };
+  const schneidet = (box) => belegt.some((q) => !(box[2] < q[0] || box[0] > q[2] || box[3] < q[1] || box[1] > q[3]));
+  const anker = [];
+  ctx.save();
+  // Wer im letzten Bild stand, kommt zuerst dran und darf etwas näher rücken: so flackert nichts,
+  // wenn die Wesen sich bewegen. Neue Namen füllen danach nur, was frei geblieben ist.
+  // Ausnahme: Kandidaten mit vorrang (der Startort) stehen immer vorn, auch wenn sie eben erst ins Bild kommen.
+  const reihe = [...kandidaten.filter((k) => k.vorrang),
+    ...kandidaten.filter((k) => !k.vorrang && vorher.has(k.w.i)), ...kandidaten.filter((k) => !k.vorrang && !vorher.has(k.w.i))];
+  for (const k of reihe) {
+    if (ergebnis.length >= hoechstens) break;
+    const blieb = vorher.has(k.w.i) || k.vorrang;
+    if (anker.some(([ax, ay]) => Math.hypot(ax - k.x, ay - k.y) < mindestAbstand * (blieb ? 0.7 : 1))) continue;
+    const gr = k.groesse || 13;
+    const font = `${k.gewicht || 450} ${gr}px ${SCHRIFT_SERIF}`;
+    ctx.font = font;
+    const zeilen = ctx.measureText(k.text).width > breiteMax ? umbreche(ctx, k.text, breiteMax, font) : [k.text];
+    if (zeilen.length > zeilenMax) continue; // was nicht in drei Zeilen passt, erscheint erst beim Hinwenden
+    ctx.font = font;
+    const b = Math.max(...zeilen.map((z) => ctx.measureText(z).width));
+    const zh = gr * 1.22, hoehe = zh * (zeilen.length - 1) + gr;
+    const d = k.r + 5;
+    // Lagen als Grundlinie der ersten Zeile und Ausrichtung: rechts, links, oben, unten, dann schräg
+    const mitteY = k.y - hoehe / 2 + gr * 0.8;
+    const ueber = (hoehe - gr) + 2;
+    const lagen = {
+      rechts: [k.x + d, mitteY, 'left'], links: [k.x - d, mitteY, 'right'],
+      oben: [k.x, k.y - d - ueber, 'center'], unten: [k.x, k.y + d + gr * 0.85, 'center'],
+      obenrechts: [k.x + d * 0.7, k.y - d * 0.7 - ueber, 'left'], untenrechts: [k.x + d * 0.7, k.y + d * 0.7 + gr * 0.85, 'left'],
+      obenlinks: [k.x - d * 0.7, k.y - d * 0.7 - ueber, 'right'], untenlinks: [k.x - d * 0.7, k.y + d * 0.7 + gr * 0.85, 'right'],
+    };
+    const war = vorher.get(k.w.i);
+    const folge = war ? [war, ...Object.keys(lagen).filter((n) => n !== war)] : Object.keys(lagen);
+    // Die frühere Lage, solange sie geht; sonst von den freien Lagen die, die am wenigsten Körper zudeckt
+    // Wo die Körper dicht stehen, darf ein Name einige zudecken (sonst stünde dort keiner); Luft zwischen Namen bleibt.
+    const duldung = Math.max(koerperMax, Math.floor(dichteUm(k.x, k.y) * (b + 4) * (hoehe + gr * 0.3) * 0.45));
+    let beste = null;
+    for (const name of folge) {
+      const [x, y, a] = lagen[name];
+      const x0 = a === 'left' ? x : a === 'right' ? x - b : x - b / 2;
+      const box = [x0 - 2, y - gr * 0.85, x0 + b + 2, y - gr * 0.85 + hoehe + gr * 0.3];
+      const l = blieb && name === war ? luft * 0.8 : luft;
+      const mitLuft = [box[0] - l, box[1] - l * 0.9, box[2] + l, box[3] + l * 0.9];
+      if (schneidet(mitLuft)) continue;
+      if (!erlaubt(box, k)) continue;
+      // wer eben schon stand, duldet etwas mehr, damit Namen nicht springen, wenn ein Körper vorbeizieht
+      const n = zugedeckt(box, k.w.i, 0.7) - (name === war ? 0.5 : 0);
+      if (!k.vorrang && n > duldung + (name === war ? 2 : 0)) continue;
+      if (!beste || n < beste.n) beste = { n, name, x, y, a, box };
+      if (n <= 0 || name === war) break; // die alte Lage genügt: bleiben, auch wenn eine andere eine Spur freier wäre
+    }
+    // Der Vorrang-Name (Startort) bleibt nie weg: notfalls in den Schirm geschoben und ohne Luft, zuletzt einfach darüber
+    if (!beste && k.vorrang) {
+      for (const name of ['rechts', 'links', 'oben', 'unten', 'obenrechts', 'obenlinks', 'untenrechts', 'untenlinks']) {
+        const [x, y, a] = lagen[name];
+        const x0 = a === 'left' ? x : a === 'right' ? x - b : x - b / 2;
+        const schub = Math.min(0, schirm.w - 10 - (x0 + b + 2)) + Math.max(0, 10 - (x0 - 2));
+        const box = [x0 - 2 + schub, y - gr * 0.85, x0 + b + 2 + schub, y - gr * 0.85 + hoehe + gr * 0.3];
+        if (box[1] < 10 || box[3] > schirm.h - 10 || schneidet(box)) continue;
+        beste = { name, x: x + schub, y, a, box };
+        break;
+      }
+      if (!beste) { const [x, y, a] = lagen.oben; const x0 = x - b / 2; beste = { name: 'oben', x, y, a, box: [x0 - 2, y - gr * 0.85, x0 + b + 2, y - gr * 0.85 + hoehe + gr * 0.3] }; }
+    }
+    if (!beste) continue;
+    belegt.push(beste.box);
+    anker.push([k.x, k.y]);
+    naechste.set(k.w.i, beste.name);
+    ergebnis.push({ ...k, x: beste.x, y: beste.y, ausrichtung: beste.a, zeilen, zeilenhoehe: zh, box: beste.box });
+  }
+  ctx.restore();
+  vorher.clear();
+  for (const [i, n] of naechste) vorher.set(i, n);
+  return ergebnis;
+}
+
 // ——— Begegnung: gemeinsamer Körper, pixelgenau in OKLab gemischt ———
 // glieder: [{x,y,r,lch,gruppe}] in Bildschirmkoordinaten; brücken: [{a,b,staerke}] (Indizes in glieder)
 // gruppe: Glieder derselben Gruppe verschmelzen; verschiedene Gruppen bleiben getrennt (inkommensurabel)

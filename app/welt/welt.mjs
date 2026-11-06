@@ -111,7 +111,9 @@ function bild(jetzt) {
   zeichneMedienInDerWelt(t);
   const stufe = detailstufe();
   zeichneWesen(stufe, t);
-  zeichneNamen(stufe);
+  // Medientitel nach den Wesen, damit kein Körper über einem Titel liegt
+  ctx.save(); ctx.globalAlpha = fokus ? 0.35 : 1; setzeMedienTitel(); ctx.restore();
+  const tn = performance.now(); zeichneNamen(stufe); namenZeit = performance.now() - tn;
   let laeuft = bewegt;
   if (fokus) laeuft = zeichneFokus(jetzt, t) || laeuft;
   if (betrachten) laeuft = zeichneBetrachten() || laeuft;
@@ -187,18 +189,42 @@ function zeichneNamen(stufe) {
   if (stufe > 0) gebietsnamenNah(belegt, sf);
   // Ortsnamen nach Zahl der Verbindungen, ohne Überdeckung
   const wahl = wesen.filter((w) => !inSzene.has(w.i) && kamera.sichtbar(w.x, w.y, 0) && (stufe > 0 || w.ort.t.length <= 34))
-    .sort((a, b) => (b.i === START) - (a.i === START) || b.ort.grad - a.ort.grad).slice(0, stufe === 0 ? 20 : stufe === 1 ? 45 : 70);
+    .sort((a, b) => (b.i === START) - (a.i === START) || b.ort.grad - a.ort.grad).slice(0, stufe === 0 ? 20 : 280);
   const kand = wahl.map((w) => ({ text: w.ort.t, x: kamera.sx(w.x), y: kamera.sy(w.y), r: stufe === 0 ? 4 : w.radius * kam.zoom + 3,
-    groesse: (w.i === START ? 13.5 : stufe === 0 ? 11.5 : 13) * sf, gewicht: w.i === START ? 600 : 470, w }));
-  for (const p of Z.platziereNamen(ctx, kand, { vorbelegt: belegt })) {
-    Z.schrift(ctx, p.text, p.x, p.y, { groesse: p.groesse, gewicht: p.gewicht, ausrichtung: p.ausrichtung,
-      farbe: p.w.i === START || stufe > 0 ? Z.tief(welt.gebiete[p.w.gebiet].lch, 0.36) : Z.TINTE_LEISE, alpha: fokus ? 0.5 : 1 });
-    ctx.font = `${p.gewicht} ${p.groesse}px ${Z.SCHRIFT_SERIF}`;
-    const b = ctx.measureText(p.text).width;
-    const x0 = p.ausrichtung === 'left' ? p.x : p.ausrichtung === 'right' ? p.x - b : p.x - b / 2;
-    treffer.push({ box: [x0 - 4, p.y - p.groesse, x0 + b + 4, p.y + 5], aktion: () => wendeDichZu(p.w.i), name: p.text });
+    groesse: (w.i === START ? 13.5 : stufe === 0 ? 11.5 : 13) * sf, gewicht: w.i === START ? 600 : 470, vorrang: w.i === START, w }));
+  const farbe = (p) => p.w.i === START || stufe > 0 ? Z.tief(welt.gebiete[p.w.gebiet].lch, 0.36) : Z.TINTE_LEISE;
+  if (stufe === 0) {
+    for (const p of Z.platziereNamen(ctx, kand, { vorbelegt: belegt })) {
+      Z.schrift(ctx, p.text, p.x, p.y, { groesse: p.groesse, gewicht: p.gewicht, ausrichtung: p.ausrichtung, farbe: farbe(p), alpha: fokus ? 0.5 : 1 });
+      ctx.font = `${p.gewicht} ${p.groesse}px ${Z.SCHRIFT_SERIF}`;
+      const b = ctx.measureText(p.text).width;
+      const x0 = p.ausrichtung === 'left' ? p.x : p.ausrichtung === 'right' ? p.x - b : p.x - b / 2;
+      treffer.push({ box: [x0 - 4, p.y - p.groesse, x0 + b + 4, p.y + 5], aktion: () => wendeDichZu(p.w.i), name: p.text, ort: p.w.i });
+    }
+    namenLage.clear();
+    return;
+  }
+  // Näher: Namen mit Luft, nicht über fremden Körpern, nicht tief im Nachbargebiet, lange Namen umbrochen
+  const hindernisse = wesen.filter((w) => !inSzene.has(w.i) && kamera.sichtbar(w.x, w.y, 20))
+    .map((w) => ({ x: kamera.sx(w.x), y: kamera.sy(w.y), r: w.radius * kam.zoom * (stufe === 1 ? 0.95 : 1.12) + 2, i: w.i }));
+  const imEigenen = (k, sx, sy) => {
+    const wx = kamera.wx(sx), wy = kamera.wy(sy), eigen = dichteAn(feld, k, wx, wy);
+    return welt.gebiete.every((_, j) => j === k || dichteAn(feld, j, wx, wy) < Math.max(TAU * 0.9, eigen));
+  };
+  const rand = 10;
+  for (const p of Z.platziereOrtsnamen(ctx, kand, {
+    vorbelegt: belegt, hindernisse, vorher: namenLage, schirm: { w: W, h: H },
+    // so viele Namen, wie der Schirm ruhig trägt: etwa einer je 230 × 230 Pixel (näher dran etwas mehr)
+    hoechstens: Math.max(4, Math.round((W * H) / (stufe === 1 ? 52000 : 42000))), luft: 9 * sf, mindestAbstand: (schmal() ? 52 : 64) * sf, breiteMax: (schmal() ? 170 : 230) * sf,
+    erlaubt: (box, k) => box[0] > rand && box[1] > rand && box[2] < W - rand && box[3] < H - rand
+      && (k.vorrang || [[0, 0], [1, 0], [0, 1], [1, 1], [0.5, 0.5]].every(([u, v]) => imEigenen(k.w.gebiet, box[0] + (box[2] - box[0]) * u, box[1] + (box[3] - box[1]) * v))), // der Startort trägt immer seinen Namen
+  })) {
+    p.zeilen.forEach((z, n) => Z.schrift(ctx, z, p.x, p.y + n * p.zeilenhoehe, { groesse: p.groesse, gewicht: p.gewicht, ausrichtung: p.ausrichtung, farbe: farbe(p), alpha: fokus ? 0.5 : 1 }));
+    treffer.push({ box: [p.box[0] - 3, p.box[1] - 2, p.box[2] + 3, p.box[3] + 2], aktion: () => wendeDichZu(p.w.i), name: p.text, ort: p.w.i });
   }
 }
+let namenZeit = 0; // Dauer der Namenssetzung im letzten Bild (nur für die Prüfung)
+const namenLage = new Map(); // Ort → Lage seines Namens im letzten Bild, damit Namen nicht springen
 
 // Nah: Gebietsname dort, wo das eigene Gebiet sichtbar und allein ist (nie im fremden Gebiet)
 function gebietsnamenNah(belegt, sf) {
@@ -270,16 +296,40 @@ function lichtpunkt(x, y, farbe, r = 5) {
   ctx.fillStyle = Z.cssLch([0.99, 0.01, 80]); ctx.fill();
   ctx.strokeStyle = Z.cssLch(Z.tief(farbe, 0.5), 0.75); ctx.lineWidth = 1.2; ctx.stroke();
 }
-// Titel eines Mediums: ruhig über seiner Lichtung, höchstens zwei Zeilen
-function titelBogen(text, x, y, R, groesse = 15) {
-  const gr = groesse * schriftFaktor();
-  const zeilen = Z.umbreche(ctx, text, Math.max(180, R * 2.4), `560 ${gr}px ${Z.SCHRIFT_SERIF}`).slice(0, 2);
-  zeilen.forEach((z, n) => Z.schrift(ctx, z, x, y - R - 14 - (zeilen.length - 1 - n) * gr * 1.25, { groesse: gr, ausrichtung: 'center', gewicht: 560 }));
-  medienFlaechen.push([x - R * 1.3, y - R - 20 - zeilen.length * gr * 1.25, x + R * 1.3, y - R]);
+// Titel eines Mediums: ruhig über (sonst unter) seiner Lichtung, höchstens zwei Zeilen.
+// Erst gesammelt, dann gesetzt, wenn alle Lichtungen stehen: so liegt kein Titel unter einer anderen Lichtung,
+// über der Steuerung oder auf einem anderen Titel. Was keinen Platz hat, bleibt weg (der Titel steht beim Öffnen).
+let medienTitel = [];
+// nurOben: unter einer Klangquelle steht der mitlaufende Text, dort darf kein Titel hin
+function titelBogen(text, x, y, R, groesse = 15, nurOben = false) { medienTitel.push({ text, x, y, R, groesse, nurOben, flaeche: medienFlaechen.length - 1 }); }
+function setzeMedienTitel() {
+  const zonen = freiZonen();
+  const titelFlaechen = [];
+  const trifft = (box, q) => !(box[2] < q[0] || box[0] > q[2] || box[3] < q[1] || box[1] > q[3]);
+  for (const t of medienTitel) {
+    const gr = t.groesse * schriftFaktor();
+    const font = `560 ${gr}px ${Z.SCHRIFT_SERIF}`;
+    const zeilen = Z.umbreche(ctx, t.text, Math.max(180, t.R * 2.4), font).slice(0, 2);
+    ctx.font = font;
+    const b = Math.max(...zeilen.map((z) => ctx.measureText(z).width)) + 8;
+    const hoehe = zeilen.length * gr * 1.25;
+    for (const oben of t.nurOben ? [true] : [true, false]) {
+      const y0 = oben ? t.y - t.R - 10 - hoehe : t.y + t.R + 8;
+      const box = [t.x - b / 2, y0, t.x + b / 2, y0 + hoehe + 4];
+      if (box[0] < 6 || box[2] > W - 6 || box[1] < 6 || box[3] > H - 6) continue;
+      if (zonen.some((q) => trifft(box, q)) || titelFlaechen.some((q) => trifft(box, q))) continue;
+      if (medienFlaechen.some((q, n) => n !== t.flaeche && trifft(box, q))) continue;
+      zeilen.forEach((z, n) => Z.schrift(ctx, z, t.x, y0 + gr * 0.95 + n * gr * 1.25, { groesse: gr, ausrichtung: 'center', gewicht: 560 }));
+      titelFlaechen.push(box);
+      break;
+    }
+  }
+  medienFlaechen.push(...titelFlaechen);
 }
 
 function zeichneMedienInDerWelt(t) {
   medienFlaechen = [];
+  medienTitel = [];
   const dicht = pref.bilder;
   const blass = fokus ? 0.35 : 1;
   ctx.save(); ctx.globalAlpha = blass;
@@ -380,7 +430,7 @@ function zeichneKlangquelle(m, x, y, R, farbe, t) {
   const s = sr * 0.36;
   if (spielt && !klang.el.paused) { ctx.fillRect(x - s * 0.9, y - s, s * 0.65, s * 2); ctx.fillRect(x + s * 0.25, y - s, s * 0.65, s * 2); }
   else { ctx.beginPath(); ctx.moveTo(x - s * 0.6, y - s); ctx.lineTo(x + s, y); ctx.lineTo(x - s * 0.6, y + s); ctx.closePath(); ctx.fill(); }
-  if (R > 40 && m.titel) titelBogen(m.titel, x, y, R, 16);
+  if (R > 40 && m.titel) titelBogen(m.titel, x, y, R, 16, true);
   treffer.push({ x, y, r: R, aktion: () => schalteKlang(m), name: m.titel });
   // Was gerade gesagt wird, steht als Schrift in der Welt
   if (spielt && m.hinweise?.length) {
@@ -918,6 +968,12 @@ window.addEventListener('hashchange', () => {
 });
 // Für die Prüfung: wo ein Ort gerade auf dem Bildschirm liegt (keine Kennungen in der Oberfläche)
 window.lebendeWelt = { aufSchirm: (titel) => { const w = wesen[O.findIndex((o) => o.t === titel)]; return w ? [kamera.sx(w.x), kamera.sy(w.y)] : null; },
-  treffer: () => treffer.map((h) => ({ name: h.name, x: h.box ? (h.box[0] + h.box[2]) / 2 : h.x, y: h.box ? (h.box[1] + h.box[3]) / 2 : h.y })) };
+  treffer: () => treffer.map((h) => ({ name: h.name, x: h.box ? (h.box[0] + h.box[2]) / 2 : h.x, y: h.box ? (h.box[1] + h.box[3]) / 2 : h.y })),
+  // nur für die Prüfung: Blick setzen (Zoom als Vielfaches der Gesamtansicht) und Namen und Körper auf dem Schirm lesen
+  blick: (x, y, faktor) => { Object.assign(ziel, { cx: x, cy: y, zoom: grenzeZoom(passend() * faktor) }); Object.assign(kam, ziel); anfordern(); },
+  gebietsmitte: (k) => { const os = O.filter((o) => o.r === k); return [os.reduce((s, o) => s + o.x, 0) / os.length, os.reduce((s, o) => s + o.y, 0) / os.length, os.length]; },
+  namen: () => treffer.filter((h) => h.box && h.name && h.ort !== undefined).map((h) => ({ name: h.name, box: h.box, ort: h.ort })),
+  namenZeit: () => namenZeit,
+  koerper: () => wesen.filter((w) => !inSzene.has(w.i) && kamera.sichtbar(w.x, w.y, 0)).map((w) => ({ i: w.i, x: kamera.sx(w.x), y: kamera.sy(w.y), r: w.radius * kam.zoom })) };
 document.body.dataset.bereit = '1';
 anfordern();
