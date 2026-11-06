@@ -1,19 +1,20 @@
 // Nahe Szene: mehrere Wesen im Augenblick ihrer Begegnung (Bildschirmkoordinaten).
-// Alle Zustände kommen aus dem Bestand: welche Fugen es gibt, ihre Lesart, ihre Stärke, die Zähne der Schloss-Regel.
+// Alle Zustände kommen aus dem Bestand: welche Fugen es gibt, ihre Lesart, ihr Mischgewicht und ihre Stärke.
+// Vorgabe nicht streng: jede verbindende Fuge mischt, gewachsen wird nur über Belege.
 import * as Z from '../kern/zeichner.mjs';
 import { LESART, paarStaerke, zuwachs, GELTUNG } from '../kern/begegnung.mjs';
-import { zaehne, paarAus } from '../kern/regel.mjs';
 import { mischeOklch } from '../kern/farbe.mjs';
 
 export const radiusPx = (grad, s = 1) => (11 + 7 * Math.log2(1 + grad)) * s;
 const koerperFarbe = (lch) => [lch[0] - 0.05, Math.min(0.2, lch[1] * 1.45), lch[2]];
 
-// glieder: [{ i, x, y }]; modus: 'streng' | 'lesebruecke'
-export function zeichneSzene(ctx, welt, glieder, { modus = 'streng', massstab = 1.7, t = 0, vorbei = null, fokus = null, beschrift = {} } = {}) {
+// glieder: [{ i, x, y }]; modus: 'nah' (Vorgabe) | 'streng' (nur Werkstatt)
+export function zeichneSzene(ctx, welt, glieder, { modus = 'nah', massstab = 1.7, t = 0, vorbei = null, fokus = null, beschrift = {} } = {}) {
   const O = welt.orte;
   const idx = new Map(glieder.map((g, k) => [g.i, k]));
   const farbe = (i) => Z.eigenfarbe(welt.gebiete[O[i].r].lch, O[i].k);
-  const feld = modus === 'lesebruecke' ? 'staerkeLesebruecke' : 'staerke';
+  const feld = modus === 'streng' ? 'staerke' : 'staerkeLesebruecke';
+  const mischFeld = modus === 'streng' ? 'staerke' : 'misch';
 
   // Paare innerhalb der Szene, mit allen Fugen
   const paare = new Map();
@@ -25,16 +26,15 @@ export function zeichneSzene(ctx, welt, glieder, { modus = 'streng', massstab = 
   }
   for (const p of paare.values()) {
     p.trennend = p.fugen.some((f) => f.lesart === LESART.UNTERSCHEIDEND);
-    p.staerke = p.trennend ? 0 : paarStaerke(p.fugen.map((f) => f[feld]));
-    p.zahn = zaehne(paarAus(welt, p.a, p.b));
-    p.haupt = [...p.fugen].sort((x, y) => (y[feld] - x[feld]) || (y.quellen.length - x.quellen.length))[0];
-    p.lesebruecke = p.fugen.some((f) => f.anker) && p.staerke > 0;
+    p.staerke = p.trennend ? 0 : paarStaerke(p.fugen.map((f) => f[feld]));      // trägt Wachstum
+    p.misch = p.trennend ? 0 : paarStaerke(p.fugen.map((f) => f[mischFeld]));   // lässt Farben ineinanderlaufen
+    p.haupt = [...p.fugen].sort((x, y) => (y[mischFeld] - x[mischFeld]) || (y.quellen.length - x.quellen.length))[0];
   }
 
-  // Verbünde: Zusammenhangskomponenten über mischende Paare (Stärke > 0)
+  // Verbünde: Zusammenhangskomponenten über mischende Paare
   const gruppe = glieder.map((_, k) => k);
   const wurzel = (k) => (gruppe[k] === k ? k : (gruppe[k] = wurzel(gruppe[k])));
-  for (const p of paare.values()) if (p.staerke > 0) gruppe[wurzel(idx.get(p.a))] = wurzel(idx.get(p.b));
+  for (const p of paare.values()) if (p.misch > 0) gruppe[wurzel(idx.get(p.a))] = wurzel(idx.get(p.b));
   const verbund = new Map();
   glieder.forEach((g, k) => { const w = wurzel(k); if (!verbund.has(w)) verbund.set(w, []); verbund.get(w).push(k); });
 
@@ -95,9 +95,9 @@ export function zeichneSzene(ctx, welt, glieder, { modus = 'streng', massstab = 
     }
   }
 
-  // 3 · Lesebrücken ohne Mischung: Arme greifen ineinander, Lücke bleibt
+  // 3 · Offene Fragen ohne Mischung: Arme greifen ineinander, Lücke bleibt
   for (const p of paare.values()) {
-    if (p.staerke > 0 || p.trennend) continue;
+    if (p.misch > 0 || p.trennend) continue;
     const A = glieder[idx.get(p.a)], B = glieder[idx.get(p.b)];
     const ra = rr[idx.get(p.a)], rb = rr[idx.get(p.b)];
     const ang = Math.atan2(B.y - A.y, B.x - A.x);
@@ -126,7 +126,8 @@ export function zeichneSzene(ctx, welt, glieder, { modus = 'streng', massstab = 
 
   // 4 · Körper: Verbünde pixelgenau in OKLab, trennende Paare als Wand
   const gl = glieder.map((g, k) => ({ x: g.x, y: g.y, r: rr[k], lch: koerperFarbe(farbe(g.i)), gruppe: wurzel(k) }));
-  const br = [...paare.values()].filter((p) => p.staerke > 0).map((p) => ({ a: idx.get(p.a), b: idx.get(p.b), staerke: Math.min(1, p.staerke) }));
+  // sichtbare Brücke: Wurzel des Mischgewichts, damit auch unbelegte Verbindungen als Hals lesbar sind
+  const br = [...paare.values()].filter((p) => p.misch > 0).map((p) => ({ a: idx.get(p.a), b: idx.get(p.b), staerke: Math.min(1, Math.sqrt(p.misch)) }));
   Z.zeichneVerbund(ctx, gl, br);
   // Adern: helle Ströme entlang tragender Brücken, so dick wie ihre Stärke
   for (const b of br) {
@@ -170,17 +171,6 @@ export function zeichneSzene(ctx, welt, glieder, { modus = 'streng', massstab = 
     ctx.beginPath(); ctx.arc(g.x - rr[k] * 0.22, g.y - rr[k] * 0.26, rr[k] * 0.2, 0, Math.PI * 2); ctx.fill();
   });
 
-  // 5 · Zähne und Quellsteine
-  for (const p of paare.values()) {
-    const A = glieder[idx.get(p.a)], B = glieder[idx.get(p.b)];
-    const ang = Math.atan2(B.y - A.y, B.x - A.x);
-    if (p.mitte) Z.zeichneZaehne(ctx, p.mitte[0], p.mitte[1] - 16, 0, p.zahn, { groesse: 1.25 });
-    else if (p.staerke > 0) {
-      const mx = (A.x + B.x) / 2, my = (A.y + B.y) / 2;
-      Z.zeichneZaehne(ctx, mx, my - 18, 0, p.zahn, { groesse: 1.25 });
-      p.mitte = [mx, my, ang];
-    }
-  }
 
   return { paare, verbund, wachstum, rr, r0, idx, farbe, wurzel };
 }
@@ -198,7 +188,7 @@ export function beschrifte(ctx, welt, glieder, info, { namen = {}, fugen = [] } 
     const p = [...info.paare.values()].find((q) => (q.a === Math.min(f.a, f.b) && q.b === Math.max(f.a, f.b)));
     if (!p) continue;
     const A = glieder[info.idx.get(p.a)], B = glieder[info.idx.get(p.b)];
-    const text = f.text || p.haupt.label;
+    const text = f.text || p.haupt.sicht?.label || p.haupt.label;
     const off = f.versatz ?? -10;
     const pts = [];
     const ang = Math.atan2(B.y - A.y, B.x - A.x);

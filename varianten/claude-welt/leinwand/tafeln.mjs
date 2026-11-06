@@ -127,7 +127,7 @@ function quellfaden(x0, y0, x1, y1, quellen, { breite = 330, farbe = Z.TINTE_LEI
   ctx.beginPath(); ctx.moveTo(x0, y0); ctx.bezierCurveTo(x0, (y0 + y1) / 2, x1 - 20, y1 - 30, x1 - 6, y1 - 6); ctx.stroke();
   ctx.restore();
   let y = y1 + 8;
-  for (const q of quellen) {
+  for (const q of quellen.filter((x) => x.sichtbar)) {
     const t = Z.quellTitel(q);
     const kopf = [t.wer, t.jahr].filter(Boolean).join(' · ');
     if (kopf) { Z.schrift(ctx, kopf, x1, y, { groesse: 12.5, familie: Z.SCHRIFT_SANS, gewicht: 600, farbe: Z.TINTE_LEISE, sperrung: 0.3 }); y += 17; }
@@ -160,7 +160,7 @@ async function ortstext(i) {
 }
 
 async function tafelBegegnung() {
-  const modus = q.get('modus') || 'streng';
+  const modus = q.get('modus') || 'nah';
   const O = welt.orte;
   hintergrund(-120, -200, 2.4, 0.42);
   // Augenblick der Begegnung: die Nachbarn mit Fuge sind herangezogen (Hinwenden ruft sie herbei)
@@ -189,9 +189,9 @@ async function tafelBegegnung() {
   });
   // Wandbeschriftung: die trennende Fuge steht an ihrer Naht
   const fV = welt.fugen.find((f) => (f.a === V && f.b === A) || (f.a === A && f.b === V));
-  Z.absatz(ctx, fV.label, pos[V][0] - 46, pos[V][1] + 34, 250, { groesse: 13.5, kursiv: true, farbe: Z.TINTE_LEISE, ausrichtung: 'right' });
+  Z.absatz(ctx, fV.sicht.label, pos[V][0] - 46, pos[V][1] + 34, 250, { groesse: 13.5, kursiv: true, farbe: Z.TINTE_LEISE, ausrichtung: 'right' });
   const fU = welt.fugen.find((f) => (f.a === U && f.b === G) || (f.a === G && f.b === U));
-  Z.absatz(ctx, fU.label, pos[U][0], pos[U][1] + 80, 260, { groesse: 13.5, kursiv: true, farbe: Z.TINTE_LEISE, ausrichtung: 'center' });
+  Z.absatz(ctx, fU.sicht.label, pos[U][0], pos[U][1] + 80, 260, { groesse: 13.5, kursiv: true, farbe: Z.TINTE_LEISE, ausrichtung: 'center' });
   // Der Startort spricht: Kernsatz in der Welt, darunter der Pfad seiner Abschnitte
   const text = await ortstext(A);
   const farbeA = Z.eigenfarbe(welt.gebiete[6].lch, 'phenomenon');
@@ -202,8 +202,7 @@ async function tafelBegegnung() {
   const fS = welt.fugen.find((f) => (f.a === G && f.b === S) || (f.a === S && f.b === G));
   const mx = (pos[G][0] + pos[S][0]) / 2, my = (pos[G][1] + pos[S][1]) / 2;
   Z.zeichneQuellstein(ctx, mx + 26, my + 18, fS.quellen.length, welt.gebiete[9].lch);
-  quellfaden(mx + 26, my + 26, 1150, 800, fS.quellen.map((k) => welt.quellen[k]), { breite: 380,
-    zusatz: 'Beide Quellen gehören zu den Texten der zwei Orte. Die Brücke selbst ist eine redaktionelle Lesart.' });
+  quellfaden(mx + 26, my + 26, 1150, 800, fS.quellen.map((k) => welt.quellen[k]), { breite: 380 });
   bedienung(null, { zugang: true });
 }
 
@@ -211,7 +210,7 @@ async function tafelVerstaerkung() {
   const O = welt.orte;
   const kamera = hintergrund(1190, 900, 2.6, 0.4);
   const glieder = [{ i: 158, x: 880, y: 500 }, { i: 151, x: 620, y: 330 }, { i: 169, x: 640, y: 680 }, { i: 194, x: 1170, y: 610 }];
-  const info = zeichneSzene(ctx, welt, glieder, { modus: 'streng', t: T });
+  const info = zeichneSzene(ctx, welt, glieder, { t: T });
   beschrifte(ctx, welt, glieder, info, {
     namen: { 158: { dx: 70, dy: -40, ausrichtung: 'left', groesse: 18, gewicht: 620 }, 151: { dx: 0, dy: -72, ausrichtung: 'center', groesse: 16 },
       169: { dx: 0, dy: 84, ausrichtung: 'center', groesse: 16 }, 194: { dx: 0, dy: 66, ausrichtung: 'center', groesse: 16 } },
@@ -309,27 +308,20 @@ async function tafelGebiet() {
   hof.addColorStop(0, Z.cssLch(Z.GRUND_HELL, 0.97)); hof.addColorStop(0.72, Z.cssLch(Z.GRUND_HELL, 0.9)); hof.addColorStop(1, Z.cssLch(Z.GRUND_HELL, 0));
   ctx.fillStyle = hof; blobPfad(lx, ly, lr * 1.35, 3, 0.05); ctx.fill();
   const werke = [
-    ['franz-heinz-2019', 'Franz Heinz', 2019], ['lennart-2010', 'Lennart', 2010], ['jannik-2010', 'Jannik', 2010],
-    ['franco-2015', 'Franco', 2015], ['linda-2005', 'Linda', 2005], ['evelyne-2005', 'Evelyne', 2005], ['andrea-2008', 'Andrea', 2008],
+    'franz-heinz-2019', 'lennart-2010', 'jannik-2010', 'franco-2015', 'linda-2005', 'evelyne-2005', 'andrea-2008',
   ];
-  const bilder = await Promise.all(werke.map(([d]) => ladeBild(`/app/atlas/assets/media/walter-andreas-kirchner-${d}.jpg`)));
-  werke.forEach(([, titel, jahr], k) => {
+  const bilder = await Promise.all(werke.map((d) => ladeBild(`/app/atlas/assets/media/walter-andreas-kirchner-${d}.jpg`)));
+  werke.forEach((_, k) => {
     const th = -Math.PI / 2 + (k * Math.PI * 2) / werke.length;
     const px = lx + Math.cos(th) * lr * 0.6, py = ly + Math.sin(th) * lr * 0.6;
     bildImKiesel(bilder[k], px, py, lr * 0.26, k);
-    // Titel auf dem äußeren Ring, nahe seinem Bildnis
-    const bogen = [];
-    for (let m = -10; m <= 10; m++) { const a = th + (m / 10) * 0.3; bogen.push([lx + Math.cos(a) * (lr * 1.02), ly + Math.sin(a) * (lr * 1.02)]); }
-    Z.textAufKurve(ctx, `${titel} · ${jahr}`, Math.sin(th) > 0.2 ? bogen.reverse() : bogen, { groesse: 11.5, kursiv: false, familie: Z.SCHRIFT_SANS, gewicht: 560, farbe: Z.TINTE_LEISE, versatz: Math.sin(th) > 0.2 ? 12 : -4 });
   });
-  // Mitte bleibt frei: die Lichtung. Urheber nur einmal, ohne Deutung.
-  Z.schrift(ctx, 'Walter Andreas Kirchner', lx, ly + lr * 1.32 + 6, { groesse: 14, ausrichtung: 'center', kursiv: true, farbe: Z.TINTE });
-  Z.schrift(ctx, 'sieben Bildnisse in Marmor', lx, ly + lr * 1.32 + 24, { groesse: 11.5, ausrichtung: 'center', familie: Z.SCHRIFT_SANS, gewicht: 560, farbe: Z.TINTE_LEISE });
+  // Die Bildnisse stehen für sich: keine Namen, keine Beschriftung, keine Deutung.
   // Namen ohne Überdeckung, Startort zuerst, dann nach Zahl der Fugen
   const kand = sichtbar.sort((a, b) => (b.i === 1031) - (a.i === 1031) || b.ort.grad - a.ort.grad).map((w) => ({
     text: w.ort.t, x: kamera.sx(w.x), y: kamera.sy(w.y), r: w.radius * kamera.zoom * 1.15 + 2, groesse: w.i === 1031 ? 15 : 13, gewicht: w.i === 1031 ? 620 : 470, w }));
   const koerperBoxen = sichtbar.map((w) => { const x = kamera.sx(w.x), y = kamera.sy(w.y), r = w.radius * kamera.zoom * 1.2; return [x - r, y - r, x + r, y + r]; });
-  const vorbelegt = [[lx - lr * 1.25, ly - lr * 1.25, lx + lr * 1.25, ly + lr * 1.25 + 32], [20, 20, 420, 90], [B - 300, H - 110, B, H], [B - 90, 20, B, 90]];
+  const vorbelegt = [[lx - lr * 1.25, ly - lr * 1.25, lx + lr * 1.25, ly + lr * 1.25], [20, 20, 420, 90], [B - 300, H - 110, B, H], [B - 90, 20, B, 90]];
   // Gebietsnamen zuerst: dort, wo das eigene Gebiet dicht ist und kein anderes Gebiet liegt
   const belegt = [...vorbelegt, ...koerperBoxen];
   for (const k of [6, 9, 4, 5]) gebietsnameImFeld(kamera, k, belegt, 15);
@@ -402,14 +394,9 @@ async function tafelKlang() {
   let ty = y + R + 52;
   Z.absatz(ctx, zeilen[0], x - 250, ty, 500, { groesse: 15, kursiv: true, farbe: Z.TINTE_LEISE, ausrichtung: 'left', alpha: 0.6 });
   Z.absatz(ctx, zeilen[1], x - 250, ty + 30, 500, { groesse: 18, kursiv: true, farbe: Z.TINTE });
-  // Herkunft und Prüfgrenze gehören zum Medium (aus medien.json)
-  const hx = x - R - 360, hy = y - 40;
-  Z.schrift(ctx, 'KI-erzeugte Audioübersicht', hx, hy, { groesse: 12.5, familie: Z.SCHRIFT_SANS, gewicht: 650, sperrung: 0.6, farbe: Z.tief(farbe, 0.42) });
-  Z.absatz(ctx, 'NotebookLM, aus einer quellengeprüften Lehrgrundlage. Der Sprachtext wurde fachlich geprüft: Er verkürzt komplexe PTBS und Dissoziation und formuliert Studiengrenzen teils zu pauschal.', hx, hy + 22, 300, { groesse: 13.5, farbe: Z.TINTE_LEISE });
-  Z.schrift(ctx, '1:52 · Untertitel', hx, hy + 128, { groesse: 12, familie: Z.SCHRIFT_SANS, gewicht: 560, farbe: Z.TINTE_LEISE });
   // Namen der Wesen ringsum
   const koerper = [...sichtbar].sort((a, b) => b.ort.grad - a.ort.grad).slice(0, 12).map((w) => { const sx = kamera.sx(w.x), sy = kamera.sy(w.y), r = w.radius * kamera.zoom * 1.2; return [sx - r, sy - r, sx + r, sy + r]; });
-  const vorbelegt = [[x - R - 30, y - R - 50, x + R + 30, y + R + 120], [x - 260, y + R + 30, x + 260, y + R + 110], [hx - 10, hy - 20, hx + 320, hy + 140], [20, 20, 420, 90], [B - 300, H - 110, B, H], [B - 90, 20, B, 90], ...koerper];
+  const vorbelegt = [[x - R - 30, y - R - 50, x + R + 30, y + R + 120], [x - 260, y + R + 30, x + 260, y + R + 110], [20, 20, 420, 90], [B - 300, H - 110, B, H], [B - 90, 20, B, 90], ...koerper];
   const belegt = [...vorbelegt];
   gebietsnameImFeld(kamera, 0, belegt, 15);
   const kand = sichtbar.sort((a, b) => b.ort.grad - a.ort.grad).slice(0, 40).map((w) => ({ text: w.ort.t, x: kamera.sx(w.x), y: kamera.sy(w.y), r: w.radius * kamera.zoom * 1.1 + 2, groesse: 12.5, w }));

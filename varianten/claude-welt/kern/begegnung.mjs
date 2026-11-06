@@ -56,6 +56,18 @@ export function staerke(fuge, modus = 'streng') {
   return basis * (GELTUNG[fuge.geltung] ?? 0) * (1 - Math.exp(-q / BELEG_SKALA));
 }
 
+// Vorgabe der Welt (Ralfs Wahl, 6. November 2026): nicht streng.
+// Mischen: jede verbindende Fuge lässt die Farben ineinanderlaufen, auch eine unbelegte; dann schwach.
+//   m = max(Stärke mit halb zählenden Endpunktquellen, MISCH_BODEN · basis(art))
+// Wachsen: nur über Belege (Stärke mit halb zählenden Endpunktquellen). Ohne Beleg mischt es, wächst aber nicht.
+export const MISCH_BODEN = 0.3;
+export function mischGewicht(fuge) {
+  if (lesart(fuge) !== LESART.VERBINDEND) return 0;
+  let basis = ARTGEWICHT[fuge.art] ?? 0.25;
+  if (fuge.art === 'folge' && fuge.typ === 'abstammung') basis = 0.3;
+  return Math.max(staerke(fuge, 'lesebruecke'), MISCH_BODEN * basis);
+}
+
 // Mehrere Fugen desselben Paars: Noisy-Or, ein Paar trägt höchstens 1 bei.
 export const paarStaerke = (staerken) => 1 - staerken.reduce((p, s) => p * (1 - s), 1);
 

@@ -4,7 +4,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { lesart, staerke } from './kern/begegnung.mjs';
+import { lesart, staerke, mischGewicht } from './kern/begegnung.mjs';
+import { GEBIETSNAMEN, sichtbareBezeichnung, sichtbarerText, quelleSichtbar } from './kern/sprache.mjs';
 import { GEBIETSFARBEN } from './kern/farbe.mjs';
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
@@ -21,7 +22,9 @@ function quelle(schluessel) {
   const q = texte.quellen[schluessel];
   if (!q) return null;
   const i = quellen.length;
-  quellen.push({ titel: q.titel || '', url: q.url || '', autoren: q.autoren || '', jahr: q.jahr || '', stelle: q.stelle || '', art: q.art || '', schluessel });
+  const eintrag = { titel: q.titel || '', url: q.url || '', autoren: q.autoren || '', jahr: q.jahr || '', stelle: q.stelle || '', art: q.art || '', schluessel };
+  eintrag.sichtbar = quelleSichtbar(eintrag);
+  quellen.push(eintrag);
   quellIndex.set(schluessel, i);
   return i;
 }
@@ -30,15 +33,17 @@ const grad = new Array(karte.orte.length).fill(0);
 for (const f of karte.fugen) { grad[f.a]++; grad[f.b]++; }
 
 const fugen = karte.fugen.map((f) => ({
-  a: f.a, b: f.b, art: f.art, typ: f.typ, lesart: lesart(f), staerke: +staerke(f).toFixed(4), staerkeLesebruecke: +staerke(f, 'lesebruecke').toFixed(4), anker: f.anker.length > 0,
+  a: f.a, b: f.b, art: f.art, typ: f.typ, lesart: lesart(f), staerke: +staerke(f).toFixed(4), staerkeLesebruecke: +staerke(f, 'lesebruecke').toFixed(4), misch: +mischGewicht(f).toFixed(4), anker: f.anker.length > 0,
   label: f.label, detail: f.detail, grenze: f.grenze, geltung: f.geltung, herkunft: f.herkunft,
+  // sichtbar: nur Sprache zum Thema (kern/sprache.mjs); Originalfelder oben bleiben Herkunftsdaten
+  sicht: { label: sichtbareBezeichnung(f.label), detail: sichtbarerText(f.detail), grenze: sichtbarerText(f.grenze) },
   quellen: f.quellen.map(quelle).filter((x) => x !== null),
 }));
 
 const orte = karte.orte.map((o, i) => ({ t: o.t, r: o.r, k: o.k, s: o.s, x: o.x, y: o.y, n: o.n, grad: grad[i] }));
 
 const gebiete = karte.regionen.map((g, i) => ({
-  name: g.name, zusammenfassung: g.summary, zahl: g.count, x: g.x, y: g.y, r: g.r, links: g.links, lch: GEBIETSFARBEN[i].lch,
+  name: GEBIETSNAMEN[i], herkunftsname: g.name, zusammenfassung: g.summary, zahl: g.count, x: g.x, y: g.y, r: g.r, links: g.links, lch: GEBIETSFARBEN[i].lch,
 }));
 
 for (let i = 0; i < karte.orte.length; i++) {

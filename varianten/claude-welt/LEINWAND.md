@@ -5,7 +5,14 @@ Stand: **Leinwand, noch kein App-Code.** Gebaut wird erst nach Ralfs Wahl, unter
 Bilder: `bilder/leinwand-20261106/` (Übersicht, Weltkarte, Gebiet, Startfall streng, Startfall Lesebrücke, Verstärkung, Klangquelle, Kurve).
 Live ansehen (lokal): `node werkzeug/statisch.mjs 47231`, dann `http://127.0.0.1:47231/varianten/claude-welt/leinwand/index.html?tafel=welt` (weitere: `gebiet`, `begegnung&modus=streng|lesebruecke`, `verstaerkung`, `klang`, `kurve`, `uebersicht`).
 
-## Was die Bilder zeigen
+## Ralfs Rückmeldung (6. November 2026, zweite Runde)
+
+- **Nicht streng.** Jede verbindende Fuge lässt die Farben ineinanderlaufen, auch ohne Beleg; dann schwach (`mischGewicht`, Boden 0,3 × Artgewicht). Gewachsen wird nur über Belege, Endpunktquellen zählen halb. Trennend bleibt Wand, ohne Fuge zieht vorbei.
+- **Keine Meta-Kommentare in der Welt.** Kein Wort darüber, wie gebaut, gesammelt, geprüft oder mit welchem Werkzeug erzeugt wurde. Gebietsnamen nach Inhalt statt nach Herkunftsprojekt; Fugenbezeichnungen und Grenzsätze laufen durch `kern/sprache.mjs` (Originalfelder bleiben in den Daten); Projektdateien erscheinen nicht als Quelle; Zähne der Schloss-Regel nicht mehr sichtbar.
+- **Bildnisse ohne Namen.** Die sieben Marmorbildnisse stehen ohne Beschriftung in der Lichtung.
+- Neue Bilder: `bilder/leinwand-20261106b/`. Kurve und Übersicht sind Werkstattblätter und gehören nicht in die App.
+
+## Was die Bilder zeigten (erste Runde, überholt)
 
 | Tafel | Inhalt, alles aus dem Bestand |
 |---|---|
