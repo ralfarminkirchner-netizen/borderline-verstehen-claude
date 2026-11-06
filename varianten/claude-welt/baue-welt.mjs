@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { lesart, staerke, mischGewicht } from './kern/begegnung.mjs';
-import { GEBIETSNAMEN, sichtbareBezeichnung, sichtbarerText, quelleSichtbar } from './kern/sprache.mjs';
+import { GEBIETSNAMEN, sichtbareBezeichnung, sichtbarerText, quelleSichtbar, sichtbarerFliesstext, sichtbarerKernsatz } from './kern/sprache.mjs';
 import { GEBIETSFARBEN } from './kern/farbe.mjs';
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
@@ -40,7 +40,7 @@ const fugen = karte.fugen.map((f) => ({
   quellen: f.quellen.map(quelle).filter((x) => x !== null),
 }));
 
-const orte = karte.orte.map((o, i) => ({ t: o.t, r: o.r, k: o.k, s: o.s, x: o.x, y: o.y, n: o.n, grad: grad[i] }));
+const orte = karte.orte.map((o, i) => ({ t: o.t, r: o.r, k: o.k, s: sichtbarerKernsatz(o.s), x: o.x, y: o.y, n: o.n, grad: grad[i] }));
 
 const gebiete = karte.regionen.map((g, i) => ({
   name: GEBIETSNAMEN[i], herkunftsname: g.name, zusammenfassung: g.summary, zahl: g.count, x: g.x, y: g.y, r: g.r, links: g.links, lch: GEBIETSFARBEN[i].lch,
@@ -50,7 +50,7 @@ for (let i = 0; i < karte.orte.length; i++) {
   const t = texte.orte[String(i)] || texte.orte[i];
   if (!t) continue;
   fs.writeFileSync(path.join(ziel, 'texte', `${i}.json`), JSON.stringify({
-    body: t.body, tags: t.tags || [], quellen: (t.quellen || []).map(quelle).filter((x) => x !== null),
+    body: sichtbarerFliesstext(t.body), tags: t.tags || [], quellen: (t.quellen || []).map(quelle).filter((x) => x !== null),
     herkunft: t.herkunft?.titel || '', schluessel: t.id,
   }));
 }

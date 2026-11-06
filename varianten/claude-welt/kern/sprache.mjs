@@ -62,3 +62,26 @@ export function sichtbarerText(text) {
 // Projektdateien und Ableitungen bleiben Herkunftsdaten und erscheinen nicht.
 const UNSICHTBARE_QUELLARTEN = new Set(['Original-Projektdatei', 'ableitung']);
 export const quelleSichtbar = (q) => Boolean(q && q.titel) && !UNSICHTBARE_QUELLARTEN.has(q.art);
+
+// Fließtext eines Orts: Sätze über Sammlung, Prüfung, Herkunft oder Werkzeuge fallen weg; Überschriften bleiben,
+// wenn unter ihnen noch etwas zum Thema steht.
+const FLIESS_WERKSTATT = /redaktion|lesebrücke|lernanschluss|prüfstand|lesegrad|dossier|werkstattkarte|projektdatei|originalgraph|im original\b|(im|aus dem|laut|dem) bestand|übernahme|recherche|kanonisiert|volltext|metadaten|extern verifiziert|quellenangabe|quellenlage|quellengebunden|quellenkante|codex|claude|notebooklm|\bki-|sichtung|lehrgrundlage|forschungsanschluss|modell- und recherche|kuratier|titel-\/abstract|prüflauf|registernummer|des originals|quellenbestand|geprüften bestand|bis zur prüfung/i;
+
+export function sichtbarerFliesstext(body) {
+  const bloecke = String(body || '').replace(/\[([^\]]+)\]\([^)]*\.md\)/g, '$1').replace(/^(#{1,4}\s[^\n]*)\n(?!\n)/gm, '$1\n\n').split(/\n{2,}/);
+  const aus = [];
+  for (const b of bloecke) {
+    const z = b.trim();
+    if (!z) continue;
+    if (/^#{1,4}\s/.test(z)) { if (!FLIESS_WERKSTATT.test(z)) aus.push(z); continue; }
+    const zeilen = z.split('\n').map((l) => {
+      const liste = /^\s*[-*]\s+/.test(l) ? l.match(/^\s*[-*]\s+/)[0] : '';
+      const s = l.slice(liste.length).split(/(?<=[.!?])\s+/).filter((x) => !FLIESS_WERKSTATT.test(x)).join(' ').trim();
+      return s ? liste + s : '';
+    }).filter(Boolean);
+    if (zeilen.length) aus.push(zeilen.join('\n'));
+  }
+  // Überschriften ohne folgenden Inhalt entfernen
+  return aus.filter((b, k) => !/^#{1,4}\s/.test(b) || (aus[k + 1] && !/^#{1,4}\s/.test(aus[k + 1]))).join('\n\n');
+}
+export const sichtbarerKernsatz = (s) => String(s || '').replace(/\s*·?\s*\b[a-z]+_[a-z_]+\b/g, '').split(/(?<=[.!?])\s+/).filter((x) => !FLIESS_WERKSTATT.test(x)).join(' ').trim();

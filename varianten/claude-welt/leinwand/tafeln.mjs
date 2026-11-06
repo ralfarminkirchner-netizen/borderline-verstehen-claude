@@ -5,7 +5,7 @@ import { bereiteWesen, bewege, spur } from '../kern/leben.mjs';
 import * as Z from '../kern/zeichner.mjs';
 import { LESART, gemeinsamerRadius, zuwachs, paarStaerke, GELTUNG, KURVE } from '../kern/begegnung.mjs';
 import { mischeOklch } from '../kern/farbe.mjs';
-import { zeichneSzene, beschrifte } from './szene.mjs';
+import { zeichneSzene, beschrifte } from '../kern/szene.mjs';
 
 const q = new URLSearchParams(location.search);
 const TAFEL = q.get('tafel') || 'welt';

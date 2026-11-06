@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Borderline verstehen · Die Welt der Phänomene</title>
+<meta name="description" content="Eine begehbare Welt der Phänomene rund um Borderline, Trauma und Neurodivergenz.">
+<link rel="stylesheet" href="./welt.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2213%22 cy=%2216%22 r=%229%22 fill=%22%23d97b93%22/%3E%3Ccircle cx=%2220%22 cy=%2216%22 r=%229%22 fill=%22%237fb8a4%22 fill-opacity=%22.8%22/%3E%3C/svg%3E">
+</head>
+<body>
+<canvas id="welt" aria-hidden="true"></canvas>
+
+<header class="kopf">
+  <h1>Borderline verstehen</h1>
+  <p>Die Welt der Phänomene</p>
+</header>
+
+<div class="suche" id="suche">
+  <button class="kiesel linse" id="linse" type="button" aria-expanded="false" aria-controls="suchfeld" aria-label="Ort suchen">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></svg>
+  </button>
+  <div class="suchfeld" id="suchfeld" hidden>
+    <input id="suchwort" type="search" autocomplete="off" spellcheck="false" placeholder="Wonach suchst du?" aria-label="Wonach suchst du?" aria-controls="treffer">
+    <ol id="treffer" class="treffer"></ol>
+  </div>
+</div>
+
+<nav class="steuer" aria-label="Blick">
+  <button class="kiesel" id="weiter" type="button" aria-label="Weiter weg">−</button>
+  <button class="kiesel" id="naeher" type="button" aria-label="Näher heran">+</button>
+</nav>
+
+<div class="zugang" id="zugang">
+  <div class="blaetter" id="blaetter" hidden>
+    <button class="blatt" type="button" data-wahl="text"></button>
+    <button class="blatt" type="button" data-wahl="motion"></button>
+    <button class="blatt" type="button" data-wahl="bilder"></button>
+    <button class="blatt" type="button" data-wahl="contrast"></button>
+  </div>
+  <button class="bluete" id="bluete" type="button" aria-expanded="false" aria-controls="blaetter">
+    <span class="samen" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+    <span class="wort">Zugang</span>
+  </button>
+</div>
+
+<article class="lesen" id="lesen" aria-live="polite" hidden></article>
+
+<div class="medium" id="medium" hidden></div>
+
+<nav class="verborgen" id="verzeichnis" aria-label="Alle Orte nach Gebiet"></nav>
+
+<script type="module" src="./welt.mjs"></script>
+</body>
+</html>

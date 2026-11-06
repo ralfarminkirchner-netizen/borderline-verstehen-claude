@@ -1,0 +1,125 @@
+@font-face { font-family: "Newsreader"; font-weight: 200 800; font-display: swap; src: url("/assets/fonts/Newsreader-Variable.ttf") format("truetype"); }
+@font-face { font-family: "Newsreader"; font-style: italic; font-weight: 200 800; font-display: swap; src: url("/assets/fonts/Newsreader-Italic-Variable.ttf") format("truetype"); }
+@font-face { font-family: "Manrope"; font-weight: 200 800; font-display: swap; src: url("/assets/fonts/Manrope-Variable.ttf") format("truetype"); }
+
+/* Die Welt ist hell: warmes Papier, dunkle Tinte. Kein dunkler Modus, damit nie Dunkel auf Dunkel entsteht. */
+:root {
+  --papier: #f6f0e7;
+  --papier-hell: #fbf8f2;
+  --tinte: #3a3129;
+  --tinte-leise: #5f554b;
+  --rand: rgba(95, 85, 75, 0.28);
+  --schrift: 1;
+  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --sans: "Manrope", "Avenir Next", system-ui, sans-serif;
+  color-scheme: light;
+}
+:root[data-text="large"] { --schrift: 1.15; }
+:root[data-text="larger"] { --schrift: 1.32; }
+:root[data-contrast="high"] { --tinte: #1d1712; --tinte-leise: #3b332b; --rand: rgba(40, 32, 25, 0.55); }
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+.zugang, .steuer, .suche { z-index: 2; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: var(--papier); color: var(--tinte); font-family: var(--serif); }
+canvas#welt { position: fixed; inset: 0; width: 100vw; height: 100dvh; display: block; touch-action: none; cursor: grab; }
+canvas#welt.zieht { cursor: grabbing; }
+canvas#welt.zeigt { cursor: pointer; }
+
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid #8a3a52; outline-offset: 3px; }
+
+/* Kopf: Schrift in der Welt, kein Balken */
+.kopf { position: fixed; top: max(18px, env(safe-area-inset-top)); left: 22px; pointer-events: none; text-shadow: 0 0 8px var(--papier), 0 0 14px var(--papier); }
+.kopf h1 { margin: 0; font-weight: 520; font-size: calc(25px * var(--schrift)); letter-spacing: 0.005em; }
+.kopf p { margin: 2px 0 0 1px; font-style: italic; font-size: calc(15px * var(--schrift)); color: var(--tinte-leise); }
+
+/* Kiesel: runde, leicht unregelmäßige Steine statt Knöpfe */
+.kiesel { width: 46px; height: 44px; border: 1px solid var(--rand); background: var(--papier-hell); border-radius: 52% 48% 50% 50% / 55% 50% 50% 45%;
+  display: grid; place-items: center; font-family: var(--sans); font-size: 22px; line-height: 1; cursor: pointer; box-shadow: 0 2px 6px rgba(80, 60, 40, 0.08); }
+.kiesel:hover { background: #fff; }
+.kiesel svg { width: 22px; height: 22px; fill: none; stroke: var(--tinte); stroke-width: 1.7; stroke-linecap: round; }
+
+.suche { position: fixed; top: max(16px, env(safe-area-inset-top)); right: 18px; display: flex; flex-direction: row-reverse; align-items: flex-start; gap: 10px; }
+.suchfeld { width: min(360px, calc(100vw - 100px)); padding-top: 4px; }
+.suchfeld input { width: 100%; border: 0; border-bottom: 1.5px solid var(--rand); background: transparent; font-family: var(--serif); font-style: italic;
+  font-size: calc(18px * var(--schrift)); padding: 6px 2px; color: var(--tinte); text-shadow: 0 0 8px var(--papier); }
+.suchfeld input::placeholder { color: var(--tinte-leise); }
+.suchfeld input:focus { outline: none; border-bottom-color: #8a3a52; }
+.treffer { list-style: none; margin: 8px 0 0; padding: 0; }
+.treffer button { display: block; width: 100%; text-align: left; border: 0; background: radial-gradient(closest-side, var(--papier-hell) 70%, transparent);
+  padding: 6px 4px; font-size: calc(16px * var(--schrift)); cursor: pointer; }
+.treffer button small { display: block; font-family: var(--sans); font-size: calc(12px * var(--schrift)); color: var(--tinte-leise); letter-spacing: 0.04em; }
+.treffer button:hover, .treffer button[aria-selected="true"] { color: #8a3a52; }
+
+.steuer { position: fixed; right: 108px; bottom: max(26px, env(safe-area-inset-bottom)); display: flex; gap: 10px; }
+
+/* Zugang: eine Blüte, deren Blätter die Einstellungen sind */
+.zugang { pointer-events: none; position: fixed; right: 20px; bottom: max(14px, env(safe-area-inset-bottom)); display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.bluete, .blatt { pointer-events: auto; }
+.bluete { border: 0; background: none; cursor: pointer; display: grid; justify-items: center; gap: 2px; padding: 4px; }
+.samen { position: relative; width: 54px; height: 54px; display: block; }
+.samen i { position: absolute; left: 50%; top: 50%; width: 26px; height: 14px; margin: -7px 0 0 -13px; border-radius: 50%; border: 1px solid rgba(90, 70, 50, 0.35); }
+.samen i:nth-child(1) { transform: rotate(-90deg) translateX(15px); background: #f2d9c9; }
+.samen i:nth-child(2) { transform: rotate(-18deg) translateX(15px); background: #f0e6c4; }
+.samen i:nth-child(3) { transform: rotate(54deg) translateX(15px); background: #d6ead8; }
+.samen i:nth-child(4) { transform: rotate(126deg) translateX(15px); background: #d3e3ef; }
+.samen i:nth-child(5) { transform: rotate(198deg) translateX(15px); background: #e6dcef; }
+.samen::after { content: ""; position: absolute; left: 50%; top: 50%; width: 15px; height: 15px; margin: -7.5px; border-radius: 50%; background: var(--papier-hell); border: 1px solid var(--rand); }
+.bluete .wort { font-family: var(--sans); font-weight: 600; font-size: calc(13px * var(--schrift)); letter-spacing: 0.04em; color: var(--tinte-leise); }
+.blaetter { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.blatt { border: 1px solid var(--rand); background: var(--papier-hell); border-radius: 60% 40% 55% 45% / 50% 55% 45% 50%; padding: 10px 18px; min-height: 44px;
+  font-size: calc(15px * var(--schrift)); cursor: pointer; text-align: right; box-shadow: 0 2px 8px rgba(80, 60, 40, 0.08); }
+.blatt b { font-family: var(--sans); font-weight: 600; font-size: 0.8em; letter-spacing: 0.05em; color: var(--tinte-leise); margin-right: 8px; }
+
+/* Lesen: Text in der Welt, auf einem weichen Lichthof statt in einem Kasten */
+.lesen { position: fixed; top: 112px; right: 26px; bottom: 96px; width: min(31vw, 440px); overflow-y: auto; padding: 18px 26px 40px;
+  -webkit-mask-image: linear-gradient(transparent, #000 22px, #000 calc(100% - 34px), transparent);
+          mask-image: linear-gradient(transparent, #000 22px, #000 calc(100% - 34px), transparent);
+  font-size: calc(17px * var(--schrift)); line-height: 1.5; scrollbar-width: thin;
+  text-shadow: 0 0 6px var(--papier-hell), 0 0 12px var(--papier-hell); }
+.lesen h2 { margin: 0 0 6px; font-weight: 600; font-size: calc(24px * var(--schrift)); line-height: 1.2; }
+.lesen .gebiet { font-family: var(--sans); font-weight: 650; font-size: calc(12px * var(--schrift)); letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 10px; }
+.lesen .kern { font-style: italic; margin: 0 0 16px; }
+.lesen h3 { font-family: var(--sans); font-weight: 650; font-size: calc(13px * var(--schrift)); letter-spacing: 0.06em; margin: 20px 0 6px; color: var(--tinte-leise); }
+.lesen p { margin: 0 0 12px; }
+.lesen ul { margin: 0 0 12px; padding-left: 1.1em; }
+.lesen .pfad { list-style: none; padding: 0; margin: 4px 0 12px; display: flex; flex-wrap: wrap; gap: 6px 8px; }
+.lesen .pfad button { border: 1px solid var(--rand); background: var(--papier-hell); border-radius: 50% 46% 52% 48% / 55% 48% 52% 45%; padding: 7px 14px; min-height: 40px;
+  font-family: var(--sans); font-size: calc(13px * var(--schrift)); cursor: pointer; }
+.lesen .pfad button[aria-pressed="true"] { color: #fff; border-color: transparent; }
+.lesen .quellen { list-style: none; padding: 0; margin: 8px 0 0; font-size: 0.86em; }
+.lesen .quellen li { margin: 0 0 10px; }
+.lesen .quellen .wer { display: block; font-family: var(--sans); font-size: 0.8em; font-weight: 600; letter-spacing: 0.03em; color: var(--tinte-leise); }
+.lesen .quellen a { color: inherit; font-style: italic; text-decoration-color: var(--rand); text-underline-offset: 3px; }
+.lesen .zurueck { border: 0; background: none; padding: 6px 0; cursor: pointer; font-family: var(--sans); font-size: calc(13px * var(--schrift)); color: var(--tinte-leise); }
+.lesen .grenze { color: var(--tinte-leise); font-size: 0.94em; }
+.lesen .quellwahl { border: 0; background: none; padding: 6px 0; cursor: pointer; font-family: var(--sans); font-weight: 600; font-size: calc(13px * var(--schrift)); color: var(--tinte-leise); text-decoration: underline; text-decoration-color: var(--rand); text-underline-offset: 4px; }
+
+/* Medium: Bild oder Film in einer Lichtung, organisch beschnitten */
+.medium { position: fixed; pointer-events: none; }
+.medium video { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; clip-path: ellipse(49% 49% at 50% 50%); pointer-events: auto; background: var(--papier-hell); }
+.medium audio { display: none; }
+
+.verborgen { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+.verborgen:focus-within { position: fixed; left: 16px; top: 100px; width: auto; height: auto; max-height: 60vh; max-width: min(420px, 90vw); overflow: auto; clip: auto; clip-path: none; white-space: normal;
+  background: var(--papier-hell); padding: 12px 16px; border-radius: 24px; z-index: 5; }
+.verborgen button { display: block; border: 0; background: none; text-align: left; padding: 4px 0; cursor: pointer; }
+
+/* Schmal: Szene oben, Lesen unten */
+@media (max-width: 760px) {
+  .kopf { left: 16px; }
+  .kopf h1 { font-size: calc(21px * var(--schrift)); }
+  .kopf p { font-size: calc(13px * var(--schrift)); }
+  .suche { right: 12px; }
+  .lesen { top: auto; left: 0; right: 0; bottom: 0; width: auto; height: 46dvh; padding: 26px 20px calc(96px + env(safe-area-inset-bottom));
+    background: linear-gradient(rgba(251, 248, 242, 0), rgba(251, 248, 242, 0.94) 26px, rgba(251, 248, 242, 0.97));
+    -webkit-mask-image: none; mask-image: none; }
+  .steuer { right: 92px; bottom: max(18px, env(safe-area-inset-bottom)); }
+  .zugang { right: 10px; bottom: max(8px, env(safe-area-inset-bottom)); }
+  body.liest .steuer { display: none; }
+  .zugang { top: calc(max(16px, env(safe-area-inset-top)) + 54px); bottom: auto; right: 12px; flex-direction: column-reverse; }
+  .zugang .wort { display: none; }
+  .samen { transform: scale(0.82); }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }

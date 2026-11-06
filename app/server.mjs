@@ -1,5 +1,5 @@
 // Gesamt-App „Borderline verstehen“ für Railway: Atlas (Fassung history-01 aus dem Variantenraum)
-// unter /, die Funktion „Schloss und Schlüssel“ unter /schloss/. Liefert nur Dateien aus, speichert nichts.
+// unter /, die Funktion „Schloss und Schlüssel“ unter /schloss/, die Lebende Welt unter /welt/. Liefert nur Dateien aus, speichert nichts.
 // /api/personal gibt es hier nicht: Der Atlas meldet dann selbst, dass kein gespeicherter Blick geladen wurde.
 import { createServer } from 'node:http';
 import { createReadStream } from 'node:fs';
@@ -10,6 +10,12 @@ import { fileURLToPath } from 'node:url';
 const HIER = dirname(fileURLToPath(import.meta.url));
 const ATLAS = join(HIER, 'atlas');
 const SCHLOSS = join(HIER, '..', 'proben', 'schloss-schluessel');
+// Lebende Welt unter /welt/: App-Dateien und vorgebaute Daten aus app/welt, Rechenkern aus der Variante.
+const WELT = join(HIER, 'welt');
+const WELT_KERN = join(HIER, '..', 'varianten', 'claude-welt', 'kern');
+const WELT_DATEIEN = new Set(['index.html', 'welt.mjs', 'welt.css', 'daten/welt.json', 'daten/medien.json']);
+const WELT_KERN_DATEI = /^kern\/(begegnung|farbe|feld|leben|szene|zeichner)\.mjs$/;
+const WELT_TEXT = /^daten\/texte\/\d{1,5}\.json$/;
 const SCHLOSS_DATEIEN = new Set(['index.html', 'schloss.css', 'schloss.js', 'daten.js', 'zugang-texte.js', 'zugangsprofil.js', 'atlas-rueckweg.js']);
 const TYPEN = {
   '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8',
@@ -59,6 +65,12 @@ createServer((req, res) => {
   if (pfad.startsWith('/schloss/')) {
     const name = pfad.slice('/schloss/'.length) || 'index.html';
     return SCHLOSS_DATEIEN.has(name) ? liefere(req, res, join(SCHLOSS, name)) : nichtGefunden(res);
+  }
+  if (pfad === '/welt') { res.writeHead(301, { location: '/welt/', ...SCHUTZ }); return res.end(); }
+  if (pfad.startsWith('/welt/')) {
+    const name = pfad.slice('/welt/'.length) || 'index.html';
+    if (WELT_KERN_DATEI.test(name)) return liefere(req, res, join(WELT_KERN, name.slice('kern/'.length)));
+    return WELT_DATEIEN.has(name) || WELT_TEXT.test(name) ? liefere(req, res, join(WELT, name)) : nichtGefunden(res);
   }
   const rel = normalize(pfad.endsWith('/') ? pfad + 'index.html' : pfad).replace(/^([/\\])+/, '');
   const datei = join(ATLAS, rel);

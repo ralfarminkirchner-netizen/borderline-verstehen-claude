@@ -14,3 +14,9 @@ proben/**/*.md
 proben/**/*.webm
 # Medien kommen per Umleitung aus dem öffentlichen kanonischen Atlas (siehe app/server.mjs)
 app/atlas/assets/media/
+
+# Lebende Welt: nur Rechenkern und vorgebaute App-Daten werden gebraucht
+varianten/**/bilder/
+varianten/**/daten/
+varianten/**/sichtung/
+varianten/**/leinwand/
