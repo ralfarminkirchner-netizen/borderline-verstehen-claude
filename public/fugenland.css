@@ -36,6 +36,7 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .kopf-werkzeug { display: flex; gap: .5rem; align-items: center; }
 .speicher-stand { font-size: .82rem; color: var(--leise); min-width: 9ch; }
 .speicher-stand[data-stand="gespeichert"] { color: #2c5a2e; }
+.speicher-stand[data-stand="unklar"] { color: #8a4b12; font-weight: 600; }
 
 /* Legende */
 .legende { position: absolute; z-index: 4; left: 1rem; bottom: 1rem; width: min(380px, calc(100vw - 2rem)); background: rgba(251,248,242,.96); border: 1px solid var(--linie); border-radius: 12px; padding: .8rem .9rem; box-shadow: 0 6px 24px rgba(40,30,20,.12); }

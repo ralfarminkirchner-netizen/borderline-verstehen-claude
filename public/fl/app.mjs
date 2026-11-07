@@ -81,7 +81,7 @@ new ResizeObserver(() => document.documentElement.style.setProperty('--kopf', `$
 
 // Speicherstand sichtbar halten.
 const stand = $('speicher-stand');
-const zeigeStand = (s) => { stand.textContent = { leer: 'Noch keine eigene Arbeit', geladen: 'Gespeicherter Stand geladen', gespeichert: 'Vom Dienst gespeichert', ungespeichert: 'Wird gleich gespeichert', speichert: 'Speichert …', lädt: 'Lädt …' }[s] || s; stand.dataset.stand = s; };
+const zeigeStand = (s) => { stand.textContent = { leer: 'Noch keine eigene Arbeit', geladen: 'Gespeicherter Stand geladen', gespeichert: 'Vom Dienst gespeichert', ungespeichert: 'Wird gleich gespeichert', speichert: 'Speichert …', lädt: 'Lädt …', unklar: 'Wirkung unklar – Dienst antwortet nicht, wird vor dem nächsten Speichern geprüft' }[s] || s; stand.dataset.stand = s; };
 werk.hoerer.add(zeigeStand); zeigeStand(werk.stand);
 
 // Bewegung: folgt der Systemeinstellung, lässt sich hier anhalten.

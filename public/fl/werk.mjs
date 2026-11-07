@@ -3,7 +3,7 @@
 const LEER = () => ({ format: 'fugenland-werkstatt', version: 2, gefuege: [], notizen: [], verlauf: [], raeume: {}, ereignisse: [] });
 
 // aenderung zählt jede lokale Änderung; bestaetigt ist die höchste Änderung, deren Schreiben der Dienst bestätigt hat.
-export const werk = { daten: LEER(), revision: 'neu', hoerer: new Set(), stand: 'lädt', aenderung: 0, bestaetigt: 0, sitzung: Math.random().toString(36).slice(2) };
+export const werk = { daten: LEER(), revision: 'neu', hoerer: new Set(), stand: 'lädt', aenderung: 0, bestaetigt: 0, unklar: null, sitzung: Math.random().toString(36).slice(2) };
 let timer = null; let laeuft = Promise.resolve();
 
 const melde = (stand) => { werk.stand = stand; for (const f of werk.hoerer) f(stand); };
@@ -32,18 +32,38 @@ export function handlung(key, art, ort, aendern, was = '') {
 
 function vormerken() { werk.aenderung++; melde('ungespeichert'); clearTimeout(timer); timer = setTimeout(speichern, 500); }
 
+// Drei Ausgänge eines Speichervorgangs: gespeichert (der Dienst hat bestätigt), nicht gespeichert (abgelehnt oder
+// nachweislich nicht geschrieben) und Wirkung unklar (die Antwort fehlt, der Dienst kann geschrieben haben oder nicht).
+// Unklar zählt nie als gespeichert. Geklärt wird durch Lesen des Speichers, nicht durch erneutes Senden;
+// solange das nicht gelingt, wird nicht blind weitergeschrieben.
 export function speichern() {
   laeuft = laeuft.then(async () => {
-    melde('speichert'); const nr = werk.aenderung;
-    try {
-      const r = await fetch('/api/werkstatt', { method: 'PUT', headers: { 'content-type': 'application/json', 'if-match': werk.revision }, body: JSON.stringify(werk.daten) });
-      const d = await r.json().catch(() => ({}));
-      if (r.status === 409) { melde('neuerer Stand vorhanden – bitte neu laden'); return; }
-      if (!r.ok) { melde(d.fehler || 'nicht gespeichert'); return; }
-      werk.revision = d.revision; werk.bestaetigt = Math.max(werk.bestaetigt, nr); melde('gespeichert');
-    } catch { melde('nicht gespeichert – Dienst nicht erreichbar'); }
+    if (werk.unklar && !(await klaeren())) return;
+    melde('speichert'); const nr = werk.aenderung; const text = JSON.stringify(werk.daten);
+    let r;
+    try { r = await fetch('/api/werkstatt', { method: 'PUT', headers: { 'content-type': 'application/json', 'if-match': werk.revision }, body: text }); }
+    catch { werk.unklar = { nr, text }; melde('unklar'); await klaeren(); return; }
+    const d = await r.json().catch(() => null);
+    if (r.status === 409) { melde('neuerer Stand vorhanden – bitte neu laden'); return; }
+    if (!r.ok) { melde((d && d.fehler) || 'nicht gespeichert'); return; }
+    if (!d || typeof d.revision !== 'string') { werk.unklar = { nr, text }; melde('unklar'); await klaeren(); return; }
+    werk.revision = d.revision; werk.bestaetigt = Math.max(werk.bestaetigt, nr); melde('gespeichert');
   });
   return laeuft;
+}
+
+// Liest den Stand des Dienstes und entscheidet den offenen Ausgang. true: geklärt; false: weiter unklar oder überholt.
+async function klaeren() {
+  const u = werk.unklar;
+  let d;
+  try { const r = await fetch('/api/werkstatt', { cache: 'no-store' }); if (!r.ok) throw new Error(String(r.status)); d = await r.json(); }
+  catch { melde('unklar'); return false; }
+  const rev = d.revision; delete d.revision; delete d.gespeichert;
+  const gesendet = JSON.parse(u.text); delete gesendet.gespeichert;
+  werk.unklar = null;
+  if (rev === werk.revision) { melde('nicht gespeichert'); return true; }
+  if (JSON.stringify(d) === JSON.stringify(gesendet)) { werk.revision = rev; werk.bestaetigt = Math.max(werk.bestaetigt, u.nr); melde('gespeichert'); return true; }
+  melde('neuerer Stand vorhanden – bitte neu laden'); return false;
 }
 
 // Werkbank und Notizen: ändern die gemeinsamen Listen und hinterlassen auf Wunsch ein Ereignis im Feld.
